@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Goed nieuws 0.9 auto
+Goed nieuws 1.0 auto
 Gratis dagelijkse editie zonder AI/API.
 
 Belangrijkste wijzigingen:
@@ -36,7 +36,7 @@ MIN_SOURCES = 5
 MAX_PER_SOURCE = 2
 PREFERRED_AGE_HOURS = 48
 MAX_AGE_HOURS = 168
-USER_AGENT = "GoedNieuwsBot/0.9"
+USER_AGENT = "GoedNieuwsBot/1.0"
 
 # mode=rss: directe feed
 # mode=google_site: gratis Google News RSS site-search als bron geen handige RSS heeft.
@@ -152,6 +152,7 @@ NEGATIVE_PHRASES = {
     "sterfte stijgt":-10, "temperatuur stijgt":-5, "faillissementen stijgen":-9,
     "gaat niet door":-10, "kan niet worden gered":-10,
     "war":-10, "dead":-10, "death":-10, "killed":-10, "murder":-10,
+    "threaten progress":-10, "threatens progress":-10, "emerging concerns":-6,
     "violence":-9, "attack":-9, "disaster":-10, "explosion":-10,
     "crisis":-8, "wounded":-7, "missing":-7, "fraud":-7, "threat":-6, "cancelled":-10, "canceled":-10,
     "unemployment rises":-10, "emissions rise":-9, "poverty rises":-9,
@@ -165,9 +166,12 @@ HARD_NEGATIVE_TITLE = [
 ]
 
 CATEGORY_TERMS = {
-    "Sport":["sport","voetbal","football","soccer","hockey","tennis","atletiek","athletics",
-             "wielrennen","cycling","mountainbike","zwemmen","swimming","olympic","medaille",
-             "medal","kampioen","champion","wedstrijd","match","goal","race","marathon","sprint"],
+    "Sport":["sport","sportprestatie","sportprestaties","voetbal","football","soccer","hockey",
+             "tennis","atletiek","athletics","wielrennen","cycling","mountainbike","zwemmen",
+             "swimming","olympic","olympics","medaille","medal","wedstrijd","match","goal",
+             "race","marathon","sprint","sprintrace","diamond league","grand prix","formula 1",
+             "formule 1","f1","pole position","wereldkampioenschap","europees kampioenschap",
+             "europese kampioen","world championship"],
     "Economie & geld":["economie","economy","geld","money","beurs","market","markt","export",
                        "import","business","bedrijf","banen","jobs","inflatie","inflation","inkomen",
                        "income","investment","investering","productie","consumptie","werkloosheid"],
@@ -180,7 +184,8 @@ CATEGORY_TERMS = {
                    "studie","space","ruimte","physics","biology","biologie","astronomy","astronomie"],
     "Gezondheid":["gezondheid","health","medical","medisch","medicine","medicijn","patient","patiënt",
                    "care","zorg","therapy","therapie","cancer","kanker","vaccine","vaccin","screening",
-                   "survival","overleving"],
+                   "survival","overleving","alzheimer","dementia","dementie","retina","retinal",
+                   "neuroprotection","clinical","klinisch","disease","ziekte"],
     "Technologie & innovatie":["technology","technologie","tech","innovatie","innovation","robot",
                                "chip","software","computer","engineering","battery","batterij",
                                "artificial intelligence","kunstmatige intelligentie","ai"],
@@ -194,7 +199,8 @@ CATEGORY_TERMS = {
                             "fossil","voorouder","ancestor","prehistoric"],
     "Mens & samenleving":["community","gemeenschap","buurt","vrijwillig","volunteer","samenleving",
                            "society","poverty","armoede","refugee","vluchteling","solidarity",
-                           "solidariteit","mensenrechten","human rights","vrijwilligers"],
+                           "solidariteit","mensenrechten","human rights","children's rights",
+                           "childrens rights","children rights","vrijwilligers"],
 }
 
 CATEGORY_PRIORITY = {
@@ -386,17 +392,22 @@ def positivity(title, summary):
     )
 
 def category(title, summary, hint):
-    text = f"{title} {summary}".lower()
+    # De kop is veel betrouwbaarder voor categorisatie dan een RSS-snippet.
+    # Google News snippets kunnen namelijk tekst van andere links bevatten.
+    title_text = clean(title).lower()
+    summary_text = clean(summary).lower()
     scores = {}
 
     for cat, terms in CATEGORY_TERMS.items():
-        hits = sum(1 for term in terms if wordmatch(text, term))
-        if hits:
-            scores[cat] = hits
+        title_hits = sum(1 for term in terms if wordmatch(title_text, term))
+        summary_hits = sum(1 for term in terms if wordmatch(summary_text, term))
+        score = title_hits * 4 + summary_hits
+        if score:
+            scores[cat] = score
 
-    # Hint helpt bij gelijkspel, maar domineert niet automatisch de inhoud.
+    # Bronhint alleen als zachte tie-breaker.
     if hint:
-        scores[hint] = scores.get(hint, 0) + 1
+        scores[hint] = scores.get(hint, 0) + 2
 
     if not scores:
         return hint or "Gewoon leuk"
@@ -474,7 +485,7 @@ SPORT_POSITIVE_TERMS = [
 ]
 
 NL_RELEVANCE_TERMS = [
-    "nederland", "nederlandse", "nederlands", "oranje",
+    "nederland", "nederlandse", "nederlands", "nederlander", "nederlanders", "oranje",
     "ajax", "psv", "feyenoord", "az ", "fc twente", "eredivisie",
     "amsterdam", "rotterdam", "utrecht", "den haag", "eindhoven",
     "enschede", "groningen", "friesland", "limburg", "brabant",
@@ -493,7 +504,7 @@ def nl_relevance_bonus(title, summary):
 
 def editorial_ok(title, summary, region, cat, source):
     t = clean(title).lower()
-    combined = f"{title} {summary}".lower()
+    combined = clean(f"{title} {summary}").lower()
 
     # Geen vacatures of personeelsadvertenties als nieuws.
     if contains_any(t, VACANCY_TERMS):
@@ -507,21 +518,44 @@ def editorial_ok(title, summary, region, cat, source):
     if contains_any(t, STRONG_BAD_NEWS_TERMS):
         return False, "negatieve context"
 
-    # Nederlands lezersperspectief: iets dat expliciet slecht uitpakt voor
-    # Nederland/Nederlanders kan niet door als 'goed nieuws'.
+    # Gemengde koppen met een duidelijke negatieve tweede helft zijn meestal geen Goed nieuws.
+    mixed_negative = [
+        "but emerging concerns", "but concerns", "however concerns",
+        "threaten progress", "threatens progress", "maar zorgen",
+        "maar bedreigt", "maar dreigt",
+    ]
+    if contains_any(t, mixed_negative):
+        return False, "gemengd negatief"
+
+    # Nederlands lezersperspectief.
     if contains_any(combined, DUTCH_HARM_TERMS):
         return False, "slecht voor NL"
 
-    # Sport is competitief. Een positief woord elders in de kop is niet genoeg.
+    # Medische claims van zwakkere positieve aggregators blokkeren we op inhoud,
+    # niet op de categorie die het algoritme toevallig heeft toegekend.
+    medical_terms = [
+        "alzheimer", "dementia", "dementie", "cancer", "kanker", "disease",
+        "treatment", "therapy", "medicine", "medical", "brain", "brein",
+        "retina", "clinical", "patient", "patiënt"
+    ]
+    if source in LOW_TRUST_MEDICAL_SOURCES and contains_any(combined, medical_terms):
+        return False, "medische claim zwakke bron"
+
+    # Een vraag als 'Verbetert X je prestaties?' is uitleg/advies, geen concrete nieuwsontwikkeling.
+    if t.endswith("?") and any(w in t for w in ["verbetert", "helpt", "werkt", "improves", "helps", "does "]):
+        return False, "uitlegartikel"
+
+    # Sport is competitief.
     if cat == "Sport":
         if any(re.search(p, t) for p in SPORT_BAD_OUTCOME_PATTERNS):
             return False, "negatieve sportuitslag"
         if not contains_any(t, SPORT_POSITIVE_TERMS):
             return False, "geen duidelijke sportwinst"
 
-    # Medische claims van puur positieve aggregators zijn te riskant als basisbron.
-    if cat == "Gezondheid" and source in LOW_TRUST_MEDICAL_SOURCES:
-        return False, "medische claim zwakke bron"
+        # In het Nederlandse blok willen we bij competitieve sport dat de positieve
+        # uitkomst ook daadwerkelijk Nederlands relevant is.
+        if region == "nl" and not contains_any(combined, NL_RELEVANCE_TERMS):
+            return False, "sport niet NL-relevant"
 
     return True, ""
 
@@ -729,7 +763,7 @@ def main():
         "international":[story(x,True) for x in intl],
         "_meta":{
             "generated_at":now.isoformat(),
-            "generator":"Goed nieuws 0.9 auto",
+            "generator":"Goed nieuws 1.0 auto",
             "candidate_count":len(items),
             "feed_errors":errors
         }
