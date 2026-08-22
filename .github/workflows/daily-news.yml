@@ -34,5 +34,6 @@ jobs:
             echo "Geen nieuwe editie om te publiceren."
           else
             git commit -m "Automatische Goed nieuws-editie"
+            git pull --rebase origin main
             git push
           fi
