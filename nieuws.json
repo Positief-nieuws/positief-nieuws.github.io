@@ -50,20 +50,20 @@
       "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNSWxiVFNNZTRmcEdFZTBhSkNOdFdCbWVvb0RUaktjZld6LTkxc2dtbzNadDFDbDNOMVNzMmJiRjYwaXNMVjI2Tmo1MzRiXzdhV1ZYYnV0LWlORnJNUFZxMDVjUUZzWmtFRzB0eWVrVzFxa1Q1RjhRWXRyZVQ1ejBrYlBPU21IY29hWVJLTVdrLXBFMThGdTl1TkRybjRnbkdaNEJtbGJudVl1Q0FMQU90d0tZc2xyVkFtMV8tQktn?oc=5"
     },
     {
-      "category": "Natuur & klimaat",
-      "icon": "🌱",
-      "title": "Video | Vissers drijven dagenlang in koelbox in Stille Oceaan en worden gered - NU",
-      "summary": "Video | Vissers drijven dagenlang in koelbox in Stille Oceaan en worden gered NU",
-      "source": "NU.nl",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNcXZ2cTUyeFE2d0FHTzBSRXZVUEdpNFhBNXQwZjNrRlFrMHhzSW5SYnE3UFlSdEtJemNaQVBGM1V5X0tpNVZNdDBSY01TUy03d0RpakpvbG01bkhocjVTLXNmYWlaUTBUdUJ6UkxYSDZIaGU4dDVCYWN3anRidFhYODZPTmxLcjYwZGQ2NGhaZThqMEdld1BrYVYyVlBOQVZBNTA4SWlvSHI?oc=5"
+      "category": "Dieren",
+      "icon": "🐾",
+      "title": "Trainer Van Bronckhorst wenst Geertruida alle succes bij PSV - RTL.nl",
+      "summary": "Trainer Van Bronckhorst wenst Geertruida alle succes bij PSV RTL.nl",
+      "source": "RTL Nieuws",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQNFdzMnBFbzVScTlEenJiV0JiWDI5Q2hVM1hwblZTbXpGVTd4dFd6Z05JbUR6QlgwVWNma3ZkMTJRcktPMVVSUjVfVnN0RVByNExva3ZJaDdPRzZkSHF1VV9XbTBlVzJWMVV6WTdvb19MOEwtUGh0Z2t3cEl6Wmw4QmVFMjhoLTJkTk53YnhfSzFRTklZZXN0R19HbHNYSHBfbm1PekdBVWdxdE1S?oc=5"
     },
     {
-      "category": "Cultuur & media",
-      "icon": "🎨",
-      "title": "Adam Sandlers jongste dochter timmert aan de weg als actrice: deze Netflix-film moet Sunny's doorbraak zijn - RTL.nl",
-      "summary": "Adam Sandlers jongste dochter timmert aan de weg als actrice: deze Netflix-film moet Sunny's doorbraak zijn RTL.nl",
-      "source": "RTL Nieuws",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxObXBkMVlYZlhOeERKUkx6c01HVW5iMy1yTzRIUmVCY3hUZ3JLWDFUOG1SSzBLY0o2Ukt1Ri0xNzFvb3ZOc3NJNVpUTmcxRWtLVEZkUThDR3B2Y2NMYXlHSWJiazYyaVJUTXY0MUh5SDFWOU1YX3Y2SXdTeVVfOTlMSGEwaFRYYzNuY08ydmVLbnJZdnV6cndabUVFUmxERk1EMDFxWGxJdlE3bDgtQVduQVhaM3JYRW8?oc=5"
+      "category": "Natuur & klimaat",
+      "icon": "🌱",
+      "title": "Wapenopslagplaats ontdekt in Duits bos, vermoedelijk van Russische diensten - NU",
+      "summary": "Wapenopslagplaats ontdekt in Duits bos, vermoedelijk van Russische diensten NU",
+      "source": "NU.nl",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQdzFXR21XcXhaWUNKNzFDUGFJTXMydm5Fd3RrZEdWTlVmMXNDV3RZSWRyLXB1WG81czdUZDZ2aE9vMHdUbHZ4b3lFT1I0SV9mbnlSUXFoVXVHTnVBeF9VU0JZX2ZxRFdxU0FvSDRVZHlBMG5XcmM5MDBPOG54ZVRLVk5tMW81cUl0cDI2eE9VZnJLWlVMenVJUVd5cFQzMHU3bC1ubmtDY1RsakMyaVZ6M1ZvTVdiV2s?oc=5"
     }
   ],
   "international": [
@@ -125,9 +125,9 @@
     }
   ],
   "_meta": {
-    "generated_at": "2026-08-22T11:32:41.165294+00:00",
-    "generator": "Goed nieuws 1.0 auto",
-    "candidate_count": 88,
+    "generated_at": "2026-08-22T11:36:54.314346+00:00",
+    "generator": "Goed nieuws 1.1 auto",
+    "candidate_count": 53,
     "feed_errors": []
   }
 }
