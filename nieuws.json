@@ -2,11 +2,12 @@
   "edition": {
     "date": "2026-08-22",
     "displayDate": "zaterdag 22 augustus",
-    "title": "Goed nieuws",
+    "title": "Positief nieuws",
     "tagline": "Dit gebeurt ook.",
-    "intro": "14 korte verhalen. Geen doomscrollen, geen eindeloze feed.",
+    "intro": "14 verhalen die laten zien wat er óók goed gaat. Geen doomscrollen. Wel even lekker lezen.",
     "closingTitle": "Dat was het.",
-    "closingText": "Ga lekker verder met je dag. ☀️"
+    "closingText": "Ga lekker verder met je dag. ☀️",
+    "internationalIntro": "Omdat goed nieuws zich niet aan landsgrenzen houdt."
   },
   "dutch": [
     {
