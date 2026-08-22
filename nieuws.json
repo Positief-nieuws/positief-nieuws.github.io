@@ -4,113 +4,130 @@
     "displayDate": "zaterdag 22 augustus",
     "title": "Goed nieuws",
     "tagline": "Dit gebeurt ook.",
-    "intro": "12 korte verhalen. Geen doomscrollen, geen eindeloze feed.",
+    "intro": "14 korte verhalen. Geen doomscrollen, geen eindeloze feed.",
     "closingTitle": "Dat was het.",
     "closingText": "Ga lekker verder met je dag. ☀️"
   },
   "dutch": [
     {
-      "category": "Dieren",
-      "icon": "🐾",
-      "title": "Broeders-Bol verbetert Nederlands record 800 meter en belt direct met Van Langen",
-      "summary": "Femke Broeders-Bol heeft het Nederlands record op de 800 meter verbeterd. In het Zwitserse Lausanne liep zij zeven dagen na haar derde plek op de EK naar een tweede plaats in 1.55,41, een tijd waarmee zij nu alleen recordhoudster is.",
+      "category": "Sport",
+      "icon": "🏅",
+      "title": "Turner Dolgopyat weer Europees kampioen op vloer, voltigegoud voor Targhetta",
+      "summary": "Turner Artem Dolgopyat is in Zagreb voor de derde keer Europees kampioen op vloer geworden. De 29-jarige Israëliër had zich met de tweede score voor de finale geplaatst en hield daarin de jonge Rus Arseni Doechno van de titel af: 14,466 om 14,333 punten.",
       "source": "NOS",
-      "url": "https://nos.nl/l/2627797"
+      "url": "https://nos.nl/l/2627798"
     },
     {
-      "category": "Technologie & innovatie",
-      "icon": "💡",
-      "title": "Van der Poel maakt indruk bij rentree op mountainbike met tiende plaats in shortrace",
-      "summary": "Mathieu van der Poel is bij zijn eerste mountainbike-optreden van het seizoen tiende geworden in de shortrace van de wereldbeker in Les Gets. De 31-jarige Nederlander maakte een goede indruk en heeft zichzelf van een startpositie op de tweede rij voorzien in de hoofdwedstrijd op zondagmiddag.",
-      "source": "NOS",
-      "url": "https://nos.nl/l/2627775"
-    },
-    {
-      "category": "Wetenschap",
-      "icon": "🔬",
-      "title": "Reddingsmissie gaat toch niet door: het einde van ruimtetelescoop Swift is in zicht",
-      "summary": "De ruimtetelescoop Swift wordt waarschijnlijk toch niet gered. Ondanks dat kan de reddingsmissie NASA nog wel waardevolle kennis opleveren.",
-      "source": "Scientias",
-      "url": "https://scientias.nl/reddingsmissie-gaat-toch-niet-door-het-einde-van-ruimtetelescoop-swift-is-in-zicht/"
-    },
-    {
-      "category": "Natuur & klimaat",
-      "icon": "🌱",
-      "title": "Wat een eer! Mierenleeuw vernoemd naar collectiebeheerder van Naturalis",
-      "summary": "Een nieuwe soort mierenleeuw uit Zuid-India is naar Naturalis collectiebeheerder Mónica Guimarães Cruz vernoemd. Het type-exemplaar maakt namelijk deel uit van de Naturalis insectencollectie, die zij beheert.",
-      "source": "Nature Today",
-      "url": "https://www.naturetoday.com/intl/nl/nature-reports/message/?msg=35734&utm_source=rssfeed&utm_medium=rss&utm_campaign=web-rss-nb"
-    },
-    {
-      "category": "Wetenschap",
-      "icon": "🔬",
+      "category": "Gezondheid",
+      "icon": "❤️",
       "title": "Het grote succes van screening: kans om darmkanker te overleven ruim 40 procent groter",
-      "summary": "Het nut van bevolkingsonderzoek om kanker vroegtijdig op te sporen is al meermaals bewezen. Nieuwe Zweedse cijfers doen daar nog een schepje bovenop: de kans om aan darmkanker te overlijden is maar liefst 43 procent kleiner onder mensen die deelnemen aan screening.",
+      "summary": "Het nut van bevolkingsonderzoek om kanker vroegtijdig op te sporen is al meermaals bewezen. Nieuwe Zweedse cijfers doen daar nog een schepje bovenop: de kans om aan darmkanker te overlijden is maar liefst 43 procent kleiner onder mensen die deelnemen aan…",
       "source": "Scientias",
       "url": "https://scientias.nl/het-grote-succes-van-screening-kans-om-darmkanker-te-overleven-ruim-40-procent-groter/"
-    }
-  ],
-  "international": [
-    {
-      "category": "Economie & geld",
-      "icon": "📈",
-      "title": "First ever Fat Marmot Week to kick off in effort to raise money for research",
-      "summary": "Researchers hope contest – similar to Fat Bear Week – starting Monday will be latest wildlife watching craze Monday sees the start of what researchers hope will be the latest wildlife watching craze – Fat Marmot Week. Last winter was tough for marmots living high in the Colorado mountains, where researchers say…",
-      "source": "The Guardian · English",
-      "url": "https://www.theguardian.com/environment/2026/aug/21/fat-marmot-week-research-funding"
     },
     {
       "category": "Gewoon leuk",
       "icon": "☀️",
-      "title": "Stormy autumn, cold winter - how might El Niño affect the UK weather?",
-      "summary": "This year's El Niño is expected to be the strongest in living memory and could lead to a range of impacts of the UK - including a stormy autumn.",
-      "source": "BBC · English",
-      "url": "https://www.bbc.co.uk/weather/articles/cd0x17r4j0yo?at_medium=RSS&at_campaign=rss"
-    },
-    {
-      "category": "Wetenschap",
-      "icon": "🔬",
-      "title": "El Niño set to be 'strongest in living memory', says Met Office",
-      "summary": "Scientists say the growing El Niño weather pattern is an \"unprecedented event\" and means 2027 is likely to be the world's hottest year on record.",
-      "source": "BBC · English",
-      "url": "https://www.bbc.co.uk/weather/articles/c3ekg93vjz9o?at_medium=RSS&at_campaign=rss"
-    },
-    {
-      "category": "Cultuur & media",
-      "icon": "🎨",
-      "title": "AI for Good: How the UN uses AI to advance human rights",
-      "summary": "For Ari, a six-year-old boy with learning difficulties in Jamaica, artificial intelligence (AI) opened the door to something many children take for granted: reading a book in his own language. Thousands of miles away, gold miners in Ethiopia are being screened more quickly for tuberculosis, while communities around…",
-      "source": "UN News · English",
-      "url": "https://news.un.org/feed/view/en/story/2026/08/1168177"
-    },
-    {
-      "category": "Natuur & klimaat",
-      "icon": "🌱",
-      "title": "Britain’s railway prepares for more extreme weather as intense El Niño develops",
-      "summary": "Experts say more must be done to adapt to changing climate, after two trains derailed within 24 hours during a recent heatwave Railway companies are racing to prepare for another brutal summer next year, as a developing El Niño could see 2027 break more heat-related records. Britain’s railway system has already been…",
-      "source": "The Guardian · English",
-      "url": "https://www.theguardian.com/environment/2026/aug/21/britains-railway-prepares-for-more-extreme-weather-as-intense-el-nino-develops"
+      "title": "Verstappen eindigt als zesde in sprintrace Zandvoort, Russell wint vanaf pole - NU",
+      "summary": "Verstappen eindigt als zesde in sprintrace Zandvoort, Russell wint vanaf pole NU",
+      "source": "NU.nl",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPS1FmOGNmOEI0ZUhSamY1aE9jLXR5czQ2ZW1nU0lCVlVLSzIzRmZMbTJ6TUk3NGl5M1hhcGVlckZ0RTlPT1lOMUlBUWFpOTNRaGhMM0MwNEtoaHNYYkZraTU3Y2hQZVlXNGwwWU80XzE1Z1ZiSkJGZDlwLVN6U1NWRkN6d1dhM0VPREVVTFIya201NlpmUk5XZW91UU5GU3lsUHZvN3hjRHkyU0JfU0NuUi1nd2NBZDR2?oc=5"
     },
     {
       "category": "Dieren",
       "icon": "🐾",
-      "title": "The View from Above: The Gemini Visual Acuity Experiments",
-      "summary": "NASA astronaut L. Gordon Cooper, Jr.",
-      "source": "NASA · English",
-      "url": "https://www.nasa.gov/history/the-view-from-above-the-gemini-visual-acuity-experiments/"
+      "title": "Visser na goud op EK tweede bij Diamond League in Lausanne - RTL.nl",
+      "summary": "Visser na goud op EK tweede bij Diamond League in Lausanne RTL.nl",
+      "source": "RTL Nieuws",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQUnV2dm9tT3ZGcjd3SEN1dEZUdWdudGRscGNNUG9ONnVxN3RrZ1E4ZWpQQ2R6amgzMDR3STRaNXg5Z2F2RFBqVUtrVEJhRGtLQkVSVjJNNXJhSXJJSEdQMnJnVWVuMTBqanRsM0hGRndmMERteEFneWtCZDFsVGZLNEN2c1ZvcmpXVmsyeFpHUHAyUnp4WU4zclJMZTA1TUtxdWMyYjJn?oc=5"
+    },
+    {
+      "category": "Natuur & klimaat",
+      "icon": "🌱",
+      "title": "Video | Vissers drijven dagenlang in koelbox in Stille Oceaan en worden gered - NU",
+      "summary": "Video | Vissers drijven dagenlang in koelbox in Stille Oceaan en worden gered NU",
+      "source": "NU.nl",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNcXZ2cTUyeFE2d0FHTzBSRXZVUEdpNFhBNXQwZjNrRlFrMHhzSW5SYnE3UFlSdEtJemNaQVBGM1V5X0tpNVZNdDBSY01TUy03d0RpakpvbG01bkhocjVTLXNmYWlaUTBUdUJ6UkxYSDZIaGU4dDVCYWN3anRidFhYODZPTmxLcjYwZGQ2NGhaZThqMEdld1BrYVYyVlBOQVZBNTA4SWlvSHI?oc=5"
+    },
+    {
+      "category": "Economie & geld",
+      "icon": "📈",
+      "title": "Doorbraak in zedenzaak, 160 banen weg en verdriet om Ruben op 20 augustus - Omroep Gelderland",
+      "summary": "Doorbraak in zedenzaak, 160 banen weg en verdriet om Ruben op 20 augustus Omroep Gelderland",
+      "source": "Omroep Gelderland",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPczhZNHo4azdYQklob2xGN1E2NjJRMEZoWjljUHV1YWdCYTNua2l6V2dNcmNCWEs1NndRU3B1ckN5cDZwOWNXQXdpNGNac2t3cEY2bnREUGxxWlZBTHVRZVlaaGxUay04MWVmVC00VUVXdTNXYTF4aTRFcjBDalhidTJFYjNoLUNJSkdzaDdJQ016enRQbVdkWGNwRGgzdnB2TUo3a244d3JEQQ?oc=5"
+    },
+    {
+      "category": "Cultuur & media",
+      "icon": "🎨",
+      "title": "Adam Sandlers jongste dochter timmert aan de weg als actrice: deze Netflix-film moet Sunny's doorbraak zijn - RTL.nl",
+      "summary": "Adam Sandlers jongste dochter timmert aan de weg als actrice: deze Netflix-film moet Sunny's doorbraak zijn RTL.nl",
+      "source": "RTL Nieuws",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxObXBkMVlYZlhOeERKUkx6c01HVW5iMy1yTzRIUmVCY3hUZ3JLWDFUOG1SSzBLY0o2Ukt1Ri0xNzFvb3ZOc3NJNVpUTmcxRWtLVEZkUThDR3B2Y2NMYXlHSWJiazYyaVJUTXY0MUh5SDFWOU1YX3Y2SXdTeVVfOTlMSGEwaFRYYzNuY08ydmVLbnJZdnV6cndabUVFUmxERk1EMDFxWGxJdlE3bDgtQVduQVhaM3JYRW8?oc=5"
+    }
+  ],
+  "international": [
+    {
+      "category": "Voeding & leefstijl",
+      "icon": "🥬",
+      "title": "Two Hours of Sleep Restored in Alzheimer’s Brains in Research Breakthrough - Good News Network",
+      "summary": "Two Hours of Sleep Restored in Alzheimer’s Brains in Research Breakthrough Good News Network",
+      "source": "Good News Network · English",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPTGRpM1pyOWt1Vng1RTU1dlpiYmlCcUk5U3BhVGRNUTNWZ0trS2tBVVIyaXJkeGEwNElfQTVoWTZNcmZtZVlCeGlwZ1ljajBtczNhV2VjeFJwaDkzUnBjWjZXZWhpUHBHUkt1eFp1aVd2ekdYNDB0cXRMQjU0ZmdGRnY3QlJhZ2VJYXBycXlLaFNlbU1OT2FOekk2cmlKcFNKRUF3c2ZTS3I1Zw?oc=5"
+    },
+    {
+      "category": "Gezondheid",
+      "icon": "❤️",
+      "title": "Injectable antioxidant hydrogel promotes retinal neuroprotection and visual recovery in mouse model",
+      "summary": "Researchers from National Taiwan University (NTU) and National Taiwan University Hospital (NTUH) have developed an injectable antioxidant hydrogel that protects retinal neurons and promotes visual recovery following acute optic nerve injury.",
+      "source": "Medical Xpress · English",
+      "url": "https://medicalxpress.com/news/2026-08-antioxidant-hydrogel-retinal-neuroprotection-visual.html"
+    },
+    {
+      "category": "Sport",
+      "icon": "🏅",
+      "title": "UNICEF and the International Business Chamber of Cambodia Partner to Champion Children’s Rights Through Responsible Business - Unicef",
+      "summary": "UNICEF and the International Business Chamber of Cambodia Partner to Champion Children’s Rights Through Responsible Business Unicef",
+      "source": "UNICEF · English",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOMkM2Y0g2eFU1T2cxS3ZJMkpNUUdFaWw0Wkl0SmprNXo2MUxoMElMZmtleklYOEZBT1ctNjJvVzN1NlJaSUhhS3FkZlVTNUpraXFMQ3BFYVE2aWpzOGRINmJQVDFYa2lacGUyazczMnlMeVAweWtmSWxtdmJmTXg5Z0pkUmhBNXlMODh6cko4NGVVZ1VnYnhuWnB3SlpVNzVUNXlqeFJEQ2haa3JfS0lkc2lBNmx6UzdVdXk0dmNoVWRrbVEycWlWeDY2UQ?oc=5"
+    },
+    {
+      "category": "Natuur & klimaat",
+      "icon": "🌱",
+      "title": "A London Scheme to Cut Car Pollution Restored Lung Growth in Children - Yale E360",
+      "summary": "A London Scheme to Cut Car Pollution Restored Lung Growth in Children Yale E360",
+      "source": "Yale Environment 360 · English",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9HMURCeVJoWU9rZ1V1S1k2NkdMcHJITU9CMlJhZUZhdGRSYU1UZHBxMkpWalZRSl9GRkpCSlJrUTBSNjc3dHVRUkZWM3ZjcEVXMkF0WG14MDN4QmpIQlV4ZS0xenk?oc=5"
+    },
+    {
+      "category": "Economie & geld",
+      "icon": "📈",
+      "title": "Waladi textile factory inaugurated in Mosul, creating over 650 jobs and boosting economic recovery - United Nations Development Programme",
+      "summary": "Waladi textile factory inaugurated in Mosul, creating over 650 jobs and boosting economic recovery United Nations Development Programme",
+      "source": "UNDP · English",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPalpqdV9ua1lnQktHSWlxb2d3ajBrT1p1eGJfc0cybmZiN0VhNzNTdUIxOG5EU2ZtbktYbGZCX1pqUXZtc0l5ck16UUlpOXEwVkxpWFhDSWN0SkNnME4wSWVKZ2dNZFFjSFJFTWVrdWpBbUFWU2Q4RUNtRzZNNW1ob1FWV1RwaXRFYWFlRjBOQmwzaHM2M3hyMzNwYjhXaGc1cVZTRmdiTHotYXRiVk10ZVE5OWNaX1NYaG9pVGVITkhneHZ5R2h5ODJjZGIyc2pZNmVNQTZYSGhqdw?oc=5"
     },
     {
       "category": "Technologie & innovatie",
       "icon": "💡",
-      "title": "SmallSat 2026",
-      "summary": "SmallSat 2026 Join NASA in the Exhibit Hall (Booth # 635, 835, 641, and 940) for Storytelling by NASA experts. Full Agenda below.",
-      "source": "NASA · English",
-      "url": "https://science.nasa.gov/earth/smallsat-2026/"
+      "title": "Innovation Specialist, P-3, Fixed Term Position, Malawi, Lilongwe, Malawi, #00103341 - UNICEF",
+      "summary": "Innovation Specialist, P-3, Fixed Term Position, Malawi, Lilongwe, Malawi, #00103341 UNICEF",
+      "source": "UNICEF · English",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPamVPMFNvTGpuZzdvLTRQcEM5TmRUbzRZd1JHTDBPcFpmOTJXLXNyUzh2M1Bfa2YtUzZjNmRtbDluOUpzZVU1RWczT19ueDZqbkxnNHFFb1ozUGxWMFNlVXYydWNqMWk4aE1OaTF5V1BsU0FNRFJkNWZ4eGtFTmhMRXhjaWRWYVlLaTRHUGxSU1g1WjdidVpfZTgtNkZfX3Vldkp1amV4ckl6dmlPLWVxcEtIVUs?oc=5"
+    },
+    {
+      "category": "Wetenschap",
+      "icon": "🔬",
+      "title": "Rain to stop in time for weekend as sun returns",
+      "summary": "The heavy downpours that have caused flash flooding will ease during Friday with sunshine returning for the weekend. But there are some chilly nights in store, as Ben Rich explains.",
+      "source": "BBC · English",
+      "url": "https://www.bbc.co.uk/weather/articles/c2el98pkd3po?at_medium=RSS&at_campaign=rss"
     }
   ],
   "_meta": {
-    "generated_at": "2026-08-22T10:28:06.345164+00:00",
-    "generator": "Goed nieuws 0.3 auto",
+    "generated_at": "2026-08-22T11:24:21.943066+00:00",
+    "generator": "Goed nieuws 0.8 auto",
+    "candidate_count": 104,
     "feed_errors": []
   }
 }
