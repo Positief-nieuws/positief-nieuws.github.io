@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Goed nieuws 0.7 auto
+Goed nieuws 0.8 auto
 Gratis dagelijkse editie zonder AI/API.
 
 Belangrijkste wijzigingen:
@@ -36,7 +36,7 @@ MIN_SOURCES = 5
 MAX_PER_SOURCE = 2
 PREFERRED_AGE_HOURS = 48
 MAX_AGE_HOURS = 168
-USER_AGENT = "GoedNieuwsBot/0.7"
+USER_AGENT = "GoedNieuwsBot/0.8"
 
 # mode=rss: directe feed
 # mode=google_site: gratis Google News RSS site-search als bron geen handige RSS heeft.
@@ -102,16 +102,26 @@ SOURCES = [
     {"publisher":"The Guardian","region":"int","mode":"rss","url":"https://www.theguardian.com/environment/rss","weight":2.4,"hint":"Natuur & klimaat"},
     {"publisher":"The Guardian","region":"int","mode":"rss","url":"https://www.theguardian.com/science/rss","weight":2.4,"hint":"Wetenschap"},
     {"publisher":"UN News","region":"int","mode":"rss","url":"https://news.un.org/feed/subscribe/en/news/all/rss.xml","weight":2.5,"hint":"Mens & samenleving"},
+    {"publisher":"BBC","region":"int","mode":"rss","url":"https://feeds.bbci.co.uk/news/health/rss.xml","weight":2.5,"hint":"Gezondheid"},
+    {"publisher":"BBC","region":"int","mode":"rss","url":"https://feeds.bbci.co.uk/news/technology/rss.xml","weight":2.5,"hint":"Technologie & innovatie"},
+    {"publisher":"The Guardian","region":"int","mode":"rss","url":"https://www.theguardian.com/global-development/rss","weight":2.4,"hint":"Mens & samenleving"},
+    {"publisher":"Phys.org","region":"int","mode":"rss","url":"https://phys.org/rss-feed/","weight":2.3,"hint":"Wetenschap"},
+    {"publisher":"Medical Xpress","region":"int","mode":"rss","url":"https://medicalxpress.com/rss-feed/","weight":2.3,"hint":"Gezondheid"},
 
     {"publisher":"ESA","region":"int","mode":"google_site","domain":"esa.int","weight":2.6,"hint":"Wetenschap"},
     {"publisher":"WHO","region":"int","mode":"google_site","domain":"who.int","weight":2.6,"hint":"Gezondheid"},
     {"publisher":"UNICEF","region":"int","mode":"google_site","domain":"unicef.org","weight":2.5,"hint":"Mens & samenleving"},
-    {"publisher":"World Bank","region":"int","mode":"google_site","domain":"worldbank.org","weight":2.5,"hint":"Economie & geld"},
     {"publisher":"OECD","region":"int","mode":"google_site","domain":"oecd.org","weight":2.5,"hint":"Economie & geld"},
     {"publisher":"UNEP","region":"int","mode":"google_site","domain":"unep.org","weight":2.5,"hint":"Natuur & klimaat"},
     {"publisher":"Smithsonian Magazine","region":"int","mode":"google_site","domain":"smithsonianmag.com","weight":2.3,"hint":"Geschiedenis & mens"},
     {"publisher":"ScienceDaily","region":"int","mode":"google_site","domain":"sciencedaily.com","weight":2.2,"hint":"Wetenschap"},
     {"publisher":"Positive News","region":"int","mode":"google_site","domain":"positive.news","weight":2.0,"hint":"Mens & samenleving"},
+    {"publisher":"Mongabay","region":"int","mode":"google_site","domain":"mongabay.com","weight":2.4,"hint":"Natuur & klimaat"},
+    {"publisher":"Yale Environment 360","region":"int","mode":"google_site","domain":"e360.yale.edu","weight":2.4,"hint":"Natuur & klimaat"},
+    {"publisher":"Good News Network","region":"int","mode":"google_site","domain":"goodnewsnetwork.org","weight":1.9,"hint":"Gewoon leuk"},
+    {"publisher":"UNDP","region":"int","mode":"google_site","domain":"undp.org","weight":2.5,"hint":"Mens & samenleving"},
+    {"publisher":"FAO","region":"int","mode":"google_site","domain":"fao.org","weight":2.5,"hint":"Voeding & leefstijl"},
+    {"publisher":"European Space Agency","region":"int","mode":"google_site","domain":"esa.int","weight":2.6,"hint":"Wetenschap"},
 ]
 
 POSITIVE_PHRASES = {
@@ -129,6 +139,7 @@ POSITIVE_PHRASES = {
     "recovery":5, "recovers":5, "return":4, "rescued":5, "protects":4,
     "improves":4, "improvement":4, "helps":4, "solution":4, "innovation":4, "volunteers":3,
     "discovery":4, "cleaner":4, "sustainable":3, "hope":3, "renewed hope":4, "prevents":3,
+    "restored":5, "returns":4, "protects":4, "reopens":4, "saved":5,
     "jobs grow":6, "unemployment falls":6, "emissions fall":6,
     "poverty falls":6, "survival improves":6,
 }
@@ -261,9 +272,10 @@ def google_site_feed(domain, region):
         return f"https://news.google.com/rss/search?q={query}&hl=nl&gl=NL&ceid=NL:nl"
 
     cues = (
-        'breakthrough OR success OR champion OR gold OR wins OR rescued OR recovery OR '
-        'improves OR improvement OR discovery OR innovation OR helps OR volunteers OR '
-        '"renewed hope" OR "unemployment falls" OR "emissions fall" OR "poverty falls"'
+        'breakthrough OR success OR champion OR gold OR wins OR rescued OR recovery OR restored OR '
+        'returns OR protects OR reopens OR improves OR improvement OR discovery OR innovation OR helps OR '
+        'volunteers OR saved OR cleaner OR "renewed hope" OR "unemployment falls" OR '
+        '"emissions fall" OR "poverty falls" OR "survival improves"'
     )
     q = f"site:{domain} ({cues}) when:7d"
     query = urllib.parse.quote_plus(q)
@@ -311,6 +323,13 @@ HARD_NEGATIVE_PATTERNS = [
     r"\barmoede\s+(?:fors\s+)?stijgt\b",
     r"\bsterfte\s+(?:fors\s+)?stijgt\b",
     r"\b(?:cancelled|canceled)\b",
+    r"\bexports? by country\b",
+    r"\bwits\b",
+    r"\bincluding silver plated with gold\b",
+    r"\bnot (?:be )?the best solution\b",
+    r"\blow-fat\b",
+    r"\blose weight\b",
+    r"\bweight loss\b",
 ]
 
 POSITIVE_CONTEXT_PATTERNS = [
@@ -329,6 +348,15 @@ POSITIVE_CONTEXT_PATTERNS = [
 def hard_negative(title):
     t = clean(title).lower()
     if any(p in t for p in HARD_NEGATIVE_TITLE):
+        return True
+    # Ook niet-negatieve rommel die geen nieuwsartikel is.
+    junk = [
+        "exports by country", "imports by country", "wits",
+        "including silver plated with gold", "data - wits",
+        "not be the best solution", "not the best solution",
+        "low-fat", "lose weight", "weight loss",
+    ]
+    if any(p in t for p in junk):
         return True
     return any(re.search(pattern, t) for pattern in HARD_NEGATIVE_PATTERNS)
 
@@ -587,7 +615,7 @@ def main():
         "international":[story(x,True) for x in intl],
         "_meta":{
             "generated_at":now.isoformat(),
-            "generator":"Goed nieuws 0.7 auto",
+            "generator":"Goed nieuws 0.8 auto",
             "candidate_count":len(items),
             "feed_errors":errors
         }
