@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Goed nieuws 0.8 auto
+Goed nieuws 0.9 auto
 Gratis dagelijkse editie zonder AI/API.
 
 Belangrijkste wijzigingen:
@@ -36,7 +36,7 @@ MIN_SOURCES = 5
 MAX_PER_SOURCE = 2
 PREFERRED_AGE_HOURS = 48
 MAX_AGE_HOURS = 168
-USER_AGENT = "GoedNieuwsBot/0.8"
+USER_AGENT = "GoedNieuwsBot/0.9"
 
 # mode=rss: directe feed
 # mode=google_site: gratis Google News RSS site-search als bron geen handige RSS heeft.
@@ -355,6 +355,9 @@ def hard_negative(title):
         "including silver plated with gold", "data - wits",
         "not be the best solution", "not the best solution",
         "low-fat", "lose weight", "weight loss",
+        "zedenzaak", "banen weg", "verdriet om", "massaontslag",
+        "job cuts", "layoffs", "fixed term position", "fixed-term position",
+        "weather forecast", "rain to stop", "sun returns",
     ]
     if any(p in t for p in junk):
         return True
@@ -420,6 +423,108 @@ def normurl(url):
     except Exception:
         return url.lower().rstrip("/")
 
+
+# ---------------- REDACTIONELE LAAG 0.9 ----------------
+
+VACANCY_TERMS = [
+    "vacature", "vacancies", "vacancy", "job opening", "job openings",
+    "fixed term position", "fixed-term position", "position available",
+    "we are hiring", "hiring now", "careers", "apply now", "consultant vacancy",
+    "specialist, p-", "officer, p-", "manager, p-", "internship", "stageplek",
+]
+
+WEATHER_ONLY_TERMS = [
+    "weather forecast", "forecast for the weekend", "sun returns",
+    "rain to stop", "rain clears", "weekend weather", "weerbericht",
+    "weersverwachting", "zon keert terug", "regen stopt",
+]
+
+STRONG_BAD_NEWS_TERMS = [
+    "zedenzaak", "misbruik", "seksueel misbruik", "banen weg", "verdriet om",
+    "ontslagronde", "massaontslag", "failliet", "faillissement",
+    "sluiting", "sluit fabriek", "verlies van banen", "baanverlies",
+    "abuse", "sexual abuse", "jobs cut", "job cuts", "layoffs", "lay-offs",
+    "mass layoffs", "bankruptcy", "factory closure", "grief",
+]
+
+DUTCH_HARM_TERMS = [
+    "nederland verliest", "nederland uitgeschakeld", "oranje verliest",
+    "nederlandse banen weg", "banen in nederland weg",
+    "dutch lose", "netherlands lose", "netherlands eliminated",
+    "dutch jobs cut", "jobs cut in the netherlands",
+]
+
+SPORT_BAD_OUTCOME_PATTERNS = [
+    r"\b(?:eindigt|wordt|finisht)\s+(?:als\s+)?(?:vierde|vijfde|zesde|zevende|achtste|negende|tiende)\b",
+    r"\b(?:finishes|ends up)\s+(?:fourth|fifth|sixth|seventh|eighth|ninth|tenth)\b",
+    r"\bverliest\b",
+    r"\bverlies\b",
+    r"\buitgeschakeld\b",
+    r"\bmist kwalificatie\b",
+    r"\beliminated\b",
+    r"\bloses\b",
+    r"\bdefeated\b",
+]
+
+SPORT_POSITIVE_TERMS = [
+    "wint", "winst", "goud", "zilver", "brons", "kampioen", "record",
+    "kwalificeert", "plaatst zich", "comeback", "medaille", "podium",
+    "wins", "gold", "silver", "bronze", "champion", "record",
+    "qualifies", "medal", "podium", "comeback",
+]
+
+NL_RELEVANCE_TERMS = [
+    "nederland", "nederlandse", "nederlands", "oranje",
+    "ajax", "psv", "feyenoord", "az ", "fc twente", "eredivisie",
+    "amsterdam", "rotterdam", "utrecht", "den haag", "eindhoven",
+    "enschede", "groningen", "friesland", "limburg", "brabant",
+    "gelderland", "overijssel",
+]
+
+LOW_TRUST_MEDICAL_SOURCES = {"Good News Network", "Positive News"}
+
+def contains_any(text, terms):
+    t = clean(text).lower()
+    return any(term in t for term in terms)
+
+def nl_relevance_bonus(title, summary):
+    t = f"{title} {summary}".lower()
+    return 4 if any(term in t for term in NL_RELEVANCE_TERMS) else 0
+
+def editorial_ok(title, summary, region, cat, source):
+    t = clean(title).lower()
+    combined = f"{title} {summary}".lower()
+
+    # Geen vacatures of personeelsadvertenties als nieuws.
+    if contains_any(t, VACANCY_TERMS):
+        return False, "vacature"
+
+    # Geen losse weersverwachting als nieuwsverhaal.
+    if contains_any(t, WEATHER_ONLY_TERMS):
+        return False, "weerbericht"
+
+    # Geen kop die positief klinkt maar tegelijk zwaar slecht nieuws bevat.
+    if contains_any(t, STRONG_BAD_NEWS_TERMS):
+        return False, "negatieve context"
+
+    # Nederlands lezersperspectief: iets dat expliciet slecht uitpakt voor
+    # Nederland/Nederlanders kan niet door als 'goed nieuws'.
+    if contains_any(combined, DUTCH_HARM_TERMS):
+        return False, "slecht voor NL"
+
+    # Sport is competitief. Een positief woord elders in de kop is niet genoeg.
+    if cat == "Sport":
+        if any(re.search(p, t) for p in SPORT_BAD_OUTCOME_PATTERNS):
+            return False, "negatieve sportuitslag"
+        if not contains_any(t, SPORT_POSITIVE_TERMS):
+            return False, "geen duidelijke sportwinst"
+
+    # Medische claims van puur positieve aggregators zijn te riskant als basisbron.
+    if cat == "Gezondheid" and source in LOW_TRUST_MEDICAL_SOURCES:
+        return False, "medische claim zwakke bron"
+
+    return True, ""
+
 def collect():
     now = datetime.now(timezone.utc)
     out, errors, seen = [], [], set()
@@ -451,6 +556,13 @@ def collect():
             if pscore <= 0:
                 continue
 
+            cat = category(x["title"], x["summary"], src.get("hint"))
+            ok, reason = editorial_ok(
+                x["title"], x["summary"], src["region"], cat, src["publisher"]
+            )
+            if not ok:
+                continue
+
             out.append({
                 "region":src["region"],
                 "source":src["publisher"],
@@ -459,8 +571,9 @@ def collect():
                 "url":x["url"],
                 "summary":compact_summary(x["summary"]),
                 "hours_old":round(age,1) if age is not None else None,
-                "category":category(x["title"],x["summary"],src.get("hint")),
+                "category":cat,
                 "positive_score":pscore,
+                "nl_relevance":nl_relevance_bonus(x["title"], x["summary"]) if src["region"] == "nl" else 0,
             })
 
     return out, errors
@@ -476,7 +589,8 @@ def quality(x):
         elif x["hours_old"] <= 96:
             freshness = 1
 
-    return x["positive_score"] * 10 + x["weight"] * 4 + freshness
+    perspective = x.get("nl_relevance", 0)
+    return x["positive_score"] * 10 + x["weight"] * 4 + freshness + perspective
 
 def choose(items, region):
     pool = [x for x in items if x["region"] == region]
@@ -615,7 +729,7 @@ def main():
         "international":[story(x,True) for x in intl],
         "_meta":{
             "generated_at":now.isoformat(),
-            "generator":"Goed nieuws 0.8 auto",
+            "generator":"Goed nieuws 0.9 auto",
             "candidate_count":len(items),
             "feed_errors":errors
         }
