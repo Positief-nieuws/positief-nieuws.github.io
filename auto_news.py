@@ -1,24 +1,27 @@
 #!/usr/bin/env python3
 """
-Goed nieuws 1.1 auto
-Gratis dagelijkse editie zonder AI/API.
+Goed nieuws - kandidaten 0.1
 
-Belangrijkste wijzigingen:
-- positieve discovery-query per niet-RSS-bron, in plaats van blind de laatste headlines ophalen;
-- veel extra Nederlandse regionale en gratis nieuwsbronnen;
-- een titel moet zelf een duidelijke positieve cue bevatten;
-- hard-negatieve patronen zoals 'niet door' blokkeren altijd;
-- contextregels voor o.a. werkloosheid, uitstoot en overlevingskans;
-- max 2 berichten per bron en minimaal 5 bronnen per blok;
-- voorkeur laatste 48 uur, fallback tot 7 dagen;
-- publiceert alleen bij 7 NL + 7 internationaal.
+Doel:
+- dagelijks breed recente potentiële Goed nieuws-verhalen verzamelen;
+- simpele technische rommel verwijderen;
+- géén definitieve 7+7 redactionele selectie doen;
+- kandidaten.json klaarzetten voor een AI-redacteur of handmatige selectie.
+
+Bewust NIET in dit script:
+- bepalen of iets "echt goed nieuws" is;
+- Nederlands lezersperspectief inhoudelijk beoordelen;
+- complexe semantische categorisatie;
+- 7+7 forceren.
+
+Dat is precies het werk waar een taalmodel later beter in is.
 """
 
 from __future__ import annotations
 
+import hashlib
 import json
 import re
-import sys
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -29,194 +32,462 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parent
-OUTPUT = ROOT / "nieuws.json"
+OUTPUT = ROOT / "kandidaten.json"
 
-TARGET = 7
-MIN_SOURCES = 5
-MAX_PER_SOURCE = 2
-PREFERRED_AGE_HOURS = 48
-MAX_AGE_HOURS = 168
-USER_AGENT = "GoedNieuwsBot/1.1"
+MAX_AGE_HOURS = 168        # maximaal 7 dagen
+PREFERRED_AGE_HOURS = 48   # versheidsbonus
+MAX_PER_SOURCE = 6         # voorkom dat 1 bron de lijst overneemt
+MAX_PER_REGION = 40        # shortlist voor latere AI-selectie
+USER_AGENT = "GoedNieuwsKandidatenBot/0.1"
 
-# mode=rss: directe feed
-# mode=google_site: gratis Google News RSS site-search als bron geen handige RSS heeft.
-SOURCES = [
-    # ---------------- NEDERLAND ----------------
-    {"publisher":"NOS","region":"nl","mode":"rss","url":"https://feeds.nos.nl/nosnieuwsalgemeen","weight":2.3,"hint":None},
-    {"publisher":"NOS","region":"nl","mode":"rss","url":"https://feeds.nos.nl/nosnieuwseconomie","weight":2.3,"hint":"Economie & geld"},
-    {"publisher":"NOS","region":"nl","mode":"rss","url":"https://feeds.nos.nl/nosnieuwscultuurenmedia","weight":2.3,"hint":"Cultuur & media"},
-    {"publisher":"NOS","region":"nl","mode":"rss","url":"https://feeds.nos.nl/nosnieuwstech","weight":2.3,"hint":"Technologie & innovatie"},
-    {"publisher":"NOS","region":"nl","mode":"rss","url":"https://feeds.nos.nl/nosnieuwsopmerkelijk","weight":2.2,"hint":"Gewoon leuk"},
-    {"publisher":"NOS","region":"nl","mode":"rss","url":"https://feeds.nos.nl/nossportalgemeen","weight":2.3,"hint":"Sport"},
+SOURCES = [{'publisher': 'NOS',
+  'region': 'nl',
+  'mode': 'rss',
+  'url': 'https://feeds.nos.nl/nosnieuwsalgemeen',
+  'weight': 2.3,
+  'hint': None},
+ {'publisher': 'NOS',
+  'region': 'nl',
+  'mode': 'rss',
+  'url': 'https://feeds.nos.nl/nosnieuwseconomie',
+  'weight': 2.3,
+  'hint': 'Economie & geld'},
+ {'publisher': 'NOS',
+  'region': 'nl',
+  'mode': 'rss',
+  'url': 'https://feeds.nos.nl/nosnieuwscultuurenmedia',
+  'weight': 2.3,
+  'hint': 'Cultuur & media'},
+ {'publisher': 'NOS',
+  'region': 'nl',
+  'mode': 'rss',
+  'url': 'https://feeds.nos.nl/nosnieuwstech',
+  'weight': 2.3,
+  'hint': 'Technologie & innovatie'},
+ {'publisher': 'NOS',
+  'region': 'nl',
+  'mode': 'rss',
+  'url': 'https://feeds.nos.nl/nosnieuwsopmerkelijk',
+  'weight': 2.2,
+  'hint': 'Gewoon leuk'},
+ {'publisher': 'NOS',
+  'region': 'nl',
+  'mode': 'rss',
+  'url': 'https://feeds.nos.nl/nossportalgemeen',
+  'weight': 2.3,
+  'hint': 'Sport'},
+ {'publisher': 'PBL',
+  'region': 'nl',
+  'mode': 'rss',
+  'url': 'https://www.pbl.nl/feed/article/rss.xml',
+  'weight': 2.5,
+  'hint': 'Natuur & klimaat'},
+ {'publisher': 'PBL',
+  'region': 'nl',
+  'mode': 'rss',
+  'url': 'https://www.pbl.nl/feed/topic/20/article/rss.xml',
+  'weight': 2.5,
+  'hint': 'Mens & samenleving'},
+ {'publisher': 'PBL',
+  'region': 'nl',
+  'mode': 'rss',
+  'url': 'https://www.pbl.nl/feed/topic/17/article/rss.xml',
+  'weight': 2.5,
+  'hint': 'Economie & geld'},
+ {'publisher': 'PBL',
+  'region': 'nl',
+  'mode': 'rss',
+  'url': 'https://www.pbl.nl/feed/topic/13/article/rss.xml',
+  'weight': 2.5,
+  'hint': 'Natuur & klimaat'},
+ {'publisher': 'PBL',
+  'region': 'nl',
+  'mode': 'rss',
+  'url': 'https://www.pbl.nl/feed/topic/9/article/rss.xml',
+  'weight': 2.5,
+  'hint': 'Voeding & leefstijl'},
+ {'publisher': 'PBL',
+  'region': 'nl',
+  'mode': 'rss',
+  'url': 'https://www.pbl.nl/feed/topic/11/article/rss.xml',
+  'weight': 2.5,
+  'hint': 'Natuur & klimaat'},
+ {'publisher': 'KNMI',
+  'region': 'nl',
+  'mode': 'rss',
+  'url': 'https://www.knmi.nl/rssfeeds/rss_KNMInieuwsberichten',
+  'weight': 2.5,
+  'hint': 'Natuur & klimaat'},
+ {'publisher': 'KNMI',
+  'region': 'nl',
+  'mode': 'rss',
+  'url': 'https://www.knmi.nl/rssfeeds/rss_KNMIklimaatberichten',
+  'weight': 2.5,
+  'hint': 'Natuur & klimaat'},
+ {'publisher': 'RIVM',
+  'region': 'nl',
+  'mode': 'rss',
+  'url': 'https://www.rivm.nl/nieuws/rss.xml',
+  'weight': 2.5,
+  'hint': 'Gezondheid'},
+ {'publisher': 'Scientias',
+  'region': 'nl',
+  'mode': 'rss',
+  'url': 'https://feeds.feedburner.com/scientias-wetenschap',
+  'weight': 2.0,
+  'hint': 'Wetenschap'},
+ {'publisher': 'Nature Today',
+  'region': 'nl',
+  'mode': 'rss',
+  'url': 'https://www.naturetoday.com/intl/nl/nature-reports/rss',
+  'weight': 2.1,
+  'hint': 'Natuur & klimaat'},
+ {'publisher': 'CBS',
+  'region': 'nl',
+  'mode': 'google_site',
+  'domain': 'cbs.nl',
+  'weight': 2.6,
+  'hint': 'Economie & geld'},
+ {'publisher': 'Wageningen University & Research',
+  'region': 'nl',
+  'mode': 'google_site',
+  'domain': 'wur.nl',
+  'weight': 2.7,
+  'hint': 'Wetenschap'},
+ {'publisher': 'Universiteit Twente',
+  'region': 'nl',
+  'mode': 'google_site',
+  'domain': 'utwente.nl',
+  'weight': 2.6,
+  'hint': 'Technologie & innovatie'},
+ {'publisher': 'TU Delft',
+  'region': 'nl',
+  'mode': 'google_site',
+  'domain': 'tudelft.nl',
+  'weight': 2.6,
+  'hint': 'Technologie & innovatie'},
+ {'publisher': 'Universiteit Utrecht',
+  'region': 'nl',
+  'mode': 'google_site',
+  'domain': 'uu.nl',
+  'weight': 2.5,
+  'hint': 'Wetenschap'},
+ {'publisher': 'Radboud Universiteit',
+  'region': 'nl',
+  'mode': 'google_site',
+  'domain': 'ru.nl',
+  'weight': 2.5,
+  'hint': 'Wetenschap'},
+ {'publisher': 'TNO',
+  'region': 'nl',
+  'mode': 'google_site',
+  'domain': 'tno.nl',
+  'weight': 2.6,
+  'hint': 'Technologie & innovatie'},
+ {'publisher': 'NEMO Kennislink',
+  'region': 'nl',
+  'mode': 'google_site',
+  'domain': 'nemokennislink.nl',
+  'weight': 2.2,
+  'hint': 'Wetenschap'},
+ {'publisher': 'RVO',
+  'region': 'nl',
+  'mode': 'google_site',
+  'domain': 'rvo.nl',
+  'weight': 2.3,
+  'hint': 'Economie & geld'},
+ {'publisher': 'Rijksoverheid',
+  'region': 'nl',
+  'mode': 'google_site',
+  'domain': 'rijksoverheid.nl',
+  'weight': 2.4,
+  'hint': 'Mens & samenleving'},
+ {'publisher': 'Voedingscentrum',
+  'region': 'nl',
+  'mode': 'google_site',
+  'domain': 'voedingscentrum.nl',
+  'weight': 2.4,
+  'hint': 'Voeding & leefstijl'},
+ {'publisher': 'Milieu Centraal',
+  'region': 'nl',
+  'mode': 'google_site',
+  'domain': 'milieucentraal.nl',
+  'weight': 2.1,
+  'hint': 'Natuur & klimaat'},
+ {'publisher': 'Staatsbosbeheer',
+  'region': 'nl',
+  'mode': 'google_site',
+  'domain': 'staatsbosbeheer.nl',
+  'weight': 2.2,
+  'hint': 'Natuur & klimaat'},
+ {'publisher': 'Oranje Fonds',
+  'region': 'nl',
+  'mode': 'google_site',
+  'domain': 'oranjefonds.nl',
+  'weight': 2.2,
+  'hint': 'Mens & samenleving'},
+ {'publisher': 'Humanitas',
+  'region': 'nl',
+  'mode': 'google_site',
+  'domain': 'humanitas.nl',
+  'weight': 2.1,
+  'hint': 'Mens & samenleving'},
+ {'publisher': 'NU.nl', 'region': 'nl', 'mode': 'google_site', 'domain': 'nu.nl', 'weight': 2.3, 'hint': None},
+ {'publisher': 'RTL Nieuws', 'region': 'nl', 'mode': 'google_site', 'domain': 'rtl.nl', 'weight': 2.3, 'hint': None},
+ {'publisher': 'RTV Oost', 'region': 'nl', 'mode': 'google_site', 'domain': 'rtvoost.nl', 'weight': 2.2, 'hint': None},
+ {'publisher': 'Omroep Brabant',
+  'region': 'nl',
+  'mode': 'google_site',
+  'domain': 'omroepbrabant.nl',
+  'weight': 2.2,
+  'hint': None},
+ {'publisher': 'Omroep Gelderland',
+  'region': 'nl',
+  'mode': 'google_site',
+  'domain': 'gld.nl',
+  'weight': 2.2,
+  'hint': None},
+ {'publisher': 'Rijnmond', 'region': 'nl', 'mode': 'google_site', 'domain': 'rijnmond.nl', 'weight': 2.2, 'hint': None},
+ {'publisher': 'NH Nieuws',
+  'region': 'nl',
+  'mode': 'google_site',
+  'domain': 'nhnieuws.nl',
+  'weight': 2.2,
+  'hint': None},
+ {'publisher': 'RTV Noord',
+  'region': 'nl',
+  'mode': 'google_site',
+  'domain': 'rtvnoord.nl',
+  'weight': 2.2,
+  'hint': None},
+ {'publisher': 'Omrop Fryslân',
+  'region': 'nl',
+  'mode': 'google_site',
+  'domain': 'omropfryslan.nl',
+  'weight': 2.2,
+  'hint': None},
+ {'publisher': 'AT5', 'region': 'nl', 'mode': 'google_site', 'domain': 'at5.nl', 'weight': 2.1, 'hint': None},
+ {'publisher': '1Limburg', 'region': 'nl', 'mode': 'google_site', 'domain': '1limburg.nl', 'weight': 2.1, 'hint': None},
+ {'publisher': 'Hart van Nederland',
+  'region': 'nl',
+  'mode': 'google_site',
+  'domain': 'hartvannederland.nl',
+  'weight': 2.0,
+  'hint': None},
+ {'publisher': 'MIT News',
+  'region': 'int',
+  'mode': 'rss',
+  'url': 'https://news.mit.edu/rss/feed',
+  'weight': 2.7,
+  'hint': 'Wetenschap'},
+ {'publisher': 'NASA',
+  'region': 'int',
+  'mode': 'rss',
+  'url': 'https://www.nasa.gov/news-release/feed/',
+  'weight': 2.7,
+  'hint': 'Wetenschap'},
+ {'publisher': 'BBC',
+  'region': 'int',
+  'mode': 'rss',
+  'url': 'https://feeds.bbci.co.uk/news/science_and_environment/rss.xml',
+  'weight': 2.5,
+  'hint': 'Wetenschap'},
+ {'publisher': 'BBC',
+  'region': 'int',
+  'mode': 'rss',
+  'url': 'https://feeds.bbci.co.uk/news/business/rss.xml',
+  'weight': 2.5,
+  'hint': 'Economie & geld'},
+ {'publisher': 'The Guardian',
+  'region': 'int',
+  'mode': 'rss',
+  'url': 'https://www.theguardian.com/environment/rss',
+  'weight': 2.4,
+  'hint': 'Natuur & klimaat'},
+ {'publisher': 'The Guardian',
+  'region': 'int',
+  'mode': 'rss',
+  'url': 'https://www.theguardian.com/science/rss',
+  'weight': 2.4,
+  'hint': 'Wetenschap'},
+ {'publisher': 'UN News',
+  'region': 'int',
+  'mode': 'rss',
+  'url': 'https://news.un.org/feed/subscribe/en/news/all/rss.xml',
+  'weight': 2.5,
+  'hint': 'Mens & samenleving'},
+ {'publisher': 'BBC',
+  'region': 'int',
+  'mode': 'rss',
+  'url': 'https://feeds.bbci.co.uk/news/health/rss.xml',
+  'weight': 2.5,
+  'hint': 'Gezondheid'},
+ {'publisher': 'BBC',
+  'region': 'int',
+  'mode': 'rss',
+  'url': 'https://feeds.bbci.co.uk/news/technology/rss.xml',
+  'weight': 2.5,
+  'hint': 'Technologie & innovatie'},
+ {'publisher': 'The Guardian',
+  'region': 'int',
+  'mode': 'rss',
+  'url': 'https://www.theguardian.com/global-development/rss',
+  'weight': 2.4,
+  'hint': 'Mens & samenleving'},
+ {'publisher': 'Phys.org',
+  'region': 'int',
+  'mode': 'rss',
+  'url': 'https://phys.org/rss-feed/',
+  'weight': 2.3,
+  'hint': 'Wetenschap'},
+ {'publisher': 'Medical Xpress',
+  'region': 'int',
+  'mode': 'rss',
+  'url': 'https://medicalxpress.com/rss-feed/',
+  'weight': 2.3,
+  'hint': 'Gezondheid'},
+ {'publisher': 'ESA', 'region': 'int', 'mode': 'google_site', 'domain': 'esa.int', 'weight': 2.6, 'hint': 'Wetenschap'},
+ {'publisher': 'WHO', 'region': 'int', 'mode': 'google_site', 'domain': 'who.int', 'weight': 2.6, 'hint': 'Gezondheid'},
+ {'publisher': 'UNICEF',
+  'region': 'int',
+  'mode': 'google_site',
+  'domain': 'unicef.org',
+  'weight': 2.5,
+  'hint': 'Mens & samenleving'},
+ {'publisher': 'OECD',
+  'region': 'int',
+  'mode': 'google_site',
+  'domain': 'oecd.org',
+  'weight': 2.5,
+  'hint': 'Economie & geld'},
+ {'publisher': 'UNEP',
+  'region': 'int',
+  'mode': 'google_site',
+  'domain': 'unep.org',
+  'weight': 2.5,
+  'hint': 'Natuur & klimaat'},
+ {'publisher': 'Smithsonian Magazine',
+  'region': 'int',
+  'mode': 'google_site',
+  'domain': 'smithsonianmag.com',
+  'weight': 2.3,
+  'hint': 'Geschiedenis & mens'},
+ {'publisher': 'ScienceDaily',
+  'region': 'int',
+  'mode': 'google_site',
+  'domain': 'sciencedaily.com',
+  'weight': 2.2,
+  'hint': 'Wetenschap'},
+ {'publisher': 'Positive News',
+  'region': 'int',
+  'mode': 'google_site',
+  'domain': 'positive.news',
+  'weight': 2.0,
+  'hint': 'Mens & samenleving'},
+ {'publisher': 'Mongabay',
+  'region': 'int',
+  'mode': 'google_site',
+  'domain': 'mongabay.com',
+  'weight': 2.4,
+  'hint': 'Natuur & klimaat'},
+ {'publisher': 'Yale Environment 360',
+  'region': 'int',
+  'mode': 'google_site',
+  'domain': 'e360.yale.edu',
+  'weight': 2.4,
+  'hint': 'Natuur & klimaat'},
+ {'publisher': 'Good News Network',
+  'region': 'int',
+  'mode': 'google_site',
+  'domain': 'goodnewsnetwork.org',
+  'weight': 1.9,
+  'hint': 'Gewoon leuk'},
+ {'publisher': 'UNDP',
+  'region': 'int',
+  'mode': 'google_site',
+  'domain': 'undp.org',
+  'weight': 2.5,
+  'hint': 'Mens & samenleving'},
+ {'publisher': 'FAO',
+  'region': 'int',
+  'mode': 'google_site',
+  'domain': 'fao.org',
+  'weight': 2.5,
+  'hint': 'Voeding & leefstijl'},
+ {'publisher': 'European Space Agency',
+  'region': 'int',
+  'mode': 'google_site',
+  'domain': 'esa.int',
+  'weight': 2.6,
+  'hint': 'Wetenschap'}]
 
-    {"publisher":"PBL","region":"nl","mode":"rss","url":"https://www.pbl.nl/feed/article/rss.xml","weight":2.5,"hint":"Natuur & klimaat"},
-    {"publisher":"PBL","region":"nl","mode":"rss","url":"https://www.pbl.nl/feed/topic/20/article/rss.xml","weight":2.5,"hint":"Mens & samenleving"},
-    {"publisher":"PBL","region":"nl","mode":"rss","url":"https://www.pbl.nl/feed/topic/17/article/rss.xml","weight":2.5,"hint":"Economie & geld"},
-    {"publisher":"PBL","region":"nl","mode":"rss","url":"https://www.pbl.nl/feed/topic/13/article/rss.xml","weight":2.5,"hint":"Natuur & klimaat"},
-    {"publisher":"PBL","region":"nl","mode":"rss","url":"https://www.pbl.nl/feed/topic/9/article/rss.xml","weight":2.5,"hint":"Voeding & leefstijl"},
-    {"publisher":"PBL","region":"nl","mode":"rss","url":"https://www.pbl.nl/feed/topic/11/article/rss.xml","weight":2.5,"hint":"Natuur & klimaat"},
-
-    {"publisher":"KNMI","region":"nl","mode":"rss","url":"https://www.knmi.nl/rssfeeds/rss_KNMInieuwsberichten","weight":2.5,"hint":"Natuur & klimaat"},
-    {"publisher":"KNMI","region":"nl","mode":"rss","url":"https://www.knmi.nl/rssfeeds/rss_KNMIklimaatberichten","weight":2.5,"hint":"Natuur & klimaat"},
-    {"publisher":"RIVM","region":"nl","mode":"rss","url":"https://www.rivm.nl/nieuws/rss.xml","weight":2.5,"hint":"Gezondheid"},
-    {"publisher":"Scientias","region":"nl","mode":"rss","url":"https://feeds.feedburner.com/scientias-wetenschap","weight":2.0,"hint":"Wetenschap"},
-    {"publisher":"Nature Today","region":"nl","mode":"rss","url":"https://www.naturetoday.com/intl/nl/nature-reports/rss","weight":2.1,"hint":"Natuur & klimaat"},
-
-    # Extra NL-bronnen via site-search
-    {"publisher":"CBS","region":"nl","mode":"google_site","domain":"cbs.nl","weight":2.6,"hint":"Economie & geld"},
-    {"publisher":"Wageningen University & Research","region":"nl","mode":"google_site","domain":"wur.nl","weight":2.7,"hint":"Wetenschap"},
-    {"publisher":"Universiteit Twente","region":"nl","mode":"google_site","domain":"utwente.nl","weight":2.6,"hint":"Technologie & innovatie"},
-    {"publisher":"TU Delft","region":"nl","mode":"google_site","domain":"tudelft.nl","weight":2.6,"hint":"Technologie & innovatie"},
-    {"publisher":"Universiteit Utrecht","region":"nl","mode":"google_site","domain":"uu.nl","weight":2.5,"hint":"Wetenschap"},
-    {"publisher":"Radboud Universiteit","region":"nl","mode":"google_site","domain":"ru.nl","weight":2.5,"hint":"Wetenschap"},
-    {"publisher":"TNO","region":"nl","mode":"google_site","domain":"tno.nl","weight":2.6,"hint":"Technologie & innovatie"},
-    {"publisher":"NEMO Kennislink","region":"nl","mode":"google_site","domain":"nemokennislink.nl","weight":2.2,"hint":"Wetenschap"},
-    {"publisher":"RVO","region":"nl","mode":"google_site","domain":"rvo.nl","weight":2.3,"hint":"Economie & geld"},
-    {"publisher":"Rijksoverheid","region":"nl","mode":"google_site","domain":"rijksoverheid.nl","weight":2.4,"hint":"Mens & samenleving"},
-    {"publisher":"Voedingscentrum","region":"nl","mode":"google_site","domain":"voedingscentrum.nl","weight":2.4,"hint":"Voeding & leefstijl"},
-    {"publisher":"Milieu Centraal","region":"nl","mode":"google_site","domain":"milieucentraal.nl","weight":2.1,"hint":"Natuur & klimaat"},
-    {"publisher":"Staatsbosbeheer","region":"nl","mode":"google_site","domain":"staatsbosbeheer.nl","weight":2.2,"hint":"Natuur & klimaat"},
-    {"publisher":"Oranje Fonds","region":"nl","mode":"google_site","domain":"oranjefonds.nl","weight":2.2,"hint":"Mens & samenleving"},
-    {"publisher":"Humanitas","region":"nl","mode":"google_site","domain":"humanitas.nl","weight":2.1,"hint":"Mens & samenleving"},
-
-    # Extra Nederlandse algemene en regionale bronnen.
-    # Juist hier zitten vaak lokale, concrete positieve verhalen.
-    {"publisher":"NU.nl","region":"nl","mode":"google_site","domain":"nu.nl","weight":2.3,"hint":None},
-    {"publisher":"RTL Nieuws","region":"nl","mode":"google_site","domain":"rtl.nl","weight":2.3,"hint":None},
-    {"publisher":"RTV Oost","region":"nl","mode":"google_site","domain":"rtvoost.nl","weight":2.2,"hint":None},
-    {"publisher":"Omroep Brabant","region":"nl","mode":"google_site","domain":"omroepbrabant.nl","weight":2.2,"hint":None},
-    {"publisher":"Omroep Gelderland","region":"nl","mode":"google_site","domain":"gld.nl","weight":2.2,"hint":None},
-    {"publisher":"Rijnmond","region":"nl","mode":"google_site","domain":"rijnmond.nl","weight":2.2,"hint":None},
-    {"publisher":"NH Nieuws","region":"nl","mode":"google_site","domain":"nhnieuws.nl","weight":2.2,"hint":None},
-    {"publisher":"RTV Noord","region":"nl","mode":"google_site","domain":"rtvnoord.nl","weight":2.2,"hint":None},
-    {"publisher":"Omrop Fryslân","region":"nl","mode":"google_site","domain":"omropfryslan.nl","weight":2.2,"hint":None},
-    {"publisher":"AT5","region":"nl","mode":"google_site","domain":"at5.nl","weight":2.1,"hint":None},
-    {"publisher":"1Limburg","region":"nl","mode":"google_site","domain":"1limburg.nl","weight":2.1,"hint":None},
-    {"publisher":"Hart van Nederland","region":"nl","mode":"google_site","domain":"hartvannederland.nl","weight":2.0,"hint":None},
-
-    # ---------------- INTERNATIONAAL ----------------
-    {"publisher":"MIT News","region":"int","mode":"rss","url":"https://news.mit.edu/rss/feed","weight":2.7,"hint":"Wetenschap"},
-    {"publisher":"NASA","region":"int","mode":"rss","url":"https://www.nasa.gov/news-release/feed/","weight":2.7,"hint":"Wetenschap"},
-    {"publisher":"BBC","region":"int","mode":"rss","url":"https://feeds.bbci.co.uk/news/science_and_environment/rss.xml","weight":2.5,"hint":"Wetenschap"},
-    {"publisher":"BBC","region":"int","mode":"rss","url":"https://feeds.bbci.co.uk/news/business/rss.xml","weight":2.5,"hint":"Economie & geld"},
-    {"publisher":"The Guardian","region":"int","mode":"rss","url":"https://www.theguardian.com/environment/rss","weight":2.4,"hint":"Natuur & klimaat"},
-    {"publisher":"The Guardian","region":"int","mode":"rss","url":"https://www.theguardian.com/science/rss","weight":2.4,"hint":"Wetenschap"},
-    {"publisher":"UN News","region":"int","mode":"rss","url":"https://news.un.org/feed/subscribe/en/news/all/rss.xml","weight":2.5,"hint":"Mens & samenleving"},
-    {"publisher":"BBC","region":"int","mode":"rss","url":"https://feeds.bbci.co.uk/news/health/rss.xml","weight":2.5,"hint":"Gezondheid"},
-    {"publisher":"BBC","region":"int","mode":"rss","url":"https://feeds.bbci.co.uk/news/technology/rss.xml","weight":2.5,"hint":"Technologie & innovatie"},
-    {"publisher":"The Guardian","region":"int","mode":"rss","url":"https://www.theguardian.com/global-development/rss","weight":2.4,"hint":"Mens & samenleving"},
-    {"publisher":"Phys.org","region":"int","mode":"rss","url":"https://phys.org/rss-feed/","weight":2.3,"hint":"Wetenschap"},
-    {"publisher":"Medical Xpress","region":"int","mode":"rss","url":"https://medicalxpress.com/rss-feed/","weight":2.3,"hint":"Gezondheid"},
-
-    {"publisher":"ESA","region":"int","mode":"google_site","domain":"esa.int","weight":2.6,"hint":"Wetenschap"},
-    {"publisher":"WHO","region":"int","mode":"google_site","domain":"who.int","weight":2.6,"hint":"Gezondheid"},
-    {"publisher":"UNICEF","region":"int","mode":"google_site","domain":"unicef.org","weight":2.5,"hint":"Mens & samenleving"},
-    {"publisher":"OECD","region":"int","mode":"google_site","domain":"oecd.org","weight":2.5,"hint":"Economie & geld"},
-    {"publisher":"UNEP","region":"int","mode":"google_site","domain":"unep.org","weight":2.5,"hint":"Natuur & klimaat"},
-    {"publisher":"Smithsonian Magazine","region":"int","mode":"google_site","domain":"smithsonianmag.com","weight":2.3,"hint":"Geschiedenis & mens"},
-    {"publisher":"ScienceDaily","region":"int","mode":"google_site","domain":"sciencedaily.com","weight":2.2,"hint":"Wetenschap"},
-    {"publisher":"Positive News","region":"int","mode":"google_site","domain":"positive.news","weight":2.0,"hint":"Mens & samenleving"},
-    {"publisher":"Mongabay","region":"int","mode":"google_site","domain":"mongabay.com","weight":2.4,"hint":"Natuur & klimaat"},
-    {"publisher":"Yale Environment 360","region":"int","mode":"google_site","domain":"e360.yale.edu","weight":2.4,"hint":"Natuur & klimaat"},
-    {"publisher":"Good News Network","region":"int","mode":"google_site","domain":"goodnewsnetwork.org","weight":1.9,"hint":"Gewoon leuk"},
-    {"publisher":"UNDP","region":"int","mode":"google_site","domain":"undp.org","weight":2.5,"hint":"Mens & samenleving"},
-    {"publisher":"FAO","region":"int","mode":"google_site","domain":"fao.org","weight":2.5,"hint":"Voeding & leefstijl"},
-    {"publisher":"European Space Agency","region":"int","mode":"google_site","domain":"esa.int","weight":2.6,"hint":"Wetenschap"},
+# Brede positieve signalen. Dit is alleen VOORSELECTIE.
+# Een match betekent dus niet automatisch dat iets in Goed nieuws hoort.
+POSITIVE_CUES_NL = [
+    "wint", "gewonnen", "goud", "zilver", "brons", "kampioen", "record",
+    "doorbraak", "succes", "herstelt", "herstel", "gered", "redding",
+    "verbetering", "verbetert", "ontdekking", "ontdekt", "innovatie",
+    "helpt", "helpen", "vrijwilligers", "beschermd", "beschermt",
+    "daalt", "dalen", "groeit", "toename", "vooruitgang", "oplossing",
+    "schoner", "duurzaam", "overlevingskans", "meer banen", "hoop",
 ]
 
-POSITIVE_PHRASES = {
-    "wint":5, "winnen":5, "winst":4, "goud":5, "kampioen":5,
-    "doorbraak":5, "succes":4, "herstelt":5, "herstel":5, "hoopvol":4,
-    "terugkeer":5, "gered":5, "redding":5, "beschermt":4,
-    "verbetert":4, "verbetering":4, "helpt":4, "helpen":4, "oplossing":4,
-    "innovatie":4, "ontdekking":4, "ontdekt":3, "samenwerking":3, "vrijwilligers":3,
-    "schoner":4, "duurzaam":3, "medaille":4, "hoop":3, "voorkomen":3, "voorkomt":3,
-    "meer banen":6, "werkgelegenheid groeit":6, "levensverwachting stijgt":6,
-    "overlevingskans stijgt":6, "uitstoot daalt":6, "armoede daalt":6,
-    "criminaliteit daalt":6, "werkloosheid daalt":6, "faillissementen dalen":5,
-    "biodiversiteit groeit":6, "populatie groeit":5,
-    "wins":5, "gold":5, "champion":5, "breakthrough":5, "success":4,
-    "recovery":5, "recovers":5, "return":4, "rescued":5, "protects":4,
-    "improves":4, "improvement":4, "helps":4, "solution":4, "innovation":4, "volunteers":3,
-    "discovery":4, "cleaner":4, "sustainable":3, "hope":3, "renewed hope":4, "prevents":3,
-    "restored":5, "returns":4, "protects":4, "reopens":4, "saved":5,
-    "jobs grow":6, "unemployment falls":6, "emissions fall":6,
-    "poverty falls":6, "survival improves":6,
-}
-
-NEGATIVE_PHRASES = {
-    "oorlog":-10, "doden":-10, "dood":-10, "omgekomen":-10, "moord":-10,
-    "geweld":-9, "aanval":-9, "ramp":-10, "explosie":-10, "crisis":-8,
-    "gewond":-7, "vermist":-7, "fraude":-7, "dreigt":-6, "zorgelijk":-5, "einde van":-8, "niet door":-10,
-    "werkloosheid stijgt":-10, "uitstoot stijgt":-9, "armoede stijgt":-9,
-    "sterfte stijgt":-10, "temperatuur stijgt":-5, "faillissementen stijgen":-9,
-    "gaat niet door":-10, "kan niet worden gered":-10,
-    "war":-10, "dead":-10, "death":-10, "killed":-10, "murder":-10,
-    "threaten progress":-10, "threatens progress":-10, "emerging concerns":-6,
-    "violence":-9, "attack":-9, "disaster":-10, "explosion":-10,
-    "crisis":-8, "wounded":-7, "missing":-7, "fraud":-7, "threat":-6, "cancelled":-10, "canceled":-10,
-    "unemployment rises":-10, "emissions rise":-9, "poverty rises":-9,
-}
-
-HARD_NEGATIVE_TITLE = [
-    "oorlog", "doden", "omgekomen", "moord", "explosie", "zwaar gewond",
-    "gaat niet door", "kan niet worden gered", "ramp", "fraude",
-    "war", "dead", "killed", "murder", "explosion", "disaster",
-    "unemployment rises", "werkloosheid stijgt"
+POSITIVE_CUES_INT = [
+    "wins", "won", "gold", "silver", "bronze", "champion", "record",
+    "breakthrough", "success", "recovery", "recovers", "rescued", "rescue",
+    "improves", "improvement", "discovery", "innovation", "helps",
+    "volunteers", "protects", "restored", "saved", "falls", "drops",
+    "growth", "progress", "solution", "cleaner", "sustainable", "hope",
 ]
+
+# Alleen echt evidente rommel/negativiteit. We houden dit bewust beperkt.
+HARD_BLOCK = [
+    "oorlog", "omgekomen", "moord", "zwaar gewond", "massaontslag",
+    "banen weg", "zedenzaak", "seksueel misbruik", "explosie",
+    "wapenopslagplaats", "werkloosheid stijgt", "uitstoot stijgt",
+    "gaat niet door", "kan niet worden gered",
+    "war", "killed", "murder", "mass layoffs", "job cuts",
+    "sexual abuse", "explosion", "weapons cache",
+    "unemployment rises", "emissions rise", "cancelled", "canceled",
+]
+
+JUNK_TERMS = [
+    "vacature", "vacancy", "job opening", "fixed term position",
+    "fixed-term position", "apply now", "we are hiring", "internship",
+    "weather forecast", "weerbericht", "weersverwachting",
+    "exports by country", "imports by country", "data - wits",
+    "including silver plated with gold",
+]
+
+STOPWORDS = {
+    "de","het","een","en","van","voor","op","in","met","na","bij","om","te","is","zijn",
+    "wordt","worden","dat","die","dit","als","aan","nu","video","weer","the","a","an","and",
+    "of","for","to","in","on","with","after","by","from","as","at","new","news","says",
+}
 
 CATEGORY_TERMS = {
-    "Sport":["sport","sportprestatie","sportprestaties","voetbal","football","soccer","hockey",
-             "tennis","atletiek","athletics","wielrennen","cycling","mountainbike","zwemmen",
-             "swimming","olympic","olympics","medaille","medal","wedstrijd","match","goal",
-             "race","marathon","sprint","sprintrace","diamond league","grand prix","formula 1",
-             "formule 1","f1","pole position","wereldkampioenschap","europees kampioenschap",
-             "europese kampioen","world championship"],
-    "Economie & geld":["economie","economy","geld","money","beurs","market","markt","export",
-                       "import","business","bedrijf","banen","jobs","inflatie","inflation","inkomen",
-                       "income","investment","investering","productie","consumptie","werkloosheid"],
-    "Natuur & klimaat":["natuur","nature","klimaat","climate","forest","bos","river","rivier",
-                        "ocean","oceaan","biodiversiteit","biodiversity","emission","emissie",
-                        "energy","energie","sustainable","duurzaam","ecosystem","ecosysteem"],
-    "Dieren":["dier","dieren","animal","animals","bird","birds","vogel","vogels","fish","vis",
-              "tiger","tijger","whale","walvis","turtle","schildpad","bee","bij","wolf","dog","hond"],
-    "Wetenschap":["wetenschap","science","onderzoek","research","scientist","onderzoeker","study",
-                   "studie","space","ruimte","physics","biology","biologie","astronomy","astronomie"],
-    "Gezondheid":["gezondheid","health","medical","medisch","medicine","medicijn","patient","patiënt",
-                   "care","zorg","therapy","therapie","cancer","kanker","vaccine","vaccin","screening",
-                   "survival","overleving","alzheimer","dementia","dementie","retina","retinal",
-                   "neuroprotection","clinical","klinisch","disease","ziekte"],
-    "Technologie & innovatie":["technology","technologie","tech","innovatie","innovation","robot",
-                               "chip","software","computer","engineering","battery","batterij",
-                               "artificial intelligence","kunstmatige intelligentie","ai"],
-    "Cultuur & media":["cultuur","culture","kunst","art","museum","muziek","music","film","boek",
-                       "book","media","theater","heritage","erfgoed","painting","schilderij"],
-    "Onderwijs & ontwikkeling":["onderwijs","education","school","student","students","leerling",
-                                "leerlingen","learning","opleiding","university","universiteit","teacher"],
-    "Voeding & leefstijl":["voeding","food","groente","vegetable","fruit","diet","leefstijl",
-                            "lifestyle","sleep","slaap","exercise","bewegen","nutrition"],
-    "Geschiedenis & mens":["geschiedenis","history","archeologie","archaeology","ancient","oudheid",
-                            "fossil","voorouder","ancestor","prehistoric"],
-    "Mens & samenleving":["community","gemeenschap","buurt","vrijwillig","volunteer","samenleving",
-                           "society","poverty","armoede","refugee","vluchteling","solidarity",
-                           "solidariteit","mensenrechten","human rights","children's rights",
-                           "childrens rights","children rights","vrijwilligers"],
-}
-
-CATEGORY_PRIORITY = {
-    "Sport":100,"Gezondheid":95,"Dieren":90,"Economie & geld":85,
-    "Technologie & innovatie":80,"Natuur & klimaat":75,
-    "Onderwijs & ontwikkeling":70,"Cultuur & media":65,
-    "Voeding & leefstijl":60,"Geschiedenis & mens":55,
-    "Mens & samenleving":50,"Wetenschap":45,
-}
-
-ICONS = {
-    "Mens & samenleving":"🤝","Economie & geld":"📈","Natuur & klimaat":"🌱",
-    "Dieren":"🐾","Wetenschap":"🔬","Gezondheid":"❤️",
-    "Technologie & innovatie":"💡","Sport":"🏅","Cultuur & media":"🎨",
-    "Onderwijs & ontwikkeling":"🎓","Voeding & leefstijl":"🥬",
-    "Geschiedenis & mens":"🏛️","Gewoon leuk":"☀️",
+    "Sport": ["sport","voetbal","football","hockey","tennis","atletiek","athletics","cycling",
+              "wielrennen","f1","formula 1","formule 1","race","medaille","medal","kampioen"],
+    "Gezondheid": ["gezondheid","health","medical","medisch","kanker","cancer","screening",
+                   "patient","patiënt","therapy","therapie","dementia","alzheimer","retina"],
+    "Wetenschap": ["wetenschap","science","research","onderzoek","study","studie","space","ruimte",
+                   "physics","biology","astronomy"],
+    "Natuur & klimaat": ["natuur","nature","klimaat","climate","forest","bos","ocean","oceaan",
+                         "biodiversity","biodiversiteit","emission","emissie","ecosystem"],
+    "Dieren": ["dier","dieren","animal","animals","bird","vogel","fish","vis","whale","walvis",
+               "turtle","schildpad","bee","bij","wolf"],
+    "Technologie & innovatie": ["technology","technologie","tech","innovation","innovatie","robot",
+                                "chip","software","computer","battery","batterij","ai"],
+    "Economie & geld": ["economie","economy","business","bedrijf","banen","jobs","inflatie",
+                        "inflation","export","income","inkomen","investment","investering"],
+    "Mens & samenleving": ["community","gemeenschap","vrijwillig","volunteer","society","samenleving",
+                            "human rights","mensenrechten","refugee","vluchteling","solidarity"],
+    "Onderwijs & ontwikkeling": ["onderwijs","education","school","student","leerling","university",
+                                  "universiteit","learning","teacher"],
+    "Cultuur & media": ["cultuur","culture","art","kunst","museum","muziek","music","film","boek",
+                        "book","media","theater","heritage","erfgoed"],
+    "Voeding & leefstijl": ["voeding","food","nutrition","groente","fruit","diet","leefstijl",
+                             "lifestyle","sleep","slaap"],
 }
 
 def clean(value):
@@ -263,29 +534,21 @@ def parse_date(value):
         return None
 
 def google_site_feed(domain, region):
-    # Niet blind de laatste headlines ophalen. We vragen Google News expliciet
-    # om recente artikelen met positieve cues op deze bron.
+    # Gericht zoeken naar mogelijke positieve ontwikkelingen.
     if region == "nl":
         cues = (
-            'doorbraak OR succes OR kampioen OR goud OR wint OR gewonnen OR '
-            'gered OR redding OR herstel OR herstelt OR verbetert OR verbetering OR '
-            'ontdekking OR ontdekt OR innovatie OR helpt OR vrijwilligers OR '
-            '"overlevingskans" OR "werkloosheid daalt" OR "uitstoot daalt" OR '
-            '"armoede daalt" OR "meer banen"'
+            'doorbraak OR succes OR wint OR goud OR gered OR herstel OR verbetert OR '
+            'ontdekking OR innovatie OR helpt OR vrijwilligers OR daalt OR groeit OR oplossing'
         )
         q = f"site:{domain} ({cues}) when:7d"
-        query = urllib.parse.quote_plus(q)
-        return f"https://news.google.com/rss/search?q={query}&hl=nl&gl=NL&ceid=NL:nl"
+        return "https://news.google.com/rss/search?q=" + urllib.parse.quote_plus(q) + "&hl=nl&gl=NL&ceid=NL:nl"
 
     cues = (
-        'breakthrough OR success OR champion OR gold OR wins OR rescued OR recovery OR restored OR '
-        'returns OR protects OR reopens OR improves OR improvement OR discovery OR innovation OR helps OR '
-        'volunteers OR saved OR cleaner OR "renewed hope" OR "unemployment falls" OR '
-        '"emissions fall" OR "poverty falls" OR "survival improves"'
+        'breakthrough OR success OR wins OR gold OR rescued OR recovery OR improves OR '
+        'discovery OR innovation OR helps OR volunteers OR falls OR growth OR solution'
     )
     q = f"site:{domain} ({cues}) when:7d"
-    query = urllib.parse.quote_plus(q)
-    return f"https://news.google.com/rss/search?q={query}&hl=en-US&gl=US&ceid=US:en"
+    return "https://news.google.com/rss/search?q=" + urllib.parse.quote_plus(q) + "&hl=en-US&gl=US&ceid=US:en"
 
 def source_url(src):
     if src["mode"] == "rss":
@@ -295,7 +558,7 @@ def source_url(src):
 def fetch(url):
     req = urllib.request.Request(url, headers={
         "User-Agent": USER_AGENT,
-        "Accept": "application/rss+xml,application/atom+xml,application/xml,text/xml,*/*"
+        "Accept": "application/rss+xml,application/atom+xml,application/xml,text/xml,*/*",
     })
     with urllib.request.urlopen(req, timeout=20) as r:
         return r.read()
@@ -311,121 +574,42 @@ def parse_feed(raw):
         summary = child_text(node, {"description","summary","content","encoded"})
         published = parse_date(child_text(node, {"pubdate","published","updated","date"}))
         if title and url:
-            items.append({"title":title,"url":url,"summary":summary,"published":published})
+            items.append({"title": title, "url": url, "summary": summary, "published": published})
     return items
 
-def wordmatch(text, phrase):
-    return bool(re.search(r"(?<!\w)" + re.escape(phrase.lower()) + r"(?!\w)", text.lower()))
+def contains(text, terms):
+    t = clean(text).lower()
+    return any(term in t for term in terms)
 
-def lexscore(text, lex):
-    return sum(points for phrase, points in lex.items() if wordmatch(text, phrase))
-
-HARD_NEGATIVE_PATTERNS = [
-    r"\bniet(?:\s+\w+){0,3}\s+door\b",
-    r"\bgaat(?:\s+\w+){0,3}\s+niet\s+door\b",
-    r"\beinde van\b",
-    r"\bwerkloosheid\s+(?:fors\s+)?stijgt\b",
-    r"\buitstoot\s+(?:fors\s+)?stijgt\b",
-    r"\barmoede\s+(?:fors\s+)?stijgt\b",
-    r"\bsterfte\s+(?:fors\s+)?stijgt\b",
-    r"\b(?:cancelled|canceled)\b",
-    r"\bexports? by country\b",
-    r"\bwits\b",
-    r"\bincluding silver plated with gold\b",
-    r"\bnot (?:be )?the best solution\b",
-    r"\blow-fat\b",
-    r"\blose weight\b",
-    r"\bweight loss\b",
-]
-
-POSITIVE_CONTEXT_PATTERNS = [
-    r"\bkans\b.*\boverleven\b.*\b(?:groter|hoger|toegenomen)\b",
-    r"\boverlevingskans\b.*\b(?:stijgt|groter|hoger|toeneemt)\b",
-    r"\bwerkloosheid\b.*\b(?:daalt|lager|afgenomen)\b",
-    r"\buitstoot\b.*\b(?:daalt|lager|afgenomen|verminderd)\b",
-    r"\barmoede\b.*\b(?:daalt|lager|afgenomen)\b",
-    r"\b(?:meer|extra)\s+banen\b",
-    r"\b(?:survival|survival rate)\b.*\b(?:improves|higher|increases)\b",
-    r"\bunemployment\b.*\b(?:falls|lower|drops)\b",
-    r"\bemissions?\b.*\b(?:fall|falls|lower|drop|drops)\b",
-    r"\bpoverty\b.*\b(?:falls|lower|drops)\b",
-]
-
-def hard_negative(title):
+def cue_score(title, summary, region):
+    cues = POSITIVE_CUES_NL if region == "nl" else POSITIVE_CUES_INT
     t = clean(title).lower()
-    if any(p in t for p in HARD_NEGATIVE_TITLE):
-        return True
-    # Ook niet-negatieve rommel die geen nieuwsartikel is.
-    junk = [
-        "exports by country", "imports by country", "wits",
-        "including silver plated with gold", "data - wits",
-        "not be the best solution", "not the best solution",
-        "low-fat", "lose weight", "weight loss",
-        "zedenzaak", "banen weg", "verdriet om", "massaontslag",
-        "job cuts", "layoffs", "fixed term position", "fixed-term position",
-        "weather forecast", "rain to stop", "sun returns",
-    ]
-    if any(p in t for p in junk):
-        return True
-    return any(re.search(pattern, t) for pattern in HARD_NEGATIVE_PATTERNS)
+    s = clean(summary).lower()
+    # Titel weegt zwaarder, maar dit blijft slechts een voorselectiescore.
+    return sum(3 for cue in cues if cue in t) + sum(1 for cue in cues if cue in s)
 
-def title_positive_points(title):
-    t = clean(title).lower()
-    points = lexscore(t, POSITIVE_PHRASES)
-    if any(re.search(pattern, t) for pattern in POSITIVE_CONTEXT_PATTERNS):
-        points += 6
-    return points
-
-def positivity(title, summary):
-    # 0.7-regel: een artikel komt alleen in aanmerking als de KOP zelf
-    # een positieve ontwikkeling bevat. Een positieve samenvatting mag een
-    # negatieve of neutrale kop niet meer redden.
-    title_pos = title_positive_points(title)
-    if title_pos <= 0:
-        return -999
-
-    return (
-        3 * title_pos
-        + lexscore(summary, POSITIVE_PHRASES)
-        + 3 * lexscore(title, NEGATIVE_PHRASES)
-        + lexscore(summary, NEGATIVE_PHRASES)
-    )
-
-def category(title, summary, hint):
-    # De kop is veel betrouwbaarder voor categorisatie dan een RSS-snippet.
-    # Google News snippets kunnen namelijk tekst van andere links bevatten.
+def category_hint(title, summary, source_hint=None):
     title_text = clean(title).lower()
     summary_text = clean(summary).lower()
     scores = {}
-
     for cat, terms in CATEGORY_TERMS.items():
-        title_hits = sum(1 for term in terms if wordmatch(title_text, term))
-        summary_hits = sum(1 for term in terms if wordmatch(summary_text, term))
-        score = title_hits * 4 + summary_hits
-        if score:
-            scores[cat] = score
-
-    # Bronhint alleen als zachte tie-breaker.
-    if hint:
-        scores[hint] = scores.get(hint, 0) + 2
-
+        th = sum(1 for term in terms if term in title_text)
+        sh = sum(1 for term in terms if term in summary_text)
+        if th or sh:
+            scores[cat] = th * 3 + sh
+    if source_hint:
+        scores[source_hint] = scores.get(source_hint, 0) + 1
     if not scores:
-        return hint or "Gewoon leuk"
+        return source_hint or "Onbekend"
+    return max(scores, key=scores.get)
 
-    return max(scores, key=lambda c:(scores[c], CATEGORY_PRIORITY.get(c,0)))
-
-def compact_summary(text, max_chars=260):
+def compact_summary(text, max_chars=420):
     text = clean(text)
     if not text:
         return ""
-    # Google News RSS descriptions zijn vaak linklijsten. Dan liever geen rommel tonen.
-    if text.count("<a") or "Google News" in text:
-        return ""
-    sentences = re.split(r"(?<=[.!?])\s+", text)
-    candidate = " ".join(sentences[:2]).strip() or text
-    if len(candidate) > max_chars:
-        candidate = candidate[:max_chars].rsplit(" ",1)[0].rstrip(" ,;:") + "…"
-    return candidate
+    if len(text) > max_chars:
+        text = text[:max_chars].rsplit(" ", 1)[0].rstrip(" ,;:") + "…"
+    return text
 
 def normurl(url):
     try:
@@ -434,447 +618,157 @@ def normurl(url):
     except Exception:
         return url.lower().rstrip("/")
 
-
-# ---------------- REDACTIONELE LAAG 0.9 ----------------
-
-VACANCY_TERMS = [
-    "vacature", "vacancies", "vacancy", "job opening", "job openings",
-    "fixed term position", "fixed-term position", "position available",
-    "we are hiring", "hiring now", "careers", "apply now", "consultant vacancy",
-    "specialist, p-", "officer, p-", "manager, p-", "internship", "stageplek",
-]
-
-WEATHER_ONLY_TERMS = [
-    "weather forecast", "forecast for the weekend", "sun returns",
-    "rain to stop", "rain clears", "weekend weather", "weerbericht",
-    "weersverwachting", "zon keert terug", "regen stopt",
-]
-
-STRONG_BAD_NEWS_TERMS = [
-    "zedenzaak", "misbruik", "seksueel misbruik", "banen weg", "verdriet om",
-    "ontslagronde", "massaontslag", "failliet", "faillissement",
-    "sluiting", "sluit fabriek", "verlies van banen", "baanverlies",
-    "abuse", "sexual abuse", "jobs cut", "job cuts", "layoffs", "lay-offs",
-    "mass layoffs", "bankruptcy", "factory closure", "grief",
-]
-
-DUTCH_HARM_TERMS = [
-    "nederland verliest", "nederland uitgeschakeld", "oranje verliest",
-    "nederlandse banen weg", "banen in nederland weg",
-    "dutch lose", "netherlands lose", "netherlands eliminated",
-    "dutch jobs cut", "jobs cut in the netherlands",
-]
-
-SPORT_BAD_OUTCOME_PATTERNS = [
-    r"\b(?:eindigt|wordt|finisht)\s+(?:als\s+)?(?:vierde|vijfde|zesde|zevende|achtste|negende|tiende)\b",
-    r"\b(?:finishes|ends up)\s+(?:fourth|fifth|sixth|seventh|eighth|ninth|tenth)\b",
-    r"\bverliest\b",
-    r"\bverlies\b",
-    r"\buitgeschakeld\b",
-    r"\bmist kwalificatie\b",
-    r"\beliminated\b",
-    r"\bloses\b",
-    r"\bdefeated\b",
-]
-
-SPORT_POSITIVE_TERMS = [
-    "wint", "winst", "goud", "zilver", "brons", "kampioen", "record",
-    "kwalificeert", "plaatst zich", "comeback", "medaille", "podium",
-    "wins", "gold", "silver", "bronze", "champion", "record",
-    "qualifies", "medal", "podium", "comeback",
-]
-
-NL_RELEVANCE_TERMS = [
-    "nederland", "nederlandse", "nederlands", "nederlander", "nederlanders", "oranje",
-    "ajax", "psv", "feyenoord", "az ", "fc twente", "eredivisie",
-    "amsterdam", "rotterdam", "utrecht", "den haag", "eindhoven",
-    "enschede", "groningen", "friesland", "limburg", "brabant",
-    "gelderland", "overijssel",
-]
-
-LOW_TRUST_MEDICAL_SOURCES = {"Good News Network", "Positive News"}
-
-def contains_any(text, terms):
-    t = clean(text).lower()
-    return any(term in t for term in terms)
-
-def nl_relevance_bonus(title, summary):
-    t = f"{title} {summary}".lower()
-    return 4 if any(term in t for term in NL_RELEVANCE_TERMS) else 0
-
-
-FOREIGN_SPORT_CLUBS = [
-    "arsenal", "chelsea", "liverpool", "manchester city", "manchester united",
-    "tottenham", "real madrid", "barcelona", "bayern", "juventus", "inter milan",
-    "ac milan", "paris saint-germain", "psg",
-]
-
-CELEBRITY_FLUFF_TERMS = [
-    "jongste dochter", "oudste dochter", "dochter van", "zoon van",
-    "youngest daughter", "daughter of", "son of", "netflix-film",
-    "netflix film", "celebrity", "rode loper", "red carpet",
-]
-
-UNIVERSAL_CATEGORIES = {
-    "Gezondheid", "Wetenschap", "Natuur & klimaat", "Dieren",
-    "Technologie & innovatie"
-}
-
-STRONG_HUMAN_INTEREST = [
-    "gered", "redding", "overleeft", "overleefde", "gevonden",
-    "rescued", "rescue", "survives", "survived", "saved",
-    "herenigd", "reunited", "doorbraak", "breakthrough",
-]
-
-def nl_reader_relevance_ok(title, summary, cat, source):
-    combined = clean(f"{title} {summary}").lower()
-
-    # Direct Nederlands belang is altijd goed.
-    if contains_any(combined, NL_RELEVANCE_TERMS):
-        return True
-
-    # Wetenschap, gezondheid, natuur, dieren en technologie mogen ook
-    # zonder expliciet NL-haakje als de ontwikkeling universeel relevant is.
-    if cat in UNIVERSAL_CATEGORIES:
-        return True
-
-    # Buitenlandse sport zonder NL-haakje hoort in het internationale blok.
-    if cat == "Sport":
-        return False
-
-    # Buitenlandse celebrity/cultuurfluff is voor de NL-hoofdselectie te mager.
-    if cat == "Cultuur & media" and contains_any(combined, CELEBRITY_FLUFF_TERMS):
-        return False
-
-    # Economie, onderwijs en maatschappij zonder NL-haakje moeten echt
-    # uitzonderlijk relevant zijn, niet alleen 'ergens gebeurt iets'.
-    if cat in {"Economie & geld", "Onderwijs & ontwikkeling", "Mens & samenleving"}:
-        return contains_any(combined, STRONG_HUMAN_INTEREST)
-
-    # 'Gewoon leuk' mag internationaal menselijk zijn, maar alleen bij
-    # een duidelijk bijzonder positief verhaal.
-    if cat == "Gewoon leuk":
-        return contains_any(combined, STRONG_HUMAN_INTEREST)
-
-    return True
-
-STOPWORDS = {
-    "de","het","een","en","van","voor","op","in","met","na","bij","om","te","is","zijn",
-    "wordt","worden","dat","die","dit","als","aan","nu","video","weer","the","a","an","and",
-    "of","for","to","in","on","with","after","by","from","as","at","new","news","says"
-}
-
 def title_tokens(title):
     words = re.findall(r"[a-z0-9à-ÿ]+", clean(title).lower())
     return {w for w in words if len(w) >= 4 and w not in STOPWORDS}
 
-def same_event(a, b):
+def near_duplicate(a, b):
     ta, tb = title_tokens(a["title"]), title_tokens(b["title"])
     if not ta or not tb:
         return False
-
     inter = len(ta & tb)
     union = len(ta | tb)
-    jaccard = inter / union if union else 0
+    return bool(union and inter / union >= 0.58)
 
-    # Sterke overlap of meerdere opvallende gedeelde woorden.
-    if jaccard >= 0.42:
-        return True
-    if inter >= 3 and min(len(ta), len(tb)) <= 8:
-        return True
-
-    # Specifieke combinatie zoals 'vissers' + 'koelbox' vangt dezelfde gebeurtenis.
-    distinctive = {"vissers","koelbox","fishermen","cooler","rescued","gered"}
-    if len((ta & tb) & distinctive) >= 2:
-        return True
-
-    return False
-
-def editorial_ok(title, summary, region, cat, source):
-    t = clean(title).lower()
-    combined = clean(f"{title} {summary}").lower()
-
-    # Geen vacatures of personeelsadvertenties als nieuws.
-    if contains_any(t, VACANCY_TERMS):
-        return False, "vacature"
-
-    # Geen losse weersverwachting als nieuwsverhaal.
-    if contains_any(t, WEATHER_ONLY_TERMS):
-        return False, "weerbericht"
-
-    # Buitenlandse clubuitslagen zijn geen NL-hoofdnieuws zonder Nederlands haakje.
-    if region == "nl" and contains_any(t, FOREIGN_SPORT_CLUBS) and not contains_any(combined, NL_RELEVANCE_TERMS):
-        return False, "buitenlandse sport zonder NL-haakje"
-
-    # Geen kop die positief klinkt maar tegelijk zwaar slecht nieuws bevat.
-    if contains_any(t, STRONG_BAD_NEWS_TERMS):
-        return False, "negatieve context"
-
-    # Gemengde koppen met een duidelijke negatieve tweede helft zijn meestal geen Goed nieuws.
-    mixed_negative = [
-        "but emerging concerns", "but concerns", "however concerns",
-        "threaten progress", "threatens progress", "maar zorgen",
-        "maar bedreigt", "maar dreigt",
-    ]
-    if contains_any(t, mixed_negative):
-        return False, "gemengd negatief"
-
-    # Nederlands lezersperspectief.
-    if contains_any(combined, DUTCH_HARM_TERMS):
-        return False, "slecht voor NL"
-
-    # Medische claims van zwakkere positieve aggregators blokkeren we op inhoud,
-    # niet op de categorie die het algoritme toevallig heeft toegekend.
-    medical_terms = [
-        "alzheimer", "dementia", "dementie", "cancer", "kanker", "disease",
-        "treatment", "therapy", "medicine", "medical", "brain", "brein",
-        "retina", "clinical", "patient", "patiënt"
-    ]
-    if source in LOW_TRUST_MEDICAL_SOURCES and contains_any(combined, medical_terms):
-        return False, "medische claim zwakke bron"
-
-    # Een vraag als 'Verbetert X je prestaties?' is uitleg/advies, geen concrete nieuwsontwikkeling.
-    if t.endswith("?") and any(w in t for w in ["verbetert", "helpt", "werkt", "improves", "helps", "does "]):
-        return False, "uitlegartikel"
-
-    # Het Nederlandse blok is voor Nederlandse lezers, niet alleen voor Nederlandse bronnen.
-    if region == "nl" and not nl_reader_relevance_ok(title, summary, cat, source):
-        return False, "niet relevant voor NL-lezer"
-
-    # Sport is competitief.
-    if cat == "Sport":
-        if any(re.search(p, t) for p in SPORT_BAD_OUTCOME_PATTERNS):
-            return False, "negatieve sportuitslag"
-        if not contains_any(t, SPORT_POSITIVE_TERMS):
-            return False, "geen duidelijke sportwinst"
-
-        # In het Nederlandse blok willen we bij competitieve sport dat de positieve
-        # uitkomst ook daadwerkelijk Nederlands relevant is.
-        if region == "nl" and not contains_any(combined, NL_RELEVANCE_TERMS):
-            return False, "sport niet NL-relevant"
-
-    return True, ""
+def item_id(source, title, url):
+    raw = f"{source}|{title}|{url}".encode("utf-8")
+    return hashlib.sha1(raw).hexdigest()[:12]
 
 def collect():
     now = datetime.now(timezone.utc)
-    out, errors, seen = [], [], set()
+    candidates = []
+    errors = []
+    seen_urls = set()
 
     for src in SOURCES:
         try:
-            feed_items = parse_feed(fetch(source_url(src)))
-        except Exception as e:
-            errors.append(f'{src["publisher"]}: {type(e).__name__}: {e}')
+            items = parse_feed(fetch(source_url(src)))
+        except Exception as exc:
+            errors.append(f'{src["publisher"]}: {type(exc).__name__}: {exc}')
             continue
 
-        for x in feed_items:
+        for x in items:
+            title = clean(x["title"])
+            summary = clean(x["summary"])
+            combined = f"{title} {summary}"
+
+            if contains(title, HARD_BLOCK) or contains(title, JUNK_TERMS):
+                continue
+
             pub = x["published"]
             age = None
-            if pub:
-                age = max(0, (now - pub).total_seconds()/3600)
+            if pub is not None:
+                age = max(0.0, (now - pub).total_seconds() / 3600)
                 if age > MAX_AGE_HOURS:
                     continue
 
-            key = normurl(x["url"])
-            if key in seen:
+            url_key = normurl(x["url"])
+            if url_key in seen_urls:
                 continue
-            seen.add(key)
+            seen_urls.add(url_key)
 
-            if hard_negative(x["title"]):
-                continue
-
-            pscore = positivity(x["title"], x["summary"])
-            if pscore <= 0:
-                continue
-
-            cat = category(x["title"], x["summary"], src.get("hint"))
-            ok, reason = editorial_ok(
-                x["title"], x["summary"], src["region"], cat, src["publisher"]
-            )
-            if not ok:
+            signal = cue_score(title, summary, src["region"])
+            # Directe RSS-feeds zijn breed. Zonder enig positief signaal worden ze te groot.
+            # Voor Google-site-search is de query zelf al positief gericht, dus daar is 0 toegestaan.
+            if src["mode"] == "rss" and signal <= 0:
                 continue
 
-            out.append({
-                "region":src["region"],
-                "source":src["publisher"],
-                "weight":src["weight"],
-                "title":clean(x["title"]),
-                "url":x["url"],
-                "summary":compact_summary(x["summary"]),
-                "hours_old":round(age,1) if age is not None else None,
-                "category":cat,
-                "positive_score":pscore,
-                "nl_relevance":nl_relevance_bonus(x["title"], x["summary"]) if src["region"] == "nl" else 0,
+            candidates.append({
+                "id": item_id(src["publisher"], title, x["url"]),
+                "region": src["region"],
+                "source": src["publisher"],
+                "title": title,
+                "summary": compact_summary(summary),
+                "url": x["url"],
+                "published": pub.isoformat() if pub else None,
+                "hours_old": round(age, 1) if age is not None else None,
+                "category_hint": category_hint(title, summary, src.get("hint")),
+                "signal_score": signal,
+                "source_weight": src.get("weight", 1.0),
+                "discovery": src["mode"],
             })
 
-    return out, errors
+    return candidates, errors
 
-def quality(x):
-    # Positiviteit dominant, bronkwaliteit tweede, versheid als bonus.
+def rank(item):
     freshness = 0
-    if x["hours_old"] is not None:
-        if x["hours_old"] <= 24:
+    if item["hours_old"] is not None:
+        if item["hours_old"] <= 24:
+            freshness = 5
+        elif item["hours_old"] <= 48:
             freshness = 3
-        elif x["hours_old"] <= 48:
-            freshness = 2
-        elif x["hours_old"] <= 96:
+        elif item["hours_old"] <= 96:
             freshness = 1
+    return item["signal_score"] * 5 + item["source_weight"] * 3 + freshness
 
-    perspective = x.get("nl_relevance", 0)
-    return x["positive_score"] * 10 + x["weight"] * 4 + freshness + perspective
-
-def choose(items, region):
+def shortlist(items, region):
     pool = [x for x in items if x["region"] == region]
-    pool.sort(key=lambda x:(-quality(x), x["hours_old"] if x["hours_old"] is not None else 9999))
+    pool.sort(key=lambda x: (-rank(x), x["hours_old"] if x["hours_old"] is not None else 9999))
 
     selected = []
-    counts = {}
-    categories = set()
+    per_source = {}
 
-    # Ronde 1: unieke categorieën, <=48 uur.
-    for x in pool:
-        if len(selected) >= TARGET:
+    for item in pool:
+        if len(selected) >= MAX_PER_REGION:
             break
-        if x["category"] in categories:
+        if per_source.get(item["source"], 0) >= MAX_PER_SOURCE:
             continue
-        if any(same_event(x, y) for y in selected):
+        if any(near_duplicate(item, other) for other in selected):
             continue
-        if counts.get(x["source"],0) >= MAX_PER_SOURCE:
-            continue
-        if x["hours_old"] is not None and x["hours_old"] > PREFERRED_AGE_HOURS:
-            continue
-        selected.append(x)
-        categories.add(x["category"])
-        counts[x["source"]] = counts.get(x["source"],0) + 1
+        selected.append(item)
+        per_source[item["source"]] = per_source.get(item["source"], 0) + 1
 
-    # Ronde 2: unieke categorieën, tot 7 dagen.
-    for x in pool:
-        if len(selected) >= TARGET:
-            break
-        if x in selected or x["category"] in categories:
-            continue
-        if any(same_event(x, y) for y in selected):
-            continue
-        if counts.get(x["source"],0) >= MAX_PER_SOURCE:
-            continue
-        selected.append(x)
-        categories.add(x["category"])
-        counts[x["source"]] = counts.get(x["source"],0) + 1
-
-    # Ronde 3: kwaliteit boven perfecte categoriediversiteit.
-    for x in pool:
-        if len(selected) >= TARGET:
-            break
-        if x in selected:
-            continue
-        if any(same_event(x, y) for y in selected):
-            continue
-        if counts.get(x["source"],0) >= MAX_PER_SOURCE:
-            continue
-        selected.append(x)
-        counts[x["source"]] = counts.get(x["source"],0) + 1
-
-    # Brondiversiteit verbeteren.
-    def distinct_sources():
-        return {x["source"] for x in selected}
-
-    if len(distinct_sources()) < MIN_SOURCES:
-        for cand in pool:
-            if len(distinct_sources()) >= MIN_SOURCES:
-                break
-            if cand in selected or cand["source"] in distinct_sources():
-                continue
-            if any(same_event(cand, y) for y in selected):
-                continue
-            # vervang zwakste item van bron die dubbel staat
-            dup_indexes = [
-                i for i,x in enumerate(selected)
-                if sum(1 for y in selected if y["source"] == x["source"]) > 1
-            ]
-            if dup_indexes:
-                weakest = min(dup_indexes, key=lambda i: quality(selected[i]))
-                selected[weakest] = cand
-
-    selected.sort(key=lambda x:-quality(x))
-    return selected[:TARGET]
-
-def story(x, english=False):
-    return {
-        "category":x["category"],
-        "icon":ICONS.get(x["category"],"☀️"),
-        "title":x["title"],
-        "summary":x["summary"] or "Een positieve ontwikkeling. Lees het volledige verhaal bij de bron.",
-        "source":x["source"] + (" · English" if english else ""),
-        "url":x["url"],
-    }
-
-def display_date():
-    days=["maandag","dinsdag","woensdag","donderdag","vrijdag","zaterdag","zondag"]
-    months=["januari","februari","maart","april","mei","juni","juli","augustus",
-            "september","oktober","november","december"]
-    n=datetime.now().astimezone()
-    return f"{days[n.weekday()]} {n.day} {months[n.month-1]}"
+    return selected
 
 def main():
-    items, errors = collect()
-    nl = choose(items, "nl")
-    intl = choose(items, "int")
-
-    nl_pool = [x for x in items if x["region"] == "nl"]
-    int_pool = [x for x in items if x["region"] == "int"]
-    print(f"Positieve kandidaten totaal: {len(items)}")
-    print(f"NL kandidaten vóór selectie: {len(nl_pool)} | bronnen: {len(set(x['source'] for x in nl_pool))}")
-    print(f"INT kandidaten vóór selectie: {len(int_pool)} | bronnen: {len(set(x['source'] for x in int_pool))}")
-    print(f"NL: {len(nl)} | bronnen: {len(set(x['source'] for x in nl))} | categorieën: {len(set(x['category'] for x in nl))}")
-    print(f"INT: {len(intl)} | bronnen: {len(set(x['source'] for x in intl))} | categorieën: {len(set(x['category'] for x in intl))}")
-
-    print("\nNL-selectie:")
-    for x in nl:
-        print(f"- [{x['category']}] {x['source']} ({quality(x):.1f}): {x['title']}")
-
-    print("\nInternationale selectie:")
-    for x in intl:
-        print(f"- [{x['category']}] {x['source']} ({quality(x):.1f}): {x['title']}")
-
-    if errors:
-        print(f"\nFeedfouten ({len(errors)}):")
-        for e in errors:
-            print(" -", e)
-
-    if len(nl) != TARGET or len(intl) != TARGET:
-        print(f"\nNIET PUBLICEREN: 7 + 7 vereist. Gevonden {len(nl)} NL + {len(intl)} INT.")
-        sys.exit(0)
-
-    if len(set(x["source"] for x in nl)) < MIN_SOURCES:
-        print("\nNIET PUBLICEREN: Nederlandse selectie heeft minder dan 5 bronnen.")
-        sys.exit(0)
-
-    if len(set(x["source"] for x in intl)) < MIN_SOURCES:
-        print("\nNIET PUBLICEREN: internationale selectie heeft minder dan 5 bronnen.")
-        sys.exit(0)
+    all_candidates, errors = collect()
+    nl = shortlist(all_candidates, "nl")
+    intl = shortlist(all_candidates, "int")
 
     now = datetime.now().astimezone()
+
     data = {
-        "edition":{
-            "date":now.strftime("%Y-%m-%d"),
-            "displayDate":display_date(),
-            "title":"Goed nieuws",
-            "tagline":"Dit gebeurt ook.",
-            "intro":"14 korte verhalen. Geen doomscrollen, geen eindeloze feed.",
-            "closingTitle":"Dat was het.",
-            "closingText":"Ga lekker verder met je dag. ☀️"
+        "meta": {
+            "generated_at": now.isoformat(),
+            "generator": "Goed nieuws kandidaten 0.1",
+            "purpose": "Voorselectie voor AI-redactie; dit is NIET de definitieve Goed nieuws-editie.",
+            "max_age_hours": MAX_AGE_HOURS,
+            "max_per_region": MAX_PER_REGION,
+            "stats": {
+                "raw_candidates": len(all_candidates),
+                "nl_shortlist": len(nl),
+                "nl_sources": len({x["source"] for x in nl}),
+                "international_shortlist": len(intl),
+                "international_sources": len({x["source"] for x in intl}),
+                "feed_errors": len(errors),
+            },
+            "feed_errors": errors,
         },
-        "dutch":[story(x) for x in nl],
-        "international":[story(x,True) for x in intl],
-        "_meta":{
-            "generated_at":now.isoformat(),
-            "generator":"Goed nieuws 1.1 auto",
-            "candidate_count":len(items),
-            "feed_errors":errors
-        }
+        "editorial_brief": {
+            "audience": "Nederlandse lezers",
+            "target": "Kies later 7 Nederlandse/relevante verhalen en 7 internationale verhalen.",
+            "principles": [
+                "Echt positief nieuws, niet alleen een positief woord in een negatieve kop.",
+                "Nederlandse selectie moet relevant zijn voor Nederlandse lezers.",
+                "Universele vooruitgang in gezondheid, wetenschap, natuur, dieren en technologie mag ook.",
+                "Geen dubbel nieuwsfeit.",
+                "Bron- en categorievariatie.",
+                "Geen vacatures, losse weersverwachtingen, celebrity-fluff of puur triviale uitslagen.",
+                "Eerste verhaal moet direct prettig en positief voelen.",
+            ],
+        },
+        "nl_candidates": nl,
+        "international_candidates": intl,
     }
 
-    OUTPUT.write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding="utf-8")
-    print("\nPUBLICEREN: nieuwe 7+7-editie geschreven.")
+    OUTPUT.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    print(f"Ruwe kandidaten: {len(all_candidates)}")
+    print(f"NL shortlist: {len(nl)} | bronnen: {len({x['source'] for x in nl})}")
+    print(f"INT shortlist: {len(intl)} | bronnen: {len({x['source'] for x in intl})}")
+    print(f"Feedfouten: {len(errors)}")
+    print("GESCHREVEN: kandidaten.json")
+    print("nieuws.json is bewust NIET aangepast.")
 
 if __name__ == "__main__":
     main()
