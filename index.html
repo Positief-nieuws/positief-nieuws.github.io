@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Positief nieuws</title>
+<style>
+:root{--top:#e6f4df;--bg:#f8fcf5;--accent:#e4f1dc;--card:#fff;--text:#1f2933;--muted:#65727f;--line:#e6e1d7;font-family:Inter,system-ui,-apple-system,sans-serif}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,var(--top),var(--bg) 280px);color:var(--text)}
+.wrap{width:min(760px,calc(100% - 24px));margin:auto;padding:28px 0 54px}
+.brand{display:flex;align-items:center;gap:10px;font-size:28px;font-weight:900;line-height:1;letter-spacing:-.7px;white-space:nowrap}
+.brand-mark{display:grid;place-items:center;flex:0 0 34px;width:34px;height:34px;border-radius:50%;background:#ffbe3b;font-size:20px;line-height:1}
+.brand-name{display:block}
+h1{font-size:clamp(34px,8vw,52px);margin:20px 0 8px;letter-spacing:-1.5px}.intro{color:var(--muted);font-size:17px}
+@media(max-width:480px){.brand{font-size:25px;gap:8px}.brand-mark{flex-basis:30px;width:30px;height:30px;font-size:17px}h1{margin-top:18px}}
+.head{display:flex;justify-content:space-between;align-items:baseline;margin:30px 2px 12px}.head h2{margin:0;font-size:22px}.head small{color:var(--muted)}
+.feed{display:grid;gap:14px}.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:0 10px 30px rgba(57,44,17,.07)}
+.meta{font-size:13px;color:var(--muted);font-weight:700;margin-bottom:9px}.pill{background:#fff0b8;border-radius:999px;padding:5px 9px;margin-right:8px;color:#6c5010}
+.card h3{margin:0 0 8px;font-size:22px;line-height:1.2}.card h3 a{color:inherit;text-decoration:none}.card h3 a:hover{text-decoration:underline}
+.card p{margin:0;color:#44515d;line-height:1.55}.read{display:inline-block;margin-top:13px;color:#744f00;font-weight:800;text-decoration:none}
+.end{text-align:center;margin-top:28px;padding:28px 18px;border-radius:22px;background:var(--accent)}.end strong{display:block;font-size:24px;margin-bottom:6px}
+.status{padding:14px;background:#fff;border:1px solid var(--line);border-radius:14px;color:var(--muted);margin-top:20px}
+.section-intro{color:var(--muted);font-size:16px;margin:-4px 2px 14px;line-height:1.5}
+.signup{margin-top:18px;background:#fff;border:1px solid var(--line);border-radius:22px;padding:8px 18px 18px;box-shadow:0 10px 30px rgba(57,44,17,.07)}
+.signup-note{text-align:center;color:var(--muted);font-size:13px;margin:6px 0 0}
+.share{margin-top:18px;text-align:center;padding:24px 18px;border-radius:22px;background:#f2f8ee}
+.share h2{margin:0 0 6px;font-size:21px}
+.share p{margin:0 auto 16px;color:var(--muted);line-height:1.5}
+.share-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.share-btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 16px;border-radius:12px;border:1px solid var(--line);background:#fff;color:var(--text);font-weight:800;text-decoration:none}
+.share-btn:hover{transform:translateY(-1px);box-shadow:0 5px 14px rgba(57,44,17,.08)}
+footer{text-align:center;color:var(--muted);font-size:13px;padding-top:22px}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="brand"><span class="brand-mark" aria-hidden="true">☀️</span><span class="brand-name" id="brandTitle">Positief nieuws</span></div>
+  <h1 id="tagline">Dit gebeurt ook.</h1>
+  <p class="intro" id="intro"></p>
+  <div id="status" class="status">Nieuws wordt geladen…</div>
+  <div id="content" hidden>
+    <div class="head"><h2>Uit Nederlandse bronnen</h2><small id="date"></small></div>
+    <div class="feed" id="nl"></div>
+    <div class="head"><h2>Uit internationale media</h2></div>
+    <p class="section-intro" id="internationalIntro"></p>
+    <div class="feed" id="int"></div>
+    <div class="end"><strong id="closingTitle"></strong><div id="closingText"></div></div>
+
+    <section class="signup" aria-label="Inschrijven voor Positief nieuws">
+      <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="109e976f-df27-4ddf-a906-c2579313c439"></script>
+      <p class="signup-note">Afmelden kan altijd.</p>
+    </section>
+
+    <section class="share" aria-label="Positief nieuws delen">
+      <h2>Ken je iemand die dit ook kan gebruiken?</h2>
+      <p>Stuur deze editie door. Misschien wordt iemands nieuwsdag er net wat beter van.</p>
+      <div class="share-actions">
+        <a class="share-btn" id="shareWhatsapp" href="#" target="_blank" rel="noopener">Deel via WhatsApp</a>
+        <a class="share-btn" id="shareEmail" href="#">Deel via e-mail</a>
+      </div>
+    </section>
+  </div>
+  <footer>Positief nieuws. Dit gebeurt ook.</footer>
+</main>
+<script>
+window.GOED_NIEUWS_CONFIG = {
+  DATA_URL: "https://raw.githubusercontent.com/tomdehaas-gif/positief-nieuws/main/nieuws.json"
+};
+</script>
+<script>
+function render(id, stories, english=false){
+ const el=document.getElementById(id); el.innerHTML="";
+ stories.forEach(s=>{
+  const a=document.createElement("article"); a.className="card";
+  a.innerHTML=`<div class="meta"><span class="pill">${s.icon} ${s.category}</span>${s.source}</div>
+  <h3><a href="${s.url}" target="_blank" rel="noopener">${s.title}</a></h3>
+  <p>${s.summary}</p><a class="read" href="${s.url}" target="_blank" rel="noopener">${english?"Lees het Engelstalige bronartikel →":"Lees bij de bron →"}</a>`;
+  el.appendChild(a);
+ });
+}
+async function load(){
+ try{
+  const freshUrl = window.GOED_NIEUWS_CONFIG.DATA_URL + "?v=" + Date.now();
+  const r=await fetch(freshUrl,{cache:"no-store"}); if(!r.ok) throw new Error();
+  const d=await r.json();
+  document.getElementById("brandTitle").textContent=d.edition.title || "Positief nieuws";
+  document.title=(d.edition.title || "Positief nieuws");
+  document.getElementById("tagline").textContent=d.edition.tagline || "Dit gebeurt ook.";
+  document.getElementById("intro").textContent=d.edition.intro || "";
+  document.getElementById("internationalIntro").textContent=d.edition.internationalIntro || "";
+  document.getElementById("date").textContent=d.edition.displayDate;
+  document.getElementById("closingTitle").textContent=d.edition.closingTitle;
+  document.getElementById("closingText").textContent=d.edition.closingText;
+  render("nl",d.dutch); render("int",d.international,true);
+  document.getElementById("status").hidden=true; document.getElementById("content").hidden=false;
+ }catch(e){document.getElementById("status").textContent="De editie kon niet worden geladen."}
+}
+function setupShareLinks(){
+  const pageUrl = window.location.href;
+  const waText = `Ik kwam Positief nieuws tegen. Misschien ook wat voor jou: ${pageUrl}`;
+  const mailSubject = "Positief nieuws: dit gebeurt ook";
+  const mailBody = `Ik kwam Positief nieuws tegen en dacht dat dit misschien ook iets voor jou is.\n\n${pageUrl}`;
+  document.getElementById("shareWhatsapp").href =
+    "https://wa.me/?text=" + encodeURIComponent(waText);
+  document.getElementById("shareEmail").href =
+    "mailto:?subject=" + encodeURIComponent(mailSubject) + "&body=" + encodeURIComponent(mailBody);
+}
+setupShareLinks();
+load();
+</script>
+</body>
+</html>
