@@ -1,127 +1,116 @@
 {
   "edition": {
-    "date": "2026-08-21",
-    "displayDate": "vrijdag 21 augustus",
+    "date": "2026-08-22",
+    "displayDate": "zaterdag 22 augustus",
     "title": "Goed nieuws",
     "tagline": "Dit gebeurt ook.",
-    "intro": "14 korte verhalen. Geen doomscrollen, geen eindeloze feed.",
+    "intro": "12 korte verhalen. Geen doomscrollen, geen eindeloze feed.",
     "closingTitle": "Dat was het.",
     "closingText": "Ga lekker verder met je dag. ☀️"
   },
   "dutch": [
     {
-      "category": "Sport",
-      "icon": "🏑",
-      "title": "Hockeysters winnen met 9-0 en gaan als groepswinnaar door",
-      "summary": "De Nederlandse hockeysters sloten de eerste groepsfase van het WK overtuigend af tegen Japan. Oranje won met 9-0, Yibbi Jansen scoorde vijf keer en Nederland neemt bovendien al drie punten mee naar de volgende groepsfase.",
+      "category": "Dieren",
+      "icon": "🐾",
+      "title": "Broeders-Bol verbetert Nederlands record 800 meter en belt direct met Van Langen",
+      "summary": "Femke Broeders-Bol heeft het Nederlands record op de 800 meter verbeterd. In het Zwitserse Lausanne liep zij zeven dagen na haar derde plek op de EK naar een tweede plaats in 1.55,41, een tijd waarmee zij nu alleen recordhoudster is.",
       "source": "NOS",
-      "url": "https://nos.nl/artikel/2627525-hockeysters-walsen-op-wk-over-japan-heen-jansen-sleept-vijf-keer-raak"
-    },
-    {
-      "category": "Economie & geld",
-      "icon": "📈",
-      "title": "Beleggingen van Nederlandse huishoudens groeien naar recordniveau",
-      "summary": "De waarde van de beleggingen van Nederlandse huishoudens steeg in het tweede kwartaal met 12 procent naar 234,2 miljard euro. Volgens De Nederlandsche Bank is dat de grootste kwartaalstijging sinds de meting in 2018 begon.",
-      "source": "NOS / DNB",
-      "url": "https://nos.nl/artikel/2627468-huishoudens-doen-het-erg-goed-op-de-beurs-ook-spacex-populair-als-investering"
+      "url": "https://nos.nl/l/2627797"
     },
     {
       "category": "Technologie & innovatie",
-      "icon": "❤️",
-      "title": "Pacemaker zonder gewone batterij haalt energie uit de hartslag",
-      "summary": "Onderzoekers hebben een prototype ontwikkeld dat elektriciteit haalt uit de beweging van het kloppende hart. Als de techniek verder slaagt, kan dat op termijn kleinere pacemakers mogelijk maken en het vervangen van batterijen verminderen.",
-      "source": "ICT&health",
-      "url": "https://www.icthealth.nl/nieuws/batterijloze-pacemaker-haalt-energie-uit-hartslag"
+      "icon": "💡",
+      "title": "Van der Poel maakt indruk bij rentree op mountainbike met tiende plaats in shortrace",
+      "summary": "Mathieu van der Poel is bij zijn eerste mountainbike-optreden van het seizoen tiende geworden in de shortrace van de wereldbeker in Les Gets. De 31-jarige Nederlander maakte een goede indruk en heeft zichzelf van een startpositie op de tweede rij voorzien in de hoofdwedstrijd op zondagmiddag.",
+      "source": "NOS",
+      "url": "https://nos.nl/l/2627775"
     },
     {
       "category": "Wetenschap",
-      "icon": "🌡️",
-      "title": "Lowlands-bezoekers helpen onderzoekers begrijpen hoe ons lichaam hitte verwerkt",
-      "summary": "KNMI en TNO meten vandaag op Lowlands hoe het lichaam reageert tijdens bewegen, dansen en rusten in de warmte. De gegevens moeten helpen om toekomstige adviezen tijdens hete perioden beter af te stemmen op wat mensen echt aankunnen.",
-      "source": "KNMI",
-      "url": "https://www.knmi.nl/over-het-knmi/agenda/lowlands-science-hoe-heet-ben-jij"
+      "icon": "🔬",
+      "title": "Reddingsmissie gaat toch niet door: het einde van ruimtetelescoop Swift is in zicht",
+      "summary": "De ruimtetelescoop Swift wordt waarschijnlijk toch niet gered. Ondanks dat kan de reddingsmissie NASA nog wel waardevolle kennis opleveren.",
+      "source": "Scientias",
+      "url": "https://scientias.nl/reddingsmissie-gaat-toch-niet-door-het-einde-van-ruimtetelescoop-swift-is-in-zicht/"
     },
     {
-      "category": "Onderwijs & ontwikkeling",
-      "icon": "🤖",
-      "title": "Vier dagen AI en programmeren voor kinderen eindigen in NEMO",
-      "summary": "Kinderen van 9 tot 12 jaar hebben deze week zelf met AI, data, programmeren en technologie gewerkt. De volledig volgeboekte zomerschool sloot gisteren af in NEMO met experimenten en een diploma voor alle deelnemers.",
-      "source": "JADS",
-      "url": "https://www.jads.nl/nl/events/ai-summer-school-for-kids-2026-editie/"
+      "category": "Natuur & klimaat",
+      "icon": "🌱",
+      "title": "Wat een eer! Mierenleeuw vernoemd naar collectiebeheerder van Naturalis",
+      "summary": "Een nieuwe soort mierenleeuw uit Zuid-India is naar Naturalis collectiebeheerder Mónica Guimarães Cruz vernoemd. Het type-exemplaar maakt namelijk deel uit van de Naturalis insectencollectie, die zij beheert.",
+      "source": "Nature Today",
+      "url": "https://www.naturetoday.com/intl/nl/nature-reports/message/?msg=35734&utm_source=rssfeed&utm_medium=rss&utm_campaign=web-rss-nb"
     },
     {
-      "category": "Mens & samenleving",
-      "icon": "🤝",
-      "title": "Vakantieweek zorgt ervoor dat oudere buurtbewoners zich meer thuis voelen",
-      "summary": "In de Eindhovense wijk Tongelre organiseerden bewoners en vijftien vrijwilligers samen een week vol activiteiten voor 65-plussers. Het doel was simpel: elkaar leren kennen en zorgen dat mensen zich meer verbonden voelen met hun buurt.",
-      "source": "Woonbedrijf",
-      "url": "https://woonbedrijf.com/bewonersverhalen/ouderen-vakantieweek-brengt-buurtbewoners-in-tongelre-samen"
-    },
-    {
-      "category": "Cultuur & media",
-      "icon": "🎨",
-      "title": "Buitenplaats Kasteel Wijlre krijgt nieuwe kunst, natuur en performances",
-      "summary": "De Limburgse buitenplaats presenteert de komende weken nieuwe tentoonstellingen en een performance tijdens Cultura Nova. Het programma brengt hedendaagse kunst bewust samen met de groene omgeving van het landgoed.",
-      "source": "ParkstadActueel",
-      "url": "https://parkstadactueel.nl/2026/08/20/programma-buitenplaats-kasteel-wijlre/"
+      "category": "Wetenschap",
+      "icon": "🔬",
+      "title": "Het grote succes van screening: kans om darmkanker te overleven ruim 40 procent groter",
+      "summary": "Het nut van bevolkingsonderzoek om kanker vroegtijdig op te sporen is al meermaals bewezen. Nieuwe Zweedse cijfers doen daar nog een schepje bovenop: de kans om aan darmkanker te overlijden is maar liefst 43 procent kleiner onder mensen die deelnemen aan screening.",
+      "source": "Scientias",
+      "url": "https://scientias.nl/het-grote-succes-van-screening-kans-om-darmkanker-te-overleven-ruim-40-procent-groter/"
     }
   ],
   "international": [
     {
       "category": "Economie & geld",
-      "icon": "🏭",
-      "title": "Japanse industrie groeit stevig, nieuwe orders stijgen het snelst sinds 2018",
-      "summary": "De Japanse industrie liet in augustus sterke groei zien. Nieuwe orders namen volgens de nieuwste inkoopmanagersindex het snelst toe sinds januari 2018, mede door vraag vanuit de chip- en AI-sector.",
-      "source": "Reuters · English",
-      "url": "https://www.reuters.com/world/asia-pacific/japan-manufacturing-expands-orders-rise-fastest-since-2018-pmi-shows-2026-08-21/"
+      "icon": "📈",
+      "title": "First ever Fat Marmot Week to kick off in effort to raise money for research",
+      "summary": "Researchers hope contest – similar to Fat Bear Week – starting Monday will be latest wildlife watching craze Monday sees the start of what researchers hope will be the latest wildlife watching craze – Fat Marmot Week. Last winter was tough for marmots living high in the Colorado mountains, where researchers say…",
+      "source": "The Guardian · English",
+      "url": "https://www.theguardian.com/environment/2026/aug/21/fat-marmot-week-research-funding"
+    },
+    {
+      "category": "Gewoon leuk",
+      "icon": "☀️",
+      "title": "Stormy autumn, cold winter - how might El Niño affect the UK weather?",
+      "summary": "This year's El Niño is expected to be the strongest in living memory and could lead to a range of impacts of the UK - including a stormy autumn.",
+      "source": "BBC · English",
+      "url": "https://www.bbc.co.uk/weather/articles/cd0x17r4j0yo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "category": "Wetenschap",
+      "icon": "🔬",
+      "title": "El Niño set to be 'strongest in living memory', says Met Office",
+      "summary": "Scientists say the growing El Niño weather pattern is an \"unprecedented event\" and means 2027 is likely to be the world's hottest year on record.",
+      "source": "BBC · English",
+      "url": "https://www.bbc.co.uk/weather/articles/c3ekg93vjz9o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "category": "Cultuur & media",
+      "icon": "🎨",
+      "title": "AI for Good: How the UN uses AI to advance human rights",
+      "summary": "For Ari, a six-year-old boy with learning difficulties in Jamaica, artificial intelligence (AI) opened the door to something many children take for granted: reading a book in his own language. Thousands of miles away, gold miners in Ethiopia are being screened more quickly for tuberculosis, while communities around…",
+      "source": "UN News · English",
+      "url": "https://news.un.org/feed/view/en/story/2026/08/1168177"
     },
     {
       "category": "Natuur & klimaat",
       "icon": "🌱",
-      "title": "MIT-onderzoek brengt fossielvrije productie van ammoniak dichterbij",
-      "summary": "Onderzoekers hebben een snellere manier ontwikkeld om veelbelovende materialen te vinden voor schonere ammoniakproductie. Dat is relevant omdat ammoniak onmisbaar is voor kunstmest, terwijl de huidige productie veel energie en fossiele brandstoffen gebruikt.",
-      "source": "MIT News · English",
-      "url": "https://news.mit.edu/2026/paving-way-for-greener-ammonia-production-0820"
-    },
-    {
-      "category": "Gezondheid",
-      "icon": "🧬",
-      "title": "Meer dan duizend genetische schakelaars geven nieuw inzicht in ons afweersysteem",
-      "summary": "Een grote studie vond meer dan duizend genetische schakelaars die anders werken in mannelijke en vrouwelijke afweercellen. Dat kan onderzoekers helpen beter te begrijpen waarom sommige auto-immuunziekten veel vaker bij vrouwen voorkomen.",
-      "source": "ScienceDaily · English",
-      "url": "https://www.sciencedaily.com/releases/2026/08/260819041239.htm"
-    },
-    {
-      "category": "Cultuur & media",
-      "icon": "🧵",
-      "title": "Kinderen mogen het ontbrekende einde van het Tapijt van Bayeux bedenken",
-      "summary": "Britse basisschoolleerlingen worden uitgedaagd een hoopvol nieuw slot te ontwerpen voor het bijna duizend jaar oude kunstwerk. De winnende klassen mogen het beroemde borduurwerk volgend jaar in Londen bezoeken.",
-      "source": "Smithsonian Magazine · English",
-      "url": "https://www.smithsonianmag.com/smart-news/how-should-the-bayeux-tapestry-end-new-a-competition-invites-childresn-to-reimagine-its-missing-final-panel-180989366/"
+      "title": "Britain’s railway prepares for more extreme weather as intense El Niño develops",
+      "summary": "Experts say more must be done to adapt to changing climate, after two trains derailed within 24 hours during a recent heatwave Railway companies are racing to prepare for another brutal summer next year, as a developing El Niño could see 2027 break more heat-related records. Britain’s railway system has already been…",
+      "source": "The Guardian · English",
+      "url": "https://www.theguardian.com/environment/2026/aug/21/britains-railway-prepares-for-more-extreme-weather-as-intense-el-nino-develops"
     },
     {
       "category": "Dieren",
-      "icon": "🐋",
-      "title": "Onderzoekers ontrafelen waarom de slagtand van een narwal zo sterk en recht groeit",
-      "summary": "Nieuwe analyse laat zien dat de buiten- en binnenlagen van de bijzondere tand in tegengestelde richtingen draaien. Die dubbele spiraal lijkt de meterslange slagtand tegelijk sterk en opvallend recht te houden.",
-      "source": "Smithsonian Magazine · English",
-      "url": "https://www.smithsonianmag.com/smart-news/narwhals-sport-iconic-straight-spiraled-tusks-scientists-just-uncovered-some-of-the-eye-catching-features-structural-secrets-180989368/"
+      "icon": "🐾",
+      "title": "The View from Above: The Gemini Visual Acuity Experiments",
+      "summary": "NASA astronaut L. Gordon Cooper, Jr.",
+      "source": "NASA · English",
+      "url": "https://www.nasa.gov/history/the-view-from-above-the-gemini-visual-acuity-experiments/"
     },
     {
       "category": "Technologie & innovatie",
-      "icon": "🚜",
-      "title": "Nieuwe bediening maakt leren werken met een graafmachine veel intuïtiever",
-      "summary": "MIT-ingenieurs ontwikkelden een controller die de arm en bak van een graafmachine nabootst. In tests konden beginners er vrijwel direct mee werken, wat training sneller kan maken en later ook bediening op afstand kan ondersteunen.",
-      "source": "MIT News · English",
-      "url": "https://news.mit.edu/2026/mit-engineers-design-better-controller-operating-construction-diggers-0820"
-    },
-    {
-      "category": "Geschiedenis & mens",
-      "icon": "🏛️",
-      "title": "Archeologen vinden ruim 200 munten bij oude stadspoort in Plovdiv",
-      "summary": "Bij opgravingen naast de oostelijke poort van het antieke Philippopolis zijn meer dan tweehonderd munten en resten van een laat-Romeins gebouw gevonden. De vondsten geven nieuwe informatie over de wijk die ooit buiten de stadsmuren lag.",
-      "source": "Bulgarian News Agency · English",
-      "url": "https://www.bta.bg/en/news/culture/1188911-archaeologists-discover-coins-ancient-building-burial-sites-during-excavations"
+      "icon": "💡",
+      "title": "SmallSat 2026",
+      "summary": "SmallSat 2026 Join NASA in the Exhibit Hall (Booth # 635, 835, 641, and 940) for Storytelling by NASA experts. Full Agenda below.",
+      "source": "NASA · English",
+      "url": "https://science.nasa.gov/earth/smallsat-2026/"
     }
-  ]
+  ],
+  "_meta": {
+    "generated_at": "2026-08-22T10:28:06.345164+00:00",
+    "generator": "Goed nieuws 0.3 auto",
+    "feed_errors": []
+  }
 }
