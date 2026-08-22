@@ -1,16 +1,15 @@
 #!/usr/bin/env python3
 """
-Goed nieuws 0.6 auto
+Goed nieuws 0.7 auto
 Gratis dagelijkse editie zonder AI/API.
 
 Belangrijkste wijzigingen:
-- veel bredere bronpool;
-- brongewichten voor kwaliteitsranking;
-- extra bronnen via Google News RSS site-search als officiële RSS ontbreekt;
-- contextgebonden positieve/negatieve scoring;
-- betere categorieherkenning;
-- max 2 berichten per bron;
-- minimaal 5 bronnen per blok;
+- positieve discovery-query per niet-RSS-bron, in plaats van blind de laatste headlines ophalen;
+- veel extra Nederlandse regionale en gratis nieuwsbronnen;
+- een titel moet zelf een duidelijke positieve cue bevatten;
+- hard-negatieve patronen zoals 'niet door' blokkeren altijd;
+- contextregels voor o.a. werkloosheid, uitstoot en overlevingskans;
+- max 2 berichten per bron en minimaal 5 bronnen per blok;
 - voorkeur laatste 48 uur, fallback tot 7 dagen;
 - publiceert alleen bij 7 NL + 7 internationaal.
 """
@@ -37,7 +36,7 @@ MIN_SOURCES = 5
 MAX_PER_SOURCE = 2
 PREFERRED_AGE_HOURS = 48
 MAX_AGE_HOURS = 168
-USER_AGENT = "GoedNieuwsBot/0.6"
+USER_AGENT = "GoedNieuwsBot/0.7"
 
 # mode=rss: directe feed
 # mode=google_site: gratis Google News RSS site-search als bron geen handige RSS heeft.
@@ -80,6 +79,21 @@ SOURCES = [
     {"publisher":"Oranje Fonds","region":"nl","mode":"google_site","domain":"oranjefonds.nl","weight":2.2,"hint":"Mens & samenleving"},
     {"publisher":"Humanitas","region":"nl","mode":"google_site","domain":"humanitas.nl","weight":2.1,"hint":"Mens & samenleving"},
 
+    # Extra Nederlandse algemene en regionale bronnen.
+    # Juist hier zitten vaak lokale, concrete positieve verhalen.
+    {"publisher":"NU.nl","region":"nl","mode":"google_site","domain":"nu.nl","weight":2.3,"hint":None},
+    {"publisher":"RTL Nieuws","region":"nl","mode":"google_site","domain":"rtl.nl","weight":2.3,"hint":None},
+    {"publisher":"RTV Oost","region":"nl","mode":"google_site","domain":"rtvoost.nl","weight":2.2,"hint":None},
+    {"publisher":"Omroep Brabant","region":"nl","mode":"google_site","domain":"omroepbrabant.nl","weight":2.2,"hint":None},
+    {"publisher":"Omroep Gelderland","region":"nl","mode":"google_site","domain":"gld.nl","weight":2.2,"hint":None},
+    {"publisher":"Rijnmond","region":"nl","mode":"google_site","domain":"rijnmond.nl","weight":2.2,"hint":None},
+    {"publisher":"NH Nieuws","region":"nl","mode":"google_site","domain":"nhnieuws.nl","weight":2.2,"hint":None},
+    {"publisher":"RTV Noord","region":"nl","mode":"google_site","domain":"rtvnoord.nl","weight":2.2,"hint":None},
+    {"publisher":"Omrop Fryslân","region":"nl","mode":"google_site","domain":"omropfryslan.nl","weight":2.2,"hint":None},
+    {"publisher":"AT5","region":"nl","mode":"google_site","domain":"at5.nl","weight":2.1,"hint":None},
+    {"publisher":"1Limburg","region":"nl","mode":"google_site","domain":"1limburg.nl","weight":2.1,"hint":None},
+    {"publisher":"Hart van Nederland","region":"nl","mode":"google_site","domain":"hartvannederland.nl","weight":2.0,"hint":None},
+
     # ---------------- INTERNATIONAAL ----------------
     {"publisher":"MIT News","region":"int","mode":"rss","url":"https://news.mit.edu/rss/feed","weight":2.7,"hint":"Wetenschap"},
     {"publisher":"NASA","region":"int","mode":"rss","url":"https://www.nasa.gov/news-release/feed/","weight":2.7,"hint":"Wetenschap"},
@@ -102,19 +116,19 @@ SOURCES = [
 
 POSITIVE_PHRASES = {
     "wint":5, "winnen":5, "winst":4, "goud":5, "kampioen":5,
-    "doorbraak":5, "succes":4, "herstelt":5, "herstel":5,
+    "doorbraak":5, "succes":4, "herstelt":5, "herstel":5, "hoopvol":4,
     "terugkeer":5, "gered":5, "redding":5, "beschermt":4,
-    "verbetert":4, "verbetering":4, "helpt":4, "oplossing":4,
-    "innovatie":4, "ontdekking":4, "ontdekt":3, "samenwerking":3,
-    "schoner":4, "duurzaam":3, "medaille":4, "hoop":3,
+    "verbetert":4, "verbetering":4, "helpt":4, "helpen":4, "oplossing":4,
+    "innovatie":4, "ontdekking":4, "ontdekt":3, "samenwerking":3, "vrijwilligers":3,
+    "schoner":4, "duurzaam":3, "medaille":4, "hoop":3, "voorkomen":3, "voorkomt":3,
     "meer banen":6, "werkgelegenheid groeit":6, "levensverwachting stijgt":6,
     "overlevingskans stijgt":6, "uitstoot daalt":6, "armoede daalt":6,
     "criminaliteit daalt":6, "werkloosheid daalt":6, "faillissementen dalen":5,
     "biodiversiteit groeit":6, "populatie groeit":5,
     "wins":5, "gold":5, "champion":5, "breakthrough":5, "success":4,
     "recovery":5, "recovers":5, "return":4, "rescued":5, "protects":4,
-    "improves":4, "improvement":4, "helps":4, "solution":4, "innovation":4,
-    "discovery":4, "cleaner":4, "sustainable":3, "hope":3,
+    "improves":4, "improvement":4, "helps":4, "solution":4, "innovation":4, "volunteers":3,
+    "discovery":4, "cleaner":4, "sustainable":3, "hope":3, "renewed hope":4, "prevents":3,
     "jobs grow":6, "unemployment falls":6, "emissions fall":6,
     "poverty falls":6, "survival improves":6,
 }
@@ -122,13 +136,13 @@ POSITIVE_PHRASES = {
 NEGATIVE_PHRASES = {
     "oorlog":-10, "doden":-10, "dood":-10, "omgekomen":-10, "moord":-10,
     "geweld":-9, "aanval":-9, "ramp":-10, "explosie":-10, "crisis":-8,
-    "gewond":-7, "vermist":-7, "fraude":-7, "dreigt":-6, "zorgelijk":-5,
+    "gewond":-7, "vermist":-7, "fraude":-7, "dreigt":-6, "zorgelijk":-5, "einde van":-8, "niet door":-10,
     "werkloosheid stijgt":-10, "uitstoot stijgt":-9, "armoede stijgt":-9,
     "sterfte stijgt":-10, "temperatuur stijgt":-5, "faillissementen stijgen":-9,
     "gaat niet door":-10, "kan niet worden gered":-10,
     "war":-10, "dead":-10, "death":-10, "killed":-10, "murder":-10,
     "violence":-9, "attack":-9, "disaster":-10, "explosion":-10,
-    "crisis":-8, "wounded":-7, "missing":-7, "fraud":-7, "threat":-6,
+    "crisis":-8, "wounded":-7, "missing":-7, "fraud":-7, "threat":-6, "cancelled":-10, "canceled":-10,
     "unemployment rises":-10, "emissions rise":-9, "poverty rises":-9,
 }
 
@@ -232,10 +246,27 @@ def parse_date(value):
         return None
 
 def google_site_feed(domain, region):
+    # Niet blind de laatste headlines ophalen. We vragen Google News expliciet
+    # om recente artikelen met positieve cues op deze bron.
     if region == "nl":
-        query = urllib.parse.quote(f"site:{domain}")
+        cues = (
+            'doorbraak OR succes OR kampioen OR goud OR wint OR gewonnen OR '
+            'gered OR redding OR herstel OR herstelt OR verbetert OR verbetering OR '
+            'ontdekking OR ontdekt OR innovatie OR helpt OR vrijwilligers OR '
+            '"overlevingskans" OR "werkloosheid daalt" OR "uitstoot daalt" OR '
+            '"armoede daalt" OR "meer banen"'
+        )
+        q = f"site:{domain} ({cues}) when:7d"
+        query = urllib.parse.quote_plus(q)
         return f"https://news.google.com/rss/search?q={query}&hl=nl&gl=NL&ceid=NL:nl"
-    query = urllib.parse.quote(f"site:{domain}")
+
+    cues = (
+        'breakthrough OR success OR champion OR gold OR wins OR rescued OR recovery OR '
+        'improves OR improvement OR discovery OR innovation OR helps OR volunteers OR '
+        '"renewed hope" OR "unemployment falls" OR "emissions fall" OR "poverty falls"'
+    )
+    q = f"site:{domain} ({cues}) when:7d"
+    query = urllib.parse.quote_plus(q)
     return f"https://news.google.com/rss/search?q={query}&hl=en-US&gl=US&ceid=US:en"
 
 def source_url(src):
@@ -271,16 +302,55 @@ def wordmatch(text, phrase):
 def lexscore(text, lex):
     return sum(points for phrase, points in lex.items() if wordmatch(text, phrase))
 
+HARD_NEGATIVE_PATTERNS = [
+    r"\bniet(?:\s+\w+){0,3}\s+door\b",
+    r"\bgaat(?:\s+\w+){0,3}\s+niet\s+door\b",
+    r"\beinde van\b",
+    r"\bwerkloosheid\s+(?:fors\s+)?stijgt\b",
+    r"\buitstoot\s+(?:fors\s+)?stijgt\b",
+    r"\barmoede\s+(?:fors\s+)?stijgt\b",
+    r"\bsterfte\s+(?:fors\s+)?stijgt\b",
+    r"\b(?:cancelled|canceled)\b",
+]
+
+POSITIVE_CONTEXT_PATTERNS = [
+    r"\bkans\b.*\boverleven\b.*\b(?:groter|hoger|toegenomen)\b",
+    r"\boverlevingskans\b.*\b(?:stijgt|groter|hoger|toeneemt)\b",
+    r"\bwerkloosheid\b.*\b(?:daalt|lager|afgenomen)\b",
+    r"\buitstoot\b.*\b(?:daalt|lager|afgenomen|verminderd)\b",
+    r"\barmoede\b.*\b(?:daalt|lager|afgenomen)\b",
+    r"\b(?:meer|extra)\s+banen\b",
+    r"\b(?:survival|survival rate)\b.*\b(?:improves|higher|increases)\b",
+    r"\bunemployment\b.*\b(?:falls|lower|drops)\b",
+    r"\bemissions?\b.*\b(?:fall|falls|lower|drop|drops)\b",
+    r"\bpoverty\b.*\b(?:falls|lower|drops)\b",
+]
+
 def hard_negative(title):
-    t = title.lower()
-    return any(p in t for p in HARD_NEGATIVE_TITLE)
+    t = clean(title).lower()
+    if any(p in t for p in HARD_NEGATIVE_TITLE):
+        return True
+    return any(re.search(pattern, t) for pattern in HARD_NEGATIVE_PATTERNS)
+
+def title_positive_points(title):
+    t = clean(title).lower()
+    points = lexscore(t, POSITIVE_PHRASES)
+    if any(re.search(pattern, t) for pattern in POSITIVE_CONTEXT_PATTERNS):
+        points += 6
+    return points
 
 def positivity(title, summary):
-    # Titel telt dubbel. Losse "groeit/stijgt" zijn expres géén positieve woorden meer.
+    # 0.7-regel: een artikel komt alleen in aanmerking als de KOP zelf
+    # een positieve ontwikkeling bevat. Een positieve samenvatting mag een
+    # negatieve of neutrale kop niet meer redden.
+    title_pos = title_positive_points(title)
+    if title_pos <= 0:
+        return -999
+
     return (
-        2 * lexscore(title, POSITIVE_PHRASES)
+        3 * title_pos
         + lexscore(summary, POSITIVE_PHRASES)
-        + 2 * lexscore(title, NEGATIVE_PHRASES)
+        + 3 * lexscore(title, NEGATIVE_PHRASES)
         + lexscore(summary, NEGATIVE_PHRASES)
     )
 
@@ -469,7 +539,11 @@ def main():
     nl = choose(items, "nl")
     intl = choose(items, "int")
 
+    nl_pool = [x for x in items if x["region"] == "nl"]
+    int_pool = [x for x in items if x["region"] == "int"]
     print(f"Positieve kandidaten totaal: {len(items)}")
+    print(f"NL kandidaten vóór selectie: {len(nl_pool)} | bronnen: {len(set(x['source'] for x in nl_pool))}")
+    print(f"INT kandidaten vóór selectie: {len(int_pool)} | bronnen: {len(set(x['source'] for x in int_pool))}")
     print(f"NL: {len(nl)} | bronnen: {len(set(x['source'] for x in nl))} | categorieën: {len(set(x['category'] for x in nl))}")
     print(f"INT: {len(intl)} | bronnen: {len(set(x['source'] for x in intl))} | categorieën: {len(set(x['category'] for x in intl))}")
 
@@ -513,7 +587,7 @@ def main():
         "international":[story(x,True) for x in intl],
         "_meta":{
             "generated_at":now.isoformat(),
-            "generator":"Goed nieuws 0.6 auto",
+            "generator":"Goed nieuws 0.7 auto",
             "candidate_count":len(items),
             "feed_errors":errors
         }
