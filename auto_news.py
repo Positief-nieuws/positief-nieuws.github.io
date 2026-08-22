@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Goed nieuws 1.0 auto
+Goed nieuws 1.1 auto
 Gratis dagelijkse editie zonder AI/API.
 
 Belangrijkste wijzigingen:
@@ -36,7 +36,7 @@ MIN_SOURCES = 5
 MAX_PER_SOURCE = 2
 PREFERRED_AGE_HOURS = 48
 MAX_AGE_HOURS = 168
-USER_AGENT = "GoedNieuwsBot/1.0"
+USER_AGENT = "GoedNieuwsBot/1.1"
 
 # mode=rss: directe feed
 # mode=google_site: gratis Google News RSS site-search als bron geen handige RSS heeft.
@@ -502,6 +502,94 @@ def nl_relevance_bonus(title, summary):
     t = f"{title} {summary}".lower()
     return 4 if any(term in t for term in NL_RELEVANCE_TERMS) else 0
 
+
+FOREIGN_SPORT_CLUBS = [
+    "arsenal", "chelsea", "liverpool", "manchester city", "manchester united",
+    "tottenham", "real madrid", "barcelona", "bayern", "juventus", "inter milan",
+    "ac milan", "paris saint-germain", "psg",
+]
+
+CELEBRITY_FLUFF_TERMS = [
+    "jongste dochter", "oudste dochter", "dochter van", "zoon van",
+    "youngest daughter", "daughter of", "son of", "netflix-film",
+    "netflix film", "celebrity", "rode loper", "red carpet",
+]
+
+UNIVERSAL_CATEGORIES = {
+    "Gezondheid", "Wetenschap", "Natuur & klimaat", "Dieren",
+    "Technologie & innovatie"
+}
+
+STRONG_HUMAN_INTEREST = [
+    "gered", "redding", "overleeft", "overleefde", "gevonden",
+    "rescued", "rescue", "survives", "survived", "saved",
+    "herenigd", "reunited", "doorbraak", "breakthrough",
+]
+
+def nl_reader_relevance_ok(title, summary, cat, source):
+    combined = clean(f"{title} {summary}").lower()
+
+    # Direct Nederlands belang is altijd goed.
+    if contains_any(combined, NL_RELEVANCE_TERMS):
+        return True
+
+    # Wetenschap, gezondheid, natuur, dieren en technologie mogen ook
+    # zonder expliciet NL-haakje als de ontwikkeling universeel relevant is.
+    if cat in UNIVERSAL_CATEGORIES:
+        return True
+
+    # Buitenlandse sport zonder NL-haakje hoort in het internationale blok.
+    if cat == "Sport":
+        return False
+
+    # Buitenlandse celebrity/cultuurfluff is voor de NL-hoofdselectie te mager.
+    if cat == "Cultuur & media" and contains_any(combined, CELEBRITY_FLUFF_TERMS):
+        return False
+
+    # Economie, onderwijs en maatschappij zonder NL-haakje moeten echt
+    # uitzonderlijk relevant zijn, niet alleen 'ergens gebeurt iets'.
+    if cat in {"Economie & geld", "Onderwijs & ontwikkeling", "Mens & samenleving"}:
+        return contains_any(combined, STRONG_HUMAN_INTEREST)
+
+    # 'Gewoon leuk' mag internationaal menselijk zijn, maar alleen bij
+    # een duidelijk bijzonder positief verhaal.
+    if cat == "Gewoon leuk":
+        return contains_any(combined, STRONG_HUMAN_INTEREST)
+
+    return True
+
+STOPWORDS = {
+    "de","het","een","en","van","voor","op","in","met","na","bij","om","te","is","zijn",
+    "wordt","worden","dat","die","dit","als","aan","nu","video","weer","the","a","an","and",
+    "of","for","to","in","on","with","after","by","from","as","at","new","news","says"
+}
+
+def title_tokens(title):
+    words = re.findall(r"[a-z0-9à-ÿ]+", clean(title).lower())
+    return {w for w in words if len(w) >= 4 and w not in STOPWORDS}
+
+def same_event(a, b):
+    ta, tb = title_tokens(a["title"]), title_tokens(b["title"])
+    if not ta or not tb:
+        return False
+
+    inter = len(ta & tb)
+    union = len(ta | tb)
+    jaccard = inter / union if union else 0
+
+    # Sterke overlap of meerdere opvallende gedeelde woorden.
+    if jaccard >= 0.42:
+        return True
+    if inter >= 3 and min(len(ta), len(tb)) <= 8:
+        return True
+
+    # Specifieke combinatie zoals 'vissers' + 'koelbox' vangt dezelfde gebeurtenis.
+    distinctive = {"vissers","koelbox","fishermen","cooler","rescued","gered"}
+    if len((ta & tb) & distinctive) >= 2:
+        return True
+
+    return False
+
 def editorial_ok(title, summary, region, cat, source):
     t = clean(title).lower()
     combined = clean(f"{title} {summary}").lower()
@@ -513,6 +601,10 @@ def editorial_ok(title, summary, region, cat, source):
     # Geen losse weersverwachting als nieuwsverhaal.
     if contains_any(t, WEATHER_ONLY_TERMS):
         return False, "weerbericht"
+
+    # Buitenlandse clubuitslagen zijn geen NL-hoofdnieuws zonder Nederlands haakje.
+    if region == "nl" and contains_any(t, FOREIGN_SPORT_CLUBS) and not contains_any(combined, NL_RELEVANCE_TERMS):
+        return False, "buitenlandse sport zonder NL-haakje"
 
     # Geen kop die positief klinkt maar tegelijk zwaar slecht nieuws bevat.
     if contains_any(t, STRONG_BAD_NEWS_TERMS):
@@ -544,6 +636,10 @@ def editorial_ok(title, summary, region, cat, source):
     # Een vraag als 'Verbetert X je prestaties?' is uitleg/advies, geen concrete nieuwsontwikkeling.
     if t.endswith("?") and any(w in t for w in ["verbetert", "helpt", "werkt", "improves", "helps", "does "]):
         return False, "uitlegartikel"
+
+    # Het Nederlandse blok is voor Nederlandse lezers, niet alleen voor Nederlandse bronnen.
+    if region == "nl" and not nl_reader_relevance_ok(title, summary, cat, source):
+        return False, "niet relevant voor NL-lezer"
 
     # Sport is competitief.
     if cat == "Sport":
@@ -640,6 +736,8 @@ def choose(items, region):
             break
         if x["category"] in categories:
             continue
+        if any(same_event(x, y) for y in selected):
+            continue
         if counts.get(x["source"],0) >= MAX_PER_SOURCE:
             continue
         if x["hours_old"] is not None and x["hours_old"] > PREFERRED_AGE_HOURS:
@@ -654,6 +752,8 @@ def choose(items, region):
             break
         if x in selected or x["category"] in categories:
             continue
+        if any(same_event(x, y) for y in selected):
+            continue
         if counts.get(x["source"],0) >= MAX_PER_SOURCE:
             continue
         selected.append(x)
@@ -665,6 +765,8 @@ def choose(items, region):
         if len(selected) >= TARGET:
             break
         if x in selected:
+            continue
+        if any(same_event(x, y) for y in selected):
             continue
         if counts.get(x["source"],0) >= MAX_PER_SOURCE:
             continue
@@ -680,6 +782,8 @@ def choose(items, region):
             if len(distinct_sources()) >= MIN_SOURCES:
                 break
             if cand in selected or cand["source"] in distinct_sources():
+                continue
+            if any(same_event(cand, y) for y in selected):
                 continue
             # vervang zwakste item van bron die dubbel staat
             dup_indexes = [
@@ -763,7 +867,7 @@ def main():
         "international":[story(x,True) for x in intl],
         "_meta":{
             "generated_at":now.isoformat(),
-            "generator":"Goed nieuws 1.0 auto",
+            "generator":"Goed nieuws 1.1 auto",
             "candidate_count":len(items),
             "feed_errors":errors
         }
