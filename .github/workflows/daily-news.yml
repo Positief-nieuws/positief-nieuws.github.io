@@ -1,0 +1,38 @@
+name: Dagelijkse Goed nieuws-editie
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "37 4 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repository ophalen
+        uses: actions/checkout@v4
+
+      - name: Python instellen
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Nieuwe editie maken
+        run: python auto_news.py
+
+      - name: Publiceer nieuws.json indien gewijzigd
+        run: |
+          git config user.name "goed-nieuws-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add nieuws.json
+
+          if git diff --cached --quiet; then
+            echo "Geen nieuwe editie om te publiceren."
+          else
+            git commit -m "Automatische Goed nieuws-editie"
+            git push
+          fi
