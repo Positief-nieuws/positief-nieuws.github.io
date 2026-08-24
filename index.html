@@ -3,24 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Positief nieuws. Dit gebeurt ook. Drie keer per week een korte selectie van positief nieuws uit Nederland en de wereld.">
+
+  <meta
+    name="description"
+    content="Positief nieuws. Dit gebeurt ook. Drie keer per week een korte selectie van positief nieuws uit Nederland en de wereld."
+  >
+
   <title>Positief nieuws. Dit gebeurt ook.</title>
 
   <style>
     :root {
       --cream: #fbf7ea;
       --cream-2: #fffdf6;
+
       --green-soft: #e6f1dc;
       --green-soft-2: #d8e9cb;
+
       --green: #24523f;
       --green-dark: #17382b;
+
       --orange: #ed6a38;
       --orange-dark: #d95727;
+
       --ink: #1e2923;
       --muted: #667068;
+
       --line: rgba(36, 82, 63, 0.18);
+
       --white: #ffffff;
-      --shadow: 0 12px 30px rgba(37, 64, 49, 0.08);
+
+      --shadow:
+        0 12px 30px rgba(37, 64, 49, 0.08);
+
       --radius: 18px;
       --max: 1180px;
     }
@@ -35,11 +49,22 @@
 
     body {
       margin: 0;
+
       background:
-        radial-gradient(circle at top left, rgba(216, 233, 203, 0.8), transparent 38rem),
+        radial-gradient(
+          circle at top left,
+          rgba(216, 233, 203, 0.8),
+          transparent 38rem
+        ),
         var(--cream);
+
       color: var(--ink);
-      font-family: Georgia, "Times New Roman", serif;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
       line-height: 1.55;
     }
 
@@ -54,78 +79,134 @@
     }
 
     .shell {
-      width: min(calc(100% - 32px), var(--max));
+      width:
+        min(
+          calc(100% - 32px),
+          var(--max)
+        );
+
       margin: 0 auto;
     }
 
+    /* HEADER */
+
     .site-header {
       padding: 28px 0 20px;
-      border-bottom: 1px solid var(--line);
+
+      border-bottom:
+        1px solid var(--line);
     }
 
     .header-row {
       display: flex;
+
       align-items: center;
       justify-content: space-between;
+
       gap: 24px;
     }
 
     .brand {
-      text-decoration: none;
       display: inline-block;
+
+      text-decoration: none;
     }
 
     .brand-name {
       display: block;
-      font-size: clamp(2rem, 5vw, 4.4rem);
-      line-height: 0.95;
-      font-weight: 700;
-      letter-spacing: -0.045em;
+
       color: var(--green-dark);
+
+      font-size:
+        clamp(
+          2rem,
+          5vw,
+          4.4rem
+        );
+
+      font-weight: 700;
+
+      line-height: 0.95;
+
+      letter-spacing: -0.045em;
     }
 
     .brand-tagline {
       display: block;
+
       margin-top: 8px;
-      font-family: Arial, Helvetica, sans-serif;
+
+      color: var(--orange);
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
       font-size: 0.95rem;
       font-weight: 700;
+
       letter-spacing: 0.04em;
-      color: var(--orange);
     }
 
     .header-cta,
     .button {
       display: inline-flex;
+
       align-items: center;
       justify-content: center;
+
       min-height: 46px;
+
       padding: 0 18px;
+
       border: 0;
       border-radius: 999px;
+
       background: var(--orange);
       color: var(--white);
-      font-family: Arial, Helvetica, sans-serif;
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
       font-size: 0.9rem;
       font-weight: 800;
+
       text-decoration: none;
-      transition: transform 0.15s ease, background 0.15s ease;
+
+      transition:
+        transform 0.15s ease,
+        background 0.15s ease;
     }
 
     .header-cta:hover,
     .button:hover {
       background: var(--orange-dark);
+
       transform: translateY(-1px);
     }
 
     .edition-bar {
       display: flex;
+
       justify-content: space-between;
+
       gap: 16px;
+
       padding: 14px 0;
-      border-bottom: 1px solid var(--line);
-      font-family: Arial, Helvetica, sans-serif;
+
+      border-bottom:
+        1px solid var(--line);
+
       color: var(--muted);
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
       font-size: 0.82rem;
     }
 
@@ -133,104 +214,171 @@
       padding-bottom: 72px;
     }
 
+    /* SECTIONS */
+
     .section {
       padding: 48px 0 8px;
     }
 
     .section-heading {
       display: flex;
+
       align-items: end;
       justify-content: space-between;
+
       gap: 24px;
+
       margin-bottom: 24px;
     }
 
     .section-kicker {
       margin: 0 0 4px;
-      font-family: Arial, Helvetica, sans-serif;
+
       color: var(--orange);
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
       font-size: 0.76rem;
       font-weight: 800;
+
       letter-spacing: 0.11em;
+
       text-transform: uppercase;
     }
 
     .section-title {
       margin: 0;
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      line-height: 1;
-      letter-spacing: -0.035em;
+
       color: var(--green-dark);
+
+      font-size:
+        clamp(
+          2rem,
+          4vw,
+          3.2rem
+        );
+
+      line-height: 1;
+
+      letter-spacing: -0.035em;
     }
 
     .section-intro {
       max-width: 520px;
+
       margin: 0;
+
       color: var(--muted);
+
       font-size: 1rem;
     }
 
+    /* LEAD */
+
     .lead {
       display: grid;
-      grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.75fr);
+
+      grid-template-columns:
+        minmax(0, 1.45fr)
+        minmax(320px, 0.75fr);
+
       gap: 28px;
+
       padding: 22px 0 34px;
-      border-top: 2px solid var(--green-dark);
-      border-bottom: 1px solid var(--line);
+
+      border-top:
+        2px solid var(--green-dark);
+
+      border-bottom:
+        1px solid var(--line);
     }
 
     .lead.no-image {
-      grid-template-columns: minmax(0, 1fr);
+      grid-template-columns:
+        minmax(0, 1fr);
     }
 
     .lead-media {
       overflow: hidden;
-      border-radius: var(--radius);
-      background: var(--green-soft-2);
+
       min-height: 280px;
+
+      border-radius: var(--radius);
+
+      background: var(--green-soft-2);
+
       box-shadow: var(--shadow);
     }
 
     .lead-media img {
       width: 100%;
       height: 100%;
+
       min-height: 280px;
+
       object-fit: cover;
+
       aspect-ratio: 16 / 9;
     }
 
     .lead-copy {
       display: flex;
+
       flex-direction: column;
       justify-content: center;
     }
 
     .meta {
       display: flex;
+
       flex-wrap: wrap;
       align-items: center;
+
       gap: 8px 10px;
+
       margin-bottom: 12px;
-      font-family: Arial, Helvetica, sans-serif;
+
+      color: var(--green);
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
       font-size: 0.73rem;
       font-weight: 800;
+
       letter-spacing: 0.055em;
+
       text-transform: uppercase;
-      color: var(--green);
     }
 
     .meta .dot::before {
       content: "•";
+
       margin-right: 10px;
+
       color: var(--orange);
     }
 
     .lead-title {
       margin: 0;
-      font-size: clamp(2.1rem, 4vw, 4rem);
-      line-height: 0.98;
-      letter-spacing: -0.045em;
+
       color: var(--green-dark);
+
+      font-size:
+        clamp(
+          2.1rem,
+          4vw,
+          4rem
+        );
+
+      line-height: 0.98;
+
+      letter-spacing: -0.045em;
     }
 
     .lead-title a,
@@ -241,25 +389,39 @@
     .lead-title a:hover,
     .card-title a:hover {
       text-decoration: underline;
+
       text-decoration-thickness: 2px;
+
       text-underline-offset: 4px;
     }
 
     .teaser {
       margin: 18px 0 0;
+
       color: #445149;
+
       font-size: 1.05rem;
     }
 
     .read-link {
       display: inline-flex;
+
       align-items: center;
+
       gap: 8px;
+
       margin-top: 20px;
-      font-family: Arial, Helvetica, sans-serif;
+
+      color: var(--orange-dark);
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
       font-size: 0.87rem;
       font-weight: 800;
-      color: var(--orange-dark);
+
       text-decoration: none;
     }
 
@@ -267,120 +429,231 @@
       text-decoration: underline;
     }
 
+    /* ARTICLES */
+
     .grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+
+      grid-template-columns:
+        repeat(
+          3,
+          minmax(0, 1fr)
+        );
+
       gap: 0 24px;
     }
 
     .card {
       padding: 26px 0 30px;
-      border-bottom: 1px solid var(--line);
+
+      border-bottom:
+        1px solid var(--line);
     }
 
     .card-media {
-      margin-bottom: 16px;
       overflow: hidden;
+
+      margin-bottom: 16px;
+
       border-radius: 14px;
+
       background: var(--green-soft-2);
+
       aspect-ratio: 4 / 3;
     }
 
     .card-media img {
       width: 100%;
       height: 100%;
+
       object-fit: cover;
     }
 
     .card-title {
       margin: 0;
-      font-size: clamp(1.35rem, 2vw, 1.8rem);
-      line-height: 1.08;
-      letter-spacing: -0.025em;
+
       color: var(--green-dark);
+
+      font-size:
+        clamp(
+          1.35rem,
+          2vw,
+          1.8rem
+        );
+
+      line-height: 1.08;
+
+      letter-spacing: -0.025em;
     }
 
     .card .teaser {
       margin-top: 12px;
+
       font-size: 0.96rem;
     }
 
+    /* INTERNATIONAL */
+
     .international {
       margin-top: 54px;
+
       padding: 44px 0 24px;
-      background: linear-gradient(180deg, rgba(216, 233, 203, 0.7), rgba(230, 241, 220, 0.35));
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
+
+      background:
+        linear-gradient(
+          180deg,
+          rgba(216, 233, 203, 0.7),
+          rgba(230, 241, 220, 0.35)
+        );
+
+      border-top:
+        1px solid var(--line);
+
+      border-bottom:
+        1px solid var(--line);
     }
+
+    /* NEWSLETTER */
 
     .newsletter {
       margin-top: 56px;
+
+      padding: 48px;
+
+      overflow: hidden;
+
+      border-radius: 24px;
+
       background: var(--green-dark);
       color: var(--white);
-      border-radius: 24px;
-      padding: clamp(28px, 5vw, 48px);
+
       box-shadow: var(--shadow);
-      overflow: hidden;
     }
 
     .newsletter-grid {
       display: grid;
-      grid-template-columns: minmax(0, 0.9fr) minmax(360px, 1.1fr);
-      gap: 36px;
+
+      grid-template-columns:
+        minmax(280px, 0.75fr)
+        minmax(650px, 1.25fr);
+
       align-items: center;
+
+      gap: 36px;
+    }
+
+    .newsletter-copy {
+      min-width: 0;
     }
 
     .newsletter h2 {
       margin: 0;
-      font-size: clamp(2rem, 4vw, 3.3rem);
+
+      font-size:
+        clamp(
+          2rem,
+          4vw,
+          3.3rem
+        );
+
       line-height: 1;
+
       letter-spacing: -0.04em;
     }
 
     .newsletter p {
       margin: 14px 0 0;
-      color: rgba(255, 255, 255, 0.8);
-      font-family: Arial, Helvetica, sans-serif;
+
+      color:
+        rgba(
+          255,
+          255,
+          255,
+          0.8
+        );
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
       font-size: 0.96rem;
     }
 
     .beehiiv-wrap {
       width: 100%;
-      max-width: 520px;
-      justify-self: end;
-      background: var(--cream-2);
-      border-radius: 18px;
-      padding: 12px;
+
+      min-width: 0;
+
       overflow: hidden;
+
+      border-radius: 18px;
+
+      background: var(--cream-2);
     }
 
     .beehiiv-embed {
       display: block;
-      width: 100%;
-      height: 240px;
-      min-height: 240px;
-      border: 0;
-      background: transparent;
+
+      width: 100% !important;
+      max-width: 100% !important;
+
+      height: 330px !important;
+      min-height: 330px;
+
+      margin: 0 !important;
+
+      border: 0 !important;
+
+      background: var(--cream-2);
     }
+
+    /* STATES */
 
     .state {
       padding: 48px 0;
+
       text-align: center;
+
       color: var(--muted);
-      font-family: Arial, Helvetica, sans-serif;
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
     }
+
+    /* FOOTER */
 
     .site-footer {
       padding: 32px 0 48px;
+
       text-align: center;
+
       color: var(--muted);
-      font-family: Arial, Helvetica, sans-serif;
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
       font-size: 0.82rem;
     }
 
-    @media (max-width: 860px) {
-      .lead,
+    /* TABLET */
+
+    @media (max-width: 1050px) {
       .newsletter-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .beehiiv-wrap {
+        max-width: 760px;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .lead {
         grid-template-columns: 1fr;
       }
 
@@ -389,14 +662,21 @@
       }
 
       .grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns:
+          repeat(
+            2,
+            minmax(0, 1fr)
+          );
       }
 
       .section-heading {
         align-items: start;
+
         flex-direction: column;
       }
     }
+
+    /* MOBILE */
 
     @media (max-width: 620px) {
       .site-header {
@@ -409,12 +689,15 @@
 
       .header-cta {
         min-height: 40px;
+
         padding: 0 14px;
+
         font-size: 0.78rem;
       }
 
       .edition-bar {
         flex-direction: column;
+
         gap: 4px;
       }
 
@@ -436,7 +719,11 @@
 
       .card {
         display: grid;
-        grid-template-columns: 118px 1fr;
+
+        grid-template-columns:
+          118px
+          1fr;
+
         gap: 16px;
       }
 
@@ -446,6 +733,7 @@
 
       .card-media {
         margin: 0;
+
         aspect-ratio: 1 / 1;
       }
 
@@ -454,232 +742,581 @@
       }
 
       .newsletter {
+        padding: 28px 20px;
+
         border-radius: 18px;
       }
 
       .newsletter-grid {
         grid-template-columns: 1fr;
+
+        gap: 24px;
       }
 
       .beehiiv-wrap {
-        max-width: none;
-        justify-self: stretch;
+        width: 100%;
+
+        overflow-x: auto;
       }
 
       .beehiiv-embed {
-        height: 250px;
-        min-height: 250px;
+        width: 650px !important;
+        max-width: none !important;
+
+        height: 330px !important;
       }
     }
   </style>
 </head>
 
 <body>
+
   <header class="site-header">
     <div class="shell header-row">
-      <a class="brand" href="./" aria-label="Positief nieuws homepage">
-        <span class="brand-name">Positief nieuws</span>
-        <span class="brand-tagline">Dit gebeurt ook.</span>
+
+      <a
+        class="brand"
+        href="./"
+        aria-label="Positief nieuws homepage"
+      >
+
+        <span class="brand-name">
+          Positief nieuws
+        </span>
+
+        <span class="brand-tagline">
+          Dit gebeurt ook.
+        </span>
+
       </a>
-      <a class="header-cta" href="#nieuwsbrief">In je inbox</a>
+
+      <a
+        class="header-cta"
+        href="#nieuwsbrief"
+      >
+        In je inbox
+      </a>
+
     </div>
   </header>
 
+
   <div class="shell edition-bar">
-    <span>Een selectie van nieuws waar je ook wat aan hebt.</span>
-    <span>Nieuwe editie: maandag, woensdag en vrijdag</span>
+
+    <span>
+      Een selectie van nieuws waar je ook wat aan hebt.
+    </span>
+
+    <span>
+      Nieuwe editie: maandag, woensdag en vrijdag
+    </span>
+
   </div>
 
+
   <main>
+
     <section class="section">
+
       <div class="shell">
+
         <div class="section-heading">
+
           <div>
-            <p class="section-kicker">Nederland & relevant voor Nederland</p>
-            <h1 class="section-title">Dit gebeurt hier.</h1>
+
+            <p class="section-kicker">
+              Nederland & relevant voor Nederland
+            </p>
+
+            <h1 class="section-title">
+              Dit gebeurt hier.
+            </h1>
+
           </div>
+
         </div>
 
-        <div id="nl-state" class="state">Nieuws laden…</div>
 
-        <div id="nl-content" hidden>
-          <article id="nl-lead" class="lead"></article>
-          <div id="nl-grid" class="grid"></div>
+        <div
+          id="nl-state"
+          class="state"
+        >
+          Nieuws laden…
         </div>
+
+
+        <div
+          id="nl-content"
+          hidden
+        >
+
+          <article
+            id="nl-lead"
+            class="lead"
+          ></article>
+
+          <div
+            id="nl-grid"
+            class="grid"
+          ></div>
+
+        </div>
+
       </div>
+
     </section>
 
+
     <section class="international">
+
       <div class="shell">
+
         <div class="section-heading">
+
           <div>
-            <p class="section-kicker">Internationaal</p>
-            <h2 class="section-title">En dit gebeurt elders.</h2>
+
+            <p class="section-kicker">
+              Internationaal
+            </p>
+
+            <h2 class="section-title">
+              En dit gebeurt elders.
+            </h2>
+
           </div>
+
 
           <p class="section-intro">
             Omdat goed nieuws zich niet aan landsgrenzen houdt.
           </p>
+
         </div>
 
-        <div id="int-state" class="state">Nieuws laden…</div>
-        <div id="int-grid" class="grid" hidden></div>
+
+        <div
+          id="int-state"
+          class="state"
+        >
+          Nieuws laden…
+        </div>
+
+
+        <div
+          id="int-grid"
+          class="grid"
+          hidden
+        ></div>
+
       </div>
+
     </section>
 
+
     <div class="shell">
-      <section class="newsletter" id="nieuwsbrief">
+
+      <section
+        class="newsletter"
+        id="nieuwsbrief"
+      >
+
         <div class="newsletter-grid">
-          <div>
-            <p class="section-kicker" style="color:#ff9a68;">
+
+
+          <div class="newsletter-copy">
+
+            <p
+              class="section-kicker"
+              style="color:#ff9a68;"
+            >
               Nieuwsbrief
             </p>
 
-            <h2>Positief nieuws in je inbox?</h2>
+            <h2>
+              Positief nieuws in je inbox?
+            </h2>
 
             <p>
               Ontvang elke maandag, woensdag en vrijdag een verse editie.
               Kort, gratis en zonder doomscrollen.
             </p>
+
           </div>
 
+
           <div class="beehiiv-wrap">
-  <iframe
-    src="https://subscribe-forms.beehiiv.com/109e976f-df27-4ddf-a906-c2579313c439"
-    class="beehiiv-embed"
-    frameborder="0"
-    scrolling="no"
-    title="Schrijf je in voor Positief nieuws">
-  </iframe>
-</div>
+
+            <script
+              async
+              src="https://subscribe-forms.beehiiv.com/embed.js"
+            ></script>
+
+            <iframe
+              src="https://subscribe-forms.beehiiv.com/109e976f-df27-4ddf-a906-c2579313c439"
+              class="beehiiv-embed"
+              data-test-id="beehiiv-embed"
+              frameborder="0"
+              scrolling="no"
+              title="Schrijf je in voor Positief nieuws"
+            ></iframe>
+
+          </div>
+
+
         </div>
+
       </section>
+
     </div>
+
   </main>
 
+
   <footer class="site-footer">
+
     <div class="shell">
       Positief nieuws. Dit gebeurt ook.
     </div>
+
   </footer>
 
+
   <script>
-    const $ = (selector) => document.querySelector(selector);
 
-    function firstValue(object, keys, fallback = "") {
+    const $ = (selector) =>
+      document.querySelector(selector);
+
+
+    function firstValue(
+      object,
+      keys,
+      fallback = ""
+    ) {
+
       for (const key of keys) {
-        const value = object?.[key];
 
-        if (value !== undefined && value !== null && value !== "") {
+        const value =
+          object?.[key];
+
+        if (
+          value !== undefined &&
+          value !== null &&
+          value !== ""
+        ) {
           return value;
         }
+
       }
 
       return fallback;
     }
 
+
     function normalizeArticle(article) {
+
       return {
-        title: firstValue(article, ["title", "headline", "kop", "titel"]),
-        teaser: firstValue(article, ["teaser", "description", "summary", "samenvatting", "intro"]),
-        url: firstValue(article, ["url", "link", "articleUrl", "article_url"], "#"),
-        source: firstValue(article, ["source", "bron", "sourceName", "source_name"]),
-        category: firstValue(article, ["category", "categorie"]),
-        image: firstValue(article, ["image", "imageUrl", "image_url"]),
-        imageAlt: firstValue(article, ["imageAlt", "image_alt", "alt"], "")
+
+        title:
+          firstValue(
+            article,
+            [
+              "title",
+              "headline",
+              "kop",
+              "titel"
+            ]
+          ),
+
+        teaser:
+          firstValue(
+            article,
+            [
+              "teaser",
+              "description",
+              "summary",
+              "samenvatting",
+              "intro"
+            ]
+          ),
+
+        url:
+          firstValue(
+            article,
+            [
+              "url",
+              "link",
+              "articleUrl",
+              "article_url"
+            ],
+            "#"
+          ),
+
+        source:
+          firstValue(
+            article,
+            [
+              "source",
+              "bron",
+              "sourceName",
+              "source_name"
+            ]
+          ),
+
+        category:
+          firstValue(
+            article,
+            [
+              "category",
+              "categorie"
+            ]
+          ),
+
+        image:
+          firstValue(
+            article,
+            [
+              "image",
+              "imageUrl",
+              "image_url"
+            ]
+          ),
+
+        imageAlt:
+          firstValue(
+            article,
+            [
+              "imageAlt",
+              "image_alt",
+              "alt"
+            ],
+            ""
+          )
+
       };
     }
 
-    function sectionFromObject(data, keys) {
+
+    function sectionFromObject(
+      data,
+      keys
+    ) {
+
       for (const key of keys) {
-        if (Array.isArray(data?.[key])) {
+
+        if (
+          Array.isArray(
+            data?.[key]
+          )
+        ) {
           return data[key];
         }
+
       }
 
       return null;
     }
 
-    function sectionFromFlatArray(data, type) {
+
+    function sectionFromFlatArray(
+      data,
+      type
+    ) {
+
       if (!Array.isArray(data)) {
         return null;
       }
 
-      const values = type === "nl"
-        ? ["nl", "nederland", "netherlands", "dutch"]
-        : ["int", "internationaal", "international", "world", "wereld"];
 
-      const filtered = data.filter(item => {
-        const section = String(
-          firstValue(
-            item,
-            ["section", "blok", "type", "region", "regio"],
-            ""
-          )
-        ).toLowerCase();
+      const values =
+        type === "nl"
 
-        return values.includes(section);
-      });
+          ? [
+              "nl",
+              "nederland",
+              "netherlands",
+              "dutch"
+            ]
 
-      return filtered.length ? filtered : null;
+          : [
+              "int",
+              "internationaal",
+              "international",
+              "world",
+              "wereld"
+            ];
+
+
+      const filtered =
+        data.filter(
+          item => {
+
+            const section =
+              String(
+                firstValue(
+                  item,
+                  [
+                    "section",
+                    "blok",
+                    "type",
+                    "region",
+                    "regio"
+                  ],
+                  ""
+                )
+              ).toLowerCase();
+
+            return values.includes(
+              section
+            );
+
+          }
+        );
+
+
+      return filtered.length
+        ? filtered
+        : null;
     }
 
-    function getSection(data, type) {
-      const keys = type === "nl"
-        ? ["nl", "NL", "nederland", "netherlands", "dutch"]
-        : ["int", "INT", "internationaal", "international", "world", "wereld"];
+
+    function getSection(
+      data,
+      type
+    ) {
+
+      const keys =
+        type === "nl"
+
+          ? [
+              "nl",
+              "NL",
+              "nederland",
+              "netherlands",
+              "dutch"
+            ]
+
+          : [
+              "int",
+              "INT",
+              "internationaal",
+              "international",
+              "world",
+              "wereld"
+            ];
+
 
       return (
-        sectionFromObject(data, keys) ||
-        sectionFromFlatArray(data, type) ||
+        sectionFromObject(
+          data,
+          keys
+        )
+
+        ||
+
+        sectionFromFlatArray(
+          data,
+          type
+        )
+
+        ||
+
         []
       );
     }
 
+
     function safeText(value) {
-      const div = document.createElement("div");
-      div.textContent = value ?? "";
+
+      const div =
+        document.createElement("div");
+
+      div.textContent =
+        value ?? "";
+
       return div.innerHTML;
     }
 
+
     function safeUrl(value) {
-      if (!value || value === "#") {
+
+      if (
+        !value ||
+        value === "#"
+      ) {
         return "#";
       }
 
-      try {
-        const url = new URL(value, window.location.href);
 
-        if (["http:", "https:"].includes(url.protocol)) {
+      try {
+
+        const url =
+          new URL(
+            value,
+            window.location.href
+          );
+
+
+        if (
+          [
+            "http:",
+            "https:"
+          ].includes(
+            url.protocol
+          )
+        ) {
+
           return url.href;
+
         }
-      } catch (_) {}
+
+      }
+
+      catch (_) {}
+
 
       return "#";
     }
 
+
     function metaHtml(article) {
+
       const parts = [];
 
+
       if (article.category) {
-        parts.push(`<span>${safeText(article.category)}</span>`);
+
+        parts.push(
+          `<span>${safeText(article.category)}</span>`
+        );
+
       }
 
+
       if (article.source) {
+
         parts.push(
           `<span class="dot">${safeText(article.source)}</span>`
         );
+
       }
 
+
       return parts.length
+
         ? `<div class="meta">${parts.join("")}</div>`
+
         : "";
     }
 
-    function imageHtml(article, className) {
+
+    function imageHtml(
+      article,
+      className
+    ) {
+
       if (!article.image) {
         return "";
       }
+
 
       return `
         <div class="${className}">
@@ -687,173 +1324,369 @@
             src="${safeUrl(article.image)}"
             alt="${safeText(article.imageAlt)}"
             loading="lazy"
-            onerror="this.closest('.${className}').remove()">
+            onerror="this.closest('.${className}').remove()"
+          >
         </div>
       `;
     }
 
-    function articleLink(url, label = "Lees het verhaal") {
-      const href = safeUrl(url);
+
+    function articleLink(
+      url,
+      label = "Lees het verhaal"
+    ) {
+
+      const href =
+        safeUrl(url);
+
 
       if (href === "#") {
         return "";
       }
+
 
       return `
         <a
           class="read-link"
           href="${href}"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+        >
           ${safeText(label)} →
         </a>
       `;
     }
 
-    function renderLead(rawArticle) {
-      const article = normalizeArticle(rawArticle);
-      const lead = $("#nl-lead");
-      const hasImage = Boolean(article.image);
 
-      lead.classList.toggle("no-image", !hasImage);
+    function renderLead(
+      rawArticle
+    ) {
+
+      const article =
+        normalizeArticle(
+          rawArticle
+        );
+
+
+      const lead =
+        $("#nl-lead");
+
+
+      const hasImage =
+        Boolean(
+          article.image
+        );
+
+
+      lead.classList.toggle(
+        "no-image",
+        !hasImage
+      );
+
 
       lead.innerHTML = `
-        ${imageHtml(article, "lead-media")}
+
+        ${imageHtml(
+          article,
+          "lead-media"
+        )}
 
         <div class="lead-copy">
+
           ${metaHtml(article)}
 
           <h2 class="lead-title">
+
             <a
               href="${safeUrl(article.url)}"
-              ${article.url && article.url !== "#"
-                ? 'target="_blank" rel="noopener noreferrer"'
-                : ""}>
+
+              ${
+                article.url &&
+                article.url !== "#"
+
+                  ? 'target="_blank" rel="noopener noreferrer"'
+
+                  : ""
+              }
+            >
+
               ${safeText(article.title)}
+
             </a>
+
           </h2>
 
-          ${article.teaser
-            ? `<p class="teaser">${safeText(article.teaser)}</p>`
-            : ""}
 
-          ${articleLink(article.url)}
+          ${
+            article.teaser
+
+              ? `<p class="teaser">${safeText(article.teaser)}</p>`
+
+              : ""
+          }
+
+
+          ${articleLink(
+            article.url
+          )}
+
         </div>
       `;
+
     }
 
-    function renderCard(rawArticle) {
-      const article = normalizeArticle(rawArticle);
-      const card = document.createElement("article");
 
-      card.className = `card${article.image ? "" : " no-image"}`;
+    function renderCard(
+      rawArticle
+    ) {
+
+      const article =
+        normalizeArticle(
+          rawArticle
+        );
+
+
+      const card =
+        document.createElement(
+          "article"
+        );
+
+
+      card.className =
+        `card${article.image ? "" : " no-image"}`;
+
 
       card.innerHTML = `
-        ${imageHtml(article, "card-media")}
+
+        ${imageHtml(
+          article,
+          "card-media"
+        )}
 
         <div class="card-copy">
+
           ${metaHtml(article)}
 
           <h3 class="card-title">
+
             <a
               href="${safeUrl(article.url)}"
-              ${article.url && article.url !== "#"
-                ? 'target="_blank" rel="noopener noreferrer"'
-                : ""}>
+
+              ${
+                article.url &&
+                article.url !== "#"
+
+                  ? 'target="_blank" rel="noopener noreferrer"'
+
+                  : ""
+              }
+            >
+
               ${safeText(article.title)}
+
             </a>
+
           </h3>
 
-          ${article.teaser
-            ? `<p class="teaser">${safeText(article.teaser)}</p>`
-            : ""}
 
-          ${articleLink(article.url)}
+          ${
+            article.teaser
+
+              ? `<p class="teaser">${safeText(article.teaser)}</p>`
+
+              : ""
+          }
+
+
+          ${articleLink(
+            article.url
+          )}
+
         </div>
       `;
+
 
       return card;
     }
 
-    function renderSection(data, type) {
-      const items = getSection(data, type)
-        .map(normalizeArticle)
-        .filter(item => item.title);
+
+    function renderSection(
+      data,
+      type
+    ) {
+
+      const items =
+        getSection(
+          data,
+          type
+        )
+
+        .map(
+          normalizeArticle
+        )
+
+        .filter(
+          item =>
+            item.title
+        );
+
 
       if (type === "nl") {
-        const state = $("#nl-state");
-        const content = $("#nl-content");
-        const grid = $("#nl-grid");
+
+        const state =
+          $("#nl-state");
+
+        const content =
+          $("#nl-content");
+
+        const grid =
+          $("#nl-grid");
+
 
         if (!items.length) {
+
           state.textContent =
             "Geen Nederlandse verhalen gevonden in nieuws.json.";
+
           return;
         }
 
+
         state.hidden = true;
+
         content.hidden = false;
+
         grid.innerHTML = "";
 
-        renderLead(items[0]);
+
+        renderLead(
+          items[0]
+        );
+
 
         items
           .slice(1, 7)
-          .forEach(item => {
-            grid.appendChild(renderCard(item));
-          });
+          .forEach(
+            item => {
+
+              grid.appendChild(
+                renderCard(
+                  item
+                )
+              );
+
+            }
+          );
+
       }
 
+
       if (type === "int") {
-        const state = $("#int-state");
-        const grid = $("#int-grid");
+
+        const state =
+          $("#int-state");
+
+        const grid =
+          $("#int-grid");
+
 
         if (!items.length) {
+
           state.textContent =
             "Geen internationale verhalen gevonden in nieuws.json.";
+
           return;
         }
 
+
         state.hidden = true;
+
         grid.hidden = false;
+
         grid.innerHTML = "";
+
 
         items
           .slice(0, 7)
-          .forEach(item => {
-            grid.appendChild(renderCard(item));
-          });
+          .forEach(
+            item => {
+
+              grid.appendChild(
+                renderCard(
+                  item
+                )
+              );
+
+            }
+          );
+
       }
+
     }
 
+
     async function loadNews() {
+
       try {
-        const response = await fetch("./nieuws.json", {
-          cache: "no-store"
-        });
+
+        const response =
+          await fetch(
+            "./nieuws.json",
+            {
+              cache:
+                "no-store"
+            }
+          );
+
 
         if (!response.ok) {
+
           throw new Error(
             `nieuws.json gaf status ${response.status}`
           );
+
         }
 
-        const data = await response.json();
 
-        renderSection(data, "nl");
-        renderSection(data, "int");
-      } catch (error) {
-        console.error(error);
+        const data =
+          await response.json();
+
+
+        renderSection(
+          data,
+          "nl"
+        );
+
+
+        renderSection(
+          data,
+          "int"
+        );
+
+      }
+
+      catch (error) {
+
+        console.error(
+          error
+        );
+
 
         $("#nl-state").textContent =
           "Nieuws kon niet worden geladen.";
 
+
         $("#int-state").textContent =
           "Nieuws kon niet worden geladen.";
+
       }
+
     }
 
+
     loadNews();
+
   </script>
+
 </body>
 </html>
