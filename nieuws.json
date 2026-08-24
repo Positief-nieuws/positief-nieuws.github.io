@@ -1,134 +1,110 @@
 {
-  "edition": {
-    "date": "2026-08-22",
-    "displayDate": "zaterdag 22 augustus",
-    "title": "Positief nieuws",
+  "meta": {
+    "edition_date": "2026-08-24",
+    "brand": "Positief nieuws",
     "tagline": "Dit gebeurt ook.",
-    "intro": "14 verhalen die laten zien wat er óók goed gaat. Geen doomscrollen. Wel even lekker lezen.",
-    "closingTitle": "Dat was het.",
-    "closingText": "Ga lekker verder met je dag. ☀️",
-    "internationalIntro": "Omdat goed nieuws zich niet aan landsgrenzen houdt."
+    "publication_frequency": "maandag, woensdag en vrijdag"
   },
-  "dutch": [
+  "nl": [
     {
-      "category": "Voeding & leefstijl",
-      "icon": "🥬",
-      "title": "Tienduizenden Nederlandse appels gered van verspilling",
-      "summary": "Tienduizenden Nederlandse appels zijn gered van verspilling. Een lekker concreet voorbeeld van voedsel dat wél wordt benut in plaats van weggegooid.",
-      "source": "RTL Nieuws",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOU3RoRnJ0dG5ibXNPckRIMnY1S294Q0RxTG5CNmctaDdVbS1NQlVtbHYxN3VLdW5KYlBKUFFkc2ZSZDFta2FoWmhKbVh3NDFtQXQ4b0xrajZpOE50MEJzMzliME9XbmpEZnBQcG1ZVnZ3VzQ5cE9OQktzLW5QaU9oYUY5b190YVM0bnVFdW5pOE9odHA2V1dTbUJzMmlhaU95bE03UlNKOTZhaHgzdGpOOXNNcWt0MVBu?oc=5"
+      "title": "Rixt van der Horst pakt opnieuw goud op WK paradressuur",
+      "teaser": "De Nederlandse amazone Rixt van der Horst heeft opnieuw goud gewonnen op het WK paradressuur. Een sterk internationaal sportresultaat om de editie mee te openen.",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOWjEyUlJtdkdaWndkemRvWkk4b2R6RDc3OVN1T1VMdklSWEVzY2JtR1dLcGVpSURxNzFxSDhJYVJkaEJhcDB2TW00cUpqamtfQXFSZzR6ZVJBRno2SWF4SVVnODdrTnI0eVpjZXNpRmFRWVJmRHZlQ0ItQXktXzR6V193UV8tR2JxVk9VazZ5TFpvcHRiTXA4b2FJMk9JZGYtUmh0T2ZLbVJsZw?oc=5",
+      "source": "Omrop Fryslân",
+      "category": "Sport"
     },
     {
-      "category": "Sport",
-      "icon": "🏅",
-      "title": "Broeders-Bol verbetert Nederlands record 800 meter en belt direct met Van Langen",
-      "summary": "Femke Broeders-Bol heeft in Lausanne het Nederlands record op de 800 meter aangescherpt tot 1.55,41. Daarmee dook ze onder het 34 jaar oude record dat ze op het EK al had geëvenaard.",
+      "title": "Nederlandse stichting bouwt ondergronds ziekenhuis in Oekraïne",
+      "teaser": "Protect Ukraine gaat samen met een Noorse organisatie een ondergronds ziekenhuis bouwen waar dichter bij het front levensreddende operaties kunnen plaatsvinden.",
+      "url": "https://nos.nl/l/2628079",
       "source": "NOS",
-      "url": "https://nos.nl/l/2627797"
+      "category": "Gezondheid"
     },
     {
-      "category": "Wetenschap",
-      "icon": "🔬",
-      "title": "Genetische visatlas moet beheer en beleid een handje helpen",
-      "summary": "Wageningen University & Research werkt aan een genetische visatlas die beheer en beleid een handje moet helpen. Zo kan genetische kennis over vispopulaties direct bruikbaarder worden voor beter beheer.",
-      "source": "Wageningen University & Research",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPaHBvbUV3Vm8xZVVJdmpMZE9vNDh2SG94Q19pUnlROFpyYnlpWk1SMUoweFpYcUVyeVh5bm0wTjIxRk5oelVVY1NDelNFNW1yb0I4S1Zfa0l6REtFN1lOWUZqR05LajdzdG5MeTJvLXBrdzNsRGIwWnVRWTQwY3BzWUZKN2l4VXEyODlfRWFJcnNyWDVUR0x4ZktyOE80XzQ?oc=5"
-    },
-    {
-      "category": "Economie & geld",
-      "icon": "📈",
-      "title": "Gemeente Asten helpt woningbouwprojecten met netcapaciteit",
-      "summary": "De gemeente Asten helpt woningbouwprojecten verder met netcapaciteit. Een praktische stap om lokale bouwplannen vooruit te helpen.",
-      "source": "Omroep Brabant",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNeXZ0THNzUUd0NkJ6ZEp4ME5oT1hUX3pnY2oxLWFKMkkyUnl1NC1iUTlWOW5MSEplNDhJUG1iRThlbkVya3YyUmZiZnZWZzBDS2xBUWJBVEMwRVFPRDI5djktY1NObHVBX1UxbEV4T1Jnb3cyald6RjlYRjJJSFI0T0NPTjV1WnNDQUhWWGY2d0VSSWRQVllVT19vZXJsbGExTlVTYQ?oc=5"
-    },
-    {
-      "category": "Gezondheid",
-      "icon": "❤️",
-      "title": "Na onrust bij Pelgromhof lijkt de zorg nu gered",
-      "summary": "Na een periode van onrust lijkt de zorg bij Pelgromhof nu gered. Een lokaal zorgverhaal dat eindelijk de goede kant op lijkt te vallen.",
+      "title": "Tiels Daalderop-kunstwerk gered van de sloop en klaar voor restauratie",
+      "teaser": "Een kunstwerk uit Tiel ontsnapte aan de slopershamer. De volgende stap is restauratie, zodat het behouden blijft voor de toekomst.",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPa29lb0VHM25saTlHNUpVRE5wUHo3V1NGQWc1Z0RaTHktLVl1Zmk2MzdYd2FnaHp2bEpCQ3NyMTg3ZVV0elg5Mkx2clZISmRDR1ZzRThOSDdkdExkdFN6N01YeDMzWmxsMDVtVEZpOVRfTGlZaU5BVVRZTWZibjZwQzVkOEhSUHI5RU1URXhqNVdvYmpIRkV0Tzl4dnFXOUk4NFh0TnB4OEtydFJnNWxkZg?oc=5",
       "source": "Omroep Gelderland",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNUUFVcFh5QnFfbWVlX25UcVdyMHp5dVNQbVdUaTRtdUZWdlN4WXpIb0R2ejVEYmJkQWI4NmQ5Q1p0LXVYR0pkbW1OT1BGTEROTXd1amVGakcwZG1tTC0ybmdsM2RVZWxVR0I1LTVsMHJyRE5aR1U1Tm8tV050T2UydDQzSzJaVWxz?oc=5"
+      "category": "Cultuur & media"
     },
     {
-      "category": "Cultuur & media",
-      "icon": "🎨",
-      "title": "Van Mandarijnpop tot musical: masterstudent Sara wint Delft’s Got Talent",
-      "summary": "Masterstudent Sara heeft Delft’s Got Talent gewonnen met een optreden dat van Mandarijnpop tot musical ging. Een mooie podiumplek voor talent van eigen campus.",
+      "title": "Scootmobieler uit het water gered in Oosthem",
+      "teaser": "In het Friese Oosthem is een scootmobieler uit het water gered. Een klein lokaal nieuwsbericht met een heel duidelijke goede afloop.",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNckxOTFcwM0o4R0VDZ3lFcEdwNmRYN2RrY1Y0bndFUElIZEpEZXZqckZHd2VmZDJtYmJuVVpNUUZtTnVwQi1lSWFqc3hUNHJmVzlleVBseEhGckRFd09IRXpfMC1Kd2NjekVuck9aWm1PdFZQN0JlYmNzT0VYREZId1Y4N2ZoR21kMG5oZnZHNkIwZnk0WEE?oc=5",
+      "source": "Omrop Fryslân",
+      "category": "Mens & samenleving"
+    },
+    {
+      "title": "Genetische visatlas moet natuurbeheer slimmer maken",
+      "teaser": "Wageningen University & Research werkt aan een genetische visatlas die kennis over vispopulaties direct bruikbaarder moet maken voor beheer en beleid.",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPaHBvbUV3Vm8xZVVJdmpMZE9vNDh2SG94Q19pUnlROFpyYnlpWk1SMUoweFpYcUVyeVh5bm0wTjIxRk5oelVVY1NDelNFNW1yb0I4S1Zfa0l6REtFN1lOWUZqR05LajdzdG5MeTJvLXBrdzNsRGIwWnVRWTQwY3BzWUZKN2l4VXEyODlfRWFJcnNyWDVUR0x4ZktyOE80XzQ?oc=5",
+      "source": "Wageningen University & Research",
+      "category": "Wetenschap"
+    },
+    {
+      "title": "Masterstudent Sara wint Delft’s Got Talent met Mandarijnpop en musical",
+      "teaser": "TU Delft-masterstudent Sara won Delft’s Got Talent met een optreden dat van Mandarijnpop naar musical ging. Een podiumplek voor talent van eigen campus.",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNX3Y3S2pPYlFYTTc3YmRHNFNwcm91b3pmT2ZuZjR1eVI3UkV6WHNmQVRTbjhxSlJNY1l5Rm5hdG04UndxVGgtbDhjSEpLdldhX2ZHWUlFeDJIZ3hqUmVrT2xvQ0RqRERtNVY4TDdGSjBpdFdCMUtHYUE0cFpHMDg5dlZPQ25BUkN3VmUxd2tGOWtjekhTa0Ffd0tmaThFWXZaeExfT2x3?oc=5",
       "source": "TU Delft",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNX3Y3S2pPYlFYTTc3YmRHNFNwcm91b3pmT2ZuZjR1eVI3UkV6WHNmQVRTbjhxSlJNY1l5Rm5hdG04UndxVGgtbDhjSEpLdldhX2ZHWUlFeDJIZ3hqUmVrT2xvQ0RqRERtNVY4TDdGSjBpdFdCMUtHYUE0cFpHMDg5dlZPQ25BUkN3VmUxd2tGOWtjekhTa0Ffd0tmaThFWXZaeExfT2x3?oc=5"
+      "category": "Onderwijs & ontwikkeling"
     },
     {
-      "category": "Mens & samenleving",
-      "icon": "🤝",
-      "title": "Vader en dochter werken, zelfs in de regen, samen als vrijwilligers bij Dutch GP",
-      "summary": "Vader en dochter steken samen als vrijwilligers de handen uit de mouwen bij de Dutch GP, zelfs in de regen. Geen wereldnieuws, wel precies het soort klein goed nieuws dat ook bestaat.",
-      "source": "Hart van Nederland",
-      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNaUhVYmduTmRNLTdURGhaX3NUZ2toNnVTNF9ZT3NSSlg0ZmIxbmIwS0NNd0JNWTBJcHJ4VmpxQnA0b3dIdmcyLThhSnlGUWJQU0NQSUVGLXlZMWhxWnhZNnZFRTlMbk9EMVhHekhfVTN3ZElYZVhXYnRUZUdZbTJBcmFoNkF1NTB6dzdSaEtFQXB1dWc3QWNVYXRtV0Z3VGpVcVFHZjZhYm8xUmlyZTEzdEVDUzRUYVZ3dUJaM3J3NjNmT0R6RF9rTjRmZ2hnZw?oc=5"
+      "title": "Broeders-Bol scherpt Nederlands record op 800 meter aan",
+      "teaser": "Femke Broeders-Bol heeft het Nederlands record op de 800 meter verbeterd. Daarmee duikt ze onder een record dat al meer dan drie decennia stond.",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNX0cyem56MkdiOEl3UW9jMl9ZUWMwZFI1eU1qOXpsQmQ4ZE9xMVhUWk5tWjJfRXN1dUxqTUxwVWVWNjNOT2Y1Mm9KSHIwaUpSVi01MDVZcmtIZnNPZGhCd3owSXo4UnNXZDdfT19IbWZKeXpmNjE2N3ZsaXFpYnJnZXQyS2Z4MWdKTXNrUHlIMHVsUHBfZHpyblFhdW41QkxIQ2hpMmt2Q3BieEpoQzR3a1B3?oc=5",
+      "source": "RTL Nieuws",
+      "category": "Sport"
     }
   ],
-  "international": [
+  "int": [
     {
-      "category": "Natuur & klimaat",
-      "icon": "🌱",
-      "title": "A London Scheme to Cut Car Pollution Restored Lung Growth in Children",
-      "summary": "Een Londens programma om autovervuiling terug te dringen heeft volgens Yale E360 de longgroei bij kinderen hersteld. Schoner verkeer blijkt daarmee ook duidelijke gezondheidswinst op te leveren.",
-      "source": "Yale Environment 360 · English",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9HMURCeVJoWU9rZ1V1S1k2NkdMcHJITU9CMlJhZUZhdGRSYU1UZHBxMkpWalZRSl9GRkpCSlJrUTBSNjc3dHVRUkZWM3ZjcEVXMkF0WG14MDN4QmpIQlV4ZS0xenk?oc=5"
+      "title": "London clean-air scheme restored lung growth in children",
+      "teaser": "Onderzoekers volgden ruim 3.400 kinderen. Na de invoering van Londens lage-emissiezone verbeterde hun longgroei, tegelijk met een sterke daling van luchtvervuiling.",
+      "url": "https://e360.yale.edu/digest/ulez-children-lung-growth",
+      "source": "Yale Environment 360",
+      "category": "Gezondheid"
     },
     {
-      "category": "Gezondheid",
-      "icon": "❤️",
-      "title": "Injectable antioxidant hydrogel promotes retinal neuroprotection and visual recovery in mouse model",
-      "summary": "Onderzoekers in Taiwan ontwikkelden een injecteerbare antioxidant-hydrogel die in een muismodel netvlieszenuwcellen beschermde en visueel herstel bevorderde na schade aan de oogzenuw. Nog vroeg onderzoek, maar een veelbelovende stap.",
-      "source": "Medical Xpress · English",
-      "url": "https://medicalxpress.com/news/2026-08-antioxidant-hydrogel-retinal-neuroprotection-visual.html"
+      "title": "Nepal’s newest national parks drive tiger recovery",
+      "teaser": "Nepal telt naar schatting 429 wilde tijgers, tegen 355 vier jaar geleden. Vooral de jongere nationale parken blijken belangrijke groeigebieden.",
+      "url": "https://news.mongabay.com/short-article/2026/08/nepals-newest-national-parks-drive-tiger-recovery-but-emerging-concerns-threaten-progress/",
+      "source": "Mongabay",
+      "category": "Dieren"
     },
     {
-      "category": "Mens & samenleving",
-      "icon": "🤝",
-      "title": "Successful Somalia drought response protects livelihoods and food sources for pastoral families",
-      "summary": "Een succesvolle droogteaanpak in Somalië heeft bestaansmiddelen en voedselbronnen van pastorale families beschermd. Een concreet voorbeeld van hulp die mensen weerbaarder maakt tegen extreem droge periodes.",
-      "source": "FAO · English",
-      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPbHRLdFVSSnYyWVpsaE9IZVAtLWstZDFYbENycE96dDkyQndWVk10eDVPZWhhQjJmb2M4N09BM08tOWlvYzhENVpteXU0bmt1WlVnRUQxc1V4VURNaF9qMjFsN3k5WVpHWUNPQ1EzcHRBRElPdnpkbldsc0FWRm1YcTF3QnZKaVJXRW5QWWYyUHNxN28zMzU4YzRXVlZDelR3MVpiYVl5NzdEcXdybTVrb0Y4NEFwNk1mdEdTM012Q1R0ZGhlaUFkU3dtSDlLTlVaZEpGMnNB?oc=5"
+      "title": "Implant offers hope for people with refractory angina",
+      "teaser": "Een implantaat tegen moeilijk behandelbare angina verminderde in een grote studie bij veel patiënten de pijn op de borst. Verdere studies en toelating zijn nog nodig.",
+      "url": "https://www.theguardian.com/society/2026/aug/24/an-amazing-relief-implant-offers-hope-for-those-with-refractory-angina",
+      "source": "The Guardian",
+      "category": "Gezondheid"
     },
     {
-      "category": "Economie & geld",
-      "icon": "📈",
-      "title": "Business Beyond Profit: Vietnamese Social Impact Businesses Show How Impact Can Drive Business Growth",
-      "summary": "Vietnamese bedrijven met een sociale missie laten zien dat maatschappelijke impact en bedrijfsgroei samen kunnen gaan. UNDP zet deze ondernemingen in de schijnwerpers als voorbeeld van ondernemen voorbij alleen winst.",
-      "source": "UNDP · English",
-      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNbWZlaDlhdzJLSnN4ajFFTUMyM0hOTXNpdmNVZVpLbWN6TzllYnpEVzM4cFg0TzAzaVhCc21MRm12SnViZE82OHpNLUZRd2MzanotcnhqNUJkOFlRd1RQMmxDZWpNaDJSUWZMZVpISVZ3NnRLdE5OU2lsZ0FUa2Rra3ZJcGNDQV9ER0ZCdndBOTZEeXJBUGhMRU1wR3ZDZXR0Q2xHT0NEdndjcE9JRDd5WWEtQ1Rsc01NUGl0OWQzdmpxS1huWnN2TDdraE1yc2RRNkhnQm9HQTBETUhP?oc=5"
+      "title": "Oldest human brain cells grown in lab ‘recorded passage of time’",
+      "teaser": "Menselijke hersencellen die zeven jaar in het lab groeiden, bleken op een manier te verouderen die lijkt op hersencellen in het lichaam. Dat kan nieuw onderzoek naar veroudering helpen.",
+      "url": "https://phys.org/news/2026-08-oldest-human-brain-cells-grown.html",
+      "source": "Phys.org",
+      "category": "Wetenschap"
     },
     {
-      "category": "Onderwijs & ontwikkeling",
-      "icon": "🎓",
-      "title": "Women in Learning Leadership: Women’s leadership for school success in Guinea",
-      "summary": "In Guinee staat vrouwelijk leiderschap centraal in een programma rond schoolsucces. UNICEF laat zien hoe vrouwen in leidende rollen bijdragen aan sterker onderwijs.",
-      "source": "UNICEF · English",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPelF2UFZva1ZjUHJDMFpTMHFGcDFOZVZoOEtXR1B3bzRjcDR4QkFCeEtzTXhoZG9kbEJ6ZDhIaXl5cnhEZXBKQVdqdGtaanQxR1BVQ0thZXhFR0hoOGVhcnN2X1JaUl9uX0JvTS1NSmtVZXBqOGVybWRpbXdJUmkzUURsLTBlUjRBN0pVTE5qcFVSMVg1NUVyXzc0QWFKZjA0QlJMYnRleEZFbXJqdFFhbVN3N0NKN3NBX3czOGl3bkdZVUMyV3FxQnU5Y2tSejM4TnRCZVNHM1g?oc=5"
+      "title": "UNICEF study points to practical ways to get more women into school leadership",
+      "teaser": "In Guinee is 35 procent van de basisschoolleraren vrouw, maar slechts 7 procent van de schoolleiders. UNICEF beschrijft concrete routes om die kloof te verkleinen.",
+      "url": "https://www.unicef.org/innocenti/reports/women-learning-leadership-guinea",
+      "source": "UNICEF",
+      "category": "Onderwijs & ontwikkeling"
     },
     {
-      "category": "Technologie & innovatie",
-      "icon": "💡",
-      "title": "Digital innovation supports data gathering for better fisheries management",
-      "summary": "Digitale innovatie helpt om betere gegevens te verzamelen voor visserijbeheer. Volgens de FAO kan besluitvorming over visbestanden daardoor beter worden onderbouwd.",
-      "source": "FAO · English",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOLU1zTzFSUkJ2bU4tSjBWeVlqRmJtRmJ4ZEVFQjRFMC1ETDlPZkZKVm9NWENnblpWa0lEaVFaMDRreXZqM3Y4eW80Q1BHQmEwLUlYNHJ1N2tOR2R4VzdrRExGTU5mck05VlpKQ2NpSGZVOFlKVGpMRDVhYzJ5aERCa0ZjRnRmeDYwNEJqOUg2MA?oc=5"
+      "title": "Digital innovation aims to make aquaculture healthier and more resilient",
+      "teaser": "Digitale toepassingen kunnen viskweek beter monitoren en helpen om productie gezonder en weerbaarder te maken. FAO zet de mogelijkheden voor de sector op een rij.",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPOE9BUFg2VW1ZZHRPQ1g5d2dUUnN2WS03c3JyVi0taWFNVkd3UjJqd3JRd2NnR1BKb25CamZpazdCZnlpOURXWXNfby1DNTFkbUF0YndDeW9pVlp4TFNjVkdhQlNRWjlHMFF3SnNxWmQwN0pVTDI3YjY5T0VMNzF0ZnJzZUVKSktFTTRvaGVpOA?oc=5",
+      "source": "FAO",
+      "category": "Technologie & innovatie"
     },
     {
-      "category": "Dieren",
-      "icon": "🐾",
-      "title": "Why Are Some Octopuses So Smart? The Answer Might Lie in a Never-Before-Seen Mutation That Helps Them Accurately Build Proteins",
-      "summary": "Waarom zijn sommige octopussen zo slim? Onderzoekers denken dat een nooit eerder geziene mutatie die helpt bij het nauwkeurig opbouwen van eiwitten een deel van het antwoord kan zijn.",
-      "source": "Smithsonian Magazine · English",
-      "url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxOQ0tLVXVZaTFac2ExbHcyam80Vk52NmpNdEI2ODM0MXBkNmpPSGhVYlNYb3YzTG5mdW5oaWZwMUItb2p4b2p5Yl9aSDdmLWRTOUlpRnF2c0paV2x1aTVLQXRTWm00QTM1QzEtUlhpbXh1emROOU1RQ2NDc09MMTdGbDhJaE4xVzJRcG5JSWVZTkFkdUJjcHlYWGxqWkxTX3JfOW5hMTZONmh4TXV1bU53QlhoMzhKQXZvdkdFR2JrN1RyanlVZm9SaGtEdXBJZ29CcWFZQU1rN0d3WmE1dUY0bFV0ZkR1VXBINTJYM2lLOTdxS05ucjRiREFDOFZ5Mk5nZ044UlBVbkVnZGc?oc=5"
+      "title": "ESA celebrates successful EVA-96 spacewalk",
+      "teaser": "ESA meldt dat ruimtewandeling EVA-96 succesvol is afgerond. De missie laat ook zien hoeveel teamwerk er achter een veilige ruimtewandeling schuilgaat.",
+      "url": "https://www.esa.int/ESA_Multimedia/Images/2026/08/EVA-96_Success",
+      "source": "ESA",
+      "category": "Wetenschap"
     }
-  ],
-  "_meta": {
-    "generator": "Goed nieuws · AI-redactie 1",
-    "source": "kandidaten.json van 22 augustus 2026",
-    "method": "Automatische kandidatenverzameling, inhoudelijke AI-redactie",
-    "note": "Internationale bronkoppen behouden; teaserteksten in het Nederlands."
-  }
+  ]
 }
