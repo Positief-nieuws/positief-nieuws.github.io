@@ -318,14 +318,15 @@
       background: var(--green-dark);
       color: var(--white);
       border-radius: 24px;
-      padding: clamp(28px, 5vw, 52px);
+      padding: clamp(28px, 5vw, 48px);
       box-shadow: var(--shadow);
+      overflow: hidden;
     }
 
     .newsletter-grid {
       display: grid;
-      grid-template-columns: minmax(0, 0.85fr) minmax(320px, 1.15fr);
-      gap: 34px;
+      grid-template-columns: minmax(0, 0.9fr) minmax(360px, 1.1fr);
+      gap: 36px;
       align-items: center;
     }
 
@@ -344,15 +345,20 @@
     }
 
     .beehiiv-wrap {
+      width: 100%;
+      max-width: 520px;
+      justify-self: end;
       background: var(--cream-2);
-      border-radius: 16px;
-      padding: 10px;
-      min-height: 72px;
+      border-radius: 18px;
+      padding: 12px;
+      overflow: hidden;
     }
 
     .beehiiv-embed {
+      display: block;
       width: 100%;
-      min-height: 62px;
+      height: 240px;
+      min-height: 240px;
       border: 0;
       background: transparent;
     }
@@ -450,6 +456,20 @@
       .newsletter {
         border-radius: 18px;
       }
+
+      .newsletter-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .beehiiv-wrap {
+        max-width: none;
+        justify-self: stretch;
+      }
+
+      .beehiiv-embed {
+        height: 250px;
+        min-height: 250px;
+      }
     }
   </style>
 </head>
@@ -481,6 +501,7 @@
         </div>
 
         <div id="nl-state" class="state">Nieuws laden…</div>
+
         <div id="nl-content" hidden>
           <article id="nl-lead" class="lead"></article>
           <div id="nl-grid" class="grid"></div>
@@ -495,7 +516,10 @@
             <p class="section-kicker">Internationaal</p>
             <h2 class="section-title">En dit gebeurt elders.</h2>
           </div>
-          <p class="section-intro">Omdat goed nieuws zich niet aan landsgrenzen houdt.</p>
+
+          <p class="section-intro">
+            Omdat goed nieuws zich niet aan landsgrenzen houdt.
+          </p>
         </div>
 
         <div id="int-state" class="state">Nieuws laden…</div>
@@ -507,13 +531,24 @@
       <section class="newsletter" id="nieuwsbrief">
         <div class="newsletter-grid">
           <div>
-            <p class="section-kicker" style="color:#ff9a68;">Nieuwsbrief</p>
+            <p class="section-kicker" style="color:#ff9a68;">
+              Nieuwsbrief
+            </p>
+
             <h2>Positief nieuws in je inbox?</h2>
-            <p>Ontvang elke maandag, woensdag en vrijdag een verse editie. Kort, gratis en zonder doomscrollen.</p>
+
+            <p>
+              Ontvang elke maandag, woensdag en vrijdag een verse editie.
+              Kort, gratis en zonder doomscrollen.
+            </p>
           </div>
 
           <div class="beehiiv-wrap">
-            <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
+            <script
+              async
+              src="https://subscribe-forms.beehiiv.com/embed.js">
+            </script>
+
             <iframe
               src="https://subscribe-forms.beehiiv.com/109e976f-df27-4ddf-a906-c2579313c439"
               class="beehiiv-embed"
@@ -529,7 +564,9 @@
   </main>
 
   <footer class="site-footer">
-    <div class="shell">Positief nieuws. Dit gebeurt ook.</div>
+    <div class="shell">
+      Positief nieuws. Dit gebeurt ook.
+    </div>
   </footer>
 
   <script>
@@ -538,10 +575,12 @@
     function firstValue(object, keys, fallback = "") {
       for (const key of keys) {
         const value = object?.[key];
+
         if (value !== undefined && value !== null && value !== "") {
           return value;
         }
       }
+
       return fallback;
     }
 
@@ -559,13 +598,18 @@
 
     function sectionFromObject(data, keys) {
       for (const key of keys) {
-        if (Array.isArray(data?.[key])) return data[key];
+        if (Array.isArray(data?.[key])) {
+          return data[key];
+        }
       }
+
       return null;
     }
 
     function sectionFromFlatArray(data, type) {
-      if (!Array.isArray(data)) return null;
+      if (!Array.isArray(data)) {
+        return null;
+      }
 
       const values = type === "nl"
         ? ["nl", "nederland", "netherlands", "dutch"]
@@ -573,7 +617,11 @@
 
       const filtered = data.filter(item => {
         const section = String(
-          firstValue(item, ["section", "blok", "type", "region", "regio"], "")
+          firstValue(
+            item,
+            ["section", "blok", "type", "region", "regio"],
+            ""
+          )
         ).toLowerCase();
 
         return values.includes(section);
@@ -587,7 +635,11 @@
         ? ["nl", "NL", "nederland", "netherlands", "dutch"]
         : ["int", "INT", "internationaal", "international", "world", "wereld"];
 
-      return sectionFromObject(data, keys) || sectionFromFlatArray(data, type) || [];
+      return (
+        sectionFromObject(data, keys) ||
+        sectionFromFlatArray(data, type) ||
+        []
+      );
     }
 
     function safeText(value) {
@@ -597,23 +649,43 @@
     }
 
     function safeUrl(value) {
-      if (!value || value === "#") return "#";
+      if (!value || value === "#") {
+        return "#";
+      }
+
       try {
         const url = new URL(value, window.location.href);
-        if (["http:", "https:"].includes(url.protocol)) return url.href;
+
+        if (["http:", "https:"].includes(url.protocol)) {
+          return url.href;
+        }
       } catch (_) {}
+
       return "#";
     }
 
     function metaHtml(article) {
       const parts = [];
-      if (article.category) parts.push(`<span>${safeText(article.category)}</span>`);
-      if (article.source) parts.push(`<span class="dot">${safeText(article.source)}</span>`);
-      return parts.length ? `<div class="meta">${parts.join("")}</div>` : "";
+
+      if (article.category) {
+        parts.push(`<span>${safeText(article.category)}</span>`);
+      }
+
+      if (article.source) {
+        parts.push(
+          `<span class="dot">${safeText(article.source)}</span>`
+        );
+      }
+
+      return parts.length
+        ? `<div class="meta">${parts.join("")}</div>`
+        : "";
     }
 
     function imageHtml(article, className) {
-      if (!article.image) return "";
+      if (!article.image) {
+        return "";
+      }
 
       return `
         <div class="${className}">
@@ -628,8 +700,20 @@
 
     function articleLink(url, label = "Lees het verhaal") {
       const href = safeUrl(url);
-      if (href === "#") return "";
-      return `<a class="read-link" href="${href}" target="_blank" rel="noopener noreferrer">${safeText(label)} →</a>`;
+
+      if (href === "#") {
+        return "";
+      }
+
+      return `
+        <a
+          class="read-link"
+          href="${href}"
+          target="_blank"
+          rel="noopener noreferrer">
+          ${safeText(label)} →
+        </a>
+      `;
     }
 
     function renderLead(rawArticle) {
@@ -638,16 +722,27 @@
       const hasImage = Boolean(article.image);
 
       lead.classList.toggle("no-image", !hasImage);
+
       lead.innerHTML = `
         ${imageHtml(article, "lead-media")}
+
         <div class="lead-copy">
           ${metaHtml(article)}
+
           <h2 class="lead-title">
-            <a href="${safeUrl(article.url)}" ${article.url && article.url !== "#" ? 'target="_blank" rel="noopener noreferrer"' : ""}>
+            <a
+              href="${safeUrl(article.url)}"
+              ${article.url && article.url !== "#"
+                ? 'target="_blank" rel="noopener noreferrer"'
+                : ""}>
               ${safeText(article.title)}
             </a>
           </h2>
-          ${article.teaser ? `<p class="teaser">${safeText(article.teaser)}</p>` : ""}
+
+          ${article.teaser
+            ? `<p class="teaser">${safeText(article.teaser)}</p>`
+            : ""}
+
           ${articleLink(article.url)}
         </div>
       `;
@@ -656,18 +751,29 @@
     function renderCard(rawArticle) {
       const article = normalizeArticle(rawArticle);
       const card = document.createElement("article");
+
       card.className = `card${article.image ? "" : " no-image"}`;
 
       card.innerHTML = `
         ${imageHtml(article, "card-media")}
+
         <div class="card-copy">
           ${metaHtml(article)}
+
           <h3 class="card-title">
-            <a href="${safeUrl(article.url)}" ${article.url && article.url !== "#" ? 'target="_blank" rel="noopener noreferrer"' : ""}>
+            <a
+              href="${safeUrl(article.url)}"
+              ${article.url && article.url !== "#"
+                ? 'target="_blank" rel="noopener noreferrer"'
+                : ""}>
               ${safeText(article.title)}
             </a>
           </h3>
-          ${article.teaser ? `<p class="teaser">${safeText(article.teaser)}</p>` : ""}
+
+          ${article.teaser
+            ? `<p class="teaser">${safeText(article.teaser)}</p>`
+            : ""}
+
           ${articleLink(article.url)}
         </div>
       `;
@@ -676,7 +782,9 @@
     }
 
     function renderSection(data, type) {
-      const items = getSection(data, type).map(normalizeArticle).filter(item => item.title);
+      const items = getSection(data, type)
+        .map(normalizeArticle)
+        .filter(item => item.title);
 
       if (type === "nl") {
         const state = $("#nl-state");
@@ -684,7 +792,8 @@
         const grid = $("#nl-grid");
 
         if (!items.length) {
-          state.textContent = "Geen Nederlandse verhalen gevonden in nieuws.json.";
+          state.textContent =
+            "Geen Nederlandse verhalen gevonden in nieuws.json.";
           return;
         }
 
@@ -693,7 +802,12 @@
         grid.innerHTML = "";
 
         renderLead(items[0]);
-        items.slice(1, 7).forEach(item => grid.appendChild(renderCard(item)));
+
+        items
+          .slice(1, 7)
+          .forEach(item => {
+            grid.appendChild(renderCard(item));
+          });
       }
 
       if (type === "int") {
@@ -701,7 +815,8 @@
         const grid = $("#int-grid");
 
         if (!items.length) {
-          state.textContent = "Geen internationale verhalen gevonden in nieuws.json.";
+          state.textContent =
+            "Geen internationale verhalen gevonden in nieuws.json.";
           return;
         }
 
@@ -709,25 +824,38 @@
         grid.hidden = false;
         grid.innerHTML = "";
 
-        items.slice(0, 7).forEach(item => grid.appendChild(renderCard(item)));
+        items
+          .slice(0, 7)
+          .forEach(item => {
+            grid.appendChild(renderCard(item));
+          });
       }
     }
 
     async function loadNews() {
       try {
-        const response = await fetch("./nieuws.json", { cache: "no-store" });
+        const response = await fetch("./nieuws.json", {
+          cache: "no-store"
+        });
 
         if (!response.ok) {
-          throw new Error(`nieuws.json gaf status ${response.status}`);
+          throw new Error(
+            `nieuws.json gaf status ${response.status}`
+          );
         }
 
         const data = await response.json();
+
         renderSection(data, "nl");
         renderSection(data, "int");
       } catch (error) {
         console.error(error);
-        $("#nl-state").textContent = "Nieuws kon niet worden geladen.";
-        $("#int-state").textContent = "Nieuws kon niet worden geladen.";
+
+        $("#nl-state").textContent =
+          "Nieuws kon niet worden geladen.";
+
+        $("#int-state").textContent =
+          "Nieuws kon niet worden geladen.";
       }
     }
 
