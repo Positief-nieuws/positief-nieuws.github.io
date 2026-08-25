@@ -13,6 +13,9 @@ NEWS_FILE = Path("nieuws.json")
 BUTTONDOWN_URL = "https://api.buttondown.com/v1/emails"
 SITE_URL = "https://tomdehaas-gif.github.io/positief-nieuws/"
 
+WHATSAPP_SHARE_URL = "https://wa.me/?text=Positief%20nieuws.%20Dit%20gebeurt%20ook.%20Een%20selectie%20van%20nieuws%20waar%20je%20ook%20wat%20aan%20hebt.%0A%0Ahttps%3A%2F%2Ftomdehaas-gif.github.io%2Fpositief-nieuws%2F"
+EMAIL_SHARE_URL = "mailto:?subject=Positief%20nieuws.%20Dit%20gebeurt%20ook.&body=Positief%20nieuws.%20Dit%20gebeurt%20ook.%20Een%20selectie%20van%20nieuws%20waar%20je%20ook%20wat%20aan%20hebt.%0A%0Ahttps%3A%2F%2Ftomdehaas-gif.github.io%2Fpositief-nieuws%2F"
+
 
 def load_news():
     if not NEWS_FILE.exists():
@@ -88,9 +91,95 @@ def article_html(article):
     """
 
 
+def build_share_block():
+    return f"""
+  <div style="margin-top:36px;padding:26px;border-radius:16px;background:#17382b;text-align:center;">
+
+    <p style="margin:0 0 8px 0;font:700 24px Georgia,serif;color:#ffffff;">
+      Ken je iemand die dit ook kan gebruiken?
+    </p>
+
+    <p style="margin:0 0 20px 0;font:15px Arial,sans-serif;line-height:1.5;color:#dfe8e2;">
+      Stuur Positief nieuws gerust door.
+    </p>
+
+    <table
+      role="presentation"
+      cellspacing="0"
+      cellpadding="0"
+      border="0"
+      align="center"
+      style="margin:0 auto 12px auto;"
+    >
+      <tr>
+        <td
+          bgcolor="#ed6a38"
+          style="border-radius:999px;text-align:center;"
+        >
+          <a
+            href="{WHATSAPP_SHARE_URL}"
+            style="display:inline-block;padding:12px 22px;text-decoration:none !important;"
+          >
+            <font
+              face="Arial, Helvetica, sans-serif"
+              color="#ffffff"
+              size="2"
+              style="font-weight:700;color:#ffffff !important;"
+            >
+              Deel via WhatsApp
+            </font>
+          </a>
+        </td>
+      </tr>
+    </table>
+
+    <table
+      role="presentation"
+      cellspacing="0"
+      cellpadding="0"
+      border="0"
+      align="center"
+      style="margin:0 auto;"
+    >
+      <tr>
+        <td
+          bgcolor="#ed6a38"
+          style="border-radius:999px;text-align:center;"
+        >
+          <a
+            href="{EMAIL_SHARE_URL}"
+            style="display:inline-block;padding:12px 22px;text-decoration:none !important;"
+          >
+            <font
+              face="Arial, Helvetica, sans-serif"
+              color="#ffffff"
+              size="2"
+              style="font-weight:700;color:#ffffff !important;"
+            >
+              Deel via e-mail
+            </font>
+          </a>
+        </td>
+      </tr>
+    </table>
+
+    <p style="margin:20px 0 0 0;font:13px Arial,sans-serif;color:#dfe8e2;">
+      <a
+        href="{SITE_URL}"
+        style="color:#ffffff;text-decoration:underline;"
+      >
+        Lees deze editie ook online
+      </a>
+    </p>
+
+  </div>
+"""
+
+
 def build_body(nl, international):
     nl_html = "\n".join(article_html(article) for article in nl)
     int_html = "\n".join(article_html(article) for article in international)
+    share_block = build_share_block()
 
     return f"""<!-- buttondown-editor-mode: fancy -->
 <div style="max-width:680px;margin:0 auto;background:#fbf7ea;padding:28px;font-family:Georgia,serif;color:#1e2923;">
@@ -135,34 +224,7 @@ def build_body(nl, international):
 
   {int_html}
 
-  <div style="margin-top:36px;padding:24px;border-radius:16px;background:#17382b;text-align:center;">
-    <p style="margin:0 0 14px 0;font:700 24px Georgia,serif;color:#ffffff;">
-      Meer Positief nieuws
-    </p>
-
-    <table
-      role="presentation"
-      cellspacing="0"
-      cellpadding="0"
-      border="0"
-      align="center"
-      style="margin:0 auto;"
-    >
-      <tr>
-        <td
-          bgcolor="#ed6a38"
-          style="border-radius:999px;text-align:center;"
-        >
-          <a
-            href="{SITE_URL}"
-            style="display:inline-block;padding:12px 20px;font:700 14px Arial,sans-serif;color:#ffffff;text-decoration:none;"
-          >
-            Bekijk de editie op de site
-          </a>
-        </td>
-      </tr>
-    </table>
-  </div>
+  {share_block}
 
   <p style="margin:30px 0 0 0;text-align:center;font:12px Arial,sans-serif;color:#667068;">
     Positief nieuws. Dit gebeurt ook.
