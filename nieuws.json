@@ -1,110 +1,110 @@
 {
   "meta": {
-    "edition_date": "2026-08-24",
-    "brand": "Positief nieuws",
-    "tagline": "Dit gebeurt ook.",
-    "publication_frequency": "maandag, woensdag en vrijdag"
+    "edition_date": "2026-08-26",
+    "generated_from": "kandidaten.json",
+    "title": "Positief nieuws",
+    "tagline": "Dit gebeurt ook."
   },
   "nl": [
     {
-      "title": "Rixt van der Horst pakt opnieuw goud op WK paradressuur",
-      "teaser": "De Nederlandse amazone Rixt van der Horst heeft opnieuw goud gewonnen op het WK paradressuur. Een sterk internationaal sportresultaat om de editie mee te openen.",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOWjEyUlJtdkdaWndkemRvWkk4b2R6RDc3OVN1T1VMdklSWEVzY2JtR1dLcGVpSURxNzFxSDhJYVJkaEJhcDB2TW00cUpqamtfQXFSZzR6ZVJBRno2SWF4SVVnODdrTnI0eVpjZXNpRmFRWVJmRHZlQ0ItQXktXzR6V193UV8tR2JxVk9VazZ5TFpvcHRiTXA4b2FJMk9JZGYtUmh0T2ZLbVJsZw?oc=5",
-      "source": "Omrop Fryslân",
-      "category": "Sport"
+      "title": "BurgerReserve helpt buurten zich voor te bereiden op noodsituaties",
+      "teaser": "Een Brabants initiatief helpt buurten om zich samen beter voor te bereiden op noodsituaties.",
+      "source": "Omroep Brabant",
+      "category": "Mens & samenleving",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPNHU4elplOEdXcm1vSklVanBrTkhPYWNVRVlmV1hQanBnSXlmN05EcGlDemk0SjdnSDVSa3pBU3UybzFXTXFwU3ktVlZRS1Q4X18xcHZFN0V3Ym5qUl9hb1JMdWZFTDNSaUhCRDZNT044alBlTDRVTW9wWEthN1JRU3RuMUxTOGNWSUR3NC16VTRBanc?oc=5"
     },
     {
-      "title": "Nederlandse stichting bouwt ondergronds ziekenhuis in Oekraïne",
-      "teaser": "Protect Ukraine gaat samen met een Noorse organisatie een ondergronds ziekenhuis bouwen waar dichter bij het front levensreddende operaties kunnen plaatsvinden.",
-      "url": "https://nos.nl/l/2628079",
+      "title": "Wat Nederland kan leren van duurzaam Denemarken",
+      "teaser": "NEMO Kennislink kijkt naar de Deense aanpak en welke lessen daarvan bruikbaar kunnen zijn voor Nederland.",
+      "source": "NEMO Kennislink",
+      "category": "Natuur & klimaat",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOOWh3Q1A5dGJqWGg1bFhYSkFFUHNrRjAtUzhPa0FDc1ZSZmZNNzNQZDRwMDlwcC1PdHhCMkE5dktEaEFINjBTMmRZVnZuUjRMWU5PeHNIQ2dsTUVKQUpMODNZWUhyazlxMkpmc1VXM0ZQVmhObmllQXlVVGMxVy1hNi1CZ0FLSkZRTG5oczBUSmVFWUNW?oc=5"
+    },
+    {
+      "title": "Chinese Zhuque-3-raket landt succesvol terug op aarde",
+      "teaser": "China heeft met de Zhuque-3 voor het eerst een eerste rakettrap succesvol laten landen; ook de Chang’e 7-maanmissie staat klaar.",
+      "source": "Scientias",
+      "category": "Wetenschap",
+      "url": "https://scientias.nl/zhuque-3-chang-e-7/"
+    },
+    {
+      "title": "Malen begint seizoen bij AS Roma met hattrick",
+      "teaser": "Donyell Malen scoorde drie keer voor AS Roma; ook Tijjani Reijnders en Steven Bergwijn waren trefzeker in Saudi-Arabië.",
       "source": "NOS",
-      "category": "Gezondheid"
+      "category": "Sport",
+      "url": "https://nos.nl/l/2628199"
     },
     {
-      "title": "Tiels Daalderop-kunstwerk gered van de sloop en klaar voor restauratie",
-      "teaser": "Een kunstwerk uit Tiel ontsnapte aan de slopershamer. De volgende stap is restauratie, zodat het behouden blijft voor de toekomst.",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPa29lb0VHM25saTlHNUpVRE5wUHo3V1NGQWc1Z0RaTHktLVl1Zmk2MzdYd2FnaHp2bEpCQ3NyMTg3ZVV0elg5Mkx2clZISmRDR1ZzRThOSDdkdExkdFN6N01YeDMzWmxsMDVtVEZpOVRfTGlZaU5BVVRZTWZibjZwQzVkOEhSUHI5RU1URXhqNVdvYmpIRkV0Tzl4dnFXOUk4NFh0TnB4OEtydFJnNWxkZg?oc=5",
+      "title": "Bijzonder Veluws ‘geheim’ wordt na ruim honderd jaar hersteld",
+      "teaser": "Een bijzonder stukje Veluwe krijgt na meer dan een eeuw herstel, meldt Omroep Gelderland.",
       "source": "Omroep Gelderland",
-      "category": "Cultuur & media"
+      "category": "Geschiedenis & mens",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPay1vRUZSb3dtV3VRLXVQNmdnNUw4WTg3aWs1aExNVURhNEwxX2VkR3VsVG00eTl3R0VQSm5LZEkwZ09oUlFWb0k1ckZkTlhsb09PQkhGLXRUUEJTOUJKelRZc0sxM1NwWXdUNmdKMS1vQVdNeEdfblVOaGcwRllsSEpkNEpqaHJVTDc5MUg1V2tseEQzbnVfbzFlbUM2eTFSS0E?oc=5"
     },
     {
-      "title": "Scootmobieler uit het water gered in Oosthem",
-      "teaser": "In het Friese Oosthem is een scootmobieler uit het water gered. Een klein lokaal nieuwsbericht met een heel duidelijke goede afloop.",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNckxOTFcwM0o4R0VDZ3lFcEdwNmRYN2RrY1Y0bndFUElIZEpEZXZqckZHd2VmZDJtYmJuVVpNUUZtTnVwQi1lSWFqc3hUNHJmVzlleVBseEhGckRFd09IRXpfMC1Kd2NjekVuck9aWm1PdFZQN0JlYmNzT0VYREZId1Y4N2ZoR21kMG5oZnZHNkIwZnk0WEE?oc=5",
-      "source": "Omrop Fryslân",
-      "category": "Mens & samenleving"
+      "title": "Nederlandse roeiers beginnen WK op eigen water met hoge verwachtingen",
+      "teaser": "Op de Bosbaan begint de Nederlandse roeiploeg met vijftien boten aan een WK in eigen land.",
+      "source": "NOS",
+      "category": "Sport",
+      "url": "https://nos.nl/l/2628128"
     },
     {
-      "title": "Genetische visatlas moet natuurbeheer slimmer maken",
-      "teaser": "Wageningen University & Research werkt aan een genetische visatlas die kennis over vispopulaties direct bruikbaarder moet maken voor beheer en beleid.",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPaHBvbUV3Vm8xZVVJdmpMZE9vNDh2SG94Q19pUnlROFpyYnlpWk1SMUoweFpYcUVyeVh5bm0wTjIxRk5oelVVY1NDelNFNW1yb0I4S1Zfa0l6REtFN1lOWUZqR05LajdzdG5MeTJvLXBrdzNsRGIwWnVRWTQwY3BzWUZKN2l4VXEyODlfRWFJcnNyWDVUR0x4ZktyOE80XzQ?oc=5",
-      "source": "Wageningen University & Research",
-      "category": "Wetenschap"
-    },
-    {
-      "title": "Masterstudent Sara wint Delft’s Got Talent met Mandarijnpop en musical",
-      "teaser": "TU Delft-masterstudent Sara won Delft’s Got Talent met een optreden dat van Mandarijnpop naar musical ging. Een podiumplek voor talent van eigen campus.",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNX3Y3S2pPYlFYTTc3YmRHNFNwcm91b3pmT2ZuZjR1eVI3UkV6WHNmQVRTbjhxSlJNY1l5Rm5hdG04UndxVGgtbDhjSEpLdldhX2ZHWUlFeDJIZ3hqUmVrT2xvQ0RqRERtNVY4TDdGSjBpdFdCMUtHYUE0cFpHMDg5dlZPQ25BUkN3VmUxd2tGOWtjekhTa0Ffd0tmaThFWXZaeExfT2x3?oc=5",
+      "title": "TU Delft verkent hoe Formule 1 sneller én duurzamer kan richting 2030",
+      "teaser": "TU Delft kijkt naar de combinatie van prestaties en duurzaamheid in de technologische race richting 2030.",
       "source": "TU Delft",
-      "category": "Onderwijs & ontwikkeling"
-    },
-    {
-      "title": "Broeders-Bol scherpt Nederlands record op 800 meter aan",
-      "teaser": "Femke Broeders-Bol heeft het Nederlands record op de 800 meter verbeterd. Daarmee duikt ze onder een record dat al meer dan drie decennia stond.",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNX0cyem56MkdiOEl3UW9jMl9ZUWMwZFI1eU1qOXpsQmQ4ZE9xMVhUWk5tWjJfRXN1dUxqTUxwVWVWNjNOT2Y1Mm9KSHIwaUpSVi01MDVZcmtIZnNPZGhCd3owSXo4UnNXZDdfT19IbWZKeXpmNjE2N3ZsaXFpYnJnZXQyS2Z4MWdKTXNrUHlIMHVsUHBfZHpyblFhdW41QkxIQ2hpMmt2Q3BieEpoQzR3a1B3?oc=5",
-      "source": "RTL Nieuws",
-      "category": "Sport"
+      "category": "Technologie & innovatie",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQYWxZbkxVSE1UdEVrZGNQWi13YW1IdVdObS00T2dKMm9JQklZSUY4LXNUQW9pM2l3ZTVoZzdUSkJZX2p0UkJHcEpmaVU5ajlDZmhKUVJsaTZ3UHpHNDBPX1pURGdVZ0g0b0lUaDlpYWxnVnJqWWVuSFRfQVJhbjZsbzVndHBuZExZR0NoaGJRVTNJMV9VV1lrYnozdw?oc=5"
     }
   ],
   "int": [
     {
-      "title": "Schonere lucht in Londen helpt longgroei van kinderen herstellen",
-      "teaser": "Onderzoekers volgden ruim 3.400 kinderen. Na de invoering van Londens lage-emissiezone verbeterde hun longgroei, tegelijk met een sterke daling van luchtvervuiling.",
-      "url": "https://e360.yale.edu/digest/ulez-children-lung-growth",
-      "source": "Yale Environment 360",
-      "category": "Gezondheid"
-    },
-    {
-      "title": "Nieuwe nationale parken in Nepal helpen tijgerpopulatie herstellen",
-      "teaser": "Nepal telt naar schatting 429 wilde tijgers, tegen 355 vier jaar geleden. Vooral de jongere nationale parken blijken belangrijke groeigebieden.",
-      "url": "https://news.mongabay.com/short-article/2026/08/nepals-newest-national-parks-drive-tiger-recovery-but-emerging-concerns-threaten-progress/",
+      "title": "Vissoort na vier decennia opnieuw ontdekt dankzij lokale kennis",
+      "teaser": "Lokale kennis hielp onderzoekers een spinach pipefish terug te vinden die al vier decennia niet meer was gezien.",
       "source": "Mongabay",
-      "category": "Dieren"
+      "category": "Dieren",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNeXVCc0oyNENsNFFjNGF5TDJTM2piS0FGY2dPbkpLdzZ2Z251ZkM1UDktX0lidTJkVV9VYndocFBNV2NfYjhQaHZ1a01QRDNITFBXZ1lWQWt6MENwbTVMVVlDWGNRbWdxQTNpdFVfOV84WEV1Q3BEVjEtT2g4WkhWSmxqQW1OenNzVXJ3RXV4T2hRV2JNa19ZOXlCRUlmdWQ4TERlcy1RWEx3SUVfMGVSckNNYUUyajJZblHSAboBQVVfeXFMTXl1QnNKMjRDbDRRYzRheUwyUzNqYktBRmNnT25KS3c2dmdudWZDNVA5LV9JYnUyZFVfVWJ3aHBQTVdjX2I4UGh2dWtNUEQzSExQV2dZVkFrejBDcG01TFVZQ1hjUW1ncUEzaXRVXzlfOFhFdUNwRFYxLU9oOFpIVkpsakFtTnpzc1Vyd0V1eE9oUVdiTWtfWTl5QkVJZnVkOExEZXMtUVhMd0lFXzBlUnJDTWFFMmoyWW5R?oc=5"
     },
     {
-      "title": "Implantaat biedt hoop bij moeilijk behandelbare angina",
-      "teaser": "Een implantaat tegen moeilijk behandelbare angina verminderde in een grote studie bij veel patiënten de pijn op de borst. Verdere studies en toelating zijn nog nodig.",
-      "url": "https://www.theguardian.com/society/2026/aug/24/an-amazing-relief-implant-offers-hope-for-those-with-refractory-angina",
-      "source": "The Guardian",
-      "category": "Gezondheid"
+      "title": "Mongolië zet volgende stap naar schonere verwarming in Ulaanbaatar",
+      "teaser": "Mongolië werkt aan het opschalen van schonere verwarmingsoplossingen voor de ger-wijken van de hoofdstad.",
+      "source": "UNDP",
+      "category": "Natuur & klimaat",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOYnJjdW1sa3N4NWhham5WbHRwNDNTdUVfMXI4MGNkSkVYLUtRSDFadWxvQ2FacGF0aW9MaVhldUV4WURnSWpnSjlpLXRyT3RJaF9yV2ZnY1dNVmZONms1bDU5RGFpM191cDdvSHRtTFFFOWxKYnBvajlLV2JBQ29oMFBqc3BVZmFhN1B4V0hvM2VueFFPR083ZF9fYkt4NVFoRFpNR0haLTdOQWdDTmkyTHNPc0YxNm10LVNURWQyWmtnZnctV2c?oc=5"
     },
     {
-      "title": "Oudste gekweekte hersencellen laten zien hoe veroudering verloopt",
-      "teaser": "Menselijke hersencellen die zeven jaar in het lab groeiden, bleken op een manier te verouderen die lijkt op hersencellen in het lichaam. Dat kan nieuw onderzoek naar veroudering helpen.",
-      "url": "https://phys.org/news/2026-08-oldest-human-brain-cells-grown.html",
-      "source": "Phys.org",
-      "category": "Wetenschap"
-    },
-    {
-      "title": "UNICEF ziet praktische kansen voor meer vrouwelijke schoolleiders",
-      "teaser": "In Guinee is 35 procent van de basisschoolleraren vrouw, maar slechts 7 procent van de schoolleiders. UNICEF beschrijft concrete routes om die kloof te verkleinen.",
-      "url": "https://www.unicef.org/innocenti/reports/women-learning-leadership-guinea",
+      "title": "Daus herstelt van ernstige ondervoeding met hulp van zijn gemeenschap",
+      "teaser": "UNICEF vertelt hoe Daus met steun uit zijn omgeving herstelde van ernstige ondervoeding.",
       "source": "UNICEF",
-      "category": "Onderwijs & ontwikkeling"
+      "category": "Gezondheid",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNZ3BGNnZRSWc5MGk3VHNNVVNjZUhDcWswa1QyNnBWSEpaVmo5am0xaHdFNWRsV3FBVnc3UFI4cGFjcVBHdnRxZXR6TTZISjl5UGhpeFY5c0hkMW5XY1VCeW9faVQtd3lJR2FNU1JxWEdYY3dybVRtckN1TGlYdG9BNzF1QVlOQ2JPeXdhTWxnZkFIODVsQTdRTUMyOA?oc=5"
     },
     {
-      "title": "Digitale innovatie moet viskweek gezonder en weerbaarder maken",
-      "teaser": "Digitale toepassingen kunnen viskweek beter monitoren en helpen om productie gezonder en weerbaarder te maken. FAO zet de mogelijkheden voor de sector op een rij.",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPOE9BUFg2VW1ZZHRPQ1g5d2dUUnN2WS03c3JyVi0taWFNVkd3UjJqd3JRd2NnR1BKb25CamZpazdCZnlpOURXWXNfby1DNTFkbUF0YndDeW9pVlp4TFNjVkdhQlNRWjlHMFF3SnNxWmQwN0pVTDI3YjY5T0VMNzF0ZnJzZUVKSktFTTRvaGVpOA?oc=5",
+      "title": "Economische groei in OESO-landen trekt licht aan",
+      "teaser": "De gezamenlijke economische groei van OESO-landen nam in het tweede kwartaal van 2026 iets toe.",
+      "source": "OECD",
+      "category": "Economie & geld",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOd2FJTm4yWFAzalV3a01wM0hFMWtkRHVaX2oxSV96elpvVlliN0M5TU80NFBJbkQ3NzVVc3FCMWpuS2hNNjZJc2p2MkRHOXJhVlJ0eVNxOEhUZjltS29rT3hfSGY3bmRMbE5VdUpKeFBHTkNlYlNNUXVoTEg3Tkd1NElaWkdQZC1Kd2NYSXQ5QTNLcnBzSHNoYkhrVlphWVdoOUdzbzFrdElMR00?oc=5"
+    },
+    {
+      "title": "Meteorietstof bewaart mogelijk het oudste spoor van magnetisme rond de jonge zon",
+      "teaser": "MIT-onderzoekers vonden in meteorietstof aanwijzingen voor een zeer vroeg magnetisch veld in het jonge zonnestelsel.",
+      "source": "MIT News",
+      "category": "Wetenschap",
+      "url": "https://news.mit.edu/2026/meteorite-dust-holds-records-magnetism-may-have-helped-form-sun-0824"
+    },
+    {
+      "title": "Duurzaam beheer helpt mangroves beschermen",
+      "teaser": "De FAO laat zien hoe duurzaam beheer kan bijdragen aan het behoud van mangrovegebieden.",
       "source": "FAO",
-      "category": "Technologie & innovatie"
+      "category": "Natuur & klimaat",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPQTU4eFZmWW5nWWdpOTlBb1JIQ1dyLUp6WDFZRS1NcnY5bVo1T3dveGZKb1hiUVpHWkZOb1R4MWE3UVBDZnJRZ2IwMWlhWDA5eHJyeWw0YVhRdmVDSTdKZE1vd3dySUtGRjNPNXFMXzZZTS0ySERUMFlXMndkUWR0ZmZQR2pnUjQ2dW52RFR1QQ?oc=5"
     },
     {
-      "title": "ESA rondt ruimtewandeling EVA-96 succesvol af",
-      "teaser": "ESA meldt dat ruimtewandeling EVA-96 succesvol is afgerond. De missie laat ook zien hoeveel teamwerk er achter een veilige ruimtewandeling schuilgaat.",
-      "url": "https://www.esa.int/ESA_Multimedia/Images/2026/08/EVA-96_Success",
-      "source": "ESA",
-      "category": "Wetenschap"
+      "title": "Nieuwe CDK-strategieën kunnen nieuwe route bieden tegen tumorgroei",
+      "teaser": "Onderzoekers brengen nieuwe strategieën rond CDK-enzymen in kaart die belangrijke genactiviteit in tumorcellen kunnen remmen.",
+      "source": "Medical Xpress",
+      "category": "Gezondheid",
+      "url": "https://medicalxpress.com/news/2026-08-cdk-strategies-tumor-growth-key.html"
     }
   ]
 }
