@@ -438,23 +438,67 @@
       font-size: 0.96rem;
     }
 
-    .beehiiv-wrap {
+    .buttondown-wrap {
       width: 100%;
       min-width: 0;
-      overflow: hidden;
       border-radius: 18px;
       background: var(--cream-2);
+      padding: 28px;
     }
 
-    .beehiiv-embed {
-      display: block;
-      width: 100% !important;
-      max-width: 100% !important;
-      height: 560px !important;
-      min-height: 560px;
-      margin: 0 !important;
-      border: 0 !important;
-      background: var(--cream-2);
+    .buttondown-form {
+      display: grid;
+      gap: 14px;
+    }
+
+    .buttondown-form label {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--green-dark);
+    }
+
+    .buttondown-form input[type="email"] {
+      width: 100%;
+      min-height: 48px;
+      padding: 0 14px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--white);
+      color: var(--ink);
+      font: inherit;
+    }
+
+    .buttondown-form input[type="email"]:focus {
+      outline: 2px solid rgba(237, 106, 56, 0.22);
+      border-color: var(--orange);
+    }
+
+    .buttondown-form input[type="submit"] {
+      min-height: 48px;
+      border: 0;
+      border-radius: 999px;
+      background: var(--orange);
+      color: var(--white);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.92rem;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .buttondown-form input[type="submit"]:hover {
+      background: var(--orange-dark);
+    }
+
+    .buttondown-note {
+      margin: 0;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.78rem;
+    }
+
+    .buttondown-note a {
+      color: inherit;
     }
 
     /* STATES */
@@ -483,7 +527,7 @@
         grid-template-columns: 1fr;
       }
 
-      .beehiiv-wrap {
+      .buttondown-wrap {
         max-width: 760px;
       }
     }
@@ -586,17 +630,10 @@
         gap: 24px;
       }
 
-      .beehiiv-wrap {
+      .buttondown-wrap {
         width: 100%;
         max-width: none;
-        overflow: hidden;
-      }
-
-      .beehiiv-embed {
-        width: 100% !important;
-        max-width: 100% !important;
-        height: 560px !important;
-        min-height: 560px;
+        padding: 20px;
       }
     }
   </style>
@@ -814,21 +851,43 @@
           </div>
 
 
-          <div class="beehiiv-wrap">
+          <div class="buttondown-wrap">
 
-            <script
-              async
-              src="https://subscribe-forms.beehiiv.com/embed.js"
-            ></script>
+            <form
+              action="https://buttondown.com/api/emails/embed-subscribe/positiefnieuws"
+              method="post"
+              class="buttondown-form"
+            >
+              <label for="bd-email">
+                E-mailadres
+              </label>
 
-            <iframe
-              src="https://subscribe-forms.beehiiv.com/109e976f-df27-4ddf-a906-c2579313c439"
-              class="beehiiv-embed"
-              data-test-id="beehiiv-embed"
-              frameborder="0"
-              scrolling="no"
-              title="Schrijf je in voor Positief nieuws"
-            ></iframe>
+              <input
+                type="email"
+                name="email"
+                id="bd-email"
+                placeholder="jij@voorbeeld.nl"
+                autocomplete="email"
+                required
+              >
+
+              <input
+                type="submit"
+                value="Stuur mij positief nieuws"
+              >
+
+              <p class="buttondown-note">
+                Na inschrijving ontvang je een bevestigingsmail.
+                Afmelden kan altijd.
+                <a
+                  href="https://buttondown.com/refer/positiefnieuws"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Powered by Buttondown.
+                </a>
+              </p>
+            </form>
 
           </div>
 
