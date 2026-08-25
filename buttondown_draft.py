@@ -25,7 +25,9 @@ def load_news():
     international = data.get("int", [])
 
     if not nl or not international:
-        raise ValueError("nieuws.json bevat geen bruikbare NL- en internationale selectie.")
+        raise ValueError(
+            "nieuws.json bevat geen bruikbare NL- en internationale selectie."
+        )
 
     return data, nl[:7], international[:7]
 
@@ -61,17 +63,24 @@ def article_html(article):
     return f"""
       <div style="margin:0 0 30px 0;padding:0 0 26px 0;border-bottom:1px solid #d7dfd8;">
         {image_html}
+
         <p style="margin:0 0 7px 0;font:700 12px Arial,sans-serif;letter-spacing:.05em;text-transform:uppercase;color:#24523f;">
           {meta}
         </p>
+
         <h2 style="margin:0 0 10px 0;font:700 25px Georgia,serif;line-height:1.12;color:#17382b;">
           {title}
         </h2>
+
         <p style="margin:0 0 12px 0;font:16px Georgia,serif;line-height:1.55;color:#445149;">
           {teaser}
         </p>
+
         <p style="margin:0;">
-          <a href="{url}" style="font:700 14px Arial,sans-serif;color:#d95727;text-decoration:none;">
+          <a
+            href="{url}"
+            style="font:700 14px Arial,sans-serif;color:#d95727;text-decoration:none;"
+          >
             Lees het verhaal →
           </a>
         </p>
@@ -85,9 +94,15 @@ def build_body(nl, international):
 
     return f"""<!-- buttondown-editor-mode: fancy -->
 <div style="max-width:680px;margin:0 auto;background:#fbf7ea;padding:28px;font-family:Georgia,serif;color:#1e2923;">
+
   <div style="margin-bottom:34px;">
-    <h1 style="margin:0;font:700 42px Georgia,serif;line-height:1;color:#17382b;">Positief nieuws</h1>
-    <p style="margin:8px 0 0 0;font:700 14px Arial,sans-serif;color:#ed6a38;">Dit gebeurt ook.</p>
+    <h1 style="margin:0;font:700 42px Georgia,serif;line-height:1;color:#17382b;">
+      Positief nieuws
+    </h1>
+
+    <p style="margin:8px 0 0 0;font:700 14px Arial,sans-serif;color:#ed6a38;">
+      Dit gebeurt ook.
+    </p>
   </div>
 
   <p style="margin:0 0 32px 0;font:16px Georgia,serif;line-height:1.55;color:#445149;">
@@ -108,9 +123,11 @@ def build_body(nl, international):
     <p style="margin:0 0 6px 0;font:700 12px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#ed6a38;">
       Internationaal
     </p>
+
     <h2 style="margin:0 0 8px 0;font:700 34px Georgia,serif;line-height:1;color:#17382b;">
       En dit gebeurt elders.
     </h2>
+
     <p style="margin:0;font:15px Georgia,serif;line-height:1.5;color:#667068;">
       Omdat goed nieuws zich niet aan landsgrenzen houdt.
     </p>
@@ -119,18 +136,38 @@ def build_body(nl, international):
   {int_html}
 
   <div style="margin-top:36px;padding:24px;border-radius:16px;background:#17382b;text-align:center;">
-    <p style="margin:0 0 14px 0;font:700 24px Georgia,serif;color:#ffffff;">Meer Positief nieuws</p>
-    <a
-      href="{SITE_URL}"
-      style="display:inline-block;padding:12px 20px;border-radius:999px;background:#ed6a38;color:#ffffff;font:700 14px Arial,sans-serif;text-decoration:none;"
+    <p style="margin:0 0 14px 0;font:700 24px Georgia,serif;color:#ffffff;">
+      Meer Positief nieuws
+    </p>
+
+    <table
+      role="presentation"
+      cellspacing="0"
+      cellpadding="0"
+      border="0"
+      align="center"
+      style="margin:0 auto;"
     >
-      Bekijk de editie op de site
-    </a>
+      <tr>
+        <td
+          bgcolor="#ed6a38"
+          style="border-radius:999px;text-align:center;"
+        >
+          <a
+            href="{SITE_URL}"
+            style="display:inline-block;padding:12px 20px;font:700 14px Arial,sans-serif;color:#ffffff;text-decoration:none;"
+          >
+            Bekijk de editie op de site
+          </a>
+        </td>
+      </tr>
+    </table>
   </div>
 
   <p style="margin:30px 0 0 0;text-align:center;font:12px Arial,sans-serif;color:#667068;">
     Positief nieuws. Dit gebeurt ook.
   </p>
+
 </div>
 """
 
@@ -176,11 +213,14 @@ def create_draft(api_key, subject, body):
             return json.loads(response.read().decode("utf-8"))
     except urllib.error.HTTPError as exc:
         error_body = exc.read().decode("utf-8", errors="replace")
-        raise RuntimeError(f"Buttondown API gaf HTTP {exc.code}: {error_body}") from exc
+        raise RuntimeError(
+            f"Buttondown API gaf HTTP {exc.code}: {error_body}"
+        ) from exc
 
 
 def main():
     api_key = os.environ.get("BUTTONDOWN_API_KEY")
+
     if not api_key:
         print("FOUT: BUTTONDOWN_API_KEY ontbreekt.", file=sys.stderr)
         sys.exit(1)
