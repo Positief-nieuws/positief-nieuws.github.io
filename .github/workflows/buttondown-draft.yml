@@ -1,6 +1,11 @@
 name: Maak Buttondown concept
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - "nieuws.json"
   workflow_dispatch:
 
 jobs:
