@@ -1,0 +1,22 @@
+name: Maak Buttondown concept
+
+on:
+  workflow_dispatch:
+
+jobs:
+  create-draft:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Maak conceptnieuwsbrief
+        env:
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+        run: python buttondown_draft.py
