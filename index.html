@@ -15,6 +15,13 @@
   <meta property="og:url" content="https://positief-nieuws.github.io/">
   <link rel="canonical" href="https://positief-nieuws.github.io/">
 
+  <meta name="theme-color" content="#17382b">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Positief nieuws">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="apple-touch-icon" href="/icon-192.png">
+
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Positief nieuws. Dit gebeurt ook.">
   <meta name="twitter:description" content="12 positieve verhalen en 3 belangrijke nieuwsitems om bij te blijven.">
@@ -1653,6 +1660,55 @@
     }
 
 
+    let analyticsLoaded = false;
+
+
+    function loadAnalytics(editionDate) {
+
+      window.sa_metadata = {
+        edition: editionDate || "onbekend"
+      };
+
+
+      if (analyticsLoaded) {
+        return;
+      }
+
+      analyticsLoaded = true;
+
+
+      const analyticsScript =
+        document.createElement("script");
+
+      analyticsScript.async = true;
+      analyticsScript.src =
+        "https://scripts.simpleanalyticscdn.com/latest.js";
+
+
+      analyticsScript.addEventListener(
+        "load",
+        () => {
+
+          const autoEventsScript =
+            document.createElement("script");
+
+          autoEventsScript.async = true;
+          autoEventsScript.src =
+            "https://scripts.simpleanalyticscdn.com/auto-events.js";
+
+          document.body.appendChild(
+            autoEventsScript
+          );
+        }
+      );
+
+
+      document.body.appendChild(
+        analyticsScript
+      );
+    }
+
+
     async function loadNews() {
 
       try {
@@ -1713,6 +1769,11 @@
           "headlines"
         );
 
+
+        loadAnalytics(
+          rawEditionDate
+        );
+
       }
 
       catch (error) {
@@ -1728,6 +1789,11 @@
 
         $("#int-state").textContent =
           "Nieuws kon niet worden geladen.";
+
+
+        loadAnalytics(
+          "onbekend"
+        );
 
       }
 
@@ -1781,10 +1847,31 @@
     setupShareButtons();
     loadNews();
 
+
+    if ("serviceWorker" in navigator) {
+
+      window.addEventListener(
+        "load",
+        () => {
+
+          navigator.serviceWorker.register(
+            "/service-worker.js"
+          ).catch(
+            error => {
+              console.error(
+                "Service worker kon niet worden geregistreerd:",
+                error
+              );
+            }
+          );
+
+        }
+      );
+
+    }
+
   </script>
 
 
-<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-<script async src="https://scripts.simpleanalyticscdn.com/auto-events.js"></script>
 </body>
 </html>
