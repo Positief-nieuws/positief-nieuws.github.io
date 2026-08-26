@@ -246,6 +246,31 @@ def edition_date_text(data):
         return str(raw_date)
 
 
+def intro_label(article):
+    return str(
+        article.get("intro_label")
+        or article.get("introLabel")
+        or article.get("title")
+        or ""
+    ).strip()
+
+
+def today_intro_text(nl):
+    items = [intro_label(article) for article in nl[:3]]
+    items = [item for item in items if item]
+
+    if not items:
+        return "Vandaag lees je onder meer over drie positieve ontwikkelingen uit Nederland."
+
+    if len(items) == 1:
+        return f"Vandaag lees je onder meer over {items[0]}."
+
+    if len(items) == 2:
+        return f"Vandaag lees je onder meer over {items[0]} en {items[1]}."
+
+    return f"Vandaag lees je onder meer over {items[0]}, {items[1]} en {items[2]}."
+
+
 def build_body(data, nl, international, headlines):
     nl_html = "\n".join(article_html(article) for article in nl)
     int_html = "\n".join(article_html(article) for article in international)
@@ -269,8 +294,16 @@ def build_body(data, nl, international, headlines):
     </p>
   </div>
 
+  <p style="margin:0 0 10px 0;font:16px Georgia,serif;line-height:1.6;color:#445149;">
+    Positief nieuws laat zien wat er óók gebeurt: ontwikkelingen die vooruitgaan, zonder weg te kijken van het grote nieuws.
+  </p>
+
+  <p style="margin:0 0 10px 0;font:700 16px Georgia,serif;line-height:1.6;color:#17382b;">
+    {esc(today_intro_text(nl))}
+  </p>
+
   <p style="margin:0 0 34px 0;font:16px Georgia,serif;line-height:1.6;color:#445149;">
-    Veel van het nieuws dat dagelijks langskomt gaat over wat misgaat. Logisch, maar daardoor verdwijnen de dingen die wél vooruitgaan makkelijk uit beeld. Daarom verzamelen we hier het nieuws dat ook verteld mag worden: <strong>6 positieve verhalen uit Nederland en 6 uit de rest van de wereld.</strong> En omdat je ook gewoon wilt weten wat er speelt, sluiten we af met <strong>3 nieuwsverhalen die de Nederlandse nieuwskoppen op dit moment domineren.</strong>
+    En we sluiten af met drie onderwerpen die vandaag de Nederlandse nieuwskoppen domineren.
   </p>
 
   <p style="margin:0 0 6px 0;font:700 12px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#ed6a38;">
