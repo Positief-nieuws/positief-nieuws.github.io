@@ -84,6 +84,119 @@
       margin: 0 auto;
     }
 
+    /* APP NAVIGATION */
+
+    .app-nav {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      border-bottom: 1px solid var(--line);
+      background: rgba(251, 247, 234, 0.96);
+      backdrop-filter: blur(12px);
+    }
+
+    .app-nav-inner {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 52px;
+    }
+
+    .app-nav a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 36px;
+      padding: 0 14px;
+      border-radius: 999px;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.86rem;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .app-nav a:hover,
+    .app-nav a.is-active {
+      background: var(--green-soft);
+      color: var(--green-dark);
+    }
+
+    .app-view[hidden] {
+      display: none !important;
+    }
+
+    .archive-page,
+    .about-page {
+      padding: 52px 0 72px;
+    }
+
+    .archive-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .archive-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 20px 22px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--cream-2);
+      text-decoration: none;
+      box-shadow: var(--shadow);
+    }
+
+    .archive-item:hover {
+      transform: translateY(-1px);
+    }
+
+    .archive-date {
+      color: var(--green-dark);
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    .archive-open {
+      flex: 0 0 auto;
+      color: var(--orange-dark);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.82rem;
+      font-weight: 800;
+    }
+
+    .archive-note,
+    .about-copy {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 1.04rem;
+    }
+
+    .archive-banner {
+      display: none;
+      margin: 18px auto 0;
+      padding: 12px 16px;
+      border: 1px solid rgba(237, 106, 56, 0.28);
+      border-radius: 12px;
+      background: rgba(237, 106, 56, 0.08);
+      color: var(--green-dark);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.86rem;
+      font-weight: 700;
+    }
+
+    .archive-banner.is-visible {
+      display: block;
+    }
+
+    .archive-banner a {
+      color: var(--orange-dark);
+      font-weight: 800;
+    }
+
     /* HEADER */
 
     .site-header {
@@ -595,6 +708,38 @@
         max-width: none;
         padding: 20px;
       }
+
+      body {
+        padding-bottom: 70px;
+      }
+
+      .app-nav {
+        position: fixed;
+        top: auto;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-top: 1px solid var(--line);
+        border-bottom: 0;
+        background: rgba(251, 247, 234, 0.98);
+      }
+
+      .app-nav-inner {
+        justify-content: space-around;
+        min-height: 64px;
+      }
+
+      .app-nav a {
+        flex: 1;
+        min-height: 44px;
+        padding: 0 8px;
+      }
+
+      .archive-item {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+      }
     }
   </style>
 </head>
@@ -627,6 +772,26 @@
 
     </div>
   </header>
+
+
+  <nav class="app-nav" aria-label="Hoofdnavigatie">
+    <div class="shell app-nav-inner">
+      <a id="nav-today" href="./">Vandaag</a>
+      <a id="nav-archive" href="#archief">Archief</a>
+      <a id="nav-about" href="#over">Over</a>
+    </div>
+  </nav>
+
+
+  <div id="today-view" class="app-view">
+
+  <div
+    id="archive-banner"
+    class="shell archive-banner"
+  >
+    Je leest een archiefeditie.
+    <a href="./">Ga naar de nieuwste editie →</a>
+  </div>
 
 
   <div class="shell edition-bar">
@@ -922,6 +1087,71 @@
     </div>
 
   </main>
+
+  </div>
+
+
+  <section
+    id="archive-view"
+    class="app-view archive-page"
+    hidden
+  >
+    <div class="shell">
+      <p class="section-kicker">Alle edities</p>
+      <h1 class="section-title">Archief</h1>
+      <p class="archive-note">
+        Lees eerdere edities van Positief nieuws terug. Elke editie bevat
+        6 positieve verhalen uit Nederland, 6 uit de wereld en 3 onderwerpen
+        om bij te blijven.
+      </p>
+
+      <div id="archive-state" class="state">
+        Archief laden…
+      </div>
+
+      <div
+        id="archive-list"
+        class="archive-list"
+        hidden
+      ></div>
+    </div>
+  </section>
+
+
+  <section
+    id="about-view"
+    class="app-view about-page"
+    hidden
+  >
+    <div class="shell">
+      <p class="section-kicker">Dit gebeurt ook.</p>
+      <h1 class="section-title">Over Positief nieuws</h1>
+
+      <div class="about-copy">
+        <p>
+          Veel nieuws gaat vanzelfsprekend over wat misgaat. Positief nieuws
+          brengt daarnaast ontwikkelingen in beeld die vooruitgaan, zonder
+          het grote nieuws te negeren.
+        </p>
+
+        <p>
+          Elke editie bestaat uit 6 positieve verhalen uit Nederland,
+          6 positieve verhalen uit de rest van de wereld en 3 onderwerpen
+          die de Nederlandse nieuwskoppen domineren.
+        </p>
+
+        <p>
+          Nieuwe edities verschijnen op maandag, woensdag en vrijdag.
+        </p>
+
+        <p>
+          <a href="#nieuwsbrief" id="about-newsletter-link">
+            Ontvang Positief nieuws in je inbox →
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
 
 
   <footer class="site-footer">
@@ -1556,7 +1786,7 @@
     }
 
 
-    function renderTodayIntro(data) {
+    function renderTodayIntro(data, isArchive = false) {
 
       const items =
         getSection(data, "nl")
@@ -1580,21 +1810,21 @@
       if (items.length === 1) {
 
         sentence =
-          `Vandaag lees je onder meer over ${items[0]}.`;
+          `${isArchive ? "In deze editie" : "Vandaag"} lees je onder meer over ${items[0]}.`;
 
       }
 
       else if (items.length === 2) {
 
         sentence =
-          `Vandaag lees je onder meer over ${items[0]} en ${items[1]}.`;
+          `${isArchive ? "In deze editie" : "Vandaag"} lees je onder meer over ${items[0]} en ${items[1]}.`;
 
       }
 
       else {
 
         sentence =
-          `Vandaag lees je onder meer over ${items[0]}, ${items[1]} en ${items[2]}.`;
+          `${isArchive ? "In deze editie" : "Vandaag"} lees je onder meer over ${items[0]}, ${items[1]} en ${items[2]}.`;
 
       }
 
@@ -1660,6 +1890,223 @@
     }
 
 
+    function getRequestedEdition() {
+
+      const params =
+        new URLSearchParams(
+          window.location.search
+        );
+
+      const value =
+        params.get("editie");
+
+
+      return /^\d{4}-\d{2}-\d{2}$/.test(
+        value || ""
+      )
+        ? value
+        : null;
+    }
+
+
+    function setActiveNav(view) {
+
+      [
+        ["today", "#nav-today"],
+        ["archive", "#nav-archive"],
+        ["about", "#nav-about"]
+      ].forEach(
+        ([name, selector]) => {
+
+          const link =
+            $(selector);
+
+          if (link) {
+            link.classList.toggle(
+              "is-active",
+              name === view
+            );
+          }
+
+        }
+      );
+    }
+
+
+    function showAppView(view) {
+
+      const todayView =
+        $("#today-view");
+
+      const archiveView =
+        $("#archive-view");
+
+      const aboutView =
+        $("#about-view");
+
+
+      todayView.hidden =
+        view !== "today";
+
+      archiveView.hidden =
+        view !== "archive";
+
+      aboutView.hidden =
+        view !== "about";
+
+
+      setActiveNav(
+        view
+      );
+
+
+      if (view === "archive") {
+        loadArchiveIndex();
+      }
+
+
+      window.scrollTo(
+        {
+          top: 0,
+          behavior: "smooth"
+        }
+      );
+    }
+
+
+    function routeFromHash() {
+
+      const hash =
+        window.location.hash;
+
+
+      if (hash === "#archief") {
+
+        showAppView(
+          "archive"
+        );
+
+        return;
+      }
+
+
+      if (hash === "#over") {
+
+        showAppView(
+          "about"
+        );
+
+        return;
+      }
+
+
+      showAppView(
+        "today"
+      );
+    }
+
+
+    async function loadArchiveIndex() {
+
+      const state =
+        $("#archive-state");
+
+      const list =
+        $("#archive-list");
+
+
+      if (
+        list.dataset.loaded === "true"
+      ) {
+        return;
+      }
+
+
+      try {
+
+        const response =
+          await fetch(
+            "./edities/index.json",
+            {
+              cache: "no-store"
+            }
+          );
+
+
+        if (!response.ok) {
+          throw new Error(
+            `edities/index.json gaf status ${response.status}`
+          );
+        }
+
+
+        const entries =
+          await response.json();
+
+
+        list.innerHTML = "";
+
+
+        entries.forEach(
+          entry => {
+
+            const date =
+              entry?.date;
+
+            if (
+              !/^\d{4}-\d{2}-\d{2}$/.test(
+                date || ""
+              )
+            ) {
+              return;
+            }
+
+
+            const link =
+              document.createElement(
+                "a"
+              );
+
+            link.className =
+              "archive-item";
+
+            link.href =
+              `./?editie=${encodeURIComponent(date)}`;
+
+            link.innerHTML = `
+              <span class="archive-date">${safeText(formatEditionDate(date))}</span>
+              <span class="archive-open">Open editie →</span>
+            `;
+
+
+            list.appendChild(
+              link
+            );
+
+          }
+        );
+
+
+        state.hidden = true;
+        list.hidden = false;
+        list.dataset.loaded = "true";
+
+      }
+
+      catch (error) {
+
+        console.error(
+          error
+        );
+
+        state.textContent =
+          "Het archief kon niet worden geladen.";
+
+      }
+
+    }
+
+
     let analyticsLoaded = false;
 
 
@@ -1713,9 +2160,18 @@
 
       try {
 
+        const requestedEdition =
+          getRequestedEdition();
+
+        const newsUrl =
+          requestedEdition
+            ? `./edities/${requestedEdition}.json`
+            : "./nieuws.json";
+
+
         const response =
           await fetch(
-            "./nieuws.json",
+            newsUrl,
             {
               cache: "no-store"
             }
@@ -1725,7 +2181,7 @@
         if (!response.ok) {
 
           throw new Error(
-            `nieuws.json gaf status ${response.status}`
+            `${newsUrl} gaf status ${response.status}`
           );
 
         }
@@ -1747,8 +2203,21 @@
           );
 
 
+        const isArchive =
+          Boolean(
+            requestedEdition
+          );
+
+
+        $("#archive-banner").classList.toggle(
+          "is-visible",
+          isArchive
+        );
+
+
         renderTodayIntro(
-          data
+          data,
+          isArchive
         );
 
 
@@ -1803,7 +2272,9 @@
     function setupShareButtons() {
 
       const shareUrl =
-        "https://positief-nieuws.github.io/";
+        window.location.origin
+        + window.location.pathname
+        + window.location.search;
 
       const shareText =
         "Positief nieuws. Dit gebeurt ook. 12 positieve verhalen en 3 belangrijke nieuwsitems om bij te blijven.";
@@ -1846,6 +2317,46 @@
 
     setupShareButtons();
     loadNews();
+    routeFromHash();
+
+
+    window.addEventListener(
+      "hashchange",
+      routeFromHash
+    );
+
+
+    $("#about-newsletter-link").addEventListener(
+      "click",
+      event => {
+
+        event.preventDefault();
+
+        history.replaceState(
+          null,
+          "",
+          window.location.pathname
+          + window.location.search
+        );
+
+        showAppView(
+          "today"
+        );
+
+
+        setTimeout(
+          () => {
+            $("#nieuwsbrief").scrollIntoView(
+              {
+                behavior: "smooth"
+              }
+            );
+          },
+          50
+        );
+
+      }
+    );
 
 
     if ("serviceWorker" in navigator) {
