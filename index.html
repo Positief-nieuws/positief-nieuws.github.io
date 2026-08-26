@@ -589,7 +589,8 @@
   <div class="shell edition-bar">
 
     <span>
-      12 positieve verhalen + 3 onderwerpen om bij te blijven
+      <strong id="edition-date">Editie van vandaag</strong>
+      · 12 positieve verhalen + 3 onderwerpen om bij te blijven
     </span>
 
     <span>
@@ -672,7 +673,7 @@
 
 
           <p class="section-intro">
-            Omdat goed nieuws zich niet aan landsgrenzen houdt. Zes positieve ontwikkelingen van buiten Nederland die het waard zijn om te weten.
+            Omdat goed nieuws zich niet aan landsgrenzen houdt. Zes positieve ontwikkelingen van buiten Nederland die het waard zijn om te weten. De artikelen waar we naar verwijzen zijn Engelstalig.
           </p>
 
         </div>
@@ -1492,6 +1493,62 @@
     }
 
 
+    function formatEditionDate(rawDate) {
+
+      let date;
+
+      const match =
+        String(rawDate || "")
+          .match(/^(\d{4})-(\d{2})-(\d{2})$/);
+
+
+      if (match) {
+
+        date =
+          new Date(
+            Number(match[1]),
+            Number(match[2]) - 1,
+            Number(match[3]),
+            12
+          );
+
+      }
+
+      else {
+
+        date =
+          rawDate
+            ? new Date(rawDate)
+            : new Date();
+
+      }
+
+
+      if (
+        Number.isNaN(
+          date.getTime()
+        )
+      ) {
+        return String(rawDate || "");
+      }
+
+
+      const text =
+        new Intl.DateTimeFormat(
+          "nl-NL",
+          {
+            weekday: "long",
+            day: "numeric",
+            month: "long",
+            year: "numeric"
+          }
+        ).format(date);
+
+
+      return text.charAt(0).toUpperCase() + text.slice(1);
+    }
+
+
     async function loadNews() {
 
       try {
@@ -1516,6 +1573,18 @@
 
         const data =
           await response.json();
+
+
+        const rawEditionDate =
+          data?.meta?.edition_date
+          || data?.edition?.date
+          || null;
+
+
+        $("#edition-date").textContent =
+          formatEditionDate(
+            rawEditionDate
+          );
 
 
         renderSection(
