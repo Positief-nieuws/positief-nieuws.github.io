@@ -12,7 +12,7 @@ from pathlib import Path
 
 NEWS_FILE = Path("nieuws.json")
 BUTTONDOWN_URL = "https://api.buttondown.com/v1/emails"
-SITE_URL = "https://tomdehaas-gif.github.io/positief-nieuws/"
+SITE_URL = "https://positief-nieuws.github.io/"
 
 SHARE_TEXT = (
     "Positief nieuws. Dit gebeurt ook. "
