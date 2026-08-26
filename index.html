@@ -213,6 +213,25 @@
 
     /* ARTICLES */
 
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 7px;
+      margin: 0 0 7px;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: 0.02em;
+    }
+
+    .meta-sep {
+      color: var(--orange);
+      font-weight: 900;
+    }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1220,7 +1239,7 @@
 
       return parts.length
 
-        ? `<div class="meta">${parts.join("")}</div>`
+        ? `<div class="meta">${parts.join('<span class="meta-sep" aria-hidden="true">·</span>')}</div>`
 
         : "";
     }
