@@ -69,7 +69,8 @@ def article_html(article):
     category = esc(article.get("category"))
     url = esc(article.get("url"))
 
-    meta = " · ".join([part for part in (category, source) if part])
+    meta_parts = [part for part in (category, source) if part]
+    meta = " &nbsp;·&nbsp; ".join(meta_parts)
 
     image = article.get("image")
     image_alt = esc(article.get("imageAlt") or title)
