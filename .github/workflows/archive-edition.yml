@@ -1,0 +1,94 @@
+name: Bewaar editie
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "nieuws.json"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repository ophalen
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Editie bewaren
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          import re
+          from pathlib import Path
+
+          news_path = Path("nieuws.json")
+          data = json.loads(news_path.read_text(encoding="utf-8"))
+
+          edition_date = (
+              (data.get("meta") or {}).get("edition_date")
+              or (data.get("edition") or {}).get("date")
+          )
+
+          if not edition_date:
+              raise SystemExit(
+                  "Geen editie-datum gevonden in meta.edition_date of edition.date."
+              )
+
+          if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", edition_date):
+              raise SystemExit(
+                  f"Ongeldige editie-datum: {edition_date!r}. Verwacht YYYY-MM-DD."
+              )
+
+          editions_dir = Path("edities")
+          editions_dir.mkdir(exist_ok=True)
+
+          archive_path = editions_dir / f"{edition_date}.json"
+          archive_path.write_text(
+              json.dumps(data, ensure_ascii=False, indent=2) + "\n",
+              encoding="utf-8",
+          )
+
+          entries = []
+          for path in sorted(
+              editions_dir.glob("????-??-??.json"),
+              reverse=True,
+          ):
+              entries.append(
+                  {
+                      "date": path.stem,
+                      "file": path.name,
+                  }
+              )
+
+          (editions_dir / "index.json").write_text(
+              json.dumps(entries, ensure_ascii=False, indent=2) + "\n",
+              encoding="utf-8",
+          )
+
+          print(f"Bewaard: {archive_path}")
+          print(f"Aantal edities: {len(entries)}")
+          PY
+
+      - name: Archief committen
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add edities
+
+          if git diff --cached --quiet; then
+            echo "Geen wijzigingen om te committen."
+            exit 0
+          fi
+
+          git commit -m "Bewaar nieuwseditie"
+          git push
