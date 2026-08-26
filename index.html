@@ -197,6 +197,86 @@
       font-weight: 800;
     }
 
+    /* INSTALL */
+
+    .install-strip {
+      display: none;
+      border-bottom: 1px solid var(--line);
+      background: rgba(230, 241, 220, 0.92);
+    }
+
+    .install-strip.is-visible {
+      display: block;
+    }
+
+    .install-strip-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px 0;
+    }
+
+    .install-copy {
+      margin: 0;
+      color: var(--green-dark);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .install-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex: 0 0 auto;
+    }
+
+    .install-button,
+    .install-dismiss {
+      border: 0;
+      border-radius: 999px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.82rem;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .install-button {
+      min-height: 38px;
+      padding: 0 16px;
+      background: var(--orange);
+      color: var(--white);
+    }
+
+    .install-button:hover {
+      background: var(--orange-dark);
+    }
+
+    .install-dismiss {
+      min-height: 34px;
+      padding: 0 10px;
+      background: transparent;
+      color: var(--muted);
+    }
+
+    .ios-install-panel {
+      display: none;
+      margin: 14px 0 0;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--cream-2);
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.84rem;
+      line-height: 1.5;
+    }
+
+    .ios-install-panel.is-visible {
+      display: block;
+    }
+
     /* HEADER */
 
     .site-header {
@@ -740,6 +820,19 @@
         flex-direction: column;
         gap: 8px;
       }
+
+      .install-strip-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .install-actions {
+        width: 100%;
+      }
+
+      .install-button {
+        flex: 1;
+      }
     }
   </style>
 </head>
@@ -781,6 +874,48 @@
       <a id="nav-about" href="#over">Over</a>
     </div>
   </nav>
+
+
+  <section
+    id="install-strip"
+    class="install-strip"
+    aria-label="Installeer Positief nieuws"
+  >
+    <div class="shell install-strip-inner">
+      <div>
+        <p class="install-copy" id="install-copy">
+          Zet Positief nieuws op je beginscherm.
+        </p>
+
+        <div
+          id="ios-install-panel"
+          class="ios-install-panel"
+        >
+          Op iPhone/iPad: open deze site in Safari, tik op de deelknop
+          en kies ‘Zet op beginscherm’.
+        </div>
+      </div>
+
+      <div class="install-actions">
+        <button
+          id="install-button"
+          class="install-button"
+          type="button"
+        >
+          Installeer app
+        </button>
+
+        <button
+          id="install-dismiss"
+          class="install-dismiss"
+          type="button"
+          aria-label="Installatiemelding sluiten"
+        >
+          Niet nu
+        </button>
+      </div>
+    </div>
+  </section>
 
 
   <div id="today-view" class="app-view">
@@ -2312,6 +2447,164 @@
       $("#share-email").href =
         emailUrl;
 
+    }
+
+
+    let deferredInstallPrompt = null;
+
+
+    function isStandaloneMode() {
+
+      return window.matchMedia(
+        "(display-mode: standalone)"
+      ).matches
+      || window.navigator.standalone === true;
+    }
+
+
+    function isIosDevice() {
+
+      return /iphone|ipad|ipod/i.test(
+        window.navigator.userAgent
+      );
+    }
+
+
+    function installDismissed() {
+
+      return localStorage.getItem(
+        "pn_install_dismissed"
+      ) === "1";
+    }
+
+
+    function hideInstallStrip() {
+
+      $("#install-strip").classList.remove(
+        "is-visible"
+      );
+    }
+
+
+    function showInstallStrip() {
+
+      if (
+        isStandaloneMode()
+        || installDismissed()
+      ) {
+        return;
+      }
+
+      $("#install-strip").classList.add(
+        "is-visible"
+      );
+    }
+
+
+    window.addEventListener(
+      "beforeinstallprompt",
+      event => {
+
+        event.preventDefault();
+
+        deferredInstallPrompt =
+          event;
+
+        $("#install-copy").textContent =
+          "Installeer Positief nieuws als app op dit apparaat.";
+
+        $("#ios-install-panel").classList.remove(
+          "is-visible"
+        );
+
+        $("#install-button").textContent =
+          "Installeer app";
+
+        showInstallStrip();
+
+      }
+    );
+
+
+    window.addEventListener(
+      "appinstalled",
+      () => {
+
+        deferredInstallPrompt =
+          null;
+
+        hideInstallStrip();
+
+      }
+    );
+
+
+    $("#install-button").addEventListener(
+      "click",
+      async () => {
+
+        if (deferredInstallPrompt) {
+
+          deferredInstallPrompt.prompt();
+
+          await deferredInstallPrompt.userChoice;
+
+          deferredInstallPrompt =
+            null;
+
+          hideInstallStrip();
+
+          return;
+        }
+
+
+        if (isIosDevice()) {
+
+          $("#ios-install-panel").classList.add(
+            "is-visible"
+          );
+
+          $("#install-copy").textContent =
+            "Installeer via Safari.";
+
+          return;
+        }
+
+
+        $("#install-copy").textContent =
+          "Gebruik in je browser ‘App installeren’ of ‘Toevoegen aan startscherm’.";
+      }
+    );
+
+
+    $("#install-dismiss").addEventListener(
+      "click",
+      () => {
+
+        localStorage.setItem(
+          "pn_install_dismissed",
+          "1"
+        );
+
+        hideInstallStrip();
+
+      }
+    );
+
+
+    if (
+      isIosDevice()
+      && !isStandaloneMode()
+      && !installDismissed()
+    ) {
+
+      $("#install-copy").textContent =
+        "Zet Positief nieuws op je beginscherm.";
+
+      $("#install-button").textContent =
+        "Hoe werkt dat?";
+
+      showInstallStrip();
     }
 
 
