@@ -1,11 +1,12 @@
-const CACHE_NAME = "positief-nieuws-v1";
+const CACHE_NAME = "positief-nieuws-v2";
 
 const CORE_ASSETS = [
   "/",
   "/index.html",
   "/manifest.json",
   "/icon-192.png",
-  "/icon-512.png"
+  "/icon-512.png",
+  "/edities/index.json"
 ];
 
 
@@ -65,11 +66,15 @@ self.addEventListener(
     const isNavigation =
       request.mode === "navigate";
 
-    const isNewsJson =
-      url.pathname.endsWith("/nieuws.json");
+    const isFreshData =
+      url.pathname.endsWith("/nieuws.json")
+      || url.pathname.endsWith("/edities/index.json")
+      || /\/edities\/\d{4}-\d{2}-\d{2}\.json$/.test(
+        url.pathname
+      );
 
 
-    if (isNavigation || isNewsJson) {
+    if (isNavigation || isFreshData) {
 
       event.respondWith(
         fetch(request)
