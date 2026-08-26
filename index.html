@@ -168,6 +168,16 @@
       color: var(--green-dark);
     }
 
+    .mission-today {
+      margin-top: 12px;
+      color: var(--green-dark);
+      font-weight: 700;
+    }
+
+    .mission-close {
+      margin-top: 12px;
+    }
+
     main {
       padding-bottom: 72px;
     }
@@ -629,7 +639,15 @@
   <section class="mission" aria-label="Over Positief nieuws">
     <div class="shell">
       <p class="mission-copy">
-        Veel van het nieuws dat dagelijks langskomt gaat over wat misgaat. Logisch, maar daardoor verdwijnen de dingen die wél vooruitgaan makkelijk uit beeld. Daarom verzamelen we hier het nieuws dat ook verteld mag worden: <strong>6 positieve verhalen uit Nederland en 6 uit de rest van de wereld.</strong> En omdat je ook gewoon wilt weten wat er speelt, sluiten we af met <strong>3 nieuwsverhalen die de Nederlandse nieuwskoppen op dit moment domineren.</strong>
+        Positief nieuws laat zien wat er óók gebeurt: ontwikkelingen die vooruitgaan, zonder weg te kijken van het grote nieuws.
+      </p>
+
+      <p class="mission-copy mission-today" id="today-intro">
+        Vandaag lees je onder meer over drie positieve ontwikkelingen uit Nederland.
+      </p>
+
+      <p class="mission-copy mission-close">
+        En we sluiten af met drie onderwerpen die vandaag de Nederlandse nieuwskoppen domineren.
       </p>
     </div>
   </section>
@@ -962,6 +980,17 @@
               "summary",
               "samenvatting",
               "intro"
+            ]
+          ),
+
+        introLabel:
+          firstValue(
+            article,
+            [
+              "intro_label",
+              "introLabel",
+              "intro_short",
+              "introShort"
             ]
           ),
 
@@ -1520,6 +1549,54 @@
     }
 
 
+    function renderTodayIntro(data) {
+
+      const items =
+        getSection(data, "nl")
+          .slice(0, 3)
+          .map(normalizeArticle)
+          .map(
+            article =>
+              article.introLabel
+              || article.title
+          )
+          .filter(Boolean);
+
+
+      if (!items.length) {
+        return;
+      }
+
+
+      let sentence;
+
+      if (items.length === 1) {
+
+        sentence =
+          `Vandaag lees je onder meer over ${items[0]}.`;
+
+      }
+
+      else if (items.length === 2) {
+
+        sentence =
+          `Vandaag lees je onder meer over ${items[0]} en ${items[1]}.`;
+
+      }
+
+      else {
+
+        sentence =
+          `Vandaag lees je onder meer over ${items[0]}, ${items[1]} en ${items[2]}.`;
+
+      }
+
+
+      $("#today-intro").textContent =
+        sentence;
+    }
+
+
     function formatEditionDate(rawDate) {
 
       let date;
@@ -1612,6 +1689,11 @@
           formatEditionDate(
             rawEditionDate
           );
+
+
+        renderTodayIntro(
+          data
+        );
 
 
         renderSection(
