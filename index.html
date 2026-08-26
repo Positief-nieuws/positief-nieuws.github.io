@@ -292,8 +292,21 @@
     }
 
     .brand {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
       text-decoration: none;
+    }
+
+    .brand-logo {
+      width: 56px;
+      height: 56px;
+      flex: 0 0 auto;
+      border-radius: 14px;
+    }
+
+    .brand-text {
+      display: block;
     }
 
     .brand-name {
@@ -716,6 +729,16 @@
         align-items: flex-start;
       }
 
+      .brand {
+        gap: 10px;
+      }
+
+      .brand-logo {
+        width: 44px;
+        height: 44px;
+        border-radius: 11px;
+      }
+
       .header-cta {
         min-height: 40px;
         padding: 0 14px;
@@ -847,12 +870,22 @@
         href="./"
         aria-label="Positief nieuws homepage"
       >
-        <span class="brand-name">
-          Positief nieuws
-        </span>
+        <img
+          class="brand-logo"
+          src="/icon-192.png"
+          alt=""
+          width="56"
+          height="56"
+        >
 
-        <span class="brand-tagline">
-          Dit gebeurt ook.
+        <span class="brand-text">
+          <span class="brand-name">
+            Positief nieuws
+          </span>
+
+          <span class="brand-tagline">
+            Dit gebeurt ook.
+          </span>
         </span>
       </a>
 
