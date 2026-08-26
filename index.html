@@ -6,7 +6,7 @@
 
   <meta
     name="description"
-    content="Positief nieuws. Dit gebeurt ook. Drie keer per week een korte selectie van positief nieuws uit Nederland en de wereld."
+    content="Positief nieuws. Zeven positieve verhalen uit Nederland, zes uit de wereld en drie belangrijke nieuwsitems om bij te blijven."
   >
 
   <title>Positief nieuws. Dit gebeurt ook.</title>
@@ -140,6 +140,22 @@
       color: var(--muted);
       font-family: Arial, Helvetica, sans-serif;
       font-size: 0.82rem;
+    }
+
+    .mission {
+      padding: 34px 0 4px;
+    }
+
+    .mission-copy {
+      max-width: 860px;
+      margin: 0;
+      color: #445149;
+      font-size: clamp(1.08rem, 2vw, 1.28rem);
+      line-height: 1.6;
+    }
+
+    .mission-copy strong {
+      color: var(--green-dark);
     }
 
     main {
@@ -339,6 +355,14 @@
         );
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
+    }
+
+    /* WHAT YOU NEED TO KNOW */
+
+    .briefing {
+      padding: 48px 0 18px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 253, 246, 0.72);
     }
 
     /* SHARE */
@@ -672,7 +696,7 @@
   <div class="shell edition-bar">
 
     <span>
-      Een selectie van nieuws waar je ook wat aan hebt.
+      13 positieve verhalen + 3 onderwerpen om bij te blijven
     </span>
 
     <span>
@@ -680,6 +704,15 @@
     </span>
 
   </div>
+
+
+  <section class="mission" aria-label="Over Positief nieuws">
+    <div class="shell">
+      <p class="mission-copy">
+        Veel van het nieuws dat dagelijks langskomt gaat over wat misgaat. Logisch, maar daardoor verdwijnen de dingen die wél vooruitgaan makkelijk uit beeld. Daarom verzamelen we hier het nieuws dat ook verteld mag worden: <strong>7 positieve verhalen uit Nederland en 6 uit de rest van de wereld.</strong> En omdat je ook gewoon wilt weten wat er speelt, sluiten we af met <strong>3 nieuwsverhalen die de Nederlandse nieuwskoppen op dit moment domineren.</strong>
+      </p>
+    </div>
+  </section>
 
 
   <main>
@@ -692,14 +725,18 @@
           <div>
 
             <p class="section-kicker">
-              Nederland & relevant voor Nederland
+              7 verhalen
             </p>
 
             <h1 class="section-title">
-              Dit gebeurt hier.
+              Goed nieuws uit Nederland
             </h1>
 
           </div>
+
+          <p class="section-intro">
+            Zeven positieve ontwikkelingen uit Nederland. Over mensen, gezondheid, wetenschap, natuur, sport en andere dingen die de goede kant op bewegen.
+          </p>
         </div>
 
 
@@ -742,18 +779,18 @@
           <div>
 
             <p class="section-kicker">
-              Internationaal
+              6 verhalen
             </p>
 
             <h2 class="section-title">
-              En dit gebeurt elders.
+              Goed nieuws uit de wereld
             </h2>
 
           </div>
 
 
           <p class="section-intro">
-            Omdat goed nieuws zich niet aan landsgrenzen houdt.
+            Omdat goed nieuws zich niet aan landsgrenzen houdt. Zes positieve ontwikkelingen van buiten Nederland die het waard zijn om te weten.
           </p>
 
         </div>
@@ -769,6 +806,52 @@
 
         <div
           id="int-grid"
+          class="grid"
+          hidden
+        ></div>
+
+      </div>
+
+    </section>
+
+
+    <section
+      class="briefing"
+      id="headlines-section"
+      hidden
+    >
+
+      <div class="shell">
+
+        <div class="section-heading">
+
+          <div>
+
+            <p class="section-kicker">
+              3 berichten
+            </p>
+
+            <h2 class="section-title">
+              Wat je verder moet weten
+            </h2>
+
+          </div>
+
+          <p class="section-intro">
+            Drie onderwerpen die het Nederlandse nieuws op dit moment domineren. Niet per se positief, wel belangrijk om van op de hoogte te zijn. Kort, feitelijk en zonder sensatie.
+          </p>
+
+        </div>
+
+        <div
+          id="headlines-state"
+          class="state"
+        >
+          Nieuws laden…
+        </div>
+
+        <div
+          id="headlines-grid"
           class="grid"
           hidden
         ></div>
@@ -1060,23 +1143,33 @@
       }
 
 
+      const aliases = {
+        nl: [
+          "nl",
+          "nederland",
+          "netherlands",
+          "dutch"
+        ],
+        int: [
+          "int",
+          "internationaal",
+          "international",
+          "world",
+          "wereld"
+        ],
+        headlines: [
+          "headlines",
+          "headline",
+          "nieuwskoppen",
+          "belangrijk",
+          "main_news",
+          "main-news"
+        ]
+      };
+
+
       const values =
-        type === "nl"
-
-          ? [
-              "nl",
-              "nederland",
-              "netherlands",
-              "dutch"
-            ]
-
-          : [
-              "int",
-              "internationaal",
-              "international",
-              "world",
-              "wereld"
-            ];
+        aliases[type] || [];
 
 
       const filtered =
@@ -1117,25 +1210,35 @@
       type
     ) {
 
+      const keyMap = {
+        nl: [
+          "nl",
+          "NL",
+          "nederland",
+          "netherlands",
+          "dutch"
+        ],
+        int: [
+          "int",
+          "INT",
+          "internationaal",
+          "international",
+          "world",
+          "wereld"
+        ],
+        headlines: [
+          "headlines",
+          "HEADLINES",
+          "nieuwskoppen",
+          "belangrijk",
+          "main_news",
+          "mainNews"
+        ]
+      };
+
+
       const keys =
-        type === "nl"
-
-          ? [
-              "nl",
-              "NL",
-              "nederland",
-              "netherlands",
-              "dutch"
-            ]
-
-          : [
-              "int",
-              "INT",
-              "internationaal",
-              "international",
-              "world",
-              "wereld"
-            ];
+        keyMap[type] || [];
 
 
       return (
@@ -1535,7 +1638,47 @@
 
 
         items
-          .slice(0, 7)
+          .slice(0, 6)
+          .forEach(
+            item => {
+
+              grid.appendChild(
+                renderCard(
+                  item
+                )
+              );
+
+            }
+          );
+
+      }
+
+
+      if (type === "headlines") {
+
+        const section =
+          $("#headlines-section");
+
+        const state =
+          $("#headlines-state");
+
+        const grid =
+          $("#headlines-grid");
+
+
+        if (!items.length) {
+          return;
+        }
+
+
+        section.hidden = false;
+        state.hidden = true;
+        grid.hidden = false;
+        grid.innerHTML = "";
+
+
+        items
+          .slice(0, 3)
           .forEach(
             item => {
 
@@ -1590,6 +1733,12 @@
           "int"
         );
 
+
+        renderSection(
+          data,
+          "headlines"
+        );
+
       }
 
       catch (error) {
@@ -1617,7 +1766,7 @@
         "https://tomdehaas-gif.github.io/positief-nieuws/";
 
       const shareText =
-        "Positief nieuws. Dit gebeurt ook. Een selectie van nieuws waar je ook wat aan hebt.";
+        "Positief nieuws. Dit gebeurt ook. 13 positieve verhalen en 3 onderwerpen om bij te blijven.";
 
       const whatsappUrl =
         "https://wa.me/?text=" +
