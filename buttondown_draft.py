@@ -5,6 +5,7 @@ import json
 import os
 import sys
 import urllib.error
+import urllib.parse
 import urllib.request
 from datetime import datetime
 from pathlib import Path
@@ -13,8 +14,20 @@ NEWS_FILE = Path("nieuws.json")
 BUTTONDOWN_URL = "https://api.buttondown.com/v1/emails"
 SITE_URL = "https://tomdehaas-gif.github.io/positief-nieuws/"
 
-WHATSAPP_SHARE_URL = "https://wa.me/?text=Positief%20nieuws.%20Dit%20gebeurt%20ook.%20Een%20selectie%20van%20nieuws%20waar%20je%20ook%20wat%20aan%20hebt.%0A%0Ahttps%3A%2F%2Ftomdehaas-gif.github.io%2Fpositief-nieuws%2F"
-EMAIL_SHARE_URL = "mailto:?subject=Positief%20nieuws.%20Dit%20gebeurt%20ook.&body=Positief%20nieuws.%20Dit%20gebeurt%20ook.%20Een%20selectie%20van%20nieuws%20waar%20je%20ook%20wat%20aan%20hebt.%0A%0Ahttps%3A%2F%2Ftomdehaas-gif.github.io%2Fpositief-nieuws%2F"
+SHARE_TEXT = (
+    "Positief nieuws. Dit gebeurt ook. "
+    "13 positieve verhalen en 3 onderwerpen om bij te blijven."
+)
+WHATSAPP_SHARE_URL = (
+    "https://wa.me/?text="
+    + urllib.parse.quote(f"{SHARE_TEXT}\n\n{SITE_URL}")
+)
+EMAIL_SHARE_URL = (
+    "mailto:?subject="
+    + urllib.parse.quote("Positief nieuws. Dit gebeurt ook.")
+    + "&body="
+    + urllib.parse.quote(f"{SHARE_TEXT}\n\n{SITE_URL}")
+)
 
 
 def load_news():
@@ -26,13 +39,23 @@ def load_news():
 
     nl = data.get("nl", [])
     international = data.get("int", [])
+    headlines = (
+        data.get("headlines")
+        or data.get("nieuwskoppen")
+        or data.get("main_news")
+        or []
+    )
 
-    if not nl or not international:
-        raise ValueError(
-            "nieuws.json bevat geen bruikbare NL- en internationale selectie."
-        )
+    if len(nl) < 7:
+        raise ValueError("nieuws.json moet 7 Nederlandse positieve verhalen bevatten.")
 
-    return data, nl[:7], international[:7]
+    if len(international) < 6:
+        raise ValueError("nieuws.json moet 6 internationale positieve verhalen bevatten.")
+
+    if len(headlines) < 3:
+        raise ValueError("nieuws.json moet 3 berichten bevatten onder 'headlines'.")
+
+    return data, nl[:7], international[:6], headlines[:3]
 
 
 def esc(value):
@@ -176,15 +199,16 @@ def build_share_block():
 """
 
 
-def build_body(nl, international):
+def build_body(nl, international, headlines):
     nl_html = "\n".join(article_html(article) for article in nl)
     int_html = "\n".join(article_html(article) for article in international)
+    headlines_html = "\n".join(article_html(article) for article in headlines)
     share_block = build_share_block()
 
     return f"""<!-- buttondown-editor-mode: fancy -->
 <div style="max-width:680px;margin:0 auto;background:#fbf7ea;padding:28px;font-family:Georgia,serif;color:#1e2923;">
 
-  <div style="margin-bottom:34px;">
+  <div style="margin-bottom:28px;">
     <h1 style="margin:0;font:700 42px Georgia,serif;line-height:1;color:#17382b;">
       Positief nieuws
     </h1>
@@ -194,35 +218,55 @@ def build_body(nl, international):
     </p>
   </div>
 
-  <p style="margin:0 0 32px 0;font:16px Georgia,serif;line-height:1.55;color:#445149;">
-    Een selectie van nieuws waar je ook wat aan hebt.
+  <p style="margin:0 0 34px 0;font:16px Georgia,serif;line-height:1.6;color:#445149;">
+    Veel van het nieuws dat dagelijks langskomt gaat over wat misgaat. Logisch, maar daardoor verdwijnen de dingen die wél vooruitgaan makkelijk uit beeld. Daarom verzamelen we hier het nieuws dat ook verteld mag worden: <strong>7 positieve verhalen uit Nederland en 6 uit de rest van de wereld.</strong> En omdat je ook gewoon wilt weten wat er speelt, sluiten we af met <strong>3 nieuwsverhalen die de Nederlandse nieuwskoppen op dit moment domineren.</strong>
   </p>
 
   <p style="margin:0 0 6px 0;font:700 12px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#ed6a38;">
-    Nederland & relevant voor Nederland
+    7 verhalen
   </p>
 
-  <h2 style="margin:0 0 24px 0;font:700 34px Georgia,serif;line-height:1;color:#17382b;">
-    Dit gebeurt hier.
+  <h2 style="margin:0 0 8px 0;font:700 34px Georgia,serif;line-height:1;color:#17382b;">
+    Goed nieuws uit Nederland
   </h2>
+
+  <p style="margin:0 0 26px 0;font:15px Georgia,serif;line-height:1.5;color:#667068;">
+    Zeven positieve ontwikkelingen uit Nederland. Over mensen, gezondheid, wetenschap, natuur, sport en andere dingen die de goede kant op bewegen.
+  </p>
 
   {nl_html}
 
   <div style="margin:42px -28px 32px -28px;padding:32px 28px;background:#e6f1dc;">
     <p style="margin:0 0 6px 0;font:700 12px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#ed6a38;">
-      Internationaal
+      6 verhalen
     </p>
 
     <h2 style="margin:0 0 8px 0;font:700 34px Georgia,serif;line-height:1;color:#17382b;">
-      En dit gebeurt elders.
+      Goed nieuws uit de wereld
     </h2>
 
     <p style="margin:0;font:15px Georgia,serif;line-height:1.5;color:#667068;">
-      Omdat goed nieuws zich niet aan landsgrenzen houdt.
+      Omdat goed nieuws zich niet aan landsgrenzen houdt. Zes positieve ontwikkelingen van buiten Nederland die het waard zijn om te weten.
     </p>
   </div>
 
   {int_html}
+
+  <div style="margin:42px -28px 32px -28px;padding:32px 28px;background:#fffdf6;border-top:2px solid #17382b;border-bottom:1px solid #d7dfd8;">
+    <p style="margin:0 0 6px 0;font:700 12px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#ed6a38;">
+      3 berichten
+    </p>
+
+    <h2 style="margin:0 0 8px 0;font:700 34px Georgia,serif;line-height:1;color:#17382b;">
+      Wat je verder moet weten
+    </h2>
+
+    <p style="margin:0;font:15px Georgia,serif;line-height:1.5;color:#667068;">
+      Drie onderwerpen die het Nederlandse nieuws op dit moment domineren. Niet per se positief, wel belangrijk om van op de hoogte te zijn. Kort, feitelijk en zonder sensatie.
+    </p>
+  </div>
+
+  {headlines_html}
 
   {share_block}
 
@@ -256,7 +300,10 @@ def create_draft(api_key, subject, body):
         "body": body,
         "status": "draft",
         "canonical_url": SITE_URL,
-        "description": "14 positieve verhalen uit Nederland en de wereld."
+        "description": (
+            "7 positieve verhalen uit Nederland, 6 uit de wereld "
+            "en 3 belangrijke nieuwsitems om bij te blijven."
+        ),
     }
 
     request = urllib.request.Request(
@@ -288,9 +335,9 @@ def main():
         sys.exit(1)
 
     try:
-        data, nl, international = load_news()
+        data, nl, international, headlines = load_news()
         subject = build_subject(data)
-        body = build_body(nl, international)
+        body = build_body(nl, international, headlines)
         draft = create_draft(api_key, subject, body)
     except Exception as exc:
         print(f"FOUT: {exc}", file=sys.stderr)
