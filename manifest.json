@@ -1,0 +1,25 @@
+{
+  "name": "Positief nieuws",
+  "short_name": "Positief nieuws",
+  "description": "12 positieve verhalen en 3 belangrijke nieuwsitems om bij te blijven.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#fbf7ea",
+  "theme_color": "#17382b",
+  "lang": "nl-NL",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
