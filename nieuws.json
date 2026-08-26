@@ -1,7 +1,7 @@
 {
   "meta": {
     "edition_date": "2026-08-26",
-    "generated_from": "kandidaten.json",
+    "generated_from": "kandidaten.json + actuele nieuwsselectie",
     "title": "Positief nieuws",
     "tagline": "Dit gebeurt ook."
   },
@@ -93,18 +93,34 @@
       "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPZTY4Z1hQdmQ1WVFHS1FuOHRObnotb1hjQUlGQjdMQXJUZzJOSFE2S1doZ0JwYVBZNzdlNE5JcG9iLVpmU3dHcnVJcWYxbVBpb0ZGc0tnMVVIOVY0bzA0QnBOODVEYW52X3o3QW1HaU5wTFNsMTloeEIwRnZwTktDRDZoUXQ4UlJJeV90MGpJR2hNcXV0QmhKUnVfdWtxOWVpeFhMYkljUW05ajhFRlVjWkU0Z1BWY3M3UExaVkVId3cyc1N6S29iTTF6dkdsZE1uWWhaQTBQd0ZnZDlHcFFVMw?oc=5"
     },
     {
-      "title": "Tiwa Savage steunt in Malawi de strijd tegen geweld tegen vrouwen en meisjes",
-      "teaser": "De internationale artiest Tiwa Savage bezocht Malawi om initiatieven tegen geweld tegen vrouwen en meisjes onder de aandacht te brengen.",
-      "source": "UNDP",
-      "category": "Mens & samenleving",
-      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPMGx6RVZkaG1BVERhYTYxUy00RmRXLUpzUXVVajRqbV9XWTJ3V3NjUUNiWGhsWElUbk00N2psdlhwVUxvSDBPdjVmYmhVekVtU0VBOU5uekRQYXpKZjJEUGJvTUFtdko1QUVOaHZNbmo0NS1FOUlWa3kwUjJWenhTeFhwS29hNFM3b0ZmclRYWHNWbXpUU3F3WWpzOVNaOTJBUV8tQmx1STdEdWdWRGxaV3ZRc05lZFU5UlVoeVg2NGhGbWY1eGZndEUxV05LNXpyaWNsYXFLQldYcHFiNEhadw?oc=5"
-    },
-    {
       "title": "Man levend gered na vijftien dagen vast te hebben gezeten in onderwatergrot",
-      "teaser": "Een man is levend gered nadat hij vijftien dagen zonder voedsel of licht vastzat in een onderwatergrot.",
+      "teaser": "Een man is levend gered nadat hij vijftien dagen vastzat in een onderwatergrot.",
       "source": "Good News Network",
       "category": "Mens & samenleving",
       "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOZGdMZlFyNTByTTNqVDNtd1U0Vlc5X3RSM1gzUlN0WUVyZTBZb1hHU1pTSTZQUnJZck1FaVhURzhnT19kY1RxTFNiSHR5R2lQQU9XZGdNX1lnT1lqTTdCWkc0Z0t5MldCdi1wc2pKQmx2QlZ6bHE1ZS12NGRDZGd1UEt1SXdpaXNieE1TbHJRUGJ0QWYzQkpkUG50c2RibU9iOXVuWmhLcEdOUHNkQ3BUZVB5LUY4M3ZTaHhmNkxEQjY?oc=5"
+    }
+  ],
+  "headlines": [
+    {
+      "title": "NOS-onderzoek: zeker twaalf gevallen van langdurige, ernstige kindermishandeling",
+      "teaser": "NOS vond in openbare vonnissen van de afgelopen vijf jaar minstens twaalf zaken met langdurige en systematische ernstige kindermishandeling. Deskundigen noemen het een blinde vlek en wijzen op het belang van betere signalering.",
+      "source": "NOS",
+      "category": "Binnenland",
+      "url": "https://nos.nl/artikel/2628332-zeker-twaalf-gevallen-van-kindermarteling-in-nederland-het-is-een-blinde-vlek"
+    },
+    {
+      "title": "Parlementaire enquête Corona gaat verder met rol van de Tweede Kamer",
+      "teaser": "De enquêtecommissie hoort vandaag Fleur Agema en Lisa Westerveld. Deze verhoorweek draait om de vraag hoe de Tweede Kamer tijdens de coronacrisis haar controlerende en medewetgevende rol kon vervullen.",
+      "source": "Tweede Kamer",
+      "category": "Politiek",
+      "url": "https://www.tweedekamer.nl/nieuws/kamernieuws/zevende-verhoorweek-enquetecommissie-corona"
+    },
+    {
+      "title": "Kabinet, burgemeesters, OM en politie trekken één lijn bij snelwegprotesten",
+      "teaser": "Na recente gevaarlijke situaties is afgesproken dat het blokkeren of bewust vertragen van verkeer op snelwegen in principe strafrechtelijk wordt aangepakt. De regels gelden voor alle actiegroepen.",
+      "source": "NOS",
+      "category": "Binnenland",
+      "url": "https://nos.nl/artikel/2628306-kabinet-en-burgemeesters-trekken-een-lijn-in-snelwegprotest-gevaar-is-onacceptabel"
     }
   ]
 }
