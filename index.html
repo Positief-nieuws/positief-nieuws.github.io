@@ -541,7 +541,14 @@
       }
 
       .card .teaser {
-        display: none;
+        display: -webkit-box;
+        margin-top: 10px;
+        overflow: hidden;
+        color: var(--muted);
+        font-size: 0.9rem;
+        line-height: 1.45;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
       }
 
       .share {
