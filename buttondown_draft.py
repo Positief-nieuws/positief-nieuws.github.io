@@ -199,7 +199,53 @@ def build_share_block():
 """
 
 
-def build_body(nl, international, headlines):
+
+DUTCH_DAYS = [
+    "maandag",
+    "dinsdag",
+    "woensdag",
+    "donderdag",
+    "vrijdag",
+    "zaterdag",
+    "zondag",
+]
+
+DUTCH_MONTHS = [
+    "januari",
+    "februari",
+    "maart",
+    "april",
+    "mei",
+    "juni",
+    "juli",
+    "augustus",
+    "september",
+    "oktober",
+    "november",
+    "december",
+]
+
+
+def edition_date_text(data):
+    raw_date = (
+        data.get("meta", {}).get("edition_date")
+        or data.get("edition", {}).get("date")
+        or datetime.now().strftime("%Y-%m-%d")
+    )
+
+    try:
+        date_obj = datetime.strptime(raw_date, "%Y-%m-%d")
+        return (
+            f"{DUTCH_DAYS[date_obj.weekday()]} "
+            f"{date_obj.day} "
+            f"{DUTCH_MONTHS[date_obj.month - 1]} "
+            f"{date_obj.year}"
+        )
+    except (TypeError, ValueError):
+        return str(raw_date)
+
+
+def build_body(data, nl, international, headlines):
     nl_html = "\n".join(article_html(article) for article in nl)
     int_html = "\n".join(article_html(article) for article in international)
     headlines_html = "\n".join(article_html(article) for article in headlines)
@@ -215,6 +261,10 @@ def build_body(nl, international, headlines):
 
     <p style="margin:8px 0 0 0;font:700 14px Arial,sans-serif;color:#ed6a38;">
       Dit gebeurt ook.
+    </p>
+
+    <p style="margin:10px 0 0 0;font:700 13px Arial,sans-serif;color:#667068;">
+      {esc(edition_date_text(data))}
     </p>
   </div>
 
@@ -246,7 +296,7 @@ def build_body(nl, international, headlines):
     </h2>
 
     <p style="margin:0;font:15px Georgia,serif;line-height:1.5;color:#667068;">
-      Omdat goed nieuws zich niet aan landsgrenzen houdt. Zes positieve ontwikkelingen van buiten Nederland die het waard zijn om te weten.
+      Omdat goed nieuws zich niet aan landsgrenzen houdt. Zes positieve ontwikkelingen van buiten Nederland die het waard zijn om te weten. De artikelen waar we naar verwijzen zijn Engelstalig.
     </p>
   </div>
 
@@ -278,7 +328,7 @@ def build_body(nl, international, headlines):
 """
 
 
-def build_subject(data):
+def edition_date_short_text(data):
     raw_date = (
         data.get("meta", {}).get("edition_date")
         or data.get("edition", {}).get("date")
@@ -287,11 +337,17 @@ def build_subject(data):
 
     try:
         date_obj = datetime.strptime(raw_date, "%Y-%m-%d")
-        date_text = date_obj.strftime("%d-%m-%Y")
-    except ValueError:
-        date_text = raw_date
+        return (
+            f"{DUTCH_DAYS[date_obj.weekday()]} "
+            f"{date_obj.day} "
+            f"{DUTCH_MONTHS[date_obj.month - 1]}"
+        )
+    except (TypeError, ValueError):
+        return str(raw_date)
 
-    return f"Positief nieuws · {date_text}"
+
+def build_subject(data):
+    return f"Dit gebeurt ook · {edition_date_short_text(data)}"
 
 
 def create_draft(api_key, subject, body):
@@ -301,7 +357,7 @@ def create_draft(api_key, subject, body):
         "status": "draft",
         "canonical_url": SITE_URL,
         "description": (
-            "12 positieve verhalen en 3 belangrijke nieuwsitems om bij te blijven."
+            "12 positieve verhalen + 3 belangrijke nieuwsitems om bij te blijven."
         ),
     }
 
@@ -336,7 +392,7 @@ def main():
     try:
         data, nl, international, headlines = load_news()
         subject = build_subject(data)
-        body = build_body(nl, international, headlines)
+        body = build_body(data, nl, international, headlines)
         draft = create_draft(api_key, subject, body)
     except Exception as exc:
         print(f"FOUT: {exc}", file=sys.stderr)
