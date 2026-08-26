@@ -16,7 +16,7 @@ SITE_URL = "https://positief-nieuws.github.io/"
 
 SHARE_TEXT = (
     "Positief nieuws. Dit gebeurt ook. "
-    "13 positieve verhalen en 3 onderwerpen om bij te blijven."
+    "12 positieve verhalen en 3 belangrijke nieuwsitems om bij te blijven."
 )
 WHATSAPP_SHARE_URL = (
     "https://wa.me/?text="
@@ -46,8 +46,8 @@ def load_news():
         or []
     )
 
-    if len(nl) < 7:
-        raise ValueError("nieuws.json moet 7 Nederlandse positieve verhalen bevatten.")
+    if len(nl) < 6:
+        raise ValueError("nieuws.json moet 6 Nederlandse positieve verhalen bevatten.")
 
     if len(international) < 6:
         raise ValueError("nieuws.json moet 6 internationale positieve verhalen bevatten.")
@@ -55,7 +55,7 @@ def load_news():
     if len(headlines) < 3:
         raise ValueError("nieuws.json moet 3 berichten bevatten onder 'headlines'.")
 
-    return data, nl[:7], international[:6], headlines[:3]
+    return data, nl[:6], international[:6], headlines[:3]
 
 
 def esc(value):
@@ -219,11 +219,11 @@ def build_body(nl, international, headlines):
   </div>
 
   <p style="margin:0 0 34px 0;font:16px Georgia,serif;line-height:1.6;color:#445149;">
-    Veel van het nieuws dat dagelijks langskomt gaat over wat misgaat. Logisch, maar daardoor verdwijnen de dingen die wél vooruitgaan makkelijk uit beeld. Daarom verzamelen we hier het nieuws dat ook verteld mag worden: <strong>7 positieve verhalen uit Nederland en 6 uit de rest van de wereld.</strong> En omdat je ook gewoon wilt weten wat er speelt, sluiten we af met <strong>3 nieuwsverhalen die de Nederlandse nieuwskoppen op dit moment domineren.</strong>
+    Veel van het nieuws dat dagelijks langskomt gaat over wat misgaat. Logisch, maar daardoor verdwijnen de dingen die wél vooruitgaan makkelijk uit beeld. Daarom verzamelen we hier het nieuws dat ook verteld mag worden: <strong>6 positieve verhalen uit Nederland en 6 uit de rest van de wereld.</strong> En omdat je ook gewoon wilt weten wat er speelt, sluiten we af met <strong>3 nieuwsverhalen die de Nederlandse nieuwskoppen op dit moment domineren.</strong>
   </p>
 
   <p style="margin:0 0 6px 0;font:700 12px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#ed6a38;">
-    7 verhalen
+    6 verhalen
   </p>
 
   <h2 style="margin:0 0 8px 0;font:700 34px Georgia,serif;line-height:1;color:#17382b;">
@@ -231,7 +231,7 @@ def build_body(nl, international, headlines):
   </h2>
 
   <p style="margin:0 0 26px 0;font:15px Georgia,serif;line-height:1.5;color:#667068;">
-    Zeven positieve ontwikkelingen uit Nederland. Over mensen, gezondheid, wetenschap, natuur, sport en andere dingen die de goede kant op bewegen.
+    Zes positieve ontwikkelingen uit Nederland. Over mensen, gezondheid, wetenschap, natuur, sport en andere dingen die de goede kant op bewegen.
   </p>
 
   {nl_html}
@@ -301,8 +301,7 @@ def create_draft(api_key, subject, body):
         "status": "draft",
         "canonical_url": SITE_URL,
         "description": (
-            "7 positieve verhalen uit Nederland, 6 uit de wereld "
-            "en 3 belangrijke nieuwsitems om bij te blijven."
+            "12 positieve verhalen en 3 belangrijke nieuwsitems om bij te blijven."
         ),
     }
 
