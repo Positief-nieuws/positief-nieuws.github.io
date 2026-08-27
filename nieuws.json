@@ -1,45 +1,48 @@
 {
   "meta": {
-    "edition_date": "2026-08-26",
+    "edition_date": "2026-08-27",
     "generated_from": "kandidaten.json + actuele nieuwsselectie",
     "title": "Positief nieuws",
     "tagline": "Dit gebeurt ook."
   },
   "nl": [
     {
-      "title": "Fleur Jong springt als eerste para-atlete verder dan zeven meter",
-      "teaser": "Fleur Jong sprong in België als eerste para-atlete ooit verder dan zeven meter. Door het ontbreken van dopingcontroles geldt de prestatie niet als officieel wereldrecord.",
+      "title": "Omzet Nederlandse chipindustrie in zes jaar verdubbeld",
+      "teaser": "De Nederlandse chipindustrie draaide vorig jaar 46 miljard euro omzet, ruim twee keer zoveel als in 2019. Ook het aantal banen in de sector groeide sterk.",
       "source": "NOS",
-      "category": "Sport",
-      "url": "https://nos.nl/l/2628303"
+      "category": "Economie & geld",
+      "intro_label": "de sterke groei van de Nederlandse chipindustrie",
+      "url": "https://nos.nl/artikel/2628443-omzet-nederlandse-chipindustrie-in-zes-jaar-verdubbeld"
     },
     {
-      "title": "Nieuw onderzoek biedt hoop: endeldarmkanker vaker te genezen zonder operatie",
-      "teaser": "Nieuw onderzoek wijst erop dat endeldarmkanker vaker zonder operatie te genezen kan zijn.",
-      "source": "Omroep Gelderland",
+      "title": "Nieuw landelijk onderzoeksprogramma moet long-covidzorg verder helpen",
+      "teaser": "Zeven onderzoekers van onder meer Amsterdam UMC, UMC Utrecht en Erasmus MC krijgen financiering om kennis en onderzoek naar long covid en vergelijkbare syndromen voort te zetten.",
+      "source": "NOS",
       "category": "Gezondheid",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNSGJVanpjMl81Z2IyN19sUk85VzlmRTdXUzdpbGY4ZjhEbTRyMDBHZmlXSm1wcFZkcVZHZ0M1UzNYN1RUc0ZkU2x6cjM3bHc4LUZNT3E0TThtVFRWX2FIWWN0eHdqZWxzcXBtZTV2UjBLM3JqX1N0SVd2eHJXSi0xb3JsNWw3eC1zemRZb2JobU9vYUVoS2hsYUFuRmsxUWhFNUtOQ3haNjRXWWpCbVE?oc=5"
+      "intro_label": "nieuw onderzoek naar long covid",
+      "url": "https://nos.nl/artikel/2628349-nederland-krijgt-onderzoeksprogramma-long-covid-voor-gerichte-behandelingen"
     },
     {
-      "title": "Europa geeft plantenveredeling meer ruimte voor innovatie",
-      "teaser": "Europese regels worden versoepeld, waardoor er meer ruimte komt voor innovatie in plantenveredeling.",
-      "source": "Rijksoverheid",
-      "category": "Technologie & innovatie",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNaEZKRkdiNmpSYWZxNHBUNS1tUm1UU0tvMS1uNUVnNzltcDFLOXV3SExOWFhLTTJSSWV1R09JdVo5UUNtX0l3aTU2bm5QaTRIa0ppUFZMQzRIVjA1NUY3dHd1THFmek4wdmZJSXdyTTl2eHhyUE9NRkdxcEFVWnVXQXpXbDhDWHRmODhTUmFiaGtXT21tYTB1NWZ6ZmRPN3dxT1RVQVRVOE0zb2tlQzZKcG1sU29FR0xlcEVrNjc5WmV3MGQx?oc=5"
+      "title": "Volksuniversiteit Groningen groeit in vijf jaar van 70 naar 1.000 cursisten",
+      "teaser": "De Volksuniversiteit Groningen zag het aantal cursisten in vijf jaar tijd groeien van 70 naar 1.000.",
+      "source": "RTV Noord",
+      "category": "Onderwijs & ontwikkeling",
+      "intro_label": "de sterke groei van de Volksuniversiteit Groningen",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNVWJKczFQX0FSaUxNazJPcV9BbVVNYkZuTUEzN3JLVkZqeU1oSHZyQk1uMzc2LWNETVliLTVmN1ZUaDBDRlNQZGUzQzZ3WFVxRTgtMnpGREd3WnRKa3JJcjRaUjZuNVF1MEdLX0hWTmYwVzBWVzhEUElLZnVXY1JGVWlsYlI4bEpkUUM2V3RrOGdSejlqd3NaUnNwMzlucGVPV3pTUVlyQVZONTcwMDZKRHZ6c2FLeTJSWkw0RDR3?oc=5"
     },
     {
-      "title": "Internationale treinverbindingen vanuit Amsterdam groeien verder",
-      "teaser": "Van Kopenhagen tot Parijs: het internationale spoor vanuit Amsterdam breidt zich verder uit.",
-      "source": "NH Nieuws",
-      "category": "Natuur & klimaat",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOUEVYQ0I3M0c3dGtCNEhhblQzN3N6ZzBEU3R0b3ZLZmtsekEtMld6X2s5azc2aTNvalM1SEhWTDJNdGxOcDMtME5MT0FqTWNnRkhiOERMWGVtZ3RyVVpOR0I2aTkxdWRYYWp4SGI0a3FPYnI1WlAtdzhUQksxUk5WRHVaZE1VbXJkWHNPTENyYng0ZU15Rm5kdDR1Sk1rQXYyWnZzWnpha1NjRUZTM1REN2RkdEZCdw?oc=5"
-    },
-    {
-      "title": "Belangstelling voor thuisbatterijen groeit in Waalre",
-      "teaser": "Steeds meer inwoners van Waalre tonen belangstelling voor thuisbatterijen.",
+      "title": "Test helpt mantelzorgers in Etten-Leur beter zicht te krijgen op hun zorgtaken",
+      "teaser": "Een test in Etten-Leur helpt mantelzorgers om hun zorgtaken en belasting beter in beeld te krijgen.",
       "source": "Omroep Brabant",
-      "category": "Technologie & innovatie",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQRC10QU1YaW00V05hU1VLRWtRc3VlQnAzRDlkQUJJVjVXanh1ZlRHU1o0NHh2V0x3QlRHb3VQWGFyaXcyN3VJc2RHWUtyTVRQc3dtTkE2ZWg3Zm1KdkJ0RGo3SFRjVVpZak53MjB0NFhEbEkxekMyTkZfNkk1X00tanhDUEszdUN6UTJpMEpIdWZpZmotMUl6ajMxWXo?oc=5"
+      "category": "Mens & samenleving",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPekdzSjFnM3B5bmN0REFiRndmRnFkVHMyRndnV1VxZEFuQkgtYk9ETjR5MkVkaTlDd0VyaThWUjRqZTduVEZ6cXZLeTlEMzdkRDBRTWIwY1NGRVJXVVkzMEVfeUVtS08yZG5pSTVxUjJmYjhLT3NqOF9ZWHF0dm1kZG5VZEpMMVVKNnQxcVN3a0pjdHg3VjFsQ3hDRC1tTnUzNDEtTnZ5UFRGZ3M?oc=5"
+    },
+    {
+      "title": "Roeiers veilig uit het water gered",
+      "teaser": "Roeiers zijn uit het water gered. Een klein lokaal bericht met vooral een goede afloop.",
+      "source": "Omroep Gelderland",
+      "category": "Mens & samenleving",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQSUhQd3pnT0E4eDB1eHQyRnBVbG8xaGsySlQ5MmdHa3YyVXhJVDh3WXZndEdzZVc1QXBEUm1UM0k2U1hRcmdJVnJmbWZrNWc0WU8zanBRSENQd2FQOWRLMXRpNmR3aElRTThFdWpmVjlhZU91OV9Bd084Qnl0S2R2aS1xUGM?oc=5"
     },
     {
       "title": "Jan (77) kweekt reuzenpompoen voor het NK",
@@ -58,25 +61,25 @@
       "url": "https://www.bbc.co.uk/news/articles/c8xklkeyx88o?at_medium=RSS&at_campaign=rss"
     },
     {
-      "title": "Aanpassing van immuuncellen maakt CAR-T-therapie sterker tegen botkanker bij kinderen",
-      "teaser": "Onderzoekers van St. Jude ontdekten dat het uitschakelen van het gen Regnase-1 gemodificeerde immuuncellen effectiever maakt tegen teruggekeerde osteosarcoom.",
+      "title": "AI helpt nieuwe materialen ontwerpen die ook buiten het lab werken",
+      "teaser": "MIT-onderzoekers ontwikkelden een AI-tool die kansrijke materiaalontwerpen beter kan selecteren op chemische stabiliteit en zo veel tijd en testwerk kan besparen.",
+      "source": "MIT News",
+      "category": "Technologie & innovatie",
+      "url": "https://news.mit.edu/2026/ai-helps-design-new-materials-that-work-in-real-world-0826"
+    },
+    {
+      "title": "Precisiegeneeskunde wijst nieuw aangrijpingspunt bij blaaskanker aan",
+      "teaser": "Onderzoekers brachten een eiwit en bijbehorende signaalroute verder in kaart die betrokken zijn bij de groei van blaaskanker en mogelijk de werking van chemotherapie beïnvloeden.",
       "source": "Medical Xpress",
       "category": "Gezondheid",
-      "url": "https://medicalxpress.com/news/2026-08-immune-car-cell-therapy-pediatric.html"
+      "url": "https://medicalxpress.com/news/2026-08-precision-medicine-influential-protein-bladder.html"
     },
     {
-      "title": "Eerste parachutetest voor ESA-missie Draco succesvol",
-      "teaser": "De eerste parachutedroptest voor ESA’s Draco-missie is succesvol verlopen.",
-      "source": "ESA",
-      "category": "Wetenschap",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNTmJ3QzZUMlFpNmhfSFd2clRUUE9XdHJCcVF1TEc5RHJjQlhTZE42MkN2ZVFWb19MOFFZU0VZWkE0UFVUOHh3cnltUDRvR1plSU9SakFkY2NMbEVobG1Fdjd2Y0gtZFVubXJ5QW9zam5LbVQtbnoyaVl4eXdqdDQtV2M3UW5jYUg4X3RlOURRUDFYU2J3Ty1HaHhLYTY2Ukcwb01DRGd3?oc=5"
-    },
-    {
-      "title": "FAO maakt klimaatinstrumenten open source",
-      "teaser": "De klimaatinstrumenten CAVA en EX-ACT van de FAO zijn voortaan als open source beschikbaar.",
-      "source": "FAO",
+      "title": "Nieuwe oplossingen gezocht om versnipperde natuurgebieden weer te verbinden",
+      "teaser": "UNDP zoekt innovatieve oplossingen voor het herstellen en opnieuw verbinden van natuurlijke leefgebieden.",
+      "source": "UNDP",
       "category": "Natuur & klimaat",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxONm02cVhfVDJRbmwzOGV3Z0lna1ZHVnZWcDhJTHRaRVlWNVlyOGh3NUxLRHpYb0pWWTh0TFpHUmJ5SmlJaklYR1ZGaFNWaVQxbFdHT0tZSC1XMTJDblFMTmpRQXBoOUNtRm5qbDNPMlNMWVBydmtLX0lzVFJXbHo0OS1RcmU4eXoyYjlrMmRKUXVqUXl0cGtSaFdtYUtxbzZoZFZyTjRkSmJWVENPZlBOSFZHbUE5N3I3NUN6b0NhQkU?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNQ3lYLVlrajEyNzJyZUp5blR5bjhfOXQ4d0VBN290ZFZBQjAwTHY5ZWlCQkgtbkw5T0FnQ2hWSE9hNF9BQVNjU0s2QXVSVUh1V0VrcHJ6LUJqUDRoNWcwX0s3ZXU1RXB0aFM3cmZnVmFKQmhmU051bC1hSURVN2JXSjBhWjQ1R3VTdzA5NWZzbVlMUm9TX3hPVmRCbDdybmRZelM2NA?oc=5"
     },
     {
       "title": "Zuid-Korea en VN starten nieuwe fase van herstelhulp in Syrië",
@@ -86,34 +89,34 @@
       "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPZTY4Z1hQdmQ1WVFHS1FuOHRObnotb1hjQUlGQjdMQXJUZzJOSFE2S1doZ0JwYVBZNzdlNE5JcG9iLVpmU3dHcnVJcWYxbVBpb0ZGc0tnMVVIOVY0bzA0QnBOODVEYW52X3o3QW1HaU5wTFNsMTloeEIwRnZwTktDRDZoUXQ4UlJJeV90MGpJR2hNcXV0QmhKUnVfdWtxOWVpeFhMYkljUW05ajhFRlVjWkU0Z1BWY3M3UExaVkVId3cyc1N6S29iTTF6dkdsZE1uWWhaQTBQd0ZnZDlHcFFVMw?oc=5"
     },
     {
-      "title": "Man levend gered na vijftien dagen vast te hebben gezeten in onderwatergrot",
-      "teaser": "Een man is levend gered nadat hij vijftien dagen vastzat in een onderwatergrot.",
-      "source": "Good News Network",
-      "category": "Mens & samenleving",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOZGdMZlFyNTByTTNqVDNtd1U0Vlc5X3RSM1gzUlN0WUVyZTBZb1hHU1pTSTZQUnJZck1FaVhURzhnT19kY1RxTFNiSHR5R2lQQU9XZGdNX1lnT1lqTTdCWkc0Z0t5MldCdi1wc2pKQmx2QlZ6bHE1ZS12NGRDZGd1UEt1SXdpaXNieE1TbHJRUGJ0QWYzQkpkUG50c2RibU9iOXVuWmhLcEdOUHNkQ3BUZVB5LUY4M3ZTaHhmNkxEQjY?oc=5"
+      "title": "Lokale kennis leidt tot herontdekking van vissoort die veertig jaar niet was gezien",
+      "teaser": "Lokale kennis hielp onderzoekers bij de herontdekking van de spinach pipefish, een vissoort die al vier decennia niet meer was waargenomen.",
+      "source": "Mongabay",
+      "category": "Dieren",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNZ1RuMnM4RGxCaHhTYTdFdnJ6WU9VazliSGNRa2NMcWptNXUxblIwT1ROVUo0STQ0dWtWRS1fbHFpUTFDb2ZDWmtORGxVM3JfblZRRlBEVERuZjcxSjB3cUg2QmVLSVJFRFducTJJa01rRnFlS056UnRzdVZ0V2h3aXNyRFNsNWNLMV9yVnl1STd3bWJreXE5a0Q4alp0NG9fZE90QVpUZ2JUQ1VUWmlNaC1vZ1PSAboBQVVfeXFMTXl1QnNKMjRDbDRRYzRheUwyUzNqYktBRmNnT25KS3c2dmdudWZDNVA5LV9JYnUyZFVfVWJ3aHBQTVdjX2I4UGh2dWtNUEQzSExQV2dZVkFrejBDcG01TFVZQ1hjUW1ncUEzaXRVXzlfOFhFdUNwRFYxLU9oOFpIVkpsakFtTnpzc1Vyd0V1eE9oUVdiTWtfWTl5QkVJZnVkOExEZXMtUVhMd0lFXzBlUnJDTWFFMmoyWW5R?oc=5"
     }
   ],
   "headlines": [
     {
-      "title": "NOS-onderzoek: zeker twaalf gevallen van langdurige, ernstige kindermishandeling",
-      "teaser": "NOS vond in openbare vonnissen van de afgelopen vijf jaar minstens twaalf zaken met langdurige en systematische ernstige kindermishandeling. Deskundigen noemen het een blinde vlek en wijzen op het belang van betere signalering.",
+      "title": "Zomer 2026 is de warmste ooit gemeten in Nederland",
+      "teaser": "Met gemiddeld 19,3 graden in De Bilt is deze zomer nu al de warmste sinds de metingen begonnen in 1901. Het vorige record uit 2018 wordt met bijna een halve graad verbroken.",
       "source": "NOS",
       "category": "Binnenland",
-      "url": "https://nos.nl/artikel/2628332-zeker-twaalf-gevallen-van-kindermarteling-in-nederland-het-is-een-blinde-vlek"
+      "url": "https://nos.nl/artikel/2628446-zomer-2026-is-de-warmste-ooit-gemeten-in-nederland"
     },
     {
-      "title": "Parlementaire enquête Corona gaat verder met rol van de Tweede Kamer",
-      "teaser": "De enquêtecommissie hoort vandaag Fleur Agema en Lisa Westerveld. Deze verhoorweek draait om de vraag hoe de Tweede Kamer tijdens de coronacrisis haar controlerende en medewetgevende rol kon vervullen.",
-      "source": "Tweede Kamer",
-      "category": "Politiek",
-      "url": "https://www.tweedekamer.nl/nieuws/kamernieuws/zevende-verhoorweek-enquetecommissie-corona"
-    },
-    {
-      "title": "Kabinet, burgemeesters, OM en politie trekken één lijn bij snelwegprotesten",
-      "teaser": "Na recente gevaarlijke situaties is afgesproken dat het blokkeren of bewust vertragen van verkeer op snelwegen in principe strafrechtelijk wordt aangepakt. De regels gelden voor alle actiegroepen.",
+      "title": "Moord en doodslag op laagste niveau in dertig jaar, maar partnergeweld blijft hardnekkig patroon",
+      "teaser": "In 2025 kwamen 103 mensen door moord of doodslag om het leven, het laagste aantal sinds het begin van de registratie. Bij vrouwelijke slachtoffers is in ongeveer de helft van de gevallen een (ex-)partner verdachte of dader.",
       "source": "NOS",
       "category": "Binnenland",
-      "url": "https://nos.nl/artikel/2628306-kabinet-en-burgemeesters-trekken-een-lijn-in-snelwegprotest-gevaar-is-onacceptabel"
+      "url": "https://nos.nl/artikel/2628444-bij-de-helft-van-de-gedode-vrouwen-is-ex-partner-in-beeld-als-dader"
+    },
+    {
+      "title": "Nederland haalt vuldoel gasvoorraad voor winter niet",
+      "teaser": "De gasopslag komt voor november niet op het gewenste niveau van 80 procent. De kans op een fysiek tekort wordt klein geacht, maar bij een strenge winter of storingen is Nederland kwetsbaarder.",
+      "source": "NOS",
+      "category": "Economie",
+      "url": "https://nos.nl/artikel/2628343-gasvoorraad-deze-winter-niet-volledig-gevuld-weinig-zorgen-over-tekort"
     }
   ]
 }
