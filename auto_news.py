@@ -5,14 +5,14 @@ Goed nieuws - kandidaten 0.1
 Doel:
 - dagelijks breed recente potentiële Goed nieuws-verhalen verzamelen;
 - simpele technische rommel verwijderen;
-- géén definitieve 7+7 redactionele selectie doen;
+- géén definitieve 6+6 redactionele selectie doen;
 - kandidaten.json klaarzetten voor een AI-redacteur of handmatige selectie.
 
 Bewust NIET in dit script:
 - bepalen of iets "echt goed nieuws" is;
 - Nederlands lezersperspectief inhoudelijk beoordelen;
 - complexe semantische categorisatie;
-- 7+7 forceren.
+- 6+6 forceren.
 
 Dat is precies het werk waar een taalmodel later beter in is.
 """
@@ -28,6 +28,7 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 from html import unescape
+from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -232,6 +233,14 @@ SOURCES = [{'publisher': 'NOS',
   'domain': 'humanitas.nl',
   'weight': 2.1,
   'hint': 'Mens & samenleving'},
+ {'publisher': 'NU.nl',
+  'region': 'nl',
+  'mode': 'curated_html',
+  'url': 'https://www.nu.nl/goed-nieuws',
+  'weight': 2.3,
+  'hint': None,
+  'curation_bonus': 25,
+  'curated_source': 'NU.nl Goed nieuws'},
  {'publisher': 'NU.nl', 'region': 'nl', 'mode': 'google_site', 'domain': 'nu.nl', 'weight': 2.3, 'hint': None},
  {'publisher': 'RTL Nieuws', 'region': 'nl', 'mode': 'google_site', 'domain': 'rtl.nl', 'weight': 2.3, 'hint': None},
  {'publisher': 'RTV Oost', 'region': 'nl', 'mode': 'google_site', 'domain': 'rtvoost.nl', 'weight': 2.2, 'hint': None},
@@ -550,16 +559,107 @@ def google_site_feed(domain, region):
     q = f"site:{domain} ({cues}) when:7d"
     return "https://news.google.com/rss/search?q=" + urllib.parse.quote_plus(q) + "&hl=en-US&gl=US&ceid=US:en"
 
+
+class NuGoodNewsParser(HTMLParser):
+    """
+    Haalt artikel-links en zichtbare titels uit de NU.nl Goed nieuws-pagina.
+
+    Publisher blijft 'NU.nl', zodat MAX_PER_SOURCE gewoon blijft gelden.
+    De curation_bonus beïnvloedt alleen de voorselectie, niet de eindredactie.
+    """
+
+    ARTICLE_PATH = re.compile(r"/\d{6,8}/[^/?#]+\.html$")
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.items = []
+        self._seen = set()
+        self._href = None
+        self._label = ""
+        self._text = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag.lower() != "a":
+            return
+
+        attr = dict(attrs)
+        href = (attr.get("href") or "").strip()
+        if not href:
+            return
+
+        absolute = urllib.parse.urljoin("https://www.nu.nl/", href)
+        parsed = urlparse(absolute)
+
+        if parsed.netloc.lower() not in {"nu.nl", "www.nu.nl"}:
+            return
+        if not self.ARTICLE_PATH.search(parsed.path):
+            return
+
+        self._href = absolute.split("#", 1)[0]
+        self._label = clean(attr.get("aria-label") or attr.get("title") or "")
+        self._text = []
+
+    def handle_data(self, data):
+        if self._href:
+            self._text.append(data)
+
+    def handle_endtag(self, tag):
+        if tag.lower() != "a" or not self._href:
+            return
+
+        title = clean(" ".join(self._text)) or self._label
+        href = self._href
+
+        self._href = None
+        self._label = ""
+        self._text = []
+
+        if len(title) < 12:
+            return
+        if title.lower() in {"lees meer", "bekijk artikel", "naar artikel"}:
+            return
+
+        key = normurl(href)
+        if key in self._seen:
+            return
+        self._seen.add(key)
+
+        self.items.append({
+            "title": title,
+            "url": href,
+            "summary": "",
+            "published": None,
+        })
+
+
+def parse_nu_good_news(raw, max_items=30):
+    """
+    De overzichtspagina is al redactioneel als 'Goed nieuws' gecureerd.
+    We nemen alleen de eerste actuele artikel-links mee.
+    """
+    text = raw.decode("utf-8", errors="replace")
+    parser = NuGoodNewsParser()
+    parser.feed(text)
+    return parser.items[:max_items]
+
+
 def source_url(src):
     if src["mode"] == "rss":
         return src["url"]
     return google_site_feed(src["domain"], src["region"])
 
-def fetch(url):
-    req = urllib.request.Request(url, headers={
-        "User-Agent": USER_AGENT,
-        "Accept": "application/rss+xml,application/atom+xml,application/xml,text/xml,*/*",
-    })
+def fetch(url, html=False):
+    headers = {
+        "User-Agent": (
+            "Mozilla/5.0 (compatible; PositiefNieuwsBot/0.2; +https://positief-nieuws.github.io/)"
+            if html else USER_AGENT
+        ),
+        "Accept": (
+            "text/html,application/xhtml+xml,*/*"
+            if html else "application/rss+xml,application/atom+xml,application/xml,text/xml,*/*"
+        ),
+    }
+    req = urllib.request.Request(url, headers=headers)
     with urllib.request.urlopen(req, timeout=20) as r:
         return r.read()
 
@@ -642,7 +742,10 @@ def collect():
 
     for src in SOURCES:
         try:
-            items = parse_feed(fetch(source_url(src)))
+            if src["mode"] == "curated_html":
+                items = parse_nu_good_news(fetch(src["url"], html=True))
+            else:
+                items = parse_feed(fetch(source_url(src)))
         except Exception as exc:
             errors.append(f'{src["publisher"]}: {type(exc).__name__}: {exc}')
             continue
@@ -669,7 +772,7 @@ def collect():
 
             signal = cue_score(title, summary, src["region"])
             # Directe RSS-feeds zijn breed. Zonder enig positief signaal worden ze te groot.
-            # Voor Google-site-search is de query zelf al positief gericht, dus daar is 0 toegestaan.
+            # Voor Google-site-search en gecureerde Goed nieuws-pagina’s is 0 toegestaan.
             if src["mode"] == "rss" and signal <= 0:
                 continue
 
@@ -685,6 +788,8 @@ def collect():
                 "category_hint": category_hint(title, summary, src.get("hint")),
                 "signal_score": signal,
                 "source_weight": src.get("weight", 1.0),
+                "curation_bonus": src.get("curation_bonus", 0),
+                "curated_source": src.get("curated_source"),
                 "discovery": src["mode"],
             })
 
@@ -699,7 +804,12 @@ def rank(item):
             freshness = 3
         elif item["hours_old"] <= 96:
             freshness = 1
-    return item["signal_score"] * 5 + item["source_weight"] * 3 + freshness
+    return (
+        item["signal_score"] * 5
+        + item["source_weight"] * 3
+        + freshness
+        + item.get("curation_bonus", 0)
+    )
 
 def shortlist(items, region):
     pool = [x for x in items if x["region"] == region]
@@ -746,13 +856,14 @@ def main():
         },
         "editorial_brief": {
             "audience": "Nederlandse lezers",
-            "target": "Kies later 7 Nederlandse/relevante verhalen en 7 internationale verhalen.",
+            "target": "Kies later 6 Nederlandse/relevante verhalen en 6 internationale verhalen.",
             "principles": [
                 "Echt positief nieuws, niet alleen een positief woord in een negatieve kop.",
                 "Nederlandse selectie moet relevant zijn voor Nederlandse lezers.",
                 "Universele vooruitgang in gezondheid, wetenschap, natuur, dieren en technologie mag ook.",
                 "Geen dubbel nieuwsfeit.",
                 "Bron- en categorievariatie.",
+                "Gecureerde goed-nieuwsbronnen krijgen extra voorrang in de voorselectie, maar worden niet automatisch geselecteerd.",
                 "Geen vacatures, losse weersverwachtingen, celebrity-fluff of puur triviale uitslagen.",
                 "Eerste verhaal moet direct prettig en positief voelen.",
             ],
