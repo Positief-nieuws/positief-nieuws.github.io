@@ -120,11 +120,11 @@ def build_share_block():
   <div style="margin-top:36px;padding:26px;border-radius:16px;background:#17382b;text-align:center;">
 
     <p style="margin:0 0 8px 0;font:700 24px Georgia,serif;color:#ffffff;">
-      Ken je iemand die dit ook kan gebruiken?
+      Ken je iemand die ook wel nieuws wil lezen zonder eindeloos te blijven scrollen?
     </p>
 
     <p style="margin:0 0 20px 0;font:15px Arial,sans-serif;line-height:1.5;color:#dfe8e2;">
-      Stuur Positief nieuws gerust door.
+      Deel deze editie gerust.
     </p>
 
     <table
@@ -294,16 +294,16 @@ def build_body(data, nl, international, headlines):
     </p>
   </div>
 
-  <p style="margin:0 0 10px 0;font:16px Georgia,serif;line-height:1.6;color:#445149;">
-    Positief nieuws laat zien wat er óók gebeurt: ontwikkelingen die vooruitgaan, zonder weg te kijken van het grote nieuws.
-  </p>
-
   <p style="margin:0 0 10px 0;font:700 16px Georgia,serif;line-height:1.6;color:#17382b;">
-    {esc(today_intro_text(nl))}
+    Positief nieuws laat zien wat er óók gebeurt.
   </p>
 
-  <p style="margin:0 0 34px 0;font:16px Georgia,serif;line-height:1.6;color:#445149;">
-    En we sluiten af met drie onderwerpen die vandaag de Nederlandse nieuwskoppen domineren.
+  <p style="margin:0 0 10px 0;font:16px Georgia,serif;line-height:1.6;color:#445149;">
+    In een paar minuten weet je wat er goed gaat én wat je verder moet weten. Zonder eindeloos scrollen.
+  </p>
+
+  <p style="margin:0 0 34px 0;font:700 16px Georgia,serif;line-height:1.6;color:#17382b;">
+    {esc(today_intro_text(nl))}
   </p>
 
   <p style="margin:0 0 6px 0;font:700 12px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#ed6a38;">
@@ -354,7 +354,11 @@ def build_body(data, nl, international, headlines):
 
   {share_block}
 
-  <p style="margin:30px 0 0 0;text-align:center;font:12px Arial,sans-serif;color:#667068;">
+  <p style="margin:30px 0 0 0;text-align:center;font:14px Georgia,serif;line-height:1.5;color:#445149;">
+    Dit was het voor vandaag. Je bent weer bij. Geniet van je dag.
+  </p>
+
+  <p style="margin:12px 0 0 0;text-align:center;font:12px Arial,sans-serif;color:#667068;">
     Positief nieuws. Dit gebeurt ook.
   </p>
 
