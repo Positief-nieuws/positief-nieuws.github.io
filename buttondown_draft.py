@@ -96,20 +96,16 @@ def article_html(article):
         </p>
 
         <h2 style="margin:0 0 10px 0;font:700 25px Georgia,serif;line-height:1.12;color:#17382b;">
-          {title}
+          <a
+            href="{url}"
+            style="color:#17382b;text-decoration:none;"
+          >
+            {title}
+          </a>
         </h2>
 
         <p style="margin:0 0 12px 0;font:16px Georgia,serif;line-height:1.55;color:#445149;">
           {teaser}
-        </p>
-
-        <p style="margin:0;">
-          <a
-            href="{url}"
-            style="font:700 14px Arial,sans-serif;color:#d95727;text-decoration:none;"
-          >
-            Lees het verhaal →
-          </a>
         </p>
       </div>
     """
