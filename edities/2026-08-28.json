@@ -1,0 +1,122 @@
+{
+  "meta": {
+    "edition_date": "2026-08-28",
+    "generated_from": "kandidaten.json + actuele nieuwsselectie",
+    "title": "Positief nieuws",
+    "tagline": "Dit gebeurt ook."
+  },
+  "nl": [
+    {
+      "title": "Dolfijnen gered dankzij bijzondere reddingsactie",
+      "teaser": "Een bijzondere reddingsactie heeft voorkomen dat dolfijnen moesten worden ingeslapen.",
+      "source": "RTL Nieuws",
+      "category": "Dieren",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQNDF1NWFsZEpuUnJldlZTRGh2ZkFhemxOeEtvZnFJbmh3eTJpT0F5czc1MkxfYzRtbl9GbjRjMFdtZm8tbHhRM1hSYjJjeTB0TGF2dWhnMHpZZ25jcUZDdk05cThaQU1jaVh6dWhGT01WTzdlQmxKTWVSVmIwMC11ZmhqWWtrN282UVdJeVV0bk5BbTdpemRHcXVGWjJ6eGxoUmtNeXowOXZVV2xBTThueTRPbHJ3aTRoY3c?oc=5",
+      "intro_label": "de bijzondere reddingsactie voor dolfijnen"
+    },
+    {
+      "title": "Broeders-Bol verpulvert haar eigen Nederlands record op de 800 meter",
+      "teaser": "Femke Broeders-Bol liep in Zürich 1.54,71 en verbeterde haar eigen Nederlandse record met zeven tienden.",
+      "source": "NOS",
+      "category": "Sport",
+      "url": "https://nos.nl/l/2628564",
+      "intro_label": "het nieuwe Nederlandse record van Broeders-Bol"
+    },
+    {
+      "title": "Internationale treinverbindingen vanuit Amsterdam blijven groeien",
+      "teaser": "Nieuwe en geplande verbindingen richting onder meer Kopenhagen, Malmö, Parijs en Berlijn geven internationaal treinreizen vanuit Amsterdam een nieuwe impuls.",
+      "source": "NH Nieuws",
+      "category": "Natuur & klimaat",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOUEVYQ0I3M0c3dGtCNEhhblQzN3N6ZzBEU3R0b3ZLZmtsekEtMld6X2s5azc2aTNvalM1SEhWTDJNdGxOcDMtME5MT0FqTWNnRkhiOERMWGVtZ3RyVVpOR0I2aTkxdWRYYWp4SGI0a3FPYnI1WlAtdzhUQksxUk5WRHVaZE1VbXJkWHNPTENyYng0ZU15Rm5kdDR1Sk1rQXYyWnZzWnpha1NjRUZTM1REN2RkdEZCdw?oc=5",
+      "intro_label": "de groei van internationale treinverbindingen vanuit Amsterdam"
+    },
+    {
+      "title": "Nieuwe oplossingen moeten bedrijven helpen omgaan met een vol stroomnet",
+      "teaser": "RVO brengt praktische oplossingen voor netcongestie onder de aandacht, zoals slimmer sturen van elektriciteitsgebruik en batterijopslag.",
+      "source": "RVO",
+      "category": "Technologie & innovatie",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQZ0FRa1FzYmJpMnVvSy1QSzZhX3drVFZXQ1d0VW5rTHh3bVowM1Vid0RsYjJkZDByV1lSMXQ3OHNUX2ZlenhjM1NYUDIycGZMN0cxQzFXWEVydDhHcG1TeElHYjkyUElXb1paU0Q2TnpjTnh0YmRZc0wyZXcwTHROT2o5UGtUeWM?oc=5"
+    },
+    {
+      "title": "Nieuwe Europese regels geven plantenveredeling meer ruimte",
+      "teaser": "Door versoepelde Europese regels kunnen nieuwe plantenrassen sneller worden ontwikkeld, bijvoorbeeld gewassen die beter bestand zijn tegen droogte en ziekten.",
+      "source": "Rijksoverheid",
+      "category": "Wetenschap",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNaEZKRkdiNmpSYWZxNHBUNS1tUm1UU0tvMS1uNUVnNzltcDFLOXV3SExOWFhLTTJSSWV1R09JdVo5UUNtX0l3aTU2bm5QaTRIa0ppUFZMQzRIVjA1NUY3dHd1THFmek4wdmZJSXdyTTl2eHhyUE9NRkdxcEFVWnVXQXpXbDhDWHRmODhTUmFiaGtXT21tYTB1NWZ6ZmRPN3dxT1RVQVRVOE0zb2tlQzZKcG1sU29FR0xlcEVrNjc5WmV3MGQx?oc=5"
+    },
+    {
+      "title": "WK-brons voor roeister Femke van de Vliet op de Bosbaan",
+      "teaser": "Femke van de Vliet bezorgde Nederland op het WK roeien in Amsterdam de eerste medaille met brons in de lichte skiff.",
+      "source": "NOS",
+      "category": "Sport",
+      "url": "https://nos.nl/l/2628530"
+    }
+  ],
+  "int": [
+    {
+      "title": "Hersteld moerasgebied wordt toevluchtsoord voor zeldzame fuut",
+      "teaser": "Een voormalig stortgebied voor baggerslib in Cheshire is na natuurherstel uitgegroeid tot de belangrijkste Britse broedplek voor de zeldzame geoorde fuut.",
+      "source": "The Guardian",
+      "category": "Natuur & klimaat",
+      "url": "https://www.theguardian.com/environment/2026/aug/28/woolston-eyes-cheshire-wetland-black-necked-grebe"
+    },
+    {
+      "title": "Leesprogramma verdrievoudigt vooruitgang bij kinderen met leesproblemen",
+      "teaser": "Een grootschalig Canadees leesprogramma verdrievoudigde volgens voorlopige resultaten de leervooruitgang van de meeste deelnemende kinderen in vijf maanden.",
+      "source": "Phys.org",
+      "category": "Onderwijs & ontwikkeling",
+      "url": "https://phys.org/news/2026-08-groundbreaking-literacy-triples-struggling-young.html"
+    },
+    {
+      "title": "RNA-aanpak remt groei van tumorcellen in nieuw onderzoek",
+      "teaser": "Onderzoekers van Umeå University wisten de groei van tumorcellen af te remmen door genetische instructies voor een belangrijk kankergerelateerd eiwit te blokkeren.",
+      "source": "Medical Xpress",
+      "category": "Gezondheid",
+      "url": "https://medicalxpress.com/news/2026-08-undruggable-cancer-rna-based-strategy.html"
+    },
+    {
+      "title": "Ghana werkt aan duurzamere koeling met nieuw klimaatplan",
+      "teaser": "Een nieuw programma moet Ghana helpen overstappen op energiezuinigere en klimaatvriendelijkere koeltechnologie.",
+      "source": "UNDP",
+      "category": "Technologie & innovatie",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQeGRDMUFUZ0ZRblNETERjNkd5S3FyWFlNSmwtYVVoY2dsd05aY1F1LTQyOEFfM1hDYV9UT2NwYjFrRWRHclVRMDQ0aXotZk5ybEQ0WXZWQno2UmVUTWZGOU11Q2hwa2IwSF9qOFdvQ1ZVQTA2NFpYcmlKUHlkTks2ZnUzOVVvVEs4c0d3WlByQ0czM1VtaDVn?oc=5"
+    },
+    {
+      "title": "Zink en zwavel kunnen eiwitgehalte van soja duurzaam verhogen",
+      "teaser": "Onderzoek laat zien hoe gerichte inzet van zink en zwavel kan bijdragen aan eiwitrijkere soja en een duurzamere teelt.",
+      "source": "Phys.org",
+      "category": "Voeding & leefstijl",
+      "url": "https://phys.org/news/2026-08-boosting-soybean-protein-zinc-sulfur.html"
+    },
+    {
+      "title": "Eerste parachutetest voor ESA-missie Draco succesvol",
+      "teaser": "De Europese ruimtevaartorganisatie ESA heeft een eerste parachutedroptest voor de Draco-missie succesvol afgerond.",
+      "source": "ESA",
+      "category": "Wetenschap",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNTmJ3QzZUMlFpNmhfSFd2clRUUE9XdHJCcVF1TEc5RHJjQlhTZE42MkN2ZVFWb19MOFFZU0VZWkE0UFVUOHh3cnltUDRvR1plSU9SakFkY2NMbEVobG1Fdjd2Y0gtZFVubXJ5QW9zam5LbVQtbnoyaVl4eXdqdDQtV2M3UW5jYUg4X3RlOURRUDFYU2J3Ty1HaHhLYTY2Ukcwb01DRGd3?oc=5"
+    }
+  ],
+  "headlines": [
+    {
+      "title": "Meer dan 900 klachten over makelaars en oneerlijke huizenverkoop",
+      "teaser": "Vereniging Eigen Huis kreeg sinds februari meer dan 900 meldingen over onder meer biedingen na deadlines, onduidelijke taxaties en druk om hoger te bieden. De organisatie wil wettelijke regels voor het koopproces.",
+      "source": "NOS",
+      "category": "Binnenland",
+      "url": "https://nos.nl/artikel/2628595-vereniging-eigen-huis-te-veel-klachten-over-makelaars-en-oneerlijke-huizenverkoop"
+    },
+    {
+      "title": "Congo begint vaccinatiecampagne tijdens grootste ebola-uitbraak ooit",
+      "teaser": "Congo is begonnen met vaccineren tegen ebola. De huidige uitbraak is de dodelijkste in de geschiedenis van het land; onzeker is nog hoe goed het gebruikte vaccin beschermt tegen deze virusvariant.",
+      "source": "NOS",
+      "category": "Buitenland",
+      "url": "https://nos.nl/artikel/2628586-congo-begint-met-vaccineren-tegen-grootste-ebola-uitbraak-ooit"
+    },
+    {
+      "title": "Nieuwe Nederlandse massadonor blijkt minstens 121 kinderen te hebben",
+      "teaser": "Nieuwsuur sprak moeders die zeggen te zijn misleid door een Nederlandse spermadonor die minstens 121 kinderen heeft verwekt en nog altijd actief zou zijn. De zaak roept opnieuw vragen op over toezicht en regels rond donorzaad.",
+      "source": "NOS / Nieuwsuur",
+      "category": "Binnenland",
+      "url": "https://nos.nl/nieuwsuur/artikel/2628520-nieuwe-massadonor-met-meer-dan-honderd-kinderen-we-moeten-deze-man-stoppen"
+    }
+  ]
+}
