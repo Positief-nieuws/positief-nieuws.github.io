@@ -536,7 +536,8 @@
     }
 
     .archive-page,
-    .about-page {
+    .about-page,
+    .privacy-page {
       padding: 76px 0 96px;
     }
 
@@ -549,7 +550,8 @@
     }
 
     .archive-note,
-    .about-copy {
+    .about-copy,
+    .privacy-copy {
       max-width: 670px;
       color: #3f4742;
       font-size: .95rem;
@@ -578,8 +580,45 @@
       font-weight: 800;
     }
 
-    .about-copy { margin-top: 28px; }
-    .about-copy a { color: var(--green-dark); font-weight: 700; }
+    .about-copy,
+    .privacy-copy { margin-top: 28px; }
+
+    .about-copy a,
+    .privacy-copy a { color: var(--green-dark); font-weight: 700; }
+
+    .about-copy h2,
+    .privacy-copy h2 {
+      margin: 34px 0 10px;
+      color: #111512;
+      font-size: 1.25rem;
+      line-height: 1.15;
+      letter-spacing: -.025em;
+    }
+
+    .contact-block {
+      margin-top: 34px;
+      padding-top: 26px;
+      border-top: 1px solid var(--line);
+    }
+
+    .contact-email {
+      display: inline-block;
+      margin-top: 4px;
+    }
+
+    .privacy-copy ul {
+      margin: 12px 0 20px 20px;
+      padding: 0;
+    }
+
+    .privacy-copy li { margin: 7px 0; }
+
+    .privacy-updated {
+      margin-top: 30px;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .7rem;
+    }
 
     .site-footer {
       padding: 0 0 34px;
@@ -587,6 +626,12 @@
       font-family: Arial, Helvetica, sans-serif;
       font-size: .62rem;
       text-align: center;
+    }
+
+    .site-footer a {
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 2px;
     }
 
     @media (max-width: 760px) {
@@ -815,12 +860,56 @@
         <p>Geen eindeloze feed. Geen clickbait om je zo lang mogelijk vast te houden. Gewoon een compacte nieuwsselectie en daarna weer verder met je dag.</p>
         <p>Nieuwe edities verschijnen op maandag, woensdag en vrijdag.</p>
         <p><a href="#nieuwsbrief" id="about-newsletter-link">Ontvang Positief nieuws in je inbox →</a></p>
+
+        <div class="contact-block">
+          <h2>Contact</h2>
+          <p>Een tip, vraag, foutje gezien of gewoon iets te melden? Stuur gerust een mail.</p>
+          <p>
+            <a
+              class="contact-email"
+              href="mailto:positiefnieuws@buttondown.email?subject=Bericht%20voor%20Positief%20nieuws"
+            >positiefnieuws@buttondown.email →</a>
+          </p>
+          <p><a href="#privacy">Lees de privacyverklaring →</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="privacy-view" class="app-view privacy-page" hidden>
+    <div class="content-shell">
+      <p class="section-kicker">Privacy</p>
+      <h1 class="page-title">Privacyverklaring</h1>
+
+      <div class="privacy-copy">
+        <p>Positief nieuws probeert zo weinig mogelijk persoonsgegevens te verzamelen. Hieronder staat in gewone taal welke gegevens we gebruiken en waarom.</p>
+
+        <h2>Nieuwsbrief</h2>
+        <p>Als je je inschrijft voor de nieuwsbrief, gebruiken we je e-mailadres om de nieuwsbrief te versturen en je inschrijving te beheren. Hiervoor gebruiken we Buttondown.</p>
+        <p>Buttondown kan voor de werking en statistieken van de nieuwsbrief ook technische gegevens verwerken, bijvoorbeeld over aflevering, opens of klikken, afhankelijk van de ingestelde nieuwsbriefstatistieken. Je kunt je op ieder moment afmelden via de afmeldlink in iedere nieuwsbrief.</p>
+
+        <h2>Website-statistieken</h2>
+        <p>We gebruiken Simple Analytics om te zien hoeveel mensen Positief nieuws bezoeken en hoe de site wordt gebruikt. Simple Analytics gebruikt geen cookies, slaat geen IP-adressen op en maakt geen persoonlijke bezoekersprofielen.</p>
+
+        <h2>Contact</h2>
+        <p>Als je ons mailt, gebruiken we je e-mailadres en de inhoud van je bericht alleen om je bericht te behandelen en te beantwoorden. Bewaartermijnen hangen af van wat nodig is voor de correspondentie.</p>
+
+        <h2>Externe diensten</h2>
+        <ul>
+          <li><a href="https://buttondown.com/legal/privacy" target="_blank" rel="noopener noreferrer">Privacybeleid van Buttondown</a></li>
+          <li><a href="https://docs.simpleanalytics.com/privacy" target="_blank" rel="noopener noreferrer">Privacybeleid van Simple Analytics</a></li>
+        </ul>
+
+        <h2>Jouw gegevens</h2>
+        <p>Wil je weten welke persoonsgegevens we van je hebben, iets laten aanpassen of verwijderen, of heb je een andere privacyvraag? Mail dan naar <a href="mailto:positiefnieuws@buttondown.email?subject=Privacyvraag%20Positief%20nieuws">positiefnieuws@buttondown.email</a>.</p>
+
+        <p class="privacy-updated">Laatst bijgewerkt: 28 augustus 2026.</p>
       </div>
     </div>
   </section>
 
   <footer class="site-footer">
-    <div class="wide-shell">Positief nieuws · Dit gebeurt ook.</div>
+    <div class="wide-shell">Positief nieuws · Dit gebeurt ook. · <a href="#privacy">Privacy</a></div>
   </footer>
 <script>
     const $ = (selector) =>
@@ -1551,6 +1640,9 @@
       const aboutView =
         $("#about-view");
 
+      const privacyView =
+        $("#privacy-view");
+
 
       todayView.hidden =
         view !== "today";
@@ -1560,6 +1652,9 @@
 
       aboutView.hidden =
         view !== "about";
+
+      privacyView.hidden =
+        view !== "privacy";
 
 
       setActiveNav(
@@ -1605,6 +1700,17 @@
 
         return;
       }
+
+
+      if (hash === "#privacy") {
+
+        showAppView(
+          "privacy"
+        );
+
+        return;
+      }
+
 
       if (hash === "#nieuwsbrief") {
         showAppView("today");
@@ -2226,6 +2332,6 @@
     }
 
   </script>
-  <!-- release 2026-08-28: editorial redesign; logo assets unchanged -->
+  <!-- release 2026-08-28: editorial redesign + contact + privacy; logo assets unchanged -->
 </body>
 </html>
