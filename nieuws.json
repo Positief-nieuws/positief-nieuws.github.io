@@ -1,122 +1,122 @@
 {
   "meta": {
-    "edition_date": "2026-08-27",
+    "edition_date": "2026-08-28",
     "generated_from": "kandidaten.json + actuele nieuwsselectie",
     "title": "Positief nieuws",
     "tagline": "Dit gebeurt ook."
   },
   "nl": [
     {
-      "title": "Omzet Nederlandse chipindustrie in zes jaar verdubbeld",
-      "teaser": "De Nederlandse chipindustrie draaide vorig jaar 46 miljard euro omzet, ruim twee keer zoveel als in 2019. Ook het aantal banen in de sector groeide sterk.",
+      "title": "Dolfijnen gered dankzij bijzondere reddingsactie",
+      "teaser": "Een bijzondere reddingsactie heeft voorkomen dat dolfijnen moesten worden ingeslapen.",
+      "source": "RTL Nieuws",
+      "category": "Dieren",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQNDF1NWFsZEpuUnJldlZTRGh2ZkFhemxOeEtvZnFJbmh3eTJpT0F5czc1MkxfYzRtbl9GbjRjMFdtZm8tbHhRM1hSYjJjeTB0TGF2dWhnMHpZZ25jcUZDdk05cThaQU1jaVh6dWhGT01WTzdlQmxKTWVSVmIwMC11ZmhqWWtrN282UVdJeVV0bk5BbTdpemRHcXVGWjJ6eGxoUmtNeXowOXZVV2xBTThueTRPbHJ3aTRoY3c?oc=5",
+      "intro_label": "de bijzondere reddingsactie voor dolfijnen"
+    },
+    {
+      "title": "Broeders-Bol verpulvert haar eigen Nederlands record op de 800 meter",
+      "teaser": "Femke Broeders-Bol liep in Zürich 1.54,71 en verbeterde haar eigen Nederlandse record met zeven tienden.",
       "source": "NOS",
-      "category": "Economie & geld",
-      "intro_label": "de sterke groei van de Nederlandse chipindustrie",
-      "url": "https://nos.nl/artikel/2628443-omzet-nederlandse-chipindustrie-in-zes-jaar-verdubbeld"
+      "category": "Sport",
+      "url": "https://nos.nl/l/2628564",
+      "intro_label": "het nieuwe Nederlandse record van Broeders-Bol"
     },
     {
-      "title": "Nieuw landelijk onderzoeksprogramma moet long-covidzorg verder helpen",
-      "teaser": "Zeven onderzoekers van onder meer Amsterdam UMC, UMC Utrecht en Erasmus MC krijgen financiering om kennis en onderzoek naar long covid en vergelijkbare syndromen voort te zetten.",
+      "title": "Internationale treinverbindingen vanuit Amsterdam blijven groeien",
+      "teaser": "Nieuwe en geplande verbindingen richting onder meer Kopenhagen, Malmö, Parijs en Berlijn geven internationaal treinreizen vanuit Amsterdam een nieuwe impuls.",
+      "source": "NH Nieuws",
+      "category": "Natuur & klimaat",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOUEVYQ0I3M0c3dGtCNEhhblQzN3N6ZzBEU3R0b3ZLZmtsekEtMld6X2s5azc2aTNvalM1SEhWTDJNdGxOcDMtME5MT0FqTWNnRkhiOERMWGVtZ3RyVVpOR0I2aTkxdWRYYWp4SGI0a3FPYnI1WlAtdzhUQksxUk5WRHVaZE1VbXJkWHNPTENyYng0ZU15Rm5kdDR1Sk1rQXYyWnZzWnpha1NjRUZTM1REN2RkdEZCdw?oc=5",
+      "intro_label": "de groei van internationale treinverbindingen vanuit Amsterdam"
+    },
+    {
+      "title": "Nieuwe oplossingen moeten bedrijven helpen omgaan met een vol stroomnet",
+      "teaser": "RVO brengt praktische oplossingen voor netcongestie onder de aandacht, zoals slimmer sturen van elektriciteitsgebruik en batterijopslag.",
+      "source": "RVO",
+      "category": "Technologie & innovatie",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQZ0FRa1FzYmJpMnVvSy1QSzZhX3drVFZXQ1d0VW5rTHh3bVowM1Vid0RsYjJkZDByV1lSMXQ3OHNUX2ZlenhjM1NYUDIycGZMN0cxQzFXWEVydDhHcG1TeElHYjkyUElXb1paU0Q2TnpjTnh0YmRZc0wyZXcwTHROT2o5UGtUeWM?oc=5"
+    },
+    {
+      "title": "Nieuwe Europese regels geven plantenveredeling meer ruimte",
+      "teaser": "Door versoepelde Europese regels kunnen nieuwe plantenrassen sneller worden ontwikkeld, bijvoorbeeld gewassen die beter bestand zijn tegen droogte en ziekten.",
+      "source": "Rijksoverheid",
+      "category": "Wetenschap",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNaEZKRkdiNmpSYWZxNHBUNS1tUm1UU0tvMS1uNUVnNzltcDFLOXV3SExOWFhLTTJSSWV1R09JdVo5UUNtX0l3aTU2bm5QaTRIa0ppUFZMQzRIVjA1NUY3dHd1THFmek4wdmZJSXdyTTl2eHhyUE9NRkdxcEFVWnVXQXpXbDhDWHRmODhTUmFiaGtXT21tYTB1NWZ6ZmRPN3dxT1RVQVRVOE0zb2tlQzZKcG1sU29FR0xlcEVrNjc5WmV3MGQx?oc=5"
+    },
+    {
+      "title": "WK-brons voor roeister Femke van de Vliet op de Bosbaan",
+      "teaser": "Femke van de Vliet bezorgde Nederland op het WK roeien in Amsterdam de eerste medaille met brons in de lichte skiff.",
       "source": "NOS",
-      "category": "Gezondheid",
-      "intro_label": "nieuw onderzoek naar long covid",
-      "url": "https://nos.nl/artikel/2628349-nederland-krijgt-onderzoeksprogramma-long-covid-voor-gerichte-behandelingen"
-    },
-    {
-      "title": "Volksuniversiteit Groningen groeit in vijf jaar van 70 naar 1.000 cursisten",
-      "teaser": "De Volksuniversiteit Groningen zag het aantal cursisten in vijf jaar tijd groeien van 70 naar 1.000.",
-      "source": "RTV Noord",
-      "category": "Onderwijs & ontwikkeling",
-      "intro_label": "de sterke groei van de Volksuniversiteit Groningen",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNVWJKczFQX0FSaUxNazJPcV9BbVVNYkZuTUEzN3JLVkZqeU1oSHZyQk1uMzc2LWNETVliLTVmN1ZUaDBDRlNQZGUzQzZ3WFVxRTgtMnpGREd3WnRKa3JJcjRaUjZuNVF1MEdLX0hWTmYwVzBWVzhEUElLZnVXY1JGVWlsYlI4bEpkUUM2V3RrOGdSejlqd3NaUnNwMzlucGVPV3pTUVlyQVZONTcwMDZKRHZ6c2FLeTJSWkw0RDR3?oc=5"
-    },
-    {
-      "title": "Test helpt mantelzorgers in Etten-Leur beter zicht te krijgen op hun zorgtaken",
-      "teaser": "Een test in Etten-Leur helpt mantelzorgers om hun zorgtaken en belasting beter in beeld te krijgen.",
-      "source": "Omroep Brabant",
-      "category": "Mens & samenleving",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPekdzSjFnM3B5bmN0REFiRndmRnFkVHMyRndnV1VxZEFuQkgtYk9ETjR5MkVkaTlDd0VyaThWUjRqZTduVEZ6cXZLeTlEMzdkRDBRTWIwY1NGRVJXVVkzMEVfeUVtS08yZG5pSTVxUjJmYjhLT3NqOF9ZWHF0dm1kZG5VZEpMMVVKNnQxcVN3a0pjdHg3VjFsQ3hDRC1tTnUzNDEtTnZ5UFRGZ3M?oc=5"
-    },
-    {
-      "title": "Roeiers veilig uit het water gered",
-      "teaser": "Roeiers zijn uit het water gered. Een klein lokaal bericht met vooral een goede afloop.",
-      "source": "Omroep Gelderland",
-      "category": "Mens & samenleving",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQSUhQd3pnT0E4eDB1eHQyRnBVbG8xaGsySlQ5MmdHa3YyVXhJVDh3WXZndEdzZVc1QXBEUm1UM0k2U1hRcmdJVnJmbWZrNWc0WU8zanBRSENQd2FQOWRLMXRpNmR3aElRTThFdWpmVjlhZU91OV9Bd084Qnl0S2R2aS1xUGM?oc=5"
-    },
-    {
-      "title": "Historische watergoten op de Veluwe worden na ruim honderd jaar hersteld",
-      "teaser": "Staatsbosbeheer herstelt ongeveer 800 meter van het historische waterstelsel op de Noorderheide bij Vierhouten. Oude materialen worden waar mogelijk opnieuw gebruikt.",
-      "source": "Omroep Gelderland",
-      "category": "Geschiedenis & mens",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPRUltcnRQSk9DR215Vkp3OHI4UjBjd3ZKQkplc2tYdHh0QlB4bGdIMEVNSXJwekJ1S3NyaWluMGlUOG9fU0tETUhiRDV3SDZWeVdIYTFWVXdpMUg3WjFjcXA3NEtURjNkbklqWHlrelVacEpaSzNVRE92MmYxWGdnZzlIUlFJMXFDTG8w?oc=5"
+      "category": "Sport",
+      "url": "https://nos.nl/l/2628530"
     }
   ],
   "int": [
     {
-      "title": "AI helpt nieuwe materialen ontwerpen die ook buiten het lab werken",
-      "teaser": "MIT-onderzoekers ontwikkelden een AI-tool die kansrijke materiaalontwerpen beter kan selecteren op chemische stabiliteit en zo veel tijd en testwerk kan besparen.",
-      "source": "MIT News",
-      "category": "Technologie & innovatie",
-      "url": "https://news.mit.edu/2026/ai-helps-design-new-materials-that-work-in-real-world-0826"
+      "title": "Hersteld moerasgebied wordt toevluchtsoord voor zeldzame fuut",
+      "teaser": "Een voormalig stortgebied voor baggerslib in Cheshire is na natuurherstel uitgegroeid tot de belangrijkste Britse broedplek voor de zeldzame geoorde fuut.",
+      "source": "The Guardian",
+      "category": "Natuur & klimaat",
+      "url": "https://www.theguardian.com/environment/2026/aug/28/woolston-eyes-cheshire-wetland-black-necked-grebe"
     },
     {
-      "title": "Precisiegeneeskunde wijst nieuw aangrijpingspunt bij blaaskanker aan",
-      "teaser": "Onderzoekers brachten een eiwit en bijbehorende signaalroute verder in kaart die betrokken zijn bij de groei van blaaskanker en mogelijk de werking van chemotherapie beïnvloeden.",
+      "title": "Leesprogramma verdrievoudigt vooruitgang bij kinderen met leesproblemen",
+      "teaser": "Een grootschalig Canadees leesprogramma verdrievoudigde volgens voorlopige resultaten de leervooruitgang van de meeste deelnemende kinderen in vijf maanden.",
+      "source": "Phys.org",
+      "category": "Onderwijs & ontwikkeling",
+      "url": "https://phys.org/news/2026-08-groundbreaking-literacy-triples-struggling-young.html"
+    },
+    {
+      "title": "RNA-aanpak remt groei van tumorcellen in nieuw onderzoek",
+      "teaser": "Onderzoekers van Umeå University wisten de groei van tumorcellen af te remmen door genetische instructies voor een belangrijk kankergerelateerd eiwit te blokkeren.",
       "source": "Medical Xpress",
       "category": "Gezondheid",
-      "url": "https://medicalxpress.com/news/2026-08-precision-medicine-influential-protein-bladder.html"
+      "url": "https://medicalxpress.com/news/2026-08-undruggable-cancer-rna-based-strategy.html"
     },
     {
-      "title": "Nieuwe oplossingen gezocht om versnipperde natuurgebieden weer te verbinden",
-      "teaser": "UNDP zoekt innovatieve oplossingen voor het herstellen en opnieuw verbinden van natuurlijke leefgebieden.",
+      "title": "Ghana werkt aan duurzamere koeling met nieuw klimaatplan",
+      "teaser": "Een nieuw programma moet Ghana helpen overstappen op energiezuinigere en klimaatvriendelijkere koeltechnologie.",
       "source": "UNDP",
-      "category": "Natuur & klimaat",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNQ3lYLVlrajEyNzJyZUp5blR5bjhfOXQ4d0VBN290ZFZBQjAwTHY5ZWlCQkgtbkw5T0FnQ2hWSE9hNF9BQVNjU0s2QXVSVUh1V0VrcHJ6LUJqUDRoNWcwX0s3ZXU1RXB0aFM3cmZnVmFKQmhmU051bC1hSURVN2JXSjBhWjQ1R3VTdzA5NWZzbVlMUm9TX3hPVmRCbDdybmRZelM2NA?oc=5"
+      "category": "Technologie & innovatie",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQeGRDMUFUZ0ZRblNETERjNkd5S3FyWFlNSmwtYVVoY2dsd05aY1F1LTQyOEFfM1hDYV9UT2NwYjFrRWRHclVRMDQ0aXotZk5ybEQ0WXZWQno2UmVUTWZGOU11Q2hwa2IwSF9qOFdvQ1ZVQTA2NFpYcmlKUHlkTks2ZnUzOVVvVEs4c0d3WlByQ0czM1VtaDVn?oc=5"
     },
     {
-      "title": "Lokale kennis leidt tot herontdekking van vissoort die veertig jaar niet was gezien",
-      "teaser": "Lokale kennis hielp onderzoekers bij de herontdekking van de spinach pipefish, een vissoort die al vier decennia niet meer was waargenomen.",
-      "source": "Mongabay",
-      "category": "Dieren",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNZ1RuMnM4RGxCaHhTYTdFdnJ6WU9VazliSGNRa2NMcWptNXUxblIwT1ROVUo0STQ0dWtWRS1fbHFpUTFDb2ZDWmtORGxVM3JfblZRRlBEVERuZjcxSjB3cUg2QmVLSVJFRFducTJJa01rRnFlS056UnRzdVZ0V2h3aXNyRFNsNWNLMV9yVnl1STd3bWJreXE5a0Q4alp0NG9fZE90QVpUZ2JUQ1VUWmlNaC1vZ1PSAboBQVVfeXFMTXl1QnNKMjRDbDRRYzRheUwyUzNqYktBRmNnT25KS3c2dmdudWZDNVA5LV9JYnUyZFVfVWJ3aHBQTVdjX2I4UGh2dWtNUEQzSExQV2dZVkFrejBDcG01TFVZQ1hjUW1ncUEzaXRVXzlfOFhFdUNwRFYxLU9oOFpIVkpsakFtTnpzc1Vyd0V1eE9oUVdiTWtfWTl5QkVJZnVkOExEZXMtUVhMd0lFXzBlUnJDTWFFMmoyWW5R?oc=5"
-    },
-    {
-      "title": "OECD-economie groeit iets sneller in het tweede kwartaal",
-      "teaser": "De gezamenlijke economie van de OECD-landen groeide in het tweede kwartaal van 2026 iets sneller dan in de eerste drie maanden van het jaar.",
-      "source": "OECD",
-      "category": "Economie & geld",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOd2FJTm4yWFAzalV3a01wM0hFMWtkRHVaX2oxSV96elpvVlliN0M5TU80NFBJbkQ3NzVVc3FCMWpuS2hNNjZJc2p2MkRHOXJhVlJ0eVNxOEhUZjltS29rT3hfSGY3bmRMbE5VdUpKeFBHTkNlYlNNUXVoTEg3Tkd1NElaWkdQZC1Kd2NYSXQ5QTNLcnBzSHNoYkhrVlphWVdoOUdzbzFrdElMR00?oc=5"
-    },
-    {
-      "title": "Machine learning brengt zelfsturende laboratoria dichterbij",
-      "teaser": "Nieuwe machine-learningmethoden kunnen grote aantallen experimenten helpen plannen en uitvoeren, waardoor materiaalonderzoek sneller en schaalbaarder kan worden.",
+      "title": "Zink en zwavel kunnen eiwitgehalte van soja duurzaam verhogen",
+      "teaser": "Onderzoek laat zien hoe gerichte inzet van zink en zwavel kan bijdragen aan eiwitrijkere soja en een duurzamere teelt.",
       "source": "Phys.org",
+      "category": "Voeding & leefstijl",
+      "url": "https://phys.org/news/2026-08-boosting-soybean-protein-zinc-sulfur.html"
+    },
+    {
+      "title": "Eerste parachutetest voor ESA-missie Draco succesvol",
+      "teaser": "De Europese ruimtevaartorganisatie ESA heeft een eerste parachutedroptest voor de Draco-missie succesvol afgerond.",
+      "source": "ESA",
       "category": "Wetenschap",
-      "url": "https://phys.org/news/2026-08-machine-methods-labs-closer-materials.html"
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNTmJ3QzZUMlFpNmhfSFd2clRUUE9XdHJCcVF1TEc5RHJjQlhTZE42MkN2ZVFWb19MOFFZU0VZWkE0UFVUOHh3cnltUDRvR1plSU9SakFkY2NMbEVobG1Fdjd2Y0gtZFVubXJ5QW9zam5LbVQtbnoyaVl4eXdqdDQtV2M3UW5jYUg4X3RlOURRUDFYU2J3Ty1HaHhLYTY2Ukcwb01DRGd3?oc=5"
     }
   ],
   "headlines": [
     {
-      "title": "Zomer 2026 is de warmste ooit gemeten in Nederland",
-      "teaser": "Met gemiddeld 19,3 graden in De Bilt is deze zomer nu al de warmste sinds de metingen begonnen in 1901. Het vorige record uit 2018 wordt met bijna een halve graad verbroken.",
+      "title": "Meer dan 900 klachten over makelaars en oneerlijke huizenverkoop",
+      "teaser": "Vereniging Eigen Huis kreeg sinds februari meer dan 900 meldingen over onder meer biedingen na deadlines, onduidelijke taxaties en druk om hoger te bieden. De organisatie wil wettelijke regels voor het koopproces.",
       "source": "NOS",
       "category": "Binnenland",
-      "url": "https://nos.nl/artikel/2628446-zomer-2026-is-de-warmste-ooit-gemeten-in-nederland"
+      "url": "https://nos.nl/artikel/2628595-vereniging-eigen-huis-te-veel-klachten-over-makelaars-en-oneerlijke-huizenverkoop"
     },
     {
-      "title": "Nepal getroffen door verwoestende stortvloed: meer dan 160 doden",
-      "teaser": "Reddingsteams zoeken verder na de enorme stortvloed in Nepal en het grensgebied met Tibet. Hele dorpen zijn weggevaagd en honderden mensen worden nog vermist.",
+      "title": "Congo begint vaccinatiecampagne tijdens grootste ebola-uitbraak ooit",
+      "teaser": "Congo is begonnen met vaccineren tegen ebola. De huidige uitbraak is de dodelijkste in de geschiedenis van het land; onzeker is nog hoe goed het gebruikte vaccin beschermt tegen deze virusvariant.",
       "source": "NOS",
       "category": "Buitenland",
-      "url": "https://nos.nl/artikel/2628366-grote-ravage-na-stortvloed-nepal-bijna-honderd-doden-en-honderden-vermisten"
+      "url": "https://nos.nl/artikel/2628586-congo-begint-met-vaccineren-tegen-grootste-ebola-uitbraak-ooit"
     },
     {
-      "title": "Nederland haalt vuldoel gasvoorraad voor winter niet",
-      "teaser": "De gasopslag komt voor november niet op het gewenste niveau van 80 procent. De kans op een fysiek tekort wordt klein geacht, maar bij een strenge winter of storingen is Nederland kwetsbaarder.",
-      "source": "NOS",
-      "category": "Economie",
-      "url": "https://nos.nl/artikel/2628343-gasvoorraad-deze-winter-niet-volledig-gevuld-weinig-zorgen-over-tekort"
+      "title": "Nieuwe Nederlandse massadonor blijkt minstens 121 kinderen te hebben",
+      "teaser": "Nieuwsuur sprak moeders die zeggen te zijn misleid door een Nederlandse spermadonor die minstens 121 kinderen heeft verwekt en nog altijd actief zou zijn. De zaak roept opnieuw vragen op over toezicht en regels rond donorzaad.",
+      "source": "NOS / Nieuwsuur",
+      "category": "Binnenland",
+      "url": "https://nos.nl/nieuwsuur/artikel/2628520-nieuwe-massadonor-met-meer-dan-honderd-kinderen-we-moeten-deze-man-stoppen"
     }
   ]
 }
