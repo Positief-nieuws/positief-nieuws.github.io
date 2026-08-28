@@ -28,260 +28,55 @@
 
   <title>Positief nieuws. Dit gebeurt ook.</title>
 
+  
   <style>
     :root {
-      --cream: #fbf7ea;
-      --cream-2: #fffdf6;
-      --green-soft: #e6f1dc;
-      --green-soft-2: #d8e9cb;
-      --green: #24523f;
-      --green-dark: #17382b;
-      --orange: #ed6a38;
-      --orange-dark: #d95727;
-      --ink: #1e2923;
-      --muted: #667068;
-      --line: rgba(36, 82, 63, 0.18);
+      --paper: #f7f5ec;
+      --paper-deep: #f1efe5;
+      --ink: #151a17;
+      --green: #1f5b45;
+      --green-dark: #173f31;
+      --muted: #68716b;
+      --line: rgba(23, 63, 49, 0.22);
+      --line-soft: rgba(23, 63, 49, 0.12);
       --white: #ffffff;
-      --shadow: 0 12px 30px rgba(37, 64, 49, 0.08);
-      --radius: 18px;
-      --max: 1180px;
+      --content: 748px;
+      --wide: 920px;
+      --header: 1080px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      background:
-        radial-gradient(
-          circle at top left,
-          rgba(216, 233, 203, 0.8),
-          transparent 38rem
-        ),
-        var(--cream);
+      background: var(--paper);
       color: var(--ink);
       font-family: Georgia, "Times New Roman", serif;
-      line-height: 1.55;
+      line-height: 1.52;
+      -webkit-font-smoothing: antialiased;
     }
 
-    a {
-      color: inherit;
-    }
+    a { color: inherit; }
+    button, input { font: inherit; }
+    [hidden] { display: none !important; }
 
-    img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-
-    .shell {
-      width: min(calc(100% - 32px), var(--max));
+    .header-shell {
+      width: min(calc(100% - 48px), var(--header));
       margin: 0 auto;
     }
 
-    /* APP NAVIGATION */
-
-    .app-nav {
-      position: sticky;
-      top: 0;
-      z-index: 30;
-      border-bottom: 1px solid var(--line);
-      background: rgba(251, 247, 234, 0.96);
-      backdrop-filter: blur(12px);
+    .content-shell {
+      width: min(calc(100% - 48px), var(--content));
+      margin: 0 auto;
     }
 
-    .app-nav-inner {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      min-height: 52px;
+    .wide-shell {
+      width: min(calc(100% - 48px), var(--wide));
+      margin: 0 auto;
     }
-
-    .app-nav a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 36px;
-      padding: 0 14px;
-      border-radius: 999px;
-      color: var(--muted);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.86rem;
-      font-weight: 800;
-      text-decoration: none;
-    }
-
-    .app-nav a:hover,
-    .app-nav a.is-active {
-      background: var(--green-soft);
-      color: var(--green-dark);
-    }
-
-    .app-view[hidden] {
-      display: none !important;
-    }
-
-    .archive-page,
-    .about-page {
-      padding: 52px 0 72px;
-    }
-
-    .archive-list {
-      display: grid;
-      gap: 12px;
-      margin-top: 28px;
-    }
-
-    .archive-item {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      padding: 20px 22px;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      background: var(--cream-2);
-      text-decoration: none;
-      box-shadow: var(--shadow);
-    }
-
-    .archive-item:hover {
-      transform: translateY(-1px);
-    }
-
-    .archive-date {
-      color: var(--green-dark);
-      font-size: 1.15rem;
-      font-weight: 700;
-    }
-
-    .archive-open {
-      flex: 0 0 auto;
-      color: var(--orange-dark);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.82rem;
-      font-weight: 800;
-    }
-
-    .archive-note,
-    .about-copy {
-      max-width: 760px;
-      color: var(--muted);
-      font-size: 1.04rem;
-    }
-
-    .archive-banner {
-      display: none;
-      margin: 18px auto 0;
-      padding: 12px 16px;
-      border: 1px solid rgba(237, 106, 56, 0.28);
-      border-radius: 12px;
-      background: rgba(237, 106, 56, 0.08);
-      color: var(--green-dark);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.86rem;
-      font-weight: 700;
-    }
-
-    .archive-banner.is-visible {
-      display: block;
-    }
-
-    .archive-banner a {
-      color: var(--orange-dark);
-      font-weight: 800;
-    }
-
-    /* INSTALL */
-
-    .install-strip {
-      display: none;
-      border-bottom: 1px solid var(--line);
-      background: rgba(230, 241, 220, 0.92);
-    }
-
-    .install-strip.is-visible {
-      display: block;
-    }
-
-    .install-strip-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 12px 0;
-    }
-
-    .install-copy {
-      margin: 0;
-      color: var(--green-dark);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.88rem;
-      font-weight: 700;
-    }
-
-    .install-actions {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex: 0 0 auto;
-    }
-
-    .install-button,
-    .install-dismiss {
-      border: 0;
-      border-radius: 999px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.82rem;
-      font-weight: 800;
-      cursor: pointer;
-    }
-
-    .install-button {
-      min-height: 38px;
-      padding: 0 16px;
-      background: var(--orange);
-      color: var(--white);
-    }
-
-    .install-button:hover {
-      background: var(--orange-dark);
-    }
-
-    .install-dismiss {
-      min-height: 34px;
-      padding: 0 10px;
-      background: transparent;
-      color: var(--muted);
-    }
-
-    .ios-install-panel {
-      display: none;
-      margin: 14px 0 0;
-      padding: 14px 16px;
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      background: var(--cream-2);
-      color: var(--muted);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.84rem;
-      line-height: 1.5;
-    }
-
-    .ios-install-panel.is-visible {
-      display: block;
-    }
-
-    /* HEADER */
 
     .site-header {
-      padding: 28px 0 20px;
-      border-bottom: 1px solid var(--line);
+      padding: 26px 0 18px;
     }
 
     .header-row {
@@ -293,933 +88,683 @@
 
     .brand {
       display: inline-flex;
-      align-items: flex-start;
-      gap: 14px;
-      text-decoration: none;
-    }
-
-    .brand-logo {
-      width: 56px;
-      height: 56px;
-      flex: 0 0 auto;
-      margin-top: 4px;
-      border-radius: 14px;
-    }
-
-    .brand-text {
-      display: block;
-    }
-
-    .brand-name {
-      display: block;
-      color: var(--green-dark);
-      font-size: clamp(2rem, 5vw, 4.4rem);
-      font-weight: 700;
-      line-height: 0.95;
-      letter-spacing: -0.045em;
-    }
-
-    .brand-tagline {
-      display: block;
-      margin-top: 8px;
-      color: var(--orange);
+      align-items: center;
+      gap: 7px;
+      color: var(--ink);
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.95rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
+      font-size: 0.76rem;
+      font-weight: 800;
+      text-decoration: none;
+      letter-spacing: -0.015em;
     }
 
-    .header-cta,
-    .button {
+    .brand-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--green);
+      flex: 0 0 auto;
+    }
+
+    .app-nav-inner {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .app-nav a {
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.72rem;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .app-nav a:hover,
+    .app-nav a.is-active { color: var(--green); }
+
+    .app-nav .header-cta {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 46px;
-      padding: 0 18px;
-      border: 0;
+      min-height: 34px;
+      padding: 0 14px;
+      border: 1px solid var(--line);
       border-radius: 999px;
-      background: var(--orange);
-      color: var(--white);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.9rem;
-      font-weight: 800;
-      white-space: nowrap;
-      text-decoration: none;
-      transition:
-        transform 0.15s ease,
-        background 0.15s ease;
+      background: transparent;
     }
 
-    .header-cta:hover,
-    .button:hover {
-      background: var(--orange-dark);
-      transform: translateY(-1px);
+    .hero {
+      padding: 76px 0 34px;
     }
 
-    .edition-bar {
+    .hero-date {
+      margin: 0 0 5px;
+      color: var(--green-dark);
+      font-size: 0.77rem;
+    }
+
+    .hero-title {
+      margin: 0;
+      color: #111512;
+      font-size: clamp(3rem, 6.1vw, 4.25rem);
+      line-height: 0.96;
+      letter-spacing: -0.055em;
+    }
+
+    .hero-copy {
+      max-width: 650px;
+      margin: 18px 0 0;
+      color: #2d342f;
+      font-size: 1.02rem;
+      line-height: 1.55;
+    }
+
+    .hero-meta {
       display: flex;
+      align-items: center;
       justify-content: space-between;
-      gap: 16px;
-      padding: 14px 0;
-      border-bottom: 1px solid var(--line);
+      gap: 24px;
+      margin-top: 21px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
       color: var(--muted);
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.82rem;
+      font-size: 0.69rem;
     }
 
-    .mission {
-      padding: 34px 0 4px;
+    .hero-meta-right {
+      display: flex;
+      gap: 18px;
+      white-space: nowrap;
     }
 
-    .mission-copy {
-      max-width: 860px;
-      margin: 0;
-      color: #445149;
-      font-size: clamp(1.08rem, 2vw, 1.28rem);
-      line-height: 1.6;
-    }
-
-    .mission-copy strong {
+    .archive-banner {
+      display: none;
+      margin-top: 22px;
+      padding: 10px 13px;
+      border: 1px solid var(--line);
       color: var(--green-dark);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.75rem;
     }
 
-    .mission-today {
-      margin-top: 12px;
-      color: var(--green-dark);
-      font-weight: 700;
+    .archive-banner.is-visible { display: block; }
+    .archive-banner a { font-weight: 800; }
+
+    main { padding-bottom: 90px; }
+
+    .news-section {
+      padding: 76px 0 72px;
     }
 
-    .mission-close {
-      margin-top: 12px;
+    /* Subtiele kleurvlakken per redactioneel blok */
+    .news-section.nl-block {
+      background: #f8f3e8;
     }
 
-    main {
-      padding-bottom: 72px;
+    .news-section.world-block {
+      background: #eef3ed;
     }
 
-    /* SECTIONS */
-
-    .section {
-      padding: 48px 0 8px;
+    .news-section.briefing-block {
+      background: #f3efe7;
     }
 
     .section-heading {
       display: flex;
-      align-items: end;
+      align-items: center;
       justify-content: space-between;
-      gap: 24px;
-      margin-bottom: 24px;
+      gap: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--green-dark);
     }
 
     .section-kicker {
-      margin: 0 0 4px;
-      color: var(--orange);
+      margin: 0;
+      color: var(--green);
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.76rem;
+      font-size: 0.67rem;
       font-weight: 800;
-      letter-spacing: 0.11em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
     }
 
-    .section-title {
-      margin: 0;
-      color: var(--green-dark);
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      line-height: 1;
-      letter-spacing: -0.035em;
+    .section-count {
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.67rem;
     }
 
-    .section-intro {
-      max-width: 520px;
-      margin: 0;
+    .section-intro-visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .state {
+      padding: 34px 0;
       color: var(--muted);
-      font-size: 1rem;
+      font-size: 0.9rem;
+      text-align: center;
     }
 
-    /* ARTICLES */
+    .article-list {
+      display: block;
+    }
+
+    .article-row {
+      position: relative;
+      padding: 22px 46px 22px 0;
+      border-bottom: 1px solid var(--line-soft);
+    }
+
+    .article-row:first-child { padding-top: 20px; }
+
+    .article-title {
+      margin: 0;
+      max-width: 660px;
+      color: #121714;
+      font-size: 1.18rem;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+    }
+
+    .article-title a {
+      text-decoration: none;
+    }
+
+    .article-title a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+    .teaser {
+      max-width: 650px;
+      margin: 8px 0 0;
+      color: #3f4742;
+      font-size: 0.88rem;
+      line-height: 1.48;
+    }
 
     .meta {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 7px;
-      margin: 0 0 7px;
-      color: var(--muted);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.78rem;
-      font-weight: 700;
-      line-height: 1.25;
-      letter-spacing: 0.02em;
-    }
-
-    .meta-sep {
-      color: var(--orange);
-      font-weight: 900;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 0 24px;
-    }
-
-    .card {
-      padding: 26px 0 30px;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .card-media {
-      overflow: hidden;
-      margin-bottom: 16px;
-      border-radius: 14px;
-      background: var(--green-soft-2);
-      aspect-ratio: 4 / 3;
-    }
-
-    .card-media img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .card-title {
-      margin: 0;
-      color: var(--green-dark);
-      font-size: clamp(1.35rem, 2vw, 1.8rem);
-      line-height: 1.08;
-      letter-spacing: -0.025em;
-    }
-
-    .card .teaser {
+      gap: 5px;
       margin-top: 12px;
-      font-size: 0.96rem;
-    }
-
-    /* INTERNATIONAL */
-
-    .international {
-      margin-top: 54px;
-      padding: 44px 0 24px;
-      background:
-        linear-gradient(
-          180deg,
-          rgba(216, 233, 203, 0.7),
-          rgba(230, 241, 220, 0.35)
-        );
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
-
-    /* WHAT YOU NEED TO KNOW */
-
-    .briefing {
-      padding: 48px 0 18px;
-      border-bottom: 1px solid var(--line);
-      background: rgba(255, 253, 246, 0.72);
-    }
-
-    /* SHARE */
-
-    .share {
-      margin-top: 52px;
-      padding: 32px;
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      background: rgba(255, 253, 246, 0.7);
-      text-align: center;
-    }
-
-    .share h2 {
-      margin: 0;
-      color: var(--green-dark);
-      font-size: clamp(1.7rem, 3vw, 2.4rem);
-      line-height: 1.05;
-      letter-spacing: -0.03em;
-    }
-
-    .share p {
-      max-width: 560px;
-      margin: 12px auto 0;
-      color: var(--muted);
+      color: var(--green);
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.95rem;
+      font-size: 0.64rem;
+      font-weight: 700;
     }
 
-    .share-actions {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 22px;
-    }
+    .meta-sep { color: #919a94; }
 
-    .share-button {
+    .article-arrow {
+      position: absolute;
+      top: 22px;
+      right: 0;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 46px;
-      padding: 0 20px;
-      border-radius: 999px;
-      background: var(--orange);
-      color: var(--white);
+      width: 27px;
+      height: 27px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      color: var(--green-dark);
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.9rem;
-      font-weight: 800;
+      font-size: 0.77rem;
       text-decoration: none;
-      transition:
-        background 0.15s ease,
-        transform 0.15s ease;
+      transition: transform .15s ease, background .15s ease;
     }
 
-    .share-button:hover {
-      background: var(--orange-dark);
-      transform: translateY(-1px);
+    .article-arrow:hover {
+      transform: translateX(2px);
+      background: rgba(31,91,69,.06);
     }
 
-    /* NEWSLETTER */
+    .briefing-row {
+      display: grid;
+      grid-template-columns: 34px minmax(0,1fr);
+      gap: 10px;
+      padding-right: 46px;
+    }
+
+    .briefing-number {
+      padding-top: 2px;
+      color: #7f8982;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.66rem;
+      font-weight: 700;
+    }
+
+    .edition-end {
+      padding: 88px 0 68px;
+      text-align: center;
+    }
+
+    .edition-end h2 {
+      max-width: 620px;
+      margin: 0 auto;
+      color: #111512;
+      font-size: clamp(2.45rem, 5.2vw, 3.6rem);
+      line-height: .98;
+      letter-spacing: -0.05em;
+    }
+
+    .edition-end p {
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .end-actions {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
+
+    .quiet-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      padding: 0 15px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: transparent;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .quiet-button:hover { background: rgba(31,91,69,.05); }
+
+    #install-strip { display: none; }
+    #install-strip.is-visible { display: inline-flex; flex-direction: column; align-items: center; }
+    #install-dismiss { display: none; }
+
+    .install-copy {
+      display: none;
+      margin: 10px 0 0 !important;
+      max-width: 480px;
+      color: var(--muted) !important;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.7rem !important;
+    }
+    .install-copy.is-visible { display: block; }
+
+    .ios-install-panel {
+      display: none;
+      max-width: 520px;
+      margin: 10px auto 0;
+      padding: 10px 12px;
+      border: 1px solid var(--line-soft);
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.7rem;
+    }
+    .ios-install-panel.is-visible { display: block; }
 
     .newsletter {
-      margin-top: 32px;
-      padding: 48px;
-      overflow: hidden;
-      border-radius: 24px;
-      background: var(--green-dark);
+      padding: 36px 42px;
+      background: var(--green);
       color: var(--white);
-      box-shadow: var(--shadow);
     }
 
     .newsletter-grid {
       display: grid;
-      grid-template-columns:
-        minmax(280px, 0.75fr)
-        minmax(650px, 1.25fr);
-      align-items: center;
-      gap: 36px;
+      grid-template-columns: 1fr 1.15fr;
+      align-items: end;
+      gap: 38px;
     }
 
-    .newsletter-copy {
-      min-width: 0;
-    }
+    .newsletter .section-kicker { color: rgba(255,255,255,.7); }
 
     .newsletter h2 {
-      margin: 0;
-      font-size: clamp(2rem, 4vw, 3.3rem);
-      line-height: 1;
+      max-width: 370px;
+      margin: 8px 0 0;
+      font-size: 2rem;
+      line-height: 1.02;
       letter-spacing: -0.04em;
     }
 
     .newsletter p {
-      margin: 14px 0 0;
-      color: rgba(255, 255, 255, 0.8);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.96rem;
-    }
-
-    .buttondown-wrap {
-      width: 100%;
-      min-width: 0;
-      border-radius: 18px;
-      background: var(--cream-2);
-      padding: 28px;
+      margin: 12px 0 0;
+      color: rgba(255,255,255,.72);
+      font-size: 0.75rem;
     }
 
     .buttondown-form {
       display: grid;
-      gap: 14px;
+      grid-template-columns: minmax(0,1fr) auto;
+      align-items: center;
+      gap: 8px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(255,255,255,.5);
     }
 
-    .buttondown-form label {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: var(--green-dark);
-    }
+    .buttondown-form label,
+    .buttondown-note { display: none; }
 
     .buttondown-form input[type="email"] {
-      width: 100%;
-      min-height: 48px;
-      padding: 0 14px;
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      background: var(--white);
-      color: var(--ink);
-      font: inherit;
+      min-width: 0;
+      border: 0;
+      outline: 0;
+      background: transparent;
+      color: white;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 0.85rem;
     }
 
-    .buttondown-form input[type="email"]:focus {
-      outline: 2px solid rgba(237, 106, 56, 0.22);
-      border-color: var(--orange);
-    }
+    .buttondown-form input[type="email"]::placeholder { color: rgba(255,255,255,.65); }
 
     .buttondown-form input[type="submit"] {
-      min-height: 48px;
+      min-height: 31px;
+      padding: 0 14px;
       border: 0;
       border-radius: 999px;
-      background: var(--orange);
-      color: var(--white);
+      background: var(--white);
+      color: var(--green-dark);
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.92rem;
+      font-size: 0.65rem;
       font-weight: 800;
       cursor: pointer;
     }
 
-    .buttondown-form input[type="submit"]:hover {
-      background: var(--orange-dark);
+    .home-archive {
+      padding: 56px 0 80px;
     }
 
-    .buttondown-note {
-      margin: 0;
+    .home-archive-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .home-archive-heading a {
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .67rem;
+      text-decoration: none;
+    }
+
+    .home-archive-list { display: block; }
+
+    .home-archive-item {
+      display: grid;
+      grid-template-columns: 76px minmax(0,1fr) 22px;
+      align-items: center;
+      gap: 14px;
+      min-height: 48px;
+      border-bottom: 1px solid var(--line-soft);
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .home-archive-date {
       color: var(--muted);
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.78rem;
+      font-size: .62rem;
     }
 
-    .buttondown-note a {
-      color: inherit;
+    .home-archive-title {
+      overflow: hidden;
+      font-size: .75rem;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
 
-    /* STATES */
-
-    .state {
-      padding: 48px 0;
-      text-align: center;
-      color: var(--muted);
+    .home-archive-arrow {
+      color: var(--green-dark);
       font-family: Arial, Helvetica, sans-serif;
+      font-size: .75rem;
+      text-align: right;
     }
 
-    /* FOOTER */
+    .archive-page,
+    .about-page {
+      padding: 76px 0 96px;
+    }
+
+    .page-title {
+      margin: 8px 0 0;
+      color: #111512;
+      font-size: clamp(2.7rem, 6vw, 4rem);
+      line-height: .98;
+      letter-spacing: -.05em;
+    }
+
+    .archive-note,
+    .about-copy {
+      max-width: 670px;
+      color: #3f4742;
+      font-size: .95rem;
+    }
+
+    .archive-list {
+      margin-top: 34px;
+      border-top: 1px solid var(--line);
+    }
+
+    .archive-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--line-soft);
+      text-decoration: none;
+    }
+
+    .archive-date { font-size: .95rem; }
+    .archive-open {
+      color: var(--green);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .68rem;
+      font-weight: 800;
+    }
+
+    .about-copy { margin-top: 28px; }
+    .about-copy a { color: var(--green-dark); font-weight: 700; }
 
     .site-footer {
-      padding: 32px 0 48px;
-      text-align: center;
-      color: var(--muted);
+      padding: 0 0 34px;
+      color: #8b928e;
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.82rem;
+      font-size: .62rem;
+      text-align: center;
     }
 
-    /* TABLET */
+    @media (max-width: 760px) {
+      .header-shell,
+      .content-shell,
+      .wide-shell { width: min(calc(100% - 30px), 100%); }
 
-    @media (max-width: 1050px) {
-      .newsletter-grid {
-        grid-template-columns: 1fr;
-      }
+      .site-header { padding: 18px 0 10px; }
+      .header-row { align-items: flex-start; }
+      .app-nav-inner { gap: 12px; }
+      .app-nav a { font-size: .66rem; }
+      .app-nav #nav-about { display: none; }
+      .app-nav .header-cta { min-height: 31px; padding: 0 11px; }
 
-      .buttondown-wrap {
-        max-width: 760px;
-      }
-    }
+      .hero { padding-top: 54px; }
+      .hero-title { font-size: clamp(2.75rem, 14vw, 4rem); }
+      .hero-copy { font-size: .96rem; }
+      .hero-meta { align-items: flex-start; flex-direction: column; gap: 7px; }
 
-    @media (max-width: 860px) {
-      .grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .section-heading {
-        align-items: start;
-        flex-direction: column;
-      }
-    }
-
-    /* MOBILE */
-
-    @media (max-width: 620px) {
-      .site-header {
-        padding-top: 20px;
-      }
-
-      .header-row {
-        align-items: flex-start;
-      }
-
-      .brand {
-        gap: 10px;
-      }
-
-      .brand-logo {
-        width: 44px;
-        height: 44px;
-        margin-top: 3px;
-        border-radius: 11px;
-      }
-
-      .header-cta {
-        min-height: 40px;
-        padding: 0 14px;
-        font-size: 0.78rem;
-      }
-
-      .edition-bar {
-        flex-direction: column;
-        gap: 4px;
-      }
-
-      .section {
-        padding-top: 34px;
-      }
-
-      .grid {
-        grid-template-columns: 1fr;
-      }
-
-      .card {
-        display: grid;
-        grid-template-columns: 118px 1fr;
-        gap: 16px;
-      }
-
-      .card.no-image {
-        grid-template-columns: 1fr;
-      }
-
-      .card-media {
-        margin: 0;
-        aspect-ratio: 1 / 1;
-      }
-
-      .card .teaser {
+      .news-section { padding: 56px 0 54px; }
+      .article-row { padding-right: 40px; }
+      .article-title { font-size: 1.1rem; }
+      .teaser {
         display: -webkit-box;
-        margin-top: 10px;
         overflow: hidden;
-        color: var(--muted);
-        font-size: 0.9rem;
-        line-height: 1.45;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
+        font-size: .84rem;
       }
 
-      .share {
-        padding: 28px 20px;
-      }
+      .briefing-row { grid-template-columns: 28px minmax(0,1fr); }
+      .edition-end { padding: 72px 0 54px; }
+      .edition-end h2 { font-size: clamp(2.25rem, 11vw, 3.1rem); }
 
-      .share-actions {
-        flex-direction: column;
-      }
+      .newsletter { padding: 28px 22px; }
+      .newsletter-grid { grid-template-columns: 1fr; gap: 28px; }
+      .newsletter h2 { font-size: 1.8rem; }
 
-      .share-button {
-        width: 100%;
-      }
+      .home-archive { padding-top: 44px; }
+      .home-archive-item { grid-template-columns: 67px minmax(0,1fr) 18px; }
+    }
 
-      .newsletter {
-        padding: 28px 20px;
-        border-radius: 18px;
-      }
-
-      .newsletter-grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
-      }
-
-      .buttondown-wrap {
-        width: 100%;
-        max-width: none;
-        padding: 20px;
-      }
-
-      body {
-        padding-bottom: 70px;
-      }
-
-      .app-nav {
-        position: fixed;
-        top: auto;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        border-top: 1px solid var(--line);
-        border-bottom: 0;
-        background: rgba(251, 247, 234, 0.98);
-      }
-
-      .app-nav-inner {
-        justify-content: space-around;
-        min-height: 64px;
-      }
-
-      .app-nav a {
-        flex: 1;
-        min-height: 44px;
-        padding: 0 8px;
-      }
-
-      .archive-item {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 8px;
-      }
-
-      .install-strip-inner {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .install-actions {
-        width: 100%;
-      }
-
-      .install-button {
-        flex: 1;
-      }
+    @media (max-width: 480px) {
+      .brand { font-size: .7rem; }
+      .app-nav-inner { gap: 8px; }
+      .app-nav a { font-size: .62rem; }
+      .hero { padding-top: 46px; }
+      .hero-meta-right { gap: 10px; }
+      .article-row { padding-top: 20px; padding-bottom: 20px; }
+      .article-arrow { top: 20px; width: 25px; height: 25px; }
+      .home-archive-title { font-size: .72rem; }
     }
   </style>
+
 </head>
-
 <body>
-
   <header class="site-header">
-    <div class="shell header-row">
-
-      <a
-        class="brand"
-        href="./"
-        aria-label="Positief nieuws homepage"
-      >
-        <img
-          class="brand-logo"
-          src="/icon-192-v2.png"
-          alt=""
-          width="56"
-          height="56"
-        >
-
-        <span class="brand-text">
-          <span class="brand-name">
-            Positief nieuws
-          </span>
-
-          <span class="brand-tagline">
-            Dit gebeurt ook.
-          </span>
-        </span>
+    <div class="header-shell header-row">
+      <a class="brand" href="./" aria-label="Positief nieuws homepage">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span>Positief nieuws.</span>
       </a>
 
-      <a
-        class="header-cta"
-        href="#nieuwsbrief"
-      >
-        In je inbox
-      </a>
-
+      <nav class="app-nav" aria-label="Hoofdnavigatie">
+        <div class="app-nav-inner">
+          <a id="nav-today" href="./">Vandaag</a>
+          <a id="nav-archive" href="#archief">Archief</a>
+          <a id="nav-about" href="#over">Over</a>
+          <a class="header-cta" href="#nieuwsbrief">In je inbox</a>
+        </div>
+      </nav>
     </div>
   </header>
 
-
-  <nav class="app-nav" aria-label="Hoofdnavigatie">
-    <div class="shell app-nav-inner">
-      <a id="nav-today" href="./">Vandaag</a>
-      <a id="nav-archive" href="#archief">Archief</a>
-      <a id="nav-about" href="#over">Over</a>
+  <div id="today-view" class="app-view">
+    <div id="archive-banner" class="content-shell archive-banner">
+      Je leest een archiefeditie. <a href="./">Ga naar de nieuwste editie →</a>
     </div>
-  </nav>
 
-
-  <section
-    id="install-strip"
-    class="install-strip"
-    aria-label="Installeer Positief nieuws"
-  >
-    <div class="shell install-strip-inner">
-      <div>
-        <p class="install-copy" id="install-copy">
-          <strong>Positief nieuws bij de hand.</strong><br>
-          Zet Positief nieuws op je beginscherm en lees de nieuwste editie als een app.
-          Even bijlezen, weer bij, klaar.
+    <section class="hero">
+      <div class="content-shell">
+        <p class="hero-date" id="edition-date">Editie van vandaag</p>
+        <h1 class="hero-title">Dit gebeurt ook.</h1>
+        <p class="hero-copy">
+          In een paar minuten weet je wat er goed gaat én wat je verder moet weten.<br>
+          Zonder eindeloos scrollen.
         </p>
+        <p id="today-intro" hidden></p>
 
-        <div
-          id="ios-install-panel"
-          class="ios-install-panel"
-        >
-          Op iPhone/iPad: open deze site in Safari, tik op de deelknop
-          en kies ‘Zet op beginscherm’.
+        <div class="hero-meta">
+          <span>maandag · woensdag · vrijdag</span>
+          <span class="hero-meta-right">
+            <span>15 verhalen</span>
+            <span>ongeveer 6 minuten</span>
+          </span>
         </div>
       </div>
+    </section>
 
-      <div class="install-actions">
-        <button
-          id="install-button"
-          class="install-button"
-          type="button"
-        >
-          Installeer app
-        </button>
-
-        <button
-          id="install-dismiss"
-          class="install-dismiss"
-          type="button"
-          aria-label="Installatiemelding sluiten"
-        >
-          Niet nu
-        </button>
-      </div>
-    </div>
-  </section>
-
-
-  <div id="today-view" class="app-view">
-
-  <div
-    id="archive-banner"
-    class="shell archive-banner"
-  >
-    Je leest een archiefeditie.
-    <a href="./">Ga naar de nieuwste editie →</a>
-  </div>
-
-
-  <div class="shell edition-bar">
-
-    <span>
-      <strong id="edition-date">Editie van vandaag</strong>
-    </span>
-
-    <span>
-      Nieuwe editie: maandag, woensdag en vrijdag
-    </span>
-
-  </div>
-
-
-  <section class="mission" aria-label="Over Positief nieuws">
-    <div class="shell">
-      <p class="mission-copy">
-        <strong>Positief nieuws laat zien wat er óók gebeurt.</strong>
-      </p>
-
-      <p class="mission-copy">
-        In een paar minuten weet je wat er goed gaat én wat je verder moet weten.
-        Zonder eindeloos scrollen.
-      </p>
-
-      <p class="mission-copy mission-today" id="today-intro">
-        Vandaag lees je onder meer over drie positieve ontwikkelingen uit Nederland.
-      </p>
-    </div>
-  </section>
-
-
-  <main>
-
-    <section class="section">
-
-      <div class="shell">
-
-        <div class="section-heading">
-          <div>
-
-            <p class="section-kicker">
-              6 verhalen
-            </p>
-
-            <h1 class="section-title">
-              Goed nieuws uit Nederland
-            </h1>
-
+    <main>
+      <section class="news-section nl-block">
+        <div class="content-shell">
+          <div class="section-heading">
+            <p class="section-kicker">Goed nieuws uit Nederland</p>
+            <span class="section-count">6 verhalen</span>
           </div>
-
-          <p class="section-intro">
+          <p class="section-intro-visually-hidden">
             Zes positieve ontwikkelingen uit Nederland. Over mensen, gezondheid, wetenschap, natuur, sport en andere dingen die de goede kant op bewegen.
           </p>
+          <div id="nl-state" class="state">Nieuws laden…</div>
+          <div id="nl-grid" class="article-list" hidden></div>
         </div>
-
-
-        <div
-          id="nl-state"
-          class="state"
-        >
-          Nieuws laden…
-        </div>
-
-
-        <div
-          id="nl-grid"
-          class="grid"
-          hidden
-        ></div>
-
-      </div>
-
-    </section>
-
-
-    <section class="international">
-
-      <div class="shell">
-
-        <div class="section-heading">
-
-          <div>
-
-            <p class="section-kicker">
-              6 verhalen
-            </p>
-
-            <h2 class="section-title">
-              Goed nieuws uit de wereld
-            </h2>
-
-          </div>
-
-
-          <p class="section-intro">
-            Omdat goed nieuws zich niet aan landsgrenzen houdt. Zes positieve ontwikkelingen van buiten Nederland die het waard zijn om te weten. De artikelen waar we naar verwijzen zijn Engelstalig.
-          </p>
-
-        </div>
-
-
-        <div
-          id="int-state"
-          class="state"
-        >
-          Nieuws laden…
-        </div>
-
-
-        <div
-          id="int-grid"
-          class="grid"
-          hidden
-        ></div>
-
-      </div>
-
-    </section>
-
-
-    <section
-      class="briefing"
-      id="headlines-section"
-      hidden
-    >
-
-      <div class="shell">
-
-        <div class="section-heading">
-
-          <div>
-
-            <p class="section-kicker">
-              3 berichten
-            </p>
-
-            <h2 class="section-title">
-              Wat je verder moet weten
-            </h2>
-
-          </div>
-
-          <p class="section-intro">
-            Drie onderwerpen die het Nederlandse nieuws op dit moment domineren. Niet per se positief, wel belangrijk om van op de hoogte te zijn. Kort, feitelijk en zonder sensatie.
-          </p>
-
-        </div>
-
-        <div
-          id="headlines-state"
-          class="state"
-        >
-          Nieuws laden…
-        </div>
-
-        <div
-          id="headlines-grid"
-          class="grid"
-          hidden
-        ></div>
-
-      </div>
-
-    </section>
-
-
-    <div class="shell">
-
-      <section
-        class="share"
-        aria-label="Deel Positief nieuws"
-      >
-
-        <p class="section-kicker">
-          Vertel het door
-        </p>
-
-        <h2>
-          Deel Positief nieuws
-        </h2>
-
-        <p>
-          Ken je iemand die ook wel nieuws wil lezen zonder eindeloos te blijven scrollen?
-          Deel deze editie.
-        </p>
-
-        <div class="share-actions">
-
-          <a
-            id="share-whatsapp"
-            class="share-button"
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Deel via WhatsApp
-          </a>
-
-          <a
-            id="share-email"
-            class="share-button"
-            href="#"
-          >
-            Deel via e-mail
-          </a>
-
-        </div>
-
       </section>
 
+      <section class="news-section world-block">
+        <div class="content-shell">
+          <div class="section-heading">
+            <p class="section-kicker">Goed nieuws uit de wereld</p>
+            <span class="section-count">6 verhalen</span>
+          </div>
+          <p class="section-intro-visually-hidden">
+            Zes positieve ontwikkelingen van buiten Nederland die het waard zijn om te weten. De artikelen waar we naar verwijzen zijn Engelstalig.
+          </p>
+          <div id="int-state" class="state">Nieuws laden…</div>
+          <div id="int-grid" class="article-list" hidden></div>
+        </div>
+      </section>
 
-      <section
-        class="newsletter"
-        id="nieuwsbrief"
-      >
+      <section class="news-section briefing-block" id="headlines-section" hidden>
+        <div class="content-shell">
+          <div class="section-heading">
+            <p class="section-kicker">Wat je verder moet weten</p>
+            <span class="section-count">3 verhalen</span>
+          </div>
+          <p class="section-intro-visually-hidden">
+            Drie onderwerpen die het Nederlandse nieuws op dit moment domineren. Niet per se positief, wel belangrijk om van op de hoogte te zijn. Kort, feitelijk en zonder sensatie.
+          </p>
+          <div id="headlines-state" class="state">Nieuws laden…</div>
+          <div id="headlines-grid" class="article-list" hidden></div>
+        </div>
+      </section>
 
+      <section class="edition-end">
+        <div class="content-shell">
+          <h2>Dit was het voor vandaag.<br>Je bent weer bij.</h2>
+          <p>Geniet van je dag.</p>
+
+          <div class="end-actions">
+            <button id="share-edition" class="quiet-button" type="button">Deel deze editie</button>
+
+            <div id="install-strip" aria-label="Installeer Positief nieuws">
+              <button id="install-button" class="quiet-button" type="button">Zet op beginscherm</button>
+              <button id="install-dismiss" type="button" aria-label="Installatiemelding sluiten">Niet nu</button>
+              <p class="install-copy" id="install-copy">Zet Positief nieuws op je beginscherm.</p>
+              <div id="ios-install-panel" class="ios-install-panel">
+                Op iPhone/iPad: open deze site in Safari, tik op de deelknop en kies ‘Zet op beginscherm’.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="newsletter wide-shell" id="nieuwsbrief">
         <div class="newsletter-grid">
-
           <div class="newsletter-copy">
-
-            <p
-              class="section-kicker"
-              style="color:#ff9a68;"
-            >
-              Nieuwsbrief
-            </p>
-
-            <h2>
-              Positief nieuws in je inbox
-            </h2>
-
-            <p>
-              Drie keer per week een compacte editie met positief nieuws uit Nederland en de wereld,
-              plus drie onderwerpen die je verder moet weten.
-              <br><br>
-              Even lezen, weer bij. Geen eindeloze nieuwsfeed.
-            </p>
-
+            <p class="section-kicker">Nieuwsbrief</p>
+            <h2>De volgende editie gewoon in je inbox.</h2>
+            <p>Drie keer per week. Kort genoeg om echt uit te lezen.</p>
           </div>
 
-
           <div class="buttondown-wrap">
-
             <form
               action="https://buttondown.com/api/emails/embed-subscribe/positiefnieuws"
               method="post"
               class="buttondown-form"
               onsubmit="if (window.sa_event) { sa_event('nieuwsbrief_inschrijving'); }"
             >
-              <label for="bd-email">
-                E-mailadres
-              </label>
-
+              <label for="bd-email">E-mailadres</label>
               <input
                 type="email"
                 name="email"
@@ -1228,128 +773,56 @@
                 autocomplete="email"
                 required
               >
-
-              <input
-                type="hidden"
-                name="embed"
-                value="1"
-              >
-
-              <input
-                type="submit"
-                value="Schrijf me in"
-              >
-
-              <p class="buttondown-note">
-                Na inschrijving ontvang je een bevestigingsmail.
-                Afmelden kan altijd.
-                <a
-                  href="https://buttondown.com/refer/positiefnieuws"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Powered by Buttondown.
-                </a>
-              </p>
+              <input type="hidden" name="embed" value="1">
+              <input type="submit" value="Aanmelden">
+              <p class="buttondown-note">Na inschrijving ontvang je een bevestigingsmail. Afmelden kan altijd.</p>
             </form>
-
           </div>
-
         </div>
-
       </section>
 
-    </div>
-
-  </main>
-
+      <section class="home-archive wide-shell" aria-label="Eerdere edities">
+        <div class="home-archive-heading">
+          <p class="section-kicker">Eerdere edities</p>
+          <a href="#archief">Archief</a>
+        </div>
+        <div id="home-archive-state" class="state">Eerdere edities laden…</div>
+        <div id="home-archive-list" class="home-archive-list" hidden></div>
+      </section>
+    </main>
   </div>
 
-
-  <section
-    id="archive-view"
-    class="app-view archive-page"
-    hidden
-  >
-    <div class="shell">
+  <section id="archive-view" class="app-view archive-page" hidden>
+    <div class="content-shell">
       <p class="section-kicker">Alle edities</p>
-      <h1 class="section-title">Archief</h1>
+      <h1 class="page-title">Archief</h1>
       <p class="archive-note">
-        Lees eerdere edities van Positief nieuws terug. Elke editie bevat
-        6 positieve verhalen uit Nederland, 6 uit de wereld en 3 onderwerpen
-        om bij te blijven.
+        Lees eerdere edities van Positief nieuws terug. Elke editie bevat 6 positieve verhalen uit Nederland, 6 uit de wereld en 3 onderwerpen om bij te blijven.
       </p>
-
-      <div id="archive-state" class="state">
-        Archief laden…
-      </div>
-
-      <div
-        id="archive-list"
-        class="archive-list"
-        hidden
-      ></div>
+      <div id="archive-state" class="state">Archief laden…</div>
+      <div id="archive-list" class="archive-list" hidden></div>
     </div>
   </section>
 
-
-  <section
-    id="about-view"
-    class="app-view about-page"
-    hidden
-  >
-    <div class="shell">
+  <section id="about-view" class="app-view about-page" hidden>
+    <div class="content-shell">
       <p class="section-kicker">Dit gebeurt ook.</p>
-      <h1 class="section-title">Over Positief nieuws</h1>
-
+      <h1 class="page-title">Over Positief nieuws</h1>
       <div class="about-copy">
-        <p>
-          Het nieuws bestaat niet alleen uit oorlog, politieke ruzie, ongelukken en crises.
-          Iedere dag gaan er ook dingen vooruit: in wetenschap, gezondheid, natuur,
-          technologie en gewoon tussen mensen. Alleen krijgen die verhalen vaak minder aandacht.
-        </p>
-
-        <p>
-          Positief nieuws laat zien wat er óók gebeurt, zonder het belangrijke nieuws weg te laten.
-          Iedere editie bevat zes positieve verhalen uit Nederland, zes uit de wereld en drie
-          onderwerpen die op dat moment belangrijk zijn om te weten.
-        </p>
-
-        <p>
-          Het doel is simpel:
-          <strong>in een paar minuten weet je wat er goed gaat én wat je verder moet weten.
-          Daarna ben je klaar.</strong>
-        </p>
-
-        <p>
-          Geen eindeloze feed. Geen clickbait om je zo lang mogelijk vast te houden.
-          Gewoon een compacte nieuwsselectie en daarna weer verder met je dag.
-        </p>
-
-        <p>
-          Nieuwe edities verschijnen op maandag, woensdag en vrijdag.
-        </p>
-
-        <p>
-          <a href="#nieuwsbrief" id="about-newsletter-link">
-            Ontvang Positief nieuws in je inbox →
-          </a>
-        </p>
+        <p>Het nieuws bestaat niet alleen uit oorlog, politieke ruzie, ongelukken en crises. Iedere dag gaan er ook dingen vooruit: in wetenschap, gezondheid, natuur, technologie en gewoon tussen mensen. Alleen krijgen die verhalen vaak minder aandacht.</p>
+        <p>Positief nieuws laat zien wat er óók gebeurt, zonder het belangrijke nieuws weg te laten. Iedere editie bevat zes positieve verhalen uit Nederland, zes uit de wereld en drie onderwerpen die op dat moment belangrijk zijn om te weten.</p>
+        <p>Het doel is simpel: <strong>in een paar minuten weet je wat er goed gaat én wat je verder moet weten. Daarna ben je klaar.</strong></p>
+        <p>Geen eindeloze feed. Geen clickbait om je zo lang mogelijk vast te houden. Gewoon een compacte nieuwsselectie en daarna weer verder met je dag.</p>
+        <p>Nieuwe edities verschijnen op maandag, woensdag en vrijdag.</p>
+        <p><a href="#nieuwsbrief" id="about-newsletter-link">Ontvang Positief nieuws in je inbox →</a></p>
       </div>
     </div>
   </section>
-
 
   <footer class="site-footer">
-
-    <div class="shell">
-      Dit was het voor vandaag. Je bent weer bij. Geniet van je dag.
-    </div>
-
+    <div class="wide-shell">Positief nieuws · Dit gebeurt ook.</div>
   </footer>
-
-
-  <script>
+<script>
     const $ = (selector) =>
       document.querySelector(selector);
 
@@ -1756,74 +1229,40 @@
 
 
     function renderCard(
-      rawArticle
+      rawArticle,
+      type = "nl",
+      index = 0
     ) {
 
-      const article =
-        normalizeArticle(
-          rawArticle
-        );
+      const article = normalizeArticle(rawArticle);
+      const card = document.createElement("article");
+      card.className = "article-row";
 
+      const href = safeUrl(article.url);
+      const externalAttrs = href !== "#"
+        ? 'target="_blank" rel="noopener noreferrer"'
+        : "";
 
-      const card =
-        document.createElement(
-          "article"
-        );
-
-
-      card.className =
-        `card${article.image ? "" : " no-image"}`;
-
-
-      card.innerHTML = `
-
-        ${imageHtml(
-          article,
-          "card-media"
-        )}
-
-        <div class="card-copy">
-
-          ${metaHtml(article)}
-
-          <h3 class="card-title">
-
-            <a
-              href="${safeUrl(article.url)}"
-
-              ${
-                article.url &&
-                article.url !== "#"
-
-                  ? 'target="_blank" rel="noopener noreferrer"'
-
-                  : ""
-              }
-            >
-
-              ${safeText(article.title)}
-
-            </a>
-
+      const core = `
+        <div class="article-main">
+          <h3 class="article-title">
+            <a href="${href}" ${externalAttrs}>${safeText(article.title)}</a>
           </h3>
-
-
-          ${
-            article.teaser
-
-              ? `<p class="teaser">${safeText(article.teaser)}</p>`
-
-              : ""
-          }
-
-
-          ${articleLink(
-            article.url
-          )}
-
+          ${article.teaser ? `<p class="teaser">${safeText(article.teaser)}</p>` : ""}
+          ${metaHtml(article)}
         </div>
       `;
 
+      card.innerHTML = type === "headlines"
+        ? `<div class="briefing-row"><div class="briefing-number">${String(index + 1).padStart(2, "0")}</div>${core}</div>`
+        : core;
+
+      if (href !== "#") {
+        card.insertAdjacentHTML(
+          "beforeend",
+          `<a class="article-arrow" href="${href}" ${externalAttrs} aria-label="Lees ${safeText(article.title)}">↗</a>`
+        );
+      }
 
       return card;
     }
@@ -1876,14 +1315,8 @@
         items
           .slice(0, 6)
           .forEach(
-            item => {
-
-              grid.appendChild(
-                renderCard(
-                  item
-                )
-              );
-
+            (item, index) => {
+              grid.appendChild(renderCard(item, type, index));
             }
           );
 
@@ -1916,14 +1349,8 @@
         items
           .slice(0, 6)
           .forEach(
-            item => {
-
-              grid.appendChild(
-                renderCard(
-                  item
-                )
-              );
-
+            (item, index) => {
+              grid.appendChild(renderCard(item, type, index));
             }
           );
 
@@ -1956,14 +1383,8 @@
         items
           .slice(0, 3)
           .forEach(
-            item => {
-
-              grid.appendChild(
-                renderCard(
-                  item
-                )
-              );
-
+            (item, index) => {
+              grid.appendChild(renderCard(item, type, index));
             }
           );
 
@@ -2185,6 +1606,15 @@
         return;
       }
 
+      if (hash === "#nieuwsbrief") {
+        showAppView("today");
+        setTimeout(() => {
+          const newsletter = $("#nieuwsbrief");
+          if (newsletter) newsletter.scrollIntoView({ behavior: "smooth" });
+        }, 60);
+        return;
+      }
+
 
       showAppView(
         "today"
@@ -2290,6 +1720,58 @@
 
       }
 
+    }
+
+
+
+    async function loadHomeArchivePreview(currentEditionDate) {
+
+      const state = $("#home-archive-state");
+      const list = $("#home-archive-list");
+      if (!state || !list || list.dataset.loaded === "true") return;
+
+      try {
+        const response = await fetch("./edities/index.json", { cache: "no-store" });
+        if (!response.ok) throw new Error(`edities/index.json gaf status ${response.status}`);
+
+        const entries = (await response.json())
+          .filter(entry => /^\d{4}-\d{2}-\d{2}$/.test(entry?.date || ""))
+          .filter(entry => entry.date !== currentEditionDate)
+          .slice(0, 3);
+
+        list.innerHTML = "";
+
+        for (const entry of entries) {
+          let label = "Lees deze editie";
+
+          try {
+            const editionResponse = await fetch(`./edities/${entry.date}.json`, { cache: "no-store" });
+            if (editionResponse.ok) {
+              const editionData = await editionResponse.json();
+              const firstStory = getSection(editionData, "nl").map(normalizeArticle).find(item => item.title);
+              if (firstStory?.title) label = firstStory.title;
+            }
+          } catch (_) {}
+
+          const link = document.createElement("a");
+          link.className = "home-archive-item";
+          link.href = `./?editie=${encodeURIComponent(entry.date)}`;
+          link.innerHTML = `
+            <span class="home-archive-date">${safeText(formatEditionDate(entry.date).replace(/^\w+\s+/u, ""))}</span>
+            <span class="home-archive-title">${safeText(label)}</span>
+            <span class="home-archive-arrow">→</span>
+          `;
+          list.appendChild(link);
+        }
+
+        state.hidden = true;
+        list.hidden = false;
+        list.dataset.loaded = "true";
+      }
+      catch (error) {
+        console.error(error);
+        state.textContent = "Eerdere edities konden niet worden geladen.";
+      }
     }
 
 
@@ -2424,6 +1906,7 @@
           "headlines"
         );
 
+        loadHomeArchivePreview(rawEditionDate);
 
         loadAnalytics(
           rawEditionDate
@@ -2457,6 +1940,9 @@
 
     function setupShareButtons() {
 
+      const button = $("#share-edition");
+      if (!button) return;
+
       const shareUrl =
         window.location.origin
         + window.location.pathname
@@ -2465,39 +1951,28 @@
       const shareText =
         "Positief nieuws. In een paar minuten weet je wat er goed gaat én wat je verder moet weten. Zonder eindeloos scrollen.";
 
-      const whatsappUrl =
-        "https://wa.me/?text=" +
-        encodeURIComponent(
-          shareText +
-          "\n\n" +
-          shareUrl
-        );
+      button.addEventListener(
+        "click",
+        async () => {
+          trackSimpleEvent("share_edition");
+          if (navigator.share) {
+            try {
+              await navigator.share({
+                title: "Positief nieuws. Dit gebeurt ook.",
+                text: shareText,
+                url: shareUrl
+              });
+              return;
+            } catch (_) {}
+          }
 
-      const emailSubject =
-        "Positief nieuws. Dit gebeurt ook.";
-
-      const emailBody =
-        shareText +
-        "\n\n" +
-        shareUrl;
-
-      const emailUrl =
-        "mailto:?subject=" +
-        encodeURIComponent(
-          emailSubject
-        ) +
-        "&body=" +
-        encodeURIComponent(
-          emailBody
-        );
-
-
-      $("#share-whatsapp").href =
-        whatsappUrl;
-
-      $("#share-email").href =
-        emailUrl;
-
+          window.open(
+            "https://wa.me/?text=" + encodeURIComponent(shareText + "\n\n" + shareUrl),
+            "_blank",
+            "noopener,noreferrer"
+          );
+        }
+      );
     }
 
 
@@ -2577,7 +2052,7 @@
         );
 
         $("#install-button").textContent =
-          "Installeer app";
+          "Zet op beginscherm";
 
         showInstallStrip();
 
@@ -2644,6 +2119,7 @@
 
         $("#install-copy").textContent =
           "Gebruik in je browser ‘App installeren’ of ‘Toevoegen aan startscherm’.";
+        $("#install-copy").classList.add("is-visible");
       }
     );
 
@@ -2673,8 +2149,12 @@
         "Positief nieuws bij de hand. Zet de site op je beginscherm en lees de nieuwste editie als een app.";
 
       $("#install-button").textContent =
-        "Hoe werkt dat?";
+        "Zet op beginscherm";
 
+      showInstallStrip();
+    }
+
+    if (!isStandaloneMode() && !installDismissed()) {
       showInstallStrip();
     }
 
@@ -2746,9 +2226,6 @@
     }
 
   </script>
-
-
+  <!-- release 2026-08-28: editorial redesign; logo assets unchanged -->
 </body>
 </html>
-
-<!-- pages redeploy 2026-08-26 -->
