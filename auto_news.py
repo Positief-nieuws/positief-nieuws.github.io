@@ -20,6 +20,7 @@ Dat is precies het werk waar een taalmodel later beter in is.
 from __future__ import annotations
 
 import hashlib
+import concurrent.futures
 import json
 import re
 import urllib.parse
@@ -660,7 +661,7 @@ def source_url(src):
         return src["url"]
     return google_site_feed(src["domain"], src["region"])
 
-def fetch(url, html=False):
+def fetch(url, html=False, timeout=20):
     headers = {
         "User-Agent": (
             "Mozilla/5.0 (compatible; PositiefNieuwsBot/0.2; +https://positief-nieuws.github.io/)"
@@ -672,7 +673,7 @@ def fetch(url, html=False):
         ),
     }
     req = urllib.request.Request(url, headers=headers)
-    with urllib.request.urlopen(req, timeout=20) as r:
+    with urllib.request.urlopen(req, timeout=timeout) as r:
         return r.read()
 
 def parse_feed(raw):
@@ -745,6 +746,153 @@ def near_duplicate(a, b):
 def item_id(source, title, url):
     raw = f"{source}|{title}|{url}".encode("utf-8")
     return hashlib.sha1(raw).hexdigest()[:12]
+
+
+READING_SPEED_WPM = 220
+READING_TIME_MAX_MINUTES = 15
+READING_TIME_FETCH_TIMEOUT = 8
+READING_TIME_WORKERS = 8
+
+class ArticleTextParser(HTMLParser):
+    """
+    Eenvoudige, bron-onafhankelijke tekstextractie voor een leestijdschatting.
+    We tellen vooral tekst uit <p>-blokken en negeren navigatie/footers/scripts.
+    """
+    SKIP_TAGS = {
+        "script", "style", "nav", "footer", "header", "aside",
+        "form", "button", "svg", "noscript"
+    }
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.skip_depth = 0
+        self.in_p = 0
+        self.parts = []
+
+    def handle_starttag(self, tag, attrs):
+        tag = tag.lower()
+        if tag in self.SKIP_TAGS:
+            self.skip_depth += 1
+        if tag == "p" and self.skip_depth == 0:
+            self.in_p += 1
+
+    def handle_endtag(self, tag):
+        tag = tag.lower()
+        if tag == "p" and self.in_p:
+            self.in_p -= 1
+        if tag in self.SKIP_TAGS and self.skip_depth:
+            self.skip_depth -= 1
+
+    def handle_data(self, data):
+        if self.skip_depth == 0 and self.in_p:
+            value = clean(data)
+            if value:
+                self.parts.append(value)
+
+
+def words_in_text(text):
+    return len(re.findall(r"\b[\wÀ-ÿ'-]+\b", clean(text), flags=re.UNICODE))
+
+
+def json_ld_reading_words(html_text):
+    """
+    Veel nieuwssites publiceren articleBody of wordCount in JSON-LD.
+    Als dat aanwezig is, is dit meestal betrouwbaarder dan generieke HTML-extractie.
+    """
+    scripts = re.findall(
+        r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
+        html_text,
+        flags=re.I | re.S,
+    )
+
+    best = 0
+
+    def inspect(value):
+        nonlocal best
+
+        if isinstance(value, dict):
+            word_count = value.get("wordCount")
+            try:
+                if word_count is not None:
+                    best = max(best, int(float(word_count)))
+            except (TypeError, ValueError):
+                pass
+
+            article_body = value.get("articleBody")
+            if isinstance(article_body, str):
+                best = max(best, words_in_text(article_body))
+
+            for child in value.values():
+                inspect(child)
+
+        elif isinstance(value, list):
+            for child in value:
+                inspect(child)
+
+    for raw in scripts:
+        try:
+            inspect(json.loads(raw.strip()))
+        except Exception:
+            continue
+
+    return best
+
+
+def estimate_reading_time(url):
+    """
+    Schat de leestijd van het bronartikel.
+    Retourneert None als de pagina niet betrouwbaar genoeg uit te lezen is.
+    """
+    try:
+        raw = fetch(url, html=True, timeout=READING_TIME_FETCH_TIMEOUT)
+        html_text = raw.decode("utf-8", errors="replace")
+
+        word_count = json_ld_reading_words(html_text)
+
+        if word_count < 120:
+            parser = ArticleTextParser()
+            parser.feed(html_text)
+            word_count = max(
+                word_count,
+                words_in_text(" ".join(parser.parts))
+            )
+
+        # Minder dan 120 woorden is vaak een video-, galerij- of landingspagina.
+        if word_count < 120:
+            return None
+
+        minutes = max(1, round(word_count / READING_SPEED_WPM))
+        return min(minutes, READING_TIME_MAX_MINUTES)
+
+    except Exception:
+        return None
+
+
+def add_reading_times(items):
+    """
+    Verrijk alleen de shortlist, niet alle ruwe kandidaten.
+    Zo blijft de GitHub Action snel en worden hooguit 80 pagina's parallel bekeken.
+    """
+    if not items:
+        return items
+
+    with concurrent.futures.ThreadPoolExecutor(
+        max_workers=READING_TIME_WORKERS
+    ) as executor:
+        futures = {
+            executor.submit(estimate_reading_time, item["url"]): item
+            for item in items
+        }
+
+        for future in concurrent.futures.as_completed(futures):
+            item = futures[future]
+            try:
+                item["reading_time_minutes"] = future.result()
+            except Exception:
+                item["reading_time_minutes"] = None
+
+    return items
+
 
 def collect():
     now = datetime.now(timezone.utc)
@@ -847,12 +995,16 @@ def main():
     nl = shortlist(all_candidates, "nl")
     intl = shortlist(all_candidates, "int")
 
+    # Voeg alleen aan de uiteindelijke shortlists een geschatte leestijd toe.
+    add_reading_times(nl)
+    add_reading_times(intl)
+
     now = datetime.now().astimezone()
 
     data = {
         "meta": {
             "generated_at": now.isoformat(),
-            "generator": "Goed nieuws kandidaten 0.1",
+            "generator": "Goed nieuws kandidaten 0.2",
             "purpose": "Voorselectie voor AI-redactie; dit is NIET de definitieve Goed nieuws-editie.",
             "max_age_hours": MAX_AGE_HOURS,
             "max_per_region": MAX_PER_REGION,
@@ -878,6 +1030,7 @@ def main():
                 "Gecureerde goed-nieuwsbronnen krijgen extra voorrang in de voorselectie, maar worden niet automatisch geselecteerd.",
                 "Geen vacatures, losse weersverwachtingen, celebrity-fluff of puur triviale uitslagen.",
                 "Eerste verhaal moet direct prettig en positief voelen.",
+                "Behoud reading_time_minutes bij geselecteerde artikelen als die waarde beschikbaar is.",
             ],
         },
         "nl_candidates": nl,
