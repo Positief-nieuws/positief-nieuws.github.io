@@ -19,8 +19,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="Positief nieuws">
-  <link rel="manifest" href="/manifest.json?v=3">
-  <link rel="apple-touch-icon" href="/icon-192-v2.png">
+  <link rel="manifest" href="/manifest.json?v=4">
+  <link rel="apple-touch-icon" href="/icon-192-v3.png">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Positief nieuws. Dit gebeurt ook.">
@@ -1071,6 +1071,18 @@
             ]
           ),
 
+        readingTime:
+          firstValue(
+            article,
+            [
+              "reading_time_minutes",
+              "readingTimeMinutes",
+              "reading_time",
+              "readingTime",
+              "leestijd"
+            ]
+          ),
+
         image:
           firstValue(
             article,
@@ -1296,6 +1308,25 @@
     }
 
 
+    function readingTimeLabel(value) {
+
+      const minutes =
+        Number.parseInt(
+          String(value ?? "").replace(/[^0-9]/g, ""),
+          10
+        );
+
+      if (
+        !Number.isFinite(minutes) ||
+        minutes < 1
+      ) {
+        return "";
+      }
+
+      return `${minutes} min lezen`;
+    }
+
+
     function metaHtml(article) {
 
       const parts = [];
@@ -1314,6 +1345,20 @@
 
         parts.push(
           `<span class="dot">${safeText(article.source)}</span>`
+        );
+
+      }
+
+
+      const readingTime =
+        readingTimeLabel(
+          article.readingTime
+        );
+
+      if (readingTime) {
+
+        parts.push(
+          `<span class="dot">${safeText(readingTime)}</span>`
         );
 
       }
@@ -2055,7 +2100,7 @@
 
         if (heroWeekdayEl) {
           heroWeekdayEl.textContent =
-            ` op deze ${heroWeekday}`;
+            ` in deze ${heroWeekday}-editie`;
         }
 
 
