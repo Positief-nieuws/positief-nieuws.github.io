@@ -36,6 +36,8 @@
       --ink: #151a17;
       --green: #1f5b45;
       --green-dark: #173f31;
+      --accent: #d6a13a;
+      --accent-soft: rgba(214, 161, 58, 0.18);
       --muted: #68716b;
       --line: rgba(23, 63, 49, 0.22);
       --line-soft: rgba(23, 63, 49, 0.12);
@@ -46,14 +48,27 @@
     }
 
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+      font-size: 17px;
+    }
     body {
       margin: 0;
       background: var(--paper);
       color: var(--ink);
-      font-family: Georgia, "Times New Roman", serif;
+      font-family: Arial, Helvetica, sans-serif;
       line-height: 1.52;
       -webkit-font-smoothing: antialiased;
+    }
+
+
+    h1,
+    h2,
+    h3,
+    .hero-title,
+    .article-title,
+    .page-title {
+      font-family: Georgia, "Times New Roman", serif;
     }
 
     a { color: inherit; }
@@ -89,49 +104,59 @@
     .brand {
       display: inline-flex;
       align-items: center;
-      gap: 7px;
+      gap: 12px;
       color: var(--ink);
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.76rem;
+      font-size: 1.02rem;
       font-weight: 800;
       text-decoration: none;
-      letter-spacing: -0.015em;
+      letter-spacing: -0.02em;
     }
 
-    .brand-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--green);
+    .brand-sun {
+      width: 28px;
+      height: 28px;
+      color: var(--accent);
       flex: 0 0 auto;
     }
 
     .app-nav-inner {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 24px;
     }
 
     .app-nav a {
       color: var(--ink);
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.72rem;
+      font-size: 0.86rem;
+      font-weight: 600;
       text-decoration: none;
       white-space: nowrap;
+      transition: color 120ms ease, border-color 120ms ease, background-color 120ms ease;
     }
 
     .app-nav a:hover,
-    .app-nav a.is-active { color: var(--green); }
+    .app-nav a.is-active { color: var(--accent); }
 
     .app-nav .header-cta {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 34px;
-      padding: 0 14px;
-      border: 1px solid var(--line);
+      gap: 8px;
+      min-height: 40px;
+      padding: 0 16px;
+      border: 1px solid rgba(214, 161, 58, 0.45);
       border-radius: 999px;
-      background: transparent;
+      background: rgba(255,255,255,0.25);
+      color: var(--accent);
+      box-shadow: inset 0 0 0 1px rgba(214, 161, 58, 0.08);
+    }
+
+    .header-cta-icon {
+      width: 16px;
+      height: 16px;
+      flex: 0 0 auto;
     }
 
     .hero {
@@ -150,6 +175,10 @@
       font-size: clamp(3rem, 6.1vw, 4.25rem);
       line-height: 0.96;
       letter-spacing: -0.055em;
+    }
+
+    .hero-title-dot {
+      color: var(--accent);
     }
 
     .hero-copy {
@@ -196,6 +225,10 @@
 
     .news-section {
       padding: 76px 0 72px;
+    }
+
+    main > .news-section:first-of-type {
+      padding-top: 38px;
     }
 
     /* Subtiele kleurvlakken per redactioneel blok */
@@ -246,6 +279,14 @@
       clip: rect(0,0,0,0);
       white-space: nowrap;
       border: 0;
+    }
+
+    .section-note {
+      max-width: 650px;
+      margin: 13px 0 3px;
+      color: var(--muted);
+      font-size: 0.86rem;
+      line-height: 1.5;
     }
 
     .state {
@@ -348,6 +389,14 @@
       text-align: center;
     }
 
+    .edition-end-sun {
+      width: 42px;
+      height: 42px;
+      margin: 0 auto 22px;
+      color: var(--accent);
+      display: block;
+    }
+
     .edition-end h2 {
       max-width: 620px;
       margin: 0 auto;
@@ -442,7 +491,7 @@
     .newsletter p {
       margin: 12px 0 0;
       color: rgba(255,255,255,.72);
-      font-size: 0.75rem;
+      font-size: 0.88rem;
     }
 
     .buttondown-form {
@@ -463,21 +512,21 @@
       outline: 0;
       background: transparent;
       color: white;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 0.85rem;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.95rem;
     }
 
     .buttondown-form input[type="email"]::placeholder { color: rgba(255,255,255,.65); }
 
     .buttondown-form input[type="submit"] {
-      min-height: 31px;
-      padding: 0 14px;
+      min-height: 34px;
+      padding: 0 16px;
       border: 0;
       border-radius: 999px;
       background: var(--white);
       color: var(--green-dark);
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.65rem;
+      font-size: 0.76rem;
       font-weight: 800;
       cursor: pointer;
     }
@@ -498,7 +547,7 @@
     .home-archive-heading a {
       color: var(--ink);
       font-family: Arial, Helvetica, sans-serif;
-      font-size: .67rem;
+      font-size: .78rem;
       text-decoration: none;
     }
 
@@ -518,12 +567,15 @@
     .home-archive-date {
       color: var(--muted);
       font-family: Arial, Helvetica, sans-serif;
-      font-size: .62rem;
+      font-size: .72rem;
     }
 
     .home-archive-title {
       overflow: hidden;
-      font-size: .75rem;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .88rem;
+      font-weight: 500;
       white-space: nowrap;
       text-overflow: ellipsis;
     }
@@ -531,7 +583,7 @@
     .home-archive-arrow {
       color: var(--green-dark);
       font-family: Arial, Helvetica, sans-serif;
-      font-size: .75rem;
+      font-size: .88rem;
       text-align: right;
     }
 
@@ -624,7 +676,7 @@
       padding: 0 0 34px;
       color: #8b928e;
       font-family: Arial, Helvetica, sans-serif;
-      font-size: .62rem;
+      font-size: .72rem;
       text-align: center;
     }
 
@@ -648,18 +700,18 @@
 
       .hero { padding-top: 54px; }
       .hero-title { font-size: clamp(2.75rem, 14vw, 4rem); }
-      .hero-copy { font-size: .96rem; }
+      .hero-copy { font-size: 1rem; }
       .hero-meta { align-items: flex-start; flex-direction: column; gap: 7px; }
 
       .news-section { padding: 56px 0 54px; }
       .article-row { padding-right: 40px; }
-      .article-title { font-size: 1.1rem; }
+      .article-title { font-size: 1.14rem; }
       .teaser {
         display: -webkit-box;
         overflow: hidden;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
-        font-size: .84rem;
+        font-size: .88rem;
       }
 
       .briefing-row { grid-template-columns: 28px minmax(0,1fr); }
@@ -682,7 +734,7 @@
       .hero-meta-right { gap: 10px; }
       .article-row { padding-top: 20px; padding-bottom: 20px; }
       .article-arrow { top: 20px; width: 25px; height: 25px; }
-      .home-archive-title { font-size: .72rem; }
+      .home-archive-title { font-size: .82rem; }
     }
   </style>
 
@@ -691,7 +743,10 @@
   <header class="site-header">
     <div class="header-shell header-row">
       <a class="brand" href="./" aria-label="Positief nieuws homepage">
-        <span class="brand-dot" aria-hidden="true"></span>
+        <svg class="brand-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.2" fill="currentColor"></circle>
+          <path d="M12 1.8V5.1M12 18.9V22.2M22.2 12H18.9M5.1 12H1.8M19.2 4.8L16.8 7.2M7.2 16.8L4.8 19.2M19.2 19.2L16.8 16.8M7.2 7.2L4.8 4.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+        </svg>
         <span>Positief nieuws.</span>
       </a>
 
@@ -700,7 +755,7 @@
           <a id="nav-today" href="./">Vandaag</a>
           <a id="nav-archive" href="#archief">Archief</a>
           <a id="nav-about" href="#over">Over</a>
-          <a class="header-cta" href="#nieuwsbrief">In je inbox</a>
+          <a class="header-cta" href="#nieuwsbrief"><svg class="header-cta-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 6.5h17a1 1 0 0 1 1 1v9a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2v-9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.7"></path><path d="m4.5 8 7.5 6 7.5-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>In je inbox</span></a>
         </div>
       </nav>
     </div>
@@ -714,10 +769,10 @@
     <section class="hero">
       <div class="content-shell">
         <p class="hero-date" id="edition-date">Editie van vandaag</p>
-        <h1 class="hero-title">Dit gebeurt ook.</h1>
+        <h1 class="hero-title">Dit gebeurt ook<span class="hero-title-dot">.</span></h1>
         <p class="hero-copy">
-          In een paar minuten weet je wat er goed gaat én wat je verder moet weten.<br>
-          Zonder eindeloos scrollen.
+          In een paar minuten weet je wat er goed gaat én wat je verder moet weten
+          <span id="hero-weekday"></span>. Zonder eindeloos scrollen.
         </p>
         <p id="today-intro" hidden></p>
 
@@ -752,8 +807,8 @@
             <p class="section-kicker">Goed nieuws uit de wereld</p>
             <span class="section-count">6 verhalen</span>
           </div>
-          <p class="section-intro-visually-hidden">
-            Zes positieve ontwikkelingen van buiten Nederland die het waard zijn om te weten. De artikelen waar we naar verwijzen zijn Engelstalig.
+          <p class="section-note">
+            Zes positieve ontwikkelingen van buiten Nederland. De artikelen waar we naar verwijzen zijn Engelstalig.
           </p>
           <div id="int-state" class="state">Nieuws laden…</div>
           <div id="int-grid" class="article-list" hidden></div>
@@ -766,8 +821,8 @@
             <p class="section-kicker">Wat je verder moet weten</p>
             <span class="section-count">3 verhalen</span>
           </div>
-          <p class="section-intro-visually-hidden">
-            Drie onderwerpen die het Nederlandse nieuws op dit moment domineren. Niet per se positief, wel belangrijk om van op de hoogte te zijn. Kort, feitelijk en zonder sensatie.
+          <p class="section-note">
+            Niet per se positief, wel belangrijk. Drie onderwerpen die vandaag de Nederlandse nieuwskoppen domineren — kort en feitelijk.
           </p>
           <div id="headlines-state" class="state">Nieuws laden…</div>
           <div id="headlines-grid" class="article-list" hidden></div>
@@ -776,6 +831,11 @@
 
       <section class="edition-end">
         <div class="content-shell">
+          <svg class="edition-end-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.2" fill="currentColor"></circle>
+            <path d="M12 1.8V5.1M12 18.9V22.2M22.2 12H18.9M5.1 12H1.8M19.2 4.8L16.8 7.2M7.2 16.8L4.8 19.2M19.2 19.2L16.8 16.8M7.2 7.2L4.8 4.8"
+              stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+          </svg>
           <h2>Dit was het voor vandaag.<br>Je bent weer bij.</h2>
           <p>Geniet van je dag.</p>
 
@@ -1728,6 +1788,7 @@
     }
 
 
+
     async function loadArchiveIndex() {
 
       const state =
@@ -1975,6 +2036,27 @@
           formatEditionDate(
             rawEditionDate
           );
+
+        const heroWeekday =
+          new Intl.DateTimeFormat(
+            "nl-NL",
+            {
+              weekday: "long",
+              timeZone: "Europe/Amsterdam"
+            }
+          ).format(
+            new Date(
+              `${rawEditionDate}T12:00:00+02:00`
+            )
+          );
+
+        const heroWeekdayEl =
+          $("#hero-weekday");
+
+        if (heroWeekdayEl) {
+          heroWeekdayEl.textContent =
+            ` op deze ${heroWeekday}`;
+        }
 
 
         const isArchive =
@@ -2332,6 +2414,6 @@
     }
 
   </script>
-  <!-- release 2026-08-28: editorial redesign + contact + privacy; logo assets unchanged -->
+  <!-- production release 2026-08-29: typografie, warme accenten en dynamische editie-intro -->
 </body>
 </html>
