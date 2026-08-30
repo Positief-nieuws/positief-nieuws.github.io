@@ -589,7 +589,8 @@
 
     .archive-page,
     .about-page,
-    .privacy-page {
+    .privacy-page,
+    .signup-pending-page {
       padding: 76px 0 96px;
     }
 
@@ -603,10 +604,50 @@
 
     .archive-note,
     .about-copy,
-    .privacy-copy {
+    .privacy-copy,
+    .signup-pending-copy {
       max-width: 670px;
       color: #3f4742;
       font-size: .95rem;
+    }
+
+    .signup-pending-card {
+      max-width: 670px;
+      margin-top: 28px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255,255,255,.58);
+    }
+
+    .signup-pending-card p {
+      margin: 0 0 14px;
+    }
+
+    .signup-pending-card p:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .signup-pending-actions {
+      margin-top: 24px;
+    }
+
+    .signup-pending-actions a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border: 1px solid var(--green-dark);
+      border-radius: 999px;
+      color: var(--green-dark);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .78rem;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .signup-pending-actions a:hover {
+      background: rgba(31,91,69,.05);
     }
 
     .archive-list {
@@ -964,6 +1005,25 @@
         <p>Wil je weten welke persoonsgegevens we van je hebben, iets laten aanpassen of verwijderen, of heb je een andere privacyvraag? Mail dan naar <a href="mailto:positiefnieuws@buttondown.email?subject=Privacyvraag%20Positief%20nieuws">positiefnieuws@buttondown.email</a>.</p>
 
         <p class="privacy-updated">Laatst bijgewerkt: 28 augustus 2026.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="signup-pending-view" class="app-view signup-pending-page" hidden>
+    <div class="content-shell">
+      <p class="section-kicker">Nieuwsbrief</p>
+      <h1 class="page-title">Nog één stap</h1>
+
+      <div class="signup-pending-card">
+        <div class="signup-pending-copy">
+          <p>Je aanmelding is ontvangen.</p>
+          <p><strong>Check je inbox en bevestig je e-mailadres via de link in de mail.</strong> Daarna ben je helemaal klaar.</p>
+          <p>Krijg je geen mail? Kijk dan ook even in je spamfolder.</p>
+        </div>
+
+        <div class="signup-pending-actions">
+          <a href="./">Terug naar Positief nieuws</a>
+        </div>
       </div>
     </div>
   </section>
@@ -1748,6 +1808,9 @@
       const privacyView =
         $("#privacy-view");
 
+      const signupPendingView =
+        $("#signup-pending-view");
+
 
       todayView.hidden =
         view !== "today";
@@ -1760,6 +1823,9 @@
 
       privacyView.hidden =
         view !== "privacy";
+
+      signupPendingView.hidden =
+        view !== "signup-pending";
 
 
       setActiveNav(
@@ -1782,6 +1848,22 @@
 
 
     function routeFromHash() {
+
+      const params =
+        new URLSearchParams(
+          window.location.search
+        );
+
+      if (
+        params.get("inschrijving") ===
+        "bevestigen"
+      ) {
+        showAppView(
+          "signup-pending"
+        );
+
+        return;
+      }
 
       const hash =
         window.location.hash;
