@@ -1028,6 +1028,25 @@
     </div>
   </section>
 
+  <section id="signup-confirmed-view" class="app-view signup-pending-page" hidden>
+    <div class="content-shell">
+      <p class="section-kicker">Nieuwsbrief</p>
+      <h1 class="page-title">Je bent erbij</h1>
+
+      <div class="signup-pending-card">
+        <div class="signup-pending-copy">
+          <p>Je e-mailadres is bevestigd.</p>
+          <p><strong>Vanaf nu ontvang je elke maandag, woensdag en vrijdag Positief nieuws in je inbox.</strong></p>
+          <p>Tot de volgende editie. En voor nu: geniet van je dag.</p>
+        </div>
+
+        <div class="signup-pending-actions">
+          <a href="./">Lees de nieuwste editie</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer class="site-footer">
     <div class="wide-shell">Positief nieuws · Dit gebeurt ook. · <a href="#privacy">Privacy</a></div>
   </footer>
@@ -1811,6 +1830,9 @@
       const signupPendingView =
         $("#signup-pending-view");
 
+      const signupConfirmedView =
+        $("#signup-confirmed-view");
+
 
       todayView.hidden =
         view !== "today";
@@ -1826,6 +1848,9 @@
 
       signupPendingView.hidden =
         view !== "signup-pending";
+
+      signupConfirmedView.hidden =
+        view !== "signup-confirmed";
 
 
       setActiveNav(
@@ -1860,6 +1885,17 @@
       ) {
         showAppView(
           "signup-pending"
+        );
+
+        return;
+      }
+
+      if (
+        params.get("inschrijving") ===
+        "bevestigd"
+      ) {
+        showAppView(
+          "signup-confirmed"
         );
 
         return;
