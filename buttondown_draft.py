@@ -126,6 +126,7 @@ def edition_weekday(data):
 
 
 def edition_url(data):
+    """Schone editie-URL, onder meer voor canonical en gedeelde links."""
     raw_date = raw_edition_date(data)
     if isinstance(raw_date, str):
         try:
@@ -134,6 +135,29 @@ def edition_url(data):
         except ValueError:
             pass
     return SITE_URL
+
+
+def buttondown_edition_url(data):
+    """Editie-URL met UTM-tracking voor verkeer vanuit de nieuwsbrief."""
+    raw_date = raw_edition_date(data)
+    clean_url = edition_url(data)
+
+    if not isinstance(raw_date, str):
+        return clean_url
+
+    try:
+        datetime.strptime(raw_date, "%Y-%m-%d")
+    except ValueError:
+        return clean_url
+
+    params = {
+        "utm_source": "buttondown",
+        "utm_medium": "email",
+        "utm_campaign": f"editie_{raw_date.replace('-', '_')}",
+    }
+
+    separator = "&" if "?" in clean_url else "?"
+    return f"{clean_url}{separator}{urllib.parse.urlencode(params)}"
 
 
 def reading_time_label(article):
@@ -210,20 +234,26 @@ def section_header(label, count, note=""):
 
 
 def build_share_block(data):
-    online_url = edition_url(data)
+    # Gedeelde links blijven bewust schoon. Zo wordt verkeer dat later via
+    # WhatsApp/e-mail binnenkomt niet ten onrechte als Buttondown toegeschreven.
+    share_url = edition_url(data)
+
+    # Alleen de directe klik vanuit deze nieuwsbrief krijgt Buttondown-UTM's.
+    newsletter_online_url = buttondown_edition_url(data)
+
     share_text = (
         "Positief nieuws. In een paar minuten weet je wat er goed gaat "
         "én wat je verder moet weten. Zonder eindeloos scrollen."
     )
     whatsapp_share_url = (
         "https://wa.me/?text="
-        + urllib.parse.quote(f"{share_text}\n\n{online_url}")
+        + urllib.parse.quote(f"{share_text}\n\n{share_url}")
     )
     email_share_url = (
         "mailto:?subject="
         + urllib.parse.quote("Positief nieuws. Dit gebeurt ook.")
         + "&body="
-        + urllib.parse.quote(f"{share_text}\n\n{online_url}")
+        + urllib.parse.quote(f"{share_text}\n\n{share_url}")
     )
 
     return f"""
@@ -254,7 +284,7 @@ def build_share_block(data):
       </table>
 
       <p style="margin:8px 0 0 0;font:12px Arial,Helvetica,sans-serif;color:{MUTED};">
-        <a href="{online_url}" style="color:{GREEN_DARK};text-decoration:underline;text-underline-offset:2px;">
+        <a href="{newsletter_online_url}" style="color:{GREEN_DARK};text-decoration:underline;text-underline-offset:2px;">
           Lees deze editie online
         </a>
       </p>
@@ -323,7 +353,7 @@ def build_body(data, nl, international, headlines):
     {section_header(
         "Wat je verder moet weten",
         "3 verhalen",
-        "Niet per se positief, wel belangrijk. Drie onderwerpen die vandaag de Nederlandse nieuwskoppen domineren — kort en feitelijk."
+        "Niet per se positief, wel belangrijk. Drie onderwerpen die vandaag de Nederlandse nieuwskoppen domineren. Kort en feitelijk."
     )}
     {headlines_html}
   </div>
@@ -359,6 +389,7 @@ def create_draft(api_key, subject, body, data):
         "subject": subject,
         "body": body,
         "status": "draft",
+        # Canonical blijft bewust zonder UTM-parameters.
         "canonical_url": edition_url(data),
         "description": (
             "12 positieve verhalen + 3 belangrijke nieuwsitems om bij te blijven."
