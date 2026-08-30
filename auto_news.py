@@ -42,6 +42,13 @@ MAX_PER_SOURCE = 6         # voorkom dat 1 bron de lijst overneemt
 MAX_PER_REGION = 40        # shortlist voor latere AI-selectie
 USER_AGENT = "GoedNieuwsKandidatenBot/0.1"
 
+# Gecureerde HTML-bronnen (nu: NU.nl Goed nieuws) hebben op de overzichtspagina
+# niet altijd een publicatiedatum. We proberen daarom de artikelpagina zelf uit te lezen.
+CURATED_DATE_FETCH_TIMEOUT = 8
+CURATED_DATE_WORKERS = 6
+CURATED_UNKNOWN_DATE_BONUS = 5
+CURATED_UNKNOWN_DATE_PENALTY = -4
+
 SOURCES = [{'publisher': 'NOS',
   'region': 'nl',
   'mode': 'rss',
@@ -676,6 +683,135 @@ def fetch(url, html=False, timeout=20):
     with urllib.request.urlopen(req, timeout=timeout) as r:
         return r.read()
 
+
+def extract_published_date_from_html(html_text):
+    """
+    Zoek de oorspronkelijke publicatiedatum in een artikelpagina.
+
+    Volgorde:
+    1. JSON-LD datePublished/dateCreated/uploadDate;
+    2. meta-tags zoals article:published_time/datePublished;
+    3. <time datetime="..."> als laatste fallback.
+    """
+    candidates = []
+
+    # JSON-LD is op nieuwssites meestal de betrouwbaarste bron.
+    scripts = re.findall(
+        r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
+        html_text,
+        flags=re.I | re.S,
+    )
+
+    def inspect(value):
+        if isinstance(value, dict):
+            for key in ("datePublished", "dateCreated", "uploadDate"):
+                raw_value = value.get(key)
+                if isinstance(raw_value, str) and raw_value.strip():
+                    candidates.append(raw_value.strip())
+            for child in value.values():
+                inspect(child)
+        elif isinstance(value, list):
+            for child in value:
+                inspect(child)
+
+    for raw_script in scripts:
+        try:
+            inspect(json.loads(unescape(raw_script).strip()))
+        except Exception:
+            continue
+
+    # Meta-tags, o.a. Open Graph / schema.org.
+    for tag in re.findall(r"<meta\b[^>]*>", html_text, flags=re.I):
+        attrs = {
+            key.lower(): unescape(value).strip()
+            for key, _, value in re.findall(
+                r'([:\w-]+)\s*=\s*(["\'])(.*?)\2',
+                tag,
+                flags=re.I | re.S,
+            )
+        }
+        marker = (
+            attrs.get("property")
+            or attrs.get("name")
+            or attrs.get("itemprop")
+            or ""
+        ).lower()
+        if marker in {
+            "article:published_time",
+            "datepublished",
+            "date",
+            "publishdate",
+            "publish-date",
+            "dc.date",
+            "dc.date.issued",
+        }:
+            content = attrs.get("content")
+            if content:
+                candidates.append(content)
+
+    # Laatste fallback: een expliciete <time datetime="...">.
+    for tag in re.findall(r"<time\b[^>]*>", html_text, flags=re.I):
+        attrs = {
+            key.lower(): unescape(value).strip()
+            for key, _, value in re.findall(
+                r'([:\w-]+)\s*=\s*(["\'])(.*?)\2',
+                tag,
+                flags=re.I | re.S,
+            )
+        }
+        if attrs.get("datetime"):
+            candidates.append(attrs["datetime"])
+
+    parsed = []
+    for value in candidates:
+        dt = parse_date(value)
+        if dt is not None:
+            parsed.append(dt)
+
+    if not parsed:
+        return None
+
+    # Kies de vroegste plausibele datum: bij updates staat soms ook een latere modified-date.
+    return min(parsed)
+
+
+def fetch_article_published_date(url):
+    try:
+        raw = fetch(url, html=True, timeout=CURATED_DATE_FETCH_TIMEOUT)
+        html_text = raw.decode("utf-8", errors="replace")
+        return extract_published_date_from_html(html_text)
+    except Exception:
+        return None
+
+
+def enrich_curated_dates(items):
+    """
+    Verrijk gecureerde items parallel met hun echte publicatiedatum.
+    Een mislukte datumlookup is geen feedfout: het item mag kandidaat blijven,
+    maar krijgt later duidelijk minder voorrang.
+    """
+    if not items:
+        return items
+
+    with concurrent.futures.ThreadPoolExecutor(
+        max_workers=CURATED_DATE_WORKERS
+    ) as executor:
+        future_to_item = {
+            executor.submit(fetch_article_published_date, item["url"]): item
+            for item in items
+            if not item.get("published")
+        }
+
+        for future in concurrent.futures.as_completed(future_to_item):
+            item = future_to_item[future]
+            try:
+                item["published"] = future.result()
+            except Exception:
+                item["published"] = None
+
+    return items
+
+
 def parse_feed(raw):
     root = ET.fromstring(raw)
     items = []
@@ -904,6 +1040,7 @@ def collect():
         try:
             if src["mode"] == "curated_html":
                 items = parse_nu_good_news(fetch(src["url"], html=True))
+                enrich_curated_dates(items)
             else:
                 items = parse_feed(fetch(source_url(src)))
         except Exception as exc:
@@ -936,6 +1073,15 @@ def collect():
             if src["mode"] == "rss" and signal <= 0:
                 continue
 
+            curation_bonus = src.get("curation_bonus", 0)
+            freshness_penalty = 0
+
+            # Een gecureerd item zonder verifieerbare datum mag de shortlist niet
+            # domineren puur omdat het op een "Goed nieuws"-overzicht staat.
+            if src["mode"] == "curated_html" and pub is None:
+                curation_bonus = min(curation_bonus, CURATED_UNKNOWN_DATE_BONUS)
+                freshness_penalty = CURATED_UNKNOWN_DATE_PENALTY
+
             candidates.append({
                 "id": item_id(src["publisher"], title, x["url"]),
                 "region": src["region"],
@@ -948,7 +1094,8 @@ def collect():
                 "category_hint": category_hint(title, summary, src.get("hint")),
                 "signal_score": signal,
                 "source_weight": src.get("weight", 1.0),
-                "curation_bonus": src.get("curation_bonus", 0),
+                "curation_bonus": curation_bonus,
+                "freshness_penalty": freshness_penalty,
                 "curated_source": src.get("curated_source"),
                 "discovery": src["mode"],
             })
@@ -969,6 +1116,7 @@ def rank(item):
         + item["source_weight"] * 3
         + freshness
         + item.get("curation_bonus", 0)
+        + item.get("freshness_penalty", 0)
     )
 
 def shortlist(items, region):
@@ -1004,7 +1152,7 @@ def main():
     data = {
         "meta": {
             "generated_at": now.isoformat(),
-            "generator": "Goed nieuws kandidaten 0.2",
+            "generator": "Goed nieuws kandidaten 0.3",
             "purpose": "Voorselectie voor AI-redactie; dit is NIET de definitieve Goed nieuws-editie.",
             "max_age_hours": MAX_AGE_HOURS,
             "max_per_region": MAX_PER_REGION,
