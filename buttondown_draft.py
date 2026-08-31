@@ -300,7 +300,7 @@ def build_body(data, nl, international, headlines):
     weekday = esc(edition_weekday(data))
 
     return f"""<!-- buttondown-editor-mode: fancy -->
-<div style="max-width:680px;margin:0 auto;background:{PAPER};padding:32px 28px;color:{INK};font-family:Arial,Helvetica,sans-serif;">
+<div style="max-width:780px;margin:0 auto;background:{PAPER};padding:32px 28px;color:{INK};font-family:Arial,Helvetica,sans-serif;">
 
   <div style="margin-bottom:48px;">
     <p style="margin:0;font:800 19px Arial,Helvetica,sans-serif;letter-spacing:-.02em;color:{INK};">
