@@ -187,7 +187,7 @@ def article_html(article):
     url = esc(article.get("url"))
 
     meta_parts = [part for part in (category, source, reading_time_label(article)) if part]
-    meta = " &nbsp;·&nbsp; ".join(esc(part) for part in meta_parts)
+    meta = " &nbsp;·&nbsp; ".join(meta_parts)
 
     return f"""
       <div style="margin:0;padding:22px 0;border-bottom:1px solid rgba(23,63,49,.12);">
