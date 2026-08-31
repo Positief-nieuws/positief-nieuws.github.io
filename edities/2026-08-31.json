@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "edition_date": "2026-08-31",
+    "generated_from": "kandidaten.json + actuele webverificatie",
+    "title": "Positief nieuws",
+    "tagline": "Dit gebeurt ook."
+  },
+  "nl": [
+    {
+      "title": "Huisartsen en dorpshuis vinden samen ruimte onder één dak",
+      "teaser": "In Nieuwehorne zijn een huisartsenpraktijk en dorpshuis samengebracht. Zo blijft de zorgvoorziening in het dorp behouden en krijgt het dorpshuis tegelijk meer toekomstperspectief.",
+      "source": "Groot Heerenveen",
+      "category": "Mens & samenleving",
+      "url": "https://www.grootheerenveen.nl/nieuws/algemeen/141975/dorpshuis-de-kiekenhof-en-huisartsenpraktijk-nieuwehorne-slaan-handen-ineen-voor-toekomstbestendige-zorg",
+      "intro_label": "de slimme combinatie van huisartsenpraktijk en dorpshuis"
+    },
+    {
+      "title": "Internationale studenten leveren Nederland gemiddeld meer op dan ze kosten",
+      "teaser": "Nieuw onderzoek van het CPB laat zien dat de overheidskosten gemiddeld worden terugverdiend, vooral doordat een deel van de studenten na afstuderen in Nederland blijft werken en belasting betaalt.",
+      "source": "NOS",
+      "category": "Economie & onderwijs",
+      "url": "https://nos.nl/artikel/2629020-internationale-studenten-kosten-geld-maar-leveren-uiteindelijk-meer-op",
+      "intro_label": "de economische bijdrage van internationale studenten"
+    },
+    {
+      "title": "Holland Acht prolongeert wereldtitel met wereldrecord",
+      "teaser": "De Nederlandse mannenacht won op de Bosbaan opnieuw de wereldtitel. In een zinderende fotofinish zette de ploeg bovendien met 5.17,75 een wereldrecord neer.",
+      "source": "Omroep Brabant",
+      "category": "Sport",
+      "url": "https://www.omroepbrabant.nl/nieuws/6025118/holland-acht-met-sander-de-graaf-prolongeert-wereldtitel-met-wereldrecord"
+    },
+    {
+      "title": "James Webb kijkt door kosmisch stof heen en onthult verborgen stervorming",
+      "teaser": "De ruimtetelescoop heeft het chaotische sterrenstelsel Arp 263 in infrarood vastgelegd. Daardoor worden sterren en stervormingsgebieden zichtbaar die achter dichte stofwolken verborgen zaten.",
+      "source": "Scientias",
+      "category": "Wetenschap",
+      "url": "https://scientias.nl/webb-arp-263/",
+      "reading_time_minutes": 5
+    },
+    {
+      "title": "Nederlandse musicals trekken weer bijna evenveel publiek als voor corona",
+      "teaser": "Nederlandse podia trokken in 2024 ruim 3,5 miljoen musicalbezoekers. Daarmee zit het genre bijna terug op het niveau van voor de coronacrisis, terwijl het aanbod sterk is gegroeid.",
+      "source": "NOS",
+      "category": "Cultuur & media",
+      "url": "https://nos.nl/artikel/2628993-nederlandse-musicals-in-trek-bij-theaters-en-publiek"
+    },
+    {
+      "title": "Alle slachtoffers van busongeluk bij Wezep zijn weer thuis",
+      "teaser": "De Duitse scholieren, hun begeleiders en de zwaargewonde bestuurder van een bestelbusje zijn allemaal uit het ziekenhuis en weer thuis. De bestuurder kan thuis verder revalideren.",
+      "source": "Huis aan Huis Oldebroek",
+      "category": "Mens & samenleving",
+      "url": "https://www.huisaanhuisoldebroek.nl/112/112/58059/na-zwaar-busongeluk-bij-wezep-is-iedereen-weer-thuis"
+    }
+  ],
+  "int": [
+    {
+      "title": "Zeldzame plant na 170 jaar teruggevonden in Sri Lanka",
+      "teaser": "Onderzoekers hebben in een klein bosgebied 70 tot 100 exemplaren gevonden van een plant die sinds 1855 niet meer in het wild in Sri Lanka was vastgelegd.",
+      "source": "Mongabay",
+      "category": "Natuur & klimaat",
+      "url": "https://news.mongabay.com/short-article/2026/08/lost-for-170-years-rare-plant-recorded-in-sri-lanka/"
+    },
+    {
+      "title": "Onderzoekers maken spirulina met bruikbare vitamine B12",
+      "teaser": "Door de lichtomstandigheden tijdens de kweek te sturen, maakten onderzoekers spirulina met biologisch actieve vitamine B12. Dat kan op termijn bijdragen aan duurzamere bronnen van de essentiële vitamine.",
+      "source": "ScienceDaily",
+      "category": "Voeding & leefstijl",
+      "url": "https://www.sciencedaily.com/releases/2026/08/260829035227.htm"
+    },
+    {
+      "title": "Nieuwe zonneceltechniek zet CO₂ in het lab om in ethanol",
+      "teaser": "Tsjechische onderzoekers ontwikkelden een fotokathode die met zonlicht CO₂ omzet in ethanol. In laboratoriumtests behaalde het systeem een recordrendement en ontstond ethanol als enige vloeibare product.",
+      "source": "Phys.org",
+      "category": "Technologie & innovatie",
+      "url": "https://phys.org/news/2026-08-nano-sandwich-photocathode-solar-conversion.html",
+      "reading_time_minutes": 3
+    },
+    {
+      "title": "Experimentele oogdruppels geven blinde muizen weer lichtwaarneming",
+      "teaser": "Lichtgestuurde geneesmiddelen herstelden bij blinde muizen lichtwaarneming en natuurlijk visueel gedrag. Twee veelbelovende stoffen werkten ook als oogdruppels.",
+      "source": "ScienceDaily",
+      "category": "Gezondheid",
+      "url": "https://www.sciencedaily.com/releases/2026/08/260828005224.htm"
+    },
+    {
+      "title": "Nieuwe NASA-antenne vergroot capaciteit voor communicatie met verre ruimtemissies",
+      "teaser": "De nieuwe 34 meter brede antenne van NASA's Deep Space Network is in gebruik genomen en moet de communicatiecapaciteit met ruimtevaartuigen voor de komende decennia vergroten.",
+      "source": "NASA",
+      "category": "Wetenschap",
+      "url": "https://science.nasa.gov/photojournal/nasa-deep-space-networks-new-goldstone-antenna-goes-online/",
+      "reading_time_minutes": 1
+    },
+    {
+      "title": "Recordsnelle ster kan helpen het zwarte gat in het hart van de Melkweg te doorgronden",
+      "teaser": "Astronomen hebben een ster geïdentificeerd die extreem snel en dicht rond Sagittarius A* beweegt. De baan kan nieuwe aanwijzingen geven over de rotatie van het superzware zwarte gat.",
+      "source": "Smithsonian Magazine",
+      "category": "Wetenschap",
+      "url": "https://www.smithsonianmag.com/smart-news/this-star-orbits-our-galaxys-heart-at-a-record-breaking-speed-and-could-help-uncover-secrets-about-the-behemoth-black-hole-there-180989393/"
+    }
+  ],
+  "headlines": [
+    {
+      "title": "Coalitie praat verder over begroting onder stevige tijdsdruk",
+      "teaser": "D66, VVD en CDA hebben nog geen akkoord over de begroting voor volgend jaar. De onderhandelingen gaan vanochtend verder, terwijl de plannen snel naar de Raad van State moeten voor Prinsjesdag.",
+      "source": "NOS",
+      "category": "Politiek",
+      "url": "https://nos.nl/artikel/2629016-coalitie-heeft-nog-geen-begrotingsakkoord-onderhandelingen-vanochtend-verder"
+    },
+    {
+      "title": "Massadonor Simon zegt minstens 199 kinderen te hebben verwekt",
+      "teaser": "De Nederlandse donor noemt in een brief een veel hoger aantal dan eerder bekend was en zegt te zijn gestopt met doneren. De zaak roept opnieuw vragen op over toezicht op spermadonatie.",
+      "source": "NOS / Nieuwsuur",
+      "category": "Binnenland",
+      "url": "https://nos.nl/nieuwsuur/artikel/2628869-massadonor-simon-schrijft-aan-ouders-ik-heb-minstens-199-kinderen-verwekt"
+    },
+    {
+      "title": "Nepal waarschuwt voor nieuwe overstromingen na verwoestende ramp",
+      "teaser": "Na de grote overstromingen wordt opnieuw gewaarschuwd voor hoog water. Het dodental in Nepal en Tibet is opgelopen tot 750 en duizenden mensen worden nog vermist.",
+      "source": "NOS",
+      "category": "Buitenland",
+      "url": "https://nos.nl/artikel/2628893-waarschuwingen-voor-nieuwe-overstromingen-nepal-dodental-gestegen-tot-750"
+    }
+  ]
+}
