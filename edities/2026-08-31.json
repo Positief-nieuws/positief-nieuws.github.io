@@ -21,13 +21,6 @@
       "url": "https://nos.nl/artikel/2629020-internationale-studenten-kosten-geld-maar-leveren-uiteindelijk-meer-op"
     },
     {
-      "title": "€20 miljoen beschikbaar voor betere opleiding van zorgmedewerkers",
-      "teaser": "Vanaf vandaag kunnen zorgorganisaties en onderwijsinstellingen subsidie aanvragen om vernieuwde opleidingen op te zetten voor helpenden, verzorgenden en verpleegkundigen. Voor de landelijke regeling is €20 miljoen beschikbaar.",
-      "source": "DUS-I / ministerie van VWS",
-      "category": "Zorg & onderwijs",
-      "url": "https://www.dus-i.nl/subsidies/zorg-en-gezondheid/inrichten-opleidingsstructuur-helpenden-verzorgenden-en-verpleegkundigen"
-    },
-    {
       "title": "Nederlandse musicals trekken weer bijna evenveel publiek als voor corona",
       "teaser": "Nederlandse podia trokken in 2024 ruim 3,5 miljoen musicalbezoekers. Daarmee zit het genre bijna terug op het niveau van voor de coronacrisis, terwijl het aanbod sterk is gegroeid.",
       "source": "NOS",
@@ -48,6 +41,14 @@
       "source": "Waternet",
       "category": "Natuur & klimaat",
       "url": "https://awd.waternet.nl/nieuws/2026/aanleg-natuurvriendelijke-oevers/"
+    },
+    {
+      "title": "Huisartsen en dorpshuis vinden samen ruimte onder één dak",
+      "teaser": "In Nieuwehorne zijn een huisartsenpraktijk en dorpshuis samengebracht. Zo blijft de zorgvoorziening in het dorp behouden en krijgt het dorpshuis tegelijk meer toekomstperspectief.",
+      "source": "Groot Heerenveen",
+      "category": "Mens & samenleving",
+      "url": "https://www.grootheerenveen.nl/nieuws/algemeen/141975/dorpshuis-de-kiekenhof-en-huisartsenpraktijk-nieuwehorne-slaan-handen-ineen-voor-toekomstbestendige-zorg",
+      "intro_label": "de slimme combinatie van huisartsenpraktijk en dorpshuis"
     }
   ],
   "int": [
