@@ -192,8 +192,8 @@ def article_html(article):
     return f"""
       <div style="margin:0;padding:22px 0;border-bottom:1px solid rgba(23,63,49,.12);">
         <h2 style="margin:0 0 8px 0;font:700 22px Georgia,'Times New Roman',serif;line-height:1.2;letter-spacing:-.02em;color:{INK};">
-          <a href="{url}" style="color:{INK};text-decoration:none;">
-            {title}
+          <a href="{url}" style="color:{INK} !important;text-decoration:none;">
+            <span style="color:{INK} !important;">{title}</span>
           </a>
         </h2>
 
@@ -300,7 +300,7 @@ def build_body(data, nl, international, headlines):
     weekday = esc(edition_weekday(data))
 
     return f"""<!-- buttondown-editor-mode: fancy -->
-<div style="max-width:780px;margin:0 auto;background:{PAPER};padding:32px 28px;color:{INK};font-family:Arial,Helvetica,sans-serif;">
+<div style="max-width:680px;margin:0 auto;background:{PAPER};padding:32px 28px;color:{INK};font-family:Arial,Helvetica,sans-serif;">
 
   <div style="margin-bottom:48px;">
     <p style="margin:0;font:800 19px Arial,Helvetica,sans-serif;letter-spacing:-.02em;color:{INK};">
