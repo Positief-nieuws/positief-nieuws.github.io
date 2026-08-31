@@ -7,27 +7,32 @@
   },
   "nl": [
     {
-      "title": "Huisartsen en dorpshuis vinden samen ruimte onder één dak",
-      "teaser": "In Nieuwehorne zijn een huisartsenpraktijk en dorpshuis samengebracht. Zo blijft de zorgvoorziening in het dorp behouden en krijgt het dorpshuis tegelijk meer toekomstperspectief.",
-      "source": "Groot Heerenveen",
-      "category": "Mens & samenleving",
-      "url": "https://www.grootheerenveen.nl/nieuws/algemeen/141975/dorpshuis-de-kiekenhof-en-huisartsenpraktijk-nieuwehorne-slaan-handen-ineen-voor-toekomstbestendige-zorg",
-      "intro_label": "de slimme combinatie van huisartsenpraktijk en dorpshuis"
+      "title": "Holland Acht prolongeert wereldtitel met wereldrecord",
+      "teaser": "De Nederlandse mannenacht won op de Bosbaan opnieuw de wereldtitel. In een zinderende fotofinish zette de ploeg bovendien met 5.17,75 een wereldrecord neer.",
+      "source": "Omroep Brabant",
+      "category": "Sport",
+      "url": "https://www.omroepbrabant.nl/nieuws/6025118/holland-acht-met-sander-de-graaf-prolongeert-wereldtitel-met-wereldrecord"
     },
     {
       "title": "Internationale studenten leveren Nederland gemiddeld meer op dan ze kosten",
       "teaser": "Nieuw onderzoek van het CPB laat zien dat de overheidskosten gemiddeld worden terugverdiend, vooral doordat een deel van de studenten na afstuderen in Nederland blijft werken en belasting betaalt.",
       "source": "NOS",
       "category": "Economie & onderwijs",
-      "url": "https://nos.nl/artikel/2629020-internationale-studenten-kosten-geld-maar-leveren-uiteindelijk-meer-op",
-      "intro_label": "de economische bijdrage van internationale studenten"
+      "url": "https://nos.nl/artikel/2629020-internationale-studenten-kosten-geld-maar-leveren-uiteindelijk-meer-op"
     },
     {
-      "title": "Holland Acht prolongeert wereldtitel met wereldrecord",
-      "teaser": "De Nederlandse mannenacht won op de Bosbaan opnieuw de wereldtitel. In een zinderende fotofinish zette de ploeg bovendien met 5.17,75 een wereldrecord neer.",
-      "source": "Omroep Brabant",
-      "category": "Sport",
-      "url": "https://www.omroepbrabant.nl/nieuws/6025118/holland-acht-met-sander-de-graaf-prolongeert-wereldtitel-met-wereldrecord"
+      "title": "€20 miljoen beschikbaar voor betere opleiding van zorgmedewerkers",
+      "teaser": "Vanaf vandaag kunnen zorgorganisaties en onderwijsinstellingen subsidie aanvragen om vernieuwde opleidingen op te zetten voor helpenden, verzorgenden en verpleegkundigen. Voor de landelijke regeling is €20 miljoen beschikbaar.",
+      "source": "DUS-I / ministerie van VWS",
+      "category": "Zorg & onderwijs",
+      "url": "https://www.dus-i.nl/subsidies/zorg-en-gezondheid/inrichten-opleidingsstructuur-helpenden-verzorgenden-en-verpleegkundigen"
+    },
+    {
+      "title": "Nederlandse musicals trekken weer bijna evenveel publiek als voor corona",
+      "teaser": "Nederlandse podia trokken in 2024 ruim 3,5 miljoen musicalbezoekers. Daarmee zit het genre bijna terug op het niveau van voor de coronacrisis, terwijl het aanbod sterk is gegroeid.",
+      "source": "NOS",
+      "category": "Cultuur & media",
+      "url": "https://nos.nl/artikel/2628993-nederlandse-musicals-in-trek-bij-theaters-en-publiek"
     },
     {
       "title": "James Webb kijkt door kosmisch stof heen en onthult verborgen stervorming",
@@ -38,18 +43,11 @@
       "reading_time_minutes": 5
     },
     {
-      "title": "Nederlandse musicals trekken weer bijna evenveel publiek als voor corona",
-      "teaser": "Nederlandse podia trokken in 2024 ruim 3,5 miljoen musicalbezoekers. Daarmee zit het genre bijna terug op het niveau van voor de coronacrisis, terwijl het aanbod sterk is gegroeid.",
-      "source": "NOS",
-      "category": "Cultuur & media",
-      "url": "https://nos.nl/artikel/2628993-nederlandse-musicals-in-trek-bij-theaters-en-publiek"
-    },
-    {
-      "title": "Alle slachtoffers van busongeluk bij Wezep zijn weer thuis",
-      "teaser": "De Duitse scholieren, hun begeleiders en de zwaargewonde bestuurder van een bestelbusje zijn allemaal uit het ziekenhuis en weer thuis. De bestuurder kan thuis verder revalideren.",
-      "source": "Huis aan Huis Oldebroek",
-      "category": "Mens & samenleving",
-      "url": "https://www.huisaanhuisoldebroek.nl/112/112/58059/na-zwaar-busongeluk-bij-wezep-is-iedereen-weer-thuis"
+      "title": "Natuurvriendelijke oevers geven planten en dieren meer ruimte",
+      "teaser": "In de Amsterdamse Waterleidingduinen begint vandaag de aanleg van nieuwe natuurvriendelijke oevers. Ze geven bijzondere planten en beschermde dieren meer leefruimte, terwijl tegelijk de drinkwatercapaciteit wordt uitgebreid.",
+      "source": "Waternet",
+      "category": "Natuur & klimaat",
+      "url": "https://awd.waternet.nl/nieuws/2026/aanleg-natuurvriendelijke-oevers/"
     }
   ],
   "int": [
