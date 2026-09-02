@@ -1,123 +1,122 @@
 {
   "meta": {
-    "edition_date": "2026-08-31",
-    "generated_from": "kandidaten.json + actuele webverificatie",
+    "edition_date": "2026-09-02",
+    "generated_from": "kandidaten.json + actuele nieuwsselectie",
     "title": "Positief nieuws",
     "tagline": "Dit gebeurt ook."
   },
   "nl": [
     {
-      "title": "Holland Acht prolongeert wereldtitel met wereldrecord",
-      "teaser": "De Nederlandse mannenacht won op de Bosbaan opnieuw de wereldtitel. In een zinderende fotofinish zette de ploeg bovendien met 5.17,75 een wereldrecord neer.",
-      "source": "Omroep Brabant",
-      "category": "Sport",
-      "url": "https://www.omroepbrabant.nl/nieuws/6025118/holland-acht-met-sander-de-graaf-prolongeert-wereldtitel-met-wereldrecord"
-    },
-    {
-      "title": "Internationale studenten leveren Nederland gemiddeld meer op dan ze kosten",
-      "teaser": "Nieuw onderzoek van het CPB laat zien dat de overheidskosten gemiddeld worden terugverdiend, vooral doordat een deel van de studenten na afstuderen in Nederland blijft werken en belasting betaalt.",
-      "source": "NOS",
-      "category": "Economie & onderwijs",
-      "url": "https://nos.nl/artikel/2629020-internationale-studenten-kosten-geld-maar-leveren-uiteindelijk-meer-op"
-    },
-    {
-      "title": "Nederlandse musicals trekken weer bijna evenveel publiek als voor corona",
-      "teaser": "Nederlandse podia trokken in 2024 ruim 3,5 miljoen musicalbezoekers. Daarmee zit het genre bijna terug op het niveau van voor de coronacrisis, terwijl het aanbod sterk is gegroeid.",
-      "source": "NOS",
+      "title": "Voor de Meisjes en Mama’ku winnen Gouden Kalf van het Publiek",
+      "teaser": "Voor de Meisjes trok 324.000 bioscoopbezoekers en Mama’ku - Van Jakarta tot de Molukken 24.000. Daarmee waren ze de best bezochte Nederlandse speelfilm en documentaire van het afgelopen jaar.",
+      "source": "Nederlands Film Festival",
       "category": "Cultuur & media",
-      "url": "https://nos.nl/artikel/2628993-nederlandse-musicals-in-trek-bij-theaters-en-publiek"
+      "url": "https://www.filmfestival.nl/nieuws/voor-de-meisjes-en-mamaku-van-jakarta-tot-de-molukken-ontvangen-gouden-kalf-van-het-publiek-2026-voor-best-bezochte-nederlandse-speelfilm-en-documentaire"
     },
     {
-      "title": "James Webb kijkt door kosmisch stof heen en onthult verborgen stervorming",
-      "teaser": "De ruimtetelescoop heeft het chaotische sterrenstelsel Arp 263 in infrarood vastgelegd. Daardoor worden sterren en stervormingsgebieden zichtbaar die achter dichte stofwolken verborgen zaten.",
-      "source": "Scientias",
-      "category": "Wetenschap",
-      "url": "https://scientias.nl/webb-arp-263/",
-      "reading_time_minutes": 5
+      "title": "TU/e-onderzoek helpt zorg voor vroeggeboren baby’s beter af te stemmen",
+      "teaser": "Onderzoekers analyseerden zes weken lang gegevens van 251 zeer vroeggeboren baby's en vonden duidelijke ontwikkelingspatronen. Die kunnen artsen helpen afwijkingen eerder te herkennen en vormen een basis voor slimmere monitoring.",
+      "source": "Omroep Brabant",
+      "category": "Gezondheid",
+      "url": "https://www.omroepbrabant.nl/nieuws/6025487/onderzoek-tue-verbetert-zorg-voor-vroeggeboren-babys"
     },
     {
-      "title": "Natuurvriendelijke oevers geven planten en dieren meer ruimte",
-      "teaser": "In de Amsterdamse Waterleidingduinen begint vandaag de aanleg van nieuwe natuurvriendelijke oevers. Ze geven bijzondere planten en beschermde dieren meer leefruimte, terwijl tegelijk de drinkwatercapaciteit wordt uitgebreid.",
-      "source": "Waternet",
+      "title": "Nieuw HPV-vaccin beschermt tegen meer typen HPV",
+      "teaser": "Sinds 1 september gebruikt het Rijksvaccinatieprogramma Gardasil 9. Het vaccin beschermt tegen zeven typen HPV die kanker kunnen veroorzaken en tegen twee typen die genitale wratten kunnen veroorzaken.",
+      "source": "RIVM",
+      "category": "Gezondheid",
+      "url": "https://www.rivm.nl/nieuws/hpv-vaccinatie-met-ander-vaccin-beschermt-tegen-meer-typen-hpv",
+      "reading_time_minutes": 2
+    },
+    {
+      "title": "Nieuw platform moet weefselanalyse tot vijftien keer sneller maken",
+      "teaser": "Chromodynamics ontwikkelt met steun van het Innovatiekrediet een geautomatiseerd platform waarmee laboranten weefsel veel sneller en gedetailleerder kunnen analyseren. Dat kan medicijnonderzoek efficiënter maken.",
+      "source": "RVO",
+      "category": "Technologie & innovatie",
+      "url": "https://www.rvo.nl/nieuws/innovatiekrediet-chromodynamics-medicijnontwikkeling"
+    },
+    {
+      "title": "Zes miljoen euro voor slimmer natuurherstel in Europa",
+      "teaser": "Radboud Universiteit leidt NatureRestoreR, een Europees onderzoeksproject dat modellen en hulpmiddelen ontwikkelt om natuurherstel gerichter en effectiever te plannen.",
+      "source": "Radboud Universiteit",
       "category": "Natuur & klimaat",
-      "url": "https://awd.waternet.nl/nieuws/2026/aanleg-natuurvriendelijke-oevers/"
+      "url": "https://www.ru.nl/medewerkers/nieuws/europese-subsidie-voor-onderzoek-naar-natuurherstel"
     },
     {
-      "title": "Huisartsen en dorpshuis vinden samen ruimte onder één dak",
-      "teaser": "In Nieuwehorne zijn een huisartsenpraktijk en dorpshuis samengebracht. Zo blijft de zorgvoorziening in het dorp behouden en krijgt het dorpshuis tegelijk meer toekomstperspectief.",
-      "source": "Groot Heerenveen",
-      "category": "Mens & samenleving",
-      "url": "https://www.grootheerenveen.nl/nieuws/algemeen/141975/dorpshuis-de-kiekenhof-en-huisartsenpraktijk-nieuwehorne-slaan-handen-ineen-voor-toekomstbestendige-zorg",
-      "intro_label": "de slimme combinatie van huisartsenpraktijk en dorpshuis"
+      "title": "Natuurherstel bij Vatrop geeft wadvogels weer rust en ruimte",
+      "teaser": "Staatsbosbeheer herstelt vanaf half september de kleiput en het broedeiland bij Vatrop. De verbinding met de Waddenzee wordt verbeterd en wadvogels krijgen er weer veiligere broed- en rustplekken.",
+      "source": "Staatsbosbeheer",
+      "category": "Natuur & klimaat",
+      "url": "https://www.staatsbosbeheer.nl/wat-we-doen/nieuws/2026/08/natuurherstel-vatrop-start-medio-september",
+      "reading_time_minutes": 3
     }
   ],
   "int": [
     {
-      "title": "Zeldzame plant na 170 jaar teruggevonden in Sri Lanka",
-      "teaser": "Onderzoekers hebben in een klein bosgebied 70 tot 100 exemplaren gevonden van een plant die sinds 1855 niet meer in het wild in Sri Lanka was vastgelegd.",
-      "source": "Mongabay",
+      "title": "Bedreigde ratelslangen voor het eerst succesvol gekweekt voor herstelprogramma",
+      "teaser": "De dierentuin van Los Angeles heeft voor het eerst zes jonge New Mexico ridge-nosed rattlesnakes gekweekt binnen een internationaal herstelprogramma. De dieren kunnen later in aanmerking komen voor terugkeer naar het wild.",
+      "source": "Los Angeles Zoo",
       "category": "Natuur & klimaat",
-      "url": "https://news.mongabay.com/short-article/2026/08/lost-for-170-years-rare-plant-recorded-in-sri-lanka/"
+      "url": "https://lazoo.org/2026/09/obscurus-births/"
     },
     {
-      "title": "Onderzoekers maken spirulina met bruikbare vitamine B12",
-      "teaser": "Door de lichtomstandigheden tijdens de kweek te sturen, maakten onderzoekers spirulina met biologisch actieve vitamine B12. Dat kan op termijn bijdragen aan duurzamere bronnen van de essentiële vitamine.",
-      "source": "ScienceDaily",
-      "category": "Voeding & leefstijl",
-      "url": "https://www.sciencedaily.com/releases/2026/08/260829035227.htm"
-    },
-    {
-      "title": "Nieuwe zonneceltechniek zet CO₂ in het lab om in ethanol",
-      "teaser": "Tsjechische onderzoekers ontwikkelden een fotokathode die met zonlicht CO₂ omzet in ethanol. In laboratoriumtests behaalde het systeem een recordrendement en ontstond ethanol als enige vloeibare product.",
-      "source": "Phys.org",
-      "category": "Technologie & innovatie",
-      "url": "https://phys.org/news/2026-08-nano-sandwich-photocathode-solar-conversion.html",
-      "reading_time_minutes": 3
-    },
-    {
-      "title": "Experimentele oogdruppels geven blinde muizen weer lichtwaarneming",
-      "teaser": "Lichtgestuurde geneesmiddelen herstelden bij blinde muizen lichtwaarneming en natuurlijk visueel gedrag. Twee veelbelovende stoffen werkten ook als oogdruppels.",
-      "source": "ScienceDaily",
+      "title": "Zeldzame antistoffen blokkeren roodvleesallergenen in laboratoriumtests",
+      "teaser": "NIH-onderzoekers ontdekten antistoffen die in laboratoriumtests voorkwamen dat menselijke allergische antistoffen zich aan alpha-gal-allergenen bonden. De vondst kan aanknopingspunten geven voor een toekomstige behandeling.",
+      "source": "NIH",
       "category": "Gezondheid",
-      "url": "https://www.sciencedaily.com/releases/2026/08/260828005224.htm"
+      "url": "https://www.nih.gov/news-events/news-releases/nih-researchers-identify-rare-antibodies-potential-combat-alpha-gal-syndrome"
     },
     {
-      "title": "Nieuwe NASA-antenne vergroot capaciteit voor communicatie met verre ruimtemissies",
-      "teaser": "De nieuwe 34 meter brede antenne van NASA's Deep Space Network is in gebruik genomen en moet de communicatiecapaciteit met ruimtevaartuigen voor de komende decennia vergroten.",
-      "source": "NASA",
-      "category": "Wetenschap",
-      "url": "https://science.nasa.gov/photojournal/nasa-deep-space-networks-new-goldstone-antenna-goes-online/",
-      "reading_time_minutes": 1
+      "title": "Nieuwe zoutwaterbatterij levert ruim twee keer zoveel piekvermogen",
+      "teaser": "Onderzoekers van Oak Ridge National Laboratory verbeterden een batterij voor grootschalige energieopslag met goedkope, ruim beschikbare materialen. Het piekvermogen werd meer dan verdubbeld, zonder kritieke grondstoffen te gebruiken.",
+      "source": "Oak Ridge National Laboratory",
+      "category": "Technologie & innovatie",
+      "url": "https://www.ornl.gov/news/side-reaction-center-stage-bleach-salt-water-boost-power-grid-batteries"
     },
     {
-      "title": "Recordsnelle ster kan helpen het zwarte gat in het hart van de Melkweg te doorgronden",
-      "teaser": "Astronomen hebben een ster geïdentificeerd die extreem snel en dicht rond Sagittarius A* beweegt. De baan kan nieuwe aanwijzingen geven over de rotatie van het superzware zwarte gat.",
-      "source": "Smithsonian Magazine",
+      "title": "Nieuw algoritme maakt analyse van grote single-cell datasets efficiënter",
+      "teaser": "Onderzoekers van Waseda University ontwikkelden een methode om veranderingen in genactiviteit langs ontwikkelingsprocessen beter op te sporen. De aanpak is bedoeld om analyses van grote single-cell datasets schaalbaarder te maken.",
+      "source": "Phys.org",
       "category": "Wetenschap",
-      "url": "https://www.smithsonianmag.com/smart-news/this-star-orbits-our-galaxys-heart-at-a-record-breaking-speed-and-could-help-uncover-secrets-about-the-behemoth-black-hole-there-180989393/"
+      "url": "https://phys.org/news/2026-09-algorithm-differentially-genes-large-cell.html",
+      "reading_time_minutes": 4
+    },
+    {
+      "title": "55 jonge Liberianen getraind om desinformatie beter te herkennen",
+      "teaser": "Een door een jonge Liberiaanse factchecker opgezet programma trainde 55 jongeren uit universiteiten, media, politiek en maatschappelijke organisaties in broncontrole en digitale weerbaarheid. Deelnemers willen de kennis verder verspreiden.",
+      "source": "UNDP",
+      "category": "Mens & samenleving",
+      "url": "https://www.undp.org/liberia/stories/fact-checker-youth-champion-how-one-young-liberian-helping-build-more-resilient-democracy"
+    },
+    {
+      "title": "Jemen lanceert nationaal plan voor herstel van de gezondheidszorg",
+      "teaser": "De nieuwe gezondheidsstrategie voor 2026-2030 moet basiszorg, vaccinatie, noodzorg en betaalbaarheid versterken. Het plan markeert een verschuiving van noodhulp naar structureel herstel van het gezondheidssysteem.",
+      "source": "WHO / Verenigde Naties",
+      "category": "Gezondheid",
+      "url": "https://yemen.un.org/en/321968-who-yemen-yemen%E2%80%99s-newly-launched-national-health-strategy-2026%E2%80%932030-aims-build-resilient"
     }
   ],
   "headlines": [
     {
-      "title": "Coalitie praat verder over begroting onder stevige tijdsdruk",
-      "teaser": "D66, VVD en CDA hebben nog geen akkoord over de begroting voor volgend jaar. De onderhandelingen gaan vanochtend verder, terwijl de plannen snel naar de Raad van State moeten voor Prinsjesdag.",
+      "title": "Minderheidscoalitie bereikt akkoord over begroting",
+      "teaser": "D66, VVD en CDA hebben na dagenlange onderhandelingen overeenstemming bereikt over de begroting voor volgend jaar. Het kabinet moet voor de plannen nog steun zoeken bij oppositiepartijen om meerderheden te vinden.",
       "source": "NOS",
       "category": "Politiek",
-      "url": "https://nos.nl/artikel/2629016-coalitie-heeft-nog-geen-begrotingsakkoord-onderhandelingen-vanochtend-verder"
+      "url": "https://nos.nl/artikel/2629146-minderheidscoalitie-op-de-valreep-akkoord-over-begroting"
     },
     {
-      "title": "Massadonor Simon zegt minstens 199 kinderen te hebben verwekt",
-      "teaser": "De Nederlandse donor noemt in een brief een veel hoger aantal dan eerder bekend was en zegt te zijn gestopt met doneren. De zaak roept opnieuw vragen op over toezicht op spermadonatie.",
-      "source": "NOS / Nieuwsuur",
-      "category": "Binnenland",
-      "url": "https://nos.nl/nieuwsuur/artikel/2628869-massadonor-simon-schrijft-aan-ouders-ik-heb-minstens-199-kinderen-verwekt"
-    },
-    {
-      "title": "Nepal waarschuwt voor nieuwe overstromingen na verwoestende ramp",
-      "teaser": "Na de grote overstromingen wordt opnieuw gewaarschuwd voor hoog water. Het dodental in Nepal en Tibet is opgelopen tot 750 en duizenden mensen worden nog vermist.",
+      "title": "Hongkongse activist Joshua Wong bekent schuld in nationale-veiligheidszaak",
+      "teaser": "Wong heeft voor de rechter schuld bekend aan samenzwering met buitenlandse partijen. Hij zit al vast in een andere zaak en blijft waarschijnlijk langer in de cel; de zaak draait om Hongkongs omstreden nationale veiligheidswet.",
       "source": "NOS",
       "category": "Buitenland",
-      "url": "https://nos.nl/artikel/2628893-waarschuwingen-voor-nieuwe-overstromingen-nepal-dodental-gestegen-tot-750"
+      "url": "https://nos.nl/artikel/2629330-hongkongse-activist-joshua-wong-bekent-schuld-zegt-meer-over-hongkong-dan-over-hem"
+    },
+    {
+      "title": "Onderzoek naar uitzonderlijk geweld in Overasselt gaat verder",
+      "teaser": "Na het ernstige geweld van dinsdag gaat het politieonderzoek in en rond Overasselt verder. Minister Van Weel noemt de schaal en organisatie ervan ongekend voor Nederland.",
+      "source": "NOS",
+      "category": "Binnenland",
+      "url": "https://nos.nl/artikel/2629328-van-weel-vorm-van-geweld-in-overasselt-ongekend-en-nieuw"
     }
   ]
 }
