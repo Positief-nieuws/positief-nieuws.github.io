@@ -12,7 +12,7 @@ from pathlib import Path
 
 NEWS_FILE = Path("nieuws.json")
 BUTTONDOWN_URL = "https://api.buttondown.com/v1/emails"
-SITE_URL = "https://positief-nieuws.github.io/"
+SITE_URL = "https://positief-nieuws.nl/"
 
 PAPER = "#f7f5ec"
 INK = "#151a17"
@@ -126,12 +126,12 @@ def edition_weekday(data):
 
 
 def edition_url(data):
-    """Schone editie-URL, onder meer voor canonical en gedeelde links."""
+    """Permanente schone editie-URL, onder meer voor canonical en gedeelde links."""
     raw_date = raw_edition_date(data)
     if isinstance(raw_date, str):
         try:
             datetime.strptime(raw_date, "%Y-%m-%d")
-            return f"{SITE_URL}?editie={urllib.parse.quote(raw_date)}"
+            return f"{SITE_URL}edities/{urllib.parse.quote(raw_date)}/"
         except ValueError:
             pass
     return SITE_URL
@@ -300,7 +300,7 @@ def build_body(data, nl, international, headlines):
     weekday = esc(edition_weekday(data))
 
     return f"""<!-- buttondown-editor-mode: fancy -->
-<div style="max-width:680px;margin:0 auto;background:{PAPER};padding:32px 28px;color:{INK};font-family:Arial,Helvetica,sans-serif;">
+<div style="max-width:780px;margin:0 auto;background:{PAPER};padding:32px 28px;color:{INK};font-family:Arial,Helvetica,sans-serif;">
 
   <div style="margin-bottom:48px;">
     <p style="margin:0;font:800 19px Arial,Helvetica,sans-serif;letter-spacing:-.02em;color:{INK};">
