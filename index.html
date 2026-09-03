@@ -1051,6 +1051,18 @@
     <div class="wide-shell">Positief nieuws · Dit gebeurt ook. · <a href="#privacy">Privacy</a></div>
   </footer>
 <script>
+    // Oude ?editie=YYYY-MM-DD-links blijven werken en gaan naar de vaste editie-URL.
+    (function redirectLegacyEditionUrl() {
+      const params = new URLSearchParams(window.location.search);
+      const date = params.get("editie");
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(date || "")) return;
+
+      params.delete("editie");
+      const rest = params.toString();
+      const destination = `/edities/${encodeURIComponent(date)}/${rest ? `?${rest}` : ""}`;
+      window.location.replace(destination);
+    })();
+
     const $ = (selector) =>
       document.querySelector(selector);
 
@@ -2017,7 +2029,7 @@
               "archive-item";
 
             link.href =
-              `./?editie=${encodeURIComponent(date)}`;
+              `/edities/${encodeURIComponent(date)}/`;
 
             link.innerHTML = `
               <span class="archive-date">${safeText(formatEditionDate(date))}</span>
@@ -2085,7 +2097,7 @@
 
           const link = document.createElement("a");
           link.className = "home-archive-item";
-          link.href = `./?editie=${encodeURIComponent(entry.date)}`;
+          link.href = `/edities/${encodeURIComponent(entry.date)}/`;
           link.innerHTML = `
             <span class="home-archive-date">${safeText(formatEditionDate(entry.date).replace(/^\w+\s+/u, ""))}</span>
             <span class="home-archive-title">${safeText(label)}</span>
