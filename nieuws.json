@@ -1,122 +1,125 @@
 {
   "meta": {
-    "edition_date": "2026-09-02",
-    "generated_from": "kandidaten.json + actuele nieuwsselectie",
+    "edition_date": "2026-09-04",
+    "generated_from": "kandidaten (2).json + actuele nieuwsselectie",
     "title": "Positief nieuws",
     "tagline": "Dit gebeurt ook."
   },
   "nl": [
     {
-      "title": "Voor de Meisjes en Mama’ku winnen Gouden Kalf van het Publiek",
-      "teaser": "Voor de Meisjes trok 324.000 bioscoopbezoekers en Mama’ku - Van Jakarta tot de Molukken 24.000. Daarmee waren ze de best bezochte Nederlandse speelfilm en documentaire van het afgelopen jaar.",
-      "source": "Nederlands Film Festival",
-      "category": "Cultuur & media",
-      "url": "https://www.filmfestival.nl/nieuws/voor-de-meisjes-en-mamaku-van-jakarta-tot-de-molukken-ontvangen-gouden-kalf-van-het-publiek-2026-voor-best-bezochte-nederlandse-speelfilm-en-documentaire"
+      "title": "Ecotunnel op Schouwen blijkt volop door dieren te worden gebruikt",
+      "teaser": "De ecotunnel onder de Kloosterweg verbindt twee natuurgebieden en wordt inmiddels dagelijks gebruikt door Exmoorpony’s en allerlei kleinere dieren. De veilige oversteek vermindert aanrijdingen en helpt leefgebieden met elkaar te verbinden.",
+      "source": "Staatsbosbeheer",
+      "category": "Natuur & klimaat",
+      "url": "https://www.staatsbosbeheer.nl/wat-we-doen/nieuws/2026/09/ecotunnel-kop-van-schouwen",
+      "reading_time_minutes": 4
     },
     {
-      "title": "TU/e-onderzoek helpt zorg voor vroeggeboren baby’s beter af te stemmen",
-      "teaser": "Onderzoekers analyseerden zes weken lang gegevens van 251 zeer vroeggeboren baby's en vonden duidelijke ontwikkelingspatronen. Die kunnen artsen helpen afwijkingen eerder te herkennen en vormen een basis voor slimmere monitoring.",
-      "source": "Omroep Brabant",
-      "category": "Gezondheid",
-      "url": "https://www.omroepbrabant.nl/nieuws/6025487/onderzoek-tue-verbetert-zorg-voor-vroeggeboren-babys"
+      "title": "CO2-uitstoot van wegverkeer daalt voor het eerst sinds de coronapandemie",
+      "teaser": "Nieuwe CBS-cijfers laten zien dat de CO2-uitstoot van het Nederlandse wegverkeer voor het eerst sinds de coronapandemie is gedaald. Daarmee is er na de uitzonderlijke coronajaren opnieuw een jaar met minder uitstoot door het wegverkeer.",
+      "source": "CBS",
+      "category": "Natuur & klimaat",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPODVDazhRakV1dThJX0x5RmJDeWhNWk8xUUFCTV9ycThNNXozMlZ3Sk5sdVZnS0JobjVhY05NeGkyVHd1Mlo3dnFDNHk1MXlUWU0xRU9BQlJqXzNiWDJPcGt3QmQwMnNoXzJjRlBLcWlYd1BvQWJpM3pZVzQzeGhidEp5blhfbVF3VF95LUdiX2kxNTJRZTA4T1FGSEdjY2pWZmoyVw?oc=5"
     },
     {
-      "title": "Nieuw HPV-vaccin beschermt tegen meer typen HPV",
-      "teaser": "Sinds 1 september gebruikt het Rijksvaccinatieprogramma Gardasil 9. Het vaccin beschermt tegen zeven typen HPV die kanker kunnen veroorzaken en tegen twee typen die genitale wratten kunnen veroorzaken.",
-      "source": "RIVM",
-      "category": "Gezondheid",
-      "url": "https://www.rivm.nl/nieuws/hpv-vaccinatie-met-ander-vaccin-beschermt-tegen-meer-typen-hpv",
+      "title": "Onderzoek met begraven onderbroeken levert Nederlandse wetenschapper Ig Nobelprijs op",
+      "teaser": "Meer dan duizend vrijwilligers begroeven katoenen ondergoed om te meten hoe actief het bodemleven is. Het opvallende experiment helpt zichtbaar te maken hoe landgebruik en bodembeheer samenhangen met de kwaliteit van de bodem.",
+      "source": "NOS",
+      "category": "Wetenschap",
+      "url": "https://nos.nl/artikel/2629573-nederlander-wint-ig-nobelprijs-voor-duizenden-begraven-onderbroeken",
       "reading_time_minutes": 2
     },
     {
-      "title": "Nieuw platform moet weefselanalyse tot vijftien keer sneller maken",
-      "teaser": "Chromodynamics ontwikkelt met steun van het Innovatiekrediet een geautomatiseerd platform waarmee laboranten weefsel veel sneller en gedetailleerder kunnen analyseren. Dat kan medicijnonderzoek efficiënter maken.",
-      "source": "RVO",
-      "category": "Technologie & innovatie",
-      "url": "https://www.rvo.nl/nieuws/innovatiekrediet-chromodynamics-medicijnontwikkeling"
+      "title": "Onderzoek brengt plastic hotspots in Amsterdam scherper in kaart",
+      "teaser": "Wagenings onderzoek naar stedelijk plastic afval combineert frequente metingen met een methode om hotspots en de meest voorkomende soorten afval te herkennen. Daardoor kunnen maatregelen tegen plastic in grachten en waterwegen gerichter worden ingezet.",
+      "source": "Wageningen University & Research",
+      "category": "Natuur & klimaat",
+      "url": "https://www.wur.nl/en/activity/solving-urban-plastic-soup"
     },
     {
-      "title": "Zes miljoen euro voor slimmer natuurherstel in Europa",
-      "teaser": "Radboud Universiteit leidt NatureRestoreR, een Europees onderzoeksproject dat modellen en hulpmiddelen ontwikkelt om natuurherstel gerichter en effectiever te plannen.",
-      "source": "Radboud Universiteit",
-      "category": "Natuur & klimaat",
-      "url": "https://www.ru.nl/medewerkers/nieuws/europese-subsidie-voor-onderzoek-naar-natuurherstel"
+      "title": "Ondernemerschap geeft Robin Schalk ruimte om werk op zijn manier in te richten",
+      "teaser": "Nadat jarenlang weinig van hem werd verwacht en hij later uitviel met een burn-out, vond Robin Schalk in ondernemerschap meer regie over prikkels, energie en werktijden. Inmiddels bouwt hij als zelfstandig reisadviseur verder aan zijn eigen bedrijf.",
+      "source": "De Ondernemer",
+      "category": "Mens & samenleving",
+      "url": "https://www.deondernemer.nl/persoonlijk/neurodivergent/robin-schalk-autisme-neurodivergentie-reisagent~5a785df",
+      "reading_time_minutes": 5
     },
     {
-      "title": "Natuurherstel bij Vatrop geeft wadvogels weer rust en ruimte",
-      "teaser": "Staatsbosbeheer herstelt vanaf half september de kleiput en het broedeiland bij Vatrop. De verbinding met de Waddenzee wordt verbeterd en wadvogels krijgen er weer veiligere broed- en rustplekken.",
-      "source": "Staatsbosbeheer",
-      "category": "Natuur & klimaat",
-      "url": "https://www.staatsbosbeheer.nl/wat-we-doen/nieuws/2026/08/natuurherstel-vatrop-start-medio-september",
-      "reading_time_minutes": 3
+      "title": "Kromowidjojo krijgt nieuwe internationale rol om positie van zwemmers te versterken",
+      "teaser": "Ranomi Kromowidjojo wordt bij World Aquatics de eerste directeur atleetbetrokkenheid. Ze wil onder meer werken aan betere financiële steun voor sporters en meer begeleiding bij de overgang naar het leven na hun topsportcarrière.",
+      "source": "NOS",
+      "category": "Sport",
+      "url": "https://nos.nl/artikel/2629518-kromowidjojo-aan-de-slag-bij-internationale-zwembond-wil-meer-geld-voor-sporters",
+      "reading_time_minutes": 2
     }
   ],
   "int": [
     {
-      "title": "Bedreigde ratelslangen voor het eerst succesvol gekweekt voor herstelprogramma",
-      "teaser": "De dierentuin van Los Angeles heeft voor het eerst zes jonge New Mexico ridge-nosed rattlesnakes gekweekt binnen een internationaal herstelprogramma. De dieren kunnen later in aanmerking komen voor terugkeer naar het wild.",
-      "source": "Los Angeles Zoo",
-      "category": "Natuur & klimaat",
-      "url": "https://lazoo.org/2026/09/obscurus-births/"
-    },
-    {
-      "title": "Zeldzame antistoffen blokkeren roodvleesallergenen in laboratoriumtests",
-      "teaser": "NIH-onderzoekers ontdekten antistoffen die in laboratoriumtests voorkwamen dat menselijke allergische antistoffen zich aan alpha-gal-allergenen bonden. De vondst kan aanknopingspunten geven voor een toekomstige behandeling.",
-      "source": "NIH",
+      "title": "Varkensnier functioneert recordlang als brug naar menselijke transplantatie",
+      "teaser": "Een genetisch aangepaste varkensnier werkte 271 dagen in het lichaam van een Amerikaanse man met nierfalen. De transplantatie hield hem negen maanden van dialyse af totdat een menselijke donornier beschikbaar kwam.",
+      "source": "BBC",
       "category": "Gezondheid",
-      "url": "https://www.nih.gov/news-events/news-releases/nih-researchers-identify-rare-antibodies-potential-combat-alpha-gal-syndrome"
+      "url": "https://www.bbc.co.uk/news/articles/c305qn2jeggo?at_medium=RSS&at_campaign=rss",
+      "reading_time_minutes": 3
     },
     {
-      "title": "Nieuwe zoutwaterbatterij levert ruim twee keer zoveel piekvermogen",
-      "teaser": "Onderzoekers van Oak Ridge National Laboratory verbeterden een batterij voor grootschalige energieopslag met goedkope, ruim beschikbare materialen. Het piekvermogen werd meer dan verdubbeld, zonder kritieke grondstoffen te gebruiken.",
-      "source": "Oak Ridge National Laboratory",
-      "category": "Technologie & innovatie",
-      "url": "https://www.ornl.gov/news/side-reaction-center-stage-bleach-salt-water-boost-power-grid-batteries"
+      "title": "Injecteerbaar biomateriaal helpt hersenherstel na beroerte in muizen",
+      "teaser": "Onderzoekers van Duke University ontwikkelden een poreus biomateriaal dat in muizen nieuwe bloedvaten, veranderingen in zenuwweefsel en herstel van beweging stimuleerde na een beroerte. De behandeling bevindt zich nog in de preklinische fase.",
+      "source": "ScienceDaily / Duke University",
+      "category": "Gezondheid",
+      "url": "https://www.sciencedaily.com/releases/2026/09/260902234512.htm"
     },
     {
-      "title": "Nieuw algoritme maakt analyse van grote single-cell datasets efficiënter",
-      "teaser": "Onderzoekers van Waseda University ontwikkelden een methode om veranderingen in genactiviteit langs ontwikkelingsprocessen beter op te sporen. De aanpak is bedoeld om analyses van grote single-cell datasets schaalbaarder te maken.",
-      "source": "Phys.org",
-      "category": "Wetenschap",
-      "url": "https://phys.org/news/2026-09-algorithm-differentially-genes-large-cell.html",
-      "reading_time_minutes": 4
+      "title": "Bestaand kankermedicijn verkleint virusreservoir in apenmodel voor hiv",
+      "teaser": "Onderzoekers gebruikten venetoclax als onderdeel van een behandeling om met SIV geïnfecteerde cellen bij apen terug te dringen. De studie levert een eerste proof-of-concept op; klinische studies met mensen met hiv zijn al gestart.",
+      "source": "Medical Xpress / Emory University",
+      "category": "Gezondheid",
+      "url": "https://medicalxpress.com/news/2026-09-cancer-medication-siv-reservoir-hiv.html",
+      "reading_time_minutes": 3
     },
     {
-      "title": "55 jonge Liberianen getraind om desinformatie beter te herkennen",
-      "teaser": "Een door een jonge Liberiaanse factchecker opgezet programma trainde 55 jongeren uit universiteiten, media, politiek en maatschappelijke organisaties in broncontrole en digitale weerbaarheid. Deelnemers willen de kennis verder verspreiden.",
+      "title": "School in Oost-Sarajevo stapt over van kolen naar schonere verwarming",
+      "teaser": "Een middelbare school in Pale heeft een nieuwe pelletinstallatie in gebruik genomen die de oude kolen- en houtverwarming vervangt. De installatie verwarmt 3.500 vierkante meter en moet de lokale luchtvervuiling verminderen.",
       "source": "UNDP",
-      "category": "Mens & samenleving",
-      "url": "https://www.undp.org/liberia/stories/fact-checker-youth-champion-how-one-young-liberian-helping-build-more-resilient-democracy"
+      "category": "Natuur & klimaat",
+      "url": "https://www.undp.org/bosnia-herzegovina/news/cleaner-energy-solutions-advance-green-transition-east-sarajevo"
     },
     {
-      "title": "Jemen lanceert nationaal plan voor herstel van de gezondheidszorg",
-      "teaser": "De nieuwe gezondheidsstrategie voor 2026-2030 moet basiszorg, vaccinatie, noodzorg en betaalbaarheid versterken. Het plan markeert een verschuiving van noodhulp naar structureel herstel van het gezondheidssysteem.",
-      "source": "WHO / Verenigde Naties",
-      "category": "Gezondheid",
-      "url": "https://yemen.un.org/en/321968-who-yemen-yemen%E2%80%99s-newly-launched-national-health-strategy-2026%E2%80%932030-aims-build-resilient"
+      "title": "67 jonge Angolezen ronden intensieve machine-learningopleiding af",
+      "teaser": "Uit 838 aanmeldingen werden deelnemers geselecteerd voor een opleiding in onder meer Python, data-analyse en machine learning. De 67 afgestudeerden ontwikkelden samen dertien AI-oplossingen voor duurzamer toerisme in Angola.",
+      "source": "UNDP",
+      "category": "Onderwijs & ontwikkeling",
+      "url": "https://www.undp.org/policy-centre/istanbul/press-releases/frontier-tech-leaders-programme-celebrates-first-machine-learning-bootcamp-graduation-and-ai-sustainable"
+    },
+    {
+      "title": "ESA bewijst gerichte satellietterugkeer en verzamelt unieke meetgegevens",
+      "teaser": "Na vier gerichte terugkeren noemt ESA de methode een bewezen manier om satellieten veilig aan het einde van hun levensduur op te ruimen. Wetenschappers konden de laatste twee terugkeren met vrijwel alle instrumenten vanuit een vliegtuig volgen.",
+      "source": "European Space Agency",
+      "category": "Wetenschap",
+      "url": "https://www.esa.int/Space_Safety/Space_Debris/Cluster_s_encore_for_reentry_science_a_success"
     }
   ],
   "headlines": [
     {
-      "title": "Minderheidscoalitie bereikt akkoord over begroting",
-      "teaser": "D66, VVD en CDA hebben na dagenlange onderhandelingen overeenstemming bereikt over de begroting voor volgend jaar. Het kabinet moet voor de plannen nog steun zoeken bij oppositiepartijen om meerderheden te vinden.",
-      "source": "NOS",
-      "category": "Politiek",
-      "url": "https://nos.nl/artikel/2629146-minderheidscoalitie-op-de-valreep-akkoord-over-begroting"
-    },
-    {
-      "title": "Hongkongse activist Joshua Wong bekent schuld in nationale-veiligheidszaak",
-      "teaser": "Wong heeft voor de rechter schuld bekend aan samenzwering met buitenlandse partijen. Hij zit al vast in een andere zaak en blijft waarschijnlijk langer in de cel; de zaak draait om Hongkongs omstreden nationale veiligheidswet.",
-      "source": "NOS",
-      "category": "Buitenland",
-      "url": "https://nos.nl/artikel/2629330-hongkongse-activist-joshua-wong-bekent-schuld-zegt-meer-over-hongkong-dan-over-hem"
-    },
-    {
-      "title": "Onderzoek naar uitzonderlijk geweld in Overasselt gaat verder",
-      "teaser": "Na het ernstige geweld van dinsdag gaat het politieonderzoek in en rond Overasselt verder. Minister Van Weel noemt de schaal en organisatie ervan ongekend voor Nederland.",
+      "title": "PBL: stikstofplannen zetten grote stap, maar halen Nederland niet van het slot",
+      "teaser": "Volgens het Planbureau voor de Leefomgeving leveren de kabinetsplannen veel natuurwinst en een forse daling van de stikstofuitstoot op. Toch verdwijnen de problemen met vergunningverlening er niet in één keer door.",
       "source": "NOS",
       "category": "Binnenland",
-      "url": "https://nos.nl/artikel/2629328-van-weel-vorm-van-geweld-in-overasselt-ongekend-en-nieuw"
+      "url": "https://nos.nl/artikel/2629576-stikstofplannen-halen-land-niet-van-het-slot-wel-grote-stap-vooruit"
+    },
+    {
+      "title": "Coronacommissie onderzoekt ruimte voor tegenspraak binnen kabinet-Rutte",
+      "teaser": "Bij de parlementaire enquête naar het coronabeleid kwamen appberichten naar buiten die spanningen binnen het kabinet laten zien. De commissie onderzoekt onder meer hoeveel ruimte er tijdens de crisis was voor afwijkende perspectieven.",
+      "source": "NOS",
+      "category": "Politiek",
+      "url": "https://nos.nl/artikel/2629564-appjes-uit-coronakabinet-rutte-stevige-taal-over-collega-s-uit-frustratie"
+    },
+    {
+      "title": "Argentinië kondigt sancties aan tegen oliebedrijven rond Falklands",
+      "teaser": "President Javier Milei zegt bedrijven te willen aanpakken die olie winnen op en rond de door het Verenigd Koninkrijk bestuurde Falklandeilanden. Welke bedrijven worden geraakt en hoe de sancties eruitzien, is nog niet bekend.",
+      "source": "NOS",
+      "category": "Buitenland",
+      "url": "https://nos.nl/artikel/2629585-argentijnse-president-milei-gaat-oliebedrijven-bij-falklands-aanpakken"
     }
   ]
 }
