@@ -42,7 +42,7 @@
     <svg class="sun" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"></circle><path d="M12 1.8V5.1M12 18.9V22.2M22.2 12H18.9M5.1 12H1.8M19.2 4.8L16.8 7.2M7.2 16.8L4.8 19.2M19.2 19.2L16.8 16.8M7.2 7.2L4.8 4.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg>
     <span>Positief nieuws.</span>
   </a>
-  <nav><a href="/">Vandaag</a><a href="/#archief">Archief</a><a href="/#over">Over</a><a class="inbox" href="/#nieuwsbrief">In je inbox</a></nav>
+  <nav><a href="/">Vandaag</a><a href="/edities/">Archief</a><a href="/over/">Over</a><a class="inbox" href="/#nieuwsbrief">In je inbox</a></nav>
 </header>
 <div class="shell banner">Je leest de editie van woensdag 2 september 2026. <a href="/">Ga naar de nieuwste editie →</a></div>
 <section class="hero"><div class="shell">
@@ -190,4 +190,23 @@
 <section class="end"><div class="shell"><h2>Dit was het voor deze editie.<br>Je bent weer bij.</h2><p>Geniet van je dag.</p><a class="back" href="/">Lees de nieuwste editie</a></div></section>
 </main>
 <footer>Positief nieuws · Dit gebeurt ook.</footer>
+<script>
+  window.sa_metadata = {"page_type": "edition", "edition": "2026-09-02"};
+
+  (function () {
+    const analyticsScript = document.createElement("script");
+    analyticsScript.async = true;
+    analyticsScript.setAttribute("data-hostname", "positief-nieuws.nl");
+    analyticsScript.src = "https://scripts.simpleanalyticscdn.com/latest.js";
+
+    analyticsScript.addEventListener("load", function () {
+      const autoEventsScript = document.createElement("script");
+      autoEventsScript.async = true;
+      autoEventsScript.src = "https://scripts.simpleanalyticscdn.com/auto-events.js";
+      document.body.appendChild(autoEventsScript);
+    });
+
+    document.body.appendChild(analyticsScript);
+  })();
+</script>
 </body></html>
