@@ -819,8 +819,8 @@
       <nav class="app-nav" aria-label="Hoofdnavigatie">
         <div class="app-nav-inner">
           <a id="nav-today" href="./">Vandaag</a>
-          <a id="nav-archive" href="#archief">Archief</a>
-          <a id="nav-about" href="#over">Over</a>
+          <a id="nav-archive" href="/edities/">Archief</a>
+          <a id="nav-about" href="/over/">Over</a>
           <a class="header-cta" href="#nieuwsbrief"><svg class="header-cta-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 6.5h17a1 1 0 0 1 1 1v9a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2v-9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.7"></path><path d="m4.5 8 7.5 6 7.5-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>In je inbox</span></a>
         </div>
       </nav>
@@ -957,7 +957,7 @@
       <section class="home-archive wide-shell" aria-label="Eerdere edities">
         <div class="home-archive-heading">
           <p class="section-kicker">Eerdere edities</p>
-          <a href="#archief">Archief</a>
+          <a href="/edities/">Bekijk alle edities</a>
         </div>
         <div id="home-archive-state" class="state">Eerdere edities laden…</div>
         <div id="home-archive-list" class="home-archive-list" hidden></div>
@@ -2183,6 +2183,10 @@
         document.createElement("script");
 
       analyticsScript.async = true;
+      analyticsScript.setAttribute(
+        "data-hostname",
+        "positief-nieuws.nl"
+      );
       analyticsScript.src =
         "https://scripts.simpleanalyticscdn.com/latest.js";
 
