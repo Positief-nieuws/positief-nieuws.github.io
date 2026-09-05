@@ -129,10 +129,6 @@ def render(data, date_value):
         "edition": date_value
     })
 
-    analytics = analytics_html({
-        "page_type": "archive"
-    })
-
     return f"""<!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -225,6 +221,10 @@ def render_archive(entries):
             "url": SITE_URL + "/"
         }
     }, ensure_ascii=False)
+
+    analytics = analytics_html({
+        "page_type": "archive"
+    })
 
     return f"""<!DOCTYPE html>
 <html lang="nl">
