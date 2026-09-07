@@ -1,125 +1,122 @@
 {
   "meta": {
-    "edition_date": "2026-09-04",
-    "generated_from": "kandidaten (2).json + actuele nieuwsselectie",
+    "edition_date": "2026-09-07",
+    "generated_from": "kandidaten (3).json + actuele nieuwsselectie",
     "title": "Positief nieuws",
     "tagline": "Dit gebeurt ook."
   },
   "nl": [
     {
-      "title": "Ecotunnel op Schouwen blijkt volop door dieren te worden gebruikt",
-      "teaser": "De ecotunnel onder de Kloosterweg verbindt twee natuurgebieden en wordt inmiddels dagelijks gebruikt door Exmoorpony’s en allerlei kleinere dieren. De veilige oversteek vermindert aanrijdingen en helpt leefgebieden met elkaar te verbinden.",
-      "source": "Staatsbosbeheer",
-      "category": "Natuur & klimaat",
-      "url": "https://www.staatsbosbeheer.nl/wat-we-doen/nieuws/2026/09/ecotunnel-kop-van-schouwen",
-      "reading_time_minutes": 4
-    },
-    {
-      "title": "CO2-uitstoot van wegverkeer daalt voor het eerst sinds de coronapandemie",
-      "teaser": "Nieuwe CBS-cijfers laten zien dat de CO2-uitstoot van het Nederlandse wegverkeer voor het eerst sinds de coronapandemie is gedaald. Daarmee is er na de uitzonderlijke coronajaren opnieuw een jaar met minder uitstoot door het wegverkeer.",
-      "source": "CBS",
-      "category": "Natuur & klimaat",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPODVDazhRakV1dThJX0x5RmJDeWhNWk8xUUFCTV9ycThNNXozMlZ3Sk5sdVZnS0JobjVhY05NeGkyVHd1Mlo3dnFDNHk1MXlUWU0xRU9BQlJqXzNiWDJPcGt3QmQwMnNoXzJjRlBLcWlYd1BvQWJpM3pZVzQzeGhidEp5blhfbVF3VF95LUdiX2kxNTJRZTA4T1FGSEdjY2pWZmoyVw?oc=5"
-    },
-    {
-      "title": "Onderzoek met begraven onderbroeken levert Nederlandse wetenschapper Ig Nobelprijs op",
-      "teaser": "Meer dan duizend vrijwilligers begroeven katoenen ondergoed om te meten hoe actief het bodemleven is. Het opvallende experiment helpt zichtbaar te maken hoe landgebruik en bodembeheer samenhangen met de kwaliteit van de bodem.",
+      "title": "City Swim haalt recordbedrag van ruim 3 miljoen euro op voor ALS",
+      "teaser": "Een recordaantal van 3300 deelnemers zwom door de Amsterdamse grachten. Samen haalden zij ruim 3 miljoen euro op voor projecten in de strijd tegen ALS, bijna het dubbele van vorig jaar.",
       "source": "NOS",
-      "category": "Wetenschap",
-      "url": "https://nos.nl/artikel/2629573-nederlander-wint-ig-nobelprijs-voor-duizenden-begraven-onderbroeken",
-      "reading_time_minutes": 2
-    },
-    {
-      "title": "Onderzoek brengt plastic hotspots in Amsterdam scherper in kaart",
-      "teaser": "Wagenings onderzoek naar stedelijk plastic afval combineert frequente metingen met een methode om hotspots en de meest voorkomende soorten afval te herkennen. Daardoor kunnen maatregelen tegen plastic in grachten en waterwegen gerichter worden ingezet.",
-      "source": "Wageningen University & Research",
-      "category": "Natuur & klimaat",
-      "url": "https://www.wur.nl/en/activity/solving-urban-plastic-soup"
-    },
-    {
-      "title": "Ondernemerschap geeft Robin Schalk ruimte om werk op zijn manier in te richten",
-      "teaser": "Nadat jarenlang weinig van hem werd verwacht en hij later uitviel met een burn-out, vond Robin Schalk in ondernemerschap meer regie over prikkels, energie en werktijden. Inmiddels bouwt hij als zelfstandig reisadviseur verder aan zijn eigen bedrijf.",
-      "source": "De Ondernemer",
       "category": "Mens & samenleving",
-      "url": "https://www.deondernemer.nl/persoonlijk/neurodivergent/robin-schalk-autisme-neurodivergentie-reisagent~5a785df",
-      "reading_time_minutes": 5
+      "url": "https://nos.nl/artikel/2629990-recordbedrag-opgehaald-met-city-swim-door-amsterdamse-grachten",
+      "reading_time_minutes": 1
     },
     {
-      "title": "Kromowidjojo krijgt nieuwe internationale rol om positie van zwemmers te versterken",
-      "teaser": "Ranomi Kromowidjojo wordt bij World Aquatics de eerste directeur atleetbetrokkenheid. Ze wil onder meer werken aan betere financiële steun voor sporters en meer begeleiding bij de overgang naar het leven na hun topsportcarrière.",
+      "title": "Nederlandse grimeur Arjen Tuiten wint Emmy voor The Pitt",
+      "teaser": "Arjen Tuiten won samen met vijf andere make-upspecialisten een Emmy voor hun werk aan de ziekenhuisserie The Pitt. De Nederlander begon zijn carrière bij onder meer Baantjer en werkt inmiddels al decennia in Hollywood.",
+      "source": "NOS",
+      "category": "Cultuur & media",
+      "url": "https://nos.nl/artikel/2629995-grimeur-tuiten-wint-emmy-met-ziekenhuisserie-the-pitt"
+    },
+    {
+      "title": "Vrijwilligers plukken zo’n 400.000 dahlia’s voor één corsowagen",
+      "teaser": "Bij buurtschap Raamberg in Rijsbergen plukken vrijwilligers wekenlang met de hand de bloemen voor het Zundertse corso. Op het veld staan ruim 21.000 knollen en voor één wagen hopen ze ongeveer duizend kisten met elk vierhonderd dahlia’s te vullen.",
+      "source": "Omroep Brabant",
+      "category": "Mens & samenleving",
+      "url": "https://www.omroepbrabant.nl/nieuws/6026115/vrijwilligers-plukken-ongeveer-400000-dahlias-voor-een-corsowagen"
+    },
+    {
+      "title": "Regen komt op tijd: Terschellinger cranberryoogst lijkt gered",
+      "teaser": "Na maanden van droogte viel de regen net op tijd om veel schade te voorkomen. De eerste twaalf ton is inmiddels binnen en Terschellinger Cranberries hoopt dit jaar rond de 150 ton te oogsten.",
+      "source": "Waddenomroep",
+      "category": "Natuur & landbouw",
+      "url": "https://waddenomroep.nl/terschelling/cranberryoogst-lijkt-ondanks-droogte-goed-uit-te-pakken-het-is-net-op-tijd-gaan-regenen/"
+    },
+    {
+      "title": "Na 21 jaar begint herstel van monumentale Haarlemse stolpboerderij",
+      "teaser": "Noord-Akendam, de laatste overgebleven stolpboerderij van het Schotense type, wordt eindelijk gerestaureerd. Na jarenlange inzet van buurtbewoners moet het monument uiteindelijk ook een maatschappelijke functie krijgen.",
+      "source": "NH Nieuws",
+      "category": "Cultuur & erfgoed",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNM0VyVmdCb2xTZ1BPRHZvV05wNVRZY0Y1YUxVaGYxWmF3OWJyMEYweW1IWFhaYVozZGxWS0x4eW14SFowWGRpdFN0M08weWlPUzZrZng2MXhjX3RDOVY1c3ZCVjZNclI5REhESlVDblVQWW1ScVlhUkJUdHFYdHlxOGxuOGkzMF8zc3AtSW1qVERYa2hQWXJDVUh6RzRJTFM4UjdmUld6eEYtLTkxOGU5TEhvTQ?oc=5"
+    },
+    {
+      "title": "Doelman Ronald Koeman junior schrijft Eredivisiegeschiedenis met twee goals",
+      "teaser": "De keeper van Telstar benutte tegen Cambuur twee strafschoppen en werd daarmee de eerste doelman die twee keer scoorde in één Eredivisiewedstrijd. Zijn bijzondere prestatie kreeg ook buiten Nederland veel aandacht.",
       "source": "NOS",
       "category": "Sport",
-      "url": "https://nos.nl/artikel/2629518-kromowidjojo-aan-de-slag-bij-internationale-zwembond-wil-meer-geld-voor-sporters",
+      "url": "https://nos.nl/artikel/2629998-goals-koeman-junior-gaan-de-wereld-over-ook-recordhouder-van-zoghel-geniet",
       "reading_time_minutes": 2
     }
   ],
   "int": [
     {
-      "title": "Varkensnier functioneert recordlang als brug naar menselijke transplantatie",
-      "teaser": "Een genetisch aangepaste varkensnier werkte 271 dagen in het lichaam van een Amerikaanse man met nierfalen. De transplantatie hield hem negen maanden van dialyse af totdat een menselijke donornier beschikbaar kwam.",
-      "source": "BBC",
+      "title": "Betere data helpt Nigeria kinderen te bereiken die poliovaccinatie misten",
+      "teaser": "62 data- en informatiemedewerkers uit heel Nigeria krijgen training om gemiste kinderen sneller te herkennen en vaccinatieteams gerichter naar gemeenschappen te sturen.",
+      "source": "WHO",
       "category": "Gezondheid",
-      "url": "https://www.bbc.co.uk/news/articles/c305qn2jeggo?at_medium=RSS&at_campaign=rss",
-      "reading_time_minutes": 3
+      "url": "https://www.afro.who.int/countries/nigeria---cloned/news/stronger-data-helps-nigeria-reach-children-missed-polio-vaccination"
     },
     {
-      "title": "Injecteerbaar biomateriaal helpt hersenherstel na beroerte in muizen",
-      "teaser": "Onderzoekers van Duke University ontwikkelden een poreus biomateriaal dat in muizen nieuwe bloedvaten, veranderingen in zenuwweefsel en herstel van beweging stimuleerde na een beroerte. De behandeling bevindt zich nog in de preklinische fase.",
-      "source": "ScienceDaily / Duke University",
-      "category": "Gezondheid",
-      "url": "https://www.sciencedaily.com/releases/2026/09/260902234512.htm"
-    },
-    {
-      "title": "Bestaand kankermedicijn verkleint virusreservoir in apenmodel voor hiv",
-      "teaser": "Onderzoekers gebruikten venetoclax als onderdeel van een behandeling om met SIV geïnfecteerde cellen bij apen terug te dringen. De studie levert een eerste proof-of-concept op; klinische studies met mensen met hiv zijn al gestart.",
-      "source": "Medical Xpress / Emory University",
-      "category": "Gezondheid",
-      "url": "https://medicalxpress.com/news/2026-09-cancer-medication-siv-reservoir-hiv.html",
-      "reading_time_minutes": 3
-    },
-    {
-      "title": "School in Oost-Sarajevo stapt over van kolen naar schonere verwarming",
-      "teaser": "Een middelbare school in Pale heeft een nieuwe pelletinstallatie in gebruik genomen die de oude kolen- en houtverwarming vervangt. De installatie verwarmt 3.500 vierkante meter en moet de lokale luchtvervuiling verminderen.",
+      "title": "Tien hectare kwetsbaar veengebied in Servië hersteld en beschermd",
+      "teaser": "In Nationaal Park Tara zijn onder meer nevelvangers geplaatst, veenmos opnieuw ingebracht en nieuwe monitoring opgezet. De maatregelen moeten een bijzonder veengebied helpen herstellen en beter bestand maken tegen klimaatverandering.",
       "source": "UNDP",
       "category": "Natuur & klimaat",
-      "url": "https://www.undp.org/bosnia-herzegovina/news/cleaner-energy-solutions-advance-green-transition-east-sarajevo"
+      "url": "https://www.undp.org/serbia/news/valuable-peatland-tara-restored"
     },
     {
-      "title": "67 jonge Angolezen ronden intensieve machine-learningopleiding af",
-      "teaser": "Uit 838 aanmeldingen werden deelnemers geselecteerd voor een opleiding in onder meer Python, data-analyse en machine learning. De 67 afgestudeerden ontwikkelden samen dertien AI-oplossingen voor duurzamer toerisme in Angola.",
-      "source": "UNDP",
-      "category": "Onderwijs & ontwikkeling",
-      "url": "https://www.undp.org/policy-centre/istanbul/press-releases/frontier-tech-leaders-programme-celebrates-first-machine-learning-bootcamp-graduation-and-ai-sustainable"
+      "title": "Inheemse kennis helpt verband tussen mangroven en koraalriffen zichtbaar maken",
+      "teaser": "Australische onderzoekers werkten samen met Bardi Jawi-rangers en ouderen. De studie laat zien hoe cultureel belangrijke vissoorten tussen mangroven en riffen bewegen en onderstreept waarom beide ecosystemen samen beschermd moeten worden.",
+      "source": "Mongabay",
+      "category": "Natuur & wetenschap",
+      "url": "https://news.mongabay.com/2026/09/indigenous-knowledge-helps-reveal-the-ties-between-reefs-and-mangroves/"
     },
     {
-      "title": "ESA bewijst gerichte satellietterugkeer en verzamelt unieke meetgegevens",
-      "teaser": "Na vier gerichte terugkeren noemt ESA de methode een bewezen manier om satellieten veilig aan het einde van hun levensduur op te ruimen. Wetenschappers konden de laatste twee terugkeren met vrijwel alle instrumenten vanuit een vliegtuig volgen.",
-      "source": "European Space Agency",
-      "category": "Wetenschap",
-      "url": "https://www.esa.int/Space_Safety/Space_Debris/Cluster_s_encore_for_reentry_science_a_success"
+      "title": "Eerste genoomkaart biedt nieuwe kansen voor bedreigd Filipijns hert",
+      "teaser": "Onderzoekers brachten voor het eerst het genoom van het Visayawrattenhert in kaart. De gegevens kunnen helpen om fokprogramma’s slimmer te organiseren en de genetische diversiteit van de sterk bedreigde soort te vergroten.",
+      "source": "Mongabay",
+      "category": "Dieren & natuur",
+      "url": "https://news.mongabay.com/short-article/2026/09/genetic-road-map-offers-hope-for-threatened-visayan-spotted-deer/"
+    },
+    {
+      "title": "Scholier onderzoekt kokosvezelschimmels tegen microplastics en zonnebrandstoffen",
+      "teaser": "De Hawaiiaanse scholier Vera Wang bouwde een filter met kokosvezels en onderzocht schimmels die vervuilende stoffen kunnen afbreken. Haar project won meerdere prijzen en plaatste haar voor een internationale wetenschapsbeurs.",
+      "source": "Good News Network",
+      "category": "Wetenschap & innovatie",
+      "url": "https://www.goodnewsnetwork.org/teen-discovers-coconut-fungi-can-filter-plastic-and-sunscreen-from-sea/"
+    },
+    {
+      "title": "Orang-oetanmoeder en jong veilig geëvacueerd voor bosbranden",
+      "teaser": "Natuurbeschermers in West-Kalimantan hebben een orang-oetanmoeder en haar jong uit een gebied gehaald waar bosbranden hun leefgebied bedreigden. De dieren worden in een opvangcentrum gecontroleerd op de gevolgen van rook.",
+      "source": "Phys.org",
+      "category": "Dieren & natuur",
+      "url": "https://phys.org/news/2026-09-indonesia-orangutan-mother-baby-wildfire.html",
+      "reading_time_minutes": 2
     }
   ],
   "headlines": [
     {
-      "title": "PBL: stikstofplannen zetten grote stap, maar halen Nederland niet van het slot",
-      "teaser": "Volgens het Planbureau voor de Leefomgeving leveren de kabinetsplannen veel natuurwinst en een forse daling van de stikstofuitstoot op. Toch verdwijnen de problemen met vergunningverlening er niet in één keer door.",
-      "source": "NOS",
-      "category": "Binnenland",
-      "url": "https://nos.nl/artikel/2629576-stikstofplannen-halen-land-niet-van-het-slot-wel-grote-stap-vooruit"
-    },
-    {
-      "title": "Coronacommissie onderzoekt ruimte voor tegenspraak binnen kabinet-Rutte",
-      "teaser": "Bij de parlementaire enquête naar het coronabeleid kwamen appberichten naar buiten die spanningen binnen het kabinet laten zien. De commissie onderzoekt onder meer hoeveel ruimte er tijdens de crisis was voor afwijkende perspectieven.",
-      "source": "NOS",
-      "category": "Politiek",
-      "url": "https://nos.nl/artikel/2629564-appjes-uit-coronakabinet-rutte-stevige-taal-over-collega-s-uit-frustratie"
-    },
-    {
-      "title": "Argentinië kondigt sancties aan tegen oliebedrijven rond Falklands",
-      "teaser": "President Javier Milei zegt bedrijven te willen aanpakken die olie winnen op en rond de door het Verenigd Koninkrijk bestuurde Falklandeilanden. Welke bedrijven worden geraakt en hoe de sancties eruitzien, is nog niet bekend.",
+      "title": "AfD boekt grote zege in Saksen-Anhalt, maar mist absolute meerderheid",
+      "teaser": "De AfD komt volgens de voorlopige uitslag uit op bijna 44 procent en 39 van de 83 zetels. De partij kan niet alleen regeren; de rol van het populistische BSW kan beslissend worden voor een meerderheid.",
       "source": "NOS",
       "category": "Buitenland",
-      "url": "https://nos.nl/artikel/2629585-argentijnse-president-milei-gaat-oliebedrijven-bij-falklands-aanpakken"
+      "url": "https://nos.nl/artikel/2629993-geen-absolute-meerderheid-maar-afd-zege-laat-duitse-politiek-op-grondvesten-trillen"
+    },
+    {
+      "title": "Scheepvaart door Straat van Hormuz valt opnieuw bijna stil",
+      "teaser": "Na nieuwe aanvallen over en weer tussen de Verenigde Staten en Iran passeerden dit weekend nog maar weinig transportschepen de zeestraat. Het tiendaagse gemiddelde is volgens scheepvaartanalisten het laagste sinds mei.",
+      "source": "NOS",
+      "category": "Buitenland",
+      "url": "https://nos.nl/artikel/2629994-scheepvaartverkeer-hormuz-valt-weer-bijna-stil-na-hernieuwde-aanvallen-over-en-weer"
+    },
+    {
+      "title": "Amerikaanse gezanten spreken na Moskou ook met Zelensky",
+      "teaser": "Steve Witkoff en Jared Kushner noemen hun gesprek in Kyiv bemoedigend, nadat zij eerder met Poetin spraken. Concrete afspraken over een mogelijke stap richting vrede tussen Rusland en Oekraïne zijn nog niet bekendgemaakt.",
+      "source": "NOS",
+      "category": "Buitenland",
+      "url": "https://nos.nl/artikel/2629926-na-bezoek-aan-poetin-spraken-amerikaanse-gezanten-met-zelensky-zeer-bemoedigend"
     }
   ]
 }
