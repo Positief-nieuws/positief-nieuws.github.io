@@ -326,7 +326,7 @@ def build_body(data, nl, international, headlines):
            style="width:100%;margin-top:22px;border-collapse:collapse;border-top:1px solid rgba(23,63,49,.22);">
       <tr>
         <td style="padding-top:13px;font:11px Arial,Helvetica,sans-serif;color:{MUTED};">
-          maandag · woensdag · vrijdag
+          maandag · donderdag
         </td>
         <td align="right" style="padding-top:13px;font:11px Arial,Helvetica,sans-serif;color:{MUTED};white-space:nowrap;">
           15 verhalen &nbsp;&nbsp; ongeveer 6 minuten
