@@ -802,10 +802,417 @@
       .article-arrow { top: 20px; width: 25px; height: 25px; }
       .home-archive-title { font-size: .82rem; }
     }
+
+    /* ---------------------------------------------------------
+       Speelser redesign: subtiele 'friemeltjes' zonder de
+       rustige redactionele basis van Positief nieuws te verliezen.
+       --------------------------------------------------------- */
+
+    .hero,
+    .news-section,
+    .newsletter,
+    .home-archive,
+    .seo-intro {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .hero > .content-shell,
+    .news-section > .content-shell,
+    .newsletter > *,
+    .home-archive > *,
+    .seo-intro > .content-shell {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Zonsopkomst rechtsboven in de hero */
+    .hero::before {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      top: 44px;
+      right: max(22px, calc((100vw - 1030px) / 2));
+      width: 132px;
+      height: 66px;
+      border-radius: 132px 132px 0 0;
+      background: rgba(214, 161, 58, .17);
+      border-bottom: 2px solid rgba(214, 161, 58, .58);
+      transform: rotate(-2deg);
+      pointer-events: none;
+    }
+
+    /* Kleine zonnestralen / handgetekende streepjes */
+    .hero::after {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      top: 139px;
+      right: max(88px, calc((100vw - 970px) / 2));
+      width: 42px;
+      height: 4px;
+      border-radius: 999px;
+      background: rgba(214, 161, 58, .72);
+      box-shadow:
+        18px 16px 0 -1px rgba(214, 161, 58, .56),
+        -12px 20px 0 -1px rgba(214, 161, 58, .48);
+      transform: rotate(-14deg);
+      pointer-events: none;
+    }
+
+    /* Een iets vrolijker ritme onder de hero */
+    .hero-meta {
+      position: relative;
+    }
+
+    .hero-meta::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -1px;
+      width: 56px;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 999px;
+      transform: translateY(-50%);
+    }
+
+    /* Nederland: zachte gouden cirkel aan de rand */
+    .nl-block::after {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      top: 74px;
+      right: -82px;
+      width: 176px;
+      height: 176px;
+      border-radius: 50%;
+      background: rgba(214, 161, 58, .09);
+      border: 1px solid rgba(214, 161, 58, .16);
+      pointer-events: none;
+    }
+
+    /* Klein setje streepjes links, bewust onregelmatig */
+    .nl-block::before {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      left: max(18px, calc((100vw - 1010px) / 2));
+      bottom: 64px;
+      width: 34px;
+      height: 4px;
+      border-radius: 999px;
+      background: rgba(214, 161, 58, .36);
+      box-shadow:
+        11px 13px 0 -1px rgba(214, 161, 58, .26),
+        -4px 25px 0 -1px rgba(214, 161, 58, .21);
+      transform: rotate(17deg);
+      pointer-events: none;
+    }
+
+    /* Wereld: groene boog als tegenhanger */
+    .world-block::before {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      left: -76px;
+      top: 92px;
+      width: 148px;
+      height: 148px;
+      border: 2px solid rgba(31, 91, 69, .11);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .world-block::after {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      right: max(22px, calc((100vw - 1010px) / 2));
+      bottom: 76px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: rgba(31, 91, 69, .28);
+      box-shadow:
+        21px -10px 0 rgba(214, 161, 58, .28),
+        36px 9px 0 rgba(31, 91, 69, .16),
+        12px 22px 0 rgba(214, 161, 58, .18);
+      pointer-events: none;
+    }
+
+    /* Briefing: stippenveld, subtiel omdat dit blok serieuzer is */
+    .briefing-block::after {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      top: 48px;
+      right: max(12px, calc((100vw - 1030px) / 2));
+      width: 82px;
+      height: 82px;
+      opacity: .28;
+      background-image: radial-gradient(circle, rgba(23,63,49,.42) 1.3px, transparent 1.6px);
+      background-size: 15px 15px;
+      transform: rotate(7deg);
+      pointer-events: none;
+    }
+
+    /* Kleine accentlijn bij de sectiekoppen */
+    .section-heading {
+      position: relative;
+    }
+
+    .section-heading::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 42px;
+      height: 2px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    /* Eindpunt van de editie krijgt net iets meer 'zon' */
+    .edition-end {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .edition-end::before {
+      content: "";
+      position: absolute;
+      top: 56px;
+      left: 50%;
+      width: 116px;
+      height: 116px;
+      margin-left: -58px;
+      border-radius: 50%;
+      border: 1px solid rgba(214, 161, 58, .13);
+      box-shadow:
+        0 0 0 22px rgba(214, 161, 58, .035),
+        0 0 0 44px rgba(214, 161, 58, .022);
+      pointer-events: none;
+    }
+
+    .edition-end > .content-shell {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Nieuwsbrief: half zonnetje dat van rechts binnenkomt */
+    .newsletter::after {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      right: -34px;
+      bottom: -72px;
+      width: 178px;
+      height: 178px;
+      border-radius: 50%;
+      background: rgba(214, 161, 58, .18);
+      border: 1px solid rgba(255,255,255,.12);
+      pointer-events: none;
+    }
+
+    .newsletter::before {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      right: 78px;
+      top: 30px;
+      width: 34px;
+      height: 3px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.25);
+      box-shadow:
+        14px 12px 0 -1px rgba(255,255,255,.16),
+        -7px 18px 0 -1px rgba(214,161,58,.46);
+      transform: rotate(-19deg);
+      pointer-events: none;
+    }
+
+    /* Archief: één klein speels accent, verder rustig */
+    .home-archive::after {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      right: max(4px, calc((100vw - 1010px) / 2));
+      top: 35px;
+      width: 44px;
+      height: 44px;
+      border: 1px solid rgba(214, 161, 58, .25);
+      border-radius: 50%;
+      clip-path: inset(0 0 48% 0);
+      transform: rotate(9deg);
+      pointer-events: none;
+    }
+
+    @media (max-width: 760px) {
+      .hero::before {
+        top: 39px;
+        right: -34px;
+        width: 102px;
+        height: 51px;
+      }
+
+      .hero::after {
+        top: 111px;
+        right: 20px;
+        opacity: .72;
+      }
+
+      .nl-block::after {
+        width: 116px;
+        height: 116px;
+        right: -72px;
+        top: 54px;
+      }
+
+      .nl-block::before,
+      .world-block::after,
+      .briefing-block::after {
+        opacity: .55;
+      }
+
+      .world-block::before {
+        width: 104px;
+        height: 104px;
+        left: -74px;
+      }
+
+      .newsletter::after {
+        width: 132px;
+        height: 132px;
+        right: -55px;
+        bottom: -55px;
+      }
+
+      .newsletter::before,
+      .home-archive::after {
+        display: none;
+      }
+    }
+
+
+    /* V2: een paar procent vrolijker */
+    .hero {
+      background:
+        radial-gradient(circle at 87% 24%, rgba(214,161,58,.08), transparent 22%),
+        linear-gradient(180deg, rgba(255,255,255,.16), rgba(255,255,255,0));
+    }
+
+    .hero-title-dot {
+      display: inline-block;
+      text-shadow: 0 0 0 rgba(214,161,58,0);
+      transform: translateY(-1px);
+    }
+
+    .section-kicker {
+      letter-spacing: .095em;
+    }
+
+    .article-row:nth-child(3n+1)::before {
+      content: "";
+      position: absolute;
+      left: -18px;
+      top: 30px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: rgba(214,161,58,.28);
+    }
+
+    .article-row:nth-child(3n+2)::before {
+      content: "";
+      position: absolute;
+      left: -22px;
+      top: 31px;
+      width: 12px;
+      height: 2px;
+      border-radius: 999px;
+      background: rgba(31,91,69,.18);
+      transform: rotate(-18deg);
+    }
+
+    .nl-block {
+      background:
+        radial-gradient(circle at 92% 18%, rgba(214,161,58,.055), transparent 18%),
+        #f8f3e8;
+    }
+
+    .world-block {
+      background:
+        radial-gradient(circle at 8% 78%, rgba(31,91,69,.045), transparent 20%),
+        #eef3ed;
+    }
+
+    .briefing-block {
+      background:
+        radial-gradient(circle at 90% 22%, rgba(214,161,58,.045), transparent 18%),
+        #f3efe7;
+    }
+
+    .newsletter {
+      background:
+        radial-gradient(circle at 92% 30%, rgba(214,161,58,.16), transparent 34%),
+        var(--green);
+    }
+
+    .newsletter h2::after {
+      content: "";
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      margin-left: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      vertical-align: .18em;
+    }
+
+    .home-archive-heading::before {
+      content: "";
+      width: 18px;
+      height: 18px;
+      flex: 0 0 auto;
+      border: 2px solid rgba(214,161,58,.34);
+      border-radius: 50%;
+      clip-path: inset(0 0 50% 0);
+      transform: rotate(-8deg);
+      margin-right: -10px;
+    }
+
+    @media (max-width: 760px) {
+      .article-row:nth-child(3n+1)::before,
+      .article-row:nth-child(3n+2)::before {
+        display: none;
+      }
+
+      .hero {
+        background:
+          radial-gradient(circle at 104% 18%, rgba(214,161,58,.08), transparent 26%),
+          linear-gradient(180deg, rgba(255,255,255,.13), rgba(255,255,255,0));
+      }
+    }
+
   </style>
 
 </head>
 <body>
+
+  <script>
+    if (window.location.protocol === "file:") {
+      const nativeFetch = window.fetch.bind(window);
+      window.fetch = (input, init) => {
+        if (typeof input === "string" && input.startsWith("./")) {
+          input = "https://positief-nieuws.nl/" + input.slice(2);
+        }
+        return nativeFetch(input, init);
+      };
+    }
+  </script>
+
   <header class="site-header">
     <div class="header-shell header-row">
       <a class="brand" href="./" aria-label="Positief nieuws homepage">
