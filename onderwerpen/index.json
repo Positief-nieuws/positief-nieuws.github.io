@@ -1,0 +1,210 @@
+[
+  {
+    "label": "Archeologie & geschiedenis",
+    "slug": "archeologie-en-geschiedenis",
+    "url": "/archeologie-en-geschiedenis/",
+    "nl_count": 0,
+    "int_count": 1,
+    "latest": "2026-09-10"
+  },
+  {
+    "label": "Cultuur & erfgoed",
+    "slug": "cultuur-en-erfgoed",
+    "url": "/cultuur-en-erfgoed/",
+    "nl_count": 1,
+    "int_count": 0,
+    "latest": "2026-09-07"
+  },
+  {
+    "label": "Cultuur & media",
+    "slug": "cultuur-en-media",
+    "url": "/cultuur-en-media/",
+    "nl_count": 4,
+    "int_count": 0,
+    "latest": "2026-09-10"
+  },
+  {
+    "label": "Dieren",
+    "slug": "dieren",
+    "url": "/dieren/",
+    "nl_count": 1,
+    "int_count": 2,
+    "latest": "2026-08-28"
+  },
+  {
+    "label": "Dieren & natuur",
+    "slug": "dieren-en-natuur",
+    "url": "/dieren-en-natuur/",
+    "nl_count": 0,
+    "int_count": 2,
+    "latest": "2026-09-07"
+  },
+  {
+    "label": "Economie & geld",
+    "slug": "economie-en-geld",
+    "url": "/economie-en-geld/",
+    "nl_count": 1,
+    "int_count": 1,
+    "latest": "2026-08-27"
+  },
+  {
+    "label": "Economie & onderwijs",
+    "slug": "economie-en-onderwijs",
+    "url": "/economie-en-onderwijs/",
+    "nl_count": 1,
+    "int_count": 0,
+    "latest": "2026-08-31"
+  },
+  {
+    "label": "Energie & innovatie",
+    "slug": "energie-en-innovatie",
+    "url": "/energie-en-innovatie/",
+    "nl_count": 1,
+    "int_count": 0,
+    "latest": "2026-09-10"
+  },
+  {
+    "label": "Geschiedenis & mens",
+    "slug": "geschiedenis-en-mens",
+    "url": "/geschiedenis-en-mens/",
+    "nl_count": 1,
+    "int_count": 0,
+    "latest": "2026-08-27"
+  },
+  {
+    "label": "Gewoon leuk",
+    "slug": "gewoon-leuk",
+    "url": "/gewoon-leuk/",
+    "nl_count": 2,
+    "int_count": 0,
+    "latest": "2026-08-28"
+  },
+  {
+    "label": "Gezondheid",
+    "slug": "gezondheid",
+    "url": "/gezondheid/",
+    "nl_count": 5,
+    "int_count": 11,
+    "latest": "2026-09-10"
+  },
+  {
+    "label": "Gezondheid & basisvoorzieningen",
+    "slug": "gezondheid-en-basisvoorzieningen",
+    "url": "/gezondheid-en-basisvoorzieningen/",
+    "nl_count": 0,
+    "int_count": 1,
+    "latest": "2026-09-10"
+  },
+  {
+    "label": "Mens & innovatie",
+    "slug": "mens-en-innovatie",
+    "url": "/mens-en-innovatie/",
+    "nl_count": 1,
+    "int_count": 0,
+    "latest": "2026-09-10"
+  },
+  {
+    "label": "Mens & samenleving",
+    "slug": "mens-en-samenleving",
+    "url": "/mens-en-samenleving/",
+    "nl_count": 8,
+    "int_count": 4,
+    "latest": "2026-09-10"
+  },
+  {
+    "label": "Natuur & klimaat",
+    "slug": "natuur-en-klimaat",
+    "url": "/natuur-en-klimaat/",
+    "nl_count": 7,
+    "int_count": 8,
+    "latest": "2026-09-07"
+  },
+  {
+    "label": "Natuur & landbouw",
+    "slug": "natuur-en-landbouw",
+    "url": "/natuur-en-landbouw/",
+    "nl_count": 1,
+    "int_count": 0,
+    "latest": "2026-09-07"
+  },
+  {
+    "label": "Natuur & samenleving",
+    "slug": "natuur-en-samenleving",
+    "url": "/natuur-en-samenleving/",
+    "nl_count": 1,
+    "int_count": 0,
+    "latest": "2026-09-10"
+  },
+  {
+    "label": "Natuur & wetenschap",
+    "slug": "natuur-en-wetenschap",
+    "url": "/natuur-en-wetenschap/",
+    "nl_count": 0,
+    "int_count": 2,
+    "latest": "2026-09-10"
+  },
+  {
+    "label": "Onderwijs & ontwikkeling",
+    "slug": "onderwijs-en-ontwikkeling",
+    "url": "/onderwijs-en-ontwikkeling/",
+    "nl_count": 1,
+    "int_count": 2,
+    "latest": "2026-09-04"
+  },
+  {
+    "label": "Sport",
+    "slug": "sport",
+    "url": "/sport/",
+    "nl_count": 5,
+    "int_count": 0,
+    "latest": "2026-09-07"
+  },
+  {
+    "label": "Technologie & innovatie",
+    "slug": "technologie-en-innovatie",
+    "url": "/technologie-en-innovatie/",
+    "nl_count": 4,
+    "int_count": 4,
+    "latest": "2026-09-02"
+  },
+  {
+    "label": "Voeding & leefstijl",
+    "slug": "voeding-en-leefstijl",
+    "url": "/voeding-en-leefstijl/",
+    "nl_count": 0,
+    "int_count": 2,
+    "latest": "2026-08-31"
+  },
+  {
+    "label": "Wetenschap",
+    "slug": "wetenschap",
+    "url": "/wetenschap/",
+    "nl_count": 2,
+    "int_count": 6,
+    "latest": "2026-09-04"
+  },
+  {
+    "label": "Wetenschap & duurzaamheid",
+    "slug": "wetenschap-en-duurzaamheid",
+    "url": "/wetenschap-en-duurzaamheid/",
+    "nl_count": 1,
+    "int_count": 0,
+    "latest": "2026-09-10"
+  },
+  {
+    "label": "Wetenschap & innovatie",
+    "slug": "wetenschap-en-innovatie",
+    "url": "/wetenschap-en-innovatie/",
+    "nl_count": 0,
+    "int_count": 1,
+    "latest": "2026-09-07"
+  },
+  {
+    "label": "Wetenschap & ruimtevaart",
+    "slug": "wetenschap-en-ruimtevaart",
+    "url": "/wetenschap-en-ruimtevaart/",
+    "nl_count": 0,
+    "int_count": 1,
+    "latest": "2026-09-10"
+  }
+]
