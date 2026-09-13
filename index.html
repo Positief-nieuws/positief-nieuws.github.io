@@ -120,6 +120,49 @@
       flex: 0 0 auto;
     }
 
+    .brand span {
+      white-space: nowrap;
+    }
+
+    .mobile-menu-toggle {
+      display: none;
+      width: 42px;
+      height: 42px;
+      padding: 0;
+      border: 1px solid rgba(23, 63, 49, 0.16);
+      border-radius: 50%;
+      background: rgba(255,255,255,0.3);
+      color: var(--green-dark);
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 4px;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .menu-line {
+      display: block;
+      width: 17px;
+      height: 1.5px;
+      border-radius: 999px;
+      background: currentColor;
+      transition: transform 160ms ease, opacity 160ms ease;
+      transform-origin: center;
+    }
+
+    .site-header.menu-open .menu-line:nth-child(1) {
+      transform: translateY(5.5px) rotate(45deg);
+    }
+
+    .site-header.menu-open .menu-line:nth-child(2) {
+      opacity: 0;
+    }
+
+    .site-header.menu-open .menu-line:nth-child(3) {
+      transform: translateY(-5.5px) rotate(-45deg);
+    }
+
     .app-nav-inner {
       display: flex;
       align-items: center;
@@ -768,17 +811,109 @@
       .content-shell,
       .wide-shell { width: min(calc(100% - 30px), 100%); }
 
-      .site-header { padding: 18px 0 10px; }
-      .header-row { align-items: flex-start; }
-      .app-nav-inner { gap: 12px; }
-      .app-nav a { font-size: .66rem; }
-      .app-nav #nav-about { display: none; }
-      .app-nav .header-cta { min-height: 31px; padding: 0 11px; }
+      .site-header {
+        position: relative;
+        z-index: 30;
+        padding: 15px 0 9px;
+      }
 
-      .hero { padding-top: 54px; }
+      .header-row {
+        position: relative;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .brand {
+        gap: 10px;
+        font-size: .98rem;
+        line-height: 1;
+        flex: 0 1 auto;
+        min-width: 0;
+      }
+
+      .brand-sun {
+        width: 31px;
+        height: 31px;
+      }
+
+      .mobile-menu-toggle {
+        display: inline-flex;
+        margin-left: auto;
+        flex: 0 0 auto;
+      }
+
+      .app-nav {
+        display: none;
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 0;
+        right: 0;
+        z-index: 40;
+        padding: 7px;
+        border: 1px solid rgba(23, 63, 49, 0.14);
+        border-radius: 18px;
+        background: rgba(247,245,236,.985);
+        box-shadow: 0 18px 44px rgba(23, 63, 49, 0.12);
+        backdrop-filter: blur(10px);
+      }
+
+      .site-header.menu-open .app-nav {
+        display: block;
+      }
+
+      .app-nav-inner {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+
+      .app-nav a {
+        display: flex;
+        align-items: center;
+        min-height: 43px;
+        padding: 0 12px;
+        border-radius: 12px;
+        font-size: .86rem;
+      }
+
+      .app-nav a:hover,
+      .app-nav a.is-active {
+        background: rgba(214, 161, 58, 0.08);
+      }
+
+      .app-nav #nav-about {
+        display: flex;
+      }
+
+      .app-nav .header-cta {
+        justify-content: flex-start;
+        min-height: 43px;
+        margin-top: 4px;
+        padding: 0 12px;
+        border-radius: 12px;
+        background: rgba(214, 161, 58, 0.08);
+      }
+
+      .hero { padding-top: 36px; }
       .hero-title { font-size: clamp(2.75rem, 14vw, 4rem); }
       .hero-copy { font-size: 1rem; }
-      .hero-meta { align-items: flex-start; flex-direction: column; gap: 7px; }
+
+      .hero-meta {
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 9px;
+        margin-top: 17px;
+        padding-top: 11px;
+        font-size: .62rem;
+        line-height: 1.2;
+        white-space: nowrap;
+      }
+
+      .hero-meta-right {
+        gap: 9px;
+      }
 
       .news-section { padding: 56px 0 54px; }
       .article-row { padding-right: 40px; }
@@ -804,11 +939,20 @@
     }
 
     @media (max-width: 480px) {
-      .brand { font-size: .7rem; }
-      .app-nav-inner { gap: 8px; }
-      .app-nav a { font-size: .62rem; }
-      .hero { padding-top: 46px; }
-      .hero-meta-right { gap: 10px; }
+      .brand { font-size: .92rem; }
+      .brand-sun { width: 29px; height: 29px; }
+
+      .hero { padding-top: 31px; }
+
+      .hero-meta {
+        gap: 7px;
+        font-size: .58rem;
+      }
+
+      .hero-meta-right {
+        gap: 7px;
+      }
+
       .article-row { padding-top: 20px; padding-bottom: 20px; }
       .article-arrow { top: 20px; width: 25px; height: 25px; }
       .home-archive-title { font-size: .82rem; }
@@ -1231,10 +1375,22 @@
           <circle cx="12" cy="12" r="4.2" fill="currentColor"></circle>
           <path d="M12 1.8V5.1M12 18.9V22.2M22.2 12H18.9M5.1 12H1.8M19.2 4.8L16.8 7.2M7.2 16.8L4.8 19.2M19.2 19.2L16.8 16.8M7.2 7.2L4.8 4.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
         </svg>
-        <span>Positief nieuws.</span>
+        <span>Positief nieuws</span>
       </a>
 
-      <nav class="app-nav" aria-label="Hoofdnavigatie">
+      <button
+        class="mobile-menu-toggle"
+        type="button"
+        aria-label="Menu openen"
+        aria-expanded="false"
+        aria-controls="mobile-navigation"
+      >
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+      </button>
+
+      <nav class="app-nav" id="mobile-navigation" aria-label="Hoofdnavigatie">
         <div class="app-nav-inner">
           <a id="nav-today" href="./">Vandaag</a>
           <a id="nav-archive" href="/edities/">Archief</a>
@@ -1245,6 +1401,54 @@
       </nav>
     </div>
   </header>
+
+  <script>
+    (function () {
+      const header = document.querySelector(".site-header");
+      const toggle = document.querySelector(".mobile-menu-toggle");
+      const nav = document.querySelector(".app-nav");
+
+      if (!header || !toggle || !nav) return;
+
+      function setMenu(open) {
+        header.classList.toggle("menu-open", open);
+        toggle.setAttribute("aria-expanded", open ? "true" : "false");
+        toggle.setAttribute("aria-label", open ? "Menu sluiten" : "Menu openen");
+      }
+
+      toggle.addEventListener("click", function () {
+        setMenu(!header.classList.contains("menu-open"));
+      });
+
+      nav.addEventListener("click", function (event) {
+        if (event.target.closest("a")) {
+          setMenu(false);
+        }
+      });
+
+      document.addEventListener("click", function (event) {
+        if (
+          header.classList.contains("menu-open") &&
+          !header.contains(event.target)
+        ) {
+          setMenu(false);
+        }
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          setMenu(false);
+          toggle.focus();
+        }
+      });
+
+      window.addEventListener("resize", function () {
+        if (window.innerWidth > 760) {
+          setMenu(false);
+        }
+      });
+    })();
+  </script>
 
   <div id="today-view" class="app-view">
     <div id="archive-banner" class="content-shell archive-banner">
