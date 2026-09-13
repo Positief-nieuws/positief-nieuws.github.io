@@ -21,6 +21,53 @@ WEEKDAYS = ["maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag"
 MONTHS = ["januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus", "september", "oktober", "november", "december"]
 
 
+CATEGORY_ORDER = [
+    "Cultuur",
+    "Economie",
+    "Energie & innovatie",
+    "Gezondheid",
+    "Mens",
+    "Natuur & klimaat",
+    "Wetenschap",
+    "Sport",
+]
+
+# Historische categorieën uit eerdere edities worden bij het bouwen samengevoegd
+# naar acht vaste hoofdcategorieën. Bekende oude labels blijven ondersteund zodat
+# het bestaande archief en oudere links netjes blijven werken.
+CATEGORY_ALIASES = {
+    "Archeologie & geschiedenis": "Cultuur",
+    "Cultuur & erfgoed": "Cultuur",
+    "Cultuur & media": "Cultuur",
+    "Geschiedenis & mens": "Cultuur",
+    "Economie & geld": "Economie",
+    "Economie & onderwijs": "Economie",
+    "Energie & innovatie": "Energie & innovatie",
+    "Gezondheid": "Gezondheid",
+    "Gezondheid & basisvoorzieningen": "Gezondheid",
+    "Voeding & leefstijl": "Gezondheid",
+    "Gewoon leuk": "Mens",
+    "Mens & innovatie": "Mens",
+    "Mens & samenleving": "Mens",
+    "Onderwijs & ontwikkeling": "Mens",
+    "Dieren": "Natuur & klimaat",
+    "Dieren & natuur": "Natuur & klimaat",
+    "Natuur & klimaat": "Natuur & klimaat",
+    "Natuur & landbouw": "Natuur & klimaat",
+    "Natuur & samenleving": "Natuur & klimaat",
+    "Natuur & wetenschap": "Natuur & klimaat",
+    "Technologie & innovatie": "Wetenschap",
+    "Wetenschap": "Wetenschap",
+    "Wetenschap & duurzaamheid": "Wetenschap",
+    "Wetenschap & innovatie": "Wetenschap",
+    "Wetenschap & ruimtevaart": "Wetenschap",
+    "Sport": "Sport",
+}
+
+for _category in CATEGORY_ORDER:
+    CATEGORY_ALIASES.setdefault(_category, _category)
+
+
 def esc(value):
     return html.escape(str(value or ""), quote=True)
 
@@ -77,40 +124,52 @@ def category_label(item):
     return str(item.get("category") or item.get("categorie") or "").strip()
 
 
+
+def canonical_category(value):
+    label = str(value or "").strip()
+    if not label:
+        return ""
+    return CATEGORY_ALIASES.get(label, "")
+
+
 def story_count(value):
     return f"{value} verhaal" if value == 1 else f"{value} verhalen"
 
 
 def validate_positive_articles(data, source_name="nieuws.json"):
     errors = []
-    collisions = {}
+    legacy_labels = set()
+
     for section in ("nl", "int"):
         section_items = items(data, section)
         if not section_items:
             errors.append(f"{source_name}: sectie '{section}' ontbreekt of is leeg.")
             continue
+
         for idx, item in enumerate(section_items, start=1):
             title = str(item.get("title") or item.get("headline") or f"artikel {idx}")
-            label = category_label(item)
-            if not label:
+            raw_label = category_label(item)
+            if not raw_label:
+                errors.append(f"{source_name}: {section}[{idx}] '{title}' heeft geen category.")
+                continue
+
+            canonical = canonical_category(raw_label)
+            if not canonical:
+                allowed = ", ".join(CATEGORY_ORDER)
                 errors.append(
-                    f"{source_name}: {section}[{idx}] '{title}' heeft geen category."
+                    f"{source_name}: onbekende category {raw_label!r} bij '{title}'. "
+                    f"Gebruik een van deze acht categorieën: {allowed}."
                 )
                 continue
-            slug = slugify_category(label)
-            if not slug:
-                errors.append(
-                    f"{source_name}: category {label!r} van '{title}' levert geen geldige URL-slug op."
-                )
-                continue
-            previous = collisions.get(slug)
-            if previous and previous != label:
-                errors.append(
-                    f"{source_name}: category-slug botsing: {previous!r} en {label!r} worden allebei '/{slug}/'."
-                )
-            collisions[slug] = label
+
+            if raw_label != canonical:
+                legacy_labels.add((raw_label, canonical))
+
     if errors:
         raise ValueError("\n".join(errors))
+
+    for old, new in sorted(legacy_labels):
+        print(f"INFO: historische categorie {old!r} wordt samengevoegd onder {new!r}.")
 
 
 def analytics_html(metadata):
@@ -162,7 +221,8 @@ BASE_CSS = r"""
 
 
 def category_meta_html(item):
-    label = category_label(item)
+    raw_label = category_label(item)
+    label = canonical_category(raw_label) or raw_label
     slug = slugify_category(label)
     source = str(item.get("source") or item.get("bron") or "").strip()
     rt = reading_time(item)
@@ -272,34 +332,39 @@ def render_archive(entries):
 def collect_topics(edition_records):
     topics = {}
     seen_urls = defaultdict(set)
-    slug_labels = {}
+
     for date_value, data in edition_records:
         for lang_key in ("nl", "int"):
             for item in items(data, lang_key):
-                label = category_label(item)
+                raw_label = category_label(item)
+                label = canonical_category(raw_label)
                 if not label:
-                    print(f"WAARSCHUWING: {date_value} / {lang_key}: artikel zonder categorie overgeslagen: {item.get('title','(zonder titel)')}")
+                    print(
+                        f"WAARSCHUWING: {date_value} / {lang_key}: onbekende categorie "
+                        f"{raw_label!r} overgeslagen bij: {item.get('title','(zonder titel)')}"
+                    )
                     continue
+
                 slug = slugify_category(label)
-                if not slug:
-                    print(f"WAARSCHUWING: {date_value}: ongeldige categorie overgeslagen: {label!r}")
-                    continue
-                previous = slug_labels.get(slug)
-                if previous and previous != label:
-                    raise ValueError(f"Category-slug botsing in archief: {previous!r} en {label!r} → /{slug}/")
-                slug_labels[slug] = label
-                topic = topics.setdefault(slug, {"label": label, "slug": slug, "nl": [], "int": [], "latest": date_value})
+                topic = topics.setdefault(
+                    slug,
+                    {"label": label, "slug": slug, "nl": [], "int": [], "latest": date_value},
+                )
                 if date_value > topic["latest"]:
                     topic["latest"] = date_value
+
                 url_key = str(item.get("url") or item.get("link") or "").strip() or f"{date_value}:{item.get('title','')}"
                 if url_key in seen_urls[(slug, lang_key)]:
                     continue
                 seen_urls[(slug, lang_key)].add(url_key)
                 topic[lang_key].append({"date": date_value, "item": item})
+
     for topic in topics.values():
         topic["nl"].sort(key=lambda x: x["date"], reverse=True)
         topic["int"].sort(key=lambda x: x["date"], reverse=True)
-    return dict(sorted(topics.items(), key=lambda kv: kv[1]["label"].lower()))
+
+    order = {label: idx for idx, label in enumerate(CATEGORY_ORDER)}
+    return dict(sorted(topics.items(), key=lambda kv: (order.get(kv[1]["label"], 999), kv[1]["label"].lower())))
 
 
 def render_topics_index(topics, latest):
@@ -309,7 +374,7 @@ def render_topics_index(topics, latest):
         cards.append(f'<a class="topic-item" href="/{esc(topic["slug"])}/"><span class="topic-count">{story_count(total)}</span><span class="topic-title">{esc(topic["label"])}</span><span class="topic-arrow">→</span></a>')
     desc = "Bekijk positief nieuws per onderwerp. Eerst Nederlandse verhalen, daarna Engelstalige artikelen, steeds met de nieuwste verhalen bovenaan."
     schema = json.dumps({"@context":"https://schema.org","@type":"CollectionPage","name":"Onderwerpen · Positief nieuws","description":desc,"url":f"{SITE_URL}/onderwerpen/","isPartOf":{"@type":"WebSite","name":"Positief nieuws","url":SITE_URL+"/"}}, ensure_ascii=False)
-    return f"""<!DOCTYPE html><html lang="nl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Onderwerpen | Positief nieuws per thema</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{SITE_URL}/onderwerpen/"><meta property="og:title" content="Onderwerpen · Positief nieuws"><meta property="og:description" content="{esc(desc)}"><meta property="og:type" content="website"><meta property="og:url" content="{SITE_URL}/onderwerpen/"><meta name="twitter:card" content="summary"><meta name="theme-color" content="#17382b"><script type="application/ld+json">{schema}</script><style>{BASE_CSS}</style></head><body>{header_html('topics')}<main><section class="hero"><div class="shell"><p class="kicker">Positief nieuws per thema</p><h1>Onderwerpen<b>.</b></h1><p class="lead">Alle onderwerpen die in onze positieve nieuwsselectie voorkomen. Nieuwe categorieën worden automatisch toegevoegd.</p><div class="rule"></div></div></section><section class="section"><div class="shell"><div class="topic-list">{''.join(cards) if cards else '<p class="empty">Nog geen onderwerpen beschikbaar.</p>'}</div></div></section></main><footer>Positief nieuws · Dit gebeurt ook.</footer>{analytics_html({'page_type':'topics'})}</body></html>"""
+    return f"""<!DOCTYPE html><html lang="nl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Onderwerpen | Positief nieuws per thema</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{SITE_URL}/onderwerpen/"><meta property="og:title" content="Onderwerpen · Positief nieuws"><meta property="og:description" content="{esc(desc)}"><meta property="og:type" content="website"><meta property="og:url" content="{SITE_URL}/onderwerpen/"><meta name="twitter:card" content="summary"><meta name="theme-color" content="#17382b"><script type="application/ld+json">{schema}</script><style>{BASE_CSS}</style></head><body>{header_html('topics')}<main><section class="hero"><div class="shell"><p class="kicker">Positief nieuws per thema</p><h1>Onderwerpen<b>.</b></h1><p class="lead">Positief nieuws geordend in acht vaste categorieën. Zo vind je makkelijker oudere en nieuwe verhalen over hetzelfde onderwerp.</p><div class="rule"></div></div></section><section class="section"><div class="shell"><div class="topic-list">{''.join(cards) if cards else '<p class="empty">Nog geen onderwerpen beschikbaar.</p>'}</div></div></section></main><footer>Positief nieuws · Dit gebeurt ook.</footer>{analytics_html({'page_type':'topics'})}</body></html>"""
 
 
 def render_topic_page(topic):
@@ -338,11 +403,55 @@ def load_previous_topic_slugs():
         return set()
 
 
+def render_topic_redirect(old_label, new_label):
+    target_slug = slugify_category(new_label)
+    target = f"/{target_slug}/"
+    return (
+        '<!DOCTYPE html>\n'
+        '<html lang="nl">\n<head>\n'
+        '  <meta charset="UTF-8">\n'
+        '  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n'
+        '  <meta name="robots" content="noindex,follow">\n'
+        f'  <link rel="canonical" href="{SITE_URL}{target}">\n'
+        f'  <meta http-equiv="refresh" content="0; url={target}">\n'
+        f'  <title>{esc(old_label)} is nu {esc(new_label)} | Positief nieuws</title>\n'
+        f'  <script>window.location.replace({json.dumps(target)});</script>\n'
+        '</head>\n<body>\n'
+        f'  <p>Dit onderwerp valt nu onder <a href="{target}">{esc(new_label)}</a>.</p>\n'
+        '</body>\n</html>\n'
+    )
+
+
+def write_legacy_topic_redirects():
+    canonical_slugs = {slugify_category(label) for label in CATEGORY_ORDER}
+    redirects = {}
+    for old_label, new_label in CATEGORY_ALIASES.items():
+        old_slug = slugify_category(old_label)
+        new_slug = slugify_category(new_label)
+        if old_slug and old_slug != new_slug and old_slug not in canonical_slugs:
+            redirects[old_slug] = (old_label, new_label)
+
+    for old_slug, (old_label, new_label) in sorted(redirects.items()):
+        page_dir = Path(old_slug)
+        page_dir.mkdir(parents=True, exist_ok=True)
+        (page_dir / "index.html").write_text(render_topic_redirect(old_label, new_label), encoding="utf-8")
+        print(f"Redirect gebouwd: /{old_slug}/ → /{slugify_category(new_label)}/")
+    return set(redirects)
+
+
 def write_topic_pages(topics):
     TOPICS_DIR.mkdir(exist_ok=True)
     previous = load_previous_topic_slugs()
     current = set(topics)
+    redirect_slugs = {
+        slugify_category(old_label)
+        for old_label, new_label in CATEGORY_ALIASES.items()
+        if slugify_category(old_label) != slugify_category(new_label)
+    }
+
     for stale_slug in sorted(previous - current):
+        if stale_slug in redirect_slugs:
+            continue
         stale_dir = Path(stale_slug)
         if stale_dir.is_dir() and (stale_dir / "index.html").exists():
             shutil.rmtree(stale_dir)
@@ -362,6 +471,8 @@ def write_topic_pages(topics):
             "latest": topic["latest"],
         })
         print(f"Gebouwd: {page_dir / 'index.html'}")
+
+    write_legacy_topic_redirects()
 
     TOPIC_MANIFEST.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     latest = max((t["latest"] for t in topics.values()), default=datetime.now().strftime("%Y-%m-%d"))
@@ -426,7 +537,7 @@ def validate_current():
         raise FileNotFoundError("nieuws.json niet gevonden.")
     data = json.loads(NEWS_PATH.read_text(encoding="utf-8"))
     validate_positive_articles(data, "nieuws.json")
-    print("nieuws.json is geldig: alle positieve artikelen hebben een bruikbare categorie.")
+    print("nieuws.json is geldig: alle positieve artikelen vallen onder een van de acht vaste categorieën.")
 
 
 def main():
