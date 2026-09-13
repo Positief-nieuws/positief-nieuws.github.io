@@ -371,6 +371,17 @@
 
     .meta-sep { color: #919a94; }
 
+    .meta-category-link {
+      color: var(--green);
+      text-decoration: underline;
+      text-decoration-color: rgba(31,91,69,.28);
+      text-underline-offset: 2px;
+    }
+
+    .meta-category-link:hover {
+      text-decoration-color: currentColor;
+    }
+
     .article-arrow {
       position: absolute;
       top: 22px;
@@ -1227,6 +1238,7 @@
         <div class="app-nav-inner">
           <a id="nav-today" href="./">Vandaag</a>
           <a id="nav-archive" href="/edities/">Archief</a>
+          <a id="nav-topics" href="/onderwerpen/">Onderwerpen</a>
           <a id="nav-about" href="/over/">Over</a>
           <a class="header-cta" href="#nieuwsbrief"><svg class="header-cta-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 6.5h17a1 1 0 0 1 1 1v9a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2v-9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.7"></path><path d="m4.5 8 7.5 6 7.5-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>In je inbox</span></a>
         </div>
@@ -1851,6 +1863,17 @@
     }
 
 
+    function categorySlug(value) {
+      return String(value ?? "")
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase()
+        .replace(/&/g, " en ")
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "");
+    }
+
+
     function readingTimeLabel(value) {
 
       const minutes =
@@ -1877,9 +1900,12 @@
 
       if (article.category) {
 
-        parts.push(
-          `<span>${safeText(article.category)}</span>`
-        );
+        const slug = categorySlug(article.category);
+        const categoryHtml = slug
+          ? `<a class="meta-category-link" href="/${slug}/">${safeText(article.category)}</a>`
+          : `<span>${safeText(article.category)}</span>`;
+
+        parts.push(categoryHtml);
 
       }
 
