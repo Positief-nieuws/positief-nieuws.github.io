@@ -51,6 +51,44 @@ DUTCH_MONTHS = [
 ]
 
 
+CATEGORY_ALIASES = {
+    "Archeologie & geschiedenis": "Cultuur",
+    "Cultuur & erfgoed": "Cultuur",
+    "Cultuur & media": "Cultuur",
+    "Geschiedenis & mens": "Cultuur",
+    "Economie & geld": "Economie",
+    "Economie & onderwijs": "Economie",
+    "Energie & innovatie": "Energie & innovatie",
+    "Gezondheid": "Gezondheid",
+    "Gezondheid & basisvoorzieningen": "Gezondheid",
+    "Voeding & leefstijl": "Gezondheid",
+    "Gewoon leuk": "Mens",
+    "Mens & innovatie": "Mens",
+    "Mens & samenleving": "Mens",
+    "Onderwijs & ontwikkeling": "Mens",
+    "Dieren": "Natuur & klimaat",
+    "Dieren & natuur": "Natuur & klimaat",
+    "Natuur & klimaat": "Natuur & klimaat",
+    "Natuur & landbouw": "Natuur & klimaat",
+    "Natuur & samenleving": "Natuur & klimaat",
+    "Natuur & wetenschap": "Natuur & klimaat",
+    "Technologie & innovatie": "Wetenschap",
+    "Wetenschap": "Wetenschap",
+    "Wetenschap & duurzaamheid": "Wetenschap",
+    "Wetenschap & innovatie": "Wetenschap",
+    "Wetenschap & ruimtevaart": "Wetenschap",
+    "Sport": "Sport",
+    "Cultuur": "Cultuur",
+    "Economie": "Economie",
+    "Mens": "Mens",
+}
+
+
+def canonical_category(value):
+    label = str(value or "").strip()
+    return CATEGORY_ALIASES.get(label, label)
+
+
 def load_news():
     if not NEWS_FILE.exists():
         raise FileNotFoundError("nieuws.json niet gevonden.")
@@ -183,7 +221,7 @@ def article_html(article):
     title = esc(article.get("title"))
     teaser = esc(article.get("teaser") or article.get("summary"))
     source = esc(article.get("source"))
-    category = esc(article.get("category"))
+    category = esc(canonical_category(article.get("category")))
     url = esc(article.get("url"))
 
     meta_parts = [part for part in (category, source, reading_time_label(article)) if part]
