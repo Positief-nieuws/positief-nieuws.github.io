@@ -1863,6 +1863,45 @@
     }
 
 
+    const CATEGORY_ALIASES = Object.freeze({
+      "Archeologie & geschiedenis": "Cultuur",
+      "Cultuur & erfgoed": "Cultuur",
+      "Cultuur & media": "Cultuur",
+      "Geschiedenis & mens": "Cultuur",
+      "Economie & geld": "Economie",
+      "Economie & onderwijs": "Economie",
+      "Energie & innovatie": "Energie & innovatie",
+      "Gezondheid": "Gezondheid",
+      "Gezondheid & basisvoorzieningen": "Gezondheid",
+      "Voeding & leefstijl": "Gezondheid",
+      "Gewoon leuk": "Mens",
+      "Mens & innovatie": "Mens",
+      "Mens & samenleving": "Mens",
+      "Onderwijs & ontwikkeling": "Mens",
+      "Dieren": "Natuur & klimaat",
+      "Dieren & natuur": "Natuur & klimaat",
+      "Natuur & klimaat": "Natuur & klimaat",
+      "Natuur & landbouw": "Natuur & klimaat",
+      "Natuur & samenleving": "Natuur & klimaat",
+      "Natuur & wetenschap": "Natuur & klimaat",
+      "Technologie & innovatie": "Wetenschap",
+      "Wetenschap": "Wetenschap",
+      "Wetenschap & duurzaamheid": "Wetenschap",
+      "Wetenschap & innovatie": "Wetenschap",
+      "Wetenschap & ruimtevaart": "Wetenschap",
+      "Sport": "Sport",
+      "Cultuur": "Cultuur",
+      "Economie": "Economie",
+      "Mens": "Mens"
+    });
+
+
+    function canonicalCategory(value) {
+      const label = String(value ?? "").trim();
+      return CATEGORY_ALIASES[label] || label;
+    }
+
+
     function categorySlug(value) {
       return String(value ?? "")
         .normalize("NFD")
@@ -1900,10 +1939,11 @@
 
       if (article.category) {
 
-        const slug = categorySlug(article.category);
+        const category = canonicalCategory(article.category);
+        const slug = categorySlug(category);
         const categoryHtml = slug
-          ? `<a class="meta-category-link" href="/${slug}/">${safeText(article.category)}</a>`
-          : `<span>${safeText(article.category)}</span>`;
+          ? `<a class="meta-category-link" href="/${slug}/">${safeText(category)}</a>`
+          : `<span>${safeText(category)}</span>`;
 
         parts.push(categoryHtml);
 
