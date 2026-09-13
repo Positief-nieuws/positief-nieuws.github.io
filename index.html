@@ -126,19 +126,24 @@
 
     .mobile-menu-toggle {
       display: none;
-      width: 42px;
-      height: 42px;
-      padding: 0;
+      min-height: 42px;
+      padding: 0 13px;
       border: 1px solid rgba(23, 63, 49, 0.16);
-      border-radius: 50%;
+      border-radius: 999px;
       background: rgba(255,255,255,0.3);
       color: var(--green-dark);
       align-items: center;
       justify-content: center;
-      flex-direction: column;
-      gap: 4px;
+      gap: 8px;
       cursor: pointer;
       -webkit-tap-highlight-color: transparent;
+    }
+
+    .menu-icon {
+      display: inline-flex;
+      width: 17px;
+      flex-direction: column;
+      gap: 4px;
     }
 
     .menu-line {
@@ -149,6 +154,12 @@
       background: currentColor;
       transition: transform 160ms ease, opacity 160ms ease;
       transform-origin: center;
+    }
+
+    .menu-label {
+      font-size: .76rem;
+      font-weight: 750;
+      line-height: 1;
     }
 
     .site-header.menu-open .menu-line:nth-child(1) {
@@ -1385,18 +1396,21 @@
         aria-expanded="false"
         aria-controls="mobile-navigation"
       >
-        <span class="menu-line"></span>
-        <span class="menu-line"></span>
-        <span class="menu-line"></span>
+        <span class="menu-icon" aria-hidden="true">
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+        </span>
+        <span class="menu-label">Menu</span>
       </button>
 
       <nav class="app-nav" id="mobile-navigation" aria-label="Hoofdnavigatie">
         <div class="app-nav-inner">
-          <a id="nav-today" href="./">Vandaag</a>
+          <a id="nav-today" href="/">Vandaag</a>
           <a id="nav-archive" href="/edities/">Archief</a>
           <a id="nav-topics" href="/onderwerpen/">Onderwerpen</a>
           <a id="nav-about" href="/over/">Over</a>
-          <a class="header-cta" href="#nieuwsbrief"><svg class="header-cta-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 6.5h17a1 1 0 0 1 1 1v9a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2v-9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.7"></path><path d="m4.5 8 7.5 6 7.5-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>In je inbox</span></a>
+          <a class="header-cta" href="/#nieuwsbrief"><svg class="header-cta-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 6.5h17a1 1 0 0 1 1 1v9a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2v-9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.7"></path><path d="m4.5 8 7.5 6 7.5-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>In je inbox</span></a>
         </div>
       </nav>
     </div>
