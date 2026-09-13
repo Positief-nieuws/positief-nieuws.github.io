@@ -25,9 +25,10 @@
   <style>
 :root{--paper:#f7f5ec;--ink:#151a17;--green:#1f5b45;--green-dark:#173f31;--accent:#d6a13a;--muted:#68716b;--line:rgba(23,63,49,.22);--line2:rgba(23,63,49,.12);--content:748px;--header:1080px}
 *{box-sizing:border-box}html{font-size:17px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.58;-webkit-font-smoothing:antialiased}
-a{color:inherit}.header{width:min(calc(100% - 48px),var(--header));margin:auto;padding:26px 0 18px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.brand{display:inline-flex;align-items:center;gap:12px;font-weight:800;text-decoration:none;letter-spacing:-.02em}.sun{width:28px;height:28px;color:var(--accent)}
-nav{display:flex;align-items:center;gap:22px}nav a{font-size:.8rem;font-weight:650;text-decoration:none}.inbox{padding:8px 14px;border:1px solid rgba(214,161,58,.45);border-radius:999px;color:var(--accent)}
+a{color:inherit}.site-header{padding:26px 0 18px}.header-shell{width:min(calc(100% - 48px),var(--header));margin:0 auto}.header-row{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:inline-flex;align-items:center;gap:12px;color:var(--ink);font-family:Arial,Helvetica,sans-serif;font-size:1.02rem;font-weight:800;text-decoration:none;letter-spacing:-.02em}.brand span{white-space:nowrap}.brand-sun{width:28px;height:28px;color:var(--accent);flex:0 0 auto}
+.mobile-menu-toggle{display:none;min-height:42px;padding:0 13px;border:1px solid rgba(23,63,49,.16);border-radius:999px;background:rgba(255,255,255,.3);color:var(--green-dark);align-items:center;justify-content:center;gap:8px;cursor:pointer;-webkit-tap-highlight-color:transparent}.menu-icon{display:inline-flex;width:17px;flex-direction:column;gap:4px}.menu-line{display:block;width:17px;height:1.5px;border-radius:999px;background:currentColor;transition:transform 160ms ease,opacity 160ms ease;transform-origin:center}.menu-label{font-size:.76rem;font-weight:750;line-height:1}.site-header.menu-open .menu-line:nth-child(1){transform:translateY(5.5px) rotate(45deg)}.site-header.menu-open .menu-line:nth-child(2){opacity:0}.site-header.menu-open .menu-line:nth-child(3){transform:translateY(-5.5px) rotate(-45deg)}
+.app-nav-inner{display:flex;align-items:center;gap:24px}.app-nav a{color:var(--ink);font-family:Arial,Helvetica,sans-serif;font-size:.86rem;font-weight:600;text-decoration:none;white-space:nowrap;transition:color 120ms ease,border-color 120ms ease,background-color 120ms ease}.app-nav a:hover,.app-nav a.is-active{color:var(--accent)}.header-cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:40px;padding:0 16px;border:1px solid rgba(214,161,58,.45);border-radius:999px;background:rgba(255,255,255,.25);color:var(--accent)!important;box-shadow:inset 0 0 0 1px rgba(214,161,58,.08)}.header-cta-icon{width:16px;height:16px;flex:0 0 auto}
 .shell{width:min(calc(100% - 48px),var(--content));margin:auto}.hero{padding:72px 0 38px}.kicker{margin:0 0 8px;color:var(--green);font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
 h1,h2,h3{font-family:Georgia,"Times New Roman",serif}h1{margin:0;font-size:clamp(2.8rem,6vw,4rem);line-height:1;letter-spacing:-.05em}h1 b{color:var(--accent)}
 .lead{max-width:650px;margin:20px 0 0;color:#313934;font-size:1rem}.rule{margin-top:30px;border-top:1px solid var(--line)}
@@ -38,18 +39,79 @@ h1,h2,h3{font-family:Georgia,"Times New Roman",serif}h1{margin:0;font-size:clamp
 .archive-date{color:var(--green);font-size:.72rem;font-weight:750}.archive-title{font-family:Georgia,"Times New Roman",serif;font-size:1.15rem;line-height:1.2}.archive-arrow{text-align:right;color:var(--green)}
 .archive-item:hover .archive-title{text-decoration:underline;text-underline-offset:3px}.small{color:var(--muted);font-size:.82rem}
 footer{padding:0 0 34px;text-align:center;color:#8b928e;font-size:.72rem}
-@media(max-width:760px){.header,.shell{width:min(calc(100% - 30px),100%)}.header{padding:18px 0 10px;align-items:flex-start}.header nav{gap:10px}.header nav a{font-size:.65rem}.hero{padding-top:52px}.archive-item{grid-template-columns:92px minmax(0,1fr) 20px;gap:10px}.archive-title{font-size:1rem}}
+@media(max-width:760px){.header-shell,.shell{width:min(calc(100% - 30px),100%)}.site-header{position:relative;z-index:30;padding:15px 0 9px}.header-row{position:relative;align-items:center;gap:12px}.brand{gap:10px;font-size:.98rem;line-height:1;flex:0 1 auto;min-width:0}.brand-sun{width:31px;height:31px}.mobile-menu-toggle{display:inline-flex;margin-left:auto;flex:0 0 auto}.app-nav{display:none;position:absolute;top:calc(100% + 10px);left:0;right:0;z-index:40;padding:7px;border:1px solid rgba(23,63,49,.14);border-radius:18px;background:rgba(247,245,236,.985);box-shadow:0 18px 44px rgba(23,63,49,.12);backdrop-filter:blur(10px)}.site-header.menu-open .app-nav{display:block}.app-nav-inner{flex-direction:column;align-items:stretch;gap:0}.app-nav a{display:flex;align-items:center;min-height:43px;padding:0 12px;border-radius:12px;font-size:.86rem}.app-nav a:hover,.app-nav a.is-active{background:rgba(214,161,58,.08)}.header-cta{justify-content:flex-start;min-height:43px;margin-top:4px;padding:0 12px;border-radius:12px;background:rgba(214,161,58,.08)}.hero{padding-top:52px}.archive-item{grid-template-columns:92px minmax(0,1fr) 20px;gap:10px}.archive-title{font-size:1rem}}
 </style>
 </head>
 <body>
 
-<header class="header">
-  <a class="brand" href="/" aria-label="Positief nieuws homepage">
-    <svg class="sun" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"></circle><path d="M12 1.8V5.1M12 18.9V22.2M22.2 12H18.9M5.1 12H1.8M19.2 4.8L16.8 7.2M7.2 16.8L4.8 19.2M19.2 19.2L16.8 16.8M7.2 7.2L4.8 4.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg>
-    <span>Positief nieuws.</span>
-  </a>
-  <nav><a href="/">Vandaag</a><a href="/edities/">Archief</a><a href="/over/">Over</a><a class="inbox" href="/#nieuwsbrief">In je inbox</a></nav>
+<header class="site-header">
+  <div class="header-shell header-row">
+    <a class="brand" href="/" aria-label="Positief nieuws homepage">
+      <svg class="brand-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"></circle><path d="M12 1.8V5.1M12 18.9V22.2M22.2 12H18.9M5.1 12H1.8M19.2 4.8L16.8 7.2M7.2 16.8L4.8 19.2M19.2 19.2L16.8 16.8M7.2 7.2L4.8 4.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg>
+      <span>Positief nieuws</span>
+    </a>
+
+    <button class="mobile-menu-toggle" type="button" aria-label="Menu openen" aria-expanded="false" aria-controls="mobile-navigation">
+      <span class="menu-icon" aria-hidden="true">
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+      </span>
+      <span class="menu-label">Menu</span>
+    </button>
+
+    <nav class="app-nav" id="mobile-navigation" aria-label="Hoofdnavigatie">
+      <div class="app-nav-inner">
+        <a href="/">Vandaag</a>
+        <a href="/edities/">Archief</a>
+        <a href="/onderwerpen/">Onderwerpen</a>
+        <a class="is-active" href="/over/">Over</a>
+        <a class="header-cta" href="/#nieuwsbrief"><svg class="header-cta-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 6.5h17a1 1 0 0 1 1 1v9a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2v-9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.7"></path><path d="m4.5 8 7.5 6 7.5-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>In je inbox</span></a>
+      </div>
+    </nav>
+  </div>
 </header>
+
+<script>
+  (function () {
+    const header = document.querySelector(".site-header");
+    const toggle = document.querySelector(".mobile-menu-toggle");
+    const nav = document.querySelector(".app-nav");
+
+    if (!header || !toggle || !nav) return;
+
+    function setMenu(open) {
+      header.classList.toggle("menu-open", open);
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      toggle.setAttribute("aria-label", open ? "Menu sluiten" : "Menu openen");
+    }
+
+    toggle.addEventListener("click", function () {
+      setMenu(!header.classList.contains("menu-open"));
+    });
+
+    nav.addEventListener("click", function (event) {
+      if (event.target.closest("a")) setMenu(false);
+    });
+
+    document.addEventListener("click", function (event) {
+      if (header.classList.contains("menu-open") && !header.contains(event.target)) {
+        setMenu(false);
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        setMenu(false);
+        toggle.focus();
+      }
+    });
+
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 760) setMenu(false);
+    });
+  })();
+</script>
 
 <main>
   <section class="hero"><div class="shell">
@@ -63,6 +125,7 @@ footer{padding:0 0 34px;text-align:center;color:#8b928e;font-size:.72rem}
     <h2>Waarom Positief nieuws bestaat</h2>
     <p>Het nieuws bestaat niet alleen uit oorlog, politieke ruzie, ongelukken en crises. Iedere dag gaan er ook dingen vooruit: in wetenschap, gezondheid, natuur, technologie, cultuur en gewoon tussen mensen. Zulke ontwikkelingen verdienen ook een plek in je nieuwsbeeld.</p>
     <p>Daarom bevat iedere editie twaalf positieve nieuwsverhalen: zes uit Nederland en zes uit de rest van de wereld. Daarnaast staan er drie belangrijke onderwerpen bij die niet per se positief zijn, maar die je wel moet kennen om bij te blijven.</p>
+    <p>Nieuwe edities verschijnen op maandag en donderdag.</p>
 
     <h2>Hoe verhalen worden geselecteerd</h2>
     <p>Een verhaal komt niet alleen in de editie omdat het vrolijk klinkt. De selectie draait om echte ontwikkeling, relevantie en een bron die de gekozen kop en samenvatting ondersteunt.</p>
