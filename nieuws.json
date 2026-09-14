@@ -7,25 +7,18 @@
   },
   "nl": [
     {
-      "title": "Natuurherstel maakt Ankeveense Plassen broedplaats voor zeldzame witwangstern",
-      "teaser": "Natuurherstel in de Ankeveense Plassen levert opvallend resultaat op. Tien paren van de zeldzame witwangstern kwamen er tot broeden en negen paren brachten minimaal één jong groot.",
-      "source": "Natuurmonumenten",
-      "category": "Natuur & klimaat",
-      "url": "https://www.natuurmonumenten.nl/natuurgebieden/ankeveense-plassen/nieuws/hollands-ankeveen-broedplaats-voor-zeldzame-witwangstern"
+      "title": "Export groeit met ruim 2 procent in juli",
+      "teaser": "De Nederlandse goederenexport lag in juli 2,1 procent hoger dan een jaar eerder. Vooral machines, apparaten, chemische producten en transportmiddelen werden meer uitgevoerd.",
+      "source": "CBS",
+      "category": "Economie",
+      "url": "https://www.cbs.nl/nl-nl/nieuws/2026/37/export-groeit-met-ruim-2-procent-in-juli"
     },
     {
-      "title": "Lokale initiatieven krijgen nieuwe subsidieronde van 1 miljoen euro",
-      "teaser": "Lokale organisaties die bewoners laten meepraten, meedenken en meebeslissen kunnen opnieuw steun krijgen via Loket D. Voor nieuwe initiatieven is 1 miljoen euro beschikbaar.",
-      "source": "Rijksoverheid",
-      "category": "Mens",
-      "url": "https://www.rijksoverheid.nl/actueel/nieuws/2026/09/07/aandacht-voor-lokale-initiatieven-bezoek-minister-en-1-miljoen-subsidie-markeren-dag-van-de-democratie"
-    },
-    {
-      "title": "Slimmer laden brengt nieuwe batterijtechnologie dichter bij de praktijk",
-      "teaser": "TNO en LionVolt hebben een laadstrategie getest die prestaties van een nieuwe generatie batterijen kan verbeteren en tegelijk de levensduur kan verlengen. De aanpak werkte ook in een complete batterijmodule.",
-      "source": "TNO",
-      "category": "Energie & innovatie",
-      "url": "https://www.tno.nl/nl/newsroom/insights/2026/09/lionvolt-batterijtechnologie/"
+      "title": "Nieuw model voorspelt prognose bij uitgezaaide nierkanker beter",
+      "teaser": "Nederlandse onderzoekers ontwikkelden en valideerden een model dat de overleving bij uitgezaaide nierkanker nauwkeuriger voorspelt. Dat kan bijdragen aan beter passende behandelkeuzes.",
+      "source": "IKNL",
+      "category": "Gezondheid",
+      "url": "https://iknl.nl/nieuws/2026/nieuw-model-voor-prognose-uitgezaaide-nierkanker"
     },
     {
       "title": "3x3-basketbalsters opnieuw Europees kampioen",
@@ -36,18 +29,25 @@
       "reading_time_minutes": 2
     },
     {
-      "title": "Nieuw model voorspelt prognose bij uitgezaaide nierkanker beter",
-      "teaser": "Nederlandse onderzoekers ontwikkelden en valideerden een model dat de overleving bij uitgezaaide nierkanker nauwkeuriger voorspelt. Dat kan bijdragen aan beter passende behandelkeuzes.",
-      "source": "IKNL",
-      "category": "Gezondheid",
-      "url": "https://iknl.nl/nieuws/2026/nieuw-model-voor-prognose-uitgezaaide-nierkanker"
+      "title": "Slimmer laden brengt nieuwe batterijtechnologie dichter bij de praktijk",
+      "teaser": "TNO en LionVolt hebben een laadstrategie getest die prestaties van een nieuwe generatie batterijen kan verbeteren en tegelijk de levensduur kan verlengen. De aanpak werkte ook in een complete batterijmodule.",
+      "source": "TNO",
+      "category": "Energie & innovatie",
+      "url": "https://www.tno.nl/nl/newsroom/insights/2026/09/lionvolt-batterijtechnologie/"
     },
     {
-      "title": "Export groeit met ruim 2 procent in juli",
-      "teaser": "De Nederlandse goederenexport lag in juli 2,1 procent hoger dan een jaar eerder. Vooral machines, apparaten, chemische producten en transportmiddelen werden meer uitgevoerd.",
-      "source": "CBS",
-      "category": "Economie",
-      "url": "https://www.cbs.nl/nl-nl/nieuws/2026/37/export-groeit-met-ruim-2-procent-in-juli"
+      "title": "Lokale initiatieven krijgen nieuwe subsidieronde van 1 miljoen euro",
+      "teaser": "Lokale organisaties die bewoners laten meepraten, meedenken en meebeslissen kunnen opnieuw steun krijgen via Loket D. Voor nieuwe initiatieven is 1 miljoen euro beschikbaar.",
+      "source": "Rijksoverheid",
+      "category": "Mens",
+      "url": "https://www.rijksoverheid.nl/actueel/nieuws/2026/09/07/aandacht-voor-lokale-initiatieven-bezoek-minister-en-1-miljoen-subsidie-markeren-dag-van-de-democratie"
+    },
+    {
+      "title": "Natuurherstel maakt Ankeveense Plassen broedplaats voor zeldzame witwangstern",
+      "teaser": "Natuurherstel in de Ankeveense Plassen levert opvallend resultaat op. Tien paren van de zeldzame witwangstern kwamen er tot broeden en negen paren brachten minimaal één jong groot.",
+      "source": "Natuurmonumenten",
+      "category": "Natuur & klimaat",
+      "url": "https://www.natuurmonumenten.nl/natuurgebieden/ankeveense-plassen/nieuws/hollands-ankeveen-broedplaats-voor-zeldzame-witwangstern"
     }
   ],
   "int": [
