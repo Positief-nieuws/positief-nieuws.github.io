@@ -7,26 +7,11 @@
   },
   "nl": [
     {
-      "title": "3x3-basketbalsters opnieuw Europees kampioen, Oranjemannen verliezen finale",
-      "teaser": "De Nederlandse 3x3-basketbalsters hebben in Antwerpen opnieuw de Europese titel gepakt. Daarmee bevestigt het team opnieuw zijn sterke positie aan de top van het Europese basketbal.",
-      "source": "NOS",
-      "category": "Sport",
-      "url": "https://nos.nl/l/2630825",
-      "reading_time_minutes": 2
-    },
-    {
-      "title": "Sef wint Gouden Notekraker voor bijzondere liveprestaties",
-      "teaser": "Muzikant Sef heeft de Gouden Notekraker gewonnen, een prijs van collega-muzikanten voor bijzondere liveprestaties. De onderscheiding onderstreept zijn sterke reputatie op het podium.",
-      "source": "NU.nl",
-      "category": "Cultuur",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQZTNqMTJqdTFOcHZzd3d4LXUzZlc0aWRyMVQ5djFocVZIOXJ5VUhCaEljQ2ZXbUlEZW1YNEtENWtRS1RlbENoWWhseFp1bEdVOE5ZYWl4RzRJQzBzTUNDMEpjVDZoX196dGdyNC1pdG1jWW16dG5rTjYyNDJfWWlJdnV1VlRvc2NHSTdvWW1EYW5JMUsyNGk4cmR4Yw?oc=5"
-    },
-    {
-      "title": "Buurt voorkomt sluiting populaire dierenweide: 32 vrijwilligers melden zich",
-      "teaser": "Een populaire dierenweide dreigde te verdwijnen, maar buurtbewoners kwamen in actie. Met 32 nieuwe vrijwilligers lijkt het voortbestaan van de plek voorlopig veiliggesteld.",
-      "source": "Rijnmond",
-      "category": "Mens",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNdjNMcHgxVnJmTzhPZTJHX1dSbEhsOWVaaG1ERWNNRmh1VWFoTDQ4TU9VMGVLbjZjVzBiOVFyQW4tQkVleE9Kb0lGODdVODQxcm1BcHhhT2l2dnZqS3lDMWx5TUEzRjl5OVVnQ3VNaVFDTUQ0Z2puZHk0R0dFOGI5Mzdodk1vNFJWWVppMmN1WE5kekVrTDQ0Wk0wWjNR?oc=5"
+      "title": "Export groeit met ruim 2 procent in juli",
+      "teaser": "De Nederlandse export lag in juli ruim 2 procent hoger dan een jaar eerder, meldt het CBS. Dat wijst op aanhoudende veerkracht in de economie.",
+      "source": "CBS",
+      "category": "Economie",
+      "url": "https://www.cbs.nl/"
     },
     {
       "title": "Biodiversiteit in de stad krijgt steun van groene daken",
@@ -36,18 +21,33 @@
       "url": "https://www.wur.nl/"
     },
     {
-      "title": "Export groeit met ruim 2 procent in juli",
-      "teaser": "De Nederlandse export lag in juli ruim 2 procent hoger dan een jaar eerder, meldt het CBS. Dat wijst op aanhoudende veerkracht in de economie.",
-      "source": "CBS",
-      "category": "Economie",
-      "url": "https://www.cbs.nl/"
-    },
-    {
       "title": "Biomarkers verbeteren diagnose en behandeling van longkanker",
       "teaser": "Onderzoekers van de Radboud Universiteit laten zien dat biomarkers artsen kunnen helpen om longkanker nauwkeuriger te diagnosticeren en gerichter te behandelen. Dat kan de zorg voor patiënten verder verbeteren.",
       "source": "Radboud Universiteit",
       "category": "Gezondheid",
       "url": "https://www.ru.nl/"
+    },
+    {
+      "title": "3x3-basketbalsters opnieuw Europees kampioen, Oranjemannen verliezen finale",
+      "teaser": "De Nederlandse 3x3-basketbalsters hebben in Antwerpen opnieuw de Europese titel gepakt. Daarmee bevestigt het team opnieuw zijn sterke positie aan de top van het Europese basketbal.",
+      "source": "NOS",
+      "category": "Sport",
+      "url": "https://nos.nl/l/2630825",
+      "reading_time_minutes": 2
+    },
+    {
+      "title": "Buurt voorkomt sluiting populaire dierenweide: 32 vrijwilligers melden zich",
+      "teaser": "Een populaire dierenweide dreigde te verdwijnen, maar buurtbewoners kwamen in actie. Met 32 nieuwe vrijwilligers lijkt het voortbestaan van de plek voorlopig veiliggesteld.",
+      "source": "Rijnmond",
+      "category": "Mens",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNdjNMcHgxVnJmTzhPZTJHX1dSbEhsOWVaaG1ERWNNRmh1VWFoTDQ4TU9VMGVLbjZjVzBiOVFyQW4tQkVleE9Kb0lGODdVODQxcm1BcHhhT2l2dnZqS3lDMWx5TUEzRjl5OVVnQ3VNaVFDTUQ0Z2puZHk0R0dFOGI5Mzdodk1vNFJWWVppMmN1WE5kekVrTDQ0Wk0wWjNR?oc=5"
+    },
+    {
+      "title": "Sef wint Gouden Notekraker voor bijzondere liveprestaties",
+      "teaser": "Muzikant Sef heeft de Gouden Notekraker gewonnen, een prijs van collega-muzikanten voor bijzondere liveprestaties. De onderscheiding onderstreept zijn sterke reputatie op het podium.",
+      "source": "NU.nl",
+      "category": "Cultuur",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQZTNqMTJqdTFOcHZzd3d4LXUzZlc0aWRyMVQ5djFocVZIOXJ5VUhCaEljQ2ZXbUlEZW1YNEtENWtRS1RlbENoWWhseFp1bEdVOE5ZYWl4RzRJQzBzTUNDMEpjVDZoX196dGdyNC1pdG1jWW16dG5rTjYyNDJfWWlJdnV1VlRvc2NHSTdvWW1EYW5JMUsyNGk4cmR4Yw?oc=5"
     }
   ],
   "int": [
