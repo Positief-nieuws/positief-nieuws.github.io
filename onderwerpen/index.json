@@ -3,7 +3,7 @@
     "label": "Cultuur",
     "slug": "cultuur",
     "url": "/cultuur/",
-    "nl_count": 7,
+    "nl_count": 6,
     "int_count": 2,
     "latest": "2026-09-14"
   },
@@ -19,9 +19,9 @@
     "label": "Energie & innovatie",
     "slug": "energie-en-innovatie",
     "url": "/energie-en-innovatie/",
-    "nl_count": 1,
+    "nl_count": 2,
     "int_count": 0,
-    "latest": "2026-09-10"
+    "latest": "2026-09-14"
   },
   {
     "label": "Gezondheid",
