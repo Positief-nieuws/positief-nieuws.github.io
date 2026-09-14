@@ -1,121 +1,124 @@
 {
   "meta": {
-    "edition_date": "2026-09-10",
-    "generated_from": "kandidaten (4)(1).json + actuele nieuwsselectie",
+    "edition_date": "2026-09-14",
+    "generated_from": "kandidaten (5).json + actuele nieuwsselectie",
     "title": "Positief nieuws",
     "tagline": "Dit gebeurt ook."
   },
   "nl": [
     {
-      "title": "Nieuwe veiligheidsriem maakt attracties toegankelijker voor mensen met een beenprothese",
-      "teaser": "De Efteling, TU Delft en revalidatiespecialisten ontwikkelden samen de SafeStrap. Daarmee kunnen kinderen en volwassenen met een beenprothese hun prothese veilig aanhouden in attracties waarin de benen vrij hangen.",
-      "source": "Efteling",
-      "category": "Mens & innovatie",
-      "url": "https://www.efteling.com/nl/pers/zorgeloos-de-achtbaan-in-met-een-beenprothese-dankzij-veiligheidsriem/",
-      "reading_time_minutes": 1
+      "title": "3x3-basketbalsters opnieuw Europees kampioen, Oranjemannen verliezen finale",
+      "teaser": "De Nederlandse 3x3-basketbalsters hebben in Antwerpen opnieuw de Europese titel gepakt. Daarmee bevestigt het team opnieuw zijn sterke positie aan de top van het Europese basketbal.",
+      "source": "NOS",
+      "category": "Sport",
+      "url": "https://nos.nl/l/2630825",
+      "reading_time_minutes": 2
     },
     {
-      "title": "Vrijwilligers helpen de stranden van Ameland schoon te houden",
-      "teaser": "De stranden van Ameland behoren tot de schoonste van Fryslân. Vrijwilligers trekken er geregeld op uit om aangespoeld afval op te ruimen en het Waddeneiland netjes te houden.",
-      "source": "Omrop Fryslân",
-      "category": "Natuur & samenleving",
-      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQY2NQT0xkeHhFajVCVmNxRExGU3JKRzQtUmc1d1VJdHZXWlpvR1dZLVp0SnFLbDBWMVFSYllzTGJZNzdJNnZ2WU5JQ0pKOWZLb09hR0hBUEgzQk5qbHh6el9nc3JnWTA3U2x6UW5kckNuMTJtVTdfZEZ1eVNYMGNPYU8xekdhM1U1OHN4aDlpRXIySXhsTXg0RkR6QUZCeTlNcFZ2dEpmUWxXRE8zWmF5dV9oSW9rNjJ0ZWFDMkEzWk5Fb0oxUDVEZGc0dE5nczJnRnc?oc=5"
+      "title": "Sef wint Gouden Notekraker voor bijzondere liveprestaties",
+      "teaser": "Muzikant Sef heeft de Gouden Notekraker gewonnen, een prijs van collega-muzikanten voor bijzondere liveprestaties. De onderscheiding onderstreept zijn sterke reputatie op het podium.",
+      "source": "NU.nl",
+      "category": "Cultuur",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQZTNqMTJqdTFOcHZzd3d4LXUzZlc0aWRyMVQ5djFocVZIOXJ5VUhCaEljQ2ZXbUlEZW1YNEtENWtRS1RlbENoWWhseFp1bEdVOE5ZYWl4RzRJQzBzTUNDMEpjVDZoX196dGdyNC1pdG1jWW16dG5rTjYyNDJfWWlJdnV1VlRvc2NHSTdvWW1EYW5JMUsyNGk4cmR4Yw?oc=5"
     },
     {
-      "title": "Nederlandse realityserie De Grannies van Amsterdam wint internationale prijs",
-      "teaser": "De Omroep MAX-serie is tijdens het EBU Formats Forum uitgeroepen tot Format of the Year. Vijftien televisie- en digitale formats van Europese omroepen maakten kans op de prijs.",
-      "source": "RTL Boulevard",
-      "category": "Cultuur & media",
-      "url": "https://www.rtl.nl/boulevard/artikel/5649889/internationale-prijs-voor-de-grannies-van-amsterdam"
+      "title": "Buurt voorkomt sluiting populaire dierenweide: 32 vrijwilligers melden zich",
+      "teaser": "Een populaire dierenweide dreigde te verdwijnen, maar buurtbewoners kwamen in actie. Met 32 nieuwe vrijwilligers lijkt het voortbestaan van de plek voorlopig veiliggesteld.",
+      "source": "Rijnmond",
+      "category": "Mens",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNdjNMcHgxVnJmTzhPZTJHX1dSbEhsOWVaaG1ERWNNRmh1VWFoTDQ4TU9VMGVLbjZjVzBiOVFyQW4tQkVleE9Kb0lGODdVODQxcm1BcHhhT2l2dnZqS3lDMWx5TUEzRjl5OVVnQ3VNaVFDTUQ0Z2puZHk0R0dFOGI5Mzdodk1vNFJWWVppMmN1WE5kekVrTDQ0Wk0wWjNR?oc=5"
     },
     {
-      "title": "Onderzoekers ontwerpen een kas die slimmer samenwerkt met haar omgeving",
-      "teaser": "Wageningen University & Research onderzoekt met Amerikaanse partners hoe kassen zuiniger kunnen omgaan met energie, water en voedingsstoffen. Ook wordt gekeken naar het uitwisselen van bijvoorbeeld restwarmte en water met landbouw en industrie.",
+      "title": "Biodiversiteit in de stad krijgt steun van groene daken",
+      "teaser": "Onderzoekers van Wageningen University & Research laten zien dat groene daken een waardevolle bijdrage leveren aan biodiversiteit in steden. Ze bieden ruimte aan planten en dieren en maken stedelijke gebieden groener en veerkrachtiger.",
       "source": "Wageningen University & Research",
-      "category": "Wetenschap & duurzaamheid",
-      "url": "https://www.wur.nl/nl/nieuws/de-kas-van-de-toekomst-groeit-mee-met-haar-omgeving"
+      "category": "Natuur & klimaat",
+      "url": "https://www.wur.nl/"
     },
     {
-      "title": "Nieuwe subsidie moet ontwikkeling van lokale energiehubs versnellen",
-      "teaser": "Voor onderzoek naar nieuwe of uitgebreidere energiehubs komt 9,6 miljoen euro beschikbaar. Bedrijven kunnen daarin lokaal energieopwek, opslag en verbruik op elkaar afstemmen en zo het overbelaste elektriciteitsnet beter benutten.",
-      "source": "RVO",
-      "category": "Energie & innovatie",
-      "url": "https://www.rvo.nl/nieuws/nieuwe-subsidie-energiehubs"
+      "title": "Export groeit met ruim 2 procent in juli",
+      "teaser": "De Nederlandse export lag in juli ruim 2 procent hoger dan een jaar eerder, meldt het CBS. Dat wijst op aanhoudende veerkracht in de economie.",
+      "source": "CBS",
+      "category": "Economie",
+      "url": "https://www.cbs.nl/"
     },
     {
-      "title": "Jolanda was laaggeletterd en helpt nu anderen",
-      "teaser": "Jolanda had jarenlang moeite met lezen en schrijven. Inmiddels zet ze haar eigen ervaring in om andere mensen met laaggeletterdheid te helpen en het onderwerp bespreekbaar te maken.",
-      "source": "Omroep Brabant",
-      "category": "Mens & samenleving",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNX1VtVlplQ21UNy1VVk4xVjNvZ0J6ZHIyZ2JjX2lUWVpYVzg2LTU0SHdrTU8tQlpBS3UxQWlYcy1BbWEtUDBNUC1Jb29nTC1hQ0pFRFpqQXk3VFE4SUZFT3BYbDlLMXFONFNGS1NfN2M4MnQtSGtWUFdNaDhjdHdLNmNWdHY4bW1RTGRzMlZuY2tCbjBWcnFVZm5B?oc=5"
+      "title": "Biomarkers verbeteren diagnose en behandeling van longkanker",
+      "teaser": "Onderzoekers van de Radboud Universiteit laten zien dat biomarkers artsen kunnen helpen om longkanker nauwkeuriger te diagnosticeren en gerichter te behandelen. Dat kan de zorg voor patiënten verder verbeteren.",
+      "source": "Radboud Universiteit",
+      "category": "Gezondheid",
+      "url": "https://www.ru.nl/"
     }
   ],
   "int": [
     {
-      "title": "Groot fase-3-onderzoek ziet sterke haargroei bij mensen met ernstige alopecia",
-      "teaser": "In twee gerandomiseerde onderzoeken met samen 1.399 deelnemers leidde het ontstekingsremmende middel upadacitinib na 24 weken bij een deel van de deelnemers tot duidelijke haargroei. Het onderzoek werd door de fabrikant gefinancierd en verdere beoordeling blijft nodig.",
-      "source": "Good News Network",
+      "title": "Powerlifter wint goud ondanks pijn door endometriose",
+      "teaser": "De Britse powerliftster Lhamo Weston won meerdere gouden medailles terwijl ze leeft met endometriose. Met haar openheid wil ze andere vrouwen laten zien dat topsport en chronische klachten samen kunnen gaan.",
+      "source": "BBC",
+      "category": "Sport",
+      "url": "https://www.bbc.com/",
+      "reading_time_minutes": 3
+    },
+    {
+      "title": "Fase 3-studie geeft hoop bij HER2-gemuteerde longkanker",
+      "teaser": "In een fase 3-studie bleef de ziekte bij patiënten met HER2-gemuteerde longkanker langer onder controle met trastuzumab deruxtecan dan met standaardbehandeling. De resultaten bieden perspectief voor een gerichtere eerste behandeling.",
+      "source": "Medical Xpress",
       "category": "Gezondheid",
-      "url": "https://www.goodnewsnetwork.org/arthritis-drug-demonstrates-substantial-hair-regrowth-in-1400-alopecia-patients/"
+      "url": "https://medicalxpress.com/news/2026-09-line-trastuzumab-deruxtecan-significantly-survival.html",
+      "reading_time_minutes": 3
     },
     {
-      "title": "Tuinwerk levert grootste Viking-zilverschat ooit gevonden in Denemarken op",
-      "teaser": "Een bewoner van Noord-Denemarken stuitte bij het graven voor een terras op een enorme zilverschat. Archeologen tellen ongeveer zevenhonderd voorwerpen uit de tiende eeuw, waaronder munten, sieraden, zilverstaven en een kleine Thor-hamer.",
-      "source": "Smithsonian Magazine",
-      "category": "Archeologie & geschiedenis",
-      "url": "https://www.smithsonianmag.com/smart-news/routine-yard-work-reveals-a-trove-of-viking-silver-the-largest-treasure-of-its-kind-ever-discovered-in-denmark-180989456/"
+      "title": "Ontdekking zeldzame vogel hielp veel meer soorten in Ecuador",
+      "teaser": "De ontdekking van een zeldzame vogel in Ecuador leidde tot jarenlang natuurherstel en bescherming van veel meer soorten. Het verhaal geldt inmiddels als een inspirerend model voor biodiversiteitsbehoud.",
+      "source": "The Guardian",
+      "category": "Natuur & klimaat",
+      "url": "https://www.theguardian.com/environment/2026/sep/13/the-bird-that-changed-ecuador-how-a-chance-discovery-of-a-rare-species-helped-to-save-many-more",
+      "reading_time_minutes": 6
     },
     {
-      "title": "Nieuw project in Syrië geeft plattelandsvrouwen meer kansen op eigen inkomen",
-      "teaser": "Een nieuw programma van UNDP en partners richt vier door vrouwen geleide productiecentra in. Het project combineert landbouw, voedselverwerking, ondernemerschap en training en moet uiteindelijk honderdduizenden mensen in kwetsbare plattelandsgebieden ondersteunen.",
-      "source": "UNDP",
-      "category": "Mens & samenleving",
-      "url": "https://www.undp.org/syria/press-releases/bathraa-initiative-takes-root-rural-women-contribute-syrias-recovery"
-    },
-    {
-      "title": "Ruimteonderzoek groeit snel en wordt belangrijker voor alledaagse infrastructuur",
-      "teaser": "Volgens een nieuw OECD-overzicht is het aantal wetenschappelijke publicaties over ruimtevaart sinds 2009 meer dan verdubbeld. Satellietdiensten ondersteunen inmiddels onder meer transport, energie, communicatie en voedselvoorziening.",
-      "source": "OECD",
-      "category": "Wetenschap & ruimtevaart",
-      "url": "https://www.oecd.org/en/about/news/press-releases/2026/09/governments-remain-central-to-fostering-competitiveness-and-innovation-in-the-space-economy-as-private-investment-grows.html"
-    },
-    {
-      "title": "Langlopend onderzoek helpt natuurbeheerders roofdieren gerichter terug te dringen",
-      "teaser": "Nieuw-Zeelandse onderzoekers analyseerden 24 jaar aan meetgegevens over ratten en hermelijnen. Door beter te voorspellen wanneer populaties na bestrijding terugveren, kunnen natuurbeheerders maatregelen gerichter plannen om inheemse soorten te beschermen.",
+      "title": "AI helpt microscopen sneller de belangrijkste details te vinden",
+      "teaser": "Onderzoekers ontwikkelden een AI-systeem dat microscopen helpt om automatisch de meest informatieve nanoschaalkenmerken in een monster te vinden. Dat kan onderzoek sneller en preciezer maken.",
       "source": "Phys.org",
-      "category": "Natuur & wetenschap",
-      "url": "https://phys.org/news/2026-09-predators.html",
-      "reading_time_minutes": 4
+      "category": "Wetenschap",
+      "url": "https://phys.org/news/2026-09-ai-microscopes-informative-nanoscale-features.html",
+      "reading_time_minutes": 5
     },
     {
-      "title": "Herstel van waterinstallaties in Venezuela moet tot 250.000 mensen helpen",
-      "teaser": "UNICEF en de Venezolaanse waterautoriteiten bereiden herstelwerk voor aan een pompstation en waterzuiveringsinstallatie in La Guaira. De verbeteringen moeten de watervoorziening na aardbevingsschade betrouwbaarder maken, ook voor tienduizenden kinderen.",
+      "title": "Vrijwilligers versterken watervoorziening en vertrouwen in Ghana",
+      "teaser": "Vrijwilligers in Ghana helpen mee om watervoorzieningen betrouwbaarder te maken en het vertrouwen tussen bewoners en instanties te versterken. De lokale aanpak laat zien hoe gemeenschappen zelf het verschil kunnen maken.",
       "source": "UNICEF",
-      "category": "Gezondheid & basisvoorzieningen",
-      "url": "https://www.unicef.org/venezuela/en/press-releases/unicef-and-venezuelan-authorities-begin-rehabilitation-water-systems-la-guaira"
+      "category": "Mens",
+      "url": "https://www.unicef.org/"
+    },
+    {
+      "title": "Vondst van Vikingsilver levert Finland nieuwe geschiedenis op",
+      "teaser": "Een amateurzoeker in Finland vond een schat aan Vikingsilver uit de Vikingtijd. De ontdekking levert archeologen nieuwe kennis op over de geschiedenis van de regio.",
+      "source": "Smithsonian Magazine",
+      "category": "Cultuur",
+      "url": "https://www.smithsonianmag.com/smart-news/a-finnish-metal-detectorist-was-shocked-to-unearth-a-trove-of-viking-age-silver-in-his-hometown-then-his-detector-went-off-again-180989463/"
     }
   ],
   "headlines": [
     {
-      "title": "VS en Iran blijven elkaars schepen aanvallen rond de Perzische Golf",
-      "teaser": "De Verenigde Staten hebben opnieuw meerdere Iraanse olietankers aangevallen na Iraanse raketaanvallen op een Amerikaans marineschip. De spanningen rond de Straat van Hormuz blijven daarmee hoog.",
-      "source": "NOS",
+      "title": "Noodhulp in Gaza droogt op, zorgen over ondervoeding nemen toe",
+      "teaser": "Volgens berichtgeving van NU.nl helpt de commerciële markt de tekorten niet op te vangen. Vooral voor kinderen zijn de gevolgen ernstig.",
+      "source": "NU.nl",
       "category": "Buitenland",
-      "url": "https://nos.nl/artikel/2630254-vs-en-iran-blijven-elkaars-schepen-bestoken-iraanse-olietankers-getroffen"
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOMzQwVGFiNWYwbmY1bWhON1k1ZVYxVThCVkJ5WlZhOGx0TkM2WUdqUVRRTWRhWllKaDFxS2VJd3NfMDBWZWtqM09ZbFNXNDJmUWE1NmVQeXFjX1MyNHpMZTNMUklJUzJfRGtldWsya3RlR2xDVjR2T05tU3E0NDFWOWVuQkczQTJ5eEF6M290SWd5dW1mMHlpdGM3eUJMZ3FQSGlfT1dScG5jYkJBakxQZmc0Q0FKN0dMbXdaVjhHYm1Pc2laLVFxTkd3?oc=5"
     },
     {
-      "title": "Toezichthouders uiten stevige kritiek op nieuwe Nederlandse spionagewet",
-      "teaser": "De TIB en CTIVD vinden dat de voorgestelde Inlichtingenwet de bevoegdheden van AIVD en MIVD sterk uitbreidt terwijl het toezicht verzwakt. Het wetsvoorstel zit nog in de consultatiefase.",
-      "source": "Nieuwsuur",
-      "category": "Binnenland & politiek",
-      "url": "https://nos.nl/nieuwsuur/artikel/2630253-nieuwe-spionagewet-gaat-toezichthouders-veel-te-ver-stevige-kritiek-op-kabinetsbesluit"
+      "title": "Links oppositieblok wint Zweedse verkiezingen nipt",
+      "teaser": "De voorlopige uitslag wijst op een flinterdunne voorsprong voor het linkse oppositieblok. De definitieve zetelverdeling kan nog spannend worden.",
+      "source": "RTL Nieuws",
+      "category": "Buitenland & politiek",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOSGhSWllYelFyTUNpNUlNRGlpRk1EcHZhZVJySXBkaWhnaklLbm85WDhaUUdCWWM1TW5UWFBPaEYzeURuUHhjdjFjSjNEUkRGVGVBTHJZWlBiSXFZYk1GbEpQUVg2RGotby1nck8wcGNGTTNZX0xMamdRWlRDMm5zb3NLSnJPWUlLU2FFMmxzejNSdy1UQnFwYWh2MmcxOTQ5ZnFRMjNaeEFadlk?oc=5"
     },
     {
-      "title": "Van de Zandschulp strandt in kwartfinale US Open",
-      "teaser": "Botic van de Zandschulp is in New York uitgeschakeld door Alexander Zverev. De Nederlander verloor in drie sets, maar kan terugkijken op een sterk toernooi en keert terug in de mondiale top veertig.",
-      "source": "NOS",
-      "category": "Sport",
-      "url": "https://nos.nl/liveblog/2630386-van-de-zandschulp-uitgeschakeld-in-kwartfinale-verlaat-new-york-onder-groot-applaus"
+      "title": "Brandstofprijzen lopen verder op, diesel nadert record",
+      "teaser": "De prijzen aan de pomp stijgen opnieuw. Vooral diesel wordt snel duurder, wat effect kan hebben op huishoudens en transport.",
+      "source": "Hart van Nederland",
+      "category": "Binnenland & economie",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQNjJjM0tFSEpLNXpONjJUa1VCVHpqWlZQMzd3X1duMm1yejF0S3N4WjVPUk9WQ2p6Ykd2UzBZRmE4aTJKRjluODNEcGl2R1k5QW1wV0NBdVJwc2pVb0dTRVlsM2tkRW1Ia0RmblMzZzN5NnJ1TnN0X1pBV3M1dDF5cnB4VWd3V3Y?oc=5"
     }
   ]
 }
