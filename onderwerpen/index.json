@@ -3,9 +3,9 @@
     "label": "Cultuur",
     "slug": "cultuur",
     "url": "/cultuur/",
-    "nl_count": 7,
+    "nl_count": 6,
     "int_count": 2,
-    "latest": "2026-09-17"
+    "latest": "2026-09-14"
   },
   {
     "label": "Economie",
@@ -27,7 +27,7 @@
     "label": "Gezondheid",
     "slug": "gezondheid",
     "url": "/gezondheid/",
-    "nl_count": 6,
+    "nl_count": 8,
     "int_count": 16,
     "latest": "2026-09-17"
   },
@@ -43,7 +43,7 @@
     "label": "Natuur & klimaat",
     "slug": "natuur-en-klimaat",
     "url": "/natuur-en-klimaat/",
-    "nl_count": 13,
+    "nl_count": 12,
     "int_count": 17,
     "latest": "2026-09-17"
   },
