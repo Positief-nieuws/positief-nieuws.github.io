@@ -7,11 +7,26 @@
   },
   "nl": [
     {
-      "title": "AI kan kreupelheid bij paarden eerder helpen herkennen",
-      "teaser": "Onderzoek van de Universiteit Utrecht laat zien hoe AI bewegingsdata van paarden kan gebruiken om kreupelheid en andere gezondheidsproblemen sneller te signaleren. Dat kan dierenartsen en eigenaren helpen het welzijn van paarden beter te bewaken.",
-      "source": "Universiteit Utrecht",
-      "category": "Wetenschap",
-      "url": "https://www.uu.nl/nieuws/is-mijn-paard-kreupel-ai-kan-helpen-bij-het-vinden-van-het-antwoord"
+      "title": "Vrouwenvoetbal groeit door gerichte investeringen in spelers, stadions en gezondheid",
+      "teaser": "Clubs in Engeland en de Verenigde Staten investeren steeds meer in eigen stadions, trainingscomplexen en vrouwengezondheid. De aanpak laat zien hoe serieus investeren het vrouwenvoetbal sportief en commercieel verder kan brengen.",
+      "source": "NOS",
+      "category": "Sport",
+      "url": "https://nos.nl/artikel/2631231-zo-maken-engeland-en-de-vs-vrouwenvoetbal-groot-van-eigen-stadion-tot-beautyruimtes",
+      "reading_time_minutes": 4
+    },
+    {
+      "title": "Longkankerpatiënten leven gemiddeld vijf maanden langer door klachtenapp",
+      "teaser": "Onderzoek van Radboudumc en Amsterdam UMC laat zien dat longkankerpatiënten die hun klachten actief bijhouden in een app gemiddeld vijf maanden langer leven. Eerder ingrijpen bij klachten lijkt daarbij een belangrijk verschil te maken.",
+      "source": "Radboudumc",
+      "category": "Gezondheid",
+      "url": "https://www.radboudumc.nl/nieuws/2026/longkankerpatienten-leven-langer-door-bijhouden-van-klachten"
+    },
+    {
+      "title": "Nieuwe proeffabriek moet duurzame bouwmaterialen sneller naar de praktijk brengen",
+      "teaser": "TNO heeft in Zoetermeer BioBuilt geopend, een proeffabriek waar bedrijven circulaire en biobased bouwmaterialen kunnen ontwikkelen, testen en opschalen. Reststromen als afvalhout en plantvezels kunnen zo sneller als bouwmateriaal worden toegepast.",
+      "source": "TNO",
+      "category": "Energie & innovatie",
+      "url": "https://www.tno.nl/nl/newsroom/2026/09/minister-opent-tno-biobuilt-proeffabriek/"
     },
     {
       "title": "Slimme radar moet vleermuizen beter beschermen bij windturbines",
@@ -21,33 +36,18 @@
       "url": "https://www.tno.nl/nl/newsroom/insights/2026/09/slimme-radar-beschermt-vleermuizen/"
     },
     {
-      "title": "Zeldzaam fragment van de Odyssee ontdekt in Utrecht",
-      "teaser": "In de Universiteitsbibliotheek Utrecht is een perkamentfragment uit de derde of vierde eeuw ontdekt met verzen uit Homerus’ Odyssee. Wereldwijd zijn slechts enkele tientallen vergelijkbare fragmenten bekend.",
+      "title": "AI kan kreupelheid bij paarden helpen herkennen",
+      "teaser": "Onderzoek van de Universiteit Utrecht laat zien dat AI subtiele bewegingspatronen bij paarden kan herkennen die voor het menselijk oog moeilijk zichtbaar zijn. Dat kan dierenartsen helpen gezondheidsproblemen eerder en nauwkeuriger te signaleren.",
       "source": "Universiteit Utrecht",
-      "category": "Cultuur",
-      "url": "https://www.uu.nl/nieuws/vierde-eeuws-fragment-van-de-odyssee-ontdekt-in-universiteitsbibliotheek-utrecht"
+      "category": "Wetenschap",
+      "url": "https://www.uu.nl/nieuws/is-mijn-paard-kreupel-ai-kan-helpen-bij-het-vinden-van-het-antwoord"
     },
     {
-      "title": "Vrouwenvoetbal groeit door gerichte investeringen in spelers en stadions",
-      "teaser": "Clubs in Engeland en de Verenigde Staten investeren steeds meer in eigen stadions, trainingscomplexen en vrouwengezondheid. De NOS laat zien hoe die aanpak het vrouwenvoetbal professioneler en commercieel sterker maakt.",
-      "source": "NOS",
-      "category": "Sport",
-      "url": "https://nos.nl/artikel/2631231-zo-maken-engeland-en-de-vs-vrouwenvoetbal-groot-van-eigen-stadion-tot-beautyruimtes",
-      "reading_time_minutes": 4
-    },
-    {
-      "title": "The Green Village wil duurzame innovaties sneller van proef naar praktijk brengen",
-      "teaser": "Het Delftse fieldlab bestaat 12,5 jaar en presenteerde nieuwe adviezen om energie-innovaties sneller breed toe te passen. Daarbij ligt de nadruk niet alleen op techniek, maar ook op beleid, regelgeving en praktische opschaling.",
-      "source": "The Green Village",
-      "category": "Energie & innovatie",
-      "url": "https://thegreenvillage.tudelftcampus.nl/nieuws/125-jaar-the-green-village"
-    },
-    {
-      "title": "Onderzoek laat zien hoe groene daken meer biodiversiteit kunnen dragen",
-      "teaser": "Wagenings onderzoek laat zien dat goed ontworpen groene daken verrassend diverse gemeenschappen van planten, insecten en bodemorganismen kunnen ondersteunen. Vooral bloemaanbod en de inrichting van het dak blijken belangrijk.",
-      "source": "Wageningen University & Research",
-      "category": "Natuur & klimaat",
-      "url": "https://frontend.prod.wur.hosted-temp.com/nl/activiteit/biodiversiteit-de-stad-successie-van-groene-daken"
+      "title": "Onderzoekers ontrafelen hormonale oorzaak van menstruele migraine",
+      "teaser": "Onderzoekers van het LUMC en Erasmus MC vonden een duidelijk ander oestrogeenpatroon bij vrouwen met menstruele migraine. De ontdekking biedt nieuwe aanknopingspunten voor behandelingen die aanvallen rond de menstruatie kunnen voorkomen.",
+      "source": "LUMC",
+      "category": "Gezondheid",
+      "url": "https://www.lumc.nl/actueel/2026/hormonale-oorzaak-van-menstruele-migraine-ontrafeld/"
     }
   ],
   "int": [
