@@ -1857,25 +1857,6 @@
             ]
           ),
 
-        articleSlug:
-          firstValue(
-            article,
-            [
-              "article_slug",
-              "articleSlug"
-            ]
-          ),
-
-        articleReadingTime:
-          firstValue(
-            article,
-            [
-              "article_reading_time_minutes",
-              "articleReadingTimeMinutes",
-              "articleReadingTime"
-            ]
-          ),
-
         image:
           firstValue(
             article,
@@ -2199,9 +2180,7 @@
 
       const readingTime =
         readingTimeLabel(
-          article.articleSlug
-            ? article.articleReadingTime
-            : article.readingTime
+          article.readingTime
         );
 
       if (readingTime) {
@@ -2271,39 +2250,18 @@
     }
 
 
-    function ownArticleUrl(article, editionDate) {
-
-      const slug = String(article.articleSlug || "").trim();
-      const date = String(editionDate || "").trim();
-
-      if (
-        !slug ||
-        !/^\d{4}-\d{2}-\d{2}$/.test(date) ||
-        !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)
-      ) {
-        return "";
-      }
-
-      return `/artikelen/${date}/${slug}/`;
-    }
-
-
     function renderCard(
       rawArticle,
       type = "nl",
-      index = 0,
-      editionDate = ""
+      index = 0
     ) {
 
       const article = normalizeArticle(rawArticle);
       const card = document.createElement("article");
       card.className = "article-row";
 
-      const ownUrl = type !== "headlines"
-        ? ownArticleUrl(article, editionDate)
-        : "";
-      const href = safeUrl(ownUrl || article.url);
-      const externalAttrs = href !== "#" && !ownUrl
+      const href = safeUrl(article.url);
+      const externalAttrs = href !== "#"
         ? 'target="_blank" rel="noopener noreferrer"'
         : "";
 
@@ -2336,11 +2294,6 @@
       data,
       type
     ) {
-
-      const editionDate =
-        data?.meta?.edition_date
-        || data?.edition?.date
-        || "";
 
       const items =
         getSection(
@@ -2385,7 +2338,7 @@
           .slice(0, 6)
           .forEach(
             (item, index) => {
-              grid.appendChild(renderCard(item, type, index, editionDate));
+              grid.appendChild(renderCard(item, type, index));
             }
           );
 
@@ -2419,7 +2372,7 @@
           .slice(0, 6)
           .forEach(
             (item, index) => {
-              grid.appendChild(renderCard(item, type, index, editionDate));
+              grid.appendChild(renderCard(item, type, index));
             }
           );
 
@@ -2453,7 +2406,7 @@
           .slice(0, 3)
           .forEach(
             (item, index) => {
-              grid.appendChild(renderCard(item, type, index, editionDate));
+              grid.appendChild(renderCard(item, type, index));
             }
           );
 
