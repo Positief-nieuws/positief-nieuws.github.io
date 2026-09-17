@@ -13,7 +13,6 @@ from pathlib import Path
 SITE_URL = "https://positief-nieuws.nl"
 EDITIONS_DIR = Path("edities")
 TOPICS_DIR = Path("onderwerpen")
-ARTICLES_DIR = Path("artikelen")
 TOPIC_MANIFEST = TOPICS_DIR / "index.json"
 NEWS_PATH = Path("nieuws.json")
 SITEMAP_PATH = Path("sitemap.xml")
@@ -96,54 +95,14 @@ def items(data, key):
     return value if isinstance(value, list) else []
 
 
-def own_article_slug(item):
-    return str(item.get("article_slug") or item.get("articleSlug") or "").strip()
-
-
-def own_article_paragraphs(item):
-    body = item.get("article_body") or item.get("articleBody") or []
-    if isinstance(body, str):
-        return [part.strip() for part in re.split(r"\n\s*\n", body) if part.strip()]
-    if isinstance(body, list):
-        return [str(part).strip() for part in body if str(part).strip()]
-    return []
-
-
-def own_article_why(item):
-    return str(item.get("why_it_matters") or item.get("whyItMatters") or "").strip()
-
-
-def has_own_article(item):
-    return bool(own_article_slug(item) and own_article_paragraphs(item) and own_article_why(item))
-
-
-def own_article_url(item, date_value):
-    slug = own_article_slug(item)
-    if not slug or not date_value:
-        return ""
-    return f"/artikelen/{date_value}/{slug}/"
-
-
-def destination_url(item, date_value=None):
-    if date_value and has_own_article(item):
-        return own_article_url(item, date_value), False
-    return str(item.get("url") or item.get("link") or "#"), True
-
-
 def reading_time(item):
-    if own_article_slug(item):
-        value = (
-            item.get("article_reading_time_minutes")
-            or item.get("articleReadingTimeMinutes")
-        )
-    else:
-        value = (
-            item.get("reading_time_minutes")
-            or item.get("readingTimeMinutes")
-            or item.get("reading_time")
-            or item.get("readingTime")
-            or item.get("leestijd")
-        )
+    value = (
+        item.get("reading_time_minutes")
+        or item.get("readingTimeMinutes")
+        or item.get("reading_time")
+        or item.get("readingTime")
+        or item.get("leestijd")
+    )
     if value is None:
         return ""
     match = re.search(r"\d+", str(value))
@@ -205,49 +164,6 @@ def validate_positive_articles(data, source_name="nieuws.json"):
 
             if raw_label != canonical:
                 legacy_labels.add((raw_label, canonical))
-
-    own_articles_required = bool((data.get("meta") or {}).get("own_articles"))
-    for section in ("nl", "int"):
-        for idx, item in enumerate(items(data, section)[:6], start=1):
-            fields_present = bool(
-                own_article_slug(item)
-                or own_article_paragraphs(item)
-                or own_article_why(item)
-            )
-            if not (own_articles_required or fields_present):
-                continue
-
-            title = str(item.get("title") or item.get("headline") or f"artikel {idx}")
-            slug = own_article_slug(item)
-            paragraphs = own_article_paragraphs(item)
-            why = own_article_why(item)
-            source_url = str(item.get("url") or item.get("link") or "").strip()
-
-            if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", slug):
-                errors.append(
-                    f"{source_name}: {section}[{idx}] '{title}' heeft geen geldige article_slug."
-                )
-            if len(paragraphs) < 2:
-                errors.append(
-                    f"{source_name}: {section}[{idx}] '{title}' heeft minimaal 2 article_body-alinea's nodig."
-                )
-            body_words = len(re.findall(r"\b[\wÀ-ÿ'-]+\b", " ".join(paragraphs), flags=re.UNICODE))
-            if body_words < 120:
-                errors.append(
-                    f"{source_name}: {section}[{idx}] '{title}' heeft te weinig eigen artikeltekst ({body_words} woorden; minimaal 120)."
-                )
-            if body_words > 650:
-                errors.append(
-                    f"{source_name}: {section}[{idx}] '{title}' heeft te veel eigen artikeltekst ({body_words} woorden; maximaal 650)."
-                )
-            if len(re.findall(r"\b[\wÀ-ÿ'-]+\b", why, flags=re.UNICODE)) < 20:
-                errors.append(
-                    f"{source_name}: {section}[{idx}] '{title}' heeft een te korte why_it_matters."
-                )
-            if not re.match(r"^https?://", source_url):
-                errors.append(
-                    f"{source_name}: {section}[{idx}] '{title}' mist een geldige externe bron-URL."
-                )
 
     if errors:
         raise ValueError("\n".join(errors))
@@ -379,20 +295,18 @@ def category_meta_html(item):
 def article_html(item, date_value=None, show_date=False):
     title = esc(item.get("title") or item.get("headline") or "")
     teaser = esc(item.get("teaser") or item.get("summary") or item.get("description") or "")
-    raw_url, is_external = destination_url(item, date_value)
-    url = esc(raw_url)
-    link_attrs = ' target="_blank" rel="noopener noreferrer"' if is_external and raw_url != "#" else ""
+    url = esc(item.get("url") or item.get("link") or "#")
     date_html = ""
     if show_date and date_value:
         date_html = f'<p class="date" style="margin:0 0 7px;text-transform:none;letter-spacing:0;font-weight:700">{esc(fmt_date_short(date_value))}</p>'
     return f"""<article class="article">
       <div>
         {date_html}
-        <h3><a href="{url}"{link_attrs}>{title}</a></h3>
+        <h3><a href="{url}" target="_blank" rel="noopener noreferrer">{title}</a></h3>
         {f'<p class="teaser">{teaser}</p>' if teaser else ''}
         {category_meta_html(item)}
       </div>
-      <a class="arrow" href="{url}"{link_attrs} aria-label="Lees {title}">↗</a>
+      <a class="arrow" href="{url}" target="_blank" rel="noopener noreferrer" aria-label="Lees {title}">↗</a>
     </article>"""
 
 
@@ -414,8 +328,8 @@ def render_edition(data, date_value):
     desc = description(data, date_text)
     title = f"Positief nieuws · {date_text}"
 
-    nl_html = "\n".join(article_html(x, date_value) for x in items(data, "nl")[:6])
-    int_html = "\n".join(article_html(x, date_value) for x in items(data, "int")[:6])
+    nl_html = "\n".join(article_html(x) for x in items(data, "nl")[:6])
+    int_html = "\n".join(article_html(x) for x in items(data, "int")[:6])
     head_html = "\n".join(_headline_html(x, i) for i, x in enumerate(items(data, "headlines")[:3], 1))
 
     schema = json.dumps({
@@ -531,98 +445,6 @@ def render_topic_page(topic):
         sections.append(f'<section class="section"><div class="shell"><div class="heading"><p class="kicker">Engelstalig</p><span class="count">{story_count(len(topic["int"]))}</span></div><p class="note">De bronartikelen in dit blok zijn Engelstalig.</p>{int_html}</div></section>')
     schema = json.dumps({"@context":"https://schema.org","@type":"CollectionPage","name":f"{label} · Positief nieuws","description":desc,"url":canonical,"isPartOf":{"@type":"WebSite","name":"Positief nieuws","url":SITE_URL+"/"}}, ensure_ascii=False)
     return f"""<!DOCTYPE html><html lang="nl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>{esc(label)} | Positief nieuws</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{canonical}"><meta property="og:title" content="{esc(label)} · Positief nieuws"><meta property="og:description" content="{esc(desc)}"><meta property="og:type" content="website"><meta property="og:url" content="{canonical}"><meta name="twitter:card" content="summary"><meta name="theme-color" content="#17382b"><script type="application/ld+json">{schema}</script><style>{BASE_CSS}.crumb{{margin-top:12px;color:var(--muted);font-size:.75rem}}.crumb a{{color:var(--green-dark)}}</style></head><body>{header_html('topics')}<main><section class="hero"><div class="shell"><p class="kicker">Onderwerp</p><h1>{esc(label)}<b>.</b></h1><p class="lead">{esc(desc)}</p><p class="crumb"><a href="/onderwerpen/">← Alle onderwerpen</a></p><div class="rule"></div></div></section>{''.join(sections)}</main><footer>Positief nieuws · Dit gebeurt ook.</footer>{analytics_html({'page_type':'topic','topic':slug})}</body></html>"""
-
-
-def render_own_article(item, date_value):
-    title_raw = str(item.get("title") or item.get("headline") or "").strip()
-    title = esc(title_raw)
-    teaser_raw = str(item.get("teaser") or item.get("summary") or item.get("description") or "").strip()
-    teaser = esc(teaser_raw)
-    slug = own_article_slug(item)
-    canonical = f"{SITE_URL}/artikelen/{date_value}/{slug}/"
-    source = str(item.get("source") or item.get("bron") or "de oorspronkelijke bron").strip()
-    source_url = str(item.get("url") or item.get("link") or "").strip()
-    category = canonical_category(category_label(item)) or category_label(item)
-    category_slug = slugify_category(category)
-    paragraphs = own_article_paragraphs(item)
-    why = own_article_why(item)
-    rt = reading_time(item)
-
-    body_html = "\n".join(f"<p>{esc(paragraph)}</p>" for paragraph in paragraphs)
-    meta_bits = [fmt_date(date_value)]
-    if category:
-        meta_bits.append(category)
-    if rt:
-        meta_bits.append(rt)
-    meta_html = " · ".join(esc(x) for x in meta_bits if x)
-
-    desc = teaser_raw or (paragraphs[0] if paragraphs else title_raw)
-    if len(desc) > 158:
-        desc = desc[:157].rstrip(" ,;:") + "…"
-
-    schema = json.dumps({
-        "@context": "https://schema.org",
-        "@type": "NewsArticle",
-        "headline": title_raw,
-        "description": desc,
-        "url": canonical,
-        "mainEntityOfPage": canonical,
-        "datePublished": date_value,
-        "dateModified": date_value,
-        "author": {"@type": "Organization", "name": "Positief nieuws", "url": SITE_URL + "/"},
-        "publisher": {"@type": "Organization", "name": "Positief nieuws", "url": SITE_URL + "/"},
-        "isBasedOn": source_url,
-        "citation": source_url,
-    }, ensure_ascii=False)
-
-    article_css = r'''
-.story-hero{padding:50px 0 28px}.story-hero:after{display:none}.story-kicker{margin:0 0 10px;color:var(--green);font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.story-title{margin:0;max-width:720px;font-size:clamp(2.25rem,5vw,3.6rem);line-height:1.02;letter-spacing:-.045em}.story-intro{max-width:690px;margin:20px 0 0;color:#313934;font-size:1.08rem;line-height:1.55}.story-meta{margin:18px 0 0;color:var(--muted);font-size:.75rem}.story-meta a{color:var(--green);text-underline-offset:2px}.story-content{padding:26px 0 68px}.story-copy{font-size:1rem;line-height:1.72}.story-copy p{margin:0 0 1.25em}.why-box{margin:34px 0;padding:24px 26px;border-left:3px solid var(--accent);background:#f8f3e8}.why-box h2{margin:0 0 10px;font-size:1.28rem;line-height:1.15}.why-box p{margin:0}.source-box{margin-top:40px;padding-top:24px;border-top:1px solid var(--line)}.source-box .source-label{margin:0 0 8px;color:var(--green);font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.source-box p{margin:0 0 12px;color:#3f4742;font-size:.88rem}.source-button{display:inline-flex;align-items:center;gap:6px;padding:10px 15px;border:1px solid rgba(31,91,69,.28);border-radius:999px;color:var(--green-dark);font-size:.82rem;font-weight:750;text-decoration:none}.source-button:hover{border-color:var(--accent)}.transparency-note{margin-top:20px;color:var(--muted);font-size:.76rem;line-height:1.5}.back-link{display:inline-block;margin-top:22px;color:var(--green-dark);font-size:.8rem;font-weight:700;text-decoration:none}.back-link:hover{text-decoration:underline}.story-rule{margin-top:28px;border-top:1px solid var(--line)}
-@media(max-width:760px){.story-hero{padding-top:38px}.story-content{padding-bottom:54px}.why-box{padding:20px 18px}.story-title{font-size:2.35rem}}
-'''
-
-    category_link = f'<a href="/{esc(category_slug)}/">{esc(category)}</a>' if category_slug else esc(category)
-    return f'''<!DOCTYPE html><html lang="nl"><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{title} | Positief nieuws</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{canonical}">
-<meta property="og:title" content="{title} · Positief nieuws"><meta property="og:description" content="{esc(desc)}"><meta property="og:type" content="article"><meta property="og:url" content="{canonical}"><meta name="twitter:card" content="summary"><meta name="theme-color" content="#17382b">
-<script type="application/ld+json">{schema}</script><style>{BASE_CSS}{article_css}</style></head><body>{header_html('')}
-<main><section class="story-hero"><div class="shell"><p class="story-kicker">{category_link}</p><h1 class="story-title">{title}</h1>{f'<p class="story-intro">{teaser}</p>' if teaser else ''}<p class="story-meta">{meta_html}</p><div class="story-rule"></div></div></section>
-<section class="story-content"><div class="shell"><article class="story-copy">{body_html}<aside class="why-box"><h2>Waarom dit ertoe doet</h2><p>{esc(why)}</p></aside><div class="source-box"><p class="source-label">Oorspronkelijke bron</p><p>Deze redactionele samenvatting is gebaseerd op een publicatie van <strong>{esc(source)}</strong>.</p><a class="source-button" href="{esc(source_url)}" target="_blank" rel="noopener noreferrer">Lees de oorspronkelijke publicatie bij {esc(source)} →</a><p class="transparency-note">Positief nieuws vat ontwikkelingen in eigen woorden samen en verwijst altijd naar de oorspronkelijke bron voor de volledige context.</p></div><a class="back-link" href="/edities/{date_value}/">← Terug naar de editie van {esc(fmt_date_short(date_value))}</a></article></div></section></main>
-<footer>Positief nieuws · Dit gebeurt ook.</footer>{analytics_html({'page_type':'article','article_slug':slug,'edition_date':date_value,'source':source})}</body></html>'''
-
-
-def write_article_pages(edition_records):
-    if ARTICLES_DIR.exists():
-        shutil.rmtree(ARTICLES_DIR)
-    ARTICLES_DIR.mkdir(parents=True, exist_ok=True)
-
-    built = []
-    for date_value, data in edition_records:
-        for section in ("nl", "int"):
-            for item in items(data, section)[:6]:
-                if not has_own_article(item):
-                    continue
-                slug = own_article_slug(item)
-                page_dir = ARTICLES_DIR / date_value / slug
-                page_dir.mkdir(parents=True, exist_ok=True)
-                (page_dir / "index.html").write_text(render_own_article(item, date_value), encoding="utf-8")
-                built.append((date_value, slug, item))
-                print(f"Gebouwd: {page_dir / 'index.html'}")
-
-    cards = []
-    for date_value, slug, item in sorted(built, key=lambda x: x[0], reverse=True):
-        cards.append(
-            f'<a class="archive-item" href="/artikelen/{date_value}/{esc(slug)}/">'
-            f'<span class="archive-date">{esc(fmt_date_short(date_value))}</span>'
-            f'<span class="archive-title">{esc(item.get("title") or "")}</span>'
-            f'<span class="archive-arrow">→</span></a>'
-        )
-    latest = max((x[0] for x in built), default=datetime.now().strftime("%Y-%m-%d"))
-    canonical = f"{SITE_URL}/artikelen/"
-    index_html = f'''<!DOCTYPE html><html lang="nl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Artikelen | Positief nieuws</title><meta name="description" content="Eigen redactionele samenvattingen van Positief nieuws, altijd met een link naar de oorspronkelijke bron."><link rel="canonical" href="{canonical}"><meta name="theme-color" content="#17382b"><style>{BASE_CSS}</style></head><body>{header_html('')}<main><section class="hero"><div class="shell"><p class="kicker">Verdieping</p><h1>Artikelen<b>.</b></h1><p class="lead">Eigen redactionele samenvattingen van ontwikkelingen uit de edities. Altijd met een duidelijke verwijzing naar de oorspronkelijke bron.</p><div class="rule"></div></div></section><section class="section"><div class="shell"><div class="archive-list">{''.join(cards) if cards else '<p class="empty">Nog geen eigen artikelen gepubliceerd.</p>'}</div></div></section></main><footer>Positief nieuws · Dit gebeurt ook.</footer>{analytics_html({'page_type':'articles'})}</body></html>'''
-    (ARTICLES_DIR / "index.html").write_text(index_html, encoding="utf-8")
-    print(f"Gebouwd: {ARTICLES_DIR / 'index.html'} ({len(built)} eigen artikelen)")
-    return built
 
 
 def load_previous_topic_slugs():
@@ -742,7 +564,6 @@ def build_site():
 
     topics = collect_topics(edition_records)
     write_topic_pages(topics)
-    own_articles = write_article_pages(edition_records)
 
     latest = max(dates) if dates else datetime.now().strftime("%Y-%m-%d")
     sitemap_urls = [
@@ -750,14 +571,11 @@ def build_site():
         (f"{SITE_URL}/over/", None),
         (f"{SITE_URL}/edities/", latest),
         (f"{SITE_URL}/onderwerpen/", latest),
-        (f"{SITE_URL}/artikelen/", latest),
     ]
     for date_value in sorted(dates, reverse=True):
         sitemap_urls.append((f"{SITE_URL}/edities/{date_value}/", date_value))
     for topic in topics.values():
         sitemap_urls.append((f"{SITE_URL}/{topic['slug']}/", topic["latest"]))
-    for date_value, slug, _item in own_articles:
-        sitemap_urls.append((f"{SITE_URL}/artikelen/{date_value}/{slug}/", date_value))
 
     sitemap_parts = []
     for loc, lastmod in sitemap_urls:
@@ -765,7 +583,7 @@ def build_site():
         sitemap_parts.append(f"  <url>\n    <loc>{loc}</loc>{lm}\n  </url>")
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "\n".join(sitemap_parts) + "\n</urlset>\n"
     SITEMAP_PATH.write_text(sitemap, encoding="utf-8")
-    print(f"Sitemap bijgewerkt met {len(sitemap_urls)} URL(s), {len(topics)} onderwerp-pagina's en {len(own_articles)} eigen artikelen.")
+    print(f"Sitemap bijgewerkt met {len(sitemap_urls)} URL(s), waarvan {len(topics)} onderwerp-pagina's.")
 
 
 def validate_current():
