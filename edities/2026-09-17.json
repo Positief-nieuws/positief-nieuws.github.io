@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "edition_date": "2026-09-17",
+    "generated_from": "kandidaten (6).json + actuele nieuwsselectie + directe-linkcontrole",
+    "title": "Positief nieuws",
+    "tagline": "Dit gebeurt ook."
+  },
+  "nl": [
+    {
+      "title": "AI kan kreupelheid bij paarden eerder helpen herkennen",
+      "teaser": "Onderzoek van de Universiteit Utrecht laat zien hoe AI bewegingsdata van paarden kan gebruiken om kreupelheid en andere gezondheidsproblemen sneller te signaleren. Dat kan dierenartsen en eigenaren helpen het welzijn van paarden beter te bewaken.",
+      "source": "Universiteit Utrecht",
+      "category": "Wetenschap",
+      "url": "https://www.uu.nl/nieuws/is-mijn-paard-kreupel-ai-kan-helpen-bij-het-vinden-van-het-antwoord"
+    },
+    {
+      "title": "Slimme radar moet vleermuizen beter beschermen bij windturbines",
+      "teaser": "TNO, Dopplium en RWE testen bij Eemshaven een radarsysteem dat vleermuizen in real time volgt. Daardoor zouden turbines alleen hoeven stil te staan wanneer er daadwerkelijk risico is voor vleermuizen.",
+      "source": "TNO",
+      "category": "Natuur & klimaat",
+      "url": "https://www.tno.nl/nl/newsroom/insights/2026/09/slimme-radar-beschermt-vleermuizen/"
+    },
+    {
+      "title": "Zeldzaam fragment van de Odyssee ontdekt in Utrecht",
+      "teaser": "In de Universiteitsbibliotheek Utrecht is een perkamentfragment uit de derde of vierde eeuw ontdekt met verzen uit Homerus’ Odyssee. Wereldwijd zijn slechts enkele tientallen vergelijkbare fragmenten bekend.",
+      "source": "Universiteit Utrecht",
+      "category": "Cultuur",
+      "url": "https://www.uu.nl/nieuws/vierde-eeuws-fragment-van-de-odyssee-ontdekt-in-universiteitsbibliotheek-utrecht"
+    },
+    {
+      "title": "Vrouwenvoetbal groeit door gerichte investeringen in spelers en stadions",
+      "teaser": "Clubs in Engeland en de Verenigde Staten investeren steeds meer in eigen stadions, trainingscomplexen en vrouwengezondheid. De NOS laat zien hoe die aanpak het vrouwenvoetbal professioneler en commercieel sterker maakt.",
+      "source": "NOS",
+      "category": "Sport",
+      "url": "https://nos.nl/artikel/2631231-zo-maken-engeland-en-de-vs-vrouwenvoetbal-groot-van-eigen-stadion-tot-beautyruimtes",
+      "reading_time_minutes": 4
+    },
+    {
+      "title": "The Green Village wil duurzame innovaties sneller van proef naar praktijk brengen",
+      "teaser": "Het Delftse fieldlab bestaat 12,5 jaar en presenteerde nieuwe adviezen om energie-innovaties sneller breed toe te passen. Daarbij ligt de nadruk niet alleen op techniek, maar ook op beleid, regelgeving en praktische opschaling.",
+      "source": "The Green Village",
+      "category": "Energie & innovatie",
+      "url": "https://thegreenvillage.tudelftcampus.nl/nieuws/125-jaar-the-green-village"
+    },
+    {
+      "title": "Onderzoek laat zien hoe groene daken meer biodiversiteit kunnen dragen",
+      "teaser": "Wagenings onderzoek laat zien dat goed ontworpen groene daken verrassend diverse gemeenschappen van planten, insecten en bodemorganismen kunnen ondersteunen. Vooral bloemaanbod en de inrichting van het dak blijken belangrijk.",
+      "source": "Wageningen University & Research",
+      "category": "Natuur & klimaat",
+      "url": "https://frontend.prod.wur.hosted-temp.com/nl/activiteit/biodiversiteit-de-stad-successie-van-groene-daken"
+    }
+  ],
+  "int": [
+    {
+      "title": "Geredde maanberen beginnen nieuw leven in Brits natuurpark",
+      "teaser": "Vijf maanberen die jarenlang op een galberenboerderij in Zuid-Korea leefden, zijn aangekomen bij hun nieuwe verblijf in Suffolk. Daar krijgen ze ruimte om te klimmen, zwemmen en rusten.",
+      "source": "BBC",
+      "category": "Natuur & klimaat",
+      "url": "https://www.bbc.co.uk/news/articles/cx3051l0r636o?at_medium=RSS&at_campaign=rss",
+      "reading_time_minutes": 2
+    },
+    {
+      "title": "Astronomen bevestigen jongste bekende planeet",
+      "teaser": "Astronomen hebben Elias 2-24 b bevestigd als de jongste bekende planeet: minder dan een miljoen jaar oud. De ontdekking geeft onderzoekers een zeldzame blik op een planeet die nog midden in haar vormingsproces zit.",
+      "source": "NASA",
+      "category": "Wetenschap",
+      "url": "https://science.nasa.gov/universe/newfound-baby-planet-smashes-record-for-youngest-known-world/",
+      "reading_time_minutes": 5
+    },
+    {
+      "title": "Langdurig herstel van oesterriffen blijkt succesvol",
+      "teaser": "Herstelde oesterriffen in Chesapeake Bay blijken jaren later nog steeds complexe leefgebieden te vormen. Ze trekken grotere en meer diverse visgemeenschappen aan en laten zien dat grootschalig natuurherstel langdurig effect kan hebben.",
+      "source": "Phys.org",
+      "category": "Natuur & klimaat",
+      "url": "https://phys.org/news/2026-09-term-oyster-reef-success-murky.html",
+      "reading_time_minutes": 5
+    },
+    {
+      "title": "Nieuwe supermicroscoop moet oorzaken van darmziekten beter zichtbaar maken",
+      "teaser": "Een nieuwe microscoop in het Verenigd Koninkrijk kan structuren tot ongeveer tien keer scherper bekijken dan conventionele lichtmicroscopen. Onderzoekers hopen zo beter te begrijpen wat er misgaat bij ziekten als Crohn en colitis ulcerosa.",
+      "source": "The Guardian",
+      "category": "Gezondheid",
+      "url": "https://www.theguardian.com/society/2026/sep/14/new-microscope-discovery-hopes-incurable-inflammatory-bowel-disease-crohns-science-treatment",
+      "reading_time_minutes": 4
+    },
+    {
+      "title": "Jonge innovators bouwen oplossingen voor watertekorten in Zimbabwe",
+      "teaser": "Jonge mensen in Zimbabwe ontwikkelen lokale oplossingen voor watertekorten en klimaatproblemen. UNICEF beschrijft projecten die dagelijkse problemen omzetten in praktische ideeën voor duurzamer watergebruik.",
+      "source": "UNICEF",
+      "category": "Mens",
+      "url": "https://www.unicef.org/zimbabwe/stories/young-innovators-transform-water-struggles-climate-solutions"
+    },
+    {
+      "title": "Vijf jonge Afrikaanse vrouwen zetten lokale problemen om in duurzame innovatie",
+      "teaser": "Van een tas met zonne-oplader tot digitale landbouwinformatie en hulpmiddelen voor studenten met een beperking: vijf jonge Afrikaanse vrouwen laten zien hoe innovaties vanuit dagelijkse behoeften kunnen ontstaan.",
+      "source": "UNDP",
+      "category": "Energie & innovatie",
+      "url": "https://www.undp.org/africa/blog/distance-idea-can-travel-five-young-african-women-systems-carry-sustainable-innovation-daily-life"
+    }
+  ],
+  "headlines": [
+    {
+      "title": "Tweede dag Algemene Politieke Beschouwingen: Jetten reageert op de Kamer",
+      "teaser": "Premier Jetten reageert vandaag op de vragen en kritiek uit de Tweede Kamer over de Prinsjesdagplannen. Het minderheidskabinet heeft steun van oppositiepartijen nodig om belangrijke onderdelen van de begroting door het parlement te krijgen.",
+      "source": "NOS",
+      "category": "Binnenland & politiek",
+      "url": "https://nos.nl/livestream/2631300-algemene-politieke-beschouwingen-dag-2-met-de-reactie-van-premier-jetten"
+    },
+    {
+      "title": "Onderzoek naar grootschalige spoorsabotage gaat door",
+      "teaser": "Na sabotage op tientallen plekken op het Nederlandse spoor is nog niet duidelijk wie verantwoordelijk is. ProRail en politie onderzoeken de incidenten; er zijn aanwijzingen voor betrokkenheid van radicale boerenactivisten, maar de acties zijn niet opgeëist.",
+      "source": "NOS",
+      "category": "Binnenland",
+      "url": "https://nos.nl/artikel/2631252-wat-wilden-de-spoorsaboteurs-het-kan-strategie-zijn-om-stil-te-blijven"
+    },
+    {
+      "title": "Amerikaans Congres stemt in met omvangrijk sanctiepakket tegen Rusland",
+      "teaser": "Na de Senaat heeft ook het Huis van Afgevaardigden ingestemd met nieuwe sancties die de economische druk op Rusland moeten opvoeren vanwege de oorlog in Oekraïne. Het pakket ligt nu bij president Trump.",
+      "source": "NOS",
+      "category": "Buitenland & politiek",
+      "url": "https://nos.nl/artikel/2631325-ook-amerikaans-lagerhuis-stemt-in-met-omvangrijk-sanctiepakket-tegen-rusland"
+    }
+  ]
+}
