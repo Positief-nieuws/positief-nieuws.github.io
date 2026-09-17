@@ -161,19 +161,13 @@ def buttondown_edition_url(data):
 
 
 def reading_time_label(article):
-    if article.get("article_slug") or article.get("articleSlug"):
-        value = (
-            article.get("article_reading_time_minutes")
-            or article.get("articleReadingTimeMinutes")
-        )
-    else:
-        value = (
-            article.get("reading_time_minutes")
-            or article.get("readingTimeMinutes")
-            or article.get("reading_time")
-            or article.get("readingTime")
-            or article.get("leestijd")
-        )
+    value = (
+        article.get("reading_time_minutes")
+        or article.get("readingTimeMinutes")
+        or article.get("reading_time")
+        or article.get("readingTime")
+        or article.get("leestijd")
+    )
     if value in (None, ""):
         return ""
 
@@ -185,37 +179,12 @@ def reading_time_label(article):
     return f"{minutes} min lezen" if minutes > 0 else ""
 
 
-def own_article_email_url(article, data):
-    slug = str(article.get("article_slug") or article.get("articleSlug") or "").strip()
-    raw_date = raw_edition_date(data)
-    body = article.get("article_body") or article.get("articleBody")
-    why = article.get("why_it_matters") or article.get("whyItMatters")
-
-    if not slug or not body or not why or not isinstance(raw_date, str):
-        return ""
-
-    try:
-        datetime.strptime(raw_date, "%Y-%m-%d")
-    except ValueError:
-        return ""
-
-    clean_url = f"{SITE_URL}artikelen/{urllib.parse.quote(raw_date)}/{urllib.parse.quote(slug)}/"
-    params = {
-        "utm_source": "buttondown",
-        "utm_medium": "email",
-        "utm_campaign": f"editie_{raw_date.replace('-', '_')}",
-        "utm_content": "artikel",
-    }
-    return f"{clean_url}?{urllib.parse.urlencode(params)}"
-
-
-def article_html(article, data, allow_own_article=True):
+def article_html(article):
     title = esc(article.get("title"))
     teaser = esc(article.get("teaser") or article.get("summary"))
     source = esc(article.get("source"))
     category = esc(article.get("category"))
-    own_url = own_article_email_url(article, data) if allow_own_article else ""
-    url = esc(own_url or article.get("url"))
+    url = esc(article.get("url"))
 
     meta_parts = [part for part in (category, source, reading_time_label(article)) if part]
     meta = " &nbsp;·&nbsp; ".join(meta_parts)
@@ -324,9 +293,9 @@ def build_share_block(data):
 
 
 def build_body(data, nl, international, headlines):
-    nl_html = "\n".join(article_html(article, data, True) for article in nl)
-    int_html = "\n".join(article_html(article, data, True) for article in international)
-    headlines_html = "\n".join(article_html(article, data, False) for article in headlines)
+    nl_html = "\n".join(article_html(article) for article in nl)
+    int_html = "\n".join(article_html(article) for article in international)
+    headlines_html = "\n".join(article_html(article) for article in headlines)
     share_block = build_share_block(data)
     weekday = esc(edition_weekday(data))
 
