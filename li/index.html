@@ -4,14 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex,nofollow">
-  <meta http-equiv="refresh" content="0; url=https://positief-nieuws.nl/edities/2026-09-17/?utm_source=linkedin&utm_medium=social&utm_campaign=editie_2026-09-17&utm_content=linkedin_post">
   <title>Positief nieuws</title>
-  <script>
-    window.location.replace("https://positief-nieuws.nl/edities/2026-09-17/?utm_source=linkedin&utm_medium=social&utm_campaign=editie_2026-09-17&utm_content=linkedin_post");
-  </script>
 </head>
 <body>
   <p>Je wordt doorgestuurd naar de nieuwste editie van Positief nieuws.</p>
-  <p><a href="https://positief-nieuws.nl/edities/2026-09-17/?utm_source=linkedin&utm_medium=social&utm_campaign=editie_2026-09-17&utm_content=linkedin_post">Klik hier als je niet automatisch wordt doorgestuurd.</a></p>
+
+  <script>
+    (async function () {
+      const fallback = "https://positief-nieuws.nl/";
+      try {
+        const response = await fetch("/nieuws.json?ts=" + Date.now(), { cache: "no-store" });
+        if (!response.ok) throw new Error("nieuws.json kon niet worden geladen");
+
+        const data = await response.json();
+        const date = data?.meta?.edition_date || data?.edition?.date;
+
+        if (!/^\d{4}-\d{2}-\d{2}$/.test(date || "")) {
+          throw new Error("Geen geldige editiedatum gevonden");
+        }
+
+        const target =
+          `https://positief-nieuws.nl/edities/${date}/` +
+          `?utm_source=linkedin&utm_medium=social&utm_campaign=editie_${date}&utm_content=linkedin_post`;
+
+        window.location.replace(target);
+      } catch (error) {
+        window.location.replace(fallback);
+      }
+    })();
+  </script>
 </body>
 </html>
