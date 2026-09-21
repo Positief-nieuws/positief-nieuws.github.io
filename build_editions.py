@@ -68,6 +68,91 @@ for _category in CATEGORY_ORDER:
     CATEGORY_ALIASES.setdefault(_category, _category)
 
 
+TOPIC_SEO = {
+    "Cultuur": {
+        "title": "Positief nieuws over cultuur | Positief nieuws",
+        "h1": "Positief nieuws over cultuur",
+        "description": "Lees positief nieuws over cultuur, erfgoed, media en creatieve ontwikkelingen uit Nederland en de wereld. De nieuwste verhalen staan bovenaan.",
+        "lead": "Goed nieuws over cultuur, erfgoed, media en creatieve ontwikkelingen.",
+        "intro": [
+            "Op deze pagina vind je positief nieuws over cultuur in brede zin: van kunst, erfgoed en media tot boeken, muziek, musea en andere creatieve ontwikkelingen. We selecteren verhalen waarin iets aantoonbaar vooruitgaat, toegankelijker wordt, behouden blijft of nieuwe mensen bereikt.",
+            "Je vindt hier zowel Nederlandse als internationale verhalen, steeds met de nieuwste ontwikkelingen bovenaan. Geen losse entertainmentroddels, maar nieuws met inhoud: initiatieven, onderzoek, herstel, vernieuwing en andere ontwikkelingen die laten zien wat er in cultuur óók goed gaat."
+        ],
+    },
+    "Economie": {
+        "title": "Positief nieuws over economie | Positief nieuws",
+        "h1": "Positief nieuws over economie",
+        "description": "Lees positief economisch nieuws over werk, ondernemerschap, inkomen, bedrijven en slimme oplossingen. Nederlandse en internationale verhalen.",
+        "lead": "Positieve ontwikkelingen rond economie, werk, ondernemerschap en inkomen.",
+        "intro": [
+            "Hier verzamelen we positief nieuws over economie: ontwikkelingen rond werk, ondernemerschap, inkomen, bedrijven en economische kansen. Het gaat niet om optimisme om het optimisme, maar om concrete veranderingen die mensen, organisaties of de samenleving verder kunnen helpen.",
+            "Denk aan nieuwe bedrijvigheid, betere toegang tot werk, slimme economische oplossingen of ontwikkelingen die zorgen voor meer zekerheid en kansen. Nederlandse verhalen staan bovenaan, gevolgd door relevant positief economisch nieuws uit de rest van de wereld."
+        ],
+    },
+    "Energie & innovatie": {
+        "title": "Positief nieuws over energie en innovatie | Positief nieuws",
+        "h1": "Positief nieuws over energie en innovatie",
+        "description": "Lees positief nieuws over energie, technologie en innovatie: slimme oplossingen, verduurzaming en toepassingen die aantoonbaar vooruitgang brengen.",
+        "lead": "Slimme oplossingen en vernieuwing op het gebied van energie en technologie.",
+        "intro": [
+            "Op deze pagina vind je positief nieuws over energie en innovatie. Van nieuwe technologie en duurzame energie tot praktische toepassingen die problemen slimmer, schoner of efficiënter helpen oplossen. We kijken vooral naar ontwikkelingen die verder gaan dan een mooi idee en waarbij daadwerkelijk vooruitgang zichtbaar is.",
+            "Dat kan gaan om energieopslag, duurzame bouw, netwerken, mobiliteit, nieuwe materialen of andere technologische oplossingen. Eerst vind je de nieuwste Nederlandse verhalen, daarna relevante internationale ontwikkelingen."
+        ],
+    },
+    "Gezondheid": {
+        "title": "Positief nieuws over gezondheid | Positief nieuws",
+        "h1": "Positief nieuws over gezondheid",
+        "description": "Lees positief nieuws over gezondheid, zorg en medisch onderzoek: nieuwe behandelingen, preventie en ontwikkelingen die patiëntenzorg verbeteren.",
+        "lead": "Goed nieuws over gezondheid, zorg en medische wetenschap.",
+        "intro": [
+            "Op deze pagina vind je positieve ontwikkelingen rond gezondheid, zorg en medische wetenschap. We volgen onder meer nieuwe behandelingen, onderzoek, preventie, patiëntenzorg en andere veranderingen die de gezondheid of kwaliteit van leven van mensen kunnen verbeteren.",
+            "Van Nederlandse ziekenhuizen en universiteiten tot internationaal medisch onderzoek: we selecteren ontwikkelingen waarbij aantoonbaar iets vooruitgaat. Geen losse gezondheidsclaims of wondermiddelen, maar nieuws gebaseerd op betrouwbare bronnen. De nieuwste Nederlandse verhalen staan bovenaan, gevolgd door positief gezondheidsnieuws uit de rest van de wereld."
+        ],
+    },
+    "Mens": {
+        "title": "Positief nieuws over mensen en samenleving | Positief nieuws",
+        "h1": "Positief nieuws over mensen en samenleving",
+        "description": "Lees positief nieuws over mensen en samenleving: initiatieven, onderwijs, samenwerking en oplossingen die het dagelijks leven beter maken.",
+        "lead": "Verhalen over mensen, samenwerking en maatschappelijke vooruitgang.",
+        "intro": [
+            "Hier vind je positief nieuws over mensen en samenleving. Verhalen over samenwerking, onderwijs, kansen, buurten, vrijwilligers, inclusie en andere initiatieven die het dagelijks leven concreet beter kunnen maken.",
+            "We zoeken geen losse feelgoodmomenten, maar ontwikkelingen met betekenis: mensen die een probleem oplossen, organisaties die iets toegankelijker maken of initiatieven die aantoonbaar verschil maken. Nederlandse verhalen staan bovenaan, gevolgd door inspirerende en relevante ontwikkelingen uit de rest van de wereld."
+        ],
+    },
+    "Natuur & klimaat": {
+        "title": "Positief nieuws over natuur en klimaat | Positief nieuws",
+        "h1": "Positief nieuws over natuur en klimaat",
+        "description": "Lees positief nieuws over natuur en klimaat: natuurherstel, biodiversiteit, bescherming en oplossingen voor een duurzamere leefomgeving.",
+        "lead": "Vooruitgang rond natuur, biodiversiteit, klimaat en leefomgeving.",
+        "intro": [
+            "Op deze pagina verzamelen we positief nieuws over natuur en klimaat. Denk aan natuurherstel, biodiversiteit, bescherming van dieren en ecosystemen, schonere leefomgevingen en oplossingen die helpen om schade te beperken of herstel mogelijk te maken.",
+            "We kiezen verhalen waarin resultaten, nieuwe inzichten of concrete maatregelen centraal staan. Niet iedere groene belofte is automatisch goed nieuws: de ontwikkeling moet inhoudelijk iets toevoegen. Je vindt eerst de nieuwste Nederlandse verhalen en daarna positieve ontwikkelingen uit de rest van de wereld."
+        ],
+    },
+    "Wetenschap": {
+        "title": "Positief nieuws over wetenschap | Positief nieuws",
+        "h1": "Positief nieuws over wetenschap",
+        "description": "Lees positief wetenschapsnieuws over onderzoek, ontdekkingen en nieuwe inzichten uit Nederland en de wereld. De nieuwste verhalen eerst.",
+        "lead": "Nieuwe ontdekkingen, onderzoek en inzichten die ons verder helpen.",
+        "intro": [
+            "Hier vind je positief nieuws uit de wetenschap: onderzoek, ontdekkingen en nieuwe inzichten die ons begrip vergroten of nieuwe mogelijkheden openen. Dat kan gaan over ruimtevaart, technologie, biologie, gezondheid, archeologie en veel meer.",
+            "We letten op wat een onderzoek daadwerkelijk laat zien en vermijden grotere claims dan de bron ondersteunt. Zo blijft positief wetenschapsnieuws interessant én betrouwbaar. De nieuwste Nederlandse verhalen staan bovenaan, gevolgd door relevante internationale onderzoeken en ontdekkingen."
+        ],
+    },
+    "Sport": {
+        "title": "Positief nieuws over sport | Positief nieuws",
+        "h1": "Positief nieuws over sport",
+        "description": "Lees positief sportnieuws over ontwikkeling, toegankelijkheid, gezondheid en bijzondere prestaties met betekenis buiten alleen de uitslag.",
+        "lead": "Sportnieuws over vooruitgang, ontwikkeling en prestaties met bredere betekenis.",
+        "intro": [
+            "Op deze pagina vind je positief nieuws over sport. Niet iedere overwinning of uitslag komt hier terecht: we zoeken vooral verhalen waarin sport zich ontwikkelt, toegankelijker wordt of op een andere manier blijvende betekenis heeft.",
+            "Denk aan groei van vrouwen- of gehandicaptensport, betere begeleiding en gezondheid van sporters, maatschappelijke initiatieven of uitzonderlijke prestaties met een verhaal erachter. Nederlandse sportverhalen staan bovenaan, gevolgd door relevante positieve ontwikkelingen uit de rest van de wereld."
+        ],
+    },
+}
+
+
+
 def esc(value):
     return html.escape(str(value or ""), quote=True)
 
@@ -435,16 +520,100 @@ def render_topic_page(topic):
     label = topic["label"]
     slug = topic["slug"]
     canonical = f"{SITE_URL}/{slug}/"
-    desc = f"Positief nieuws over {label}. Eerst Nederlandse verhalen, daarna Engelstalige artikelen. Nieuwste verhalen eerst."
+
+    seo = TOPIC_SEO.get(label, {})
+    title = seo.get("title") or f"Positief nieuws over {label.lower()} | Positief nieuws"
+    h1 = seo.get("h1") or f"Positief nieuws over {label.lower()}"
+    desc = seo.get("description") or (
+        f"Lees positief nieuws over {label.lower()}. "
+        "Nederlandse en internationale verhalen, met de nieuwste ontwikkelingen bovenaan."
+    )
+    lead = seo.get("lead") or desc
+    intro = seo.get("intro") or [desc]
+    intro_html = "".join(f"<p>{esc(paragraph)}</p>" for paragraph in intro)
+
     nl_html = "\n".join(article_html(x["item"], x["date"], True) for x in topic["nl"])
     int_html = "\n".join(article_html(x["item"], x["date"], True) for x in topic["int"])
+
     sections = []
     if topic["nl"]:
-        sections.append(f'<section class="section alt"><div class="shell"><div class="heading"><p class="kicker">Nederlandstalig</p><span class="count">{story_count(len(topic["nl"]))}</span></div>{nl_html}</div></section>')
+        sections.append(
+            f'<section class="section alt"><div class="shell">'
+            f'<div class="heading"><p class="kicker">Nieuw uit Nederland</p>'
+            f'<span class="count">{story_count(len(topic["nl"]))}</span></div>'
+            f'{nl_html}</div></section>'
+        )
     if topic["int"]:
-        sections.append(f'<section class="section"><div class="shell"><div class="heading"><p class="kicker">Engelstalig</p><span class="count">{story_count(len(topic["int"]))}</span></div><p class="note">De bronartikelen in dit blok zijn Engelstalig.</p>{int_html}</div></section>')
-    schema = json.dumps({"@context":"https://schema.org","@type":"CollectionPage","name":f"{label} · Positief nieuws","description":desc,"url":canonical,"isPartOf":{"@type":"WebSite","name":"Positief nieuws","url":SITE_URL+"/"}}, ensure_ascii=False)
-    return f"""<!DOCTYPE html><html lang="nl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>{esc(label)} | Positief nieuws</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{canonical}"><meta property="og:title" content="{esc(label)} · Positief nieuws"><meta property="og:description" content="{esc(desc)}"><meta property="og:type" content="website"><meta property="og:url" content="{canonical}"><meta name="twitter:card" content="summary"><meta name="theme-color" content="#17382b"><script type="application/ld+json">{schema}</script><style>{BASE_CSS}.crumb{{margin-top:12px;color:var(--muted);font-size:.75rem}}.crumb a{{color:var(--green-dark)}}</style></head><body>{header_html('topics')}<main><section class="hero"><div class="shell"><p class="kicker">Onderwerp</p><h1>{esc(label)}<b>.</b></h1><p class="lead">{esc(desc)}</p><p class="crumb"><a href="/onderwerpen/">← Alle onderwerpen</a></p><div class="rule"></div></div></section>{''.join(sections)}</main><footer>Positief nieuws · Dit gebeurt ook.</footer>{analytics_html({'page_type':'topic','topic':slug})}</body></html>"""
+        sections.append(
+            f'<section class="section"><div class="shell">'
+            f'<div class="heading"><p class="kicker">Uit de rest van de wereld</p>'
+            f'<span class="count">{story_count(len(topic["int"]))}</span></div>'
+            f'<p class="note">De bronartikelen in dit blok zijn Engelstalig.</p>'
+            f'{int_html}</div></section>'
+        )
+
+    schema = json.dumps({
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": h1,
+        "description": desc,
+        "url": canonical,
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "Positief nieuws",
+            "url": SITE_URL + "/"
+        }
+    }, ensure_ascii=False)
+
+    topic_css = r"""
+.topic-intro-section{padding:34px 0 10px}
+.topic-intro{max-width:720px;font-size:1rem;line-height:1.7;color:#313934}
+.topic-intro p{margin:0 0 1.15em}
+.crumb{margin-top:12px;color:var(--muted);font-size:.75rem}
+.crumb a{color:var(--green-dark)}
+"""
+
+    return f"""<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{esc(title)}</title>
+  <meta name="description" content="{esc(desc)}">
+  <link rel="canonical" href="{canonical}">
+  <meta property="og:title" content="{esc(title)}">
+  <meta property="og:description" content="{esc(desc)}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{canonical}">
+  <meta property="og:site_name" content="Positief nieuws">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#17382b">
+  <script type="application/ld+json">{schema}</script>
+  <style>{BASE_CSS}{topic_css}</style>
+</head>
+<body>
+  {header_html('topics')}
+  <main>
+    <section class="hero">
+      <div class="shell">
+        <p class="kicker">Positief nieuws per thema</p>
+        <h1>{esc(h1)}<b>.</b></h1>
+        <p class="lead">{esc(lead)}</p>
+        <p class="crumb"><a href="/onderwerpen/">← Alle onderwerpen</a></p>
+        <div class="rule"></div>
+      </div>
+    </section>
+    <section class="topic-intro-section">
+      <div class="shell">
+        <div class="topic-intro">{intro_html}</div>
+      </div>
+    </section>
+    {''.join(sections)}
+  </main>
+  <footer>Positief nieuws · Dit gebeurt ook.</footer>
+  {analytics_html({'page_type':'topic','topic':slug})}
+</body>
+</html>"""
 
 
 def load_previous_topic_slugs():
