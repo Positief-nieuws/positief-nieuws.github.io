@@ -1,124 +1,122 @@
 {
   "meta": {
-    "edition_date": "2026-09-17",
-    "generated_from": "kandidaten (6).json + actuele nieuwsselectie + directe-linkcontrole",
+    "edition_date": "2026-09-21",
+    "generated_from": "kandidaten (7).json + actuele webcheck + directe-linkcontrole",
     "title": "Positief nieuws",
     "tagline": "Dit gebeurt ook."
   },
   "nl": [
     {
-      "title": "Vrouwenvoetbal groeit door gerichte investeringen in spelers, stadions en gezondheid",
-      "teaser": "Clubs in Engeland en de Verenigde Staten investeren steeds meer in eigen stadions, trainingscomplexen en vrouwengezondheid. De aanpak laat zien hoe serieus investeren het vrouwenvoetbal sportief en commercieel verder kan brengen.",
+      "title": "Veel minder baby's op de intensive care met RS-virus na nieuwe immunisatie",
+      "teaser": "Nederlandse ziekenhuizen zien een sterke daling van het aantal baby's dat met een ernstig RS-virus op de intensive care belandt: van 178 naar 43. Kinderartsen schrijven die daling toe aan de nieuwe immunisatie die sinds 2025 wordt gegeven.",
+      "source": "Hart van Nederland",
+      "category": "Gezondheid",
+      "url": "https://www.hartvannederland.nl/milieu-gezondheid/zorg/artikelen/babys-rs-virus-daalt-na-invoering-nieuwe-prik"
+    },
+    {
+      "title": "Rotterdamse buurtkoelkast helpt mensen én voorkomt voedselverspilling",
+      "teaser": "De buurtkoelkast in Delfshaven wordt na vijf jaar nog dagelijks intensief gebruikt. Buurtbewoners delen er eten, mensen met een kleine beurs worden geholpen en voedsel krijgt een bestemming in plaats van de afvalbak. Er komen binnenkort vijf extra koelkasten bij.",
+      "source": "EenVandaag",
+      "category": "Mens",
+      "url": "https://eenvandaag.avrotros.nl/artikelen/eten-delen-en-verspilling-tegengaan-rotterdamse-buurtkoelkast-groot-succes-164827"
+    },
+    {
+      "title": "Akkoord brengt snelfietsroute tussen Utrecht en Amsterdam stap dichterbij",
+      "teaser": "De provincie Utrecht, de Vervoerregio Amsterdam en vier gemeenten hebben afspraken gemaakt over een snelle en comfortabele fietsverbinding tussen Utrecht en Amsterdam. Bestaande fietspaden worden verbeterd en er komen nieuwe verbindingen waar dat nodig is.",
+      "source": "NOS",
+      "category": "Energie & innovatie",
+      "url": "https://nos.nl/artikel/2631884-snelfietsroute-van-dom-tot-dam-tussen-utrecht-en-amsterdam-stap-dichterbij"
+    },
+    {
+      "title": "Koopkracht steeg in 2025 voor het derde jaar op rij",
+      "teaser": "De koopkracht van Nederlanders nam in 2025 in doorsnee met 1,2 procent toe, meldt het CBS. Werknemers gingen er gemiddeld het meest op vooruit met 2,2 procent; voor zelfstandigen en gepensioneerden was de stijging veel kleiner.",
+      "source": "CBS",
+      "category": "Economie",
+      "url": "https://www.cbs.nl/nl-nl/nieuws/2026/38/koopkracht-stijgt-met-1-2-procent-in-2025-werknemers-zien-sterkste-toename"
+    },
+    {
+      "title": "Blauwe bessen en bramen remmen ontstekingsreactie in kunstmatige darm",
+      "teaser": "Wageningse onderzoekers zagen in een laboratoriummodel dat stoffen uit blauwe bessen en bramen een proces temperden dat samenhangt met ontstekingsreacties. Het gaat nog om onderzoek in een kunstmatige darm, maar de resultaten geven nieuwe aanwijzingen over de relatie tussen voeding en gezondheid.",
+      "source": "Wageningen University & Research",
+      "category": "Wetenschap",
+      "url": "https://www.wur.nl/nl/nieuws/blauwe-bessen-en-bramen-remmen-ontstekingsreactie-kunstmatige-darm"
+    },
+    {
+      "title": "Dam tot Damloop krijgt na 39 jaar een nieuw parcoursrecord bij de vrouwen",
+      "teaser": "Asayech Ayichew won de Dam tot Damloop in 50 minuten en 5 seconden. Daarmee verbeterde de Ethiopische atlete het vrouwenrecord dat sinds 1987 op naam stond van Ingrid Kristiansen.",
       "source": "NOS",
       "category": "Sport",
-      "url": "https://nos.nl/artikel/2631231-zo-maken-engeland-en-de-vs-vrouwenvoetbal-groot-van-eigen-stadion-tot-beautyruimtes",
-      "reading_time_minutes": 4
-    },
-    {
-      "title": "Longkankerpatiënten leven gemiddeld vijf maanden langer door klachtenapp",
-      "teaser": "Onderzoek van Radboudumc en Amsterdam UMC laat zien dat longkankerpatiënten die hun klachten actief bijhouden in een app gemiddeld vijf maanden langer leven. Eerder ingrijpen bij klachten lijkt daarbij een belangrijk verschil te maken.",
-      "source": "Radboudumc",
-      "category": "Gezondheid",
-      "url": "https://www.radboudumc.nl/nieuws/2026/longkankerpatienten-leven-langer-door-bijhouden-van-klachten"
-    },
-    {
-      "title": "Nieuwe proeffabriek moet duurzame bouwmaterialen sneller naar de praktijk brengen",
-      "teaser": "TNO heeft in Zoetermeer BioBuilt geopend, een proeffabriek waar bedrijven circulaire en biobased bouwmaterialen kunnen ontwikkelen, testen en opschalen. Reststromen als afvalhout en plantvezels kunnen zo sneller als bouwmateriaal worden toegepast.",
-      "source": "TNO",
-      "category": "Energie & innovatie",
-      "url": "https://www.tno.nl/nl/newsroom/2026/09/minister-opent-tno-biobuilt-proeffabriek/"
-    },
-    {
-      "title": "Slimme radar moet vleermuizen beter beschermen bij windturbines",
-      "teaser": "TNO, Dopplium en RWE testen bij Eemshaven een radarsysteem dat vleermuizen in real time volgt. Daardoor zouden turbines alleen hoeven stil te staan wanneer er daadwerkelijk risico is voor vleermuizen.",
-      "source": "TNO",
-      "category": "Natuur & klimaat",
-      "url": "https://www.tno.nl/nl/newsroom/insights/2026/09/slimme-radar-beschermt-vleermuizen/"
-    },
-    {
-      "title": "AI kan kreupelheid bij paarden helpen herkennen",
-      "teaser": "Onderzoek van de Universiteit Utrecht laat zien dat AI subtiele bewegingspatronen bij paarden kan herkennen die voor het menselijk oog moeilijk zichtbaar zijn. Dat kan dierenartsen helpen gezondheidsproblemen eerder en nauwkeuriger te signaleren.",
-      "source": "Universiteit Utrecht",
-      "category": "Wetenschap",
-      "url": "https://www.uu.nl/nieuws/is-mijn-paard-kreupel-ai-kan-helpen-bij-het-vinden-van-het-antwoord"
-    },
-    {
-      "title": "Onderzoekers ontrafelen hormonale oorzaak van menstruele migraine",
-      "teaser": "Onderzoekers van het LUMC en Erasmus MC vonden een duidelijk ander oestrogeenpatroon bij vrouwen met menstruele migraine. De ontdekking biedt nieuwe aanknopingspunten voor behandelingen die aanvallen rond de menstruatie kunnen voorkomen.",
-      "source": "LUMC",
-      "category": "Gezondheid",
-      "url": "https://www.lumc.nl/actueel/2026/hormonale-oorzaak-van-menstruele-migraine-ontrafeld/"
+      "url": "https://nos.nl/artikel/2631728-ethiopische-ayichew-verbreekt-39-jaar-oud-parcoursrecord-dam-tot-damloop",
+      "reading_time_minutes": 2
     }
   ],
   "int": [
     {
-      "title": "Geredde maanberen beginnen nieuw leven in Brits natuurpark",
-      "teaser": "Vijf maanberen die jarenlang op een galberenboerderij in Zuid-Korea leefden, zijn aangekomen bij hun nieuwe verblijf in Suffolk. Daar krijgen ze ruimte om te klimmen, zwemmen en rusten.",
-      "source": "BBC",
+      "title": "Recordaantal van 90 kākāpō-kuikens geeft bedreigde papegaai flinke impuls",
+      "teaser": "In Nieuw-Zeeland zijn dit jaar 90 kākāpō-kuikens groot genoeg geworden om als zelfstandig te tellen: een record. De totale populatie van de ernstig bedreigde, niet-vliegende papegaai is daarmee gegroeid tot 325 dieren, tegenover 51 in 1995.",
+      "source": "Smithsonian Magazine",
       "category": "Natuur & klimaat",
-      "url": "https://www.bbc.co.uk/news/articles/cx3051l0r636o?at_medium=RSS&at_campaign=rss",
-      "reading_time_minutes": 2
+      "url": "https://www.smithsonianmag.com/smart-news/new-zealand-welcomes-a-record-90-kakapo-chicks-helping-the-worlds-chunkiest-parrot-species-rebound-from-the-brink-of-extinction-180989511/"
     },
     {
-      "title": "Astronomen bevestigen jongste bekende planeet",
-      "teaser": "Astronomen hebben Elias 2-24 b bevestigd als de jongste bekende planeet: minder dan een miljoen jaar oud. De ontdekking geeft onderzoekers een zeldzame blik op een planeet die nog midden in haar vormingsproces zit.",
-      "source": "NASA",
-      "category": "Wetenschap",
-      "url": "https://science.nasa.gov/universe/newfound-baby-planet-smashes-record-for-youngest-known-world/",
-      "reading_time_minutes": 5
-    },
-    {
-      "title": "Langdurig herstel van oesterriffen blijkt succesvol",
-      "teaser": "Herstelde oesterriffen in Chesapeake Bay blijken jaren later nog steeds complexe leefgebieden te vormen. Ze trekken grotere en meer diverse visgemeenschappen aan en laten zien dat grootschalig natuurherstel langdurig effect kan hebben.",
+      "title": "Virtuele cellen met 4D-AI kunnen zoektocht naar medicijnen versnellen",
+      "teaser": "Onderzoekers bouwden met tienduizenden 4D-opnamen een AI-model dat veranderingen in levende cellen kan voorspellen. Digitale tweelingen van echte cellen reageerden in tests vergelijkbaar op medicijnen, wat nieuwe mogelijkheden biedt om behandelingen sneller te onderzoeken.",
       "source": "Phys.org",
-      "category": "Natuur & klimaat",
-      "url": "https://phys.org/news/2026-09-term-oyster-reef-success-murky.html",
+      "category": "Wetenschap",
+      "url": "https://phys.org/news/2026-09-virtual-cells-built-4d-ai.html",
       "reading_time_minutes": 5
     },
     {
-      "title": "Nieuwe supermicroscoop moet oorzaken van darmziekten beter zichtbaar maken",
-      "teaser": "Een nieuwe microscoop in het Verenigd Koninkrijk kan structuren tot ongeveer tien keer scherper bekijken dan conventionele lichtmicroscopen. Onderzoekers hopen zo beter te begrijpen wat er misgaat bij ziekten als Crohn en colitis ulcerosa.",
-      "source": "The Guardian",
-      "category": "Gezondheid",
-      "url": "https://www.theguardian.com/society/2026/sep/14/new-microscope-discovery-hopes-incurable-inflammatory-bowel-disease-crohns-science-treatment",
-      "reading_time_minutes": 4
-    },
-    {
-      "title": "Jonge innovators bouwen oplossingen voor watertekorten in Zimbabwe",
-      "teaser": "Jonge mensen in Zimbabwe ontwikkelen lokale oplossingen voor watertekorten en klimaatproblemen. UNICEF beschrijft projecten die dagelijkse problemen omzetten in praktische ideeën voor duurzamer watergebruik.",
+      "title": "Digitaal voorraadsysteem helpt Zambia vaccins beter beschikbaar te houden",
+      "teaser": "Zambia vervangt papieren vaccinregistraties steeds vaker door een digitaal systeem waarmee tekorten sneller zichtbaar worden. Inmiddels zijn 305 van 382 beoogde zorglocaties aangesloten en kunnen voorraden sneller worden herverdeeld wanneer dat nodig is.",
       "source": "UNICEF",
-      "category": "Mens",
-      "url": "https://www.unicef.org/zimbabwe/stories/young-innovators-transform-water-struggles-climate-solutions"
+      "category": "Gezondheid",
+      "url": "https://www.unicef.org/zambia/stories/paper-records-real-time-decision"
     },
     {
-      "title": "Vijf jonge Afrikaanse vrouwen zetten lokale problemen om in duurzame innovatie",
-      "teaser": "Van een tas met zonne-oplader tot digitale landbouwinformatie en hulpmiddelen voor studenten met een beperking: vijf jonge Afrikaanse vrouwen laten zien hoe innovaties vanuit dagelijkse behoeften kunnen ontstaan.",
-      "source": "UNDP",
+      "title": "MIT boekt meetbare vooruitgang met energiezuiniger en schoner campusbeheer",
+      "teaser": "MIT heeft het energiegebruik per vierkante meter in tien jaar met meer dan 10 procent verminderd en vijf keer zoveel zonne-energie op daken geplaatst. Een renovatie van een groot onderzoeksgebouw verlaagde het energiegebruik en de uitstoot daar met 35 procent.",
+      "source": "MIT News",
       "category": "Energie & innovatie",
-      "url": "https://www.undp.org/africa/blog/distance-idea-can-travel-five-young-african-women-systems-carry-sustainable-innovation-daily-life"
+      "url": "https://news.mit.edu/2026/mit-makes-progress-campus-climate-goals-0915",
+      "reading_time_minutes": 7
+    },
+    {
+      "title": "Schonere lucht in New York hangt samen met betere ontwikkeling bij peuters",
+      "teaser": "Een langlopend onderzoek onder ruim 1.100 kinderen in New York zag dat verbeteringen in de luchtkwaliteit samengingen met betere scores op onder meer geheugen, waarneming en communicatie. De onderzoekers volgden gezinnen over een periode van twintig jaar.",
+      "source": "The Guardian",
+      "category": "Natuur & klimaat",
+      "url": "https://www.theguardian.com/environment/2026/sep/18/improved-air-quality-pollution-mental-development-toddlers-new-york-study"
+    },
+    {
+      "title": "WHO lanceert eerste wereldwijde strategie voor betere toegang tot kinderkankermedicijnen",
+      "teaser": "De Wereldgezondheidsorganisatie presenteert tien maatregelen om essentiële medicijnen voor kinderen met kanker betrouwbaarder, betaalbaarder en beter beschikbaar te maken. De strategie richt zich onder meer op gezamenlijke inkoop, sterkere toelevering en snellere toelating.",
+      "source": "WHO",
+      "category": "Gezondheid",
+      "url": "https://www.who.int/publications/i/item/9789240125087"
     }
   ],
   "headlines": [
     {
-      "title": "Tweede dag Algemene Politieke Beschouwingen: Jetten reageert op de Kamer",
-      "teaser": "Premier Jetten reageert vandaag op de vragen en kritiek uit de Tweede Kamer over de Prinsjesdagplannen. Het minderheidskabinet heeft steun van oppositiepartijen nodig om belangrijke onderdelen van de begroting door het parlement te krijgen.",
-      "source": "NOS",
-      "category": "Binnenland & politiek",
-      "url": "https://nos.nl/livestream/2631300-algemene-politieke-beschouwingen-dag-2-met-de-reactie-van-premier-jetten"
-    },
-    {
-      "title": "Onderzoek naar grootschalige spoorsabotage gaat door",
-      "teaser": "Na sabotage op tientallen plekken op het Nederlandse spoor is nog niet duidelijk wie verantwoordelijk is. ProRail en politie onderzoeken de incidenten; er zijn aanwijzingen voor betrokkenheid van radicale boerenactivisten, maar de acties zijn niet opgeëist.",
+      "title": "Onderzoeksraad: omstandigheden voor 7000 kinderen in asielnoodopvang zijn structureel onveilig",
+      "teaser": "De Onderzoeksraad voor Veiligheid roept het kabinet op om binnen een halfjaar de situatie voor kinderen in de noodopvang te verbeteren. Volgens de raad bedreigen onder meer onveiligheid, gebrek aan privacy en veelvuldige verhuizingen hun ontwikkeling.",
       "source": "NOS",
       "category": "Binnenland",
-      "url": "https://nos.nl/artikel/2631252-wat-wilden-de-spoorsaboteurs-het-kan-strategie-zijn-om-stil-te-blijven"
+      "url": "https://nos.nl/artikel/2631878-onderzoeksraad-7000-kinderen-in-asielnoodopvang-structureel-verwaarloosd"
     },
     {
-      "title": "Amerikaans Congres stemt in met omvangrijk sanctiepakket tegen Rusland",
-      "teaser": "Na de Senaat heeft ook het Huis van Afgevaardigden ingestemd met nieuwe sancties die de economische druk op Rusland moeten opvoeren vanwege de oorlog in Oekraïne. Het pakket ligt nu bij president Trump.",
+      "title": "CDU haalt voor het eerst kiesdrempel niet bij Duitse deelstaatverkiezingen",
+      "teaser": "In Mecklenburg-Voor-Pommeren haalde de CDU 4,9 procent en verdwijnt de partij uit het deelstaatparlement. AfD werd volgens de voorlopige officiële uitslag de grootste partij met 38,2 procent, vlak voor de SPD met 35,5 procent.",
       "source": "NOS",
       "category": "Buitenland & politiek",
-      "url": "https://nos.nl/artikel/2631325-ook-amerikaans-lagerhuis-stemt-in-met-omvangrijk-sanctiepakket-tegen-rusland"
+      "url": "https://nos.nl/artikel/2631852-pijnlijk-verlies-cdu-in-duitse-deelstaat-voor-het-eerst-kiesdrempel-niet-gehaald"
+    },
+    {
+      "title": "Amerikaanse regering zou sancties tegen Internationaal Strafhof voorbereiden",
+      "teaser": "Reuters en The Wall Street Journal melden op basis van regeringsbronnen dat de regering-Trump sancties tegen het Internationaal Strafhof als geheel heeft voorbereid. Wat de maatregelen precies zouden inhouden, is nog niet bekend.",
+      "source": "NOS",
+      "category": "Buitenland & politiek",
+      "url": "https://nos.nl/artikel/2631854-regering-trump-heeft-plannen-klaar-voor-sancties-tegen-internationaal-strafhof"
     }
   ]
 }
