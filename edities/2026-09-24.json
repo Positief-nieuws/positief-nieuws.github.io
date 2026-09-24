@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "edition_date": "2026-09-24",
+    "generated_from": "kandidaten (8).json + twee vooraf geselecteerde verhalen + actuele webcheck + directe-linkcontrole",
+    "title": "Positief nieuws",
+    "tagline": "Dit gebeurt ook."
+  },
+  "nl": [
+    {
+      "title": "Nederlandse economie groeit sterker dan gedacht",
+      "teaser": "De Nederlandse economie groeide in het tweede kwartaal met 0,6 procent, meer dan eerder geraamd. Huishoudens hadden gemiddeld 0,7 procent meer te besteden dan een jaar eerder en ook de bedrijfswinsten namen toe.",
+      "source": "NOS",
+      "category": "Economie",
+      "url": "https://nos.nl/artikel/2632133-economie-draait-verrassend-goed-huishoudens-meer-te-besteden-bedrijven-betere-winst"
+    },
+    {
+      "title": "Hyves keert terug zonder eindeloze scroll en verslavende algoritmes",
+      "teaser": "Het Nederlandse sociale netwerk Hyves is na dertien jaar terug. De vernieuwde versie kiest voor een overzichtelijke tijdlijn, geen eindeloze stroom content en geen algoritmes die gebruikers zo lang mogelijk moeten vasthouden; contact met mensen die je kent staat weer centraal.",
+      "source": "Mediahuis",
+      "category": "Mens",
+      "url": "https://www.mediahuis.nl/nl/nieuws/hyves-is-terug-nederlands-sociaal-netwerk-maakt-op-22-september-comeback"
+    },
+    {
+      "title": "Nieuw middel remt zeldzame erfelijke vorm van ALS in fase 3-studie",
+      "teaser": "Ulefnersen liet in een internationale fase 3-studie bij mensen met FUS-ALS een duidelijk positief effect zien op functioneren en overleving. Het gaat om een zeldzame erfelijke vorm van ALS; in Nederland deden veertien patiënten mee aan het onderzoek.",
+      "source": "Stichting ALS Nederland",
+      "category": "Gezondheid",
+      "url": "https://www.als.nl/nieuws/goed-nieuws-als-onderzoek/"
+    },
+    {
+      "title": "Honderd extra praktijkscholen krijgen budget om geldzorgen van leerlingen weg te nemen",
+      "teaser": "Praktijkscholen kunnen voortaan vaker helpen als geldgebrek een stage of opleiding in de weg zit, bijvoorbeeld met werkschoenen, vervoer of een VOG. Na een pilot met 25 scholen groeit het programma dit schooljaar naar bijna 140 scholen.",
+      "source": "Jeugdeducatiefonds",
+      "category": "Mens",
+      "url": "https://www.jeugdeducatiefonds.nl/actueel/honderd-praktijkscholen-krijgen-extra-budget-om-geldzorgen-van-leerlingen-weg-te-nemen"
+    },
+    {
+      "title": "Brabant krijgt eigen supercomputer voor veilige AI-ontwikkeling",
+      "teaser": "Supercomputing Brabant geeft startups en mkb-bedrijven toegang tot krachtige AI-rekencapaciteit en expertise van onder meer TU/e en Tilburg University. Bedrijven houden daarbij controle over hun data; de provincie investeert vier miljoen euro in de eerste twee jaar.",
+      "source": "Omroep Brabant",
+      "category": "Energie & innovatie",
+      "url": "https://www.omroepbrabant.nl/nieuws/6028408/supercomputing-brabant-gelanceerd-voor-ai-innovatie"
+    },
+    {
+      "title": "WK wielrennen én para-cycling komen in 2034 naar Groningen en Drenthe",
+      "teaser": "De internationale wielerunie UCI heeft de wereldkampioenschappen op de weg en para-cycling van 2034 toegewezen aan Groningen en Drenthe. Daarmee keert het WK wielrennen na 22 jaar terug naar Nederland.",
+      "source": "Gemeente Groningen",
+      "category": "Sport",
+      "url": "https://gemeente.groningen.nl/wk-wielrennen-en-para-cycling-naar-groningen-en-drenthe-2034"
+    }
+  ],
+  "int": [
+    {
+      "title": "Miljoenen jonge bomen laten grootschalig natuurherstel in Schotland zien",
+      "teaser": "Nieuwe 3D-luchtmetingen in de Cairngorms brachten meer dan zes miljoen bomen in kaart. Ruim 2,6 miljoen daarvan zijn jonge bomen en op meer dan 5.200 hectare voorheen open landschap ontstaat inmiddels nieuw bos, grotendeels via natuurlijke verjonging.",
+      "source": "Phys.org",
+      "category": "Natuur & klimaat",
+      "url": "https://phys.org/news/2026-09-aerial-reveal-successful-woodland-expansion.html",
+      "reading_time_minutes": 5
+    },
+    {
+      "title": "WHO breidt bewezen anticonceptie-opties uit",
+      "teaser": "Nieuwe WHO-richtlijnen ondersteunen onder meer langer gebruik van anticonceptie-implantaten, alternatieve schema's voor de combinatiepil en een extra optie voor noodanticonceptie. De organisatie publiceerde daarnaast voor het eerst een ontwikkelprofiel voor nieuwe anticonceptiemethoden voor mannen.",
+      "source": "WHO",
+      "category": "Gezondheid",
+      "url": "https://www.who.int/news/item/23-09-2026-who-expands-safe-options-for-contraception"
+    },
+    {
+      "title": "Slimme beeldbegeleiding helpt beginners betere trauma-echo's maken",
+      "teaser": "Een nieuw systeem combineert een voorspeld anatomisch model met live echobeelden en mixed reality. In tests konden onervaren gebruikers daarmee vaker de juiste beelden voor traumaonderzoek maken, wat op termijn bedside-echografie toegankelijker kan maken.",
+      "source": "Medical Xpress",
+      "category": "Wetenschap",
+      "url": "https://medicalxpress.com/news/2026-09-anatomical-guidance-novice-users-trauma.html",
+      "reading_time_minutes": 3
+    },
+    {
+      "title": "Lokale projecten in Somalië verbeteren school, waterafvoer en toegang tot rechtspraak",
+      "teaser": "In en rond Kismayo leveren lokaal geleide projecten concrete resultaten op: een gerenoveerde school bedient meer dan 1.500 leerlingen, duizenden zaken werden via lokale bemiddeling behandeld en meerdere gemeenschapsconflicten zijn opgelost.",
+      "source": "UNDP",
+      "category": "Mens",
+      "url": "https://www.undp.org/somalia/news/development-partners-witness-impact-local-solutions-kismayo"
+    },
+    {
+      "title": "Perseverance onthult ingewikkelder watersysteem op het oude Mars",
+      "teaser": "Metingen van NASA's Perseverance-rover wijzen erop dat water in de Jezero-krater vroeger via meerdere processen en in verschillende omgevingen aanwezig was. De vondst geeft onderzoekers een rijker beeld van de geschiedenis van water op Mars.",
+      "source": "NASA",
+      "category": "Wetenschap",
+      "url": "https://www.nasa.gov/solar-system/planets/mars/nasa-discovery-reveals-complex-water-systems-on-early-mars/"
+    },
+    {
+      "title": "Iran overtreft doelen voor afbouw van ozonafbrekende stoffen",
+      "teaser": "Volgens UNDP heeft Iran zijn verplichtingen onder het Montreal Protocol overtroffen bij het terugdringen van HCFC's. Meer dan duizend technici zijn getraind en bedrijven kregen schonere technologie voor koeling, airconditioning en schuimproductie.",
+      "source": "UNDP",
+      "category": "Natuur & klimaat",
+      "url": "https://www.undp.org/iran/news/iran-surpasses-montreal-protocol-targets-through-strategic-partnerships-and-innovation"
+    }
+  ],
+  "headlines": [
+    {
+      "title": "VS, Denemarken en Groenland sluiten akkoord over Amerikaanse militaire aanwezigheid",
+      "teaser": "De drie partijen hebben afspraken gemaakt over een grotere Amerikaanse militaire aanwezigheid op Groenland. De overeenkomst beëindigt voorlopig de diplomatieke impasse rond eerdere Amerikaanse plannen om het eiland te verwerven.",
+      "source": "Reuters",
+      "category": "Buitenland & politiek",
+      "url": "https://www.reuters.com/world/europe/trump-denmark-greenland-sign-deal-bid-end-arctic-standoff-2026-09-22/"
+    },
+    {
+      "title": "Orkaan Polo groeit voor Mexicaanse kust uit tot categorie 5",
+      "teaser": "Polo is in korte tijd uitgegroeid tot de zwaarste orkaancategorie. De kern blijft naar verwachting op zee, maar delen van de Mexicaanse westkust moeten rekening houden met zware regen, overstromingen en aardverschuivingen.",
+      "source": "Reuters",
+      "category": "Buitenland",
+      "url": "https://www.reuters.com/business/environment/hurricane-polo-nears-category-5-strength-off-mexicos-pacific-coast-2026-09-22/"
+    },
+    {
+      "title": "Rijk trekt bezwaar tegen nieuw dorp met 8000 woningen in Zuidplaspolder in",
+      "teaser": "Het ministerie verzet zich niet langer tegen Cortelande, het geplande nieuwe dorp tussen Rotterdam en Gouda. Overheden hebben afspraken gemaakt over bereikbaarheid en investeren samen ongeveer 200 miljoen euro in onder meer wegen en een fietsbrug.",
+      "source": "Hart van Nederland",
+      "category": "Binnenland",
+      "url": "https://www.hartvannederland.nl/economie/wonen/artikelen/zuid-holland-zuidplas-cortelande-8000-woningen-bereikbaarheid"
+    }
+  ]
+}

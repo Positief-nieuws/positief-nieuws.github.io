@@ -2,18 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://positief-nieuws.nl/</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-09-24</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/over/</loc>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/edities/</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-09-24</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/onderwerpen/</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-09-24</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/edities/2026-09-24/</loc>
+    <lastmod>2026-09-24</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/edities/2026-09-21/</loc>
@@ -65,30 +69,30 @@
   </url>
   <url>
     <loc>https://positief-nieuws.nl/economie/</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-09-24</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/energie-en-innovatie/</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-09-24</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/gezondheid/</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-09-24</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/mens/</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-09-24</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/natuur-en-klimaat/</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-09-24</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/wetenschap/</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-09-24</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/sport/</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-09-24</lastmod>
   </url>
 </urlset>
