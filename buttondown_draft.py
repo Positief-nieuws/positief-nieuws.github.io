@@ -125,6 +125,41 @@ def edition_weekday(data):
         return "nieuwe"
 
 
+
+def build_preheader(data, nl):
+    """
+    Maakt de inhoudelijke previewtekst die mailapps naast/onder het onderwerp tonen.
+
+    Eerst wordt gekeken naar meta.email_preheader in nieuws.json.
+    Als die ontbreekt, worden automatisch de eerste twee Nederlandse koppen gebruikt.
+    """
+    custom = (
+        data.get("meta", {}).get("email_preheader")
+        or data.get("edition", {}).get("email_preheader")
+        or ""
+    )
+    custom = " ".join(str(custom).split()).strip()
+
+    if custom:
+        return custom[:180]
+
+    titles = []
+    for article in nl[:2]:
+        title = " ".join(str(article.get("title") or "").split()).strip()
+        if title:
+            titles.append(title)
+
+    if not titles:
+        return "12 positieve verhalen + 3 belangrijke nieuwsitems om bij te blijven."
+
+    preview = " · ".join(titles)
+
+    if len(preview) > 180:
+        preview = preview[:177].rstrip(" ,.;:–—-") + "…"
+
+    return preview
+
+
 def edition_url(data):
     """Permanente schone editie-URL, onder meer voor canonical en gedeelde links."""
     raw_date = raw_edition_date(data)
@@ -298,8 +333,12 @@ def build_body(data, nl, international, headlines):
     headlines_html = "\n".join(article_html(article) for article in headlines)
     share_block = build_share_block(data)
     weekday = esc(edition_weekday(data))
+    preheader = esc(build_preheader(data, nl))
 
     return f"""<!-- buttondown-editor-mode: fancy -->
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;color:transparent;font-size:1px;line-height:1px;mso-hide:all;">
+  {preheader}
+</div>
 <div style="width:100%;max-width:780px;margin:0 auto;box-sizing:border-box;background:{PAPER};padding:32px 28px;color:{INK};font-family:Arial,Helvetica,sans-serif;">
 
   <div style="margin-bottom:48px;">
@@ -390,7 +429,7 @@ def build_subject(data):
     return f"Dit gebeurt ook · {edition_date_short_text(data)}"
 
 
-def create_draft(api_key, subject, body, data):
+def create_draft(api_key, subject, body, data, preheader):
     payload = {
         "subject": subject,
         "body": body,
@@ -398,9 +437,7 @@ def create_draft(api_key, subject, body, data):
         "template": "naked",
         # Canonical blijft bewust zonder UTM-parameters.
         "canonical_url": edition_url(data),
-        "description": (
-            "12 positieve verhalen + 3 belangrijke nieuwsitems om bij te blijven."
-        ),
+        "description": preheader,
     }
 
     request = urllib.request.Request(
@@ -434,14 +471,16 @@ def main():
     try:
         data, nl, international, headlines = load_news()
         subject = build_subject(data)
+        preheader = build_preheader(data, nl)
         body = build_body(data, nl, international, headlines)
-        draft = create_draft(api_key, subject, body, data)
+        draft = create_draft(api_key, subject, body, data, preheader)
     except Exception as exc:
         print(f"FOUT: {exc}", file=sys.stderr)
         sys.exit(1)
 
     print("Buttondown-concept aangemaakt.")
     print(f"Onderwerp: {draft.get('subject', subject)}")
+    print(f"Preview: {preheader}")
     print(f"ID: {draft.get('id', 'onbekend')}")
     print(f"Status: {draft.get('status', 'onbekend')}")
 
