@@ -1,122 +1,121 @@
 {
   "meta": {
-    "edition_date": "2026-09-21",
-    "generated_from": "kandidaten (7).json + actuele webcheck + directe-linkcontrole",
+    "edition_date": "2026-09-24",
+    "generated_from": "kandidaten (8).json + twee vooraf geselecteerde verhalen + actuele webcheck + directe-linkcontrole",
     "title": "Positief nieuws",
     "tagline": "Dit gebeurt ook."
   },
   "nl": [
     {
-      "title": "Veel minder baby's op de intensive care met RS-virus na nieuwe immunisatie",
-      "teaser": "Nederlandse ziekenhuizen zien een sterke daling van het aantal baby's dat met een ernstig RS-virus op de intensive care belandt: van 178 naar 43. Kinderartsen schrijven die daling toe aan de nieuwe immunisatie die sinds 2025 wordt gegeven.",
-      "source": "Hart van Nederland",
-      "category": "Gezondheid",
-      "url": "https://www.hartvannederland.nl/milieu-gezondheid/zorg/artikelen/babys-rs-virus-daalt-na-invoering-nieuwe-prik"
-    },
-    {
-      "title": "Rotterdamse buurtkoelkast helpt mensen én voorkomt voedselverspilling",
-      "teaser": "De buurtkoelkast in Delfshaven wordt na vijf jaar nog dagelijks intensief gebruikt. Buurtbewoners delen er eten, mensen met een kleine beurs worden geholpen en voedsel krijgt een bestemming in plaats van de afvalbak. Er komen binnenkort vijf extra koelkasten bij.",
-      "source": "EenVandaag",
-      "category": "Mens",
-      "url": "https://eenvandaag.avrotros.nl/artikelen/eten-delen-en-verspilling-tegengaan-rotterdamse-buurtkoelkast-groot-succes-164827"
-    },
-    {
-      "title": "Akkoord brengt snelfietsroute tussen Utrecht en Amsterdam stap dichterbij",
-      "teaser": "De provincie Utrecht, de Vervoerregio Amsterdam en vier gemeenten hebben afspraken gemaakt over een snelle en comfortabele fietsverbinding tussen Utrecht en Amsterdam. Bestaande fietspaden worden verbeterd en er komen nieuwe verbindingen waar dat nodig is.",
+      "title": "Nederlandse economie groeit sterker dan gedacht",
+      "teaser": "De Nederlandse economie groeide in het tweede kwartaal met 0,6 procent, meer dan eerder geraamd. Huishoudens hadden gemiddeld 0,7 procent meer te besteden dan een jaar eerder en ook de bedrijfswinsten namen toe.",
       "source": "NOS",
-      "category": "Energie & innovatie",
-      "url": "https://nos.nl/artikel/2631884-snelfietsroute-van-dom-tot-dam-tussen-utrecht-en-amsterdam-stap-dichterbij"
-    },
-    {
-      "title": "Koopkracht steeg in 2025 voor het derde jaar op rij",
-      "teaser": "De koopkracht van Nederlanders nam in 2025 in doorsnee met 1,2 procent toe, meldt het CBS. Werknemers gingen er gemiddeld het meest op vooruit met 2,2 procent; voor zelfstandigen en gepensioneerden was de stijging veel kleiner.",
-      "source": "CBS",
       "category": "Economie",
-      "url": "https://www.cbs.nl/nl-nl/nieuws/2026/38/koopkracht-stijgt-met-1-2-procent-in-2025-werknemers-zien-sterkste-toename"
+      "url": "https://nos.nl/artikel/2632133-economie-draait-verrassend-goed-huishoudens-meer-te-besteden-bedrijven-betere-winst"
     },
     {
-      "title": "Blauwe bessen en bramen remmen ontstekingsreactie in kunstmatige darm",
-      "teaser": "Wageningse onderzoekers zagen in een laboratoriummodel dat stoffen uit blauwe bessen en bramen een proces temperden dat samenhangt met ontstekingsreacties. Het gaat nog om onderzoek in een kunstmatige darm, maar de resultaten geven nieuwe aanwijzingen over de relatie tussen voeding en gezondheid.",
-      "source": "Wageningen University & Research",
-      "category": "Wetenschap",
-      "url": "https://www.wur.nl/nl/nieuws/blauwe-bessen-en-bramen-remmen-ontstekingsreactie-kunstmatige-darm"
+      "title": "Hyves keert terug zonder eindeloze scroll en verslavende algoritmes",
+      "teaser": "Het Nederlandse sociale netwerk Hyves is na dertien jaar terug. De vernieuwde versie kiest voor een overzichtelijke tijdlijn, geen eindeloze stroom content en geen algoritmes die gebruikers zo lang mogelijk moeten vasthouden; contact met mensen die je kent staat weer centraal.",
+      "source": "Mediahuis",
+      "category": "Mens",
+      "url": "https://www.mediahuis.nl/nl/nieuws/hyves-is-terug-nederlands-sociaal-netwerk-maakt-op-22-september-comeback"
     },
     {
-      "title": "Dam tot Damloop krijgt na 39 jaar een nieuw parcoursrecord bij de vrouwen",
-      "teaser": "Asayech Ayichew won de Dam tot Damloop in 50 minuten en 5 seconden. Daarmee verbeterde de Ethiopische atlete het vrouwenrecord dat sinds 1987 op naam stond van Ingrid Kristiansen.",
-      "source": "NOS",
+      "title": "Nieuw middel remt zeldzame erfelijke vorm van ALS in fase 3-studie",
+      "teaser": "Ulefnersen liet in een internationale fase 3-studie bij mensen met FUS-ALS een duidelijk positief effect zien op functioneren en overleving. Het gaat om een zeldzame erfelijke vorm van ALS; in Nederland deden veertien patiënten mee aan het onderzoek.",
+      "source": "Stichting ALS Nederland",
+      "category": "Gezondheid",
+      "url": "https://www.als.nl/nieuws/goed-nieuws-als-onderzoek/"
+    },
+    {
+      "title": "Honderd extra praktijkscholen krijgen budget om geldzorgen van leerlingen weg te nemen",
+      "teaser": "Praktijkscholen kunnen voortaan vaker helpen als geldgebrek een stage of opleiding in de weg zit, bijvoorbeeld met werkschoenen, vervoer of een VOG. Na een pilot met 25 scholen groeit het programma dit schooljaar naar bijna 140 scholen.",
+      "source": "Jeugdeducatiefonds",
+      "category": "Mens",
+      "url": "https://www.jeugdeducatiefonds.nl/actueel/honderd-praktijkscholen-krijgen-extra-budget-om-geldzorgen-van-leerlingen-weg-te-nemen"
+    },
+    {
+      "title": "Brabant krijgt eigen supercomputer voor veilige AI-ontwikkeling",
+      "teaser": "Supercomputing Brabant geeft startups en mkb-bedrijven toegang tot krachtige AI-rekencapaciteit en expertise van onder meer TU/e en Tilburg University. Bedrijven houden daarbij controle over hun data; de provincie investeert vier miljoen euro in de eerste twee jaar.",
+      "source": "Omroep Brabant",
+      "category": "Energie & innovatie",
+      "url": "https://www.omroepbrabant.nl/nieuws/6028408/supercomputing-brabant-gelanceerd-voor-ai-innovatie"
+    },
+    {
+      "title": "WK wielrennen én para-cycling komen in 2034 naar Groningen en Drenthe",
+      "teaser": "De internationale wielerunie UCI heeft de wereldkampioenschappen op de weg en para-cycling van 2034 toegewezen aan Groningen en Drenthe. Daarmee keert het WK wielrennen na 22 jaar terug naar Nederland.",
+      "source": "Gemeente Groningen",
       "category": "Sport",
-      "url": "https://nos.nl/artikel/2631728-ethiopische-ayichew-verbreekt-39-jaar-oud-parcoursrecord-dam-tot-damloop",
-      "reading_time_minutes": 2
+      "url": "https://gemeente.groningen.nl/wk-wielrennen-en-para-cycling-naar-groningen-en-drenthe-2034"
     }
   ],
   "int": [
     {
-      "title": "Recordaantal van 90 kākāpō-kuikens geeft bedreigde papegaai flinke impuls",
-      "teaser": "In Nieuw-Zeeland zijn dit jaar 90 kākāpō-kuikens groot genoeg geworden om als zelfstandig te tellen: een record. De totale populatie van de ernstig bedreigde, niet-vliegende papegaai is daarmee gegroeid tot 325 dieren, tegenover 51 in 1995.",
-      "source": "Smithsonian Magazine",
-      "category": "Natuur & klimaat",
-      "url": "https://www.smithsonianmag.com/smart-news/new-zealand-welcomes-a-record-90-kakapo-chicks-helping-the-worlds-chunkiest-parrot-species-rebound-from-the-brink-of-extinction-180989511/"
-    },
-    {
-      "title": "Virtuele cellen met 4D-AI kunnen zoektocht naar medicijnen versnellen",
-      "teaser": "Onderzoekers bouwden met tienduizenden 4D-opnamen een AI-model dat veranderingen in levende cellen kan voorspellen. Digitale tweelingen van echte cellen reageerden in tests vergelijkbaar op medicijnen, wat nieuwe mogelijkheden biedt om behandelingen sneller te onderzoeken.",
+      "title": "Miljoenen jonge bomen laten grootschalig natuurherstel in Schotland zien",
+      "teaser": "Nieuwe 3D-luchtmetingen in de Cairngorms brachten meer dan zes miljoen bomen in kaart. Ruim 2,6 miljoen daarvan zijn jonge bomen en op meer dan 5.200 hectare voorheen open landschap ontstaat inmiddels nieuw bos, grotendeels via natuurlijke verjonging.",
       "source": "Phys.org",
-      "category": "Wetenschap",
-      "url": "https://phys.org/news/2026-09-virtual-cells-built-4d-ai.html",
+      "category": "Natuur & klimaat",
+      "url": "https://phys.org/news/2026-09-aerial-reveal-successful-woodland-expansion.html",
       "reading_time_minutes": 5
     },
     {
-      "title": "Digitaal voorraadsysteem helpt Zambia vaccins beter beschikbaar te houden",
-      "teaser": "Zambia vervangt papieren vaccinregistraties steeds vaker door een digitaal systeem waarmee tekorten sneller zichtbaar worden. Inmiddels zijn 305 van 382 beoogde zorglocaties aangesloten en kunnen voorraden sneller worden herverdeeld wanneer dat nodig is.",
-      "source": "UNICEF",
-      "category": "Gezondheid",
-      "url": "https://www.unicef.org/zambia/stories/paper-records-real-time-decision"
-    },
-    {
-      "title": "MIT boekt meetbare vooruitgang met energiezuiniger en schoner campusbeheer",
-      "teaser": "MIT heeft het energiegebruik per vierkante meter in tien jaar met meer dan 10 procent verminderd en vijf keer zoveel zonne-energie op daken geplaatst. Een renovatie van een groot onderzoeksgebouw verlaagde het energiegebruik en de uitstoot daar met 35 procent.",
-      "source": "MIT News",
-      "category": "Energie & innovatie",
-      "url": "https://news.mit.edu/2026/mit-makes-progress-campus-climate-goals-0915",
-      "reading_time_minutes": 7
-    },
-    {
-      "title": "Schonere lucht in New York hangt samen met betere ontwikkeling bij peuters",
-      "teaser": "Een langlopend onderzoek onder ruim 1.100 kinderen in New York zag dat verbeteringen in de luchtkwaliteit samengingen met betere scores op onder meer geheugen, waarneming en communicatie. De onderzoekers volgden gezinnen over een periode van twintig jaar.",
-      "source": "The Guardian",
-      "category": "Natuur & klimaat",
-      "url": "https://www.theguardian.com/environment/2026/sep/18/improved-air-quality-pollution-mental-development-toddlers-new-york-study"
-    },
-    {
-      "title": "WHO lanceert eerste wereldwijde strategie voor betere toegang tot kinderkankermedicijnen",
-      "teaser": "De Wereldgezondheidsorganisatie presenteert tien maatregelen om essentiële medicijnen voor kinderen met kanker betrouwbaarder, betaalbaarder en beter beschikbaar te maken. De strategie richt zich onder meer op gezamenlijke inkoop, sterkere toelevering en snellere toelating.",
+      "title": "WHO breidt bewezen anticonceptie-opties uit",
+      "teaser": "Nieuwe WHO-richtlijnen ondersteunen onder meer langer gebruik van anticonceptie-implantaten, alternatieve schema's voor de combinatiepil en een extra optie voor noodanticonceptie. De organisatie publiceerde daarnaast voor het eerst een ontwikkelprofiel voor nieuwe anticonceptiemethoden voor mannen.",
       "source": "WHO",
       "category": "Gezondheid",
-      "url": "https://www.who.int/publications/i/item/9789240125087"
+      "url": "https://www.who.int/news/item/23-09-2026-who-expands-safe-options-for-contraception"
+    },
+    {
+      "title": "Slimme beeldbegeleiding helpt beginners betere trauma-echo's maken",
+      "teaser": "Een nieuw systeem combineert een voorspeld anatomisch model met live echobeelden en mixed reality. In tests konden onervaren gebruikers daarmee vaker de juiste beelden voor traumaonderzoek maken, wat op termijn bedside-echografie toegankelijker kan maken.",
+      "source": "Medical Xpress",
+      "category": "Wetenschap",
+      "url": "https://medicalxpress.com/news/2026-09-anatomical-guidance-novice-users-trauma.html",
+      "reading_time_minutes": 3
+    },
+    {
+      "title": "Lokale projecten in Somalië verbeteren school, waterafvoer en toegang tot rechtspraak",
+      "teaser": "In en rond Kismayo leveren lokaal geleide projecten concrete resultaten op: een gerenoveerde school bedient meer dan 1.500 leerlingen, duizenden zaken werden via lokale bemiddeling behandeld en meerdere gemeenschapsconflicten zijn opgelost.",
+      "source": "UNDP",
+      "category": "Mens",
+      "url": "https://www.undp.org/somalia/news/development-partners-witness-impact-local-solutions-kismayo"
+    },
+    {
+      "title": "Perseverance onthult ingewikkelder watersysteem op het oude Mars",
+      "teaser": "Metingen van NASA's Perseverance-rover wijzen erop dat water in de Jezero-krater vroeger via meerdere processen en in verschillende omgevingen aanwezig was. De vondst geeft onderzoekers een rijker beeld van de geschiedenis van water op Mars.",
+      "source": "NASA",
+      "category": "Wetenschap",
+      "url": "https://www.nasa.gov/solar-system/planets/mars/nasa-discovery-reveals-complex-water-systems-on-early-mars/"
+    },
+    {
+      "title": "Iran overtreft doelen voor afbouw van ozonafbrekende stoffen",
+      "teaser": "Volgens UNDP heeft Iran zijn verplichtingen onder het Montreal Protocol overtroffen bij het terugdringen van HCFC's. Meer dan duizend technici zijn getraind en bedrijven kregen schonere technologie voor koeling, airconditioning en schuimproductie.",
+      "source": "UNDP",
+      "category": "Natuur & klimaat",
+      "url": "https://www.undp.org/iran/news/iran-surpasses-montreal-protocol-targets-through-strategic-partnerships-and-innovation"
     }
   ],
   "headlines": [
     {
-      "title": "Onderzoeksraad: omstandigheden voor 7000 kinderen in asielnoodopvang zijn structureel onveilig",
-      "teaser": "De Onderzoeksraad voor Veiligheid roept het kabinet op om binnen een halfjaar de situatie voor kinderen in de noodopvang te verbeteren. Volgens de raad bedreigen onder meer onveiligheid, gebrek aan privacy en veelvuldige verhuizingen hun ontwikkeling.",
-      "source": "NOS",
+      "title": "VS, Denemarken en Groenland sluiten akkoord over Amerikaanse militaire aanwezigheid",
+      "teaser": "De drie partijen hebben afspraken gemaakt over een grotere Amerikaanse militaire aanwezigheid op Groenland. De overeenkomst beëindigt voorlopig de diplomatieke impasse rond eerdere Amerikaanse plannen om het eiland te verwerven.",
+      "source": "Reuters",
+      "category": "Buitenland & politiek",
+      "url": "https://www.reuters.com/world/europe/trump-denmark-greenland-sign-deal-bid-end-arctic-standoff-2026-09-22/"
+    },
+    {
+      "title": "Orkaan Polo groeit voor Mexicaanse kust uit tot categorie 5",
+      "teaser": "Polo is in korte tijd uitgegroeid tot de zwaarste orkaancategorie. De kern blijft naar verwachting op zee, maar delen van de Mexicaanse westkust moeten rekening houden met zware regen, overstromingen en aardverschuivingen.",
+      "source": "Reuters",
+      "category": "Buitenland",
+      "url": "https://www.reuters.com/business/environment/hurricane-polo-nears-category-5-strength-off-mexicos-pacific-coast-2026-09-22/"
+    },
+    {
+      "title": "Rijk trekt bezwaar tegen nieuw dorp met 8000 woningen in Zuidplaspolder in",
+      "teaser": "Het ministerie verzet zich niet langer tegen Cortelande, het geplande nieuwe dorp tussen Rotterdam en Gouda. Overheden hebben afspraken gemaakt over bereikbaarheid en investeren samen ongeveer 200 miljoen euro in onder meer wegen en een fietsbrug.",
+      "source": "Hart van Nederland",
       "category": "Binnenland",
-      "url": "https://nos.nl/artikel/2631878-onderzoeksraad-7000-kinderen-in-asielnoodopvang-structureel-verwaarloosd"
-    },
-    {
-      "title": "CDU haalt voor het eerst kiesdrempel niet bij Duitse deelstaatverkiezingen",
-      "teaser": "In Mecklenburg-Voor-Pommeren haalde de CDU 4,9 procent en verdwijnt de partij uit het deelstaatparlement. AfD werd volgens de voorlopige officiële uitslag de grootste partij met 38,2 procent, vlak voor de SPD met 35,5 procent.",
-      "source": "NOS",
-      "category": "Buitenland & politiek",
-      "url": "https://nos.nl/artikel/2631852-pijnlijk-verlies-cdu-in-duitse-deelstaat-voor-het-eerst-kiesdrempel-niet-gehaald"
-    },
-    {
-      "title": "Amerikaanse regering zou sancties tegen Internationaal Strafhof voorbereiden",
-      "teaser": "Reuters en The Wall Street Journal melden op basis van regeringsbronnen dat de regering-Trump sancties tegen het Internationaal Strafhof als geheel heeft voorbereid. Wat de maatregelen precies zouden inhouden, is nog niet bekend.",
-      "source": "NOS",
-      "category": "Buitenland & politiek",
-      "url": "https://nos.nl/artikel/2631854-regering-trump-heeft-plannen-klaar-voor-sancties-tegen-internationaal-strafhof"
+      "url": "https://www.hartvannederland.nl/economie/wonen/artikelen/zuid-holland-zuidplas-cortelande-8000-woningen-bereikbaarheid"
     }
   ]
 }
