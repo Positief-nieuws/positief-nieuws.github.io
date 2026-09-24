@@ -11,10 +11,18 @@
 
   <script>
     (async function () {
-      const fallback = "https://positief-nieuws.nl/";
+      const fallback =
+        "https://positief-nieuws.nl/" +
+        "?utm_source=linkedin&utm_medium=social&utm_campaign=editie&utm_content=linkedin_post";
+
       try {
-        const response = await fetch("/nieuws.json?ts=" + Date.now(), { cache: "no-store" });
-        if (!response.ok) throw new Error("nieuws.json kon niet worden geladen");
+        const response = await fetch("/nieuws.json?ts=" + Date.now(), {
+          cache: "no-store"
+        });
+
+        if (!response.ok) {
+          throw new Error("nieuws.json kon niet worden geladen");
+        }
 
         const data = await response.json();
         const date = data?.meta?.edition_date || data?.edition?.date;
