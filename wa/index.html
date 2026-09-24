@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Positief nieuws</title>
+</head>
+<body>
+  <p>Je wordt doorgestuurd naar de nieuwste editie van Positief nieuws.</p>
+
+  <script>
+    (async function () {
+      const fallback =
+        "https://positief-nieuws.nl/" +
+        "?utm_source=whatsapp&utm_medium=social&utm_campaign=editie&utm_content=status";
+
+      try {
+        const response = await fetch("/nieuws.json?ts=" + Date.now(), {
+          cache: "no-store"
+        });
+
+        if (!response.ok) {
+          throw new Error("nieuws.json kon niet worden geladen");
+        }
+
+        const data = await response.json();
+        const date = data?.meta?.edition_date || data?.edition?.date;
+
+        if (!/^\d{4}-\d{2}-\d{2}$/.test(date || "")) {
+          throw new Error("Geen geldige editiedatum gevonden");
+        }
+
+        const target =
+          `https://positief-nieuws.nl/edities/${date}/` +
+          `?utm_source=whatsapp&utm_medium=social&utm_campaign=editie_${date}&utm_content=status`;
+
+        window.location.replace(target);
+      } catch (error) {
+        window.location.replace(fallback);
+      }
+    })();
+  </script>
+</body>
+</html>
