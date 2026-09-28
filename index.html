@@ -2261,6 +2261,30 @@
     }
 
 
+    function trackArticleClick(
+      article,
+      type,
+      href
+    ) {
+
+      if (typeof window.sa_event !== "function") {
+        return;
+      }
+
+      window.sa_event(
+        "article_click",
+        {
+          title: article.title || "Zonder titel",
+          source: article.source || "Onbekend",
+          category: canonicalCategory(article.category || "Onbekend"),
+          section: type || "onbekend",
+          edition: window.sa_metadata?.edition || "onbekend",
+          url: href || "onbekend"
+        }
+      );
+    }
+
+
     function renderCard(
       rawArticle,
       type = "nl",
@@ -2295,6 +2319,25 @@
           "beforeend",
           `<a class="article-arrow" href="${href}" ${externalAttrs} aria-label="Lees ${safeText(article.title)}">↗</a>`
         );
+
+        card
+          .querySelectorAll(
+            ".article-title a, .article-arrow"
+          )
+          .forEach(
+            link => {
+              link.addEventListener(
+                "click",
+                () => {
+                  trackArticleClick(
+                    article,
+                    type,
+                    href
+                  );
+                }
+              );
+            }
+          );
       }
 
       return card;
@@ -2870,6 +2913,17 @@
 
     function loadAnalytics(editionDate) {
 
+      window.sa_event =
+        window.sa_event ||
+        function () {
+          const args =
+            [].slice.call(arguments);
+
+          window.sa_event.q
+            ? window.sa_event.q.push(args)
+            : window.sa_event.q = [args];
+        };
+
       window.sa_metadata = {
         edition: editionDate || "onbekend"
       };
@@ -2902,6 +2956,10 @@
             document.createElement("script");
 
           autoEventsScript.async = true;
+          autoEventsScript.setAttribute(
+            "data-full-urls",
+            "true"
+          );
           autoEventsScript.src =
             "https://scripts.simpleanalyticscdn.com/auto-events.js";
 
