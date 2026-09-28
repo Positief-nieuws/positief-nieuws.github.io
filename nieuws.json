@@ -1,121 +1,117 @@
 {
   "meta": {
-    "edition_date": "2026-09-24",
-    "generated_from": "kandidaten (8).json + twee vooraf geselecteerde verhalen + actuele webcheck + directe-linkcontrole",
-    "title": "Positief nieuws",
-    "tagline": "Dit gebeurt ook."
+    "edition_date": "2026-09-28",
+    "email_preheader": "Specialisten kijken op afstand mee in de OK, de Belastingdienst test hulp vóór problemen oplopen en Pakistan geeft de Indusdolfijn 400 kilometer beschermd leefgebied."
   },
   "nl": [
     {
-      "title": "Nederlandse economie groeit sterker dan gedacht",
-      "teaser": "De Nederlandse economie groeide in het tweede kwartaal met 0,6 procent, meer dan eerder geraamd. Huishoudens hadden gemiddeld 0,7 procent meer te besteden dan een jaar eerder en ook de bedrijfswinsten namen toe.",
-      "source": "NOS",
-      "category": "Economie",
-      "url": "https://nos.nl/artikel/2632133-economie-draait-verrassend-goed-huishoudens-meer-te-besteden-bedrijven-betere-winst"
-    },
-    {
-      "title": "Hyves keert terug zonder eindeloze scroll en verslavende algoritmes",
-      "teaser": "Het Nederlandse sociale netwerk Hyves is na dertien jaar terug. De vernieuwde versie kiest voor een overzichtelijke tijdlijn, geen eindeloze stroom content en geen algoritmes die gebruikers zo lang mogelijk moeten vasthouden; contact met mensen die je kent staat weer centraal.",
-      "source": "Mediahuis",
-      "category": "Mens",
-      "url": "https://www.mediahuis.nl/nl/nieuws/hyves-is-terug-nederlands-sociaal-netwerk-maakt-op-22-september-comeback"
-    },
-    {
-      "title": "Nieuw middel remt zeldzame erfelijke vorm van ALS in fase 3-studie",
-      "teaser": "Ulefnersen liet in een internationale fase 3-studie bij mensen met FUS-ALS een duidelijk positief effect zien op functioneren en overleving. Het gaat om een zeldzame erfelijke vorm van ALS; in Nederland deden veertien patiënten mee aan het onderzoek.",
-      "source": "Stichting ALS Nederland",
-      "category": "Gezondheid",
-      "url": "https://www.als.nl/nieuws/goed-nieuws-als-onderzoek/"
-    },
-    {
-      "title": "Honderd extra praktijkscholen krijgen budget om geldzorgen van leerlingen weg te nemen",
-      "teaser": "Praktijkscholen kunnen voortaan vaker helpen als geldgebrek een stage of opleiding in de weg zit, bijvoorbeeld met werkschoenen, vervoer of een VOG. Na een pilot met 25 scholen groeit het programma dit schooljaar naar bijna 140 scholen.",
-      "source": "Jeugdeducatiefonds",
-      "category": "Mens",
-      "url": "https://www.jeugdeducatiefonds.nl/actueel/honderd-praktijkscholen-krijgen-extra-budget-om-geldzorgen-van-leerlingen-weg-te-nemen"
-    },
-    {
-      "title": "Brabant krijgt eigen supercomputer voor veilige AI-ontwikkeling",
-      "teaser": "Supercomputing Brabant geeft startups en mkb-bedrijven toegang tot krachtige AI-rekencapaciteit en expertise van onder meer TU/e en Tilburg University. Bedrijven houden daarbij controle over hun data; de provincie investeert vier miljoen euro in de eerste twee jaar.",
-      "source": "Omroep Brabant",
       "category": "Energie & innovatie",
-      "url": "https://www.omroepbrabant.nl/nieuws/6028408/supercomputing-brabant-gelanceerd-voor-ai-innovatie"
+      "title": "Enschedese headset laat specialisten op afstand meekijken tijdens operaties",
+      "teaser": "Een headset van JJ-MEDTECH brengt medische beelden samen in het blikveld van de arts, terwijl een specialist op afstand kan meekijken en aanwijzingen kan intekenen. Het systeem wordt al gebruikt in Gent.",
+      "source": "Oost",
+      "url": "https://www.oost.nl/nieuws/3697827/met-deze-enschedese-uitvinding-kunnen-chirurgen-op-afstand-mee-opereren"
     },
     {
-      "title": "WK wielrennen én para-cycling komen in 2034 naar Groningen en Drenthe",
-      "teaser": "De internationale wielerunie UCI heeft de wereldkampioenschappen op de weg en para-cycling van 2034 toegewezen aan Groningen en Drenthe. Daarmee keert het WK wielrennen na 22 jaar terug naar Nederland.",
-      "source": "Gemeente Groningen",
-      "category": "Sport",
-      "url": "https://gemeente.groningen.nl/wk-wielrennen-en-para-cycling-naar-groningen-en-drenthe-2034"
+      "category": "Mens",
+      "title": "Belastingdienst test hulp vóór fiscale problemen verder oplopen",
+      "teaser": "Sinds 15 september draait een pilot waarbij maximaal 300 mensen met gesignaleerde fiscale problemen proactief hulp aangeboden krijgen. De Belastingdienst onderzoekt zo of eerder contact grotere problemen kan helpen voorkomen.",
+      "source": "Belastingdienst",
+      "url": "https://over-ons.belastingdienst.nl/vragen-en-antwoorden-pilot-signaalmodel-vroegsignalering/"
+    },
+    {
+      "category": "Natuur & klimaat",
+      "title": "Zeldzaam blauwgrasland krijgt jaarlijks mineraalrijk water voor herstel",
+      "teaser": "Langs de Meije wordt beschermd blauwgrasland tijdelijk onder water gezet met voedselarm, mineraalrijk water. De maatregel moet verzuring tegengaan en betere omstandigheden creëren voor zeldzame plantensoorten.",
+      "source": "Staatsbosbeheer",
+      "url": "https://www.staatsbosbeheer.nl/wat-we-doen/werk-in-uitvoering/utrechtse-venen-natuurherstel-de-meije"
+    },
+    {
+      "category": "Mens",
+      "title": "Nieuw azc in Nuenen trekt 930 bezoekers en 85 nieuwe vrijwilligers",
+      "teaser": "Na stevige weerstand rond de komst van het azc kwamen honderden mensen naar de open dag. Inmiddels hebben 85 inwoners zich gemeld om te helpen met onder meer Nederlands, fietslessen en kennismaken met het dorp.",
+      "source": "Omroep Brabant",
+      "url": "https://www.omroepbrabant.nl/nieuws/6028772/recordaantal-bezoekers-en-veel-vrijwilligers-bij-gloednieuw-azc-in-nuenen"
+    },
+    {
+      "category": "Mens",
+      "title": "Gratis knipdagen geven dakloze mensen een frisse start en extra zelfvertrouwen",
+      "teaser": "De Rotterdamse maatschappelijk werker Djesco koppelt kappers aan opvanglocaties voor gratis knipbeurten. Het initiatief draait inmiddels op meerdere plekken in de regio en krijgt ook belangstelling uit Amsterdam.",
+      "source": "OPEN Rotterdam / Rijnmond",
+      "url": "https://openrotterdam.nl/djesco-34-zet-zich-in-om-dakloze-mensen-te-helpen-mijn-eigen-vader-was-ook-dakloos/"
+    },
+    {
+      "category": "Economie",
+      "title": "Nederlandse wijnbouw wint terrein na een veelbelovende zomer",
+      "teaser": "Nederlandse wijngaarden profiteren van een gunstige zomer en de sector groeit verder. Bij kloosterlandgoed Sint-Catharinadal helpen tientallen vrijwilligers mee met de oogst, al blijven de laatste weken richting de pluk spannend.",
+      "source": "NOS",
+      "url": "https://nos.nl/l/2632579",
+      "reading_time_minutes": 3
     }
   ],
   "int": [
     {
-      "title": "Miljoenen jonge bomen laten grootschalig natuurherstel in Schotland zien",
-      "teaser": "Nieuwe 3D-luchtmetingen in de Cairngorms brachten meer dan zes miljoen bomen in kaart. Ruim 2,6 miljoen daarvan zijn jonge bomen en op meer dan 5.200 hectare voorheen open landschap ontstaat inmiddels nieuw bos, grotendeels via natuurlijke verjonging.",
-      "source": "Phys.org",
       "category": "Natuur & klimaat",
-      "url": "https://phys.org/news/2026-09-aerial-reveal-successful-woodland-expansion.html",
+      "title": "Pakistan geeft Indusdolfijn 400 kilometer aaneengesloten beschermd leefgebied",
+      "teaser": "Een nieuw reservaat in Punjab sluit aan op bestaand beschermd gebied in Sindh. Zo ontstaat een corridor van 400 kilometer voor de bedreigde Indusdolfijn, waarvan de populatie zich de afgelopen decennia duidelijk heeft hersteld.",
+      "source": "Mongabay",
+      "url": "https://news.mongabay.com/2026/09/pakistan-expands-protected-habitat-for-indus-river-dolphin-as-recovery-offers-hope/"
+    },
+    {
+      "category": "Natuur & klimaat",
+      "title": "Bali kweekt vuurvliegjes voor terugkeer naar de natuur",
+      "teaser": "Het Indonesische project Bring Back the Light heeft bijna 20.000 larven en volwassen vuurvliegjes uitgezet. Tegelijk helpt het boeren overstappen op minder schadelijke landbouw, zodat de dieren ook blijvend leefgebied terugkrijgen.",
+      "source": "Mongabay",
+      "url": "https://news.mongabay.com/video/2026/09/a-plan-to-save-balis-lost-fireflies/"
+    },
+    {
+      "category": "Economie",
+      "title": "Nieuwe wereldstandaard moet duurzame doelen meetbaar onderdeel van organisaties maken",
+      "teaser": "ISO en UNDP hebben ISO/UNDP 53001 gelanceerd. De nieuwe internationale standaard geeft organisaties een vast systeem om duurzame ontwikkelingsdoelen in strategie en dagelijkse processen op te nemen en voortgang te meten.",
+      "source": "ISO / UNDP",
+      "url": "https://www.iso.org/standard/53001"
+    },
+    {
+      "category": "Mens",
+      "title": "Brits kledingmerk laat zien dat betaalbare mode en leefbare lonen samen kunnen gaan",
+      "teaser": "Yes Friends combineert betaalbare kleding met onder meer Fairtrade katoen en bijdragen aan leefbare lonen. Via een extra fooiensysteem ging inmiddels meer dan 56.000 pond rechtstreeks naar kledingarbeiders.",
+      "source": "Positive News",
+      "url": "https://www.positive.news/economics/the-ethical-fashion-brand-championing-change-across-the-industry/"
+    },
+    {
+      "category": "Wetenschap",
+      "title": "Digitale tool helpt hersenchirurgen belangrijke functies tijdens operaties in kaart brengen",
+      "teaser": "Een spin-off van de Universitat Autònoma de Barcelona en het Center for Computer Vision ontwikkelde software die operatieteams ondersteunt bij het herkennen van hersengebieden die tijdens het verwijderen van een tumor behouden moeten blijven.",
+      "source": "Medical Xpress",
+      "url": "https://medicalxpress.com/news/2026-09-digital-tool-doctors-critical-brain.html",
       "reading_time_minutes": 5
     },
     {
-      "title": "WHO breidt bewezen anticonceptie-opties uit",
-      "teaser": "Nieuwe WHO-richtlijnen ondersteunen onder meer langer gebruik van anticonceptie-implantaten, alternatieve schema's voor de combinatiepil en een extra optie voor noodanticonceptie. De organisatie publiceerde daarnaast voor het eerst een ontwikkelprofiel voor nieuwe anticonceptiemethoden voor mannen.",
-      "source": "WHO",
       "category": "Gezondheid",
-      "url": "https://www.who.int/news/item/23-09-2026-who-expands-safe-options-for-contraception"
-    },
-    {
-      "title": "Slimme beeldbegeleiding helpt beginners betere trauma-echo's maken",
-      "teaser": "Een nieuw systeem combineert een voorspeld anatomisch model met live echobeelden en mixed reality. In tests konden onervaren gebruikers daarmee vaker de juiste beelden voor traumaonderzoek maken, wat op termijn bedside-echografie toegankelijker kan maken.",
+      "title": "Langlopende studie wijst op mogelijk blijvend effect van lage dosis bestraling bij knieartrose",
+      "teaser": "Een analyse van een gerandomiseerde studie met bijna 300 patiënten vond na jaren minder pijn, betere functie en minder structurele achteruitgang na lage dosis radiotherapie. De onderzoekers spreken van veelbelovende, nog nader te bevestigen resultaten.",
       "source": "Medical Xpress",
-      "category": "Wetenschap",
-      "url": "https://medicalxpress.com/news/2026-09-anatomical-guidance-novice-users-trauma.html",
-      "reading_time_minutes": 3
-    },
-    {
-      "title": "Lokale projecten in Somalië verbeteren school, waterafvoer en toegang tot rechtspraak",
-      "teaser": "In en rond Kismayo leveren lokaal geleide projecten concrete resultaten op: een gerenoveerde school bedient meer dan 1.500 leerlingen, duizenden zaken werden via lokale bemiddeling behandeld en meerdere gemeenschapsconflicten zijn opgelost.",
-      "source": "UNDP",
-      "category": "Mens",
-      "url": "https://www.undp.org/somalia/news/development-partners-witness-impact-local-solutions-kismayo"
-    },
-    {
-      "title": "Perseverance onthult ingewikkelder watersysteem op het oude Mars",
-      "teaser": "Metingen van NASA's Perseverance-rover wijzen erop dat water in de Jezero-krater vroeger via meerdere processen en in verschillende omgevingen aanwezig was. De vondst geeft onderzoekers een rijker beeld van de geschiedenis van water op Mars.",
-      "source": "NASA",
-      "category": "Wetenschap",
-      "url": "https://www.nasa.gov/solar-system/planets/mars/nasa-discovery-reveals-complex-water-systems-on-early-mars/"
-    },
-    {
-      "title": "Iran overtreft doelen voor afbouw van ozonafbrekende stoffen",
-      "teaser": "Volgens UNDP heeft Iran zijn verplichtingen onder het Montreal Protocol overtroffen bij het terugdringen van HCFC's. Meer dan duizend technici zijn getraind en bedrijven kregen schonere technologie voor koeling, airconditioning en schuimproductie.",
-      "source": "UNDP",
-      "category": "Natuur & klimaat",
-      "url": "https://www.undp.org/iran/news/iran-surpasses-montreal-protocol-targets-through-strategic-partnerships-and-innovation"
+      "url": "https://medicalxpress.com/news/2026-09-dose-therapy-knee-osteoarthritis-term.html",
+      "reading_time_minutes": 6
     }
   ],
   "headlines": [
     {
-      "title": "VS, Denemarken en Groenland sluiten akkoord over Amerikaanse militaire aanwezigheid",
-      "teaser": "De drie partijen hebben afspraken gemaakt over een grotere Amerikaanse militaire aanwezigheid op Groenland. De overeenkomst beëindigt voorlopig de diplomatieke impasse rond eerdere Amerikaanse plannen om het eiland te verwerven.",
-      "source": "Reuters",
-      "category": "Buitenland & politiek",
-      "url": "https://www.reuters.com/world/europe/trump-denmark-greenland-sign-deal-bid-end-arctic-standoff-2026-09-22/"
+      "title": "Voorzichtig optimisme bij oppositie over Nederlandse begrotingsgesprekken",
+      "teaser": "Pro, Volt en de ChristenUnie zien volgens Nieuwsuur meer perspectief in gesprekken met het minderheidskabinet over steun voor de begroting. Een akkoord of Kamermeerderheid is nog niet rond.",
+      "source": "NOS",
+      "url": "https://nos.nl/nieuwsuur/artikel/2632747-27-9-in-nieuwsuur-verbod-op-holocaust-gedenktegels-haags-optimisme-over-begrotingsgesprekken-oekraiense-economie"
     },
     {
-      "title": "Orkaan Polo groeit voor Mexicaanse kust uit tot categorie 5",
-      "teaser": "Polo is in korte tijd uitgegroeid tot de zwaarste orkaancategorie. De kern blijft naar verwachting op zee, maar delen van de Mexicaanse westkust moeten rekening houden met zware regen, overstromingen en aardverschuivingen.",
-      "source": "Reuters",
-      "category": "Buitenland",
-      "url": "https://www.reuters.com/business/environment/hurricane-polo-nears-category-5-strength-off-mexicos-pacific-coast-2026-09-22/"
+      "title": "VS en Iran blijven verdeeld over vredesvoorstel en Straat van Hormuz",
+      "teaser": "Iran zegt dat alleen onderhandelingen het conflict kunnen beëindigen. President Trump heeft een Iraans voorstel afgewezen. De onzekerheid rond de Straat van Hormuz blijft ook de olieprijzen beïnvloeden.",
+      "source": "Reuters via Moneycontrol",
+      "url": "https://www.moneycontrol.com/world/iran-says-only-diplomacy-can-end-us-israel-conflict-as-trump-rejects-hormuz-proposal-article-14039475.html"
     },
     {
-      "title": "Rijk trekt bezwaar tegen nieuw dorp met 8000 woningen in Zuidplaspolder in",
-      "teaser": "Het ministerie verzet zich niet langer tegen Cortelande, het geplande nieuwe dorp tussen Rotterdam en Gouda. Overheden hebben afspraken gemaakt over bereikbaarheid en investeren samen ongeveer 200 miljoen euro in onder meer wegen en een fietsbrug.",
-      "source": "Hart van Nederland",
-      "category": "Binnenland",
-      "url": "https://www.hartvannederland.nl/economie/wonen/artikelen/zuid-holland-zuidplas-cortelande-8000-woningen-bereikbaarheid"
+      "title": "Russische aanvallen treffen Oekraïense telecom- en datacenters",
+      "teaser": "Het hoofdkantoor van Kyivstar werd geraakt en Rusland meldde ook een aanval op een datacenter van Vodafone Ukraine. Oekraïne zegt dat aanvallen op digitale infrastructuur de afgelopen week tot omvangrijke storingen leidden.",
+      "source": "Reuters via ET Telecom",
+      "url": "https://telecom.economictimes.indiatimes.com/news/industry/russia-hits-ukraines-largest-mobile-provider-strikes-data-centres/134529651"
     }
   ]
 }
