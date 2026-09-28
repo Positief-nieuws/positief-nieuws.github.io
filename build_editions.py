@@ -260,7 +260,34 @@ def validate_positive_articles(data, source_name="nieuws.json"):
 def analytics_html(metadata):
     metadata_json = json.dumps(metadata, ensure_ascii=False)
     return f"""<script>
+  window.sa_event =
+    window.sa_event ||
+    function () {{
+      const args = [].slice.call(arguments);
+      window.sa_event.q
+        ? window.sa_event.q.push(args)
+        : window.sa_event.q = [args];
+    }};
+
   window.sa_metadata = {metadata_json};
+
+  document.addEventListener("click", function (event) {{
+    const link = event.target.closest("[data-article-click]");
+    if (!link) return;
+
+    window.sa_event(
+      "article_click",
+      {{
+        title: link.dataset.articleTitle || "Zonder titel",
+        source: link.dataset.articleSource || "Onbekend",
+        category: link.dataset.articleCategory || "Onbekend",
+        section: link.dataset.articleSection || "onbekend",
+        edition: link.dataset.articleEdition || window.sa_metadata?.edition || "onbekend",
+        url: link.href || "onbekend"
+      }}
+    );
+  }});
+
   (function () {{
     const analyticsScript = document.createElement("script");
     analyticsScript.async = true;
@@ -269,6 +296,7 @@ def analytics_html(metadata):
     analyticsScript.addEventListener("load", function () {{
       const autoEventsScript = document.createElement("script");
       autoEventsScript.async = true;
+      autoEventsScript.setAttribute("data-full-urls", "true");
       autoEventsScript.src = "https://scripts.simpleanalyticscdn.com/auto-events.js";
       document.body.appendChild(autoEventsScript);
     }});
@@ -377,21 +405,40 @@ def category_meta_html(item):
     return '<div class="meta">' + '<span class="sep">·</span>'.join(parts) + "</div>"
 
 
-def article_html(item, date_value=None, show_date=False):
-    title = esc(item.get("title") or item.get("headline") or "")
+def article_html(item, date_value=None, show_date=False, section="onbekend"):
+    raw_title = item.get("title") or item.get("headline") or ""
+    raw_source = item.get("source") or ""
+    raw_category = canonical_category(category_label(item)) or category_label(item) or ""
+    raw_url = item.get("url") or item.get("link") or "#"
+
+    title = esc(raw_title)
     teaser = esc(item.get("teaser") or item.get("summary") or item.get("description") or "")
-    url = esc(item.get("url") or item.get("link") or "#")
+    url = esc(raw_url)
+    source = esc(raw_source)
+    category = esc(raw_category)
+    edition = esc(date_value or "")
+    section_attr = esc(section)
+
+    tracking_attrs = (
+        f'data-article-click="true" '
+        f'data-article-title="{title}" '
+        f'data-article-source="{source}" '
+        f'data-article-category="{category}" '
+        f'data-article-section="{section_attr}" '
+        f'data-article-edition="{edition}"'
+    )
+
     date_html = ""
     if show_date and date_value:
         date_html = f'<p class="date" style="margin:0 0 7px;text-transform:none;letter-spacing:0;font-weight:700">{esc(fmt_date_short(date_value))}</p>'
     return f"""<article class="article">
       <div>
         {date_html}
-        <h3><a href="{url}" target="_blank" rel="noopener noreferrer">{title}</a></h3>
+        <h3><a href="{url}" target="_blank" rel="noopener noreferrer" {tracking_attrs}>{title}</a></h3>
         {f'<p class="teaser">{teaser}</p>' if teaser else ''}
         {category_meta_html(item)}
       </div>
-      <a class="arrow" href="{url}" target="_blank" rel="noopener noreferrer" aria-label="Lees {title}">↗</a>
+      <a class="arrow" href="{url}" target="_blank" rel="noopener noreferrer" aria-label="Lees {title}" {tracking_attrs}>↗</a>
     </article>"""
 
 
@@ -413,9 +460,9 @@ def render_edition(data, date_value):
     desc = description(data, date_text)
     title = f"Positief nieuws · {date_text}"
 
-    nl_html = "\n".join(article_html(x) for x in items(data, "nl")[:6])
-    int_html = "\n".join(article_html(x) for x in items(data, "int")[:6])
-    head_html = "\n".join(_headline_html(x, i) for i, x in enumerate(items(data, "headlines")[:3], 1))
+    nl_html = "\n".join(article_html(x, date_value, False, "nl") for x in items(data, "nl")[:6])
+    int_html = "\n".join(article_html(x, date_value, False, "int") for x in items(data, "int")[:6])
+    head_html = "\n".join(_headline_html(x, i, date_value) for i, x in enumerate(items(data, "headlines")[:3], 1))
 
     schema = json.dumps({
         "@context": "https://schema.org",
@@ -443,17 +490,33 @@ def render_edition(data, date_value):
 </main><footer>Positief nieuws · Dit gebeurt ook.</footer>{analytics_html({'page_type':'edition','edition':date_value})}</body></html>"""
 
 
-def _headline_html(item, number):
-    title = esc(item.get("title") or "")
+def _headline_html(item, number, date_value=None):
+    raw_title = item.get("title") or ""
+    raw_source = item.get("source") or ""
+    raw_category = item.get("category") or ""
+    raw_url = item.get("url") or "#"
+
+    title = esc(raw_title)
     teaser = esc(item.get("teaser") or item.get("summary") or "")
-    source = esc(item.get("source") or "")
-    category = esc(item.get("category") or "")
-    url = esc(item.get("url") or "#")
+    source = esc(raw_source)
+    category = esc(raw_category)
+    url = esc(raw_url)
+    edition = esc(date_value or "")
+
+    tracking_attrs = (
+        f'data-article-click="true" '
+        f'data-article-title="{title}" '
+        f'data-article-source="{source}" '
+        f'data-article-category="{category}" '
+        f'data-article-section="headlines" '
+        f'data-article-edition="{edition}"'
+    )
+
     meta_parts = [p for p in (category, source) if p]
     meta = ""
     if meta_parts:
         meta = '<div class="meta">' + '<span class="sep">·</span>'.join(f"<span>{p}</span>" for p in meta_parts) + "</div>"
-    return f"""<article class="article" style="display:grid;grid-template-columns:34px minmax(0,1fr);gap:10px;padding-right:46px"><div class="num">{number:02d}</div><div><h3><a href="{url}" target="_blank" rel="noopener noreferrer">{title}</a></h3>{f'<p class="teaser">{teaser}</p>' if teaser else ''}{meta}</div><a class="arrow" href="{url}" target="_blank" rel="noopener noreferrer" aria-label="Lees {title}">↗</a></article>"""
+    return f"""<article class="article" style="display:grid;grid-template-columns:34px minmax(0,1fr);gap:10px;padding-right:46px"><div class="num">{number:02d}</div><div><h3><a href="{url}" target="_blank" rel="noopener noreferrer" {tracking_attrs}>{title}</a></h3>{f'<p class="teaser">{teaser}</p>' if teaser else ''}{meta}</div><a class="arrow" href="{url}" target="_blank" rel="noopener noreferrer" aria-label="Lees {title}" {tracking_attrs}>↗</a></article>"""
 
 
 def render_archive(entries):
@@ -532,8 +595,8 @@ def render_topic_page(topic):
     intro = seo.get("intro") or [desc]
     intro_html = "".join(f"<p>{esc(paragraph)}</p>" for paragraph in intro)
 
-    nl_html = "\n".join(article_html(x["item"], x["date"], True) for x in topic["nl"])
-    int_html = "\n".join(article_html(x["item"], x["date"], True) for x in topic["int"])
+    nl_html = "\n".join(article_html(x["item"], x["date"], True, "nl") for x in topic["nl"])
+    int_html = "\n".join(article_html(x["item"], x["date"], True, "int") for x in topic["int"])
 
     sections = []
     if topic["nl"]:
