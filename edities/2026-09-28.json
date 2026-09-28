@@ -1,7 +1,7 @@
 {
   "meta": {
     "edition_date": "2026-09-28",
-    "email_preheader": "Specialisten kijken op afstand mee in de OK, de Belastingdienst test hulp vóór problemen oplopen en Pakistan geeft de Indusdolfijn 400 kilometer beschermd leefgebied."
+    "email_preheader": "Bloedwaarden kunnen een opvlamming bij kinderen veel eerder signaleren, RNA-vaccins worden hittebestendiger en een onbekende doneert een nier na een oproep op Facebook."
   },
   "nl": [
     {
@@ -12,18 +12,18 @@
       "url": "https://www.oost.nl/nieuws/3697827/met-deze-enschedese-uitvinding-kunnen-chirurgen-op-afstand-mee-opereren"
     },
     {
-      "category": "Mens",
-      "title": "Belastingdienst test hulp vóór fiscale problemen verder oplopen",
-      "teaser": "Sinds 15 september draait een pilot waarbij maximaal 300 mensen met gesignaleerde fiscale problemen proactief hulp aangeboden krijgen. De Belastingdienst onderzoekt zo of eerder contact grotere problemen kan helpen voorkomen.",
-      "source": "Belastingdienst",
-      "url": "https://over-ons.belastingdienst.nl/vragen-en-antwoorden-pilot-signaalmodel-vroegsignalering/"
+      "category": "Gezondheid",
+      "title": "Bloedwaarden kunnen opvlamming zeldzame kinderspierziekte een jaar eerder signaleren",
+      "teaser": "Onderzoekers van UMC Utrecht zagen dat twee ontstekingseiwitten al ongeveer een jaar vóór een zichtbare opvlamming konden stijgen. Als beide waarden hoog waren, was het risico op een opvlamming twaalf keer groter.",
+      "source": "UMC Utrecht",
+      "url": "https://umcutrecht.nl/nieuws/bloedwaarden-voorspellen-opvlamming-zeldzame-kinderspierziekte"
     },
     {
       "category": "Natuur & klimaat",
-      "title": "Zeldzaam blauwgrasland krijgt jaarlijks mineraalrijk water voor herstel",
-      "teaser": "Langs de Meije wordt beschermd blauwgrasland tijdelijk onder water gezet met voedselarm, mineraalrijk water. De maatregel moet verzuring tegengaan en betere omstandigheden creëren voor zeldzame plantensoorten.",
-      "source": "Staatsbosbeheer",
-      "url": "https://www.staatsbosbeheer.nl/wat-we-doen/werk-in-uitvoering/utrechtse-venen-natuurherstel-de-meije"
+      "title": "Camera's en AI brengen vogelaanvaringen bij windmolens op zee in beeld",
+      "teaser": "Zestien thermische camera's draaiden bijna een jaar rond een turbine in Hollandse Kust Zuid. Het systeem bleek dag en nacht betrouwbaar vogelbewegingen en mogelijke aanvaringen te kunnen waarnemen, kennis die kan helpen vogels beter te beschermen.",
+      "source": "Wageningen University & Research",
+      "url": "https://www.wur.nl/nl/nieuws/vogelaanvaringen-op-zee-beeld-met-camerasysteem"
     },
     {
       "category": "Mens",
@@ -50,6 +50,35 @@
   ],
   "int": [
     {
+      "category": "Mens",
+      "title": "Onbekende doneert nier aan Britse moeder na oproep op sociale media",
+      "teaser": "Karen Davey zocht via Facebook een levende nierdonor. Gary Summerfield kende haar niet, maar meldde zich, bleek geschikt en doneerde uiteindelijk een van zijn nieren.",
+      "source": "NU.nl",
+      "url": "https://www.nu.nl/buitenland/6410150/britse-vrouw-krijgt-levensreddende-nier-van-vreemde-na-oproep-op-sociale-media.html"
+    },
+    {
+      "category": "Gezondheid",
+      "title": "Nieuwe formulering maakt experimentele RNA-vaccins veel beter bestand tegen warmte",
+      "teaser": "MIT-onderzoekers gebruikten AI om de beschermende vetdeeltjes rond RNA stabieler te maken. In muizen bleven vaccins na een jaar op kamertemperatuur of twee maanden bij 37 graden een vergelijkbare immuunreactie opwekken.",
+      "source": "MIT News",
+      "url": "https://news.mit.edu/2026/new-formulation-helps-rna-vaccines-withstand-high-temperatures-0928",
+      "reading_time_minutes": 5
+    },
+    {
+      "category": "Natuur & klimaat",
+      "title": "Twintig zwarte neushoorns verhuizen naar Botswana en verdubbelen populatie daar",
+      "teaser": "Twintig ernstig bedreigde zwarte neushoorns zijn vanuit Zuid-Afrika naar een veilig gebied in Botswana gebracht. Door de verhuizing is de populatie daar in één keer ongeveer verdubbeld en ontstaat extra ruimte voor een nieuwe broedpopulatie.",
+      "source": "WWF Nederland",
+      "url": "https://www.wwf.nl/wat-we-doen/actueel/nieuws/massale-neushoornverhuizing-naar-botswana"
+    },
+    {
+      "category": "Mens",
+      "title": "Drones helpen zwaar getroffen gebied in Mozambique overstroming zonder dodelijke slachtoffers door",
+      "teaser": "Lokale drone-operators brachten tijdens de zwaarste overstroming in decennia snel getroffen gebieden in kaart en ondersteunden zoek- en reddingswerk. In het betrokken district werden geen dodelijke slachtoffers geregistreerd.",
+      "source": "African Development Bank",
+      "url": "https://www.afdb.org/en/success-stories/eyes-above-ricatla-how-african-development-bank-korea-partnership-helped-mozambiques-flood-zone-achieve-zero-fatalities-96237"
+    },
+    {
       "category": "Natuur & klimaat",
       "title": "Pakistan geeft Indusdolfijn 400 kilometer aaneengesloten beschermd leefgebied",
       "teaser": "Een nieuw reservaat in Punjab sluit aan op bestaand beschermd gebied in Sindh. Zo ontstaat een corridor van 400 kilometer voor de bedreigde Indusdolfijn, waarvan de populatie zich de afgelopen decennia duidelijk heeft hersteld.",
@@ -57,41 +86,12 @@
       "url": "https://news.mongabay.com/2026/09/pakistan-expands-protected-habitat-for-indus-river-dolphin-as-recovery-offers-hope/"
     },
     {
-      "category": "Natuur & klimaat",
-      "title": "Bali kweekt vuurvliegjes voor terugkeer naar de natuur",
-      "teaser": "Het Indonesische project Bring Back the Light heeft bijna 20.000 larven en volwassen vuurvliegjes uitgezet. Tegelijk helpt het boeren overstappen op minder schadelijke landbouw, zodat de dieren ook blijvend leefgebied terugkrijgen.",
-      "source": "Mongabay",
-      "url": "https://news.mongabay.com/video/2026/09/a-plan-to-save-balis-lost-fireflies/"
-    },
-    {
-      "category": "Economie",
-      "title": "Nieuwe wereldstandaard moet duurzame doelen meetbaar onderdeel van organisaties maken",
-      "teaser": "ISO en UNDP hebben ISO/UNDP 53001 gelanceerd. De nieuwe internationale standaard geeft organisaties een vast systeem om duurzame ontwikkelingsdoelen in strategie en dagelijkse processen op te nemen en voortgang te meten.",
-      "source": "ISO / UNDP",
-      "url": "https://www.iso.org/standard/53001"
-    },
-    {
-      "category": "Mens",
-      "title": "Brits kledingmerk laat zien dat betaalbare mode en leefbare lonen samen kunnen gaan",
-      "teaser": "Yes Friends combineert betaalbare kleding met onder meer Fairtrade katoen en bijdragen aan leefbare lonen. Via een extra fooiensysteem ging inmiddels meer dan 56.000 pond rechtstreeks naar kledingarbeiders.",
-      "source": "Positive News",
-      "url": "https://www.positive.news/economics/the-ethical-fashion-brand-championing-change-across-the-industry/"
-    },
-    {
       "category": "Wetenschap",
-      "title": "Digitale tool helpt hersenchirurgen belangrijke functies tijdens operaties in kaart brengen",
+      "title": "Digitale tool helpt chirurgen cruciale hersenfuncties tijdens tumoroperaties in kaart brengen",
       "teaser": "Een spin-off van de Universitat Autònoma de Barcelona en het Center for Computer Vision ontwikkelde software die operatieteams ondersteunt bij het herkennen van hersengebieden die tijdens het verwijderen van een tumor behouden moeten blijven.",
       "source": "Medical Xpress",
       "url": "https://medicalxpress.com/news/2026-09-digital-tool-doctors-critical-brain.html",
       "reading_time_minutes": 5
-    },
-    {
-      "category": "Gezondheid",
-      "title": "Langlopende studie wijst op mogelijk blijvend effect van lage dosis bestraling bij knieartrose",
-      "teaser": "Een analyse van een gerandomiseerde studie met bijna 300 patiënten vond na jaren minder pijn, betere functie en minder structurele achteruitgang na lage dosis radiotherapie. De onderzoekers spreken van veelbelovende, nog nader te bevestigen resultaten.",
-      "source": "Medical Xpress",
-      "url": "https://medicalxpress.com/news/2026-09-dose-therapy-knee-osteoarthritis-term.html",
-      "reading_time_minutes": 6
     }
   ],
   "headlines": [

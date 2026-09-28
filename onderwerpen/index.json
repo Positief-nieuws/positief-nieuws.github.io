@@ -12,7 +12,7 @@
     "slug": "economie",
     "url": "/economie/",
     "nl_count": 6,
-    "int_count": 2,
+    "int_count": 1,
     "latest": "2026-09-28"
   },
   {
@@ -27,7 +27,7 @@
     "label": "Gezondheid",
     "slug": "gezondheid",
     "url": "/gezondheid/",
-    "nl_count": 10,
+    "nl_count": 11,
     "int_count": 20,
     "latest": "2026-09-28"
   },
@@ -35,8 +35,8 @@
     "label": "Mens",
     "slug": "mens",
     "url": "/mens/",
-    "nl_count": 19,
-    "int_count": 10,
+    "nl_count": 18,
+    "int_count": 11,
     "latest": "2026-09-28"
   },
   {
