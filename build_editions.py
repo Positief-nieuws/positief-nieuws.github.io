@@ -482,7 +482,88 @@ def has_article_page(item):
     return bool(str(item.get("article_slug") or "").strip() and article_body_paragraphs(item))
 
 
-def render_article_page(item, date_value):
+def related_article_records(edition_records):
+    records = []
+    for date_value, data in edition_records:
+        for section in ("nl", "int"):
+            for position, item in enumerate(items(data, section)):
+                if not has_article_page(item):
+                    continue
+                slug = str(item.get("article_slug") or "").strip().strip("/")
+                if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", slug):
+                    raise ValueError(f"Ongeldige article_slug '{slug}' in editie {date_value}.")
+                records.append({
+                    "date": date_value,
+                    "section": section,
+                    "position": position,
+                    "slug": slug,
+                    "category": canonical_category(category_label(item)) or category_label(item) or "",
+                    "item": item,
+                })
+    return records
+
+
+def select_related_articles(item, date_value, candidates, limit=3):
+    current_slug = str(item.get("article_slug") or "").strip().strip("/")
+    current_category = canonical_category(category_label(item)) or category_label(item) or ""
+
+    eligible = [
+        record for record in candidates
+        if not (record["date"] == date_value and record["slug"] == current_slug)
+    ]
+
+    same_category = [record for record in eligible if record["category"] == current_category]
+    other_categories = [record for record in eligible if record["category"] != current_category]
+    return (same_category + other_categories)[:limit]
+
+
+def render_related_articles(records):
+    if not records:
+        return ""
+
+    cards = []
+    for record in records:
+        item = record["item"]
+        date_value = record["date"]
+        slug = record["slug"]
+        title_raw = str(item.get("title") or item.get("headline") or "").strip()
+        source_raw = str(item.get("source") or "").strip()
+        category_raw = record["category"]
+        teaser_raw = str(item.get("teaser") or item.get("summary") or item.get("description") or "").strip()
+        href = f"/artikelen/{date_value}/{slug}/"
+
+        title = esc(title_raw)
+        source = esc(source_raw)
+        category = esc(category_raw)
+        teaser = esc(teaser_raw)
+        edition = esc(date_value)
+
+        tracking_attrs = (
+            f'data-article-click="true" '
+            f'data-article-title="{title}" '
+            f'data-article-source="{source}" '
+            f'data-article-category="{category}" '
+            f'data-article-section="related" '
+            f'data-article-edition="{edition}"'
+        )
+
+        meta_parts = [x for x in (category, source) if x]
+        meta_html = " · ".join(meta_parts)
+        cards.append(f"""<article class="related-item">
+          {f'<p class="related-meta">{meta_html}</p>' if meta_html else ''}
+          <h3><a href="{href}" {tracking_attrs}>{title}</a></h3>
+          {f'<p class="related-teaser">{teaser}</p>' if teaser else ''}
+          <a class="related-arrow" href="{href}" aria-label="Lees {title}" {tracking_attrs}>→</a>
+        </article>""")
+
+    return f"""<section class="related" aria-labelledby="related-title">
+        <p class="related-kicker">Verder lezen</p>
+        <h2 id="related-title">Misschien ook interessant</h2>
+        <div class="related-list">{''.join(cards)}</div>
+      </section>"""
+
+
+def render_article_page(item, date_value, related_records=None):
     title_raw = str(item.get("title") or item.get("headline") or "").strip()
     source_raw = str(item.get("source") or "Oorspronkelijke bron").strip()
     category_raw = canonical_category(category_label(item)) or category_label(item) or ""
@@ -506,6 +587,7 @@ def render_article_page(item, date_value):
     teaser = esc(teaser_raw)
     body_html = "".join(f"<p>{esc(paragraph)}</p>" for paragraph in paragraphs)
     why_html = f'<aside class="why"><p class="why-label">Waarom dit ertoe doet</p><p>{esc(why_raw)}</p></aside>' if why_raw else ""
+    related_html = render_related_articles(related_records or [])
 
     source_attrs = (
         f'data-source-click="true" '
@@ -546,9 +628,20 @@ def render_article_page(item, date_value):
 .source-button{display:inline-flex;align-items:center;gap:8px;padding:11px 16px;border:1px solid var(--green-dark);border-radius:999px;color:var(--green-dark);text-decoration:none;font-size:.8rem;font-weight:800}
 .source-button:hover{background:var(--green-dark);color:white}
 .article-note{max-width:700px;margin-top:24px;color:var(--muted);font-size:.76rem;line-height:1.55}
+.related{max-width:700px;margin-top:48px;padding-top:34px;border-top:1px solid var(--green-dark)}
+.related-kicker{margin:0 0 7px;color:var(--green);font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.related h2{margin:0 0 8px;font-size:clamp(1.65rem,4vw,2.25rem);line-height:1.05;letter-spacing:-.035em}
+.related-list{border-top:1px solid var(--line);margin-top:20px}
+.related-item{position:relative;padding:20px 42px 20px 0;border-bottom:1px solid var(--line2)}
+.related-meta{margin:0 0 6px;color:var(--green);font-size:.64rem;font-weight:750}
+.related-item h3{margin:0;max-width:610px;font-size:1.14rem;line-height:1.22;letter-spacing:-.022em}
+.related-item h3 a{text-decoration:none}
+.related-item h3 a:hover{text-decoration:underline;text-underline-offset:3px}
+.related-teaser{max-width:610px;margin:7px 0 0;color:#465049;font-size:.84rem;line-height:1.48;display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:2}
+.related-arrow{position:absolute;right:0;top:22px;width:27px;height:27px;display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:50%;text-decoration:none;color:var(--green-dark);font-size:.78rem}
 .article-back{margin-top:34px}
 .article-back a{color:var(--green-dark);font-weight:700;font-size:.8rem}
-@media (max-width:640px){.article-page{padding-top:34px}.article-page h1{font-size:clamp(1.85rem,10vw,2.85rem);line-height:1.03}.article-copy{font-size:1rem}.why{padding:19px}}
+@media (max-width:640px){.article-page{padding-top:34px}.article-page h1{font-size:clamp(1.85rem,10vw,2.85rem);line-height:1.03}.article-copy{font-size:1rem}.why{padding:19px}.related{margin-top:40px;padding-top:28px}.related h2{font-size:1.75rem}.related-item h3{font-size:1.08rem}.related-teaser{-webkit-line-clamp:3}}
 """
 
     return f"""<!DOCTYPE html>
@@ -585,6 +678,7 @@ def render_article_page(item, date_value):
         <a class="source-button" href="{source_url}" target="_blank" rel="noopener noreferrer" {source_attrs}>Lees het oorspronkelijke artikel ↗</a>
       </div>
       <p class="article-note">Positief nieuws selecteert en vat ontwikkelingen samen in eigen woorden. De oorspronkelijke bron blijft leidend voor de volledige context en details.</p>
+      {related_html}
       <p class="article-back"><a href="/edities/{esc(date_value)}/">← Terug naar de editie van {esc(date_text)}</a></p>
     </div>
   </main>
@@ -595,25 +689,26 @@ def render_article_page(item, date_value):
 
 
 def write_article_pages(edition_records):
+    candidates = related_article_records(edition_records)
     built = []
-    for date_value, data in edition_records:
-        for section in ("nl", "int"):
-            for item in items(data, section):
-                if not has_article_page(item):
-                    continue
-                slug = str(item.get("article_slug") or "").strip().strip("/")
-                if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", slug):
-                    raise ValueError(f"Ongeldige article_slug '{slug}' in editie {date_value}.")
-                page_dir = ARTICLES_DIR / date_value / slug
-                page_dir.mkdir(parents=True, exist_ok=True)
-                (page_dir / "index.html").write_text(render_article_page(item, date_value), encoding="utf-8")
-                built.append({
-                    "date": date_value,
-                    "slug": slug,
-                    "url": f"{SITE_URL}/artikelen/{date_value}/{slug}/",
-                    "title": str(item.get("title") or ""),
-                })
-                print(f"Gebouwd: {page_dir / 'index.html'}")
+
+    for record in candidates:
+        date_value = record["date"]
+        item = record["item"]
+        slug = record["slug"]
+        related = select_related_articles(item, date_value, candidates, limit=3)
+
+        page_dir = ARTICLES_DIR / date_value / slug
+        page_dir.mkdir(parents=True, exist_ok=True)
+        (page_dir / "index.html").write_text(render_article_page(item, date_value, related), encoding="utf-8")
+        built.append({
+            "date": date_value,
+            "slug": slug,
+            "url": f"{SITE_URL}/artikelen/{date_value}/{slug}/",
+            "title": str(item.get("title") or ""),
+        })
+        print(f"Gebouwd: {page_dir / 'index.html'}")
+
     return built
 
 
