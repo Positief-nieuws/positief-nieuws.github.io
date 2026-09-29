@@ -1868,6 +1868,15 @@
             ]
           ),
 
+        articleSlug:
+          firstValue(
+            article,
+            [
+              "article_slug",
+              "articleSlug"
+            ]
+          ),
+
         image:
           firstValue(
             article,
@@ -2288,17 +2297,31 @@
     function renderCard(
       rawArticle,
       type = "nl",
-      index = 0
+      index = 0,
+      editionDate = ""
     ) {
 
       const article = normalizeArticle(rawArticle);
       const card = document.createElement("article");
       card.className = "article-row";
 
-      const href = safeUrl(article.url);
-      const externalAttrs = href !== "#"
-        ? 'target="_blank" rel="noopener noreferrer"'
-        : "";
+      const internalArticleUrl =
+        article.articleSlug && editionDate
+          ? `/artikelen/${encodeURIComponent(editionDate)}/${encodeURIComponent(article.articleSlug)}/`
+          : "";
+
+      const href =
+        safeUrl(
+          internalArticleUrl || article.url
+        );
+
+      const isInternalArticle =
+        Boolean(internalArticleUrl);
+
+      const externalAttrs =
+        href !== "#" && !isInternalArticle
+          ? 'target="_blank" rel="noopener noreferrer"'
+          : "";
 
       const core = `
         <div class="article-main">
@@ -2346,7 +2369,8 @@
 
     function renderSection(
       data,
-      type
+      type,
+      editionDate = ""
     ) {
 
       const items =
@@ -2392,7 +2416,7 @@
           .slice(0, 6)
           .forEach(
             (item, index) => {
-              grid.appendChild(renderCard(item, type, index));
+              grid.appendChild(renderCard(item, type, index, editionDate));
             }
           );
 
@@ -2426,7 +2450,7 @@
           .slice(0, 6)
           .forEach(
             (item, index) => {
-              grid.appendChild(renderCard(item, type, index));
+              grid.appendChild(renderCard(item, type, index, editionDate));
             }
           );
 
@@ -2460,7 +2484,7 @@
           .slice(0, 3)
           .forEach(
             (item, index) => {
-              grid.appendChild(renderCard(item, type, index));
+              grid.appendChild(renderCard(item, type, index, editionDate));
             }
           );
 
@@ -3064,19 +3088,22 @@
 
         renderSection(
           data,
-          "nl"
+          "nl",
+          rawEditionDate
         );
 
 
         renderSection(
           data,
-          "int"
+          "int",
+          rawEditionDate
         );
 
 
         renderSection(
           data,
-          "headlines"
+          "headlines",
+          rawEditionDate
         );
 
         loadHomeArchivePreview(rawEditionDate);
