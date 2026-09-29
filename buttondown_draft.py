@@ -125,21 +125,14 @@ def edition_weekday(data):
         return "nieuwe"
 
 
-
 def build_preheader(data, nl):
-    """
-    Maakt de inhoudelijke previewtekst die mailapps naast/onder het onderwerp tonen.
-
-    Eerst wordt gekeken naar meta.email_preheader in nieuws.json.
-    Als die ontbreekt, worden automatisch de eerste twee Nederlandse koppen gebruikt.
-    """
+    """Inbox-preview: liefst redactioneel uit nieuws.json, anders de eerste twee NL-koppen."""
     custom = (
         data.get("meta", {}).get("email_preheader")
         or data.get("edition", {}).get("email_preheader")
         or ""
     )
     custom = " ".join(str(custom).split()).strip()
-
     if custom:
         return custom[:180]
 
@@ -153,10 +146,8 @@ def build_preheader(data, nl):
         return "12 positieve verhalen + 3 belangrijke nieuwsitems om bij te blijven."
 
     preview = " · ".join(titles)
-
     if len(preview) > 180:
         preview = preview[:177].rstrip(" ,.;:–—-") + "…"
-
     return preview
 
 
@@ -195,6 +186,28 @@ def buttondown_edition_url(data):
     return f"{clean_url}{separator}{urllib.parse.urlencode(params)}"
 
 
+def buttondown_article_url(data, article):
+    """Eigen artikelpagina met UTM-tracking voor de directe klik vanuit Buttondown."""
+    slug = str(article.get("article_slug") or "").strip().strip("/")
+    raw_date = raw_edition_date(data)
+    if not slug or not isinstance(raw_date, str):
+        return str(article.get("url") or "")
+
+    try:
+        datetime.strptime(raw_date, "%Y-%m-%d")
+    except ValueError:
+        return str(article.get("url") or "")
+
+    base = f"{SITE_URL}artikelen/{urllib.parse.quote(raw_date)}/{urllib.parse.quote(slug)}/"
+    params = {
+        "utm_source": "buttondown",
+        "utm_medium": "email",
+        "utm_campaign": f"editie_{raw_date.replace('-', '_')}",
+        "utm_content": slug,
+    }
+    return f"{base}?{urllib.parse.urlencode(params)}"
+
+
 def reading_time_label(article):
     value = (
         article.get("reading_time_minutes")
@@ -214,12 +227,17 @@ def reading_time_label(article):
     return f"{minutes} min lezen" if minutes > 0 else ""
 
 
-def article_html(article):
+def article_html(article, data=None, prefer_own_page=False):
     title = esc(article.get("title"))
     teaser = esc(article.get("teaser") or article.get("summary"))
     source = esc(article.get("source"))
     category = esc(article.get("category"))
-    url = esc(article.get("url"))
+
+    if prefer_own_page and data and article.get("article_slug"):
+        raw_url = buttondown_article_url(data, article)
+    else:
+        raw_url = str(article.get("url") or "")
+    url = esc(raw_url)
 
     meta_parts = [part for part in (category, source, reading_time_label(article)) if part]
     meta = " &nbsp;·&nbsp; ".join(meta_parts)
@@ -328,9 +346,9 @@ def build_share_block(data):
 
 
 def build_body(data, nl, international, headlines):
-    nl_html = "\n".join(article_html(article) for article in nl)
-    int_html = "\n".join(article_html(article) for article in international)
-    headlines_html = "\n".join(article_html(article) for article in headlines)
+    nl_html = "\n".join(article_html(article, data, True) for article in nl)
+    int_html = "\n".join(article_html(article, data, True) for article in international)
+    headlines_html = "\n".join(article_html(article, data, False) for article in headlines)
     share_block = build_share_block(data)
     weekday = esc(edition_weekday(data))
     preheader = esc(build_preheader(data, nl))
@@ -383,7 +401,7 @@ def build_body(data, nl, international, headlines):
     {section_header(
         "Goed nieuws uit de wereld",
         "6 verhalen",
-        "Zes positieve ontwikkelingen van buiten Nederland. De artikelen waar we naar verwijzen zijn Engelstalig."
+        "Zes positieve ontwikkelingen van buiten Nederland. De oorspronkelijke bronnen zijn meestal Engelstalig; de samenvattingen zijn Nederlands."
     )}
     {int_html}
   </div>
