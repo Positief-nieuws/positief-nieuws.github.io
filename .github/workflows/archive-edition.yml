@@ -64,6 +64,8 @@ jobs:
           PY
 
       - name: Site, onderwerpen en sitemap bouwen
+        env:
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
         run: python build_editions.py
 
       - name: Gebouwde site committen
