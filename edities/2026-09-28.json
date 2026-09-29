@@ -16,7 +16,9 @@
         "Een tweede functie is ondersteuning op afstand. Een specialist die niet in dezelfde ruimte is, kan meekijken, overleggen en digitaal iets aanwijzen in het beeld. Dat maakt de techniek vooral interessant voor begeleiding en training op plekken waar specifieke expertise niet voortdurend aanwezig is.",
         "Volgens het bedrijf wordt het systeem al gebruikt in het Universitair Ziekenhuis Gent, onder meer bij radiotherapie en urologie. De headset neemt geen medische beslissing over en vervangt de behandelend arts niet. Het is vooral een extra manier om beeldinformatie en menselijke expertise tijdens een procedure dichter bij elkaar te brengen."
       ],
-      "why_it_matters": "Medische expertise is niet overal op hetzelfde moment beschikbaar. Een hulpmiddel dat beelden en begeleiding op afstand combineert, kan training en ondersteuning flexibeler maken zonder de verantwoordelijkheid van de arts ter plaatse weg te nemen."
+      "why_it_matters": "Medische expertise is niet overal op hetzelfde moment beschikbaar. Een hulpmiddel dat beelden en begeleiding op afstand combineert, kan training en ondersteuning flexibeler maken zonder de verantwoordelijkheid van de arts ter plaatse weg te nemen.",
+      "image_query": "surgeon operating room medical technology",
+      "image_alt": "Illustratief beeld van een chirurg in een operatiekamer met medische technologie"
     },
     {
       "category": "Gezondheid",
@@ -78,7 +80,9 @@
         "Bij opvanglocatie De Elementen in Vlaardingen knipten drie jonge kappers bewoners gratis. Djesco hoeft zelf geen schaar vast te houden: zijn rol is vooral mensen bij elkaar brengen. Het initiatief begon met zijn eigen kapper en groeide daarna verder.",
         "De groep bezoekt inmiddels meerdere opvangplekken in de regio en kreeg ook belangstelling vanuit Amsterdam. Djesco hoopt uiteindelijk meer kappers en locaties aan elkaar te koppelen. Het idee blijft bewust klein en praktisch: mensen krijgen persoonlijke aandacht en verzorging, terwijl vakmensen iets kunnen bijdragen met een vaardigheid die ze al hebben."
       ],
-      "why_it_matters": "Hulp hoeft niet altijd groot of ingewikkeld te zijn. Persoonlijke verzorging en aandacht kunnen bijdragen aan waardigheid en zelfvertrouwen, juist wanneer iemand in een kwetsbare situatie zit."
+      "why_it_matters": "Hulp hoeft niet altijd groot of ingewikkeld te zijn. Persoonlijke verzorging en aandacht kunnen bijdragen aan waardigheid en zelfvertrouwen, juist wanneer iemand in een kwetsbare situatie zit.",
+      "image_query": "barber haircut community support",
+      "image_alt": "Illustratief beeld van een kapper die iemand knipt"
     },
     {
       "category": "Economie",
@@ -93,7 +97,9 @@
         "Bij Sint-Catharinadal in Oosterhout is die ontwikkeling goed zichtbaar. Het kloosterlandgoed heeft ongeveer tien hectare wijnranken en werkt tijdens de oogst met tientallen vrijwilligers. Een hete, droge zomer gaf de druiven een goede start, maar regen en mist in de laatste fase maakten de kwaliteit en opbrengst opnieuw onzeker.",
         "Dat contrast hoort bij Nederlandse wijnbouw. Meer kennis, oudere wijnstokken en geschikte rassen helpen de sector vooruit, maar één lastig seizoen kan nog steeds veel verschil maken. Groei van de sector betekent dus niet dat iedere individuele oogst automatisch groter of beter wordt."
       ],
-      "why_it_matters": "Een kleine landbouwsector kan in relatief korte tijd volwassen worden door ervaring, ondernemerschap en aanpassing aan lokale omstandigheden. Tegelijk blijft de afhankelijkheid van weer en klimaat duidelijk zichtbaar."
+      "why_it_matters": "Een kleine landbouwsector kan in relatief korte tijd volwassen worden door ervaring, ondernemerschap en aanpassing aan lokale omstandigheden. Tegelijk blijft de afhankelijkheid van weer en klimaat duidelijk zichtbaar.",
+      "image_query": "vineyard harvest grapes",
+      "image_alt": "Illustratief beeld van druiven in een wijngaard tijdens de oogst"
     }
   ],
   "int": [
@@ -109,7 +115,9 @@
         "Gary Summerfield, die Davey niet kende, zag de oproep en meldde zich. Daarna volgde het gewone traject voor levende donatie, met medische en psychologische beoordelingen en controles op geschiktheid. Uiteindelijk kon de transplantatie in juli plaatsvinden in het University Hospital of Wales in Cardiff.",
         "Voor Davey was het haar tweede grote transplantatie; jaren eerder had ze al een donorhart gekregen. Het verhaal springt eruit door de manier waarop donor en ontvanger elkaar vonden, maar de sociale-media-oproep verving het medische selectieproces niet. Juist de uitgebreide beoordeling bepaalt of levende donatie verantwoord kan plaatsvinden."
       ],
-      "why_it_matters": "Het verhaal laat zien dat een potentiële donor soms buiten familie of vrienden kan worden gevonden. Tegelijk onderstreept het dat levende orgaandonatie altijd een zorgvuldig medisch en psychologisch proces blijft."
+      "why_it_matters": "Het verhaal laat zien dat een potentiële donor soms buiten familie of vrienden kan worden gevonden. Tegelijk onderstreept het dat levende orgaandonatie altijd een zorgvuldig medisch en psychologisch proces blijft.",
+      "image_query": "hospital patient support hands",
+      "image_alt": "Illustratief beeld van steun en zorg in een ziekenhuis"
     },
     {
       "category": "Gezondheid",
@@ -124,7 +132,9 @@
         "De onderzoekers gebruikten een algoritme om uit tientallen toegestane hulpstoffen kansrijke combinaties te selecteren. Zo hoefden ze niet iedere mogelijke verhouding handmatig te testen. Een van de gevonden formuleringen bleef na drogen lange tijd stabiel bij kamertemperatuur en ook gedurende twee maanden bij 37 graden Celsius.",
         "De volgende belangrijke nuance: de vaccins zijn in deze studie bij muizen getest. Daar riepen ze na opslag een vergelijkbare immuunreactie op als een referentieformulering. Dat is veelbelovend voor verder onderzoek, maar zegt nog niet dat dezelfde aanpak bij mensen veilig en effectief is."
       ],
-      "why_it_matters": "Als RNA-producten uiteindelijk minder sterk gekoeld hoeven te worden, kan distributie eenvoudiger worden. De studie laat daarnaast zien hoe AI experimenteel onderzoek kan versnellen zonder de noodzakelijke dier- en mensstudies over te slaan."
+      "why_it_matters": "Als RNA-producten uiteindelijk minder sterk gekoeld hoeven te worden, kan distributie eenvoudiger worden. De studie laat daarnaast zien hoe AI experimenteel onderzoek kan versnellen zonder de noodzakelijke dier- en mensstudies over te slaan.",
+      "image_query": "laboratory vaccine research",
+      "image_alt": "Illustratief beeld van vaccinonderzoek in een laboratorium"
     },
     {
       "category": "Natuur & klimaat",
@@ -154,7 +164,9 @@
         "Toen begin 2026 ernstige overstromingen delen van Maputo en Gaza troffen, werd een deel van die groep eerder dan gepland ingezet. Drones hielpen ondergelopen wegen en woningen in kaart brengen, gestrande gezinnen lokaliseren en actuele beelden met hulpdiensten delen.",
         "De burgemeester van Marracuene meldde dat in zijn district geen mensen door de overstroming om het leven kwamen. De African Development Bank koppelt de drone-inzet nadrukkelijk aan de succesvolle respons, maar zo'n uitkomst heeft meerdere oorzaken: waarschuwing, evacuatie, lokale hulpverleners en voorbereiding tellen allemaal mee. Het meest tastbare resultaat is dat Mozambique nu meer eigen mensen en middelen heeft om bij een volgende ramp sneller informatie te verzamelen."
       ],
-      "why_it_matters": "Technologie wordt duurzamer wanneer kennis lokaal aanwezig blijft. Een getraind team kan dezelfde hulpmiddelen bij een volgende noodsituatie opnieuw inzetten, zonder volledig afhankelijk te zijn van hulp van buitenaf."
+      "why_it_matters": "Technologie wordt duurzamer wanneer kennis lokaal aanwezig blijft. Een getraind team kan dezelfde hulpmiddelen bij een volgende noodsituatie opnieuw inzetten, zonder volledig afhankelijk te zijn van hulp van buitenaf.",
+      "image_query": "drone emergency response flood",
+      "image_alt": "Illustratief beeld van een drone bij hulpverlening na overstroming"
     },
     {
       "category": "Natuur & klimaat",
@@ -168,7 +180,9 @@
         "Samen gaat het om ongeveer 400 kilometer rivier met een beschermde status. Dat komt op een moment waarop de populatie tekenen van herstel laat zien: een studie uit 2025 schatte het aantal dieren op bijna tweeduizend. Dat is duidelijk meer dan aan het begin van deze eeuw.",
         "De nieuwe status is geen eindpunt. Een groot deel van de populatie zit nog steeds geconcentreerd in een beperkt riviertraject. Visnetten, stuwen en irrigatie blijven risico's opleveren. Natuurbeschermers benadrukken daarom dat regels, toezicht en samenwerking met lokale vissers uiteindelijk bepalen hoeveel bescherming het reservaat in de praktijk biedt."
       ],
-      "why_it_matters": "Een formeel beschermd gebied geeft overheden meer mogelijkheden om schadelijke activiteiten te sturen. Voor een soort die bijna volledig van één riviersysteem afhankelijk is, kan dat een belangrijke basis zijn voor verder herstel."
+      "why_it_matters": "Een formeel beschermd gebied geeft overheden meer mogelijkheden om schadelijke activiteiten te sturen. Voor een soort die bijna volledig van één riviersysteem afhankelijk is, kan dat een belangrijke basis zijn voor verder herstel.",
+      "image_query": "river dolphin",
+      "image_alt": "Illustratief beeld van een rivierdolfijn"
     },
     {
       "category": "Wetenschap",
@@ -183,7 +197,9 @@
         "BrainMapp, een spin-off van de Universitat Autònoma de Barcelona en het Center for Computer Vision, probeert die informatie in één digitale omgeving te organiseren. De software kan gegevens uit hersenmapping combineren met eerder gemaakte scans en kan ook registraties van de operatie bewaren.",
         "De technologie is volgens de betrokken instellingen tot nu toe gebruikt bij 31 neurochirurgische ingrepen, waarvan 19 in het Hospital Universitari de Bellvitge. Computer vision en AI ondersteunen vooral het vastleggen en ordenen van gegevens. Het systeem neemt geen beslissingen over van het medische team en wordt verder ontwikkeld en gevalideerd voordat bredere toepassing aan de orde is."
       ],
-      "why_it_matters": "Tijdens complexe chirurgie kan overzicht net zo belangrijk zijn als extra informatie. Een systeem dat relevante gegevens op één plek ordent, kan artsen ondersteunen zonder hun klinische verantwoordelijkheid te vervangen."
+      "why_it_matters": "Tijdens complexe chirurgie kan overzicht net zo belangrijk zijn als extra informatie. Een systeem dat relevante gegevens op één plek ordent, kan artsen ondersteunen zonder hun klinische verantwoordelijkheid te vervangen.",
+      "image_query": "brain scan surgeon hospital",
+      "image_alt": "Illustratief beeld van hersenscans en medische technologie"
     }
   ],
   "headlines": [
