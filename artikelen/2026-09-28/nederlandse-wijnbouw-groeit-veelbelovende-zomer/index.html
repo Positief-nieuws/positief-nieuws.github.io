@@ -42,9 +42,20 @@
 .source-button{display:inline-flex;align-items:center;gap:8px;padding:11px 16px;border:1px solid var(--green-dark);border-radius:999px;color:var(--green-dark);text-decoration:none;font-size:.8rem;font-weight:800}
 .source-button:hover{background:var(--green-dark);color:white}
 .article-note{max-width:700px;margin-top:24px;color:var(--muted);font-size:.76rem;line-height:1.55}
+.related{max-width:700px;margin-top:48px;padding-top:34px;border-top:1px solid var(--green-dark)}
+.related-kicker{margin:0 0 7px;color:var(--green);font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.related h2{margin:0 0 8px;font-size:clamp(1.65rem,4vw,2.25rem);line-height:1.05;letter-spacing:-.035em}
+.related-list{border-top:1px solid var(--line);margin-top:20px}
+.related-item{position:relative;padding:20px 42px 20px 0;border-bottom:1px solid var(--line2)}
+.related-meta{margin:0 0 6px;color:var(--green);font-size:.64rem;font-weight:750}
+.related-item h3{margin:0;max-width:610px;font-size:1.14rem;line-height:1.22;letter-spacing:-.022em}
+.related-item h3 a{text-decoration:none}
+.related-item h3 a:hover{text-decoration:underline;text-underline-offset:3px}
+.related-teaser{max-width:610px;margin:7px 0 0;color:#465049;font-size:.84rem;line-height:1.48;display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:2}
+.related-arrow{position:absolute;right:0;top:22px;width:27px;height:27px;display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:50%;text-decoration:none;color:var(--green-dark);font-size:.78rem}
 .article-back{margin-top:34px}
 .article-back a{color:var(--green-dark);font-weight:700;font-size:.8rem}
-@media (max-width:640px){.article-page{padding-top:34px}.article-page h1{font-size:clamp(1.85rem,10vw,2.85rem);line-height:1.03}.article-copy{font-size:1rem}.why{padding:19px}}
+@media (max-width:640px){.article-page{padding-top:34px}.article-page h1{font-size:clamp(1.85rem,10vw,2.85rem);line-height:1.03}.article-copy{font-size:1rem}.why{padding:19px}.related{margin-top:40px;padding-top:28px}.related h2{font-size:1.75rem}.related-item h3{font-size:1.08rem}.related-teaser{-webkit-line-clamp:3}}
 </style>
 </head>
 <body>
@@ -126,6 +137,26 @@
         <a class="source-button" href="https://nos.nl/l/2632579" target="_blank" rel="noopener noreferrer" data-source-click="true" data-article-title="Nederlandse wijnbouw wint terrein na een veelbelovende zomer" data-article-source="NOS" data-article-category="Economie" data-article-edition="2026-09-28">Lees het oorspronkelijke artikel ↗</a>
       </div>
       <p class="article-note">Positief nieuws selecteert en vat ontwikkelingen samen in eigen woorden. De oorspronkelijke bron blijft leidend voor de volledige context en details.</p>
+      <section class="related" aria-labelledby="related-title">
+        <p class="related-kicker">Verder lezen</p>
+        <h2 id="related-title">Misschien ook interessant</h2>
+        <div class="related-list"><article class="related-item">
+          <p class="related-meta">Energie &amp; innovatie · Oost</p>
+          <h3><a href="/artikelen/2026-09-28/enschedese-headset-specialisten-op-afstand-operaties/" data-article-click="true" data-article-title="Enschedese headset laat specialisten op afstand meekijken tijdens operaties" data-article-source="Oost" data-article-category="Energie &amp; innovatie" data-article-section="related" data-article-edition="2026-09-28">Enschedese headset laat specialisten op afstand meekijken tijdens operaties</a></h3>
+          <p class="related-teaser">Een headset van JJ-MEDTECH brengt medische beelden samen in het blikveld van de arts, terwijl een specialist op afstand kan meekijken en aanwijzingen kan intekenen. Het systeem wordt al gebruikt in Gent.</p>
+          <a class="related-arrow" href="/artikelen/2026-09-28/enschedese-headset-specialisten-op-afstand-operaties/" aria-label="Lees Enschedese headset laat specialisten op afstand meekijken tijdens operaties" data-article-click="true" data-article-title="Enschedese headset laat specialisten op afstand meekijken tijdens operaties" data-article-source="Oost" data-article-category="Energie &amp; innovatie" data-article-section="related" data-article-edition="2026-09-28">→</a>
+        </article><article class="related-item">
+          <p class="related-meta">Gezondheid · UMC Utrecht</p>
+          <h3><a href="/artikelen/2026-09-28/bloedwaarden-opvlamming-kinderspierziekte-eerder-signaleren/" data-article-click="true" data-article-title="Bloedwaarden kunnen opvlamming zeldzame kinderspierziekte een jaar eerder signaleren" data-article-source="UMC Utrecht" data-article-category="Gezondheid" data-article-section="related" data-article-edition="2026-09-28">Bloedwaarden kunnen opvlamming zeldzame kinderspierziekte een jaar eerder signaleren</a></h3>
+          <p class="related-teaser">Onderzoekers van UMC Utrecht zagen dat twee ontstekingseiwitten al ongeveer een jaar vóór een zichtbare opvlamming konden stijgen. Als beide waarden hoog waren, was het risico op een opvlamming twaalf keer groter.</p>
+          <a class="related-arrow" href="/artikelen/2026-09-28/bloedwaarden-opvlamming-kinderspierziekte-eerder-signaleren/" aria-label="Lees Bloedwaarden kunnen opvlamming zeldzame kinderspierziekte een jaar eerder signaleren" data-article-click="true" data-article-title="Bloedwaarden kunnen opvlamming zeldzame kinderspierziekte een jaar eerder signaleren" data-article-source="UMC Utrecht" data-article-category="Gezondheid" data-article-section="related" data-article-edition="2026-09-28">→</a>
+        </article><article class="related-item">
+          <p class="related-meta">Natuur &amp; klimaat · Wageningen University &amp; Research</p>
+          <h3><a href="/artikelen/2026-09-28/cameras-ai-vogelaanvaringen-windmolens-op-zee/" data-article-click="true" data-article-title="Camera&#x27;s en AI brengen vogelaanvaringen bij windmolens op zee in beeld" data-article-source="Wageningen University &amp; Research" data-article-category="Natuur &amp; klimaat" data-article-section="related" data-article-edition="2026-09-28">Camera&#x27;s en AI brengen vogelaanvaringen bij windmolens op zee in beeld</a></h3>
+          <p class="related-teaser">Zestien thermische camera&#x27;s draaiden bijna een jaar rond een turbine in Hollandse Kust Zuid. Het systeem bleek dag en nacht betrouwbaar vogelbewegingen en mogelijke aanvaringen te kunnen waarnemen, kennis die kan helpen vogels beter te beschermen.</p>
+          <a class="related-arrow" href="/artikelen/2026-09-28/cameras-ai-vogelaanvaringen-windmolens-op-zee/" aria-label="Lees Camera&#x27;s en AI brengen vogelaanvaringen bij windmolens op zee in beeld" data-article-click="true" data-article-title="Camera&#x27;s en AI brengen vogelaanvaringen bij windmolens op zee in beeld" data-article-source="Wageningen University &amp; Research" data-article-category="Natuur &amp; klimaat" data-article-section="related" data-article-edition="2026-09-28">→</a>
+        </article></div>
+      </section>
       <p class="article-back"><a href="/edities/2026-09-28/">← Terug naar de editie van maandag 28 september 2026</a></p>
     </div>
   </main>
