@@ -391,8 +391,12 @@
 
     .article-row {
       position: relative;
-      padding: 22px 46px 22px 0;
+      padding: 22px 0;
       border-bottom: 1px solid var(--line-soft);
+    }
+
+    .article-row.has-arrow {
+      padding-right: 46px;
     }
 
     .article-row:first-child { padding-top: 20px; }
@@ -972,7 +976,7 @@
       }
 
       .news-section { padding: 56px 0 54px; }
-      .article-row { padding-right: 40px; }
+      .article-row.has-arrow { padding-right: 40px; }
       .article-card-core { gap: 12px; }
       .article-thumb {
         flex-basis: 76px;
@@ -2472,10 +2476,13 @@
         : core;
 
       if (href !== "#") {
-        card.insertAdjacentHTML(
-          "beforeend",
-          `<a class="article-arrow" href="${href}" ${externalAttrs} aria-label="Lees ${safeText(article.title)}">↗</a>`
-        );
+        if (type === "headlines") {
+          card.classList.add("has-arrow");
+          card.insertAdjacentHTML(
+            "beforeend",
+            `<a class="article-arrow" href="${href}" ${externalAttrs} aria-label="Lees ${safeText(article.title)}">↗</a>`
+          );
+        }
 
         card
           .querySelectorAll(
