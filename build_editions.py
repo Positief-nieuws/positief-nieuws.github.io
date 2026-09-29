@@ -424,7 +424,11 @@ def article_html(item, date_value=None, show_date=False, section="onbekend"):
     raw_title = item.get("title") or item.get("headline") or ""
     raw_source = item.get("source") or ""
     raw_category = canonical_category(category_label(item)) or category_label(item) or ""
-    raw_url = item.get("url") or item.get("link") or "#"
+    raw_source_url = item.get("url") or item.get("link") or "#"
+
+    own_url = article_page_url(item, date_value) if has_article_page(item) else ""
+    raw_url = own_url or raw_source_url
+    link_attrs = "" if own_url else 'target="_blank" rel="noopener noreferrer"'
 
     title = esc(raw_title)
     teaser = esc(item.get("teaser") or item.get("summary") or item.get("description") or "")
@@ -449,11 +453,11 @@ def article_html(item, date_value=None, show_date=False, section="onbekend"):
     return f"""<article class="article">
       <div>
         {date_html}
-        <h3><a href="{url}" target="_blank" rel="noopener noreferrer" {tracking_attrs}>{title}</a></h3>
+        <h3><a href="{url}" {link_attrs} {tracking_attrs}>{title}</a></h3>
         {f'<p class="teaser">{teaser}</p>' if teaser else ''}
         {category_meta_html(item)}
       </div>
-      <a class="arrow" href="{url}" target="_blank" rel="noopener noreferrer" aria-label="Lees {title}" {tracking_attrs}>↗</a>
+      <a class="arrow" href="{url}" {link_attrs} aria-label="Lees {title}" {tracking_attrs}>↗</a>
     </article>"""
 
 
