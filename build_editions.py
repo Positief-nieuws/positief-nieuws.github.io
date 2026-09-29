@@ -2,10 +2,14 @@
 import argparse
 import html
 import json
+import os
 import re
 import shutil
 import sys
 import unicodedata
+import urllib.error
+import urllib.parse
+import urllib.request
 from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
@@ -15,6 +19,9 @@ EDITIONS_DIR = Path("edities")
 TOPICS_DIR = Path("onderwerpen")
 TOPIC_MANIFEST = TOPICS_DIR / "index.json"
 ARTICLES_DIR = Path("artikelen")
+ARTICLE_IMAGES_DIR = Path("images") / "artikelen"
+PIXABAY_CACHE_PATH = Path("data") / "pixabay-images.json"
+PIXABAY_API_URL = "https://pixabay.com/api/"
 NEWS_PATH = Path("nieuws.json")
 SITEMAP_PATH = Path("sitemap.xml")
 
@@ -563,7 +570,165 @@ def render_related_articles(records):
       </section>"""
 
 
-def render_article_page(item, date_value, related_records=None):
+def _load_pixabay_cache():
+    if not PIXABAY_CACHE_PATH.exists():
+        return {}
+    try:
+        data = json.loads(PIXABAY_CACHE_PATH.read_text(encoding="utf-8"))
+        return data if isinstance(data, dict) else {}
+    except Exception as exc:
+        print(f"WAARSCHUWING: Pixabay-cache kon niet worden gelezen: {exc}")
+        return {}
+
+
+def _write_pixabay_cache(cache):
+    PIXABAY_CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
+    PIXABAY_CACHE_PATH.write_text(
+        json.dumps(cache, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+
+
+def _image_extension(content_type, image_url):
+    content_type = str(content_type or "").lower()
+    if "png" in content_type:
+        return ".png"
+    if "webp" in content_type:
+        return ".webp"
+    if "jpeg" in content_type or "jpg" in content_type:
+        return ".jpg"
+    path = urllib.parse.urlparse(image_url).path.lower()
+    for ext in (".jpg", ".jpeg", ".png", ".webp"):
+        if path.endswith(ext):
+            return ".jpg" if ext == ".jpeg" else ext
+    return ".jpg"
+
+
+def resolve_pixabay_image(item, date_value):
+    query = str(item.get("image_query") or "").strip()
+    if not query:
+        return None
+
+    slug = str(item.get("article_slug") or "").strip().strip("/")
+    if not slug or not date_value:
+        return None
+
+    cache_key = f"{date_value}/{slug}"
+    cache = _load_pixabay_cache()
+    cached = cache.get(cache_key) if isinstance(cache.get(cache_key), dict) else None
+    if cached and cached.get("query") == query and cached.get("image_path"):
+        cached_path = Path(str(cached["image_path"]).lstrip("/"))
+        if cached_path.exists():
+            return cached
+
+    api_key = os.environ.get("PIXABAY_API_KEY", "").strip()
+    if not api_key:
+        print(
+            f"WAARSCHUWING: image_query aanwezig bij '{item.get('title', slug)}', "
+            "maar PIXABAY_API_KEY ontbreekt. Artikel blijft zonder beeld."
+        )
+        return None
+
+    params = {
+        "key": api_key,
+        "q": query,
+        "lang": "en",
+        "image_type": "photo",
+        "orientation": "horizontal",
+        "safesearch": "true",
+        "order": "popular",
+        "per_page": 20,
+    }
+    search_url = PIXABAY_API_URL + "?" + urllib.parse.urlencode(params)
+    request = urllib.request.Request(
+        search_url,
+        headers={"User-Agent": "PositiefNieuws/1.0 (+https://positief-nieuws.nl/)"},
+    )
+
+    try:
+        with urllib.request.urlopen(request, timeout=20) as response:
+            payload = json.loads(response.read().decode("utf-8"))
+    except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, json.JSONDecodeError) as exc:
+        print(f"WAARSCHUWING: Pixabay zoeken mislukt voor '{query}': {exc}")
+        return None
+
+    hits = payload.get("hits") if isinstance(payload, dict) else None
+    if not isinstance(hits, list) or not hits:
+        print(f"WAARSCHUWING: geen Pixabay-foto gevonden voor '{query}'.")
+        return None
+
+    pick_raw = item.get("image_pick", 0)
+    try:
+        pick = max(0, int(pick_raw))
+    except (TypeError, ValueError):
+        pick = 0
+    if pick >= len(hits):
+        pick = 0
+
+    hit = hits[pick]
+    image_url = str(hit.get("largeImageURL") or hit.get("webformatURL") or "").strip()
+    if not image_url:
+        print(f"WAARSCHUWING: Pixabay-resultaat voor '{query}' bevat geen bruikbare afbeeldings-URL.")
+        return None
+
+    download_request = urllib.request.Request(
+        image_url,
+        headers={"User-Agent": "PositiefNieuws/1.0 (+https://positief-nieuws.nl/)"},
+    )
+    try:
+        with urllib.request.urlopen(download_request, timeout=30) as response:
+            image_bytes = response.read()
+            content_type = response.headers.get("Content-Type", "")
+    except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError) as exc:
+        print(f"WAARSCHUWING: Pixabay-foto downloaden mislukt voor '{query}': {exc}")
+        return None
+
+    if not image_bytes:
+        print(f"WAARSCHUWING: lege Pixabay-foto ontvangen voor '{query}'.")
+        return None
+
+    ext = _image_extension(content_type, image_url)
+    target_dir = ARTICLE_IMAGES_DIR / date_value
+    target_dir.mkdir(parents=True, exist_ok=True)
+    for old_ext in (".jpg", ".png", ".webp"):
+        old_path = target_dir / f"{slug}{old_ext}"
+        if old_path.exists() and old_path.suffix != ext:
+            old_path.unlink()
+    target_path = target_dir / f"{slug}{ext}"
+    target_path.write_bytes(image_bytes)
+
+    result = {
+        "query": query,
+        "pixabay_id": hit.get("id"),
+        "image_path": "/" + target_path.as_posix(),
+        "page_url": str(hit.get("pageURL") or "https://pixabay.com/").strip(),
+        "photographer": str(hit.get("user") or "Pixabay-contributor").strip(),
+        "tags": str(hit.get("tags") or "").strip(),
+        "width": int(hit.get("imageWidth") or hit.get("webformatWidth") or 0),
+        "height": int(hit.get("imageHeight") or hit.get("webformatHeight") or 0),
+    }
+    cache[cache_key] = result
+    _write_pixabay_cache(cache)
+    print(f"Pixabay-foto opgeslagen: {target_path} (zoekterm: {query!r})")
+    return result
+
+
+def article_image_html(item, image_data):
+    if not image_data:
+        return ""
+    image_path = esc(image_data.get("image_path") or "")
+    if not image_path:
+        return ""
+    page_url = esc(image_data.get("page_url") or "https://pixabay.com/")
+    photographer = esc(image_data.get("photographer") or "Pixabay-contributor")
+    alt = esc(item.get("image_alt") or item.get("title") or "Illustratief beeld")
+    return f"""<figure class="article-figure">
+        <img src="{image_path}" alt="{alt}" loading="eager" fetchpriority="high">
+        <figcaption>Illustratief beeld · Foto: {photographer} via <a href="{page_url}" target="_blank" rel="noopener noreferrer">Pixabay</a>.</figcaption>
+      </figure>"""
+
+
+def render_article_page(item, date_value, related_records=None, image_data=None):
     title_raw = str(item.get("title") or item.get("headline") or "").strip()
     source_raw = str(item.get("source") or "Oorspronkelijke bron").strip()
     category_raw = canonical_category(category_label(item)) or category_label(item) or ""
@@ -588,6 +753,7 @@ def render_article_page(item, date_value, related_records=None):
     body_html = "".join(f"<p>{esc(paragraph)}</p>" for paragraph in paragraphs)
     why_html = f'<aside class="why"><p class="why-label">Waarom dit ertoe doet</p><p>{esc(why_raw)}</p></aside>' if why_raw else ""
     related_html = render_related_articles(related_records or [])
+    image_html = article_image_html(item, image_data)
 
     source_attrs = (
         f'data-source-click="true" '
@@ -597,7 +763,7 @@ def render_article_page(item, date_value, related_records=None):
         f'data-article-edition="{esc(date_value)}"'
     )
 
-    schema = json.dumps({
+    schema_data = {
         "@context": "https://schema.org",
         "@type": "NewsArticle",
         "headline": title_raw,
@@ -608,7 +774,10 @@ def render_article_page(item, date_value, related_records=None):
         "publisher": {"@type": "Organization", "name": "Positief nieuws", "url": SITE_URL + "/"},
         "isPartOf": {"@type": "WebSite", "name": "Positief nieuws", "url": SITE_URL + "/"},
         "isBasedOn": source_url_raw,
-    }, ensure_ascii=False)
+    }
+    if image_data and image_data.get("image_path"):
+        schema_data["image"] = SITE_URL + str(image_data["image_path"])
+    schema = json.dumps(schema_data, ensure_ascii=False)
 
     article_css = r"""
 .article-page{padding:46px 0 74px}
@@ -617,6 +786,10 @@ def render_article_page(item, date_value, related_records=None):
 .article-page h1{max-width:760px;margin:0;font-size:clamp(1.95rem,5vw,3.8rem);line-height:1.02;letter-spacing:-.045em}
 .article-deck{max-width:700px;margin:22px 0 0;font-size:1.12rem;line-height:1.62;color:#3f4842}
 .article-meta{display:flex;flex-wrap:wrap;gap:8px 14px;margin:22px 0 0;color:var(--muted);font-size:.78rem}
+.article-figure{max-width:700px;margin:28px 0 26px}
+.article-figure img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px;background:#ece8dc}
+.article-figure figcaption{margin-top:8px;color:var(--muted);font-size:.68rem;line-height:1.45}
+.article-figure figcaption a{color:var(--green);text-underline-offset:2px}
 .article-rule{height:1px;background:var(--line);margin:30px 0}
 .article-copy{max-width:700px;font-size:1.06rem;line-height:1.78;color:#242a26}
 .article-copy p{margin:0 0 1.25em}
@@ -657,7 +830,8 @@ def render_article_page(item, date_value, related_records=None):
   <meta property="og:type" content="article">
   <meta property="og:url" content="{canonical}">
   <meta property="og:site_name" content="Positief nieuws">
-  <meta name="twitter:card" content="summary">
+  {f'<meta property="og:image" content="{SITE_URL + str(image_data.get("image_path"))}">' if image_data and image_data.get("image_path") else ''}
+  <meta name="twitter:card" content="{'summary_large_image' if image_data and image_data.get('image_path') else 'summary'}">
   <meta name="theme-color" content="#17382b">
   <script type="application/ld+json">{schema}</script>
   <style>{BASE_CSS}{article_css}</style>
@@ -670,6 +844,7 @@ def render_article_page(item, date_value, related_records=None):
       <h1>{title}<b>.</b></h1>
       {f'<p class="article-deck">{teaser}</p>' if teaser else ''}
       <div class="article-meta"><span>{esc(date_text)}</span><span>Bron: {source}</span></div>
+      {image_html}
       <div class="article-rule"></div>
       <article class="article-copy">{body_html}</article>
       {why_html}
@@ -697,10 +872,11 @@ def write_article_pages(edition_records):
         item = record["item"]
         slug = record["slug"]
         related = select_related_articles(item, date_value, candidates, limit=3)
+        image_data = resolve_pixabay_image(item, date_value)
 
         page_dir = ARTICLES_DIR / date_value / slug
         page_dir.mkdir(parents=True, exist_ok=True)
-        (page_dir / "index.html").write_text(render_article_page(item, date_value, related), encoding="utf-8")
+        (page_dir / "index.html").write_text(render_article_page(item, date_value, related, image_data), encoding="utf-8")
         built.append({
             "date": date_value,
             "slug": slug,
