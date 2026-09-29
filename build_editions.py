@@ -528,7 +528,7 @@ def render_article_page(item, date_value):
 .article-page{padding:46px 0 74px}
 .article-wrap{max-width:760px}
 .article-kicker{margin:0 0 12px;color:var(--green-dark);font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
-.article-page h1{max-width:760px;margin:0;font-size:clamp(2.25rem,6vw,4.6rem);line-height:.98;letter-spacing:-.05em}
+.article-page h1{max-width:760px;margin:0;font-size:clamp(1.95rem,5vw,3.8rem);line-height:1.02;letter-spacing:-.045em}
 .article-deck{max-width:700px;margin:22px 0 0;font-size:1.12rem;line-height:1.62;color:#3f4842}
 .article-meta{display:flex;flex-wrap:wrap;gap:8px 14px;margin:22px 0 0;color:var(--muted);font-size:.78rem}
 .article-rule{height:1px;background:var(--line);margin:30px 0}
@@ -544,7 +544,7 @@ def render_article_page(item, date_value):
 .article-note{max-width:700px;margin-top:24px;color:var(--muted);font-size:.76rem;line-height:1.55}
 .article-back{margin-top:34px}
 .article-back a{color:var(--green-dark);font-weight:700;font-size:.8rem}
-@media (max-width:640px){.article-page{padding-top:34px}.article-page h1{font-size:clamp(2.1rem,12vw,3.35rem)}.article-copy{font-size:1rem}.why{padding:19px}}
+@media (max-width:640px){.article-page{padding-top:34px}.article-page h1{font-size:clamp(1.85rem,10vw,2.85rem);line-height:1.03}.article-copy{font-size:1rem}.why{padding:19px}}
 """
 
     return f"""<!DOCTYPE html>
