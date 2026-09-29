@@ -397,6 +397,41 @@
 
     .article-row:first-child { padding-top: 20px; }
 
+    .article-card-core {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      min-width: 0;
+    }
+
+    .article-main {
+      flex: 1 1 auto;
+      min-width: 0;
+    }
+
+    .article-thumb {
+      display: block;
+      flex: 0 0 112px;
+      width: 112px;
+      height: 82px;
+      overflow: hidden;
+      border-radius: 10px;
+      background: rgba(23,63,49,.06);
+      text-decoration: none;
+    }
+
+    .article-thumb img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .18s ease;
+    }
+
+    .article-thumb:hover img {
+      transform: scale(1.025);
+    }
+
     .article-title {
       margin: 0;
       max-width: 660px;
@@ -938,6 +973,13 @@
 
       .news-section { padding: 56px 0 54px; }
       .article-row { padding-right: 40px; }
+      .article-card-core { gap: 12px; }
+      .article-thumb {
+        flex-basis: 76px;
+        width: 76px;
+        height: 60px;
+        border-radius: 8px;
+      }
       .article-title { font-size: 1.14rem; }
       .teaser {
         display: -webkit-box;
@@ -1786,6 +1828,71 @@
     }
 
 
+    async function loadArticleImageCache() {
+      try {
+        const response = await fetch(
+          "./data/pixabay-images.json",
+          { cache: "no-store" }
+        );
+
+        if (!response.ok) {
+          return {};
+        }
+
+        const cache = await response.json();
+        return cache && typeof cache === "object" ? cache : {};
+      }
+      catch (error) {
+        console.warn("Afbeeldingencache kon niet worden geladen.", error);
+        return {};
+      }
+    }
+
+
+    function applyArticleImages(data, editionDate, imageCache) {
+      if (!data || !editionDate || !imageCache) {
+        return;
+      }
+
+      ["nl", "int"].forEach(
+        section => {
+          const sectionItems =
+            Array.isArray(data?.[section])
+              ? data[section]
+              : [];
+
+          sectionItems.forEach(
+            item => {
+              const slug =
+                String(
+                  item?.article_slug
+                  || item?.articleSlug
+                  || ""
+                ).trim();
+
+              if (!slug) {
+                return;
+              }
+
+              const cached =
+                imageCache[`${editionDate}/${slug}`];
+
+              if (
+                cached
+                && cached.image_path
+                && !item.image
+                && !item.image_url
+                && !item.imageUrl
+              ) {
+                item.image = cached.image_path;
+              }
+            }
+          );
+        }
+      );
+    }
+
+
     function normalizeArticle(article) {
 
       return {
@@ -2323,13 +2430,40 @@
           ? 'target="_blank" rel="noopener noreferrer"'
           : "";
 
+      const thumbHtml =
+        type !== "headlines" && article.image
+          ? `
+            <a
+              class="article-thumb"
+              href="${href}"
+              ${externalAttrs}
+              aria-label="Lees ${safeText(article.title)}"
+            >
+              <img
+                src="${safeUrl(article.image)}"
+                alt="${safeText(article.imageAlt || article.title)}"
+                loading="lazy"
+                decoding="async"
+                onerror="this.closest('.article-thumb').remove()"
+              >
+            </a>
+          `
+          : "";
+
+      if (thumbHtml) {
+        card.classList.add("has-thumb");
+      }
+
       const core = `
-        <div class="article-main">
-          <h3 class="article-title">
-            <a href="${href}" ${externalAttrs}>${safeText(article.title)}</a>
-          </h3>
-          ${article.teaser ? `<p class="teaser">${safeText(article.teaser)}</p>` : ""}
-          ${metaHtml(article)}
+        <div class="article-card-core">
+          <div class="article-main">
+            <h3 class="article-title">
+              <a href="${href}" ${externalAttrs}>${safeText(article.title)}</a>
+            </h3>
+            ${article.teaser ? `<p class="teaser">${safeText(article.teaser)}</p>` : ""}
+            ${metaHtml(article)}
+          </div>
+          ${thumbHtml}
         </div>
       `;
 
@@ -2345,7 +2479,7 @@
 
         card
           .querySelectorAll(
-            ".article-title a, .article-arrow"
+            ".article-title a, .article-arrow, .article-thumb"
           )
           .forEach(
             link => {
@@ -3013,12 +3147,20 @@
             : "./nieuws.json";
 
 
-        const response =
-          await fetch(
-            newsUrl,
-            {
-              cache: "no-store"
-            }
+        const [
+          response,
+          articleImageCache
+        ] =
+          await Promise.all(
+            [
+              fetch(
+                newsUrl,
+                {
+                  cache: "no-store"
+                }
+              ),
+              loadArticleImageCache()
+            ]
           );
 
 
@@ -3039,6 +3181,13 @@
           data?.meta?.edition_date
           || data?.edition?.date
           || null;
+
+
+        applyArticleImages(
+          data,
+          rawEditionDate,
+          articleImageCache
+        );
 
 
         $("#edition-date").textContent =
