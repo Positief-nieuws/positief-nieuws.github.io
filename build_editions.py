@@ -14,6 +14,7 @@ SITE_URL = "https://positief-nieuws.nl"
 EDITIONS_DIR = Path("edities")
 TOPICS_DIR = Path("onderwerpen")
 TOPIC_MANIFEST = TOPICS_DIR / "index.json"
+ARTICLES_DIR = Path("artikelen")
 NEWS_PATH = Path("nieuws.json")
 SITEMAP_PATH = Path("sitemap.xml")
 
@@ -272,20 +273,34 @@ def analytics_html(metadata):
   window.sa_metadata = {metadata_json};
 
   document.addEventListener("click", function (event) {{
-    const link = event.target.closest("[data-article-click]");
-    if (!link) return;
+    const articleLink = event.target.closest("[data-article-click]");
+    if (articleLink) {{
+      window.sa_event(
+        "article_click",
+        {{
+          title: articleLink.dataset.articleTitle || "Zonder titel",
+          source: articleLink.dataset.articleSource || "Onbekend",
+          category: articleLink.dataset.articleCategory || "Onbekend",
+          section: articleLink.dataset.articleSection || "onbekend",
+          edition: articleLink.dataset.articleEdition || window.sa_metadata?.edition || "onbekend",
+          url: articleLink.href || "onbekend"
+        }}
+      );
+    }}
 
-    window.sa_event(
-      "article_click",
-      {{
-        title: link.dataset.articleTitle || "Zonder titel",
-        source: link.dataset.articleSource || "Onbekend",
-        category: link.dataset.articleCategory || "Onbekend",
-        section: link.dataset.articleSection || "onbekend",
-        edition: link.dataset.articleEdition || window.sa_metadata?.edition || "onbekend",
-        url: link.href || "onbekend"
-      }}
-    );
+    const sourceLink = event.target.closest("[data-source-click]");
+    if (sourceLink) {{
+      window.sa_event(
+        "source_click",
+        {{
+          title: sourceLink.dataset.articleTitle || window.sa_metadata?.article_title || "Zonder titel",
+          source: sourceLink.dataset.articleSource || window.sa_metadata?.source || "Onbekend",
+          category: sourceLink.dataset.articleCategory || window.sa_metadata?.category || "Onbekend",
+          edition: sourceLink.dataset.articleEdition || window.sa_metadata?.edition || "onbekend",
+          url: sourceLink.href || "onbekend"
+        }}
+      );
+    }}
   }});
 
   (function () {{
@@ -440,6 +455,162 @@ def article_html(item, date_value=None, show_date=False, section="onbekend"):
       </div>
       <a class="arrow" href="{url}" target="_blank" rel="noopener noreferrer" aria-label="Lees {title}" {tracking_attrs}>↗</a>
     </article>"""
+
+
+
+def article_page_url(item, date_value):
+    slug = str(item.get("article_slug") or "").strip().strip("/")
+    if not slug or not date_value:
+        return ""
+    return f"{SITE_URL}/artikelen/{date_value}/{slug}/"
+
+
+def article_body_paragraphs(item):
+    body = item.get("article_body")
+    if isinstance(body, list):
+        return [str(x).strip() for x in body if str(x).strip()]
+    if isinstance(body, str):
+        return [x.strip() for x in re.split(r"\n\s*\n", body) if x.strip()]
+    return []
+
+
+def has_article_page(item):
+    return bool(str(item.get("article_slug") or "").strip() and article_body_paragraphs(item))
+
+
+def render_article_page(item, date_value):
+    title_raw = str(item.get("title") or item.get("headline") or "").strip()
+    source_raw = str(item.get("source") or "Oorspronkelijke bron").strip()
+    category_raw = canonical_category(category_label(item)) or category_label(item) or ""
+    source_url_raw = str(item.get("url") or item.get("link") or "#").strip()
+    teaser_raw = str(item.get("teaser") or item.get("summary") or "").strip()
+    why_raw = str(item.get("why_it_matters") or "").strip()
+    paragraphs = article_body_paragraphs(item)
+    canonical = article_page_url(item, date_value)
+    if not canonical or not title_raw or not paragraphs:
+        raise ValueError("Artikelpagina mist article_slug, titel of article_body.")
+
+    desc_raw = teaser_raw or paragraphs[0]
+    if len(desc_raw) > 158:
+        desc_raw = desc_raw[:157].rstrip(" ,;:") + "…"
+
+    date_text = fmt_date(date_value)
+    title = esc(title_raw)
+    source = esc(source_raw)
+    category = esc(category_raw)
+    source_url = esc(source_url_raw)
+    teaser = esc(teaser_raw)
+    body_html = "".join(f"<p>{esc(paragraph)}</p>" for paragraph in paragraphs)
+    why_html = f'<aside class="why"><p class="why-label">Waarom dit ertoe doet</p><p>{esc(why_raw)}</p></aside>' if why_raw else ""
+
+    source_attrs = (
+        f'data-source-click="true" '
+        f'data-article-title="{title}" '
+        f'data-article-source="{source}" '
+        f'data-article-category="{category}" '
+        f'data-article-edition="{esc(date_value)}"'
+    )
+
+    schema = json.dumps({
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        "headline": title_raw,
+        "description": desc_raw,
+        "datePublished": date_value,
+        "dateModified": date_value,
+        "mainEntityOfPage": {"@type": "WebPage", "@id": canonical},
+        "publisher": {"@type": "Organization", "name": "Positief nieuws", "url": SITE_URL + "/"},
+        "isPartOf": {"@type": "WebSite", "name": "Positief nieuws", "url": SITE_URL + "/"},
+        "isBasedOn": source_url_raw,
+    }, ensure_ascii=False)
+
+    article_css = r"""
+.article-page{padding:46px 0 74px}
+.article-wrap{max-width:760px}
+.article-kicker{margin:0 0 12px;color:var(--green-dark);font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.article-page h1{max-width:760px;margin:0;font-size:clamp(2.25rem,6vw,4.6rem);line-height:.98;letter-spacing:-.05em}
+.article-deck{max-width:700px;margin:22px 0 0;font-size:1.12rem;line-height:1.62;color:#3f4842}
+.article-meta{display:flex;flex-wrap:wrap;gap:8px 14px;margin:22px 0 0;color:var(--muted);font-size:.78rem}
+.article-rule{height:1px;background:var(--line);margin:30px 0}
+.article-copy{max-width:700px;font-size:1.06rem;line-height:1.78;color:#242a26}
+.article-copy p{margin:0 0 1.25em}
+.why{max-width:700px;margin:34px 0;padding:22px 24px;background:#f8f3e8;border-left:4px solid #d6a13a}
+.why-label{margin:0 0 7px!important;color:var(--green-dark);font-size:.72rem!important;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.why p{margin:0;font-size:1rem;line-height:1.65}
+.source-box{max-width:700px;margin-top:34px;padding-top:26px;border-top:1px solid var(--line)}
+.source-box p{margin:0 0 13px;color:var(--muted);font-size:.82rem;line-height:1.5}
+.source-button{display:inline-flex;align-items:center;gap:8px;padding:11px 16px;border:1px solid var(--green-dark);border-radius:999px;color:var(--green-dark);text-decoration:none;font-size:.8rem;font-weight:800}
+.source-button:hover{background:var(--green-dark);color:white}
+.article-note{max-width:700px;margin-top:24px;color:var(--muted);font-size:.76rem;line-height:1.55}
+.article-back{margin-top:34px}
+.article-back a{color:var(--green-dark);font-weight:700;font-size:.8rem}
+@media (max-width:640px){.article-page{padding-top:34px}.article-page h1{font-size:clamp(2.1rem,12vw,3.35rem)}.article-copy{font-size:1rem}.why{padding:19px}}
+"""
+
+    return f"""<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title} | Positief nieuws</title>
+  <meta name="description" content="{esc(desc_raw)}">
+  <link rel="canonical" href="{canonical}">
+  <meta property="og:title" content="{title}">
+  <meta property="og:description" content="{esc(desc_raw)}">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="{canonical}">
+  <meta property="og:site_name" content="Positief nieuws">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#17382b">
+  <script type="application/ld+json">{schema}</script>
+  <style>{BASE_CSS}{article_css}</style>
+</head>
+<body>
+  {header_html()}
+  <main class="article-page">
+    <div class="shell article-wrap">
+      <p class="article-kicker">{category or 'Positief nieuws'}</p>
+      <h1>{title}<b>.</b></h1>
+      {f'<p class="article-deck">{teaser}</p>' if teaser else ''}
+      <div class="article-meta"><span>{esc(date_text)}</span><span>Bron: {source}</span></div>
+      <div class="article-rule"></div>
+      <article class="article-copy">{body_html}</article>
+      {why_html}
+      <div class="source-box">
+        <p>Dit is een redactionele samenvatting van Positief nieuws, gebaseerd op de oorspronkelijke publicatie van {source}.</p>
+        <a class="source-button" href="{source_url}" target="_blank" rel="noopener noreferrer" {source_attrs}>Lees het oorspronkelijke artikel ↗</a>
+      </div>
+      <p class="article-note">Positief nieuws selecteert en vat ontwikkelingen samen in eigen woorden. De oorspronkelijke bron blijft leidend voor de volledige context en details.</p>
+      <p class="article-back"><a href="/edities/{esc(date_value)}/">← Terug naar de editie van {esc(date_text)}</a></p>
+    </div>
+  </main>
+  <footer>Positief nieuws · Dit gebeurt ook.</footer>
+  {analytics_html({'page_type':'article','edition':date_value,'article_title':title_raw,'source':source_raw,'category':category_raw})}
+</body>
+</html>"""
+
+
+def write_article_pages(edition_records):
+    built = []
+    for date_value, data in edition_records:
+        for section in ("nl", "int"):
+            for item in items(data, section):
+                if not has_article_page(item):
+                    continue
+                slug = str(item.get("article_slug") or "").strip().strip("/")
+                if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", slug):
+                    raise ValueError(f"Ongeldige article_slug '{slug}' in editie {date_value}.")
+                page_dir = ARTICLES_DIR / date_value / slug
+                page_dir.mkdir(parents=True, exist_ok=True)
+                (page_dir / "index.html").write_text(render_article_page(item, date_value), encoding="utf-8")
+                built.append({
+                    "date": date_value,
+                    "slug": slug,
+                    "url": f"{SITE_URL}/artikelen/{date_value}/{slug}/",
+                    "title": str(item.get("title") or ""),
+                })
+                print(f"Gebouwd: {page_dir / 'index.html'}")
+    return built
 
 
 def description(data, date_text):
@@ -796,6 +967,7 @@ def build_site():
 
     topics = collect_topics(edition_records)
     write_topic_pages(topics)
+    article_pages = write_article_pages(edition_records)
 
     latest = max(dates) if dates else datetime.now().strftime("%Y-%m-%d")
     sitemap_urls = [
@@ -808,6 +980,8 @@ def build_site():
         sitemap_urls.append((f"{SITE_URL}/edities/{date_value}/", date_value))
     for topic in topics.values():
         sitemap_urls.append((f"{SITE_URL}/{topic['slug']}/", topic["latest"]))
+    for article_page in article_pages:
+        sitemap_urls.append((article_page["url"], article_page["date"]))
 
     sitemap_parts = []
     for loc, lastmod in sitemap_urls:
@@ -815,7 +989,7 @@ def build_site():
         sitemap_parts.append(f"  <url>\n    <loc>{loc}</loc>{lm}\n  </url>")
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "\n".join(sitemap_parts) + "\n</urlset>\n"
     SITEMAP_PATH.write_text(sitemap, encoding="utf-8")
-    print(f"Sitemap bijgewerkt met {len(sitemap_urls)} URL(s), waarvan {len(topics)} onderwerp-pagina's.")
+    print(f"Sitemap bijgewerkt met {len(sitemap_urls)} URL(s), waarvan {len(topics)} onderwerp-pagina's en {len(article_pages)} eigen artikelpagina's.")
 
 
 def validate_current():
