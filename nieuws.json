@@ -16,14 +16,28 @@
       "title": "Bloedwaarden kunnen opvlamming zeldzame kinderspierziekte een jaar eerder signaleren",
       "teaser": "Onderzoekers van UMC Utrecht zagen dat twee ontstekingseiwitten al ongeveer een jaar vóór een zichtbare opvlamming konden stijgen. Als beide waarden hoog waren, was het risico op een opvlamming twaalf keer groter.",
       "source": "UMC Utrecht",
-      "url": "https://umcutrecht.nl/nieuws/bloedwaarden-voorspellen-opvlamming-zeldzame-kinderspierziekte"
+      "url": "https://umcutrecht.nl/nieuws/bloedwaarden-voorspellen-opvlamming-zeldzame-kinderspierziekte",
+      "article_slug": "bloedwaarden-opvlamming-kinderspierziekte-eerder-signaleren",
+      "article_body": [
+        "Bij juveniele dermatomyositis veroorzaakt het afweersysteem ontstekingen in onder meer spieren en huid. In Nederland krijgen jaarlijks ongeveer acht tot tien kinderen deze zeldzame auto-immuunziekte. Een belangrijke vraag voor artsen is wanneer behandeling veilig kan worden afgebouwd en wanneer juist extra behandeling nodig is.",
+        "UMC Utrecht-onderzoeker Saskia Veldkamp onderzocht daarom twee ontstekingseiwitten in het bloed: Galectin-9 en CXCL10. In een Nederlandse studie onder 83 kinderen waren deze waarden bij de diagnose vaker verhoogd dan creatinekinase, een spierenzym dat standaard wordt gemeten. Daarna analyseerden onderzoekers 756 bloedmonsters van 141 kinderen uit Nederland, Frankrijk, Singapore en Canada.",
+        "Daaruit bleek dat Galectin-9 en CXCL10 ongeveer een jaar vóór een zichtbare opvlamming konden stijgen. Wanneer beide waarden hoog waren, was het risico op een opvlamming twaalf keer groter. De test voorspelde geen opvlammingen die alleen de huid troffen. Volgens de onderzoekers kan deze kennis uiteindelijk bijdragen aan een behandeling die beter wordt afgestemd op het risico van ieder kind, al is vervolgonderzoek nodig voordat zulke biomarkers breed in de zorg kunnen worden gebruikt."
+      ],
+      "why_it_matters": "Een eerdere waarschuwing kan artsen meer tijd geven om behandeling aan te passen. Tegelijk kan een laag risico op termijn helpen om zware medicatie bij sommige kinderen eerder af te bouwen."
     },
     {
       "category": "Natuur & klimaat",
       "title": "Camera's en AI brengen vogelaanvaringen bij windmolens op zee in beeld",
       "teaser": "Zestien thermische camera's draaiden bijna een jaar rond een turbine in Hollandse Kust Zuid. Het systeem bleek dag en nacht betrouwbaar vogelbewegingen en mogelijke aanvaringen te kunnen waarnemen, kennis die kan helpen vogels beter te beschermen.",
       "source": "Wageningen University & Research",
-      "url": "https://www.wur.nl/nl/nieuws/vogelaanvaringen-op-zee-beeld-met-camerasysteem"
+      "url": "https://www.wur.nl/nl/nieuws/vogelaanvaringen-op-zee-beeld-met-camerasysteem",
+      "article_slug": "cameras-ai-vogelaanvaringen-windmolens-op-zee",
+      "article_body": [
+        "Bij een windturbine in windpark Hollandse Kust Zuid is bijna een jaar lang getest of vogelaanvaringen op zee rechtstreeks kunnen worden waargenomen. Wildlife Imaging Systems plaatste zestien thermische camera's rond de turbine. Samen met kunstmatige intelligentie volgde het systeem dag en nacht vogelbewegingen, ook bij slecht zicht door mist of regen.",
+        "Onderzoekers van Wageningen University & Research beoordeelden hoe betrouwbaar de techniek werkte. Tijdens de pilot registreerde het systeem 22 mogelijke aanvaringen. Bij twee daarvan kon met aanvullende beelden worden vastgesteld dat een vogel de turbine raakte; bij één geval was dat zeer waarschijnlijk. De onderzoekers benadrukken dat deze proef bij één turbine niet laat zien hoe vaak aanvaringen op zee in het algemeen voorkomen.",
+        "De belangrijkste stap is dat er nu echte waarnemingen verzameld kunnen worden waar eerder vooral met theoretische modellen werd gewerkt. In vervolgonderzoek willen de onderzoekers de techniek op meer locaties en onder verschillende omstandigheden gebruiken. Dat kan helpen om beter te begrijpen wanneer risico's ontstaan en welke maatregelen vogels rond windparken op zee het beste kunnen beschermen."
+      ],
+      "why_it_matters": "Windenergie op zee groeit, terwijl de gevolgen voor vogels nog lastig rechtstreeks te meten zijn. Betere waarnemingen kunnen helpen om natuurmaatregelen veel gerichter te maken."
     },
     {
       "category": "Mens",
