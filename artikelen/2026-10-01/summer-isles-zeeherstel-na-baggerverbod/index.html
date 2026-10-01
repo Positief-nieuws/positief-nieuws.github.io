@@ -47,6 +47,13 @@
 .source-button{display:inline-flex;align-items:center;gap:8px;padding:11px 16px;border:1px solid var(--green-dark);border-radius:999px;color:var(--green-dark);text-decoration:none;font-size:.8rem;font-weight:800}
 .source-button:hover{background:var(--green-dark);color:white}
 .article-note{max-width:700px;margin-top:24px;color:var(--muted);font-size:.76rem;line-height:1.55}
+.support-teaser{max-width:700px;margin:42px 0 0;padding:28px 30px;border:1px solid rgba(214,161,58,.32);border-radius:18px;background:radial-gradient(circle at 92% 18%,rgba(214,161,58,.11),transparent 29%),rgba(255,255,255,.42)}
+.support-teaser-grid{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:28px}
+.support-teaser .support-kicker{margin:0;color:var(--green);font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.support-teaser h2{margin:7px 0 0;font-family:Georgia,"Times New Roman",serif;color:#111512;font-size:1.55rem;line-height:1.08;letter-spacing:-.035em}
+.support-teaser p{max-width:500px;margin:10px 0 0;color:var(--muted);font-size:.84rem;line-height:1.55}
+.support-button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 19px;border:1px solid var(--green-dark);border-radius:999px;background:var(--green-dark);color:white;font-size:.76rem;font-weight:800;text-decoration:none;white-space:nowrap;transition:transform .15s ease,background .15s ease}
+.support-button:hover{transform:translateY(-1px);background:var(--green)}
 .related{max-width:700px;margin-top:48px;padding-top:34px;border-top:1px solid var(--green-dark)}
 .related-kicker{margin:0 0 7px;color:var(--green);font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
 .related h2{margin:0 0 8px;font-size:clamp(1.65rem,4vw,2.25rem);line-height:1.05;letter-spacing:-.035em}
@@ -65,7 +72,7 @@
 .related-thumb:hover img{transform:scale(1.025)}
 .article-back{margin-top:34px}
 .article-back a{color:var(--green-dark);font-weight:700;font-size:.8rem}
-@media (max-width:640px){.article-page{padding-top:34px}.article-page h1{font-size:clamp(1.85rem,10vw,2.85rem);line-height:1.03}.article-copy{font-size:1rem}.why{padding:19px}.related{margin-top:40px;padding-top:28px}.related h2{font-size:1.75rem}.related-core{gap:13px}.related-thumb{flex-basis:112px;width:112px;height:84px;border-radius:9px}.related-item h3{font-size:1.08rem}.related-teaser{display:none}}
+@media (max-width:640px){.article-page{padding-top:34px}.article-page h1{font-size:clamp(1.85rem,10vw,2.85rem);line-height:1.03}.article-copy{font-size:1rem}.why{padding:19px}.support-teaser{padding:24px 22px}.support-teaser-grid{grid-template-columns:1fr;gap:20px}.support-teaser h2{font-size:1.45rem}.support-button{width:100%}.related{margin-top:40px;padding-top:28px}.related h2{font-size:1.75rem}.related-core{gap:13px}.related-thumb{flex-basis:112px;width:112px;height:84px;border-radius:9px}.related-item h3{font-size:1.08rem}.related-teaser{display:none}}
 </style>
 </head>
 <body>
@@ -151,6 +158,22 @@
         <a class="source-button" href="https://www.theguardian.com/environment/2026/sep/30/beyond-priceless-how-a-halt-to-dredging-saved-the-seas-of-scotlands-summer-isles" target="_blank" rel="noopener noreferrer" data-source-click="true" data-article-title="Tien jaar zonder zware bodembaggering brengt Schotse zeebodem weer tot leven" data-article-source="The Guardian" data-article-category="Natuur &amp; klimaat" data-article-edition="2026-10-01">Lees het oorspronkelijke artikel ↗</a>
       </div>
       <p class="article-note">Positief nieuws selecteert en vat ontwikkelingen samen in eigen woorden. De oorspronkelijke bron blijft leidend voor de volledige context en details.</p>
+
+      <section class="support-teaser" aria-labelledby="article-support-title">
+        <div class="support-teaser-grid">
+          <div>
+            <p class="support-kicker">Steun Positief nieuws</p>
+            <h2 id="article-support-title">Help Positief nieuws door te gaan.</h2>
+            <p>Positief nieuws is gratis en zonder advertenties. Met een kleine vrijwillige bijdrage help je de site en nieuwsbrief draaiend te houden. Je kiest zelf het bedrag.</p>
+          </div>
+          <a
+            class="support-button"
+            href="/steun/"
+            onclick="if (window.sa_event) { sa_event('steun_teaser_click'); }"
+          >Steun Positief nieuws</a>
+        </div>
+      </section>
+
       <section class="related" aria-labelledby="related-title">
         <p class="related-kicker">Verder lezen</p>
         <h2 id="related-title">Misschien ook interessant</h2>
