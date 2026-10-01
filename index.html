@@ -460,6 +460,17 @@
       line-height: 1.48;
     }
 
+    .teaser-one-line {
+      min-width: 0;
+      margin: 8px 0 0;
+      color: #3f4742;
+      font-size: 0.88rem;
+      line-height: 1.4;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
     .meta {
       display: flex;
       flex-wrap: wrap;
@@ -2464,7 +2475,15 @@
             <h3 class="article-title">
               <a href="${href}" ${externalAttrs}>${safeText(article.title)}</a>
             </h3>
-            ${type === "headlines" && article.teaser ? `<p class="teaser">${safeText(article.teaser)}</p>` : ""}
+            ${
+              article.teaser
+                ? (
+                    type === "headlines"
+                      ? `<p class="teaser">${safeText(article.teaser)}</p>`
+                      : `<p class="teaser-one-line">${safeText(article.teaser)}</p>`
+                  )
+                : ""
+            }
             ${metaHtml(article)}
           </div>
           ${thumbHtml}
