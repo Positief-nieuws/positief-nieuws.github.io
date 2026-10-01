@@ -615,6 +615,66 @@
     }
     .ios-install-panel.is-visible { display: block; }
 
+    .support-teaser {
+      margin: 0 auto 54px;
+      padding: 30px 34px;
+      border: 1px solid rgba(214, 161, 58, .32);
+      border-radius: 18px;
+      background:
+        radial-gradient(circle at 92% 18%, rgba(214,161,58,.11), transparent 29%),
+        rgba(255,255,255,.42);
+    }
+
+    .support-teaser-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .support-teaser .section-kicker {
+      color: var(--green);
+    }
+
+    .support-teaser h2 {
+      margin: 7px 0 0;
+      color: #111512;
+      font-size: 1.65rem;
+      line-height: 1.08;
+      letter-spacing: -.035em;
+    }
+
+    .support-teaser p {
+      max-width: 560px;
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: .86rem;
+      line-height: 1.55;
+    }
+
+    .support-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 19px;
+      border: 1px solid var(--green-dark);
+      border-radius: 999px;
+      background: var(--green-dark);
+      color: var(--white);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .76rem;
+      font-weight: 800;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: transform .15s ease, background .15s ease;
+    }
+
+    .support-button:hover {
+      transform: translateY(-1px);
+      background: var(--green);
+    }
+
     .newsletter {
       padding: 36px 42px;
       background: var(--green);
@@ -1008,6 +1068,14 @@
       .briefing-row { grid-template-columns: 28px minmax(0,1fr); }
       .edition-end { padding: 72px 0 54px; }
       .edition-end h2 { font-size: clamp(2.25rem, 11vw, 3.1rem); }
+
+      .support-teaser {
+        margin-bottom: 40px;
+        padding: 24px 22px;
+      }
+      .support-teaser-grid { grid-template-columns: 1fr; gap: 20px; }
+      .support-teaser h2 { font-size: 1.48rem; }
+      .support-button { width: 100%; }
 
       .newsletter { padding: 28px 22px; }
       .newsletter-grid { grid-template-columns: 1fr; gap: 28px; }
@@ -1627,6 +1695,21 @@
         </div>
       </section>
 
+      <section class="support-teaser wide-shell" aria-labelledby="support-teaser-title">
+        <div class="support-teaser-grid">
+          <div>
+            <p class="section-kicker">Steun Positief nieuws</p>
+            <h2 id="support-teaser-title">Help Positief nieuws door te gaan.</h2>
+            <p>Positief nieuws is gratis en zonder advertenties. Met een kleine vrijwillige bijdrage help je de site en nieuwsbrief draaiend te houden. Je kiest zelf het bedrag.</p>
+          </div>
+          <a
+            class="support-button"
+            href="/steun/"
+            onclick="trackSimpleEvent('steun_teaser_click')"
+          >Steun Positief nieuws</a>
+        </div>
+      </section>
+
 
       <section class="newsletter wide-shell" id="nieuwsbrief">
         <div class="newsletter-grid">
@@ -1712,6 +1795,7 @@
         <p>Geen eindeloze feed. Geen clickbait om je zo lang mogelijk vast te houden. Gewoon een compacte nieuwsselectie en daarna weer verder met je dag.</p>
         <p>Nieuwe edities verschijnen op maandag en donderdag.</p>
         <p><a href="#nieuwsbrief" id="about-newsletter-link">Ontvang Positief nieuws in je inbox →</a></p>
+        <p><a href="/steun/">Steun Positief nieuws met een vrijwillige bijdrage →</a></p>
 
         <div class="contact-block">
           <h2>Contact</h2>
@@ -1746,6 +1830,9 @@
         <h2>Contact</h2>
         <p>Als je ons mailt, gebruiken we je e-mailadres en de inhoud van je bericht alleen om je bericht te behandelen en te beantwoorden. Voor e-mail gebruiken we STRATO als mailprovider. Bewaartermijnen hangen af van wat nodig is voor de correspondentie.</p>
 
+        <h2>Vrijwillige bijdragen</h2>
+        <p>Wie Positief nieuws vrijwillig wil steunen, wordt via de steunpagina doorgestuurd naar een betaalverzoek van RegioBank. De betaling vindt plaats bij RegioBank. Op de bankrekening kunnen gegevens zichtbaar zijn die bij de betaling horen, zoals de naam van de rekeninghouder, het bedrag en de omschrijving van de betaling.</p>
+
         <h2>Externe diensten</h2>
         <ul>
           <li><a href="https://buttondown.com/legal/privacy" target="_blank" rel="noopener noreferrer">Privacybeleid van Buttondown</a></li>
@@ -1756,7 +1843,7 @@
         <h2>Jouw gegevens</h2>
         <p>Wil je weten welke persoonsgegevens we van je hebben, iets laten aanpassen of verwijderen, of heb je een andere privacyvraag? Mail dan naar <a href="mailto:privacy@positief-nieuws.nl?subject=Privacyvraag%20Positief%20nieuws">privacy@positief-nieuws.nl</a>.</p>
 
-        <p class="privacy-updated">Laatst bijgewerkt: 15 september 2026.</p>
+        <p class="privacy-updated">Laatst bijgewerkt: 1 oktober 2026.</p>
       </div>
     </div>
   </section>
@@ -1800,7 +1887,7 @@
   </section>
 
   <footer class="site-footer">
-    <div class="wide-shell">Positief nieuws · Dit gebeurt ook. · <a href="#privacy">Privacy</a></div>
+    <div class="wide-shell">Positief nieuws · Dit gebeurt ook. · <a href="/steun/">Steun</a> · <a href="#privacy">Privacy</a></div>
   </footer>
 <script>
     // Oude ?editie=YYYY-MM-DD-links blijven werken en gaan naar de vaste editie-URL.
