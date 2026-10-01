@@ -22,8 +22,8 @@
 .mobile-menu-toggle{display:none;min-height:42px;padding:0 13px;border:1px solid rgba(23,63,49,.16);border-radius:999px;background:rgba(255,255,255,.3);color:var(--green-dark);align-items:center;justify-content:center;gap:8px;cursor:pointer;-webkit-tap-highlight-color:transparent}.menu-icon{display:inline-flex;width:17px;flex-direction:column;gap:4px}.menu-line{display:block;width:17px;height:1.5px;border-radius:999px;background:currentColor;transition:transform 160ms ease,opacity 160ms ease;transform-origin:center}.menu-label{font-size:.76rem;font-weight:750;line-height:1}.site-header.menu-open .menu-line:nth-child(1){transform:translateY(5.5px) rotate(45deg)}.site-header.menu-open .menu-line:nth-child(2){opacity:0}.site-header.menu-open .menu-line:nth-child(3){transform:translateY(-5.5px) rotate(-45deg)}
 .app-nav-inner{display:flex;align-items:center;gap:24px}.app-nav a{color:var(--ink);font-family:Arial,Helvetica,sans-serif;font-size:.86rem;font-weight:600;text-decoration:none;white-space:nowrap;transition:color 120ms ease,border-color 120ms ease,background-color 120ms ease}.app-nav a:hover,.app-nav a.is-active{color:var(--accent)}.header-cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:40px;padding:0 16px;border:1px solid rgba(214,161,58,.45);border-radius:999px;background:rgba(255,255,255,.25);color:var(--accent)!important;box-shadow:inset 0 0 0 1px rgba(214,161,58,.08)}.header-cta-icon{width:16px;height:16px;flex:0 0 auto}
 .shell{width:min(calc(100% - 48px),var(--content));margin:auto}.hero{position:relative;overflow:hidden;padding:64px 0 34px}.hero:after{content:"";position:absolute;right:max(18px,calc((100vw - 1030px)/2));top:38px;width:110px;height:55px;border-radius:110px 110px 0 0;background:rgba(214,161,58,.12);border-bottom:2px solid rgba(214,161,58,.4);pointer-events:none}.date,.kicker{margin:0;color:var(--green);font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}h1,h2,h3,.archive-title{font-family:Georgia,"Times New Roman",serif}h1{margin:7px 0 0;font-size:clamp(2.8rem,6vw,4rem);line-height:.98;letter-spacing:-.05em}h1 b{color:var(--accent)}.lead{max-width:650px;margin:18px 0 0;color:#313934;font-size:1rem}.rule{margin-top:28px;border-top:1px solid var(--line)}
-.section{padding:56px 0 62px}.section.alt{background:#f8f3e8}.heading{display:flex;justify-content:space-between;gap:16px;padding-bottom:10px;border-bottom:1px solid var(--green-dark)}.count{font-size:.67rem}.note{margin:13px 0 3px;color:var(--muted);font-size:.86rem}.article{position:relative;padding:22px 0;border-bottom:1px solid var(--line2)}.article-layout{display:flex;align-items:flex-start;gap:18px;min-width:0}.article-copy{flex:1 1 auto;min-width:0}.article-thumb{display:block;flex:0 0 112px;width:112px;height:82px;overflow:hidden;border-radius:10px;background:rgba(23,63,49,.06);text-decoration:none}.article-thumb img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .18s ease}.article-thumb:hover img{transform:scale(1.025)}.article h3{margin:0;max-width:660px;font-size:1.18rem;line-height:1.2;letter-spacing:-.025em}.article h3 a{text-decoration:none}.article h3 a:hover{text-decoration:underline;text-underline-offset:3px}.teaser{max-width:650px;margin:8px 0 0;color:#3f4742;font-size:.88rem;line-height:1.48}.meta{display:flex;flex-wrap:wrap;align-items:center;gap:5px;margin-top:12px;color:var(--green);font-size:.64rem;font-weight:700}.meta .sep{color:#919a94}.meta a{color:var(--green);text-decoration:underline;text-decoration-color:rgba(31,91,69,.28);text-underline-offset:2px}.arrow{position:absolute;top:22px;right:0;width:27px;height:27px;display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:50%;text-decoration:none;color:var(--green-dark);font-size:.77rem}.archive-list,.topic-list{margin-top:26px;border-top:1px solid var(--green-dark)}.archive-item,.topic-item{display:grid;grid-template-columns:150px minmax(0,1fr) 28px;gap:18px;align-items:center;padding:20px 0;border-bottom:1px solid var(--line2);text-decoration:none}.archive-date,.topic-count{color:var(--green);font-size:.72rem;font-weight:750}.archive-title,.topic-title{font-family:Georgia,"Times New Roman",serif;font-size:1.12rem;line-height:1.2}.archive-arrow,.topic-arrow{text-align:right;color:var(--green)}.small{color:var(--muted);font-size:.82rem;margin-top:25px}.empty{padding:20px 0;color:var(--muted);font-size:.86rem}footer{padding:0 0 34px;text-align:center;color:#8b928e;font-size:.72rem}
-@media(max-width:760px){.header-shell,.shell{width:min(calc(100% - 30px),100%)}.site-header{position:relative;z-index:30;padding:15px 0 9px}.header-row{position:relative;align-items:center;gap:12px}.brand{gap:10px;font-size:.98rem;line-height:1;flex:0 1 auto;min-width:0}.brand-sun{width:31px;height:31px}.mobile-menu-toggle{display:inline-flex;margin-left:auto;flex:0 0 auto}.app-nav{display:none;position:absolute;top:calc(100% + 10px);left:0;right:0;z-index:40;padding:7px;border:1px solid rgba(23,63,49,.14);border-radius:18px;background:rgba(247,245,236,.985);box-shadow:0 18px 44px rgba(23,63,49,.12);backdrop-filter:blur(10px)}.site-header.menu-open .app-nav{display:block}.app-nav-inner{flex-direction:column;align-items:stretch;gap:0}.app-nav a{display:flex;align-items:center;min-height:43px;padding:0 12px;border-radius:12px;font-size:.86rem}.app-nav a:hover,.app-nav a.is-active{background:rgba(214,161,58,.08)}.header-cta{justify-content:flex-start;min-height:43px;margin-top:4px;padding:0 12px;border-radius:12px;background:rgba(214,161,58,.08)}.hero{padding-top:48px}.hero:after{right:-40px;top:34px}.section{padding:50px 0 54px}.archive-item,.topic-item{grid-template-columns:90px minmax(0,1fr) 20px;gap:10px}.article-layout{gap:12px}.article-thumb{flex-basis:76px;width:76px;height:60px;border-radius:8px}.article h3{font-size:1.14rem}.teaser{display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:3}}
+.section{padding:56px 0 62px}.section.alt{background:#f8f3e8}.heading{display:flex;justify-content:space-between;gap:16px;padding-bottom:10px;border-bottom:1px solid var(--green-dark)}.count{font-size:.67rem}.note{margin:13px 0 3px;color:var(--muted);font-size:.86rem}.article{position:relative;padding:22px 0;border-bottom:1px solid var(--line2)}.article-layout{display:flex;align-items:flex-start;gap:22px;min-width:0}.article-copy{flex:1 1 auto;min-width:0}.article-thumb{display:block;flex:0 0 168px;width:168px;height:116px;overflow:hidden;border-radius:11px;background:rgba(23,63,49,.06);text-decoration:none}.article-thumb img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .18s ease}.article-thumb:hover img{transform:scale(1.025)}.article h3{margin:0;max-width:660px;font-size:1.22rem;line-height:1.18;letter-spacing:-.025em}.article h3 a{text-decoration:none}.article h3 a:hover{text-decoration:underline;text-underline-offset:3px}.teaser{max-width:650px;margin:8px 0 0;color:#3f4742;font-size:.88rem;line-height:1.48}.teaser-one-line{min-width:0;margin:8px 0 0;color:#3f4742;font-size:.88rem;line-height:1.4;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.meta{display:flex;flex-wrap:wrap;align-items:center;gap:5px;margin-top:10px;color:var(--green);font-size:.64rem;font-weight:700}.meta .sep{color:#919a94}.meta a{color:var(--green);text-decoration:underline;text-decoration-color:rgba(31,91,69,.28);text-underline-offset:2px}.arrow{position:absolute;top:22px;right:0;width:27px;height:27px;display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:50%;text-decoration:none;color:var(--green-dark);font-size:.77rem}.archive-list,.topic-list{margin-top:26px;border-top:1px solid var(--green-dark)}.archive-item,.topic-item{display:grid;grid-template-columns:150px minmax(0,1fr) 28px;gap:18px;align-items:center;padding:20px 0;border-bottom:1px solid var(--line2);text-decoration:none}.archive-date,.topic-count{color:var(--green);font-size:.72rem;font-weight:750}.archive-title,.topic-title{font-family:Georgia,"Times New Roman",serif;font-size:1.12rem;line-height:1.2}.archive-arrow,.topic-arrow{text-align:right;color:var(--green)}.small{color:var(--muted);font-size:.82rem;margin-top:25px}.empty{padding:20px 0;color:var(--muted);font-size:.86rem}footer{padding:0 0 34px;text-align:center;color:#8b928e;font-size:.72rem}
+@media(max-width:760px){.header-shell,.shell{width:min(calc(100% - 30px),100%)}.site-header{position:relative;z-index:30;padding:15px 0 9px}.header-row{position:relative;align-items:center;gap:12px}.brand{gap:10px;font-size:.98rem;line-height:1;flex:0 1 auto;min-width:0}.brand-sun{width:31px;height:31px}.mobile-menu-toggle{display:inline-flex;margin-left:auto;flex:0 0 auto}.app-nav{display:none;position:absolute;top:calc(100% + 10px);left:0;right:0;z-index:40;padding:7px;border:1px solid rgba(23,63,49,.14);border-radius:18px;background:rgba(247,245,236,.985);box-shadow:0 18px 44px rgba(23,63,49,.12);backdrop-filter:blur(10px)}.site-header.menu-open .app-nav{display:block}.app-nav-inner{flex-direction:column;align-items:stretch;gap:0}.app-nav a{display:flex;align-items:center;min-height:43px;padding:0 12px;border-radius:12px;font-size:.86rem}.app-nav a:hover,.app-nav a.is-active{background:rgba(214,161,58,.08)}.header-cta{justify-content:flex-start;min-height:43px;margin-top:4px;padding:0 12px;border-radius:12px;background:rgba(214,161,58,.08)}.hero{padding-top:48px}.hero:after{right:-40px;top:34px}.section{padding:50px 0 54px}.archive-item,.topic-item{grid-template-columns:90px minmax(0,1fr) 20px;gap:10px}.article-layout{gap:13px}.article-thumb{flex-basis:112px;width:112px;height:84px;border-radius:9px}.article h3{font-size:1.14rem}.teaser{display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:3}.teaser-one-line{display:none}}
 
 .topic-intro-section{padding:34px 0 10px}
 .topic-intro{max-width:720px;font-size:1rem;line-height:1.7;color:#313934}
@@ -117,7 +117,7 @@
         <div class="article-copy">
           <p class="date" style="margin:0 0 7px;text-transform:none;letter-spacing:0;font-weight:700">1 oktober 2026</p>
           <h3><a href="https://positief-nieuws.nl/artikelen/2026-10-01/wereldwijde-analyse-herstel-grondwater-na-droogte/"  data-article-click="true" data-article-title="Wereldwijde analyse laat zien waar grondwater na droogte goed herstelt" data-article-source="Universiteit Utrecht via EurekAlert" data-article-category="Natuur &amp; klimaat" data-article-section="nl" data-article-edition="2026-10-01">Wereldwijde analyse laat zien waar grondwater na droogte goed herstelt</a></h3>
-          <p class="teaser">Onderzoekers van Universiteit Utrecht ontwikkelden met een wereldwijd grondwatermodel een methode om te zien welke gebieden veerkrachtig zijn en waar langdurige droogte grotere risico&#x27;s geeft.</p>
+          <p class="teaser-one-line">Onderzoekers van Universiteit Utrecht ontwikkelden met een wereldwijd grondwatermodel een methode om te zien welke gebieden veerkrachtig zijn en waar langdurige droogte grotere risico&#x27;s geeft.</p>
           <div class="meta"><a href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><span class="sep">·</span><span>Universiteit Utrecht via EurekAlert</span></div>
         </div>
         <a class="article-thumb" href="https://positief-nieuws.nl/artikelen/2026-10-01/wereldwijde-analyse-herstel-grondwater-na-droogte/"  aria-label="Lees Wereldwijde analyse laat zien waar grondwater na droogte goed herstelt" data-article-click="true" data-article-title="Wereldwijde analyse laat zien waar grondwater na droogte goed herstelt" data-article-source="Universiteit Utrecht via EurekAlert" data-article-category="Natuur &amp; klimaat" data-article-section="nl" data-article-edition="2026-10-01"><img src="/images/artikelen/2026-10-01/wereldwijde-analyse-herstel-grondwater-na-droogte.jpg" alt="Illustratief beeld van een droog landschap en water" loading="lazy" decoding="async"></a>
@@ -128,7 +128,7 @@
         <div class="article-copy">
           <p class="date" style="margin:0 0 7px;text-transform:none;letter-spacing:0;font-weight:700">28 september 2026</p>
           <h3><a href="https://positief-nieuws.nl/artikelen/2026-09-28/cameras-ai-vogelaanvaringen-windmolens-op-zee/"  data-article-click="true" data-article-title="Nieuwe cameramethode maakt vogelbewegingen rond windturbines op zee meetbaarder" data-article-source="Wageningen University &amp; Research" data-article-category="Natuur &amp; klimaat" data-article-section="nl" data-article-edition="2026-09-28">Nieuwe cameramethode maakt vogelbewegingen rond windturbines op zee meetbaarder</a></h3>
-          <p class="teaser">Een proef met thermische camera&#x27;s en AI laat zien dat vogelbewegingen en mogelijke botsingen bij een offshore turbine dag en nacht kunnen worden gevolgd.</p>
+          <p class="teaser-one-line">Een proef met thermische camera&#x27;s en AI laat zien dat vogelbewegingen en mogelijke botsingen bij een offshore turbine dag en nacht kunnen worden gevolgd.</p>
           <div class="meta"><a href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><span class="sep">·</span><span>Wageningen University &amp; Research</span></div>
         </div>
         <a class="article-thumb" href="https://positief-nieuws.nl/artikelen/2026-09-28/cameras-ai-vogelaanvaringen-windmolens-op-zee/"  aria-label="Lees Nieuwe cameramethode maakt vogelbewegingen rond windturbines op zee meetbaarder" data-article-click="true" data-article-title="Nieuwe cameramethode maakt vogelbewegingen rond windturbines op zee meetbaarder" data-article-source="Wageningen University &amp; Research" data-article-category="Natuur &amp; klimaat" data-article-section="nl" data-article-edition="2026-09-28"><img src="/images/artikelen/2026-09-28/cameras-ai-vogelaanvaringen-windmolens-op-zee.jpg" alt="Illustratief beeld van windturbines op zee en vogels" loading="lazy" decoding="async"></a>
@@ -139,7 +139,7 @@
         <div class="article-copy">
           <p class="date" style="margin:0 0 7px;text-transform:none;letter-spacing:0;font-weight:700">17 september 2026</p>
           <h3><a href="https://www.tno.nl/nl/newsroom/insights/2026/09/slimme-radar-beschermt-vleermuizen/" target="_blank" rel="noopener noreferrer" data-article-click="true" data-article-title="Slimme radar moet vleermuizen beter beschermen bij windturbines" data-article-source="TNO" data-article-category="Natuur &amp; klimaat" data-article-section="nl" data-article-edition="2026-09-17">Slimme radar moet vleermuizen beter beschermen bij windturbines</a></h3>
-          <p class="teaser">TNO, Dopplium en RWE testen bij Eemshaven een radarsysteem dat vleermuizen in real time volgt. Daardoor zouden turbines alleen hoeven stil te staan wanneer er daadwerkelijk risico is voor vleermuizen.</p>
+          <p class="teaser-one-line">TNO, Dopplium en RWE testen bij Eemshaven een radarsysteem dat vleermuizen in real time volgt. Daardoor zouden turbines alleen hoeven stil te staan wanneer er daadwerkelijk risico is voor vleermuizen.</p>
           <div class="meta"><a href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><span class="sep">·</span><span>TNO</span></div>
         </div>
         
@@ -150,7 +150,7 @@
         <div class="article-copy">
           <p class="date" style="margin:0 0 7px;text-transform:none;letter-spacing:0;font-weight:700">14 september 2026</p>
           <h3><a href="https://www.natuurmonumenten.nl/natuurgebieden/ankeveense-plassen/nieuws/hollands-ankeveen-broedplaats-voor-zeldzame-witwangstern" target="_blank" rel="noopener noreferrer" data-article-click="true" data-article-title="Natuurherstel maakt Ankeveense Plassen broedplaats voor zeldzame witwangstern" data-article-source="Natuurmonumenten" data-article-category="Natuur &amp; klimaat" data-article-section="nl" data-article-edition="2026-09-14">Natuurherstel maakt Ankeveense Plassen broedplaats voor zeldzame witwangstern</a></h3>
-          <p class="teaser">Natuurherstel in de Ankeveense Plassen levert opvallend resultaat op. Tien paren van de zeldzame witwangstern kwamen er tot broeden en negen paren brachten minimaal één jong groot.</p>
+          <p class="teaser-one-line">Natuurherstel in de Ankeveense Plassen levert opvallend resultaat op. Tien paren van de zeldzame witwangstern kwamen er tot broeden en negen paren brachten minimaal één jong groot.</p>
           <div class="meta"><a href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><span class="sep">·</span><span>Natuurmonumenten</span></div>
         </div>
         
@@ -161,7 +161,7 @@
         <div class="article-copy">
           <p class="date" style="margin:0 0 7px;text-transform:none;letter-spacing:0;font-weight:700">10 september 2026</p>
           <h3><a href="https://news.google.com/rss/articles/CBMi0gFBVV95cUxQY2NQT0xkeHhFajVCVmNxRExGU3JKRzQtUmc1d1VJdHZXWlpvR1dZLVp0SnFLbDBWMVFSYllzTGJZNzdJNnZ2WU5JQ0pKOWZLb09hR0hBUEgzQk5qbHh6el9nc3JnWTA3U2x6UW5kckNuMTJtVTdfZEZ1eVNYMGNPYU8xekdhM1U1OHN4aDlpRXIySXhsTXg0RkR6QUZCeTlNcFZ2dEpmUWxXRE8zWmF5dV9oSW9rNjJ0ZWFDMkEzWk5Fb0oxUDVEZGc0dE5nczJnRnc?oc=5" target="_blank" rel="noopener noreferrer" data-article-click="true" data-article-title="Vrijwilligers helpen de stranden van Ameland schoon te houden" data-article-source="Omrop Fryslân" data-article-category="Natuur &amp; klimaat" data-article-section="nl" data-article-edition="2026-09-10">Vrijwilligers helpen de stranden van Ameland schoon te houden</a></h3>
-          <p class="teaser">De stranden van Ameland behoren tot de schoonste van Fryslân. Vrijwilligers trekken er geregeld op uit om aangespoeld afval op te ruimen en het Waddeneiland netjes te houden.</p>
+          <p class="teaser-one-line">De stranden van Ameland behoren tot de schoonste van Fryslân. Vrijwilligers trekken er geregeld op uit om aangespoeld afval op te ruimen en het Waddeneiland netjes te houden.</p>
           <div class="meta"><a href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><span class="sep">·</span><span>Omrop Fryslân</span></div>
         </div>
         
@@ -172,7 +172,7 @@
         <div class="article-copy">
           <p class="date" style="margin:0 0 7px;text-transform:none;letter-spacing:0;font-weight:700">7 september 2026</p>
           <h3><a href="https://waddenomroep.nl/terschelling/cranberryoogst-lijkt-ondanks-droogte-goed-uit-te-pakken-het-is-net-op-tijd-gaan-regenen/" target="_blank" rel="noopener noreferrer" data-article-click="true" data-article-title="Regen komt op tijd: Terschellinger cranberryoogst lijkt gered" data-article-source="Waddenomroep" data-article-category="Natuur &amp; klimaat" data-article-section="nl" data-article-edition="2026-09-07">Regen komt op tijd: Terschellinger cranberryoogst lijkt gered</a></h3>
-          <p class="teaser">Na maanden van droogte viel de regen net op tijd om veel schade te voorkomen. De eerste twaalf ton is inmiddels binnen en Terschellinger Cranberries hoopt dit jaar rond de 150 ton te oogsten.</p>
+          <p class="teaser-one-line">Na maanden van droogte viel de regen net op tijd om veel schade te voorkomen. De eerste twaalf ton is inmiddels binnen en Terschellinger Cranberries hoopt dit jaar rond de 150 ton te oogsten.</p>
           <div class="meta"><a href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><span class="sep">·</span><span>Waddenomroep</span></div>
         </div>
         
@@ -183,7 +183,7 @@
         <div class="article-copy">
           <p class="date" style="margin:0 0 7px;text-transform:none;letter-spacing:0;font-weight:700">4 september 2026</p>
           <h3><a href="https://www.staatsbosbeheer.nl/wat-we-doen/nieuws/2026/09/ecotunnel-kop-van-schouwen" target="_blank" rel="noopener noreferrer" data-article-click="true" data-article-title="Ecotunnel op Schouwen blijkt volop door dieren te worden gebruikt" data-article-source="Staatsbosbeheer" data-article-category="Natuur &amp; klimaat" data-article-section="nl" data-article-edition="2026-09-04">Ecotunnel op Schouwen blijkt volop door dieren te worden gebruikt</a></h3>
-          <p class="teaser">De ecotunnel onder de Kloosterweg verbindt twee natuurgebieden en wordt inmiddels dagelijks gebruikt door Exmoorpony’s en allerlei kleinere dieren. De veilige oversteek vermindert aanrijdingen en helpt leefgebieden met elkaar te verbinden.</p>
+          <p class="teaser-one-line">De ecotunnel onder de Kloosterweg verbindt twee natuurgebieden en wordt inmiddels dagelijks gebruikt door Exmoorpony’s en allerlei kleinere dieren. De veilige oversteek vermindert aanrijdingen en helpt leefgebieden met elkaar te verbinden.</p>
           <div class="meta"><a href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><span class="sep">·</span><span>Staatsbosbeheer</span><span class="sep">·</span><span>4 min lezen</span></div>
         </div>
         
@@ -194,7 +194,7 @@
         <div class="article-copy">
           <p class="date" style="margin:0 0 7px;text-transform:none;letter-spacing:0;font-weight:700">4 september 2026</p>
           <h3><a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxPODVDazhRakV1dThJX0x5RmJDeWhNWk8xUUFCTV9ycThNNXozMlZ3Sk5sdVZnS0JobjVhY05NeGkyVHd1Mlo3dnFDNHk1MXlUWU0xRU9BQlJqXzNiWDJPcGt3QmQwMnNoXzJjRlBLcWlYd1BvQWJpM3pZVzQzeGhidEp5blhfbVF3VF95LUdiX2kxNTJRZTA4T1FGSEdjY2pWZmoyVw?oc=5" target="_blank" rel="noopener noreferrer" data-article-click="true" data-article-title="CO2-uitstoot van wegverkeer daalt voor het eerst sinds de coronapandemie" data-article-source="CBS" data-article-category="Natuur &amp; klimaat" data-article-section="nl" data-article-edition="2026-09-04">CO2-uitstoot van wegverkeer daalt voor het eerst sinds de coronapandemie</a></h3>
-          <p class="teaser">Nieuwe CBS-cijfers laten zien dat de CO2-uitstoot van het Nederlandse wegverkeer voor het eerst sinds de coronapandemie is gedaald. Daarmee is er na de uitzonderlijke coronajaren opnieuw een jaar met minder uitstoot door het wegverkeer.</p>
+          <p class="teaser-one-line">Nieuwe CBS-cijfers laten zien dat de CO2-uitstoot van het Nederlandse wegverkeer voor het eerst sinds de coronapandemie is gedaald. Daarmee is er na de uitzonderlijke coronajaren opnieuw een jaar met minder uitstoot door het wegverkeer.</p>
           <div class="meta"><a href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><span class="sep">·</span><span>CBS</span></div>
         </div>
         
@@ -205,7 +205,7 @@
         <div class="article-copy">
           <p class="date" style="margin:0 0 7px;text-transform:none;letter-spacing:0;font-weight:700">4 september 2026</p>
           <h3><a href="https://www.wur.nl/en/activity/solving-urban-plastic-soup" target="_blank" rel="noopener noreferrer" data-article-click="true" data-article-title="Onderzoek brengt plastic hotspots in Amsterdam scherper in kaart" data-article-source="Wageningen University &amp; Research" data-article-category="Natuur &amp; klimaat" data-article-section="nl" data-article-edition="2026-09-04">Onderzoek brengt plastic hotspots in Amsterdam scherper in kaart</a></h3>
-          <p class="teaser">Wagenings onderzoek naar stedelijk plastic afval combineert frequente metingen met een methode om hotspots en de meest voorkomende soorten afval te herkennen. Daardoor kunnen maatregelen tegen plastic in grachten en waterwegen gerichter worden ingezet.</p>
+          <p class="teaser-one-line">Wagenings onderzoek naar stedelijk plastic afval combineert frequente metingen met een methode om hotspots en de meest voorkomende soorten afval te herkennen. Daardoor kunnen maatregelen tegen plastic in grachten en waterwegen gerichter worden ingezet.</p>
           <div class="meta"><a href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><span class="sep">·</span><span>Wageningen University &amp; Research</span></div>
         </div>
         
@@ -216,7 +216,7 @@
         <div class="article-copy">
           <p class="date" style="margin:0 0 7px;text-transform:none;letter-spacing:0;font-weight:700">2 september 2026</p>
           <h3><a href="https://www.ru.nl/medewerkers/nieuws/europese-subsidie-voor-onderzoek-naar-natuurherstel" target="_blank" rel="noopener noreferrer" data-article-click="true" data-article-title="Zes miljoen euro voor slimmer natuurherstel in Europa" data-article-source="Radboud Universiteit" data-article-category="Natuur &amp; klimaat" data-article-section="nl" data-article-edition="2026-09-02">Zes miljoen euro voor slimmer natuurherstel in Europa</a></h3>
-          <p class="teaser">Radboud Universiteit leidt NatureRestoreR, een Europees onderzoeksproject dat modellen en hulpmiddelen ontwikkelt om natuurherstel gerichter en effectiever te plannen.</p>
+          <p class="teaser-one-line">Radboud Universiteit leidt NatureRestoreR, een Europees onderzoeksproject dat modellen en hulpmiddelen ontwikkelt om natuurherstel gerichter en effectiever te plannen.</p>
           <div class="meta"><a href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><span class="sep">·</span><span>Radboud Universiteit</span></div>
         </div>
         
@@ -227,7 +227,7 @@
         <div class="article-copy">
           <p class="date" style="margin:0 0 7px;text-transform:none;letter-spacing:0;font-weight:700">2 september 2026</p>
           <h3><a href="https://www.staatsbosbeheer.nl/wat-we-doen/nieuws/2026/08/natuurherstel-vatrop-start-medio-september" target="_blank" rel="noopener noreferrer" data-article-click="true" data-article-title="Natuurherstel bij Vatrop geeft wadvogels weer rust en ruimte" data-article-source="Staatsbosbeheer" data-article-category="Natuur &amp; klimaat" data-article-section="nl" data-article-edition="2026-09-02">Natuurherstel bij Vatrop geeft wadvogels weer rust en ruimte</a></h3>
-          <p class="teaser">Staatsbosbeheer herstelt vanaf half september de kleiput en het broedeiland bij Vatrop. De verbinding met de Waddenzee wordt verbeterd en wadvogels krijgen er weer veiligere broed- en rustplekken.</p>
+          <p class="teaser-one-line">Staatsbosbeheer herstelt vanaf half september de kleiput en het broedeiland bij Vatrop. De verbinding met de Waddenzee wordt verbeterd en wadvogels krijgen er weer veiligere broed- en rustplekken.</p>
           <div class="meta"><a href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><span class="sep">·</span><span>Staatsbosbeheer</span><span class="sep">·</span><span>3 min lezen</span></div>
         </div>
         
@@ -238,7 +238,7 @@
         <div class="article-copy">
           <p class="date" style="margin:0 0 7px;text-transform:none;letter-spacing:0;font-weight:700">31 augustus 2026</p>
           <h3><a href="https://awd.waternet.nl/nieuws/2026/aanleg-natuurvriendelijke-oevers/" target="_blank" rel="noopener noreferrer" data-article-click="true" data-article-title="Natuurvriendelijke oevers geven planten en dieren meer ruimte" data-article-source="Waternet" data-article-category="Natuur &amp; klimaat" data-article-section="nl" data-article-edition="2026-08-31">Natuurvriendelijke oevers geven planten en dieren meer ruimte</a></h3>
-          <p class="teaser">In de Amsterdamse Waterleidingduinen begint vandaag de aanleg van nieuwe natuurvriendelijke oevers. Ze geven bijzondere planten en beschermde dieren meer leefruimte, terwijl tegelijk de drinkwatercapaciteit wordt uitgebreid.</p>
+          <p class="teaser-one-line">In de Amsterdamse Waterleidingduinen begint vandaag de aanleg van nieuwe natuurvriendelijke oevers. Ze geven bijzondere planten en beschermde dieren meer leefruimte, terwijl tegelijk de drinkwatercapaciteit wordt uitgebreid.</p>
           <div class="meta"><a href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><span class="sep">·</span><span>Waternet</span></div>
         </div>
         
@@ -249,7 +249,7 @@
         <div class="article-copy">
           <p class="date" style="margin:0 0 7px;text-transform:none;letter-spacing:0;font-weight:700">28 augustus 2026</p>
           <h3><a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxQNDF1NWFsZEpuUnJldlZTRGh2ZkFhemxOeEtvZnFJbmh3eTJpT0F5czc1MkxfYzRtbl9GbjRjMFdtZm8tbHhRM1hSYjJjeTB0TGF2dWhnMHpZZ25jcUZDdk05cThaQU1jaVh6dWhGT01WTzdlQmxKTWVSVmIwMC11ZmhqWWtrN282UVdJeVV0bk5BbTdpemRHcXVGWjJ6eGxoUmtNeXowOXZVV2xBTThueTRPbHJ3aTRoY3c?oc=5" target="_blank" rel="noopener noreferrer" data-article-click="true" data-article-title="Dolfijnen gered dankzij bijzondere reddingsactie" data-article-source="RTL Nieuws" data-article-category="Natuur &amp; klimaat" data-article-section="nl" data-article-edition="2026-08-28">Dolfijnen gered dankzij bijzondere reddingsactie</a></h3>
-          <p class="teaser">Een bijzondere reddingsactie heeft voorkomen dat dolfijnen moesten worden ingeslapen.</p>
+          <p class="teaser-one-line">Een bijzondere reddingsactie heeft voorkomen dat dolfijnen moesten worden ingeslapen.</p>
           <div class="meta"><a href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><span class="sep">·</span><span>RTL Nieuws</span></div>
         </div>
         
@@ -260,7 +260,7 @@
         <div class="article-copy">
           <p class="date" style="margin:0 0 7px;text-transform:none;letter-spacing:0;font-weight:700">26 augustus 2026</p>
           <h3><a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxOUEVYQ0I3M0c3dGtCNEhhblQzN3N6ZzBEU3R0b3ZLZmtsekEtMld6X2s5azc2aTNvalM1SEhWTDJNdGxOcDMtME5MT0FqTWNnRkhiOERMWGVtZ3RyVVpOR0I2aTkxdWRYYWp4SGI0a3FPYnI1WlAtdzhUQksxUk5WRHVaZE1VbXJkWHNPTENyYng0ZU15Rm5kdDR1Sk1rQXYyWnZzWnpha1NjRUZTM1REN2RkdEZCdw?oc=5" target="_blank" rel="noopener noreferrer" data-article-click="true" data-article-title="Internationale treinverbindingen vanuit Amsterdam groeien verder" data-article-source="NH Nieuws" data-article-category="Natuur &amp; klimaat" data-article-section="nl" data-article-edition="2026-08-26">Internationale treinverbindingen vanuit Amsterdam groeien verder</a></h3>
-          <p class="teaser">Van Kopenhagen tot Parijs: het internationale spoor vanuit Amsterdam breidt zich verder uit.</p>
+          <p class="teaser-one-line">Van Kopenhagen tot Parijs: het internationale spoor vanuit Amsterdam breidt zich verder uit.</p>
           <div class="meta"><a href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><span class="sep">·</span><span>NH Nieuws</span></div>
         </div>
         
@@ -270,7 +270,7 @@
         <div class="article-copy">
           <p class="date" style="margin:0 0 7px;text-transform:none;letter-spacing:0;font-weight:700">1 oktober 2026</p>
           <h3><a href="https://positief-nieuws.nl/artikelen/2026-10-01/summer-isles-zeeherstel-na-baggerverbod/"  data-article-click="true" data-article-title="Tien jaar zonder zware bodembaggering brengt Schotse zeebodem weer tot leven" data-article-source="The Guardian" data-article-category="Natuur &amp; klimaat" data-article-section="int" data-article-edition="2026-10-01">Tien jaar zonder zware bodembaggering brengt Schotse zeebodem weer tot leven</a></h3>
-          <p class="teaser">In een beschermd zeegebied bij de Summer Isles melden onderzoekers, vissers en bewoners herstel van kwetsbare maerlbedden, schelpdieren en andere zeedieren.</p>
+          <p class="teaser-one-line">In een beschermd zeegebied bij de Summer Isles melden onderzoekers, vissers en bewoners herstel van kwetsbare maerlbedden, schelpdieren en andere zeedieren.</p>
           <div class="meta"><a href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><span class="sep">·</span><span>The Guardian</span><span class="sep">·</span><span>6 min lezen</span></div>
         </div>
         <a class="article-thumb" href="https://positief-nieuws.nl/artikelen/2026-10-01/summer-isles-zeeherstel-na-baggerverbod/"  aria-label="Lees Tien jaar zonder zware bodembaggering brengt Schotse zeebodem weer tot leven" data-article-click="true" data-article-title="Tien jaar zonder zware bodembaggering brengt Schotse zeebodem weer tot leven" data-article-source="The Guardian" data-article-category="Natuur &amp; klimaat" data-article-section="int" data-article-edition="2026-10-01"><img src="/images/artikelen/2026-10-01/summer-isles-zeeherstel-na-baggerverbod.jpg" alt="Illustratief beeld van de Schotse kust en zee" loading="lazy" decoding="async"></a>
@@ -281,7 +281,7 @@
         <div class="article-copy">
           <p class="date" style="margin:0 0 7px;text-transform:none;letter-spacing:0;font-weight:700">1 oktober 2026</p>
           <h3><a href="https://positief-nieuws.nl/artikelen/2026-10-01/geschilderde-ogen-vee-roofdieren-zimbabwe/"  data-article-click="true" data-article-title="Geschilderde ogen op vee lijken roofdieren in Zimbabwe af te schrikken" data-article-source="Mongabay" data-article-category="Natuur &amp; klimaat" data-article-section="int" data-article-edition="2026-10-01">Geschilderde ogen op vee lijken roofdieren in Zimbabwe af te schrikken</a></h3>
-          <p class="teaser">Boeren experimenteren met opvallende ogen op de achterkant van koeien en ander vee. De eenvoudige methode is bedoeld om aanvallen door roofdieren te verminderen zonder dieren te doden.</p>
+          <p class="teaser-one-line">Boeren experimenteren met opvallende ogen op de achterkant van koeien en ander vee. De eenvoudige methode is bedoeld om aanvallen door roofdieren te verminderen zonder dieren te doden.</p>
           <div class="meta"><a href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><span class="sep">·</span><span>Mongabay</span></div>
         </div>
         <a class="article-thumb" href="https://positief-nieuws.nl/artikelen/2026-10-01/geschilderde-ogen-vee-roofdieren-zimbabwe/"  aria-label="Lees Geschilderde ogen op vee lijken roofdieren in Zimbabwe af te schrikken" data-article-click="true" data-article-title="Geschilderde ogen op vee lijken roofdieren in Zimbabwe af te schrikken" data-article-source="Mongabay" data-article-category="Natuur &amp; klimaat" data-article-section="int" data-article-edition="2026-10-01"><img src="/images/artikelen/2026-10-01/geschilderde-ogen-vee-roofdieren-zimbabwe.jpg" alt="Illustratief beeld van runderen in een Afrikaans landschap" loading="lazy" decoding="async"></a>
@@ -292,7 +292,7 @@
         <div class="article-copy">
           <p class="date" style="margin:0 0 7px;text-transform:none;letter-spacing:0;font-weight:700">28 september 2026</p>
           <h3><a href="https://positief-nieuws.nl/artikelen/2026-09-28/twintig-zwarte-neushoorns-verhuizen-botswana/"  data-article-click="true" data-article-title="Twintig zwarte neushoorns krijgen nieuw leefgebied in Botswana" data-article-source="WWF Nederland" data-article-category="Natuur &amp; klimaat" data-article-section="int" data-article-edition="2026-09-28">Twintig zwarte neushoorns krijgen nieuw leefgebied in Botswana</a></h3>
-          <p class="teaser">Een grote verplaatsingsoperatie brengt zwarte neushoorns vanuit Zuid-Afrika naar een reservaat in Botswana, met als doel een nieuwe populatie op te bouwen.</p>
+          <p class="teaser-one-line">Een grote verplaatsingsoperatie brengt zwarte neushoorns vanuit Zuid-Afrika naar een reservaat in Botswana, met als doel een nieuwe populatie op te bouwen.</p>
           <div class="meta"><a href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><span class="sep">·</span><span>WWF Nederland</span></div>
         </div>
         <a class="article-thumb" href="https://positief-nieuws.nl/artikelen/2026-09-28/twintig-zwarte-neushoorns-verhuizen-botswana/"  aria-label="Lees Twintig zwarte neushoorns krijgen nieuw leefgebied in Botswana" data-article-click="true" data-article-title="Twintig zwarte neushoorns krijgen nieuw leefgebied in Botswana" data-article-source="WWF Nederland" data-article-category="Natuur &amp; klimaat" data-article-section="int" data-article-edition="2026-09-28"><img src="/images/artikelen/2026-09-28/twintig-zwarte-neushoorns-verhuizen-botswana.jpg" alt="Illustratief beeld van een zwarte neushoorn in Afrika" loading="lazy" decoding="async"></a>
@@ -303,7 +303,7 @@
         <div class="article-copy">
           <p class="date" style="margin:0 0 7px;text-transform:none;letter-spacing:0;font-weight:700">28 september 2026</p>
           <h3><a href="https://positief-nieuws.nl/artikelen/2026-09-28/indusdolfijn-400-kilometer-beschermd-leefgebied/"  data-article-click="true" data-article-title="Nieuw reservaat vergroot beschermde zone voor Indusdolfijn" data-article-source="Mongabay" data-article-category="Natuur &amp; klimaat" data-article-section="int" data-article-edition="2026-09-28">Nieuw reservaat vergroot beschermde zone voor Indusdolfijn</a></h3>
-          <p class="teaser">Pakistan heeft in Punjab een nieuw rivierreservaat aangewezen. Samen met bestaand beschermd gebied ontstaat ongeveer 400 kilometer juridisch beschermde rivier.</p>
+          <p class="teaser-one-line">Pakistan heeft in Punjab een nieuw rivierreservaat aangewezen. Samen met bestaand beschermd gebied ontstaat ongeveer 400 kilometer juridisch beschermde rivier.</p>
           <div class="meta"><a href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><span class="sep">·</span><span>Mongabay</span></div>
         </div>
         <a class="article-thumb" href="https://positief-nieuws.nl/artikelen/2026-09-28/indusdolfijn-400-kilometer-beschermd-leefgebied/"  aria-label="Lees Nieuw reservaat vergroot beschermde zone voor Indusdolfijn" data-article-click="true" data-article-title="Nieuw reservaat vergroot beschermde zone voor Indusdolfijn" data-article-source="Mongabay" data-article-category="Natuur &amp; klimaat" data-article-section="int" data-article-edition="2026-09-28"><img src="/images/artikelen/2026-09-28/indusdolfijn-400-kilometer-beschermd-leefgebied.jpg" alt="Illustratief beeld van een rivierdolfijn" loading="lazy" decoding="async"></a>
@@ -314,7 +314,7 @@
         <div class="article-copy">
           <p class="date" style="margin:0 0 7px;text-transform:none;letter-spacing:0;font-weight:700">24 september 2026</p>
           <h3><a href="https://phys.org/news/2026-09-aerial-reveal-successful-woodland-expansion.html" target="_blank" rel="noopener noreferrer" data-article-click="true" data-article-title="Miljoenen jonge bomen laten grootschalig natuurherstel in Schotland zien" data-article-source="Phys.org" data-article-category="Natuur &amp; klimaat" data-article-section="int" data-article-edition="2026-09-24">Miljoenen jonge bomen laten grootschalig natuurherstel in Schotland zien</a></h3>
-          <p class="teaser">Nieuwe 3D-luchtmetingen in de Cairngorms brachten meer dan zes miljoen bomen in kaart. Ruim 2,6 miljoen daarvan zijn jonge bomen en op meer dan 5.200 hectare voorheen open landschap ontstaat inmiddels nieuw bos, grotendeels via natuurlijke verjonging.</p>
+          <p class="teaser-one-line">Nieuwe 3D-luchtmetingen in de Cairngorms brachten meer dan zes miljoen bomen in kaart. Ruim 2,6 miljoen daarvan zijn jonge bomen en op meer dan 5.200 hectare voorheen open landschap ontstaat inmiddels nieuw bos, grotendeels via natuurlijke verjonging.</p>
           <div class="meta"><a href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><span class="sep">·</span><span>Phys.org</span><span class="sep">·</span><span>5 min lezen</span></div>
         </div>
         
@@ -325,7 +325,7 @@
         <div class="article-copy">
           <p class="date" style="margin:0 0 7px;text-transform:none;letter-spacing:0;font-weight:700">24 september 2026</p>
           <h3><a href="https://www.undp.org/iran/news/iran-surpasses-montreal-protocol-targets-through-strategic-partnerships-and-innovation" target="_blank" rel="noopener noreferrer" data-article-click="true" data-article-title="Iran overtreft doelen voor afbouw van ozonafbrekende stoffen" data-article-source="UNDP" data-article-category="Natuur &amp; klimaat" data-article-section="int" data-article-edition="2026-09-24">Iran overtreft doelen voor afbouw van ozonafbrekende stoffen</a></h3>
-          <p class="teaser">Volgens UNDP heeft Iran zijn verplichtingen onder het Montreal Protocol overtroffen bij het terugdringen van HCFC&#x27;s. Meer dan duizend technici zijn getraind en bedrijven kregen schonere technologie voor koeling, airconditioning en schuimproductie.</p>
+          <p class="teaser-one-line">Volgens UNDP heeft Iran zijn verplichtingen onder het Montreal Protocol overtroffen bij het terugdringen van HCFC&#x27;s. Meer dan duizend technici zijn getraind en bedrijven kregen schonere technologie voor koeling, airconditioning en schuimproductie.</p>
           <div class="meta"><a href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><span class="sep">·</span><span>UNDP</span></div>
         </div>
         
@@ -336,7 +336,7 @@
         <div class="article-copy">
           <p class="date" style="margin:0 0 7px;text-transform:none;letter-spacing:0;font-weight:700">21 september 2026</p>
           <h3><a href="https://www.smithsonianmag.com/smart-news/new-zealand-welcomes-a-record-90-kakapo-chicks-helping-the-worlds-chunkiest-parrot-species-rebound-from-the-brink-of-extinction-180989511/" target="_blank" rel="noopener noreferrer" data-article-click="true" data-article-title="Recordaantal van 90 kākāpō-kuikens geeft bedreigde papegaai flinke impuls" data-article-source="Smithsonian Magazine" data-article-category="Natuur &amp; klimaat" data-article-section="int" data-article-edition="2026-09-21">Recordaantal van 90 kākāpō-kuikens geeft bedreigde papegaai flinke impuls</a></h3>
-          <p class="teaser">In Nieuw-Zeeland zijn dit jaar 90 kākāpō-kuikens groot genoeg geworden om als zelfstandig te tellen: een record. De totale populatie van de ernstig bedreigde, niet-vliegende papegaai is daarmee gegroeid tot 325 dieren, tegenover 51 in 1995.</p>
+          <p class="teaser-one-line">In Nieuw-Zeeland zijn dit jaar 90 kākāpō-kuikens groot genoeg geworden om als zelfstandig te tellen: een record. De totale populatie van de ernstig bedreigde, niet-vliegende papegaai is daarmee gegroeid tot 325 dieren, tegenover 51 in 1995.</p>
           <div class="meta"><a href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><span class="sep">·</span><span>Smithsonian Magazine</span></div>
         </div>
         
@@ -347,7 +347,7 @@
         <div class="article-copy">
           <p class="date" style="margin:0 0 7px;text-transform:none;letter-spacing:0;font-weight:700">21 september 2026</p>
           <h3><a href="https://www.theguardian.com/environment/2026/sep/18/improved-air-quality-pollution-mental-development-toddlers-new-york-study" target="_blank" rel="noopener noreferrer" data-article-click="true" data-article-title="Schonere lucht in New York hangt samen met betere ontwikkeling bij peuters" data-article-source="The Guardian" data-article-category="Natuur &amp; klimaat" data-article-section="int" data-article-edition="2026-09-21">Schonere lucht in New York hangt samen met betere ontwikkeling bij peuters</a></h3>
-          <p class="teaser">Een langlopend onderzoek onder ruim 1.100 kinderen in New York zag dat verbeteringen in de luchtkwaliteit samengingen met betere scores op onder meer geheugen, waarneming en communicatie. De onderzoekers volgden gezinnen over een periode van twintig jaar.</p>
+          <p class="teaser-one-line">Een langlopend onderzoek onder ruim 1.100 kinderen in New York zag dat verbeteringen in de luchtkwaliteit samengingen met betere scores op onder meer geheugen, waarneming en communicatie. De onderzoekers volgden gezinnen over een periode van twintig jaar.</p>
           <div class="meta"><a href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><span class="sep">·</span><span>The Guardian</span></div>
         </div>
         
@@ -358,7 +358,7 @@
         <div class="article-copy">
           <p class="date" style="margin:0 0 7px;text-transform:none;letter-spacing:0;font-weight:700">17 september 2026</p>
           <h3><a href="https://www.bbc.co.uk/news/articles/cx3051l0r636o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" data-article-click="true" data-article-title="Geredde maanberen beginnen nieuw leven in Brits natuurpark" data-article-source="BBC" data-article-category="Natuur &amp; klimaat" data-article-section="int" data-article-edition="2026-09-17">Geredde maanberen beginnen nieuw leven in Brits natuurpark</a></h3>
-          <p class="teaser">Vijf maanberen die jarenlang op een galberenboerderij in Zuid-Korea leefden, zijn aangekomen bij hun nieuwe verblijf in Suffolk. Daar krijgen ze ruimte om te klimmen, zwemmen en rusten.</p>
+          <p class="teaser-one-line">Vijf maanberen die jarenlang op een galberenboerderij in Zuid-Korea leefden, zijn aangekomen bij hun nieuwe verblijf in Suffolk. Daar krijgen ze ruimte om te klimmen, zwemmen en rusten.</p>
           <div class="meta"><a href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><span class="sep">·</span><span>BBC</span><span class="sep">·</span><span>2 min lezen</span></div>
         </div>
         
@@ -369,7 +369,7 @@
         <div class="article-copy">
           <p class="date" style="margin:0 0 7px;text-transform:none;letter-spacing:0;font-weight:700">17 september 2026</p>
           <h3><a href="https://phys.org/news/2026-09-term-oyster-reef-success-murky.html" target="_blank" rel="noopener noreferrer" data-article-click="true" data-article-title="Langdurig herstel van oesterriffen blijkt succesvol" data-article-source="Phys.org" data-article-category="Natuur &amp; klimaat" data-article-section="int" data-article-edition="2026-09-17">Langdurig herstel van oesterriffen blijkt succesvol</a></h3>
-          <p class="teaser">Herstelde oesterriffen in Chesapeake Bay blijken jaren later nog steeds complexe leefgebieden te vormen. Ze trekken grotere en meer diverse visgemeenschappen aan en laten zien dat grootschalig natuurherstel langdurig effect kan hebben.</p>
+          <p class="teaser-one-line">Herstelde oesterriffen in Chesapeake Bay blijken jaren later nog steeds complexe leefgebieden te vormen. Ze trekken grotere en meer diverse visgemeenschappen aan en laten zien dat grootschalig natuurherstel langdurig effect kan hebben.</p>
           <div class="meta"><a href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><span class="sep">·</span><span>Phys.org</span><span class="sep">·</span><span>5 min lezen</span></div>
         </div>
         
@@ -380,7 +380,7 @@
         <div class="article-copy">
           <p class="date" style="margin:0 0 7px;text-transform:none;letter-spacing:0;font-weight:700">14 september 2026</p>
           <h3><a href="https://www.theguardian.com/environment/ng-interactive/2026/sep/13/bird-ecuador-rare-species-jocotoco-antpitta-foundation-conservation-biodiversity-aoe" target="_blank" rel="noopener noreferrer" data-article-click="true" data-article-title="Ontdekking zeldzame vogel hielp veel meer soorten in Ecuador" data-article-source="The Guardian" data-article-category="Natuur &amp; klimaat" data-article-section="int" data-article-edition="2026-09-14">Ontdekking zeldzame vogel hielp veel meer soorten in Ecuador</a></h3>
-          <p class="teaser">De ontdekking van een zeldzame vogel in Ecuador leidde tot een natuurbeschermingsorganisatie die inmiddels grote gebieden beschermt en leefgebied voor veel meer soorten herstelt.</p>
+          <p class="teaser-one-line">De ontdekking van een zeldzame vogel in Ecuador leidde tot een natuurbeschermingsorganisatie die inmiddels grote gebieden beschermt en leefgebied voor veel meer soorten herstelt.</p>
           <div class="meta"><a href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><span class="sep">·</span><span>The Guardian</span><span class="sep">·</span><span>6 min lezen</span></div>
         </div>
         
@@ -391,7 +391,7 @@
         <div class="article-copy">
           <p class="date" style="margin:0 0 7px;text-transform:none;letter-spacing:0;font-weight:700">10 september 2026</p>
           <h3><a href="https://phys.org/news/2026-09-predators.html" target="_blank" rel="noopener noreferrer" data-article-click="true" data-article-title="Langlopend onderzoek helpt natuurbeheerders roofdieren gerichter terug te dringen" data-article-source="Phys.org" data-article-category="Natuur &amp; klimaat" data-article-section="int" data-article-edition="2026-09-10">Langlopend onderzoek helpt natuurbeheerders roofdieren gerichter terug te dringen</a></h3>
-          <p class="teaser">Nieuw-Zeelandse onderzoekers analyseerden 24 jaar aan meetgegevens over ratten en hermelijnen. Door beter te voorspellen wanneer populaties na bestrijding terugveren, kunnen natuurbeheerders maatregelen gerichter plannen om inheemse soorten te beschermen.</p>
+          <p class="teaser-one-line">Nieuw-Zeelandse onderzoekers analyseerden 24 jaar aan meetgegevens over ratten en hermelijnen. Door beter te voorspellen wanneer populaties na bestrijding terugveren, kunnen natuurbeheerders maatregelen gerichter plannen om inheemse soorten te beschermen.</p>
           <div class="meta"><a href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><span class="sep">·</span><span>Phys.org</span><span class="sep">·</span><span>4 min lezen</span></div>
         </div>
         
@@ -402,7 +402,7 @@
         <div class="article-copy">
           <p class="date" style="margin:0 0 7px;text-transform:none;letter-spacing:0;font-weight:700">7 september 2026</p>
           <h3><a href="https://www.undp.org/serbia/news/valuable-peatland-tara-restored" target="_blank" rel="noopener noreferrer" data-article-click="true" data-article-title="Tien hectare kwetsbaar veengebied in Servië hersteld en beschermd" data-article-source="UNDP" data-article-category="Natuur &amp; klimaat" data-article-section="int" data-article-edition="2026-09-07">Tien hectare kwetsbaar veengebied in Servië hersteld en beschermd</a></h3>
-          <p class="teaser">In Nationaal Park Tara zijn onder meer nevelvangers geplaatst, veenmos opnieuw ingebracht en nieuwe monitoring opgezet. De maatregelen moeten een bijzonder veengebied helpen herstellen en beter bestand maken tegen klimaatverandering.</p>
+          <p class="teaser-one-line">In Nationaal Park Tara zijn onder meer nevelvangers geplaatst, veenmos opnieuw ingebracht en nieuwe monitoring opgezet. De maatregelen moeten een bijzonder veengebied helpen herstellen en beter bestand maken tegen klimaatverandering.</p>
           <div class="meta"><a href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><span class="sep">·</span><span>UNDP</span></div>
         </div>
         
@@ -413,7 +413,7 @@
         <div class="article-copy">
           <p class="date" style="margin:0 0 7px;text-transform:none;letter-spacing:0;font-weight:700">7 september 2026</p>
           <h3><a href="https://news.mongabay.com/2026/09/indigenous-knowledge-helps-reveal-the-ties-between-reefs-and-mangroves/" target="_blank" rel="noopener noreferrer" data-article-click="true" data-article-title="Inheemse kennis helpt verband tussen mangroven en koraalriffen zichtbaar maken" data-article-source="Mongabay" data-article-category="Natuur &amp; klimaat" data-article-section="int" data-article-edition="2026-09-07">Inheemse kennis helpt verband tussen mangroven en koraalriffen zichtbaar maken</a></h3>
-          <p class="teaser">Australische onderzoekers werkten samen met Bardi Jawi-rangers en ouderen. De studie laat zien hoe cultureel belangrijke vissoorten tussen mangroven en riffen bewegen en onderstreept waarom beide ecosystemen samen beschermd moeten worden.</p>
+          <p class="teaser-one-line">Australische onderzoekers werkten samen met Bardi Jawi-rangers en ouderen. De studie laat zien hoe cultureel belangrijke vissoorten tussen mangroven en riffen bewegen en onderstreept waarom beide ecosystemen samen beschermd moeten worden.</p>
           <div class="meta"><a href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><span class="sep">·</span><span>Mongabay</span></div>
         </div>
         
@@ -424,7 +424,7 @@
         <div class="article-copy">
           <p class="date" style="margin:0 0 7px;text-transform:none;letter-spacing:0;font-weight:700">7 september 2026</p>
           <h3><a href="https://news.mongabay.com/short-article/2026/09/genetic-road-map-offers-hope-for-threatened-visayan-spotted-deer/" target="_blank" rel="noopener noreferrer" data-article-click="true" data-article-title="Eerste genoomkaart biedt nieuwe kansen voor bedreigd Filipijns hert" data-article-source="Mongabay" data-article-category="Natuur &amp; klimaat" data-article-section="int" data-article-edition="2026-09-07">Eerste genoomkaart biedt nieuwe kansen voor bedreigd Filipijns hert</a></h3>
-          <p class="teaser">Onderzoekers brachten voor het eerst het genoom van het Visayawrattenhert in kaart. De gegevens kunnen helpen om fokprogramma’s slimmer te organiseren en de genetische diversiteit van de sterk bedreigde soort te vergroten.</p>
+          <p class="teaser-one-line">Onderzoekers brachten voor het eerst het genoom van het Visayawrattenhert in kaart. De gegevens kunnen helpen om fokprogramma’s slimmer te organiseren en de genetische diversiteit van de sterk bedreigde soort te vergroten.</p>
           <div class="meta"><a href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><span class="sep">·</span><span>Mongabay</span></div>
         </div>
         
@@ -435,7 +435,7 @@
         <div class="article-copy">
           <p class="date" style="margin:0 0 7px;text-transform:none;letter-spacing:0;font-weight:700">7 september 2026</p>
           <h3><a href="https://phys.org/news/2026-09-indonesia-orangutan-mother-baby-wildfire.html" target="_blank" rel="noopener noreferrer" data-article-click="true" data-article-title="Orang-oetanmoeder en jong veilig geëvacueerd voor bosbranden" data-article-source="Phys.org" data-article-category="Natuur &amp; klimaat" data-article-section="int" data-article-edition="2026-09-07">Orang-oetanmoeder en jong veilig geëvacueerd voor bosbranden</a></h3>
-          <p class="teaser">Natuurbeschermers in West-Kalimantan hebben een orang-oetanmoeder en haar jong uit een gebied gehaald waar bosbranden hun leefgebied bedreigden. De dieren worden in een opvangcentrum gecontroleerd op de gevolgen van rook.</p>
+          <p class="teaser-one-line">Natuurbeschermers in West-Kalimantan hebben een orang-oetanmoeder en haar jong uit een gebied gehaald waar bosbranden hun leefgebied bedreigden. De dieren worden in een opvangcentrum gecontroleerd op de gevolgen van rook.</p>
           <div class="meta"><a href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><span class="sep">·</span><span>Phys.org</span><span class="sep">·</span><span>2 min lezen</span></div>
         </div>
         
@@ -446,7 +446,7 @@
         <div class="article-copy">
           <p class="date" style="margin:0 0 7px;text-transform:none;letter-spacing:0;font-weight:700">4 september 2026</p>
           <h3><a href="https://www.undp.org/bosnia-herzegovina/news/cleaner-energy-solutions-advance-green-transition-east-sarajevo" target="_blank" rel="noopener noreferrer" data-article-click="true" data-article-title="School in Oost-Sarajevo stapt over van kolen naar schonere verwarming" data-article-source="UNDP" data-article-category="Natuur &amp; klimaat" data-article-section="int" data-article-edition="2026-09-04">School in Oost-Sarajevo stapt over van kolen naar schonere verwarming</a></h3>
-          <p class="teaser">Een middelbare school in Pale heeft een nieuwe pelletinstallatie in gebruik genomen die de oude kolen- en houtverwarming vervangt. De installatie verwarmt 3.500 vierkante meter en moet de lokale luchtvervuiling verminderen.</p>
+          <p class="teaser-one-line">Een middelbare school in Pale heeft een nieuwe pelletinstallatie in gebruik genomen die de oude kolen- en houtverwarming vervangt. De installatie verwarmt 3.500 vierkante meter en moet de lokale luchtvervuiling verminderen.</p>
           <div class="meta"><a href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><span class="sep">·</span><span>UNDP</span></div>
         </div>
         
@@ -457,7 +457,7 @@
         <div class="article-copy">
           <p class="date" style="margin:0 0 7px;text-transform:none;letter-spacing:0;font-weight:700">2 september 2026</p>
           <h3><a href="https://lazoo.org/2026/09/obscurus-births/" target="_blank" rel="noopener noreferrer" data-article-click="true" data-article-title="Bedreigde ratelslangen voor het eerst succesvol gekweekt voor herstelprogramma" data-article-source="Los Angeles Zoo" data-article-category="Natuur &amp; klimaat" data-article-section="int" data-article-edition="2026-09-02">Bedreigde ratelslangen voor het eerst succesvol gekweekt voor herstelprogramma</a></h3>
-          <p class="teaser">De dierentuin van Los Angeles heeft voor het eerst zes jonge New Mexico ridge-nosed rattlesnakes gekweekt binnen een internationaal herstelprogramma. De dieren kunnen later in aanmerking komen voor terugkeer naar het wild.</p>
+          <p class="teaser-one-line">De dierentuin van Los Angeles heeft voor het eerst zes jonge New Mexico ridge-nosed rattlesnakes gekweekt binnen een internationaal herstelprogramma. De dieren kunnen later in aanmerking komen voor terugkeer naar het wild.</p>
           <div class="meta"><a href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><span class="sep">·</span><span>Los Angeles Zoo</span></div>
         </div>
         
@@ -468,7 +468,7 @@
         <div class="article-copy">
           <p class="date" style="margin:0 0 7px;text-transform:none;letter-spacing:0;font-weight:700">31 augustus 2026</p>
           <h3><a href="https://news.mongabay.com/short-article/2026/08/lost-for-170-years-rare-plant-recorded-in-sri-lanka/" target="_blank" rel="noopener noreferrer" data-article-click="true" data-article-title="Zeldzame plant na 170 jaar teruggevonden in Sri Lanka" data-article-source="Mongabay" data-article-category="Natuur &amp; klimaat" data-article-section="int" data-article-edition="2026-08-31">Zeldzame plant na 170 jaar teruggevonden in Sri Lanka</a></h3>
-          <p class="teaser">Onderzoekers hebben in een klein bosgebied 70 tot 100 exemplaren gevonden van een plant die sinds 1855 niet meer in het wild in Sri Lanka was vastgelegd.</p>
+          <p class="teaser-one-line">Onderzoekers hebben in een klein bosgebied 70 tot 100 exemplaren gevonden van een plant die sinds 1855 niet meer in het wild in Sri Lanka was vastgelegd.</p>
           <div class="meta"><a href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><span class="sep">·</span><span>Mongabay</span></div>
         </div>
         
@@ -479,7 +479,7 @@
         <div class="article-copy">
           <p class="date" style="margin:0 0 7px;text-transform:none;letter-spacing:0;font-weight:700">28 augustus 2026</p>
           <h3><a href="https://www.theguardian.com/environment/2026/aug/28/woolston-eyes-cheshire-wetland-black-necked-grebe" target="_blank" rel="noopener noreferrer" data-article-click="true" data-article-title="Hersteld moerasgebied wordt toevluchtsoord voor zeldzame fuut" data-article-source="The Guardian" data-article-category="Natuur &amp; klimaat" data-article-section="int" data-article-edition="2026-08-28">Hersteld moerasgebied wordt toevluchtsoord voor zeldzame fuut</a></h3>
-          <p class="teaser">Een voormalig stortgebied voor baggerslib in Cheshire is na natuurherstel uitgegroeid tot de belangrijkste Britse broedplek voor de zeldzame geoorde fuut.</p>
+          <p class="teaser-one-line">Een voormalig stortgebied voor baggerslib in Cheshire is na natuurherstel uitgegroeid tot de belangrijkste Britse broedplek voor de zeldzame geoorde fuut.</p>
           <div class="meta"><a href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><span class="sep">·</span><span>The Guardian</span></div>
         </div>
         
@@ -490,7 +490,7 @@
         <div class="article-copy">
           <p class="date" style="margin:0 0 7px;text-transform:none;letter-spacing:0;font-weight:700">28 augustus 2026</p>
           <h3><a href="https://news.mongabay.com/2026/08/south-africas-new-gold-rush-big-money-high-stakes-in-emerging-spekboom-restoration-sector/" target="_blank" rel="noopener noreferrer" data-article-click="true" data-article-title="Zuid-Afrika schaalt herstel van ernstig aangetast struikland op" data-article-source="Mongabay" data-article-category="Natuur &amp; klimaat" data-article-section="int" data-article-edition="2026-08-28">Zuid-Afrika schaalt herstel van ernstig aangetast struikland op</a></h3>
-          <p class="teaser">Nieuwe investeringen moeten grootschalig herstel van het unieke spekboomlandschap mogelijk maken. De droogtebestendige plant helpt bodem en biodiversiteit herstellen en legt tegelijk CO₂ vast.</p>
+          <p class="teaser-one-line">Nieuwe investeringen moeten grootschalig herstel van het unieke spekboomlandschap mogelijk maken. De droogtebestendige plant helpt bodem en biodiversiteit herstellen en legt tegelijk CO₂ vast.</p>
           <div class="meta"><a href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><span class="sep">·</span><span>Mongabay</span></div>
         </div>
         
@@ -501,7 +501,7 @@
         <div class="article-copy">
           <p class="date" style="margin:0 0 7px;text-transform:none;letter-spacing:0;font-weight:700">27 augustus 2026</p>
           <h3><a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxNQ3lYLVlrajEyNzJyZUp5blR5bjhfOXQ4d0VBN290ZFZBQjAwTHY5ZWlCQkgtbkw5T0FnQ2hWSE9hNF9BQVNjU0s2QXVSVUh1V0VrcHJ6LUJqUDRoNWcwX0s3ZXU1RXB0aFM3cmZnVmFKQmhmU051bC1hSURVN2JXSjBhWjQ1R3VTdzA5NWZzbVlMUm9TX3hPVmRCbDdybmRZelM2NA?oc=5" target="_blank" rel="noopener noreferrer" data-article-click="true" data-article-title="Nieuwe oplossingen gezocht om versnipperde natuurgebieden weer te verbinden" data-article-source="UNDP" data-article-category="Natuur &amp; klimaat" data-article-section="int" data-article-edition="2026-08-27">Nieuwe oplossingen gezocht om versnipperde natuurgebieden weer te verbinden</a></h3>
-          <p class="teaser">UNDP zoekt innovatieve oplossingen voor het herstellen en opnieuw verbinden van natuurlijke leefgebieden.</p>
+          <p class="teaser-one-line">UNDP zoekt innovatieve oplossingen voor het herstellen en opnieuw verbinden van natuurlijke leefgebieden.</p>
           <div class="meta"><a href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><span class="sep">·</span><span>UNDP</span></div>
         </div>
         
@@ -512,7 +512,7 @@
         <div class="article-copy">
           <p class="date" style="margin:0 0 7px;text-transform:none;letter-spacing:0;font-weight:700">27 augustus 2026</p>
           <h3><a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxNZ1RuMnM4RGxCaHhTYTdFdnJ6WU9VazliSGNRa2NMcWptNXUxblIwT1ROVUo0STQ0dWtWRS1fbHFpUTFDb2ZDWmtORGxVM3JfblZRRlBEVERuZjcxSjB3cUg2QmVLSVJFRFducTJJa01rRnFlS056UnRzdVZ0V2h3aXNyRFNsNWNLMV9yVnl1STd3bWJreXE5a0Q4alp0NG9fZE90QVpUZ2JUQ1VUWmlNaC1vZ1PSAboBQVVfeXFMTXl1QnNKMjRDbDRRYzRheUwyUzNqYktBRmNnT25KS3c2dmdudWZDNVA5LV9JYnUyZFVfVWJ3aHBQTVdjX2I4UGh2dWtNUEQzSExQV2dZVkFrejBDcG01TFVZQ1hjUW1ncUEzaXRVXzlfOFhFdUNwRFYxLU9oOFpIVkpsakFtTnpzc1Vyd0V1eE9oUVdiTWtfWTl5QkVJZnVkOExEZXMtUVhMd0lFXzBlUnJDTWFFMmoyWW5R?oc=5" target="_blank" rel="noopener noreferrer" data-article-click="true" data-article-title="Lokale kennis leidt tot herontdekking van vissoort die veertig jaar niet was gezien" data-article-source="Mongabay" data-article-category="Natuur &amp; klimaat" data-article-section="int" data-article-edition="2026-08-27">Lokale kennis leidt tot herontdekking van vissoort die veertig jaar niet was gezien</a></h3>
-          <p class="teaser">Lokale kennis hielp onderzoekers bij de herontdekking van de spinach pipefish, een vissoort die al vier decennia niet meer was waargenomen.</p>
+          <p class="teaser-one-line">Lokale kennis hielp onderzoekers bij de herontdekking van de spinach pipefish, een vissoort die al vier decennia niet meer was waargenomen.</p>
           <div class="meta"><a href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><span class="sep">·</span><span>Mongabay</span></div>
         </div>
         
@@ -523,7 +523,7 @@
         <div class="article-copy">
           <p class="date" style="margin:0 0 7px;text-transform:none;letter-spacing:0;font-weight:700">26 augustus 2026</p>
           <h3><a href="https://www.bbc.co.uk/news/articles/c8xklkeyx88o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" data-article-click="true" data-article-title="Aantal alpenkraaien in Engeland bereikt recordhoogte" data-article-source="BBC" data-article-category="Natuur &amp; klimaat" data-article-section="int" data-article-edition="2026-08-26">Aantal alpenkraaien in Engeland bereikt recordhoogte</a></h3>
-          <p class="teaser">In Engeland zijn 161 alpenkraaien geteld, 32 meer dan vorig jaar.</p>
+          <p class="teaser-one-line">In Engeland zijn 161 alpenkraaien geteld, 32 meer dan vorig jaar.</p>
           <div class="meta"><a href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><span class="sep">·</span><span>BBC</span></div>
         </div>
         
@@ -534,7 +534,7 @@
         <div class="article-copy">
           <p class="date" style="margin:0 0 7px;text-transform:none;letter-spacing:0;font-weight:700">26 augustus 2026</p>
           <h3><a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxONm02cVhfVDJRbmwzOGV3Z0lna1ZHVnZWcDhJTHRaRVlWNVlyOGh3NUxLRHpYb0pWWTh0TFpHUmJ5SmlJaklYR1ZGaFNWaVQxbFdHT0tZSC1XMTJDblFMTmpRQXBoOUNtRm5qbDNPMlNMWVBydmtLX0lzVFJXbHo0OS1RcmU4eXoyYjlrMmRKUXVqUXl0cGtSaFdtYUtxbzZoZFZyTjRkSmJWVENPZlBOSFZHbUE5N3I3NUN6b0NhQkU?oc=5" target="_blank" rel="noopener noreferrer" data-article-click="true" data-article-title="FAO maakt klimaatinstrumenten open source" data-article-source="FAO" data-article-category="Natuur &amp; klimaat" data-article-section="int" data-article-edition="2026-08-26">FAO maakt klimaatinstrumenten open source</a></h3>
-          <p class="teaser">De klimaatinstrumenten CAVA en EX-ACT van de FAO zijn voortaan als open source beschikbaar.</p>
+          <p class="teaser-one-line">De klimaatinstrumenten CAVA en EX-ACT van de FAO zijn voortaan als open source beschikbaar.</p>
           <div class="meta"><a href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><span class="sep">·</span><span>FAO</span></div>
         </div>
         
