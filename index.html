@@ -616,8 +616,8 @@
     .ios-install-panel.is-visible { display: block; }
 
     .special-feature {
-      margin: 0 auto 54px;
-      padding: 34px 36px;
+      margin: 28px auto 30px;
+      padding: 26px 30px;
       border: 1px solid rgba(23, 63, 49, .18);
       border-radius: 18px;
       background:
@@ -627,39 +627,27 @@
 
     .special-feature-grid {
       display: grid;
-      grid-template-columns: 112px minmax(0,1fr);
+      grid-template-columns: 104px minmax(0,1fr);
       align-items: center;
-      gap: 30px;
+      gap: 26px;
     }
 
-    .special-feature-number {
+    .special-feature-visual {
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-height: 112px;
-      border: 1px solid rgba(214,161,58,.38);
-      border-radius: 16px;
-      background: rgba(255,255,255,.42);
-      color: var(--green-dark);
-      text-align: center;
+      width: 104px;
+      height: 104px;
+      border-radius: 50%;
+      background: rgba(214,161,58,.10);
+      border: 1px solid rgba(214,161,58,.30);
+      color: var(--accent);
     }
 
-    .special-feature-number strong {
+    .special-feature-sun {
+      width: 62px;
+      height: 62px;
       display: block;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 2.9rem;
-      line-height: .9;
-      letter-spacing: -.06em;
-    }
-
-    .special-feature-number span {
-      margin-top: 7px;
-      color: var(--muted);
-      font-size: .62rem;
-      font-weight: 800;
-      letter-spacing: .06em;
-      text-transform: uppercase;
     }
 
     .special-feature .section-kicker {
@@ -667,25 +655,36 @@
     }
 
     .special-feature h2 {
-      margin: 8px 0 0;
+      margin: 7px 0 0;
       color: #111512;
-      font-size: 1.9rem;
+      font-size: 1.78rem;
       line-height: 1.05;
       letter-spacing: -.04em;
     }
 
+    .special-feature h2 a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .special-feature h2 a:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+
     .special-feature-copy {
       max-width: 650px;
-      margin: 11px 0 0;
+      margin: 9px 0 0;
       color: #3f4742;
-      font-size: .9rem;
-      line-height: 1.55;
+      font-size: .88rem;
+      line-height: 1.5;
     }
 
     .special-feature-link {
       display: inline-flex;
       align-items: center;
-      margin-top: 16px;
+      margin-top: 13px;
       color: var(--green-dark);
       font-size: .76rem;
       font-weight: 800;
@@ -1153,23 +1152,29 @@
       .edition-end h2 { font-size: clamp(2.25rem, 11vw, 3.1rem); }
 
       .special-feature {
-        margin-bottom: 40px;
-        padding: 24px 22px;
+        margin: 20px auto 22px;
+        padding: 21px 20px;
       }
       .special-feature-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
+        grid-template-columns: 70px minmax(0,1fr);
+        gap: 16px;
+        align-items: start;
       }
-      .special-feature-number {
-        width: 92px;
-        min-height: 92px;
-        align-items: flex-start;
-        padding: 16px;
-        text-align: left;
+      .special-feature-visual {
+        width: 70px;
+        height: 70px;
       }
-      .special-feature-number strong { font-size: 2.45rem; }
-      .special-feature h2 { font-size: 1.55rem; }
-      .special-feature-copy { font-size: .87rem; }
+      .special-feature-sun {
+        width: 43px;
+        height: 43px;
+      }
+      .special-feature h2 { font-size: 1.42rem; }
+      .special-feature-copy {
+        margin-top: 8px;
+        font-size: .84rem;
+        line-height: 1.45;
+      }
+      .special-feature-link { margin-top: 11px; }
 
       .support-teaser {
         margin-bottom: 40px;
@@ -1729,27 +1734,7 @@
     </section>
 
     <main>
-
-      <section class="special-feature wide-shell" aria-labelledby="home-special-title">
-        <div class="special-feature-grid">
-          <div class="special-feature-number" aria-hidden="true">
-            <strong>12</strong>
-            <span>ontwikkelingen</span>
-          </div>
-          <div>
-            <p class="section-kicker">Special · 12–15 min</p>
-            <h2 id="home-special-title">Nederland gaat óók vooruit.</h2>
-            <p class="special-feature-copy">Twaalf ontwikkelingen die je nauwelijks in het dagelijkse nieuws ziet, maar die Nederland de afgelopen jaren aantoonbaar hebben veranderd. Van roken en criminaliteit tot werk, armoede en energie. We doken in de cijfers.</p>
-            <a
-              class="special-feature-link"
-              href="/specials/nederland-gaat-ook-vooruit/"
-              onclick="trackSimpleEvent('special_home_click')"
-            >Lees de special →</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="news-section nl-block">
+<section class="news-section nl-block">
         <div class="content-shell">
           <div class="section-heading">
             <p class="section-kicker">Goed nieuws uit Nederland</p>
@@ -1760,6 +1745,32 @@
           </p>
           <div id="nl-state" class="state">Nieuws laden…</div>
           <div id="nl-grid" class="article-list" hidden></div>
+        </div>
+      </section>
+
+
+      <section class="special-feature wide-shell" aria-labelledby="home-special-title">
+        <div class="special-feature-grid">
+          <div class="special-feature-visual" aria-hidden="true">
+            <svg class="special-feature-sun" viewBox="0 0 64 64" fill="none">
+              <circle cx="32" cy="32" r="11" fill="currentColor"></circle>
+              <path d="M32 5V15M32 49V59M59 32H49M15 32H5M51.1 12.9L44 20M20 44L12.9 51.1M51.1 51.1L44 44M20 20L12.9 12.9"
+                stroke="currentColor" stroke-width="3.2" stroke-linecap="round"></path>
+              <circle cx="32" cy="32" r="21" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2.5 5" opacity=".55"></circle>
+            </svg>
+          </div>
+          <div>
+            <p class="section-kicker">Special · 12–15 min</p>
+            <h2 id="home-special-title">
+              <a href="/specials/nederland-gaat-ook-vooruit/" onclick="trackSimpleEvent('special_home_click')">Nederland gaat óók vooruit.</a>
+            </h2>
+            <p class="special-feature-copy">Twaalf ontwikkelingen die je nauwelijks in het dagelijkse nieuws ziet, maar die Nederland de afgelopen jaren aantoonbaar hebben veranderd. Van roken en criminaliteit tot werk, armoede en energie.</p>
+            <a
+              class="special-feature-link"
+              href="/specials/nederland-gaat-ook-vooruit/"
+              onclick="trackSimpleEvent('special_home_click')"
+            >Lees de special →</a>
+          </div>
         </div>
       </section>
 
@@ -3814,3 +3825,13 @@
   <!-- production release 2026-08-29: typografie, warme accenten en dynamische editie-intro -->
 </body>
 </html>
+
+<style>
+  /* Compacte overgang rond de uitgelichte Special */
+  .nl-block { padding-bottom: 22px; }
+  .world-block { padding-top: 22px; }
+  @media (max-width: 760px) {
+    .nl-block { padding-bottom: 16px; }
+    .world-block { padding-top: 16px; }
+  }
+</style>
