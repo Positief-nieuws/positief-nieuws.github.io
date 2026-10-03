@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nederland gaat óók vooruit: 12 ontwikkelingen die aantoonbaar beter werden</title>
+  <meta name="description" content="Twaalf onderbouwde ontwikkelingen die laten zien wat er in Nederland de afgelopen jaren aantoonbaar beter werd, met cijfers en bronverwijzingen.">
+  <link rel="canonical" href="https://positief-nieuws.nl/specials/nederland-gaat-ook-vooruit/">
+  <meta name="theme-color" content="#f7f5ec">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Positief nieuws">
+  <meta property="og:title" content="Nederland gaat óók vooruit: 12 ontwikkelingen die aantoonbaar beter werden">
+  <meta property="og:description" content="Twaalf onderbouwde ontwikkelingen die laten zien wat er in Nederland de afgelopen jaren aantoonbaar beter werd, met cijfers en bronverwijzingen.">
+  <meta property="og:url" content="https://positief-nieuws.nl/specials/nederland-gaat-ook-vooruit/">
+  <meta property="article:published_time" content="2026-10-02">
+  <meta property="article:modified_time" content="2026-10-02">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": 'Nederland gaat óók vooruit',
+    "description": 'Twaalf onderbouwde ontwikkelingen die laten zien wat er in Nederland de afgelopen jaren aantoonbaar beter werd, met cijfers en bronverwijzingen.',
+    "datePublished": '2026-10-02',
+    "dateModified": '2026-10-02',
+    "mainEntityOfPage": 'https://positief-nieuws.nl/specials/nederland-gaat-ook-vooruit/',
+    "publisher": {
+      "@type": "Organization",
+      "name": "Positief nieuws",
+      "url": "https://positief-nieuws.nl/"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --paper:#f7f5ec;
+      --ink:#151a17;
+      --green:#1f5b45;
+      --green-dark:#173f31;
+      --accent:#d6a13a;
+      --muted:#68716b;
+      --line:rgba(23,63,49,.22);
+      --line-soft:rgba(23,63,49,.12);
+      --white:#fff;
+      --content:760px;
+      --header:1080px;
+    }
+    *{box-sizing:border-box}
+    html{font-size:17px;scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:
+        radial-gradient(circle at 88% 10%,rgba(214,161,58,.07),transparent 24%),
+        var(--paper);
+      color:var(--ink);
+      font-family:Arial,Helvetica,sans-serif;
+      line-height:1.62;
+      -webkit-font-smoothing:antialiased;
+    }
+    a{color:inherit}
+    .header-shell{width:min(calc(100% - 48px),var(--header));margin:auto}
+    .content-shell{width:min(calc(100% - 48px),var(--content));margin:auto}
+
+    .site-header{padding:24px 0 14px}
+    .header-row{display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:inline-flex;align-items:center;gap:11px;color:var(--ink);font-size:.98rem;font-weight:800;text-decoration:none;letter-spacing:-.02em}
+    .brand-sun{width:27px;height:27px;color:var(--accent);flex:0 0 auto}
+    nav{display:flex;align-items:center;gap:22px}
+    nav a{font-size:.72rem;font-weight:700;text-decoration:none}
+    nav a:hover{color:var(--accent)}
+    .inbox{padding:8px 14px;border:1px solid rgba(214,161,58,.45);border-radius:999px;color:var(--accent)}
+
+    .hero{padding:72px 0 42px}
+    .kicker{margin:0;color:var(--green);font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+    h1,h2,h3{font-family:Georgia,"Times New Roman",serif}
+    h1{max-width:740px;margin:10px 0 0;font-size:clamp(3rem,7vw,5rem);line-height:.98;letter-spacing:-.055em}
+    h1 .dot{color:var(--accent)}
+    .subtitle{max-width:700px;margin:20px 0 0;color:#313934;font-size:1.08rem;line-height:1.55}
+    .article-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;color:var(--green);font-size:.68rem;font-weight:800}
+    .meta-sep{color:#9aa19d}
+    .rule{margin-top:34px;border-top:1px solid var(--line)}
+
+    .article{padding:22px 0 86px}
+    .article-body{max-width:700px}
+    .article-body p{margin:0 0 20px;color:#303833}
+    .article-body h2{margin:54px 0 14px;font-size:1.68rem;line-height:1.16;letter-spacing:-.032em;scroll-margin-top:28px}
+    .article-body strong{color:var(--ink)}
+    .article-body a{text-decoration-color:rgba(23,63,49,.35);text-underline-offset:3px}
+    .article-body a:hover{text-decoration-color:currentColor}
+    .source-ref{font-size:.72em;font-weight:800;color:var(--green);text-decoration:none!important;vertical-align:.12em}
+    .source-item{scroll-margin-top:28px;padding-top:4px;color:#47504b!important;font-size:.84rem;line-height:1.55;word-break:break-word}
+    .source-number{color:var(--green);font-weight:800}
+
+    .article-body h2:nth-of-type(-n+12){
+      position:relative;
+    }
+
+    .support-teaser{
+      margin:50px 0 48px;
+      padding:28px 30px;
+      border:1px solid rgba(214,161,58,.32);
+      border-radius:18px;
+      background:
+        radial-gradient(circle at 92% 18%,rgba(214,161,58,.11),transparent 29%),
+        rgba(255,255,255,.42);
+    }
+    .support-grid{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:28px}
+    .support-kicker{margin:0!important;color:var(--green)!important;font-size:.67rem!important;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+    .support-teaser h2{margin:7px 0 0!important;font-size:1.5rem!important;line-height:1.08!important}
+    .support-copy{max-width:500px;margin:10px 0 0!important;color:var(--muted)!important;font-size:.84rem!important;line-height:1.55!important}
+    .support-button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 19px;border:1px solid var(--green-dark);border-radius:999px;background:var(--green-dark);color:#fff;text-decoration:none!important;font-size:.76rem;font-weight:800;white-space:nowrap}
+    .support-button:hover{background:var(--green)}
+
+    .article-footer{margin-top:48px;padding-top:20px;border-top:1px solid var(--line-soft);color:var(--muted);font-size:.76rem}
+    .back-home{font-weight:800;color:var(--green-dark)}
+    footer{padding:0 0 36px;text-align:center;color:#8b928e;font-size:.7rem}
+
+    @media(max-width:760px){
+      .header-shell,.content-shell{width:min(calc(100% - 30px),100%)}
+      .site-header{padding:16px 0 8px}
+      .header-row{align-items:flex-start}
+      nav{gap:10px;flex-wrap:wrap;justify-content:flex-end}
+      nav a{font-size:.62rem}
+      .hero{padding:50px 0 30px}
+      h1{font-size:clamp(2.7rem,14vw,4.15rem)}
+      .subtitle{font-size:1rem}
+      .article{padding-bottom:66px}
+      .article-body h2{margin-top:44px;font-size:1.5rem}
+      .support-teaser{padding:24px 22px}
+      .support-grid{grid-template-columns:1fr;gap:20px}
+      .support-button{width:100%}
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-shell header-row">
+      <a class="brand" href="/" aria-label="Positief nieuws homepage">
+        <svg class="brand-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.2" fill="currentColor"></circle>
+          <path d="M12 1.8V5.1M12 18.9V22.2M22.2 12H18.9M5.1 12H1.8M19.2 4.8L16.8 7.2M7.2 16.8L4.8 19.2M19.2 19.2L16.8 16.8M7.2 7.2L4.8 4.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+        </svg>
+        <span>Positief nieuws</span>
+      </a>
+      <nav aria-label="Hoofdnavigatie">
+        <a href="/">Vandaag</a>
+        <a href="/edities/">Archief</a>
+        <a href="/onderwerpen/">Onderwerpen</a>
+        <a href="/over/">Over</a>
+        <a class="inbox" href="/#nieuwsbrief">In je inbox</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="content-shell">
+        <p class="kicker">Special</p>
+        <h1>Nederland gaat óók vooruit<span class="dot">.</span></h1>
+        <p class="subtitle">12 ontwikkelingen die laten zien wat er de afgelopen tien jaar aantoonbaar beter werd</p>
+        <div class="article-meta">
+          <span>2 oktober 2026</span>
+          <span class="meta-sep">·</span>
+          <span>ca. 12-15 min</span>
+          <span class="meta-sep">·</span>
+          <span>12 ontwikkelingen</span>
+        </div>
+        <div class="rule"></div>
+      </div>
+    </section>
+
+    <article class="article">
+      <div class="content-shell article-body">
+        <p>Wie iedere dag het nieuws volgt, zou soms kunnen denken dat Nederland vooral achteruitgaat. We hebben een woningtekort. De zorg staat onder druk. Het klimaat verandert. Er zijn zorgen over bestaanszekerheid, migratie, natuur, onderwijs en veiligheid. Dat zijn geen verzonnen problemen. Ze verdienen aandacht.</p>
+<p>Maar er gebeurt iets merkwaardigs wanneer je uitzoomt. Kijk niet naar vandaag tegenover gisteren, maar naar 2025 tegenover 2015. Of naar 2024 tegenover 2018. Dan verschijnt er een ander Nederland. Een land waarin op een aantal terreinen behoorlijk grote veranderingen hebben plaatsgevonden, zonder dat die iedere avond het nieuws halen.</p>
+<p>Positief Nieuws ging daarom op zoek naar ontwikkelingen die aan drie voorwaarden voldoen: ze moeten meetbaar, relevant en controleerbaar zijn. We gaan niet vertellen waarom Nederland eigenlijk fantastisch is, gebaseerd op een verzameling feelgoodfeitjes. En tonen ook geen cijfers waarvan we de minder positieve context hebben weggelaten. Gewoon de vraag: <strong>Wat is er in Nederland aantoonbaar beter geworden?</strong> Het antwoord daarop vonden we.</p>
+<h2>1. We zijn veel minder gaan roken</h2>
+<p>Sommige maatschappelijke veranderingen gaan zo langzaam dat je ze nauwelijks ziet gebeuren. Totdat je tien jaar terugkijkt.</p>
+<p>In 2014 rookte 25,7 procent van de Nederlanders van 18 jaar en ouder. In 2024 was dat nog 18,2 procent. Dat betekent dat het aandeel volwassen rokers in tien jaar met bijna een derde is afgenomen.<a class="source-ref" href="#bron-1">[1]</a> Ook overmatig alcoholgebruik nam af. In 2014 werd 9,9 procent van de volwassen bevolking aangemerkt als overmatige drinker. In 2024 was dat 5,5 procent.<a class="source-ref" href="#bron-1">[1]</a></p>
+<p>Dat zijn geen kleine verschuivingen. Roken behoort tot de belangrijkste vermijdbare oorzaken van ziekte en sterfte. Minder rokers betekent dus niet alleen dat miljoenen Nederlanders ander gedrag zijn gaan vertonen, maar uiteindelijk ook gezondheidswinst. Tegelijkertijd is het gezondheidsbeeld niet over de hele linie verbeterd. Het percentage volwassenen met overgewicht bleef in dezelfde periode ongeveer gelijk. In 2014 was dat 49,4 procent, in 2024 50,4 procent.<a class="source-ref" href="#bron-1">[1]</a> Vooruitgang op het ene terrein betekent niet automatisch vooruitgang op het andere.</p>
+<h2>2. Na corona stijgt onze levensverwachting weer</h2>
+<p>Een pasgeboren meisje had in 2025 een levensverwachting van 83,5 jaar. Voor een jongen was dat 80,7 jaar. Voor beide groepen is dat ongeveer twee maanden langer dan een jaar eerder.<a class="source-ref" href="#bron-2">[2]</a> Belangrijker is de ontwikkeling na corona. In 2020 en 2021 daalde de levensverwachting. Sinds 2022 loopt deze weer op. Bij mannen ligt de levensverwachting inmiddels boven het niveau van 2019, het laatste volledige jaar vóór de coronapandemie.<a class="source-ref" href="#bron-2">[2]</a></p>
+<p>Bij vrouwen is dat nog nét niet het geval. Daar ligt de levensverwachting ongeveer een maand onder het niveau van 2019.</p>
+<p>Het zou dus te gemakkelijk zijn om te schrijven dat we alweer volledig terug zijn op het oude pad. Maar de richting sinds 2022 is duidelijk; we leven gemiddeld weer langer.</p>
+<h2>3. Diefstal en inbraak komen veel minder vaak in de politiestatistieken voor</h2>
+<p>Criminaliteit is een onderwerp waarbij incidenten veel zichtbaarder zijn dan langetermijntrends. Een woninginbraak is nieuws. Dat er honderdduizenden minder diefstallen en inbraken worden geregistreerd dan tien jaar geleden, meestal niet.</p>
+<p>Toch is precies dat gebeurd. In 2015 registreerde de politie 549.105 gevallen in de categorie diefstal, verduistering en inbraak. In 2025 waren dat er 354.475.<a class="source-ref" href="#bron-3">[3]</a> Dat is een afname van ongeveer 35 procent in tien jaar. Kijken we iets verder terug, dan wordt het verschil nog groter. In 2012 ging het om 656.450 geregistreerde gevallen.<a class="source-ref" href="#bron-3">[3]</a></p>
+<p>Ook het totale aantal vermogensmisdrijven daalde. Van 614.050 in 2015 naar 451.740 in 2025.<a class="source-ref" href="#bron-3">[3]</a> Hier is een belangrijke nuance nodig. Geregistreerde criminaliteit is niet hetzelfde als alle daadwerkelijk gepleegde criminaliteit. Niet ieder slachtoffer doet aangifte en criminaliteit verandert van vorm. Zo is online criminaliteit veel belangrijker geworden.</p>
+<p>Ook is het totale aantal door de politie geregistreerde misdrijven de laatste jaren niet verder sterk gedaald. In 2025 lag dat ongeveer gelijk aan 2024.<a class="source-ref" href="#bron-3">[3]</a> De conclusie moet dus niet zijn dat Nederland simpelweg &quot;steeds veiliger&quot; wordt. Wat we wél hard kunnen zeggen: traditionele vermogenscriminaliteit zoals diefstal en inbraak wordt aanzienlijk minder geregistreerd dan tien tot vijftien jaar geleden.</p>
+<h2>4. Veel meer Nederlanders hebben betaald werk</h2>
+<p>In 2015 bestond de werkzame beroepsbevolking uit ongeveer 8,46 miljoen mensen. Tien jaar later waren dat er 9,83 miljoen.<a class="source-ref" href="#bron-4">[4]</a> Dat zijn bijna 1,4 miljoen extra werkenden. Een deel daarvan komt natuurlijk doordat Nederland meer inwoners heeft. Daarom is het interessanter om ook naar het aandeel werkenden te kijken. De bruto arbeidsparticipatie van 15- tot 75-jarigen steeg van 72,4 procent in 2015 naar 76,2 procent in 2025.<a class="source-ref" href="#bron-5">[5]</a></p>
+<p>Het aantal werklozen laat eveneens een groot verschil zien. In 2015 waren dat er volgens dezelfde CBS-reeks 724.000. In 2025 waren het er 396.000.<a class="source-ref" href="#bron-4">[4]</a> De arbeidsmarkt kent ondertussen een nieuw probleem: personeelstekorten. En niet iedere baan biedt dezelfde zekerheid, hetzelfde inkomen of dezelfde hoeveelheid uren.</p>
+<p>Maar dat verandert niets aan de onderliggende ontwikkeling. Een groter deel van de Nederlandse bevolking doet betaald werk dan tien jaar geleden.</p>
+<h2>5. Vooral oudere Nederlanders zijn veel vaker aan het werk</h2>
+<p>Achter die groei van de arbeidsparticipatie zit een ontwikkeling die nog opvallender is. Neem vrouwen van 55 tot 65 jaar. In 2015 had 52,5 procent van hen betaald werk. In 2025 was dat 69,8 procent.<a class="source-ref" href="#bron-6">[6]</a> Bij mannen van dezelfde leeftijd steeg het aandeel van 70,1 naar 81,9 procent.<a class="source-ref" href="#bron-6">[6]</a> Ook na het 65e levensjaar wordt vaker gewerkt. Bij vrouwen van 65 tot 75 jaar steeg de nettoarbeidsparticipatie tussen 2015 en 2025 van 5,7 naar 15,4 procent. Bij mannen ging die van 13,8 naar 26,4 procent.<a class="source-ref" href="#bron-6">[6]</a></p>
+<p>Dat heeft meerdere oorzaken, waaronder de verhoging van de AOW-leeftijd en veranderingen in de arbeidsmarkt. Je kunt over die oorzaken verschillend denken. Het cijfer zelf is helder: oudere Nederlanders zijn veel vaker economisch actief dan tien jaar geleden.</p>
+<h2>6. Armoede ligt ondanks een recente stijging veel lager dan enkele jaren geleden</h2>
+<p>Dit is precies zo'n onderwerp waarbij één positief cijfer zonder context misleidend zou zijn. In 2018 leefde volgens de huidige armoedemethode 7,1 procent van de Nederlandse bevolking in armoede. In 2023 was dat gedaald naar 2,7 procent volgens de inmiddels definitieve cijfers.<a class="source-ref" href="#bron-7">[7]</a> In 2024 ging het echter weer de verkeerde kant op: 3,1 procent van de bevolking, ongeveer 551.000 mensen, leefde in armoede.<a class="source-ref" href="#bron-7">[7]</a> Dus ja: de armoede nam het laatste gemeten jaar toe. Maar kijk je naar de langere periode, dan is het aandeel nog altijd veel lager dan in 2018.</p>
+<p>Bij kinderen is de verandering eveneens groot. In 2018 leefde 8,7 procent van de minderjarigen in armoede. In 2024 was dat 2,8 procent.<a class="source-ref" href="#bron-7">[7]</a> Daar hoort nog een kanttekening bij. Minder mensen in armoede betekent niet automatisch dat de situatie van iedereen die nog wél arm is gemakkelijker is geworden. Het CBS kijkt daarom ook naar de intensiteit en duur van armoede.<a class="source-ref" href="#bron-8">[8]</a> Dit is dus geen verhaal met een simpel happy end. Wel een ontwikkeling die vaak verloren gaat wanneer we alleen naar het meest recente jaar kijken.</p>
+<h2>7. De Nederlandse energievoorziening is in hoog tempo veranderd</h2>
+<p>En dan energie. Niet vier afzonderlijke punten, want uiteindelijk vertellen windmolens, zonnepanelen en hernieuwbare elektriciteit grotendeels hetzelfde verhaal. Maar dat verhaal is wel groot genoeg om hier te staan. In 2025 kwam 22,7 procent van het totale Nederlandse energieverbruik uit hernieuwbare bronnen. Een jaar eerder was dat 20,2 procent.<a class="source-ref" href="#bron-9">[9]</a> Nederland gebruikte in totaal 401 petajoule hernieuwbare energie. Daarvan kwam 34 procent uit biomassa, 30 procent uit windenergie en 23 procent uit zonne-energie.<a class="source-ref" href="#bron-10">[10]</a></p>
+<p>Interessant is vooral het tempo van de omslag. Volgens het CBS kende Nederland van alle EU-landen in de voorgaande vijf jaar de sterkste stijging van het aandeel hernieuwbare energie.<a class="source-ref" href="#bron-9">[9]</a> Ook hier past terughoudendheid. &quot;Bijna een kwart hernieuwbaar&quot; betekent automatisch dat het grootste deel van ons totale energieverbruik nog níét hernieuwbaar is. Bovendien is er discussie over de duurzaamheid van bepaalde vormen van biomassa.</p>
+<p>Maar wie tien jaar geleden naar het Nederlandse energiesysteem keek en het vergelijkt met nu, ziet geen cosmetische verandering. Het systeem zelf is aan het verschuiven.</p>
+<h2>8. De uitstoot van broeikasgassen ligt ruim een derde lager dan in 1990</h2>
+<p>In 2025 stootte Nederland 36 procent minder broeikasgassen uit dan in 1990.<a class="source-ref" href="#bron-11">[11]</a> Dat is een substantiële daling. Maar hier wordt het interessant, want wie alleen naar 2025 kijkt, ziet juist een tegenvaller. De uitstoot steeg dat jaar met 0,8 procent ten opzichte van 2024. Vooral de elektriciteitssector stootte meer uit.<a class="source-ref" href="#bron-11">[11]</a> Tegelijkertijd daalde de uitstoot van de industrie met ruim 4 procent en ook de mobiliteitssector stootte ruim 4 procent minder uit.<a class="source-ref" href="#bron-11">[11]</a></p>
+<p>En Nederland is er nog lang niet. De Klimaatwet mikt voor 2030 op minimaal 55 procent minder uitstoot dan in 1990. Om daar te komen moet de daling de komende jaren veel sneller gaan dan gemiddeld in de afgelopen jaren.<a class="source-ref" href="#bron-11">[11]</a> Waarom staat dit punt dan toch in deze lijst? Omdat 36 procent reductie ten opzichte van 1990 daadwerkelijk is gerealiseerd. Dat resultaat verdwijnt niet omdat het einddoel nog niet is bereikt.</p>
+<p>Je kunt tegelijkertijd constateren dat Nederland veel minder uitstoot dan vroeger én dat het huidige tempo onvoldoende is voor het wettelijke doel. Die twee feiten spreken elkaar niet tegen.</p>
+<h2>9. Elektrisch rijden is van uitzondering naar normaal straatbeeld gegaan</h2>
+<p>Begin 2026 telde Nederland ruim twee miljoen personenauto's met een elektromotor. Het gaat dan om volledig elektrische auto's, hybrides en plug-inhybrides.<a class="source-ref" href="#bron-12">[12]</a> Ruim één op de vijf personenauto's rijdt inmiddels geheel of gedeeltelijk elektrisch. Daarvan waren bijna 695.000 auto's volledig elektrisch.<a class="source-ref" href="#bron-12">[12]</a></p>
+<p>Nog geen drie jaar eerder was ongeveer één op de negen auto's elektrisch of hybride. Begin 2026 was dat al 21,5 procent van het totale wagenpark.<a class="source-ref" href="#bron-13">[13]</a> Ook dit cijfer verdient context. Nederland heeft tegelijkertijd méér auto's gekregen. Begin 2026 reden er ruim 9,4 miljoen personenauto's rond, 11,5 procent meer dan zeven jaar eerder.<a class="source-ref" href="#bron-13">[13]</a></p>
+<p>Elektrificatie lost dus niet automatisch files, ruimtegebruik of alle milieuproblemen van automobiliteit op. Maar technologisch is er in korte tijd iets fundamenteels veranderd. Een aandrijftechniek die vijftien jaar geleden voor de meeste automobilisten exotisch was, is inmiddels onderdeel van het normale Nederlandse straatbeeld.</p>
+<h2>10. Statushouders vinden na aankomst steeds sneller werk</h2>
+<p>Integratie wordt vaak besproken aan de hand van problemen. De langetermijncijfers laten ook een andere ontwikkeling zien. Van de statushouders die in 2014 een verblijfsvergunning kregen, had na één jaar ongeveer 3 procent betaald werk. Bij statushouders die in 2022 hun vergunning kregen, was dat na één jaar ongeveer 15 procent.<a class="source-ref" href="#bron-14">[14]</a> Dat is vijf keer zoveel.</p>
+<p>De cijfers laten daarnaast zien hoe sterk tijd een rol speelt. Van de statushouders uit het cohort van 2014 had na tien jaar 56 procent betaald werk. Kijk je alleen naar de mensen uit dat cohort die nog in Nederland wonen, dan is dat 60 procent.<a class="source-ref" href="#bron-14">[14]</a></p>
+<p>Daarmee zijn niet alle problemen rond arbeidsmarktintegratie opgelost. Er bestaan bijvoorbeeld duidelijke verschillen tussen mannen en vrouwen, leeftijdsgroepen en nationaliteiten. Statushouders werken bovendien relatief vaak in deeltijd, met tijdelijke contracten en in bepaalde sectoren.<a class="source-ref" href="#bron-15">[15]</a></p>
+<p>Maar de gedachte dat er op dit terrein niets verandert, wordt niet door de cijfers ondersteund. Recentere groepen vinden eerder hun weg naar betaald werk dan het cohort van tien jaar geleden.</p>
+<h2>11. Bijna de helft van Nederland doet vrijwilligerswerk</h2>
+<p>Nederland draait voor een aanzienlijk deel op werk waarvoor niemand een salaris ontvangt. Sportclubs, buurtverenigingen, scholen, zorgorganisaties, kerken, culturele instellingen en maatschappelijke organisaties. In 2025 gaf 47 procent van de Nederlanders van 15 jaar en ouder aan in de voorgaande twaalf maanden vrijwilligerswerk te hebben gedaan voor een organisatie of vereniging.<a class="source-ref" href="#bron-16">[16]</a> Van die vrijwilligers is 60 procent wekelijks of maandelijks actief. Gemiddeld besteden vrijwilligers 3,9 uur per week aan hun vrijwilligerswerk en zij beoordelen dat werk gemiddeld met een 7,7.<a class="source-ref" href="#bron-16">[16]</a></p>
+<p>Dit is geen stijgende ontwikkeling, maar precies daarom is dit punt interessant. In 2023 en 2024 lag het aandeel namelijk op ongeveer 50 procent. In 2025 daalde het naar 47 procent. Daarmee zijn we ongeveer terug op het niveau van 2019.<a class="source-ref" href="#bron-16">[16]</a> Tijdens de coronajaren 2020 tot en met 2022 lag het gemiddelde op 41 procent. Dit is dus minder een verhaal van structurele vooruitgang dan van maatschappelijk herstel. Na de forse terugval tijdens corona is vrijwilligerswerk teruggekeerd naar ongeveer het niveau van vóór de pandemie.</p>
+<p>Dat is dus iets dat aandacht verdient. Bijna één op de twee Nederlanders zet zich in een jaar belangeloos in voor een organisatie of vereniging. Een cijfer dat zelden de voorpagina haalt.</p>
+<h2>12. En soms blijkt vooruitgang helemaal geen vooruitgang te zijn</h2>
+<p>Tijdens het maken van deze lijst vonden we ook cijfers die verleidelijk waren om positief te presenteren. Die hebben we niet allemaal gebruikt.</p>
+<p>Het aantal verkeersdoden bijvoorbeeld. Dat past niet in deze lijst. In 2025 kwamen 759 mensen om het leven in het verkeer, aanzienlijk meer dan een jaar eerder.</p>
+<p>Voortijdig schoolverlaten? Evenmin. Onder jongeren van 18 tot 25 jaar daalde het lange tijd, maar de recente cijfers laten juist weer een stijging zien. Het aantal voortijdig schoolverlaters in die leeftijdsgroep lag in 2025 ongeveer even hoog als in 2015.<a class="source-ref" href="#bron-17">[17]</a></p>
+<p>Energiearmoede? Ook daar zien we recent een verslechtering. De voorlopige schatting voor 2024 kwam uit op 6,1 procent van de huishoudens, tegenover 4,0 procent in 2023.<a class="source-ref" href="#bron-18">[18]</a></p>
+<p>Waarom zetten we dat in een artikel over vooruitgang? Omdat positief nieuws alleen geloofwaardig is als slecht nieuws ook slecht nieuws mag blijven. Het doel van dit overzicht is niet om twaalf willekeurige grafieken te vinden die omhoog of omlaag lopen in de gewenste richting. Het doel is iets anders.</p>
+<h2>Het nieuws vertelt wat er vandaag gebeurde. Cijfers vertellen soms wat er langzaam veranderde.</h2>
+<p>Als in dit overzicht een les zit, dan is het deze. Veel nieuws gaat noodzakelijkerwijs over afwijkingen. Een grote brand is nieuws. Tienduizenden huizen waarin vandaag niets gebeurde niet. Een faillissement is nieuws. Iemand die na jaren een vaste baan vindt meestal niet. Een geweldsincident haalt de krant. Een woninginbraak die nooit plaatsvond kan per definitie geen nieuws worden. En een zonnepaneel dat vandaag voor de drieduizendste keer elektriciteit produceert, stuurt geen persbericht. Daardoor ontstaat gemakkelijk een vertekening.</p>
+<p>We geloven echt niet dat journalisten alleen maar slecht nieuws willen brengen. Het zit voor een deel in de definitie van nieuws. Nieuws gaat over wat nieuw, opvallend, afwijkend of urgent is. Maar maatschappelijke vooruitgang werkt vaak anders. Die bestaat uit miljoenen kleine veranderingen die afzonderlijk nauwelijks nieuwswaardig zijn. Een roker die stopt. Een statushouder die zijn eerste baan vindt. Een 67-jarige die graag blijft werken. Een huishouden dat niet langer onder de armoedegrens valt. Een auto die voor het eerst elektrisch wordt gekocht. Een windturbine die jarenlang stroom produceert.</p>
+<p>Pas wanneer je jaren later de cijfers naast elkaar legt, zie je wat al die kleine veranderingen samen hebben gedaan. En dan blijkt Nederland niet alleen het land te zijn van woningnood, personeelstekorten, klimaatproblemen en zorgen over bestaanszekerheid. Het is óók een land waarin veel minder mensen roken dan tien jaar geleden. Waar veel minder traditionele vermogenscriminaliteit wordt geregistreerd. Waar veel meer mensen betaald werk hebben. Waar armoede ondanks een recente stijging veel lager ligt dan in 2018. Waar statushouders sneller werk vinden dan eerdere groepen. Waar bijna de helft van de bevolking vrijwilligerswerk doet. En waar de energievoorziening in hoog tempo verandert.</p>
+<p>Dat maakt de problemen van vandaag zeker niet kleiner, maar het maakt ons beeld van Nederland wel completer. Precies wat we proberen met Positief Nieuws: niet doen alsof alles goed gaat, wel zorgen dat wat goed gáát, niet onzichtbaar blijft.</p>
+<h2>Bronnen en verantwoording</h2>
+<p class="source-item" id="bron-1"><span class="source-number">[1]</span> CBS, RIVM en Trimbos-instituut. Gezondheidsenquête/Leefstijlmonitor.<br />
+<a href="https://www.cbs.nl/nl-nl/nieuws/2025/12/roken-en-alcoholgebruik-afgenomen-sinds-2014-overgewicht-gelijk-gebleven">https://www.cbs.nl/nl-nl/nieuws/2025/12/roken-en-alcoholgebruik-afgenomen-sinds-2014-overgewicht-gelijk-gebleven</a></p>
+<p class="source-item" id="bron-2"><span class="source-number">[2]</span> CBS. 173 duizend mensen overleden in 2025.<br />
+<a href="https://www.cbs.nl/nl-nl/nieuws/2026/11/173-duizend-mensen-overleden-in-2025">https://www.cbs.nl/nl-nl/nieuws/2026/11/173-duizend-mensen-overleden-in-2025</a></p>
+<p class="source-item" id="bron-3"><span class="source-number">[3]</span> CBS StatLine. Geregistreerde criminaliteit; soort misdrijf, regio.<br />
+<a href="https://www.cbs.nl/nl-nl/cijfers/detail/83648NED">https://www.cbs.nl/nl-nl/cijfers/detail/83648NED</a></p>
+<p class="source-item" id="bron-4"><span class="source-number">[4]</span> CBS. Arbeidsmarktstatistieken.<br />
+<a href="https://www.cbs.nl/nl-nl/cijfers/detail/80590ned">https://www.cbs.nl/nl-nl/cijfers/detail/80590ned</a></p>
+<p class="source-item" id="bron-5"><span class="source-number">[5]</span> CBS StatLine. Arbeidsdeelname; kerncijfers.<br />
+<a href="https://www.cbs.nl/nl-nl/cijfers/detail/85264NED">https://www.cbs.nl/nl-nl/cijfers/detail/85264NED</a></p>
+<p class="source-item" id="bron-6"><span class="source-number">[6]</span> CBS. Arbeidsparticipatie naar leeftijd en geslacht.<br />
+<a href="https://www.cbs.nl/nl-nl/visualisaties/dashboard-arbeidsmarkt/werkenden/arbeidsparticipatie-naar-leeftijd-en-geslacht">https://www.cbs.nl/nl-nl/visualisaties/dashboard-arbeidsmarkt/werkenden/arbeidsparticipatie-naar-leeftijd-en-geslacht</a></p>
+<p class="source-item" id="bron-7"><span class="source-number">[7]</span> CBS. Leven in armoede 2025.<br />
+<a href="https://www.cbs.nl/item?sc_itemid=4bdbb872-af36-4ea8-8cf7-eec82bf5d053&amp;sc_lang=nl-nl">https://www.cbs.nl/item?sc_itemid=4bdbb872-af36-4ea8-8cf7-eec82bf5d053&amp;sc_lang=nl-nl</a></p>
+<p class="source-item" id="bron-8"><span class="source-number">[8]</span> CBS, SCP en Nibud. Een nieuwe methode om armoede in Nederland te meten.<br />
+<a href="https://www.cbs.nl/nl-nl/longread/rapportages/2024/een-nieuwe-methode-om-armoede-in-nederland-te-meten-samenvatting">https://www.cbs.nl/nl-nl/longread/rapportages/2024/een-nieuwe-methode-om-armoede-in-nederland-te-meten-samenvatting</a></p>
+<p class="source-item" id="bron-9"><span class="source-number">[9]</span> CBS. 23 procent energieverbruik komt uit hernieuwbare bronnen.<br />
+<a href="https://www.cbs.nl/nl-nl/nieuws/2026/25/23-procent-energieverbruik-komt-uit-hernieuwbare-bronnen">https://www.cbs.nl/nl-nl/nieuws/2026/25/23-procent-energieverbruik-komt-uit-hernieuwbare-bronnen</a></p>
+<p class="source-item" id="bron-10"><span class="source-number">[10]</span> CBS. Hernieuwbare energie in Nederland 2025.<br />
+<a href="https://www.cbs.nl/nl-nl/publicatie/2026/40/hernieuwbare-energie-in-nederland-2025">https://www.cbs.nl/nl-nl/publicatie/2026/40/hernieuwbare-energie-in-nederland-2025</a></p>
+<p class="source-item" id="bron-11"><span class="source-number">[11]</span> CBS en RIVM/Emissieregistratie. Stijging uitstoot broeikasgassen in 2025.<br />
+<a href="https://www.cbs.nl/nl-nl/nieuws/2026/11/stijging-uitstoot-broeikasgassen-in-2025">https://www.cbs.nl/nl-nl/nieuws/2026/11/stijging-uitstoot-broeikasgassen-in-2025</a></p>
+<p class="source-item" id="bron-12"><span class="source-number">[12]</span> CBS. Bijna kwart meer auto's met elektromotor.<br />
+<a href="https://www.cbs.nl/nl-nl/nieuws/2026/15/bijna-kwart-meer-auto-s-met-elektromotor">https://www.cbs.nl/nl-nl/nieuws/2026/15/bijna-kwart-meer-auto-s-met-elektromotor</a></p>
+<p class="source-item" id="bron-13"><span class="source-number">[13]</span> CBS. Personenauto's.<br />
+<a href="https://www.cbs.nl/nl-nl/visualisaties/verkeer-en-vervoer/vervoermiddelen-en-infrastructuur/personenautos">https://www.cbs.nl/nl-nl/visualisaties/verkeer-en-vervoer/vervoermiddelen-en-infrastructuur/personenautos</a></p>
+<p class="source-item" id="bron-14"><span class="source-number">[14]</span> CBS. Asiel en integratie 2026.<br />
+<a href="https://longreads.cbs.nl/asielenintegratie-2026/">https://longreads.cbs.nl/asielenintegratie-2026/</a></p>
+<p class="source-item" id="bron-15"><span class="source-number">[15]</span> CBS. Asiel en integratie 2026, arbeidsmarktpositie statushouders.<br />
+<a href="https://longreads.cbs.nl/asielenintegratie-2026/">https://longreads.cbs.nl/asielenintegratie-2026/</a></p>
+<p class="source-item" id="bron-16"><span class="source-number">[16]</span> CBS. Vrijwilligerswerk 2025.<br />
+<a href="https://www.cbs.nl/nl-nl/longread/aanvullende-statistische-diensten/2026/vrijwilligerswerk-2025?onepage=true">https://www.cbs.nl/nl-nl/longread/aanvullende-statistische-diensten/2026/vrijwilligerswerk-2025?onepage=true</a></p>
+<p class="source-item" id="bron-17"><span class="source-number">[17]</span> CBS StatLine. Cijfers voortijdig schoolverlaten.<br />
+<a href="https://www.cbs.nl/nl-nl/cijfers/detail/85298NED">https://www.cbs.nl/nl-nl/cijfers/detail/85298NED</a></p>
+<p class="source-item" id="bron-18"><span class="source-number">[18]</span> CBS en TNO. Energiearmoede in 2024 gestegen naar 6,1 procent.<br />
+<a href="https://www.cbs.nl/nl-nl/nieuws/2025/30/energiearmoede-in-2024-gestegen-naar-6-1-procent">https://www.cbs.nl/nl-nl/nieuws/2025/30/energiearmoede-in-2024-gestegen-naar-6-1-procent</a></p>
+<p>Onderzoek en tekst: Positief Nieuws, met ondersteuning van AI bij onderzoek en verwerking.</p>
+<p>Cijfers gecontroleerd aan de hand van de hierboven genoemde bronnen.</p>
+<p>Laatste actualisatie: 2 oktober 2026.</p>
+
+
+        <section class="support-teaser" aria-labelledby="special-support-title">
+          <div class="support-grid">
+            <div>
+              <p class="support-kicker">Steun Positief nieuws</p>
+              <h2 id="special-support-title">Help Positief nieuws door te gaan.</h2>
+              <p class="support-copy">Positief nieuws is gratis en zonder advertenties. Met een kleine vrijwillige bijdrage help je de site en nieuwsbrief draaiend te houden. Je kiest zelf het bedrag.</p>
+            </div>
+            <a class="support-button" href="/steun/" onclick="if(window.sa_event){sa_event('steun_teaser_click')};">Steun Positief nieuws</a>
+          </div>
+        </section>
+
+        <div class="article-footer">
+          <a class="back-home" href="/">← Terug naar Positief nieuws</a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer>Positief nieuws · Dit gebeurt ook.</footer>
+
+  <script>
+    window.sa_metadata = {
+      page_type: "special",
+      special: "nederland-gaat-ook-vooruit"
+    };
+
+    window.sa_event = window.sa_event || function () {
+      const args = [].slice.call(arguments);
+      window.sa_event.q ? window.sa_event.q.push(args) : window.sa_event.q = [args];
+    };
+
+    const analyticsScript = document.createElement("script");
+    analyticsScript.async = true;
+    analyticsScript.setAttribute("data-hostname", "positief-nieuws.nl");
+    analyticsScript.src = "https://scripts.simpleanalyticscdn.com/latest.js";
+    analyticsScript.addEventListener("load", () => {
+      const autoEventsScript = document.createElement("script");
+      autoEventsScript.async = true;
+      autoEventsScript.setAttribute("data-full-urls", "true");
+      autoEventsScript.src = "https://scripts.simpleanalyticscdn.com/auto-events.js";
+      document.body.appendChild(autoEventsScript);
+    });
+    document.body.appendChild(analyticsScript);
+  </script>
+</body>
+</html>
