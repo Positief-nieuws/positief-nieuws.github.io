@@ -140,14 +140,19 @@
 .article-figure{
   margin:34px 0 46px;
 }
-.article-figure img{
-  display:block;
+.article-figure-media{
   width:100%;
   aspect-ratio:16 / 9;
-  object-fit:cover;
+  overflow:hidden;
   border:1px solid var(--line-soft);
   border-radius:14px;
   background:rgba(23,63,49,.04);
+}
+.article-figure img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
 }
 .article-figure figcaption{
   margin-top:8px;
@@ -234,7 +239,7 @@
       .article{padding-bottom:66px}
       .article-body h2{margin-top:44px;font-size:1.5rem}
       .article-figure{margin:28px 0 38px}
-      .article-figure img{border-radius:11px}
+      .article-figure-media{border-radius:11px}
       .support-teaser{padding:24px 22px}
       .support-grid{grid-template-columns:1fr;gap:20px}
       .support-button{width:100%}
@@ -302,7 +307,8 @@
 <p>Maar er gebeurt iets merkwaardigs wanneer je uitzoomt. Kijk niet naar vandaag tegenover gisteren, maar naar 2025 tegenover 2015. Of naar 2024 tegenover 2018. Dan verschijnt er een ander Nederland. Een land waarin op een aantal terreinen behoorlijk grote veranderingen hebben plaatsgevonden, zonder dat die iedere avond het nieuws halen.</p>
 <p>Positief Nieuws ging daarom op zoek naar ontwikkelingen die aan drie voorwaarden voldoen: ze moeten meetbaar, relevant en controleerbaar zijn. We gaan niet vertellen waarom Nederland eigenlijk fantastisch is, gebaseerd op een verzameling feelgoodfeitjes. En tonen ook geen cijfers waarvan we de minder positieve context hebben weggelaten. Gewoon de vraag: <strong>Wat is er in Nederland aantoonbaar beter geworden?</strong> Het antwoord daarop vonden we.</p>
 <figure class="article-figure">
-  <img
+  <div class="article-figure-media">
+<img
     src="https://cdn.pixabay.com/photo/2019/09/22/16/18/bicycle-4496443_1280.jpg"
     alt="Fiets in een rustige Nederlandse straat"
     width="1280"
@@ -310,6 +316,7 @@
     loading="lazy"
     decoding="async"
   >
+  </div>
   <figcaption>Beeld: <a href="https://pixabay.com/photos/bicycle-street-street-photography-4496443/" target="_blank" rel="noopener noreferrer">Jhnndy via Pixabay</a></figcaption>
 </figure>
 <h2>1. We zijn veel minder gaan roken</h2>
@@ -333,7 +340,8 @@
 <p>Achter die groei van de arbeidsparticipatie zit een ontwikkeling die nog opvallender is. Neem vrouwen van 55 tot 65 jaar. In 2015 had 52,5 procent van hen betaald werk. In 2025 was dat 69,8 procent.<a class="source-ref" href="#bron-6">[6]</a> Bij mannen van dezelfde leeftijd steeg het aandeel van 70,1 naar 81,9 procent.<a class="source-ref" href="#bron-6">[6]</a> Ook na het 65e levensjaar wordt vaker gewerkt. Bij vrouwen van 65 tot 75 jaar steeg de nettoarbeidsparticipatie tussen 2015 en 2025 van 5,7 naar 15,4 procent. Bij mannen ging die van 13,8 naar 26,4 procent.<a class="source-ref" href="#bron-6">[6]</a></p>
 <p>Dat heeft meerdere oorzaken, waaronder de verhoging van de AOW-leeftijd en veranderingen in de arbeidsmarkt. Je kunt over die oorzaken verschillend denken. Het cijfer zelf is helder: oudere Nederlanders zijn veel vaker economisch actief dan tien jaar geleden.</p>
 <figure class="article-figure">
-  <img
+  <div class="article-figure-media">
+<img
     src="https://cdn.pixabay.com/photo/2022/01/20/17/51/office-desk-6952919_1280.jpg"
     alt="Man aan het werk achter een bureau in een modern kantoor"
     width="1280"
@@ -341,6 +349,7 @@
     loading="lazy"
     decoding="async"
   >
+  </div>
   <figcaption>Beeld: <a href="https://pixabay.com/photos/office-desk-man-business-workplace-6952919/" target="_blank" rel="noopener noreferrer">reallywellmadedesks via Pixabay</a></figcaption>
 </figure>
 <h2>6. Armoede ligt ondanks een recente stijging veel lager dan enkele jaren geleden</h2>
@@ -355,7 +364,8 @@
 <p>En Nederland is er nog lang niet. Voor het wettelijke klimaatdoel wordt 1990 als referentiejaar gebruikt. De Klimaatwet mikt voor 2030 op minimaal 55 procent minder uitstoot dan in dat jaar. Om daar te komen moet de daling de komende jaren veel sneller gaan dan gemiddeld in de afgelopen jaren.<a class="source-ref" href="#bron-11">[11]</a> Dat verandert niets aan wat er in de periode van dit artikel is gebeurd: tussen 2015 en 2025 nam de jaarlijkse uitstoot met ongeveer 27 procent af.</p>
 <p>Je kunt tegelijkertijd constateren dat de uitstoot in de afgelopen tien jaar fors is gedaald én dat het huidige tempo onvoldoende is voor het wettelijke doel. Die twee feiten spreken elkaar niet tegen.</p>
 <figure class="article-figure">
-  <img
+  <div class="article-figure-media">
+<img
     src="https://cdn.pixabay.com/photo/2022/08/18/11/29/wind-energy-7394705_1280.jpg"
     alt="Windturbines in een Nederlands landschap bij zonsopkomst"
     width="1280"
@@ -363,6 +373,7 @@
     loading="lazy"
     decoding="async"
   >
+  </div>
   <figcaption>Beeld: <a href="https://pixabay.com/photos/wind-energy-wind-turbines-windmills-7394705/" target="_blank" rel="noopener noreferrer">ClickerHappy via Pixabay</a></figcaption>
 </figure>
 <h2>9. Elektrisch rijden is van uitzondering naar normaal straatbeeld gegaan</h2>
@@ -379,7 +390,8 @@
 <p>Dit is geen stijgende ontwikkeling, maar precies daarom is dit punt interessant. In 2023 en 2024 lag het aandeel namelijk op ongeveer 50 procent. In 2025 daalde het naar 47 procent. Daarmee zijn we ongeveer terug op het niveau van 2019.<a class="source-ref" href="#bron-16">[16]</a> Tijdens de coronajaren 2020 tot en met 2022 lag het gemiddelde op 41 procent. Dit is dus minder een verhaal van structurele vooruitgang dan van maatschappelijk herstel. Na de forse terugval tijdens corona is vrijwilligerswerk teruggekeerd naar ongeveer het niveau van vóór de pandemie.</p>
 <p>Dat is dus iets dat aandacht verdient. Bijna één op de twee Nederlanders zet zich in een jaar belangeloos in voor een organisatie of vereniging. Een cijfer dat zelden de voorpagina haalt.</p>
 <figure class="article-figure">
-  <img
+  <div class="article-figure-media">
+<img
     src="https://cdn.pixabay.com/photo/2021/11/06/00/32/volunteer-6772196_1280.jpg"
     alt="Vrijwilliger in gesprek met een oudere man"
     width="1280"
@@ -387,6 +399,7 @@
     loading="lazy"
     decoding="async"
   >
+  </div>
   <figcaption>Beeld: <a href="https://pixabay.com/photos/volunteer-respect-the-elderly-6772196/" target="_blank" rel="noopener noreferrer">寻雨小鱼 via Pixabay</a></figcaption>
 </figure>
 <h2>Nee, niet alles wordt beter</h2>
