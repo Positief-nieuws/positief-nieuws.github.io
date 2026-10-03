@@ -615,6 +615,89 @@
     }
     .ios-install-panel.is-visible { display: block; }
 
+    .special-feature {
+      margin: 0 auto 54px;
+      padding: 34px 36px;
+      border: 1px solid rgba(23, 63, 49, .18);
+      border-radius: 18px;
+      background:
+        radial-gradient(circle at 92% 18%, rgba(214,161,58,.14), transparent 30%),
+        #f3efe7;
+    }
+
+    .special-feature-grid {
+      display: grid;
+      grid-template-columns: 112px minmax(0,1fr);
+      align-items: center;
+      gap: 30px;
+    }
+
+    .special-feature-number {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 112px;
+      border: 1px solid rgba(214,161,58,.38);
+      border-radius: 16px;
+      background: rgba(255,255,255,.42);
+      color: var(--green-dark);
+      text-align: center;
+    }
+
+    .special-feature-number strong {
+      display: block;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 2.9rem;
+      line-height: .9;
+      letter-spacing: -.06em;
+    }
+
+    .special-feature-number span {
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: .62rem;
+      font-weight: 800;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .special-feature .section-kicker {
+      color: var(--green);
+    }
+
+    .special-feature h2 {
+      margin: 8px 0 0;
+      color: #111512;
+      font-size: 1.9rem;
+      line-height: 1.05;
+      letter-spacing: -.04em;
+    }
+
+    .special-feature-copy {
+      max-width: 650px;
+      margin: 11px 0 0;
+      color: #3f4742;
+      font-size: .9rem;
+      line-height: 1.55;
+    }
+
+    .special-feature-link {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 16px;
+      color: var(--green-dark);
+      font-size: .76rem;
+      font-weight: 800;
+      text-decoration: underline;
+      text-decoration-color: rgba(23,63,49,.28);
+      text-underline-offset: 3px;
+    }
+
+    .special-feature-link:hover {
+      text-decoration-color: currentColor;
+    }
+
     .support-teaser {
       margin: 0 auto 54px;
       padding: 30px 34px;
@@ -1068,6 +1151,25 @@
       .briefing-row { grid-template-columns: 28px minmax(0,1fr); }
       .edition-end { padding: 72px 0 54px; }
       .edition-end h2 { font-size: clamp(2.25rem, 11vw, 3.1rem); }
+
+      .special-feature {
+        margin-bottom: 40px;
+        padding: 24px 22px;
+      }
+      .special-feature-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .special-feature-number {
+        width: 92px;
+        min-height: 92px;
+        align-items: flex-start;
+        padding: 16px;
+        text-align: left;
+      }
+      .special-feature-number strong { font-size: 2.45rem; }
+      .special-feature h2 { font-size: 1.55rem; }
+      .special-feature-copy { font-size: .87rem; }
 
       .support-teaser {
         margin-bottom: 40px;
@@ -1627,6 +1729,25 @@
     </section>
 
     <main>
+
+      <section class="special-feature wide-shell" aria-labelledby="home-special-title">
+        <div class="special-feature-grid">
+          <div class="special-feature-number" aria-hidden="true">
+            <strong>12</strong>
+            <span>ontwikkelingen</span>
+          </div>
+          <div>
+            <p class="section-kicker">Special · 12–15 min</p>
+            <h2 id="home-special-title">Nederland gaat óók vooruit.</h2>
+            <p class="special-feature-copy">Twaalf ontwikkelingen die je nauwelijks in het dagelijkse nieuws ziet, maar die Nederland de afgelopen jaren aantoonbaar hebben veranderd. Van roken en criminaliteit tot werk, armoede en energie. We doken in de cijfers.</p>
+            <a
+              class="special-feature-link"
+              href="/specials/nederland-gaat-ook-vooruit/"
+              onclick="trackSimpleEvent('special_home_click')"
+            >Lees de special →</a>
+          </div>
+        </div>
+      </section>
 
       <section class="news-section nl-block">
         <div class="content-shell">
