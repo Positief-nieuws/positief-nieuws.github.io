@@ -67,11 +67,49 @@
 .header-row{display:flex;align-items:center;justify-content:space-between;gap:24px}
 .brand{display:inline-flex;align-items:center;gap:11px;color:var(--ink);font-size:.98rem;font-weight:800;text-decoration:none;letter-spacing:-.02em}
 .brand-sun{width:27px;height:27px;color:var(--accent);flex:0 0 auto}
-.mobile-menu-toggle{display:none;width:42px;height:42px;padding:0;border:1px solid rgba(23,63,49,.18);border-radius:12px;background:transparent;cursor:pointer}
-.mobile-menu-toggle span{display:block;width:18px;height:2px;margin:4px auto;background:var(--green-dark);border-radius:999px;transition:transform .18s ease,opacity .18s ease}
-.site-header.menu-open .mobile-menu-toggle span:nth-child(1){transform:translateY(6px) rotate(45deg)}
-.site-header.menu-open .mobile-menu-toggle span:nth-child(2){opacity:0}
-.site-header.menu-open .mobile-menu-toggle span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.mobile-menu-toggle{
+  display:none;
+  min-height:42px;
+  padding:0 13px;
+  border:1px solid rgba(23,63,49,.16);
+  border-radius:999px;
+  background:rgba(255,255,255,.3);
+  color:var(--green-dark);
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  cursor:pointer;
+  -webkit-tap-highlight-color:transparent;
+}
+.menu-icon{
+  display:inline-flex;
+  width:17px;
+  flex-direction:column;
+  gap:4px;
+}
+.menu-line{
+  display:block;
+  width:17px;
+  height:1.5px;
+  border-radius:999px;
+  background:currentColor;
+  transition:transform 160ms ease,opacity 160ms ease;
+  transform-origin:center;
+}
+.menu-label{
+  font-size:.76rem;
+  font-weight:750;
+  line-height:1;
+}
+.site-header.menu-open .menu-line:nth-child(1){
+  transform:translateY(5.5px) rotate(45deg);
+}
+.site-header.menu-open .menu-line:nth-child(2){
+  opacity:0;
+}
+.site-header.menu-open .menu-line:nth-child(3){
+  transform:translateY(-5.5px) rotate(-45deg);
+}
 .app-nav-inner{display:flex;align-items:center;gap:22px}
 .app-nav a{font-size:.72rem;font-weight:700;text-decoration:none}
 .app-nav a:hover{color:var(--accent)}
@@ -126,7 +164,7 @@
       .header-shell,.content-shell{width:min(calc(100% - 30px),100%)}
       .site-header{padding:16px 0 8px}
       .header-row{position:relative;align-items:center}
-      .mobile-menu-toggle{display:inline-block;margin-left:auto;flex:0 0 auto}
+      .mobile-menu-toggle{display:inline-flex;margin-left:auto;flex:0 0 auto}
       .app-nav{
         display:none;
         position:absolute;
@@ -185,11 +223,16 @@
       <button
         class="mobile-menu-toggle"
         type="button"
+        aria-label="Menu openen"
         aria-expanded="false"
         aria-controls="special-nav"
-        aria-label="Menu openen"
       >
-        <span></span><span></span><span></span>
+        <span class="menu-icon" aria-hidden="true">
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+        </span>
+        <span class="menu-label">Menu</span>
       </button>
 
       <nav class="app-nav" id="special-nav" aria-label="Hoofdnavigatie">
