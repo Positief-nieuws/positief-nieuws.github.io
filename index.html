@@ -1607,6 +1607,46 @@
 
   </style>
 
+<style>
+  /* Compacte overgang rond de uitgelichte Special */
+  .nl-block { padding-bottom: 22px; }
+  .world-block { padding-top: 22px; }
+  @media (max-width: 760px) {
+    .nl-block { padding-bottom: 16px; }
+    .world-block { padding-top: 16px; }
+  }
+</style>
+<style>
+  /* Editie-opzet: een duidelijke masthead en vaste redactionele rubrieken. */
+  #today-view .hero { padding: 52px 0 30px; background: none; }
+  #today-view .hero::before, #today-view .hero::after { display: none; }
+  #today-view .edition-brand { margin: 0 0 22px; color: var(--green-dark); font-size: .76rem; }
+  #today-view .hero-date { margin: 0 0 18px; padding: 11px 0; border-top: 3px double var(--green-dark); border-bottom: 1px solid var(--line); text-transform: uppercase; letter-spacing: .09em; font-size: .7rem; }
+  #today-view .hero-title { max-width: 720px; font-size: clamp(2.5rem, 5.6vw, 3.65rem); line-height: 1.06; letter-spacing: -.04em; text-wrap: balance; }
+  #today-view .hero-copy { max-width: 620px; margin-top: 21px; }
+  #today-view .hero-meta { margin-top: 26px; padding: 13px 0; border-top: 1px solid var(--line); border-bottom: 3px double var(--green-dark); }
+  #today-view .hero-meta::before { display: none; }
+  #today-view .news-section { background: none; }
+  #today-view .news-section::before, #today-view .news-section::after { display: none; }
+  #today-view .section-heading { align-items: baseline; padding-bottom: 12px; border-bottom: 2px solid var(--green-dark); }
+  #today-view .section-heading::after { display: none; }
+  #today-view .section-heading h2 { font-family: Georgia, "Times New Roman", serif; font-size: 1.45rem; line-height: 1.2; letter-spacing: -.02em; text-transform: none; font-weight: 700; }
+  #today-view .section-count { flex-shrink: 0; color: var(--muted); }
+  #today-view .briefing-block { padding-top: 30px; }
+  #today-view .briefing-block .section-heading { border-top: 1px solid var(--line); padding-top: 20px; }
+  #today-view .article-row::before { display: none; }
+  #today-view .special-feature { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  #today-view .edition-end { border-top: 3px double var(--green-dark); margin-top: 30px; }
+  @media (max-width: 760px) {
+    #today-view .hero { padding: 30px 0 20px; }
+    #today-view .edition-brand { margin-bottom: 17px; }
+    #today-view .hero-title { font-size: clamp(2rem, 8.6vw, 3rem); line-height: 1.08; }
+    #today-view .hero-date { font-size: .65rem; }
+    #today-view .hero-meta { gap: 10px; }
+    #today-view .section-heading { gap: 12px; }
+    #today-view .section-heading h2 { font-size: 1.2rem; }
+  }
+</style>
 </head>
 <body>
 
@@ -1714,8 +1754,9 @@
 
     <section class="hero">
       <div class="content-shell">
+        <p class="section-kicker edition-brand">Dit gebeurt ook.</p>
         <p class="hero-date" id="edition-date">Editie van vandaag</p>
-        <h1 class="hero-title">Dit gebeurt ook<span class="hero-title-dot">.</span></h1>
+        <h1 class="hero-title">Positief nieuws uit Nederland en de wereld</h1>
         <p class="hero-copy">
           Het belangrijkste positieve nieuws van vandaag, uit Nederland en de wereld.
           In een paar minuten weet je wat er goed gaat én wat je verder moet weten
@@ -1737,7 +1778,7 @@
 <section class="news-section nl-block">
         <div class="content-shell">
           <div class="section-heading">
-            <p class="section-kicker">Goed nieuws uit Nederland</p>
+            <h2 class="section-kicker">Goed nieuws uit Nederland</h2>
             <span class="section-count">6 verhalen</span>
           </div>
           <p class="section-intro-visually-hidden">
@@ -1760,7 +1801,7 @@
             </svg>
           </div>
           <div>
-            <p class="section-kicker">Special · 12–15 min</p>
+            <p class="section-kicker">Special · 11 ontwikkelingen</p>
             <h2 id="home-special-title">
               <a href="/specials/nederland-gaat-ook-vooruit/" onclick="trackSimpleEvent('special_home_click')">Nederland gaat óók vooruit.</a>
             </h2>
@@ -1777,7 +1818,7 @@
       <section class="news-section world-block">
         <div class="content-shell">
           <div class="section-heading">
-            <p class="section-kicker">Goed nieuws uit de wereld</p>
+            <h2 class="section-kicker">Goed nieuws uit de wereld</h2>
             <span class="section-count">6 verhalen</span>
           </div>
           <p class="section-note">
@@ -1791,7 +1832,7 @@
       <section class="news-section briefing-block" id="headlines-section" hidden>
         <div class="content-shell">
           <div class="section-heading">
-            <p class="section-kicker">Wat je verder moet weten</p>
+            <h2 class="section-kicker">Wat je verder moet weten</h2>
             <span class="section-count">3 verhalen</span>
           </div>
           <p class="section-note">
@@ -1831,8 +1872,9 @@
         <div class="support-teaser-grid">
           <div>
             <p class="section-kicker">Steun Positief nieuws</p>
-            <h2 id="support-teaser-title">Help Positief nieuws door te gaan.</h2>
-            <p>Positief nieuws is gratis en zonder advertenties. Met een kleine vrijwillige bijdrage help je de site en nieuwsbrief draaiend te houden. Je kiest zelf het bedrag.</p>
+            <h2 id="support-teaser-title">Vind je het fijn dat iemand dit twee keer per week voor je uitzoekt?</h2>
+            <p>Met een vrijwillige bijdrage help je mij om Positief nieuws te blijven maken. Je bepaalt zelf hoeveel je wilt geven.</p>
+            <p>Positief nieuws blijft gratis en zonder advertenties.</p>
           </div>
           <a
             class="support-button"
@@ -3825,13 +3867,3 @@
   <!-- production release 2026-08-29: typografie, warme accenten en dynamische editie-intro -->
 </body>
 </html>
-
-<style>
-  /* Compacte overgang rond de uitgelichte Special */
-  .nl-block { padding-bottom: 22px; }
-  .world-block { padding-top: 22px; }
-  @media (max-width: 760px) {
-    .nl-block { padding-bottom: 16px; }
-    .world-block { padding-top: 16px; }
-  }
-</style>
