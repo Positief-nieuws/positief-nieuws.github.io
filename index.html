@@ -13,7 +13,6 @@
   <meta property="og:description" content="Het belangrijkste positieve nieuws van vandaag uit Nederland en de wereld. In een paar minuten bijgepraat, zonder eindeloos scrollen.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://positief-nieuws.nl/">
-  <meta property="og:site_name" content="Positief nieuws">
   <link rel="canonical" href="https://positief-nieuws.nl/">
 
   <meta name="theme-color" content="#17382b">
@@ -21,8 +20,6 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="Positief nieuws">
   <link rel="manifest" href="/manifest.json?v=4">
-  <link rel="apple-touch-icon" href="/icon-192-v3.png">
-
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Positief nieuws vandaag | Nederland en de wereld">
   <meta name="twitter:description" content="Het belangrijkste positieve nieuws van vandaag uit Nederland en de wereld. In een paar minuten bijgepraat, zonder eindeloos scrollen.">
@@ -37,7 +34,13 @@
       "@type": "Organization",
       "@id": "https://positief-nieuws.nl/#publisher",
       "name": "Positief nieuws",
-      "url": "https://positief-nieuws.nl/"
+      "url": "https://positief-nieuws.nl/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://positief-nieuws.nl/sun-icon-512.png",
+        "width": 512,
+        "height": 512
+      }
     },
     {
       "@type": "WebSite",
@@ -168,7 +171,7 @@
     }
   ]
 }
-  </script>
+</script>
 
   
   <style>
@@ -1737,8 +1740,7 @@
       }
     }
 
-    .edition-permalink { margin: -4px 0 20px; font-size: .78rem; color: var(--green-dark); }
-    .edition-permalink a, .home-topic-links a { text-underline-offset: 3px; }
+    .home-topic-links a { text-underline-offset: 3px; }
     .home-topic-links { line-height: 1.9; }
   </style>
 
@@ -1782,7 +1784,7 @@
       window.sa_event.q ? window.sa_event.q.push(args) : window.sa_event.q = [args];
     };
   </script>
-</head>
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64"><link rel="icon" type="image/png" href="/favicon.png" sizes="96x96"><link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180"><meta property="og:site_name" content="Positief nieuws"><meta name="application-name" content="Positief nieuws"></head>
 <body>
 
   <script>
@@ -1892,7 +1894,6 @@
       <div class="content-shell">
         <p class="section-kicker edition-brand">Dit gebeurt ook.</p>
         <!-- homepage-date:start --><p class="hero-date" id="edition-date"><time datetime="2026-10-01">Editie van donderdag 1 oktober 2026</time></p><!-- homepage-date:end -->
-        <p class="edition-permalink"><a id="edition-permalink" href="/edities/2026-10-01/">Lees deze editie op een vaste pagina →</a></p>
         <h1 class="hero-title">Positief nieuws uit Nederland en de wereld</h1>
         <p class="hero-copy">
           Het belangrijkste positieve nieuws van vandaag, uit Nederland en de wereld.
@@ -3583,8 +3584,6 @@
       time.textContent = validDate ? formatEditionDate(rawDate) : "Editiedatum onbekend";
       if (validDate) time.setAttribute("datetime", rawDate);
       dateEl.replaceChildren(time);
-      const permalink = $("#edition-permalink");
-      permalink.href = validDate ? `/edities/${rawDate}/` : "/edities/";
       const schemaEl = $("#homepage-schema");
       const schema = JSON.parse(schemaEl.textContent);
       const page = schema["@graph"].find(node => node["@id"] === "https://positief-nieuws.nl/#homepage");

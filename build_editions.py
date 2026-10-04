@@ -1912,7 +1912,6 @@ def update_homepage(data):
     markup, count = re.subn(r'<!-- homepage-date:start -->.*?<!-- homepage-date:end -->', lambda _: date_html, markup, flags=re.S)
     if count != 1:
         raise ValueError("Homepage-datummarker ontbreekt of is dubbel.")
-    markup = re.sub(r'(<a id="edition-permalink" href=")[^"]*', rf'\g<1>/edities/{edition_date}/', markup)
     homepage.write_text(markup, encoding="utf-8")
     print(f"Homepage bijgewerkt: editie {edition_date}, {len(story_list)} direct leesbare verhalen.")
 
@@ -1985,15 +1984,53 @@ def validate_current():
     print("nieuws.json is geldig: alle positieve artikelen vallen onder een van de acht vaste categorieën.")
 
 
+def refresh_branding():
+    """Apply the same crawlable sun favicon and brand name to every public HTML page."""
+    tags = ('<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64">'
+            '<link rel="icon" type="image/png" href="/favicon.png" sizes="96x96">'
+            '<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">'
+            '<meta property="og:site_name" content="Positief nieuws">'
+            '<meta name="application-name" content="Positief nieuws">')
+    count = 0
+    for page in Path('.').rglob('*.html'):
+        if any(part.startswith('.') for part in page.parts):
+            continue
+        markup = page.read_text(encoding='utf-8')
+        if not re.search(r'</head\s*>', markup, re.I):
+            continue
+        markup = re.sub(r'<link\b(?=[^>]*\brel\s*=\s*[\'"](?:icon|shortcut icon|apple-touch-icon)[\'"])[^>]*>\s*', '', markup, flags=re.I)
+        markup = re.sub(r'<meta\b(?=[^>]*\b(?:property|name)\s*=\s*[\'"](?:og:site_name|application-name)[\'"])[^>]*>\s*', '', markup, flags=re.I)
+        markup = re.sub(r'</head\s*>', tags + '</head>', markup, count=1, flags=re.I)
+        if page == Path('index.html'):
+            schema_pattern = r'(<script id="homepage-schema" type="application/ld\+json">)(.*?)(</script>)'
+            def enrich_schema(match):
+                schema = json.loads(match.group(2))
+                for entity in schema.get('@graph', []):
+                    if entity.get('@type') == 'WebSite':
+                        entity.update(name='Positief nieuws', url=SITE_URL + '/')
+                    if entity.get('@type') == 'Organization':
+                        entity['logo'] = {'@type': 'ImageObject', 'url': SITE_URL + '/sun-icon-512.png', 'width': 512, 'height': 512}
+                return match.group(1) + '\n' + json.dumps(schema, ensure_ascii=False, indent=2) + '\n' + match.group(3)
+            markup = re.sub(schema_pattern, enrich_schema, markup, flags=re.S)
+        if markup != page.read_text(encoding='utf-8'):
+            page.write_text(markup, encoding='utf-8')
+            count += 1
+    print(f'Favicon en sitenaam bijgewerkt op {count} pagina(s).')
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--validate-current", action="store_true", help="Valideer alleen nieuws.json en stop daarna.")
+    parser.add_argument("--refresh-branding", action="store_true", help="Werk alleen favicon en merkgegevens op bestaande pagina’s bij.")
     args = parser.parse_args()
     try:
-        if args.validate_current:
+        if args.refresh_branding:
+            refresh_branding()
+        elif args.validate_current:
             validate_current()
         else:
             build_site()
+            refresh_branding()
     except Exception as exc:
         print(f"FOUT: {exc}", file=sys.stderr)
         sys.exit(1)
