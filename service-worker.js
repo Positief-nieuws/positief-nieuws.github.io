@@ -4,16 +4,14 @@ const CORE_ASSETS = [
   "/",
   "/index.html",
   "/manifest.json",
-  "/icon-192-v3.png",
-  "/icon-512-v3.png",
+  "/icon-192-v2.png",
+  "/icon-512-v2.png",
   "/edities/index.json"
 ];
-
 
 self.addEventListener(
   "install",
   event => {
-
     event.waitUntil(
       caches.open(CACHE_NAME)
         .then(cache => cache.addAll(CORE_ASSETS))
@@ -23,11 +21,9 @@ self.addEventListener(
   }
 );
 
-
 self.addEventListener(
   "activate",
   event => {
-
     event.waitUntil(
       caches.keys()
         .then(
@@ -43,25 +39,20 @@ self.addEventListener(
   }
 );
 
-
 self.addEventListener(
   "fetch",
   event => {
-
     const request = event.request;
 
     if (request.method !== "GET") {
       return;
     }
 
-
-    const url =
-      new URL(request.url);
+    const url = new URL(request.url);
 
     if (url.origin !== self.location.origin) {
       return;
     }
-
 
     const isNavigation =
       request.mode === "navigate";
@@ -69,73 +60,56 @@ self.addEventListener(
     const isFreshData =
       url.pathname.endsWith("/nieuws.json")
       || url.pathname.endsWith("/edities/index.json")
-      || /\/edities\/\d{4}-\d{2}-\d{2}\.json$/.test(
-        url.pathname
-      );
-
+      || url.pathname.endsWith("/data/pixabay-images.json")
+      || /\/edities\/\d{4}-\d{2}-\d{2}\.json$/.test(url.pathname);
 
     if (isNavigation || isFreshData) {
-
       event.respondWith(
-        fetch(request)
-          .then(
-            response => {
-
-              const copy =
-                response.clone();
+        fetch(
+          request,
+          isFreshData ? { cache: "no-store" } : undefined
+        )
+          .then(response => {
+            if (response.ok) {
+              const copy = response.clone();
 
               caches.open(CACHE_NAME)
-                .then(
-                  cache =>
-                    cache.put(
-                      request,
-                      copy
-                    )
-                );
-
-              return response;
+                .then(cache => cache.put(request, copy));
             }
-          )
-          .catch(
-            () =>
-              caches.match(request)
-                .then(
-                  cached =>
-                    cached
-                    || caches.match("/")
-                )
+
+            return response;
+          })
+          .catch(() =>
+            caches.match(request)
+              .then(cached =>
+                cached
+                || (isNavigation ? caches.match("/") : undefined)
+              )
           )
       );
 
       return;
     }
 
-
     event.respondWith(
       caches.match(request)
-        .then(
-          cached =>
-            cached
-            || fetch(request)
-              .then(
-                response => {
+        .then(cached => {
+          if (cached) {
+            return cached;
+          }
 
-                  const copy =
-                    response.clone();
+          return fetch(request)
+            .then(response => {
+              if (response.ok) {
+                const copy = response.clone();
 
-                  caches.open(CACHE_NAME)
-                    .then(
-                      cache =>
-                        cache.put(
-                          request,
-                          copy
-                        )
-                    );
+                caches.open(CACHE_NAME)
+                  .then(cache => cache.put(request, copy));
+              }
 
-                  return response;
-                }
-              )
-        )
+              return response;
+            });
+        })
     );
   }
 );
