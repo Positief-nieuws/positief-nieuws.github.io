@@ -1641,6 +1641,12 @@
     #today-view .section-heading h2 { font-size: 1.2rem; }
   }
 </style>
+  <script>
+    window.sa_event = window.sa_event || function () {
+      const args = [].slice.call(arguments);
+      window.sa_event.q ? window.sa_event.q.push(args) : window.sa_event.q = [args];
+    };
+  </script>
 </head>
 <body>
 
@@ -1687,6 +1693,7 @@
           <a id="nav-archive" href="/edities/">Archief</a>
           <a id="nav-topics" href="/onderwerpen/">Onderwerpen</a>
           <a id="nav-about" href="/over/">Over</a>
+          <a href="/contact/" onclick="if(window.sa_event)window.sa_event('contact_click')">Contact</a>
           <a class="header-cta" href="/#nieuwsbrief"><svg class="header-cta-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 6.5h17a1 1 0 0 1 1 1v9a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2v-9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.7"></path><path d="m4.5 8 7.5 6 7.5-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>In je inbox</span></a>
         </div>
       </nav>
@@ -1968,7 +1975,8 @@
 
         <div class="contact-block">
           <h2>Contact</h2>
-          <p>Een tip, vraag, foutje gezien of gewoon iets te melden? Stuur gerust een mail.</p>
+          <p>Een vraag, opmerking of foutje gezien? Ik hoor graag van je. Ook nieuwstips zijn welkom.</p>
+          <p><a href="/contact/" onclick="if(window.sa_event)window.sa_event('contact_click')">Contact</a> · <a href="/tip/" onclick="if(window.sa_event)window.sa_event('tip_redactie_click')">Tip de redactie</a></p>
           <p>
             <a
               class="contact-email"
@@ -2056,7 +2064,7 @@
   </section>
 
   <footer class="site-footer">
-    <div class="wide-shell">Positief nieuws · Dit gebeurt ook. · <a href="/steun/">Steun</a> · <a href="#privacy">Privacy</a></div>
+    <div class="wide-shell">Positief nieuws · Dit gebeurt ook. · <a href="/contact/" onclick="if(window.sa_event)window.sa_event('contact_click')">Contact</a> · <a href="/tip/" onclick="if(window.sa_event)window.sa_event('tip_redactie_click')">Tip de redactie</a> · <a href="/steun/">Steun</a> · <a href="#privacy">Privacy</a></div>
   </footer>
 <script>
     // Oude ?editie=YYYY-MM-DD-links blijven werken en gaan naar de vaste editie-URL.
