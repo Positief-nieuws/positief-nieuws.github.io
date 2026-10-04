@@ -1,9 +1,10 @@
-const CACHE_NAME = "positief-nieuws-v5";
+const CACHE_NAME = "positief-nieuws-v6";
 
 const CORE_ASSETS = [
   "/",
   "/index.html",
   "/manifest.json?v=5",
+  "/edition-analytics.js?v=1",
   "/sun-icon-192.png",
   "/sun-icon-512.png",
   "/sun-apple-touch-icon.png",

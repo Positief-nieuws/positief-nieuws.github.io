@@ -1783,7 +1783,7 @@
       window.sa_event.q ? window.sa_event.q.push(args) : window.sa_event.q = [args];
     };
   </script>
-<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64"><link rel="icon" type="image/png" href="/favicon.png" sizes="96x96"><link rel="apple-touch-icon" href="/sun-apple-touch-icon.png" sizes="180x180"><link rel="manifest" href="/manifest.json?v=5"><meta property="og:site_name" content="Positief nieuws"><meta name="application-name" content="Positief nieuws"></head>
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64"><link rel="icon" type="image/png" href="/favicon.png" sizes="96x96"><link rel="apple-touch-icon" href="/sun-apple-touch-icon.png" sizes="180x180"><link rel="manifest" href="/manifest.json?v=5"><meta property="og:site_name" content="Positief nieuws"><meta name="application-name" content="Positief nieuws"><!-- edition-analytics:start --><script src="/edition-analytics.js?v=1" data-page-type="homepage" data-edition="2026-10-01"></script><!-- edition-analytics:end --></head>
 <body>
 
   <script>
@@ -3507,6 +3507,7 @@
 
 
     function loadAnalytics(editionDate) {
+      if (window.pnSetEdition) window.pnSetEdition(editionDate);
 
       window.sa_event =
         window.sa_event ||
@@ -3519,9 +3520,9 @@
             : window.sa_event.q = [args];
         };
 
-      window.sa_metadata = {
-        edition: editionDate || "onbekend"
-      };
+      window.sa_metadata = Object.assign({}, window.sa_metadata, {
+        edition: editionDate || "none"
+      });
 
 
       if (analyticsLoaded) {
@@ -3535,6 +3536,7 @@
         document.createElement("script");
 
       analyticsScript.async = true;
+      analyticsScript.setAttribute("data-metadata-collector", "pnAnalyticsMetadata");
       analyticsScript.setAttribute(
         "data-hostname",
         "positief-nieuws.nl"

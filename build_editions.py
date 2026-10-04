@@ -277,7 +277,7 @@ def analytics_html(metadata):
         : window.sa_event.q = [args];
     }};
 
-  window.sa_metadata = {metadata_json};
+  window.sa_metadata = Object.assign({{}}, window.sa_metadata, {metadata_json});
 
   document.addEventListener("click", function (event) {{
     const articleLink = event.target.closest("[data-article-click]");
@@ -289,7 +289,7 @@ def analytics_html(metadata):
           source: articleLink.dataset.articleSource || "Onbekend",
           category: articleLink.dataset.articleCategory || "Onbekend",
           section: articleLink.dataset.articleSection || "onbekend",
-          edition: articleLink.dataset.articleEdition || window.sa_metadata?.edition || "onbekend",
+          target_edition: articleLink.dataset.articleEdition || "none",
           url: articleLink.href || "onbekend"
         }}
       );
@@ -303,7 +303,7 @@ def analytics_html(metadata):
           title: sourceLink.dataset.articleTitle || window.sa_metadata?.article_title || "Zonder titel",
           source: sourceLink.dataset.articleSource || window.sa_metadata?.source || "Onbekend",
           category: sourceLink.dataset.articleCategory || window.sa_metadata?.category || "Onbekend",
-          edition: sourceLink.dataset.articleEdition || window.sa_metadata?.edition || "onbekend",
+          target_edition: sourceLink.dataset.articleEdition || "none",
           url: sourceLink.href || "onbekend"
         }}
       );
@@ -314,6 +314,7 @@ def analytics_html(metadata):
     const analyticsScript = document.createElement("script");
     analyticsScript.async = true;
     analyticsScript.setAttribute("data-hostname", "positief-nieuws.nl");
+    analyticsScript.setAttribute("data-metadata-collector", "pnAnalyticsMetadata");
     analyticsScript.src = "https://scripts.simpleanalyticscdn.com/latest.js";
     analyticsScript.addEventListener("load", function () {{
       const autoEventsScript = document.createElement("script");
@@ -2026,6 +2027,36 @@ def validate_current():
     print("nieuws.json is geldig: alle positieve artikelen vallen onder een van de acht vaste categorieën.")
 
 
+def refresh_edition_analytics():
+    """Apply the same edition context and measurement to existing and future pages."""
+    for page in Path('.').rglob('*.html'):
+        if any(part.startswith('.') for part in page.parts):
+            continue
+        markup = page.read_text(encoding='utf-8')
+        relative = str(page).replace('\\', '/')
+        match = re.match(r'(?:artikelen|edities)/(\d{4}-\d{2}-\d{2})(?:/|\.)', relative)
+        date = match.group(1) if match else ''
+        kind = 'article' if relative.startswith('artikelen/') else 'edition' if date else 'special' if relative.startswith('specials/') else 'other'
+        if relative == 'index.html':
+            kind = 'homepage'
+            date_match = re.search(r'<time datetime="(\d{4}-\d{2}-\d{2})"', markup)
+            date = date_match.group(1) if date_match else ''
+        markup = re.sub(r'<!-- edition-analytics:start -->.*?<!-- edition-analytics:end -->\s*', '', markup, flags=re.S)
+        tag = f'<!-- edition-analytics:start --><script src="/edition-analytics.js?v=1" data-page-type="{kind}" data-edition="{date}"></script><!-- edition-analytics:end -->'
+        markup = re.sub(r'</head\s*>', lambda _: tag + '</head>', markup, count=1, flags=re.I)
+        markup = re.sub(r'window\.sa_metadata = (\{.*?\});', r'window.sa_metadata = Object.assign({}, window.sa_metadata, \1);', markup, flags=re.S)
+        markup = markup.replace('edition: articleLink.dataset.articleEdition || window.sa_metadata?.edition || "onbekend",', 'target_edition: articleLink.dataset.articleEdition || "none",')
+        markup = markup.replace('edition: sourceLink.dataset.articleEdition || window.sa_metadata?.edition || "onbekend",', 'target_edition: sourceLink.dataset.articleEdition || "none",')
+        if 'simpleanalyticscdn.com/latest.js' in markup and 'data-metadata-collector' not in markup:
+            markup = markup.replace('analyticsScript.async = true;', 'analyticsScript.async = true;\n      analyticsScript.setAttribute("data-metadata-collector", "pnAnalyticsMetadata");')
+        if relative == 'index.html':
+            # Initial context exists before pageview; update from the actual fetched edition.
+            markup = markup.replace('function loadAnalytics(editionDate) {', 'function loadAnalytics(editionDate) {\n      if (window.pnSetEdition) window.pnSetEdition(editionDate);') if 'window.pnSetEdition(editionDate)' not in markup else markup
+            markup = markup.replace('edition: editionDate || "onbekend"', 'edition: editionDate || "none"')
+        page.write_text(markup, encoding='utf-8')
+    print('Editiemeting bijgewerkt op bestaande pagina’s.')
+
+
 def refresh_branding():
     """Apply the same crawlable sun favicon and brand name to every public HTML page."""
     tags = ('<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64">'
@@ -2060,6 +2091,7 @@ def refresh_branding():
             page.write_text(markup, encoding='utf-8')
             count += 1
     print(f'Favicon en sitenaam bijgewerkt op {count} pagina(s).')
+    refresh_edition_analytics()
 
 
 def refresh_special_growth():
@@ -2111,6 +2143,7 @@ def main():
     try:
         if args.refresh_specials:
             refresh_special_growth()
+            refresh_edition_analytics()
         elif args.refresh_articles:
             refresh_articles()
         elif args.refresh_branding:
