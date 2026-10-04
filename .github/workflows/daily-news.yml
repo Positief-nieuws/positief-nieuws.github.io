@@ -7,9 +7,14 @@ on:
     - cron: '37 6 * * 1,4'
       timezone: 'Europe/Amsterdam'
 
-    # Back-up run: 15 minuten later. Deze doet niets als de kandidaten
-    # vandaag al succesvol zijn gegenereerd.
-    - cron: '52 6 * * 1,4'
+    # Tweede poging: maandag en donderdag om 07:17 Nederlandse tijd.
+    # Deze doet niets als de kandidaten vandaag al succesvol zijn gegenereerd.
+    - cron: '17 7 * * 1,4'
+      timezone: 'Europe/Amsterdam'
+
+    # Derde poging: maandag en donderdag om 08:07 Nederlandse tijd.
+    # Deze doet niets als de kandidaten vandaag al succesvol zijn gegenereerd.
+    - cron: '7 8 * * 1,4'
       timezone: 'Europe/Amsterdam'
 
 permissions:
