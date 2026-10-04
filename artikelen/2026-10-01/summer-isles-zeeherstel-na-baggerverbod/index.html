@@ -89,7 +89,7 @@
 .article-growth :focus-visible{outline:3px solid #d6a13a;outline-offset:4px}.article-newsletter :focus-visible{outline-color:#fff}
 @media(max-width:640px){.article-newsletter{padding:25px 22px}.article-share{padding:23px 22px}.growth-form-row{flex-direction:column}.growth-form-row button{width:100%}.article-share-buttons{gap:8px}.article-share-buttons a,.article-share-buttons button{padding:9px 12px}}
 </style>
-<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64"><link rel="icon" type="image/png" href="/favicon.png" sizes="96x96"><link rel="apple-touch-icon" href="/sun-apple-touch-icon.png" sizes="180x180"><link rel="manifest" href="/manifest.json?v=5"><meta property="og:site_name" content="Positief nieuws"><meta name="application-name" content="Positief nieuws"></head>
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64"><link rel="icon" type="image/png" href="/favicon.png" sizes="96x96"><link rel="apple-touch-icon" href="/sun-apple-touch-icon.png" sizes="180x180"><link rel="manifest" href="/manifest.json?v=5"><meta property="og:site_name" content="Positief nieuws"><meta name="application-name" content="Positief nieuws"><!-- edition-analytics:start --><script src="/edition-analytics.js?v=1" data-page-type="article" data-edition="2026-10-01"></script><!-- edition-analytics:end --></head>
 <body>
   <header class="site-header">
   <div class="header-shell header-row">
@@ -273,7 +273,7 @@
         : window.sa_event.q = [args];
     };
 
-  window.sa_metadata = {"page_type": "article", "edition": "2026-10-01", "article_title": "Tien jaar zonder zware bodembaggering brengt Schotse zeebodem weer tot leven", "source": "The Guardian", "category": "Natuur & klimaat"};
+  window.sa_metadata = Object.assign({}, window.sa_metadata, {"page_type": "article", "edition": "2026-10-01", "article_title": "Tien jaar zonder zware bodembaggering brengt Schotse zeebodem weer tot leven", "source": "The Guardian", "category": "Natuur & klimaat"});
 
   document.addEventListener("click", function (event) {
     const articleLink = event.target.closest("[data-article-click]");
@@ -285,7 +285,7 @@
           source: articleLink.dataset.articleSource || "Onbekend",
           category: articleLink.dataset.articleCategory || "Onbekend",
           section: articleLink.dataset.articleSection || "onbekend",
-          edition: articleLink.dataset.articleEdition || window.sa_metadata?.edition || "onbekend",
+          target_edition: articleLink.dataset.articleEdition || "none",
           url: articleLink.href || "onbekend"
         }
       );
@@ -299,7 +299,7 @@
           title: sourceLink.dataset.articleTitle || window.sa_metadata?.article_title || "Zonder titel",
           source: sourceLink.dataset.articleSource || window.sa_metadata?.source || "Onbekend",
           category: sourceLink.dataset.articleCategory || window.sa_metadata?.category || "Onbekend",
-          edition: sourceLink.dataset.articleEdition || window.sa_metadata?.edition || "onbekend",
+          target_edition: sourceLink.dataset.articleEdition || "none",
           url: sourceLink.href || "onbekend"
         }
       );
@@ -309,6 +309,7 @@
   (function () {
     const analyticsScript = document.createElement("script");
     analyticsScript.async = true;
+      analyticsScript.setAttribute("data-metadata-collector", "pnAnalyticsMetadata");
     analyticsScript.setAttribute("data-hostname", "positief-nieuws.nl");
     analyticsScript.src = "https://scripts.simpleanalyticscdn.com/latest.js";
     analyticsScript.addEventListener("load", function () {

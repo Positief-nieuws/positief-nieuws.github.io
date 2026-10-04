@@ -263,7 +263,7 @@
 
 /* special-growth:end */
 </style>
-<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64"><link rel="icon" type="image/png" href="/favicon.png" sizes="96x96"><link rel="apple-touch-icon" href="/sun-apple-touch-icon.png" sizes="180x180"><link rel="manifest" href="/manifest.json?v=5"><meta property="og:site_name" content="Positief nieuws"><meta name="application-name" content="Positief nieuws"></head>
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64"><link rel="icon" type="image/png" href="/favicon.png" sizes="96x96"><link rel="apple-touch-icon" href="/sun-apple-touch-icon.png" sizes="180x180"><link rel="manifest" href="/manifest.json?v=5"><meta property="og:site_name" content="Positief nieuws"><meta name="application-name" content="Positief nieuws"><!-- edition-analytics:start --><script src="/edition-analytics.js?v=1" data-page-type="special" data-edition=""></script><!-- edition-analytics:end --></head>
 <body>
   <header class="site-header">
     <div class="header-shell header-row">
@@ -566,10 +566,10 @@
   </script>
 
   <script>
-    window.sa_metadata = {
+    window.sa_metadata = Object.assign({}, window.sa_metadata, {
       page_type: "special",
       special: "nederland-gaat-ook-vooruit"
-    };
+    });
 
     window.sa_event = window.sa_event || function () {
       const args = [].slice.call(arguments);
@@ -578,6 +578,7 @@
 
     const analyticsScript = document.createElement("script");
     analyticsScript.async = true;
+      analyticsScript.setAttribute("data-metadata-collector", "pnAnalyticsMetadata");
     analyticsScript.setAttribute("data-hostname", "positief-nieuws.nl");
     analyticsScript.src = "https://scripts.simpleanalyticscdn.com/latest.js";
     analyticsScript.addEventListener("load", () => {
