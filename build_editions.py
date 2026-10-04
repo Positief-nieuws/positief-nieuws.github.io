@@ -900,6 +900,12 @@ def render_article_page(item, date_value, related_records=None, image_data=None)
       <div class="article-rule"></div>
       <article class="article-copy">{body_html}</article>
       {why_html}
+      <div class="source-box">
+        <p>Dit is een redactionele samenvatting van Positief nieuws, gebaseerd op de oorspronkelijke publicatie van {source}.</p>
+        <a class="source-button" href="{source_url}" target="_blank" rel="noopener noreferrer" {source_attrs}>Lees het oorspronkelijke artikel ↗</a>
+      </div>
+      <p class="article-note">Positief nieuws selecteert en vat ontwikkelingen samen in eigen woorden. De oorspronkelijke bron blijft leidend voor de volledige context en details.</p>
+
       <section class="article-growth" aria-label="Ontvang en deel Positief nieuws">
         <div class="article-newsletter" id="nieuwsbrief">
           <p class="growth-kicker">Dit gebeurt ook. In je inbox.</p>
@@ -927,11 +933,6 @@ def render_article_page(item, date_value, related_records=None, image_data=None)
           <div id="article-copy-fallback" class="article-copy-fallback" hidden><label for="article-url">Link naar dit artikel</label><input id="article-url" value="{esc(canonical)}" readonly></div>
         </div>
       </section>
-      <div class="source-box">
-        <p>Dit is een redactionele samenvatting van Positief nieuws, gebaseerd op de oorspronkelijke publicatie van {source}.</p>
-        <a class="source-button" href="{source_url}" target="_blank" rel="noopener noreferrer" {source_attrs}>Lees het oorspronkelijke artikel ↗</a>
-      </div>
-      <p class="article-note">Positief nieuws selecteert en vat ontwikkelingen samen in eigen woorden. De oorspronkelijke bron blijft leidend voor de volledige context en details.</p>
 
       <section class="support-teaser" aria-labelledby="article-support-title">
         <div class="support-teaser-grid">
