@@ -761,6 +761,11 @@ def article_image_html(item, image_data):
       </figure>"""
 
 
+ARTICLE_GROWTH_CSS = '\n.article-growth [hidden]{display:none!important}\n.article-growth{max-width:700px;margin:34px 0 0;border:1px solid var(--line);border-radius:16px;overflow:hidden}\n.article-newsletter{padding:32px;background:var(--green-dark);color:#fff;position:relative}\n.article-newsletter .growth-kicker{margin:0 0 10px;color:#e4bc65;font-size:.66rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase}\n.article-newsletter h2{margin:0;font-family:Georgia,serif;font-size:clamp(1.7rem,4vw,2.2rem);line-height:1.12;letter-spacing:-.03em;color:#fff;max-width:520px}\n.article-newsletter .growth-intro{margin:14px 0 22px;color:#e1e9df;font-size:.9rem;line-height:1.6;max-width:560px}\n.article-newsletter label{display:block;margin-bottom:8px;font-size:.74rem;font-weight:700}\n.growth-form-row{display:flex;gap:10px}.growth-form-row input{flex:1;min-width:0;border:1px solid #aebdae;border-radius:8px;background:#fff;color:var(--ink);padding:13px 14px;font:inherit;font-size:.86rem;min-height:48px}\n.growth-form-row button{border:1px solid #e4bc65;border-radius:8px;background:#e4bc65;color:#173f31;padding:13px 18px;min-height:48px;font:inherit;font-size:.8rem;font-weight:800;cursor:pointer;white-space:nowrap}.growth-form-row button:hover{background:#f0d291}\n.article-newsletter .growth-note{margin:13px 0 0;font-size:.66rem;line-height:1.6;color:#d2decf}.growth-note a{color:inherit;text-underline-offset:3px}\n.article-share{padding:23px 32px;background:#f2eedf}.article-share h2{font-family:Georgia,serif;margin:0;font-size:1.3rem;color:var(--green-dark)}.article-share p{margin:6px 0 15px;font-size:.79rem;color:#58665b}\n.article-share-buttons{display:flex;flex-wrap:wrap;gap:9px}.article-share-buttons a,.article-share-buttons button{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;border:1px solid #aab4a4;border-radius:999px;padding:9px 15px;background:transparent;color:var(--green-dark);font:inherit;font-size:.74rem;font-weight:700;text-decoration:none;cursor:pointer}.article-share-buttons a:hover,.article-share-buttons button:hover{background:#e5e8d9;border-color:var(--green)}.article-share-buttons svg{width:18px;height:18px;flex:none}\n.article-share-status{font-size:.7rem!important;margin:10px 0 0!important}.article-share-status:empty{display:none}.article-copy-fallback{margin-top:12px}.article-copy-fallback label{display:block;font-size:.72rem;margin-bottom:5px}.article-copy-fallback input{width:100%;min-height:44px;padding:9px;border:1px solid var(--line);border-radius:6px;font:inherit;font-size:.75rem}\n.article-growth :focus-visible{outline:3px solid #d6a13a;outline-offset:4px}.article-newsletter :focus-visible{outline-color:#fff}\n@media(max-width:640px){.article-newsletter{padding:25px 22px}.article-share{padding:23px 22px}.growth-form-row{flex-direction:column}.growth-form-row button{width:100%}.article-share-buttons{gap:8px}.article-share-buttons a,.article-share-buttons button{padding:9px 12px}}\n'
+
+ARTICLE_GROWTH_JS = '<script>\n(function () {\n  const block = document.querySelector(\'.article-growth\');\n  if (!block) return;\n  const url = document.querySelector(\'link[rel="canonical"]\').href;\n  const title = document.querySelector(\'h1\').textContent.replace(/\\.$/, \'\');\n  const form = document.querySelector(\'#article-newsletter-form\');\n  const metadata = {placement: \'article_end\', article_url: url};\n  function track(name, extra) {\n    if (window.sa_event) window.sa_event(name, Object.assign({}, metadata, extra || {}));\n  }\n  form.addEventListener(\'submit\', function () {\n    track(\'nieuwsbrief_inschrijving\');\n  });\n  if (\'IntersectionObserver\' in window) {\n    const observer = new IntersectionObserver(function (entries) {\n      if (entries.some(entry => entry.isIntersecting)) {\n        track(\'article_newsletter_view\');\n        observer.disconnect();\n      }\n    }, {threshold: 0.5});\n    observer.observe(document.querySelector(\'.article-newsletter\'));\n  }\n  block.querySelectorAll(\'[data-share-channel]\').forEach(function (link) {\n    link.addEventListener(\'click\', function () {\n      track(\'article_share_click\', {channel: link.dataset.shareChannel});\n    });\n  });\n  const nativeButton = document.querySelector(\'#article-native-share\');\n  if (navigator.share) {\n    nativeButton.hidden = false;\n    nativeButton.addEventListener(\'click\', async function () {\n      track(\'article_share_click\', {channel: \'native\'});\n      try { await navigator.share({title: title, text: title, url: url}); }\n      catch (error) {\n        if (error.name !== \'AbortError\') document.querySelector(\'#article-share-status\').textContent = \'Delen lukte niet. Gebruik WhatsApp, e-mail of kopieer de link.\';\n      }\n    });\n  }\n  document.querySelector(\'#article-copy-link\').addEventListener(\'click\', async function () {\n    track(\'article_share_click\', {channel: \'copy\'});\n    try {\n      await navigator.clipboard.writeText(url);\n      document.querySelector(\'#article-share-status\').textContent = \'Link gekopieerd. Klaar om door te sturen.\';\n    } catch (_) {\n      document.querySelector(\'#article-copy-fallback\').hidden = false;\n      const field = document.querySelector(\'#article-url\');\n      field.focus(); field.select();\n      document.querySelector(\'#article-share-status\').textContent = \'Selecteer en kopieer de link hieronder.\';\n    }\n  });\n})();\n</script>'
+
+
 def render_article_page(item, date_value, related_records=None, image_data=None):
     title_raw = str(item.get("title") or item.get("headline") or "").strip()
     source_raw = str(item.get("source") or "Oorspronkelijke bron").strip()
@@ -785,6 +790,8 @@ def render_article_page(item, date_value, related_records=None, image_data=None)
     teaser = esc(teaser_raw)
     body_html = "".join(f"<p>{esc(paragraph)}</p>" for paragraph in paragraphs)
     why_html = f'<aside class="why"><p class="why-label">Waarom dit ertoe doet</p><p>{esc(why_raw)}</p></aside>' if why_raw else ""
+    whatsapp_url = esc("https://wa.me/?text=" + urllib.parse.quote(title_raw + "\n\n" + canonical, safe=""))
+    email_url = esc("mailto:?subject=" + urllib.parse.quote(title_raw, safe="") + "&body=" + urllib.parse.quote(title_raw + "\n\n" + canonical + "\n\nPositief nieuws · Dit gebeurt ook.", safe=""))
     related_html = render_related_articles(related_records or [])
     image_html = article_image_html(item, image_data)
 
@@ -879,7 +886,7 @@ def render_article_page(item, date_value, related_records=None, image_data=None)
   <meta name="twitter:card" content="{'summary_large_image' if image_data and image_data.get('image_path') else 'summary'}">
   <meta name="theme-color" content="#17382b">
   <script type="application/ld+json">{schema}</script>
-  <style>{BASE_CSS}{article_css}</style>
+  <style>{BASE_CSS}{article_css}{ARTICLE_GROWTH_CSS}</style>
 </head>
 <body>
   {header_html()}
@@ -893,6 +900,33 @@ def render_article_page(item, date_value, related_records=None, image_data=None)
       <div class="article-rule"></div>
       <article class="article-copy">{body_html}</article>
       {why_html}
+      <section class="article-growth" aria-label="Ontvang en deel Positief nieuws">
+        <div class="article-newsletter" id="nieuwsbrief">
+          <p class="growth-kicker">Dit gebeurt ook. In je inbox.</p>
+          <h2>Meer van dit soort nieuws?</h2>
+          <p class="growth-intro">Ontvang elke maandag en donderdag een selectie positief nieuws uit Nederland en de wereld. Gratis, rustig en in een paar minuten gelezen.</p>
+          <form id="article-newsletter-form" action="https://buttondown.com/api/emails/embed-subscribe/positiefnieuws" method="post">
+            <label for="article-email">Je e-mailadres</label>
+            <div class="growth-form-row"><input id="article-email" type="email" name="email" autocomplete="email" placeholder="jij@voorbeeld.nl" required><button type="submit">Ja, stuur mij Positief nieuws</button></div>
+            <input type="hidden" name="embed" value="1">
+            <input type="hidden" name="metadata__signup_source" value="article_end">
+            <input type="hidden" name="metadata__signup_article" value="{esc(canonical)}">
+            <p class="growth-note">Je ontvangt een bevestigingsmail. Afmelden kan altijd. <a href="/#privacy">Privacy</a></p>
+          </form>
+        </div>
+        <div class="article-share">
+          <h2>Goed nieuws mag verder reizen.</h2>
+          <p>Ken je iemand die dit ook wil lezen? Deel dit verhaal.</p>
+          <div class="article-share-buttons">
+            <a href="{whatsapp_url}" target="_blank" rel="noopener noreferrer" data-share-channel="whatsapp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-12 7l-5 1.5 1.5-5A8 8 0 1 1 20 11.5Z"/><path d="M8 8c0 4 4 7 7 7l1-2-3-1-1 1-2-2 1-1-1-3Z"/></svg>WhatsApp</a>
+            <a href="{email_url}" data-share-channel="email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>E-mail</a>
+            <button id="article-copy-link" type="button">Kopieer link</button>
+            <button id="article-native-share" type="button" hidden>Meer deelopties</button>
+          </div>
+          <p id="article-share-status" class="article-share-status" role="status" aria-live="polite"></p>
+          <div id="article-copy-fallback" class="article-copy-fallback" hidden><label for="article-url">Link naar dit artikel</label><input id="article-url" value="{esc(canonical)}" readonly></div>
+        </div>
+      </section>
       <div class="source-box">
         <p>Dit is een redactionele samenvatting van Positief nieuws, gebaseerd op de oorspronkelijke publicatie van {source}.</p>
         <a class="source-button" href="{source_url}" target="_blank" rel="noopener noreferrer" {source_attrs}>Lees het oorspronkelijke artikel ↗</a>
@@ -920,6 +954,7 @@ def render_article_page(item, date_value, related_records=None, image_data=None)
   </main>
   <footer>Positief nieuws · Dit gebeurt ook. · <a href="/contact/" onclick="if(window.sa_event)window.sa_event('contact_click')">Contact</a> · <a href="/tip/" onclick="if(window.sa_event)window.sa_event('tip_redactie_click')">Tip de redactie</a></footer>
   {analytics_html({'page_type':'article','edition':date_value,'article_title':title_raw,'source':source_raw,'category':category_raw})}
+  {ARTICLE_GROWTH_JS}
 </body>
 </html>"""
 
@@ -937,7 +972,7 @@ def write_article_pages(edition_records):
 
         page_dir = ARTICLES_DIR / date_value / slug
         page_dir.mkdir(parents=True, exist_ok=True)
-        (page_dir / "index.html").write_text(render_article_page(item, date_value, related, image_data), encoding="utf-8")
+        (page_dir / "index.html").write_text("\n".join(line.rstrip() for line in render_article_page(item, date_value, related, image_data).split("\n")), encoding="utf-8")
         built.append({
             "date": date_value,
             "slug": slug,
@@ -2018,13 +2053,25 @@ def refresh_branding():
     print(f'Favicon en sitenaam bijgewerkt op {count} pagina(s).')
 
 
+def refresh_articles():
+    records = []
+    for path in sorted(EDITIONS_DIR.glob("????-??-??.json"), reverse=True):
+        data = json.loads(path.read_text(encoding="utf-8"))
+        records.append((get_date(data, path.stem), data))
+    write_article_pages(records)
+    refresh_branding()
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--validate-current", action="store_true", help="Valideer alleen nieuws.json en stop daarna.")
     parser.add_argument("--refresh-branding", action="store_true", help="Werk alleen favicon en merkgegevens op bestaande pagina’s bij.")
+    parser.add_argument("--refresh-articles", action="store_true", help="Werk bestaande artikelpagina’s bij zonder de editie te wijzigen.")
     args = parser.parse_args()
     try:
-        if args.refresh_branding:
+        if args.refresh_articles:
+            refresh_articles()
+        elif args.refresh_branding:
             refresh_branding()
         elif args.validate_current:
             validate_current()
