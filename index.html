@@ -6,11 +6,11 @@
 
   <meta
     name="description"
-    content="Positief nieuws uit Nederland en de wereld. Twee keer per week een compacte selectie van wat er vooruitgaat, plus het nieuws dat je verder moet weten."
+    content="Het belangrijkste positieve nieuws van vandaag uit Nederland en de wereld. In een paar minuten bijgepraat, zonder eindeloos scrollen."
   >
 
-  <meta property="og:title" content="Positief nieuws | Goed nieuws uit Nederland en de wereld">
-  <meta property="og:description" content="Positief nieuws uit Nederland en de wereld. Twee keer per week een compacte selectie van wat er vooruitgaat, plus het nieuws dat je verder moet weten.">
+  <meta property="og:title" content="Positief nieuws vandaag | Nederland en de wereld">
+  <meta property="og:description" content="Het belangrijkste positieve nieuws van vandaag uit Nederland en de wereld. In een paar minuten bijgepraat, zonder eindeloos scrollen.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://positief-nieuws.nl/">
   <meta property="og:site_name" content="Positief nieuws">
@@ -24,10 +24,10 @@
   <link rel="apple-touch-icon" href="/icon-192-v3.png">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Positief nieuws | Goed nieuws uit Nederland en de wereld">
-  <meta name="twitter:description" content="Positief nieuws uit Nederland en de wereld. Twee keer per week een compacte selectie van wat er vooruitgaat, plus het nieuws dat je verder moet weten.">
+  <meta name="twitter:title" content="Positief nieuws vandaag | Nederland en de wereld">
+  <meta name="twitter:description" content="Het belangrijkste positieve nieuws van vandaag uit Nederland en de wereld. In een paar minuten bijgepraat, zonder eindeloos scrollen.">
 
-  <title>Positief nieuws | Goed nieuws uit Nederland en de wereld</title>
+  <title>Positief nieuws vandaag | Nederland en de wereld</title>
 
   <script type="application/ld+json">
   {
@@ -1605,130 +1605,6 @@
       }
     }
 
-  
-    /* ---------------------------------------------------------
-       Editie-opmaak 2026-10:
-       merkzin als kicker, compacte editiebar en genummerde secties.
-       Bestaande Pixabay-thumbs en vrolijke achtergrondaccenten blijven.
-       --------------------------------------------------------- */
-
-    .hero-brandline {
-      margin: 0 0 9px;
-      color: var(--green);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: .67rem;
-      font-weight: 850;
-      letter-spacing: .11em;
-      text-transform: uppercase;
-    }
-
-    .hero-meta {
-      justify-content: flex-start;
-      flex-wrap: wrap;
-      gap: 8px 11px;
-      border-top-color: var(--green-dark);
-      color: var(--green-dark);
-      font-weight: 700;
-    }
-
-    .hero-meta::before {
-      content: "";
-      position: absolute;
-      width: 55px;
-      height: 2px;
-      margin-top: -15px;
-      border-radius: 999px;
-      background: var(--accent);
-    }
-
-    .hero-meta strong {
-      font-size: .63rem;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-    }
-
-    .hero-meta-dot {
-      color: #9ba29d;
-      font-weight: 400;
-    }
-
-    .section-heading {
-      position: relative;
-    }
-
-    .section-heading::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -1px;
-      width: 42px;
-      height: 2px;
-      border-radius: 999px;
-      background: var(--accent);
-    }
-
-    .section-title-group {
-      display: grid;
-      grid-template-columns: 32px minmax(0,1fr);
-      align-items: baseline;
-      gap: 10px;
-      min-width: 0;
-    }
-
-    .section-number {
-      color: #9aa09b;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: .83rem;
-    }
-
-    .section-title {
-      margin: 0;
-      color: var(--ink);
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.42rem;
-      line-height: 1.08;
-      letter-spacing: -.033em;
-    }
-
-    .special-feature {
-      border-left: 0;
-      border-right: 0;
-      border-radius: 0;
-      background:
-        radial-gradient(circle at 92% 18%, rgba(214,161,58,.10), transparent 30%),
-        transparent;
-    }
-
-    @media (max-width: 760px) {
-      .hero-brandline {
-        margin-bottom: 8px;
-        font-size: .62rem;
-      }
-
-      .hero-meta {
-        flex-wrap: wrap;
-        white-space: normal;
-        gap: 7px;
-      }
-
-      .hero-meta::before {
-        margin-top: -12px;
-      }
-
-      .section-title-group {
-        grid-template-columns: 26px minmax(0,1fr);
-        gap: 8px;
-      }
-
-      .section-title {
-        font-size: 1.22rem;
-      }
-
-      .section-number {
-        font-size: .76rem;
-      }
-    }
-
   </style>
 
 </head>
@@ -1838,21 +1714,21 @@
 
     <section class="hero">
       <div class="content-shell">
-        <p class="hero-brandline">Dit gebeurt ook.</p>
-        <h1 class="hero-title">Positief nieuws uit Nederland en de wereld</h1>
+        <p class="hero-date" id="edition-date">Editie van vandaag</p>
+        <h1 class="hero-title">Dit gebeurt ook<span class="hero-title-dot">.</span></h1>
         <p class="hero-copy">
-          Twee keer per week een compacte selectie van wat er vooruitgaat.
-          Plus het nieuws dat je verder moet weten.
+          Het belangrijkste positieve nieuws van vandaag, uit Nederland en de wereld.
+          In een paar minuten weet je wat er goed gaat én wat je verder moet weten
+          <span id="hero-weekday"></span>. Zonder eindeloos scrollen.
         </p>
         <p id="today-intro" hidden></p>
 
         <div class="hero-meta">
-          <strong id="hero-edition-label">Laatste editie</strong>
-          <span id="edition-date">Editiedatum laden…</span>
-          <span class="hero-meta-dot" aria-hidden="true">·</span>
-          <span>15 verhalen</span>
-          <span class="hero-meta-dot" aria-hidden="true">·</span>
-          <span>± 6 minuten</span>
+          <span>maandag · donderdag</span>
+          <span class="hero-meta-right">
+            <span>15 verhalen</span>
+            <span>ongeveer 6 minuten</span>
+          </span>
         </div>
       </div>
     </section>
@@ -1861,10 +1737,7 @@
 <section class="news-section nl-block">
         <div class="content-shell">
           <div class="section-heading">
-            <div class="section-title-group">
-              <span class="section-number">01</span>
-              <h2 class="section-title">Goed nieuws uit Nederland</h2>
-            </div>
+            <p class="section-kicker">Goed nieuws uit Nederland</p>
             <span class="section-count">6 verhalen</span>
           </div>
           <p class="section-intro-visually-hidden">
@@ -1876,7 +1749,7 @@
       </section>
 
 
-      <section class="special-feature content-shell" aria-labelledby="home-special-title">
+      <section class="special-feature wide-shell" aria-labelledby="home-special-title">
         <div class="special-feature-grid">
           <div class="special-feature-visual" aria-hidden="true">
             <svg class="special-feature-sun" viewBox="0 0 64 64" fill="none">
@@ -1891,7 +1764,7 @@
             <h2 id="home-special-title">
               <a href="/specials/nederland-gaat-ook-vooruit/" onclick="trackSimpleEvent('special_home_click')">Nederland gaat óók vooruit.</a>
             </h2>
-            <p class="special-feature-copy">Twaalf ontwikkelingen die je nauwelijks in het dagelijkse nieuws ziet, maar die Nederland de afgelopen jaren aantoonbaar hebben veranderd. Van roken en criminaliteit tot werk, armoede en energie.</p>
+            <p class="special-feature-copy">Elf ontwikkelingen die je nauwelijks in het dagelijkse nieuws ziet, maar die Nederland de afgelopen jaren aantoonbaar hebben veranderd. Van roken en criminaliteit tot werk, armoede en energie.</p>
             <a
               class="special-feature-link"
               href="/specials/nederland-gaat-ook-vooruit/"
@@ -1904,10 +1777,7 @@
       <section class="news-section world-block">
         <div class="content-shell">
           <div class="section-heading">
-            <div class="section-title-group">
-              <span class="section-number">02</span>
-              <h2 class="section-title">Goed nieuws uit de wereld</h2>
-            </div>
+            <p class="section-kicker">Goed nieuws uit de wereld</p>
             <span class="section-count">6 verhalen</span>
           </div>
           <p class="section-note">
@@ -1921,10 +1791,7 @@
       <section class="news-section briefing-block" id="headlines-section" hidden>
         <div class="content-shell">
           <div class="section-heading">
-            <div class="section-title-group">
-              <span class="section-number">03</span>
-              <h2 class="section-title">Wat je verder moet weten</h2>
-            </div>
+            <p class="section-kicker">Wat je verder moet weten</p>
             <span class="section-count">3 verhalen</span>
           </div>
           <p class="section-note">
@@ -1942,7 +1809,7 @@
             <path d="M12 1.8V5.1M12 18.9V22.2M22.2 12H18.9M5.1 12H1.8M19.2 4.8L16.8 7.2M7.2 16.8L4.8 19.2M19.2 19.2L16.8 16.8M7.2 7.2L4.8 4.8"
               stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
           </svg>
-          <h2>Dit was de laatste editie.<br>Je bent weer bij.</h2>
+          <h2>Dit was het voor vandaag.<br>Je bent weer bij.</h2>
           <p>Geniet van je dag.</p>
 
           <div class="end-actions">
@@ -1963,15 +1830,15 @@
       <section class="support-teaser wide-shell" aria-labelledby="support-teaser-title">
         <div class="support-teaser-grid">
           <div>
-            <p class="section-kicker">Voor wie dit graag leest</p>
-            <h2 id="support-teaser-title">Vind je het fijn dat iemand dit twee keer per week voor je uitzoekt?</h2>
-            <p>Positief nieuws blijft gratis en zonder advertenties. Met een vrijwillige bijdrage help je mij om de selectie, site en nieuwsbrief te blijven maken.</p>
+            <p class="section-kicker">Steun Positief nieuws</p>
+            <h2 id="support-teaser-title">Help Positief nieuws door te gaan.</h2>
+            <p>Positief nieuws is gratis en zonder advertenties. Met een kleine vrijwillige bijdrage help je de site en nieuwsbrief draaiend te houden. Je kiest zelf het bedrag.</p>
           </div>
           <a
             class="support-button"
             href="/steun/"
             onclick="trackSimpleEvent('steun_teaser_click')"
-          >Ik steun Positief nieuws</a>
+          >Steun Positief nieuws</a>
         </div>
       </section>
 
@@ -2021,14 +1888,14 @@
       <section class="seo-intro" aria-labelledby="seo-intro-title">
         <div class="content-shell">
           <div class="seo-intro-inner">
-            <h2 id="seo-intro-title">Positief nieuws van vandaag en de afgelopen dagen</h2>
+            <h2 id="seo-intro-title">Positief nieuws van vandaag, in een paar minuten</h2>
             <p>
-              Op zoek naar positief nieuws van vandaag? Positief nieuws verzamelt iedere maandag en donderdag
-              twaalf positieve nieuwsverhalen uit Nederland en de rest van de wereld.
+              Positief nieuws verzamelt per editie twaalf positieve nieuwsverhalen uit Nederland en de rest van de wereld.
               Over mensen, gezondheid, wetenschap, natuur, cultuur, innovatie en andere ontwikkelingen die laten zien wat er óók goed gaat.
-              Daarnaast bevat iedere editie drie belangrijke nieuwsitems die je helpen om bij te blijven bij wat er verder speelt.
-              Zo krijg je een compacte selectie van de nieuwste positieve ontwikkelingen, zonder eindeloze nieuwsstroom:
-              na vijftien verhalen ben je klaar. Eerdere edities vind je terug in het archief.
+              Daarnaast krijg je drie belangrijke nieuwsitems die je helpen om bij te blijven bij wat er verder speelt.
+              Zo krijg je niet alleen goed nieuws, maar een compacte en evenwichtige selectie van het nieuws van vandaag.
+              Geen eindeloze nieuwsstroom en geen voortdurend verversende feed: na vijftien verhalen ben je klaar.
+              Je kunt de nieuwste editie hier lezen en eerdere edities terugvinden in het archief.
             </p>
           </div>
         </div>
@@ -3601,14 +3468,6 @@
           Boolean(
             requestedEdition
           );
-
-        const heroEditionLabel =
-          $("#hero-edition-label");
-
-        if (heroEditionLabel) {
-          heroEditionLabel.textContent =
-            isArchive ? "Archiefeditie" : "Laatste editie";
-        }
 
 
         $("#archive-banner").classList.toggle(
