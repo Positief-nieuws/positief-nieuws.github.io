@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="nl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Tip de redactie | Positief nieuws</title><meta name="description" content="Goed nieuws gezien? Tip de redactie van Positief nieuws met een bronlink en een korte toelichting."><link rel="canonical" href="https://positief-nieuws.nl/tip/"><meta property="og:title" content="Tip de redactie | Positief nieuws"><meta property="og:description" content="Goed nieuws gezien? Tip de redactie van Positief nieuws met een bronlink en een korte toelichting."><meta property="og:url" content="https://positief-nieuws.nl/tip/"><meta property="og:type" content="website"><meta property="og:site_name" content="Positief nieuws"><meta name="theme-color" content="#17382b"><style>
+    :root {
+      --paper: #f7f5ec;
+      --ink: #151a17;
+      --green: #1f5b45;
+      --green-dark: #173f31;
+      --accent: #d6a13a;
+      --muted: #68716b;
+      --line: rgba(23, 63, 49, 0.22);
+      --white: #ffffff;
+      --content: 748px;
+      --header: 1080px;
+    }
+
+    * { box-sizing: border-box; }
+    html { font-size: 17px; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 88% 18%, rgba(214,161,58,.08), transparent 24%),
+        var(--paper);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.52;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    .header-shell { width: min(calc(100% - 48px), var(--header)); margin: 0 auto; }
+    .content-shell { width: min(calc(100% - 48px), var(--content)); margin: 0 auto; }
+
+    .site-header { padding: 26px 0 18px; }
+    .header-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--ink);
+      font-size: 1.02rem;
+      font-weight: 800;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+    .brand-sun { width: 28px; height: 28px; color: var(--accent); flex: 0 0 auto; }
+    .back-link {
+      color: var(--green-dark);
+      font-size: .78rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .back-link:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+    main { padding: 72px 0 104px; }
+    .section-kicker {
+      margin: 0;
+      color: var(--green);
+      font-size: .67rem;
+      font-weight: 800;
+      letter-spacing: .095em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 8px 0 0;
+      max-width: 650px;
+      color: #111512;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3rem, 7vw, 4.6rem);
+      line-height: .96;
+      letter-spacing: -.055em;
+    }
+    .intro {
+      max-width: 650px;
+      margin: 22px 0 0;
+      color: #3f4742;
+      font-size: 1rem;
+      line-height: 1.58;
+    }
+
+    .support-card {
+      position: relative;
+      overflow: hidden;
+      margin-top: 34px;
+      padding: 30px;
+      border: 1px solid rgba(214,161,58,.34);
+      border-radius: 20px;
+      background: rgba(255,255,255,.5);
+    }
+    .support-card::after {
+      content: "";
+      position: absolute;
+      right: -36px;
+      top: -48px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: rgba(214,161,58,.10);
+      pointer-events: none;
+    }
+    .support-card > * { position: relative; z-index: 1; }
+    .support-card h2 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.55rem;
+      line-height: 1.12;
+      letter-spacing: -.03em;
+    }
+    .support-card p {
+      max-width: 590px;
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+    .support-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      margin-top: 24px;
+      padding: 0 21px;
+      border: 1px solid var(--green-dark);
+      border-radius: 999px;
+      background: var(--green-dark);
+      color: var(--white);
+      font-size: .8rem;
+      font-weight: 800;
+      text-decoration: none;
+      transition: transform .15s ease, background .15s ease;
+    }
+    .support-button:hover { transform: translateY(-1px); background: var(--green); }
+    .payment-note { margin-top: 13px !important; font-size: .72rem !important; }
+    .free-note {
+      margin-top: 28px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+      color: #3f4742;
+      font-size: .88rem;
+    }
+    .free-note strong { color: var(--green-dark); }
+
+    .site-footer {
+      padding: 0 0 34px;
+      color: #8b928e;
+      font-size: .72rem;
+      text-align: center;
+    }
+    .site-footer a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+
+    @media (max-width: 760px) {
+      .header-shell, .content-shell { width: min(calc(100% - 30px), 100%); }
+      .site-header { padding: 15px 0 9px; }
+      .brand { gap: 10px; font-size: .98rem; }
+      .brand-sun { width: 31px; height: 31px; }
+      main { padding: 48px 0 78px; }
+      h1 { font-size: clamp(2.75rem, 14vw, 4rem); }
+      .support-card { padding: 24px 22px; }
+      .support-button { width: 100%; }
+    }
+  
+main { padding-top: 30px; } h1 { max-width: 680px; } .intro { max-width: 660px; }
+.contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin:32px 0; }
+.support-card { margin:0; padding:28px; } .support-card h2 { margin-top:0; }
+.support-button { text-align:center; padding:13px 20px; } .brand-note { border-top:1px solid var(--line); padding-top:26px; margin-top:32px; }
+.eyebrow { color:var(--green-dark); font-size:.8rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; }
+.checklist { padding-left:22px; } .checklist li { margin:10px 0; }
+a:focus-visible { outline:3px solid var(--accent); outline-offset:5px; } .email-fallback { overflow-wrap:anywhere; }
+@media(max-width:640px) { .contact-grid { grid-template-columns:1fr; } .support-card { padding:24px; } }
+</style>
+<script>window.sa_event=window.sa_event||function(){var a=[].slice.call(arguments);window.sa_event.q?window.sa_event.q.push(a):window.sa_event.q=[a]};</script></head><body>  <header class="site-header">
+    <div class="header-shell header-row">
+      <a class="brand" href="/" aria-label="Positief nieuws homepage">
+        <svg class="brand-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.2" fill="currentColor"></circle>
+          <path d="M12 1.8V5.1M12 18.9V22.2M22.2 12H18.9M5.1 12H1.8M19.2 4.8L16.8 7.2M7.2 16.8L4.8 19.2M19.2 19.2L16.8 16.8M7.2 7.2L4.8 4.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+        </svg>
+        <span>Positief nieuws</span>
+      </a>
+      <a class="back-link" href="/">← Terug naar Positief nieuws</a>
+    </div>
+  </header><main><div class="content-shell">
+<p class="section-kicker">Tip de redactie</p><h1>Goed nieuws gezien? Geef het door<span style="color:var(--accent)">.</span></h1>
+<p class="intro">Soms zit vooruitgang in een grote doorbraak. Soms in een oplossing die ergens al werkt. Heb jij een verhaal gezien dat meer aandacht verdient? Ik hoor het graag.</p>
+<section class="support-card"><h2>Dit helpt mij om je tip te bekijken</h2><ul class="checklist"><li><strong>Een link naar de bron.</strong> Bijvoorbeeld een nieuwsbericht, onderzoek of informatie van de betrokken organisatie.</li><li><strong>Wat gaat er vooruit?</strong> Vertel kort wat er verandert en voor wie dat verschil maakt.</li><li><strong>Waarom nu?</strong> Is het een nieuwe ontwikkeling of een nieuw resultaat?</li></ul>
+<a class="support-button" href="mailto:redactie@positief-nieuws.nl?subject=Nieuwstip%20voor%20Positief%20nieuws&amp;body=Link%20naar%20de%20bron%3A%0A%0AWat%20gaat%20er%20vooruit%2C%20en%20voor%20wie%3F%0A%0AWat%20is%20er%20nieuw%3F%0A%0AEventuele%20toelichting%3A%0A" data-pn-event="tip_mail_click">Mail je nieuwstip</a>
+<p class="payment-note">Dit opent je eigen mailprogramma met een paar vragen alvast ingevuld. Je kunt de tekst aanpassen voordat je verstuurt.</p></section>
+<p class="email-fallback">Liever zelf een mail schrijven? <a class="" href="mailto:redactie@positief-nieuws.nl?subject=Nieuwstip%20voor%20Positief%20nieuws" data-pn-event="tip_mail_click">redactie@positief-nieuws.nl</a>.</p>
+<section class="brand-note"><h2>Vooruitgang verdient aandacht.</h2><p>Ik zoek verhalen over concrete ontwikkelingen die iets verbeteren. Een mooie belofte kan interessant zijn, maar een aantoonbaar resultaat maakt een tip sterker. Ik bekijk de bron en bepaal of het verhaal past bij een volgende editie.</p><p>Niet elke tip wordt een artikel. Elke goede tip helpt wel om breder te kijken.</p><p>Een vraag, opmerking of correctie? <a class="" href="/contact/" data-pn-event="contact_click">Neem contact op</a>.</p></section>
+</div></main><footer class="site-footer"><div class="content-shell">Positief nieuws · Dit gebeurt ook. · <a href="/contact/" data-pn-event="contact_click">Contact</a> · <a href="/tip/" data-pn-event="tip_redactie_click">Tip de redactie</a> · <a href="/steun/">Steun</a> · <a href="/#privacy">Privacy</a></div></footer>
+<script>document.addEventListener('click',function(event){var link=event.target.closest('a[data-pn-event]');if(link)window.sa_event(link.dataset.pnEvent);});</script><script async data-hostname="positief-nieuws.nl" src="https://scripts.simpleanalyticscdn.com/latest.js"></script></body></html>
