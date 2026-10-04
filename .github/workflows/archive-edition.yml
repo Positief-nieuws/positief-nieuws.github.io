@@ -13,6 +13,11 @@ on:
         type: boolean
         default: false
 
+      articles_only:
+        description: "Alleen artikelpagina’s bijwerken"
+        type: boolean
+        default: false
+
 permissions:
   contents: write
 
@@ -36,11 +41,11 @@ jobs:
           python-version: "3.13"
 
       - name: Categorieën in nieuws.json valideren
-        if: ${{ !inputs.branding_only }}
+        if: ${{ !inputs.branding_only && !inputs.articles_only }}
         run: python build_editions.py --validate-current
 
       - name: Editie bewaren
-        if: ${{ !inputs.branding_only }}
+        if: ${{ !inputs.branding_only && !inputs.articles_only }}
         shell: bash
         run: |
           python - <<'PY'
@@ -71,7 +76,7 @@ jobs:
           PY
 
       - name: Site, onderwerpen en sitemap bouwen
-        if: ${{ !inputs.branding_only }}
+        if: ${{ !inputs.branding_only && !inputs.articles_only }}
         env:
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
         run: python build_editions.py
@@ -79,6 +84,10 @@ jobs:
       - name: Favicon en sitenaam bijwerken
         if: ${{ inputs.branding_only }}
         run: python build_editions.py --refresh-branding
+
+      - name: Artikelpagina’s bijwerken
+        if: ${{ inputs.articles_only }}
+        run: python build_editions.py --refresh-articles
 
       - name: Gebouwde site committen
         shell: bash
