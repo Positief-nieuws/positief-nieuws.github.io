@@ -109,12 +109,12 @@ TOPIC_SEO = {
     },
     "Gezondheid": {
         "title": "Positief nieuws over gezondheid | Positief nieuws",
-        "h1": "Positief nieuws over gezondheid",
-        "description": "Lees positief nieuws over gezondheid, zorg en medisch onderzoek: nieuwe behandelingen, preventie en ontwikkelingen die patiëntenzorg verbeteren.",
-        "lead": "Goed nieuws over gezondheid, zorg en medische wetenschap.",
+        "h1": "Gezondheid",
+        "description": "Positief nieuws over gezondheid: ontwikkelingen in preventie, vroegere signalering, gerichtere behandeling en betere toegang tot zorg.",
+        "lead": "Van preventie en vroegere signalering tot gerichtere behandeling en betere toegang tot zorg. Hier verzamelen we de gezondheidsontwikkelingen uit onze edities, én kijken we af en toe wat er over meerdere verhalen heen opvalt.",
         "intro": [
-            "Op deze pagina vind je positieve ontwikkelingen rond gezondheid, zorg en medische wetenschap. We volgen onder meer nieuwe behandelingen, onderzoek, preventie, patiëntenzorg en andere veranderingen die de gezondheid of kwaliteit van leven van mensen kunnen verbeteren.",
-            "Van Nederlandse ziekenhuizen en universiteiten tot internationaal medisch onderzoek: we selecteren ontwikkelingen waarbij aantoonbaar iets vooruitgaat. Geen losse gezondheidsclaims of wondermiddelen, maar nieuws gebaseerd op betrouwbare bronnen. De nieuwste Nederlandse verhalen staan bovenaan, gevolgd door positief gezondheidsnieuws uit de rest van de wereld."
+            "Positief nieuws over gezondheid gaat niet alleen over nieuwe medicijnen. We volgen ook preventie, vroegere signalering, herstel, toegankelijkheid en andere ontwikkelingen die de gezondheid of kwaliteit van leven kunnen verbeteren.",
+            "De verhalen komen uit Nederlandse en internationale bronnen. Bovenaan duiden we alleen patronen die in meerdere recente verhalen terugkomen; daaronder blijft het volledige gezondheidsarchief beschikbaar."
         ],
     },
     "Mens": {
@@ -1085,6 +1085,170 @@ def render_topics_index(topics, latest):
     return f"""<!DOCTYPE html><html lang="nl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Onderwerpen | Positief nieuws per thema</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{SITE_URL}/onderwerpen/"><meta property="og:title" content="Onderwerpen · Positief nieuws"><meta property="og:description" content="{esc(desc)}"><meta property="og:type" content="website"><meta property="og:url" content="{SITE_URL}/onderwerpen/"><meta name="twitter:card" content="summary"><meta name="theme-color" content="#17382b"><script type="application/ld+json">{schema}</script><style>{BASE_CSS}</style></head><body>{header_html('topics')}<main><section class="hero"><div class="shell"><p class="kicker">Positief nieuws per thema</p><h1>Onderwerpen<b>.</b></h1><p class="lead">Positief nieuws geordend in acht vaste categorieën. Zo vind je makkelijker oudere en nieuwe verhalen over hetzelfde onderwerp.</p><div class="rule"></div></div></section><section class="section"><div class="shell"><div class="topic-list">{''.join(cards) if cards else '<p class="empty">Nog geen onderwerpen beschikbaar.</p>'}</div></div></section></main><footer>Positief nieuws · Dit gebeurt ook.</footer>{analytics_html({'page_type':'topics'})}</body></html>"""
 
 
+HEALTH_DOSSIER_UPDATED = "4 oktober 2026"
+
+HEALTH_DOSSIER_CSS = r"""
+.health-hero{padding-bottom:46px}
+.health-hero:after{width:126px;height:126px;border-radius:50%;border:1px solid rgba(139,92,66,.15);background:transparent;box-shadow:0 0 0 22px rgba(139,92,66,.025),0 0 0 44px rgba(214,161,58,.018);top:50px}
+.health-meta{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px;padding-top:12px;border-top:1px solid var(--green-dark);color:var(--green);font-size:.64rem;font-weight:800;position:relative}
+.health-meta:before{content:"";position:absolute;left:0;top:-1px;width:50px;height:2px;border-radius:999px;background:var(--accent)}
+.health-meta .sep{color:#9da49f}
+
+.health-signals{padding:38px 0 52px;background:#f3efe6;border-top:1px solid var(--line2);border-bottom:1px solid var(--line2)}
+.health-signals-head{display:grid;grid-template-columns:34px minmax(0,1fr);gap:12px;align-items:start;margin-bottom:22px}
+.health-signals-no{padding-top:5px;color:#999f9a;font-family:Georgia,"Times New Roman",serif;font-size:.84rem}
+.health-signals h2{margin:0;font-size:1.62rem;line-height:1.07;letter-spacing:-.04em}
+.health-signals-intro{max-width:680px;margin:9px 0 0;color:var(--muted);font-size:.87rem}
+.health-signal-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.health-signal{position:relative;min-height:205px;padding:22px 22px 20px;border:1px solid var(--line2);background:rgba(255,255,255,.48);overflow:hidden}
+.health-signal:after{content:"";position:absolute;right:-26px;top:-28px;width:88px;height:88px;border-radius:50%;background:rgba(214,161,58,.055)}
+.health-signal-icon{display:flex;align-items:center;justify-content:center;width:42px;height:42px;margin-bottom:15px;border-radius:50%}
+.health-signal-icon svg{width:26px;height:26px}
+.health-signal:nth-child(1) .health-signal-icon{background:#dce9df;color:#2f6d4c}
+.health-signal:nth-child(2) .health-signal-icon{background:#e4e2ef;color:#655a87}
+.health-signal:nth-child(3) .health-signal-icon{background:#f0e1d6;color:#9a5e3f}
+.health-signal:nth-child(4) .health-signal-icon{background:#dbe8e8;color:#3f7172}
+.health-signal h3{margin:0;font-size:1.16rem;line-height:1.15;letter-spacing:-.025em}
+.health-signal p{margin:9px 0 0;color:#4b544e;font-size:.84rem;line-height:1.52}
+.health-signal-links{margin-top:14px;padding-top:11px;border-top:1px solid var(--line2);font-size:.68rem;line-height:1.55}
+.health-signal-links a{color:var(--green-dark);font-weight:800;text-underline-offset:3px}
+.health-signal-note{margin:18px 0 0;padding:13px 16px;border-left:3px solid rgba(31,91,69,.34);background:rgba(255,255,255,.34);color:var(--muted);font-size:.76rem;line-height:1.55}
+
+.health-archive{padding-top:48px}
+.health-archive-heading{display:flex;align-items:end;justify-content:space-between;gap:20px;padding-bottom:10px;border-bottom:1px solid var(--green-dark)}
+.health-archive-heading h2{margin:0;font-size:1.55rem;line-height:1.05;letter-spacing:-.038em}
+.health-archive-heading span{color:var(--green);font-size:.64rem;font-weight:800}
+.health-region-head{display:flex;align-items:center;gap:10px;margin-top:34px;padding-bottom:8px;border-bottom:1px solid var(--line2)}
+.health-region-head span{color:#9aa09b;font-family:Georgia,"Times New Roman",serif;font-size:.78rem}
+.health-region-head h3{margin:0;font-size:1.08rem;letter-spacing:-.02em}
+
+.health-why{padding:34px 0 46px;background:#edf2eb;border-top:1px solid var(--line2)}
+.health-why-box{display:grid;grid-template-columns:48px minmax(0,1fr);gap:18px;align-items:start}
+.health-why-sun{display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:rgba(214,161,58,.12);color:var(--accent)}
+.health-why-sun svg{width:27px;height:27px}
+.health-why h2{margin:0;font-size:1.28rem;letter-spacing:-.028em}
+.health-why p{max-width:680px;margin:8px 0 0;color:#4b554e;font-size:.84rem}
+
+@media(max-width:760px){
+  .health-hero{padding-bottom:32px}
+  .health-hero:after{right:-62px;top:35px;width:104px;height:104px}
+  .health-signals{padding:30px 0 38px}
+  .health-signal-grid{grid-template-columns:1fr}
+  .health-signal{min-height:0}
+  .health-archive{padding-top:38px}
+  .health-archive-heading{align-items:start}
+  .health-why-box{grid-template-columns:40px minmax(0,1fr);gap:14px}
+  .health-why-sun{width:38px;height:38px}
+}
+"""
+
+
+def health_dossier_html():
+    return r"""
+    <section class="health-signals">
+      <div class="shell">
+        <div class="health-signals-head">
+          <span class="health-signals-no">01</span>
+          <div>
+            <h2>Dit zien we de afgelopen weken gebeuren</h2>
+            <p class="health-signals-intro">Geen algemene conclusie over de gezondheidszorg, wel vier lijnen die terugkomen in de verhalen die Positief nieuws recent selecteerde.</p>
+          </div>
+        </div>
+
+        <div class="health-signal-grid">
+          <article class="health-signal">
+            <div class="health-signal-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none">
+                <path d="M16 4 25 8v7c0 6-3.8 10.2-9 13-5.2-2.8-9-7-9-13V8l9-4Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+                <path d="m11.5 15 3 3 6-7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Preventie laat soms heel meetbaar effect zien</h3>
+            <p>Na de nieuwe RSV-immunisatie belandden in Nederlandse ziekenhuizen veel minder baby's met het virus op de intensive care. Op Mauritius laten langlopende bevolkingsmetingen zien dat diabetes type 2 na jaren van stijging is gedaald.</p>
+            <div class="health-signal-links">
+              <a href="https://www.hartvannederland.nl/milieu-gezondheid/zorg/artikelen/babys-rs-virus-daalt-na-invoering-nieuwe-prik" target="_blank" rel="noopener noreferrer">RSV-immunisatie</a>
+              &nbsp;·&nbsp;
+              <a href="/artikelen/2026-10-01/mauritius-daling-diabetes-type-2/">Diabetes op Mauritius</a>
+            </div>
+          </article>
+
+          <article class="health-signal">
+            <div class="health-signal-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none">
+                <circle cx="14" cy="14" r="8" stroke="currentColor" stroke-width="2.2"/>
+                <path d="m20 20 7 7M8 14h3l2-4 3 8 2-4h3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Signaleren schuift steeds verder naar voren</h3>
+            <p>Bij een zeldzame kinderspierziekte bleken twee ontstekingseiwitten al ongeveer een jaar vóór een zichtbare opvlamming te kunnen stijgen. Dat is nog geen brede klinische test, maar wel een voorbeeld van zorg die risico's eerder probeert te herkennen.</p>
+            <div class="health-signal-links">
+              <a href="/artikelen/2026-09-28/bloedwaarden-opvlamming-kinderspierziekte-eerder-signaleren/">Bloedwaarden bij kinderspierziekte</a>
+            </div>
+          </article>
+
+          <article class="health-signal">
+            <div class="health-signal-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none">
+                <circle cx="16" cy="16" r="11" stroke="currentColor" stroke-width="2"/>
+                <circle cx="16" cy="16" r="5.5" stroke="currentColor" stroke-width="2"/>
+                <path d="M16 5v5M16 22v5M5 16h5M22 16h5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                <circle cx="16" cy="16" r="1.8" fill="currentColor" stroke="none"/>
+              </svg>
+            </div>
+            <h3>Behandeling wordt gerichter — en herstel stopt niet altijd vroeg</h3>
+            <p>Een fase 3-studie liet een positief effect zien van een nieuw middel bij de zeldzame erfelijke vorm FUS-ALS. En bij jonge volwassenen met aanhoudende knieklachten bleek intensieve revalidatie zelfs één tot drie jaar na een kruisbandoperatie nog verbetering te kunnen geven.</p>
+            <div class="health-signal-links">
+              <a href="https://www.als.nl/nieuws/goed-nieuws-als-onderzoek/" target="_blank" rel="noopener noreferrer">FUS-ALS</a>
+              &nbsp;·&nbsp;
+              <a href="/artikelen/2026-10-01/gerichte-revalidatie-jaren-na-kruisbandoperatie/">Kruisbandrevalidatie</a>
+            </div>
+          </article>
+
+          <article class="health-signal">
+            <div class="health-signal-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none">
+                <rect x="5" y="8" width="10" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
+                <rect x="17" y="8" width="10" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
+                <path d="M10 13v6M7 16h6M22 12v8M19 16h6M15 16h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Vooruitgang gaat niet alleen over nieuwe medicijnen</h3>
+            <p>WHO breidde bewezen anticonceptie-opties uit en publiceerde een strategie om kinderkankermedicijnen betrouwbaarder beschikbaar te maken. Zambia digitaliseert ondertussen vaccinvoorraden, zodat tekorten sneller zichtbaar worden.</p>
+            <div class="health-signal-links">
+              <a href="https://www.who.int/news/item/23-09-2026-who-expands-safe-options-for-contraception" target="_blank" rel="noopener noreferrer">Anticonceptie</a>
+              &nbsp;·&nbsp;
+              <a href="https://www.who.int/publications/i/item/9789240125087" target="_blank" rel="noopener noreferrer">Kinderkankermedicijnen</a>
+              &nbsp;·&nbsp;
+              <a href="https://www.unicef.org/zambia/stories/paper-records-real-time-decision" target="_blank" rel="noopener noreferrer">Vaccinvoorraad Zambia</a>
+            </div>
+          </article>
+        </div>
+
+        <p class="health-signal-note"><strong>Hoe dit blok werkt:</strong> dit is redactionele duiding op basis van verhalen die eerder op Positief nieuws zijn geselecteerd. Het is geen medische trendanalyse en geen gezondheidsadvies. We formuleren alleen wat in meerdere recente verhalen terugkomt.</p>
+      </div>
+    </section>
+    """
+
+
+def health_why_html():
+    return r"""
+    <section class="health-why">
+      <div class="shell health-why-box">
+        <div class="health-why-sun" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="4.2" fill="currentColor"/>
+            <path d="M12 2v3M12 19v3M22 12h-3M5 12H2M19 5l-2 2M7 17l-2 2M19 19l-2-2M7 7 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div>
+          <h2>Zo zie je sneller wat er echt verandert</h2>
+          <p>Losse nieuwsberichten vertellen wat er vandaag gebeurt. Door verhalen over langere tijd naast elkaar te zetten, zie je ook de grotere beweging: wat werkt, waar zorg eerder kan ingrijpen en welke verbeteringen langzaam breder beschikbaar worden. Zo hoef je niet zelf door weken aan losse artikelen heen om het grotere plaatje te zien.</p>
+        </div>
+      </div>
+    </section>
+    """
+
+
 def render_topic_page(topic):
     label = topic["label"]
     slug = topic["slug"]
@@ -1103,6 +1267,94 @@ def render_topic_page(topic):
 
     nl_html = "\n".join(article_html(x["item"], x["date"], True, "nl") for x in topic["nl"])
     int_html = "\n".join(article_html(x["item"], x["date"], True, "int") for x in topic["int"])
+
+    # Gezondheid krijgt als pilot een redactionele dossierlaag boven het gewone archief.
+    if label == "Gezondheid":
+        total = len(topic["nl"]) + len(topic["int"])
+        schema = json.dumps({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Positief nieuws over gezondheid",
+            "description": desc,
+            "url": canonical,
+            "about": {
+                "@type": "Thing",
+                "name": "Gezondheid"
+            },
+            "isPartOf": {
+                "@type": "WebSite",
+                "name": "Positief nieuws",
+                "url": SITE_URL + "/"
+            }
+        }, ensure_ascii=False)
+
+        health_sections = []
+        if topic["nl"]:
+            health_sections.append(
+                f'<div class="health-region-head"><span>01</span><h3>Nederland</h3></div>'
+                f'{nl_html}'
+            )
+        if topic["int"]:
+            health_sections.append(
+                f'<div class="health-region-head"><span>02</span><h3>Wereld</h3></div>'
+                f'{int_html}'
+            )
+
+        return f"""<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{esc(title)}</title>
+  <meta name="description" content="{esc(desc)}">
+  <link rel="canonical" href="{canonical}">
+  <meta property="og:title" content="{esc(title)}">
+  <meta property="og:description" content="{esc(desc)}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{canonical}">
+  <meta property="og:site_name" content="Positief nieuws">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#17382b">
+  <script type="application/ld+json">{schema}</script>
+  <style>{BASE_CSS}{HEALTH_DOSSIER_CSS}</style>
+</head>
+<body>
+  {header_html('topics')}
+  <main>
+    <section class="hero health-hero">
+      <div class="shell">
+        <p class="kicker">Onderwerp · dossier</p>
+        <h1>{esc(h1)}</h1>
+        <p class="lead">{esc(lead)}</p>
+        <div class="health-meta">
+          <span>{total} recente {'verhalen' if total != 1 else 'verhaal'}</span>
+          <span class="sep">·</span>
+          <span>Nederland + wereld</span>
+          <span class="sep">·</span>
+          <span>Bijgewerkt {HEALTH_DOSSIER_UPDATED}</span>
+        </div>
+      </div>
+    </section>
+
+    {health_dossier_html()}
+
+    <section class="section health-archive">
+      <div class="shell">
+        <div class="health-archive-heading">
+          <h2>Het laatste positieve nieuws over gezondheid</h2>
+          <span>Van nieuw naar oud</span>
+        </div>
+        {''.join(health_sections)}
+        <p class="small"><a href="/onderwerpen/">← Bekijk alle onderwerpen</a></p>
+      </div>
+    </section>
+
+    {health_why_html()}
+  </main>
+  <footer>Positief nieuws · Dit gebeurt ook.</footer>
+  {analytics_html({'page_type':'topic','topic':slug})}
+</body>
+</html>"""
 
     sections = []
     if topic["nl"]:
@@ -1183,7 +1435,6 @@ def render_topic_page(topic):
   {analytics_html({'page_type':'topic','topic':slug})}
 </body>
 </html>"""
-
 
 def load_previous_topic_slugs():
     if not TOPIC_MANIFEST.exists():
