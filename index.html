@@ -29,13 +29,145 @@
 
   <title>Positief nieuws vandaag | Nederland en de wereld</title>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "url": "https://positief-nieuws.nl/",
-    "name": "Positief nieuws"
-  }
+  <script id="homepage-schema" type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://positief-nieuws.nl/#publisher",
+      "name": "Positief nieuws",
+      "url": "https://positief-nieuws.nl/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://positief-nieuws.nl/#website",
+      "url": "https://positief-nieuws.nl/",
+      "name": "Positief nieuws",
+      "inLanguage": "nl-NL",
+      "publisher": {
+        "@id": "https://positief-nieuws.nl/#publisher"
+      }
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://positief-nieuws.nl/#homepage",
+      "url": "https://positief-nieuws.nl/",
+      "name": "Positief nieuws uit Nederland en de wereld",
+      "description": "Twaalf positieve nieuwsverhalen uit Nederland en de wereld, plus drie belangrijke nieuwsitems. Elke maandag en donderdag een nieuwe editie.",
+      "inLanguage": "nl-NL",
+      "isPartOf": {
+        "@id": "https://positief-nieuws.nl/#website"
+      },
+      "publisher": {
+        "@id": "https://positief-nieuws.nl/#publisher"
+      },
+      "dateModified": "2026-10-01",
+      "relatedLink": "https://positief-nieuws.nl/edities/2026-10-01/",
+      "mainEntity": {
+        "@id": "https://positief-nieuws.nl/#edition-stories"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://positief-nieuws.nl/#edition-stories",
+      "name": "Verhalen in de nieuwste editie",
+      "numberOfItems": 15,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "DemenTalent helpt mensen met dementie actief te blijven als vrijwilliger",
+          "url": "https://positief-nieuws.nl/artikelen/2026-10-01/dementalent-vrijwilligerswerk-mensen-met-dementie/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Nieuwe Wageningse faciliteit moet voedselinnovaties sneller naar de praktijk brengen",
+          "url": "https://positief-nieuws.nl/artikelen/2026-10-01/cibia-wageningen-voedselinnovaties-praktijk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Werkgevers geven medewerkers vrije dagen voor vrijwilligerswerk",
+          "url": "https://positief-nieuws.nl/artikelen/2026-10-01/werkgevers-vrije-dagen-vrijwilligerswerk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Wereldwijde analyse laat zien waar grondwater na droogte goed herstelt",
+          "url": "https://positief-nieuws.nl/artikelen/2026-10-01/wereldwijde-analyse-herstel-grondwater-na-droogte/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Gerichte revalidatie helpt ook jaren na een kruisbandoperatie nog vooruit",
+          "url": "https://positief-nieuws.nl/artikelen/2026-10-01/gerichte-revalidatie-jaren-na-kruisbandoperatie/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Bladel maakt ruim een miljoen euro beschikbaar voor laagdrempelige herstelzorg",
+          "url": "https://positief-nieuws.nl/artikelen/2026-10-01/bladel-subsidie-laagdrempelige-herstelzorg/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Mauritius laat na jaren van stijging een daling van diabetes type 2 zien",
+          "url": "https://positief-nieuws.nl/artikelen/2026-10-01/mauritius-daling-diabetes-type-2/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Tien jaar zonder zware bodembaggering brengt Schotse zeebodem weer tot leven",
+          "url": "https://positief-nieuws.nl/artikelen/2026-10-01/summer-isles-zeeherstel-na-baggerverbod/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Geschilderde ogen op vee lijken roofdieren in Zimbabwe af te schrikken",
+          "url": "https://positief-nieuws.nl/artikelen/2026-10-01/geschilderde-ogen-vee-roofdieren-zimbabwe/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Jordanië gebruikt satellietdata om schaarser landbouwwater slimmer in te zetten",
+          "url": "https://positief-nieuws.nl/artikelen/2026-10-01/jordanie-satellietdata-waterbeheer-landbouw/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Aardpassage zet ruimtesonde Juice met weinig brandstof beter op koers naar Jupiter",
+          "url": "https://positief-nieuws.nl/artikelen/2026-10-01/juice-aardpassage-koers-jupiter/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Nieuwe faciliteit moet energieapparatuur in Oekraïne sneller echt aan het werk krijgen",
+          "url": "https://positief-nieuws.nl/artikelen/2026-10-01/oekraine-energieapparatuur-sneller-installeren-undp/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Schrijver en cabaretier Paulien Cornelisse op 50-jarige leeftijd overleden",
+          "url": "https://nos.nl/artikel/2633156-schrijfster-en-cabaretiere-paulien-cornelisse-50-overleden"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Onderzoek naar geweld in cockpit na noodlanding Flydubai-vlucht",
+          "url": "https://www.reuters.com/world/pilot-brawl-then-rapid-descent-passengers-recount-chaos-flydubai-flight-2026-09-30/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Overheid wil verplicht register en klachtenloket voor makelaars",
+          "url": "https://nos.nl/artikel/2633213-overheid-neemt-toezicht-op-makelaars-over-van-makelaars-zelf"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   
@@ -1605,6 +1737,9 @@
       }
     }
 
+    .edition-permalink { margin: -4px 0 20px; font-size: .78rem; color: var(--green-dark); }
+    .edition-permalink a, .home-topic-links a { text-underline-offset: 3px; }
+    .home-topic-links { line-height: 1.9; }
   </style>
 
 <style>
@@ -1756,7 +1891,8 @@
     <section class="hero">
       <div class="content-shell">
         <p class="section-kicker edition-brand">Dit gebeurt ook.</p>
-        <p class="hero-date" id="edition-date">Editie van vandaag</p>
+        <!-- homepage-date:start --><p class="hero-date" id="edition-date"><time datetime="2026-10-01">Editie van donderdag 1 oktober 2026</time></p><!-- homepage-date:end -->
+        <p class="edition-permalink"><a id="edition-permalink" href="/edities/2026-10-01/">Lees deze editie op een vaste pagina →</a></p>
         <h1 class="hero-title">Positief nieuws uit Nederland en de wereld</h1>
         <p class="hero-copy">
           Het belangrijkste positieve nieuws van vandaag, uit Nederland en de wereld.
@@ -1785,8 +1921,13 @@
           <p class="section-intro-visually-hidden">
             Zes positieve ontwikkelingen uit Nederland. Over mensen, gezondheid, wetenschap, natuur, sport en andere dingen die de goede kant op bewegen.
           </p>
-          <div id="nl-state" class="state">Nieuws laden…</div>
-          <div id="nl-grid" class="article-list" hidden></div>
+          <div id="nl-state" class="state" hidden>Nieuws laden…</div>
+          <!-- homepage-nl:start --><div id="nl-grid" class="article-list"><article class="article-row has-thumb"><div class="article-card-core"><div class="article-main"><h3 class="article-title"><a href="https://positief-nieuws.nl/artikelen/2026-10-01/dementalent-vrijwilligerswerk-mensen-met-dementie/" >DemenTalent helpt mensen met dementie actief te blijven als vrijwilliger</a></h3><p class="teaser-one-line">Stichting DemenTalent koppelt mensen met dementie aan vrijwilligerswerk dat past bij hun interesses en mogelijkheden. Zo blijft er na het wegvallen van werk ruimte om mee te doen en iets bij te dragen.</p><div class="meta"><a class="meta-category-link" href="/mens/">Mens</a><span class="meta-sep" aria-hidden="true">·</span><span class="dot">Hart van Nederland</span></div></div><a class="article-thumb" href="https://positief-nieuws.nl/artikelen/2026-10-01/dementalent-vrijwilligerswerk-mensen-met-dementie/"  aria-label="Lees DemenTalent helpt mensen met dementie actief te blijven als vrijwilliger"><img src="/images/artikelen/2026-10-01/dementalent-vrijwilligerswerk-mensen-met-dementie.jpg" alt="Illustratief beeld van vrijwilligers die samen buiten werken" loading="lazy" decoding="async"></a></div></article>
+<article class="article-row has-thumb"><div class="article-card-core"><div class="article-main"><h3 class="article-title"><a href="https://positief-nieuws.nl/artikelen/2026-10-01/cibia-wageningen-voedselinnovaties-praktijk/" >Nieuwe Wageningse faciliteit moet voedselinnovaties sneller naar de praktijk brengen</a></h3><p class="teaser-one-line">Wageningen University &amp; Research heeft CIBIA geopend, waar technologieontwikkeling, productontwikkeling en consumententests op één plek samenkomen.</p><div class="meta"><a class="meta-category-link" href="/energie-en-innovatie/">Energie &amp; innovatie</a><span class="meta-sep" aria-hidden="true">·</span><span class="dot">Wageningen University &amp; Research</span></div></div><a class="article-thumb" href="https://positief-nieuws.nl/artikelen/2026-10-01/cibia-wageningen-voedselinnovaties-praktijk/"  aria-label="Lees Nieuwe Wageningse faciliteit moet voedselinnovaties sneller naar de praktijk brengen"><img src="/images/artikelen/2026-10-01/cibia-wageningen-voedselinnovaties-praktijk.jpg" alt="Illustratief beeld van onderzoek en innovatie rond voedsel" loading="lazy" decoding="async"></a></div></article>
+<article class="article-row has-thumb"><div class="article-card-core"><div class="article-main"><h3 class="article-title"><a href="https://positief-nieuws.nl/artikelen/2026-10-01/werkgevers-vrije-dagen-vrijwilligerswerk/" >Werkgevers geven medewerkers vrije dagen voor vrijwilligerswerk</a></h3><p class="teaser-one-line">Een aantal bedrijven maakt onder werktijd ruimte voor maatschappelijke inzet. Medewerkers kunnen zo betaald tijd besteden aan vrijwilligerswerk dat ze belangrijk vinden.</p><div class="meta"><a class="meta-category-link" href="/mens/">Mens</a><span class="meta-sep" aria-hidden="true">·</span><span class="dot">Omrop Fryslân</span></div></div><a class="article-thumb" href="https://positief-nieuws.nl/artikelen/2026-10-01/werkgevers-vrije-dagen-vrijwilligerswerk/"  aria-label="Lees Werkgevers geven medewerkers vrije dagen voor vrijwilligerswerk"><img src="/images/artikelen/2026-10-01/werkgevers-vrije-dagen-vrijwilligerswerk.jpg" alt="Illustratief beeld van vrijwilligers die samen aan een maatschappelijke activiteit werken" loading="lazy" decoding="async"></a></div></article>
+<article class="article-row has-thumb"><div class="article-card-core"><div class="article-main"><h3 class="article-title"><a href="https://positief-nieuws.nl/artikelen/2026-10-01/wereldwijde-analyse-herstel-grondwater-na-droogte/" >Wereldwijde analyse laat zien waar grondwater na droogte goed herstelt</a></h3><p class="teaser-one-line">Onderzoekers van Universiteit Utrecht ontwikkelden met een wereldwijd grondwatermodel een methode om te zien welke gebieden veerkrachtig zijn en waar langdurige droogte grotere risico&#x27;s geeft.</p><div class="meta"><a class="meta-category-link" href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><span class="meta-sep" aria-hidden="true">·</span><span class="dot">Universiteit Utrecht via EurekAlert</span></div></div><a class="article-thumb" href="https://positief-nieuws.nl/artikelen/2026-10-01/wereldwijde-analyse-herstel-grondwater-na-droogte/"  aria-label="Lees Wereldwijde analyse laat zien waar grondwater na droogte goed herstelt"><img src="/images/artikelen/2026-10-01/wereldwijde-analyse-herstel-grondwater-na-droogte.jpg" alt="Illustratief beeld van een droog landschap en water" loading="lazy" decoding="async"></a></div></article>
+<article class="article-row has-thumb"><div class="article-card-core"><div class="article-main"><h3 class="article-title"><a href="https://positief-nieuws.nl/artikelen/2026-10-01/gerichte-revalidatie-jaren-na-kruisbandoperatie/" >Gerichte revalidatie helpt ook jaren na een kruisbandoperatie nog vooruit</a></h3><p class="teaser-one-line">Een vier maanden durend oefenprogramma verbeterde klachten en spierkracht bij jonge volwassenen die één tot drie jaar na hun kruisbandoperatie nog problemen hadden.</p><div class="meta"><a class="meta-category-link" href="/gezondheid/">Gezondheid</a><span class="meta-sep" aria-hidden="true">·</span><span class="dot">Scientias</span><span class="meta-sep" aria-hidden="true">·</span><span class="dot">3 min lezen</span></div></div><a class="article-thumb" href="https://positief-nieuws.nl/artikelen/2026-10-01/gerichte-revalidatie-jaren-na-kruisbandoperatie/"  aria-label="Lees Gerichte revalidatie helpt ook jaren na een kruisbandoperatie nog vooruit"><img src="/images/artikelen/2026-10-01/gerichte-revalidatie-jaren-na-kruisbandoperatie.jpg" alt="Illustratief beeld van fysiotherapie en knierevalidatie" loading="lazy" decoding="async"></a></div></article>
+<article class="article-row has-thumb"><div class="article-card-core"><div class="article-main"><h3 class="article-title"><a href="https://positief-nieuws.nl/artikelen/2026-10-01/bladel-subsidie-laagdrempelige-herstelzorg/" >Bladel maakt ruim een miljoen euro beschikbaar voor laagdrempelige herstelzorg</a></h3><p class="teaser-one-line">Nieuwe subsidieregels moeten herstelcentra voor mensen met psychische kwetsbaarheid mogelijk maken, met vrije inloop, trainingen en ondersteuning zonder indicatie.</p><div class="meta"><a class="meta-category-link" href="/mens/">Mens</a><span class="meta-sep" aria-hidden="true">·</span><span class="dot">Omroep Brabant</span></div></div><a class="article-thumb" href="https://positief-nieuws.nl/artikelen/2026-10-01/bladel-subsidie-laagdrempelige-herstelzorg/"  aria-label="Lees Bladel maakt ruim een miljoen euro beschikbaar voor laagdrempelige herstelzorg"><img src="/images/artikelen/2026-10-01/bladel-subsidie-laagdrempelige-herstelzorg.jpg" alt="Illustratief beeld van mensen tijdens een laagdrempelige groepsbijeenkomst" loading="lazy" decoding="async"></a></div></article></div><!-- homepage-nl:end -->
         </div>
       </section>
 
@@ -1825,12 +1966,17 @@
           <p class="section-note">
             Zes positieve ontwikkelingen van buiten Nederland. Je leest eerst onze Nederlandse samenvatting; de oorspronkelijke bron kan Engelstalig zijn.
           </p>
-          <div id="int-state" class="state">Nieuws laden…</div>
-          <div id="int-grid" class="article-list" hidden></div>
+          <div id="int-state" class="state" hidden>Nieuws laden…</div>
+          <!-- homepage-int:start --><div id="int-grid" class="article-list"><article class="article-row has-thumb"><div class="article-card-core"><div class="article-main"><h3 class="article-title"><a href="https://positief-nieuws.nl/artikelen/2026-10-01/mauritius-daling-diabetes-type-2/" >Mauritius laat na jaren van stijging een daling van diabetes type 2 zien</a></h3><p class="teaser-one-line">Zeven bevolkingsonderzoeken over 34 jaar laten zien dat het aandeel volwassenen met diabetes type 2 na een piek in 2009 duidelijk is gedaald.</p><div class="meta"><a class="meta-category-link" href="/gezondheid/">Gezondheid</a><span class="meta-sep" aria-hidden="true">·</span><span class="dot">Medical Xpress / EASD</span><span class="meta-sep" aria-hidden="true">·</span><span class="dot">5 min lezen</span></div></div><a class="article-thumb" href="https://positief-nieuws.nl/artikelen/2026-10-01/mauritius-daling-diabetes-type-2/"  aria-label="Lees Mauritius laat na jaren van stijging een daling van diabetes type 2 zien"><img src="/images/artikelen/2026-10-01/mauritius-daling-diabetes-type-2.jpg" alt="Illustratief beeld van een bloedsuikermeting" loading="lazy" decoding="async"></a></div></article>
+<article class="article-row has-thumb"><div class="article-card-core"><div class="article-main"><h3 class="article-title"><a href="https://positief-nieuws.nl/artikelen/2026-10-01/summer-isles-zeeherstel-na-baggerverbod/" >Tien jaar zonder zware bodembaggering brengt Schotse zeebodem weer tot leven</a></h3><p class="teaser-one-line">In een beschermd zeegebied bij de Summer Isles melden onderzoekers, vissers en bewoners herstel van kwetsbare maerlbedden, schelpdieren en andere zeedieren.</p><div class="meta"><a class="meta-category-link" href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><span class="meta-sep" aria-hidden="true">·</span><span class="dot">The Guardian</span><span class="meta-sep" aria-hidden="true">·</span><span class="dot">6 min lezen</span></div></div><a class="article-thumb" href="https://positief-nieuws.nl/artikelen/2026-10-01/summer-isles-zeeherstel-na-baggerverbod/"  aria-label="Lees Tien jaar zonder zware bodembaggering brengt Schotse zeebodem weer tot leven"><img src="/images/artikelen/2026-10-01/summer-isles-zeeherstel-na-baggerverbod.jpg" alt="Illustratief beeld van de Schotse kust en zee" loading="lazy" decoding="async"></a></div></article>
+<article class="article-row has-thumb"><div class="article-card-core"><div class="article-main"><h3 class="article-title"><a href="https://positief-nieuws.nl/artikelen/2026-10-01/geschilderde-ogen-vee-roofdieren-zimbabwe/" >Geschilderde ogen op vee lijken roofdieren in Zimbabwe af te schrikken</a></h3><p class="teaser-one-line">Boeren experimenteren met opvallende ogen op de achterkant van koeien en ander vee. De eenvoudige methode is bedoeld om aanvallen door roofdieren te verminderen zonder dieren te doden.</p><div class="meta"><a class="meta-category-link" href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><span class="meta-sep" aria-hidden="true">·</span><span class="dot">Mongabay</span></div></div><a class="article-thumb" href="https://positief-nieuws.nl/artikelen/2026-10-01/geschilderde-ogen-vee-roofdieren-zimbabwe/"  aria-label="Lees Geschilderde ogen op vee lijken roofdieren in Zimbabwe af te schrikken"><img src="/images/artikelen/2026-10-01/geschilderde-ogen-vee-roofdieren-zimbabwe.jpg" alt="Illustratief beeld van runderen in een Afrikaans landschap" loading="lazy" decoding="async"></a></div></article>
+<article class="article-row has-thumb"><div class="article-card-core"><div class="article-main"><h3 class="article-title"><a href="https://positief-nieuws.nl/artikelen/2026-10-01/jordanie-satellietdata-waterbeheer-landbouw/" >Jordanië gebruikt satellietdata om schaarser landbouwwater slimmer in te zetten</a></h3><p class="teaser-one-line">Het WaPOR-programma combineert satellietgegevens met lokale kennis om te laten zien waar water in de landbouw het meest productief wordt gebruikt.</p><div class="meta"><a class="meta-category-link" href="/energie-en-innovatie/">Energie &amp; innovatie</a><span class="meta-sep" aria-hidden="true">·</span><span class="dot">FAO</span></div></div><a class="article-thumb" href="https://positief-nieuws.nl/artikelen/2026-10-01/jordanie-satellietdata-waterbeheer-landbouw/"  aria-label="Lees Jordanië gebruikt satellietdata om schaarser landbouwwater slimmer in te zetten"><img src="/images/artikelen/2026-10-01/jordanie-satellietdata-waterbeheer-landbouw.jpg" alt="Illustratief beeld van geïrrigeerde landbouwgrond" loading="lazy" decoding="async"></a></div></article>
+<article class="article-row has-thumb"><div class="article-card-core"><div class="article-main"><h3 class="article-title"><a href="https://positief-nieuws.nl/artikelen/2026-10-01/juice-aardpassage-koers-jupiter/" >Aardpassage zet ruimtesonde Juice met weinig brandstof beter op koers naar Jupiter</a></h3><p class="teaser-one-line">ESA&#x27;s ruimtesonde gebruikte de zwaartekracht van de aarde om zijn baan twintig graden te verleggen en snelheid op te bouwen voor de lange reis naar Jupiter.</p><div class="meta"><a class="meta-category-link" href="/wetenschap/">Wetenschap</a><span class="meta-sep" aria-hidden="true">·</span><span class="dot">ESA</span></div></div><a class="article-thumb" href="https://positief-nieuws.nl/artikelen/2026-10-01/juice-aardpassage-koers-jupiter/"  aria-label="Lees Aardpassage zet ruimtesonde Juice met weinig brandstof beter op koers naar Jupiter"><img src="/images/artikelen/2026-10-01/juice-aardpassage-koers-jupiter.jpg" alt="Illustratief beeld van een ruimtesonde op weg naar Jupiter" loading="lazy" decoding="async"></a></div></article>
+<article class="article-row has-thumb"><div class="article-card-core"><div class="article-main"><h3 class="article-title"><a href="https://positief-nieuws.nl/artikelen/2026-10-01/oekraine-energieapparatuur-sneller-installeren-undp/" >Nieuwe faciliteit moet energieapparatuur in Oekraïne sneller echt aan het werk krijgen</a></h3><p class="teaser-one-line">Een vijfjarig programma van de Oekraïense overheid en UNDP richt zich op de laatste stap: gedoneerde transformatoren, generatoren en andere apparatuur installeren en aansluiten.</p><div class="meta"><a class="meta-category-link" href="/energie-en-innovatie/">Energie &amp; innovatie</a><span class="meta-sep" aria-hidden="true">·</span><span class="dot">UNDP</span></div></div><a class="article-thumb" href="https://positief-nieuws.nl/artikelen/2026-10-01/oekraine-energieapparatuur-sneller-installeren-undp/"  aria-label="Lees Nieuwe faciliteit moet energieapparatuur in Oekraïne sneller echt aan het werk krijgen"><img src="/images/artikelen/2026-10-01/oekraine-energieapparatuur-sneller-installeren-undp.jpg" alt="Illustratief beeld van moderne energie-infrastructuur" loading="lazy" decoding="async"></a></div></article></div><!-- homepage-int:end -->
         </div>
       </section>
 
-      <section class="news-section briefing-block" id="headlines-section" hidden>
+      <section class="news-section briefing-block" id="headlines-section">
         <div class="content-shell">
           <div class="section-heading">
             <h2 class="section-kicker">Wat je verder moet weten</h2>
@@ -1839,8 +1985,10 @@
           <p class="section-note">
             Niet per se positief, wel belangrijk. Drie onderwerpen die vandaag de Nederlandse nieuwskoppen domineren — kort en feitelijk.
           </p>
-          <div id="headlines-state" class="state">Nieuws laden…</div>
-          <div id="headlines-grid" class="article-list" hidden></div>
+          <div id="headlines-state" class="state" hidden>Nieuws laden…</div>
+          <!-- homepage-headlines:start --><div id="headlines-grid" class="article-list"><article class="article-row has-arrow"><div class="briefing-row"><div class="briefing-number">01</div><div class="article-card-core"><div class="article-main"><h3 class="article-title"><a href="https://nos.nl/artikel/2633156-schrijfster-en-cabaretiere-paulien-cornelisse-50-overleden" target="_blank" rel="noopener noreferrer">Schrijver en cabaretier Paulien Cornelisse op 50-jarige leeftijd overleden</a></h3><p class="teaser">Paulien Cornelisse is overleden aan de gevolgen van kanker. Ze werd bekend met haar boeken over taal, cabaretvoorstellingen, columns en haar recente rol in De Slimste Mens.</p><div class="meta"><span class="dot">NOS</span></div></div></div></div><a class="article-arrow" href="https://nos.nl/artikel/2633156-schrijfster-en-cabaretiere-paulien-cornelisse-50-overleden" target="_blank" rel="noopener noreferrer" aria-label="Lees Schrijver en cabaretier Paulien Cornelisse op 50-jarige leeftijd overleden">↗</a></article>
+<article class="article-row has-arrow"><div class="briefing-row"><div class="briefing-number">02</div><div class="article-card-core"><div class="article-main"><h3 class="article-title"><a href="https://www.reuters.com/world/pilot-brawl-then-rapid-descent-passengers-recount-chaos-flydubai-flight-2026-09-30/" target="_blank" rel="noopener noreferrer">Onderzoek naar geweld in cockpit na noodlanding Flydubai-vlucht</a></h3><p class="teaser">Op een vlucht van Dubai naar Tel Aviv werd de gezagvoerder aangevallen. Passagiers en meevliegende piloten grepen in en het toestel landde veilig in Saudi-Arabië; het motief wordt nog onderzocht.</p><div class="meta"><span class="dot">Reuters</span></div></div></div></div><a class="article-arrow" href="https://www.reuters.com/world/pilot-brawl-then-rapid-descent-passengers-recount-chaos-flydubai-flight-2026-09-30/" target="_blank" rel="noopener noreferrer" aria-label="Lees Onderzoek naar geweld in cockpit na noodlanding Flydubai-vlucht">↗</a></article>
+<article class="article-row has-arrow"><div class="briefing-row"><div class="briefing-number">03</div><div class="article-card-core"><div class="article-main"><h3 class="article-title"><a href="https://nos.nl/artikel/2633213-overheid-neemt-toezicht-op-makelaars-over-van-makelaars-zelf" target="_blank" rel="noopener noreferrer">Overheid wil verplicht register en klachtenloket voor makelaars</a></h3><p class="teaser">Het kabinet wil het toezicht op makelaars niet langer alleen aan de branche overlaten. Er komen plannen voor een verplicht register, gedragsregels en een klachtenprocedure voor kopers en verkopers.</p><div class="meta"><span class="dot">NOS</span></div></div></div></div><a class="article-arrow" href="https://nos.nl/artikel/2633213-overheid-neemt-toezicht-op-makelaars-over-van-makelaars-zelf" target="_blank" rel="noopener noreferrer" aria-label="Lees Overheid wil verplicht register en klachtenloket voor makelaars">↗</a></article></div><!-- homepage-headlines:end -->
         </div>
       </section>
 
@@ -1938,8 +2086,9 @@
               Daarnaast krijg je drie belangrijke nieuwsitems die je helpen om bij te blijven bij wat er verder speelt.
               Zo krijg je niet alleen goed nieuws, maar een compacte en evenwichtige selectie van het nieuws van vandaag.
               Geen eindeloze nieuwsstroom en geen voortdurend verversende feed: na vijftien verhalen ben je klaar.
-              Je kunt de nieuwste editie hier lezen en eerdere edities terugvinden in het archief.
+              Je kunt de nieuwste editie hier lezen en <a href="/edities/">eerdere edities terugvinden in het archief</a>. Voor een langere blik lees je de <a href="/specials/nederland-gaat-ook-vooruit/">special over vooruitgang in Nederland</a>.
             </p>
+            <p class="home-topic-links">Lees verder per thema: <a href="/mens/">mensen en samenleving</a> · <a href="/gezondheid/">gezondheid</a> · <a href="/wetenschap/">wetenschap</a> · <a href="/natuur-en-klimaat/">natuur en klimaat</a> · <a href="/cultuur/">cultuur</a> · <a href="/energie-en-innovatie/">energie en innovatie</a> · <a href="/economie/">economie</a> · <a href="/sport/">sport</a>. Bekijk ook <a href="/onderwerpen/">alle onderwerpen</a>.</p>
           </div>
         </div>
       </section>
@@ -3425,6 +3574,40 @@
     }
 
 
+    function updateHomepageMetadata(data, rawDate) {
+      const validDate = /^\d{4}-\d{2}-\d{2}$/.test(String(rawDate || ""))
+        && !Number.isNaN(Date.parse(`${rawDate}T12:00:00Z`))
+        && new Date(`${rawDate}T12:00:00Z`).toISOString().slice(0, 10) === rawDate;
+      const dateEl = $("#edition-date");
+      const time = document.createElement("time");
+      time.textContent = validDate ? formatEditionDate(rawDate) : "Editiedatum onbekend";
+      if (validDate) time.setAttribute("datetime", rawDate);
+      dateEl.replaceChildren(time);
+      const permalink = $("#edition-permalink");
+      permalink.href = validDate ? `/edities/${rawDate}/` : "/edities/";
+      const schemaEl = $("#homepage-schema");
+      const schema = JSON.parse(schemaEl.textContent);
+      const page = schema["@graph"].find(node => node["@id"] === "https://positief-nieuws.nl/#homepage");
+      const list = schema["@graph"].find(node => node["@id"] === "https://positief-nieuws.nl/#edition-stories");
+      if (validDate) {
+        page.dateModified = rawDate;
+        page.relatedLink = `https://positief-nieuws.nl/edities/${rawDate}/`;
+      } else {
+        delete page.dateModified;
+        delete page.relatedLink;
+      }
+      list.itemListElement = ["nl", "int", "headlines"].flatMap(type =>
+        getSection(data, type).map(normalizeArticle).filter(article => article.title).slice(0, type === "headlines" ? 3 : 6)
+      ).flatMap(article => {
+        const href = article.articleSlug && validDate
+          ? `/artikelen/${rawDate}/${encodeURIComponent(article.articleSlug)}/`
+          : safeUrl(article.url);
+        return href === "#" ? [] : [{ "@type": "ListItem", name: article.title, url: new URL(href, "https://positief-nieuws.nl/").href }];
+      }).map((item, index) => ({ ...item, position: index + 1 }));
+      list.numberOfItems = list.itemListElement.length;
+      schemaEl.textContent = JSON.stringify(schema);
+    }
+
     async function loadNews() {
 
       try {
@@ -3481,10 +3664,7 @@
         );
 
 
-        $("#edition-date").textContent =
-          formatEditionDate(
-            rawEditionDate
-          );
+        updateHomepageMetadata(data, rawEditionDate);
 
         const heroWeekday =
           new Intl.DateTimeFormat(

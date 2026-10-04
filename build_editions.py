@@ -1798,8 +1798,98 @@ def write_topic_pages(topics):
     print(f"Gebouwd: {TOPICS_DIR / 'index.html'}")
 
 
+def homepage_story_url(item, edition_date):
+    if has_article_page(item):
+        return article_page_url(item, edition_date)
+    url = str(item.get("url") or item.get("link") or "")
+    parsed = urllib.parse.urlsplit(url)
+    return url if parsed.scheme in {"https", "http"} and parsed.netloc else ""
+
+
+def homepage_story_html(item, edition_date, section, index):
+    title = item.get("title") or item.get("headline") or ""
+    url = homepage_story_url(item, edition_date)
+    internal = url.startswith(SITE_URL + "/")
+    attrs = "" if internal else 'target="_blank" rel="noopener noreferrer"'
+    title_html = f'<a href="{esc(url)}" {attrs}>{esc(title)}</a>' if url else esc(title)
+    teaser = item.get("teaser") or item.get("summary") or item.get("description") or ""
+    teaser_class = "teaser" if section == "headlines" else "teaser-one-line"
+    category = canonical_category(category_label(item)) or category_label(item)
+    meta = []
+    if category:
+        slug = slugify_category(category)
+        meta.append(f'<a class="meta-category-link" href="/{esc(slug)}/">{esc(category)}</a>')
+    if item.get("source"):
+        meta.append(f'<span class="dot">{esc(item["source"])}</span>')
+    if reading_time(item):
+        meta.append(f'<span class="dot">{esc(reading_time(item))}</span>')
+    meta_html = '<div class="meta">' + '<span class="meta-sep" aria-hidden="true">·</span>'.join(meta) + '</div>' if meta else ""
+    thumb = ""
+    if section != "headlines":
+        slug = str(item.get("article_slug") or "").strip().strip("/")
+        cached = _load_pixabay_cache().get(f"{edition_date}/{slug}") or {}
+        image_path = cached.get("image_path") if cached.get("query") == item.get("image_query") else None
+        if image_path and Path(str(image_path).lstrip("/")).is_file() and url:
+            thumb = f'<a class="article-thumb" href="{esc(url)}" {attrs} aria-label="Lees {esc(title)}"><img src="{esc(image_path)}" alt="{esc(item.get("image_alt") or title)}" loading="lazy" decoding="async"></a>'
+    core = f'<div class="article-card-core"><div class="article-main"><h3 class="article-title">{title_html}</h3>'
+    if teaser:
+        core += f'<p class="{teaser_class}">{esc(teaser)}</p>'
+    core += meta_html + '</div>' + thumb + '</div>'
+    classes = "article-row" + (" has-thumb" if thumb else "")
+    if section == "headlines":
+        core = f'<div class="briefing-row"><div class="briefing-number">{index + 1:02d}</div>{core}</div>'
+        if url:
+            classes += " has-arrow"
+            core += f'<a class="article-arrow" href="{esc(url)}" {attrs} aria-label="Lees {esc(title)}">↗</a>'
+    return f'<article class="{classes}">{core}</article>'
+
+
+def update_homepage(data):
+    homepage = Path("index.html")
+    if not homepage.exists():
+        raise FileNotFoundError("index.html ontbreekt voor de homepage-build.")
+    edition_date = get_date(data)
+    if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(edition_date or "")):
+        raise ValueError("Homepage vereist een geldige meta.edition_date of edition.date.")
+    datetime.strptime(edition_date, "%Y-%m-%d")
+    markup = homepage.read_text(encoding="utf-8")
+    graph = [
+        {"@type": "Organization", "@id": SITE_URL + "/#publisher", "name": "Positief nieuws", "url": SITE_URL + "/"},
+        {"@type": "WebSite", "@id": SITE_URL + "/#website", "url": SITE_URL + "/", "name": "Positief nieuws", "inLanguage": "nl-NL", "publisher": {"@id": SITE_URL + "/#publisher"}},
+        {"@type": "CollectionPage", "@id": SITE_URL + "/#homepage", "url": SITE_URL + "/", "name": "Positief nieuws uit Nederland en de wereld", "description": "Twaalf positieve nieuwsverhalen uit Nederland en de wereld, plus drie belangrijke nieuwsitems. Elke maandag en donderdag een nieuwe editie.", "inLanguage": "nl-NL", "isPartOf": {"@id": SITE_URL + "/#website"}, "publisher": {"@id": SITE_URL + "/#publisher"}, "dateModified": edition_date, "relatedLink": f"{SITE_URL}/edities/{edition_date}/", "mainEntity": {"@id": SITE_URL + "/#edition-stories"}},
+    ]
+    story_list = []
+    for section, limit in [("nl", 6), ("int", 6), ("headlines", 3)]:
+        stories = [item for item in items(data, section) if item.get("title") or item.get("headline")][:limit]
+        cards = "\n".join(homepage_story_html(item, edition_date, section, index) for index, item in enumerate(stories))
+        block = f'<!-- homepage-{section}:start --><div id="{section}-grid" class="article-list"' + ("" if stories else " hidden") + f'>{cards}</div><!-- homepage-{section}:end -->'
+        markup, count = re.subn(rf'<!-- homepage-{section}:start -->.*?<!-- homepage-{section}:end -->', lambda _: block, markup, flags=re.S)
+        if count != 1:
+            raise ValueError(f"Homepage-marker voor {section} ontbreekt of is dubbel.")
+        markup = re.sub(rf'<div id="{section}-state" class="state"(?: hidden)?>.*?</div>', f'<div id="{section}-state" class="state" hidden>Nieuws laden…</div>', markup)
+        if section == "headlines":
+            markup = markup.replace('id="headlines-section" hidden', 'id="headlines-section"') if stories else markup.replace('id="headlines-section">', 'id="headlines-section" hidden>')
+        for item in stories:
+            url = homepage_story_url(item, edition_date)
+            if url:
+                story_list.append({"@type": "ListItem", "position": len(story_list) + 1, "name": item.get("title") or item.get("headline"), "url": url})
+    graph.append({"@type": "ItemList", "@id": SITE_URL + "/#edition-stories", "name": "Verhalen in de nieuwste editie", "numberOfItems": len(story_list), "itemListElement": story_list})
+    schema = json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False, indent=2).replace("<", "\\u003c")
+    markup, count = re.subn(r'<script id="homepage-schema" type="application/ld\+json">.*?</script>', lambda _: f'<script id="homepage-schema" type="application/ld+json">\n{schema}\n  </script>', markup, flags=re.S)
+    if count != 1:
+        raise ValueError("Homepage-schema ontbreekt of is dubbel.")
+    date_html = f'<!-- homepage-date:start --><p class="hero-date" id="edition-date"><time datetime="{edition_date}">Editie van {esc(fmt_date(edition_date))}</time></p><!-- homepage-date:end -->'
+    markup, count = re.subn(r'<!-- homepage-date:start -->.*?<!-- homepage-date:end -->', lambda _: date_html, markup, flags=re.S)
+    if count != 1:
+        raise ValueError("Homepage-datummarker ontbreekt of is dubbel.")
+    markup = re.sub(r'(<a id="edition-permalink" href=")[^"]*', rf'\g<1>/edities/{edition_date}/', markup)
+    homepage.write_text(markup, encoding="utf-8")
+    print(f"Homepage bijgewerkt: editie {edition_date}, {len(story_list)} direct leesbare verhalen.")
+
+
 def build_site():
     EDITIONS_DIR.mkdir(exist_ok=True)
+    current = None
     if NEWS_PATH.exists():
         current = json.loads(NEWS_PATH.read_text(encoding="utf-8"))
         validate_positive_articles(current, "nieuws.json")
@@ -1829,6 +1919,8 @@ def build_site():
     topics = collect_topics(edition_records)
     write_topic_pages(topics)
     article_pages = write_article_pages(edition_records)
+    if current is not None:
+        update_homepage(current)
 
     latest = max(dates) if dates else datetime.now().strftime("%Y-%m-%d")
     sitemap_urls = [
