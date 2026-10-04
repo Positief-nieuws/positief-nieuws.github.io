@@ -334,7 +334,7 @@ def header_html(active=""):
     return f"""<header class="site-header">
   <div class="header-shell header-row">
     <a class="brand" href="/" aria-label="Positief nieuws homepage">
-      <svg class="brand-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"></circle><path d="M12 1.8V5.1M12 18.9V22.2M22.2 12H18.9M5.1 12H1.8M19.2 4.8L16.8 7.2M7.2 16.8L4.8 19.2M19.2 19.2L16.8 16.8M7.2 7.2L4.8 4.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg>
+      <img class="brand-sun" src="/sun-icon-512.png" width="32" height="32" alt="" aria-hidden="true">
       <span>Positief nieuws</span>
     </a>
 
@@ -1027,7 +1027,7 @@ def render_edition(data, date_value):
     return f"""<!DOCTYPE html><html lang="nl"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{canonical}">
-<meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:type" content="article"><meta property="og:url" content="{canonical}"><meta name="twitter:card" content="summary"><meta name="theme-color" content="#17382b"><link rel="manifest" href="/manifest.json?v=4"><link rel="apple-touch-icon" href="/icon-192-v3.png"><script type="application/ld+json">{schema}</script><style>{BASE_CSS}.banner{{margin-top:18px;padding:10px 13px;border:1px solid var(--line);color:var(--green-dark);font-size:.75rem}}.briefing-row{{display:grid;grid-template-columns:34px minmax(0,1fr);gap:10px;padding-right:46px}}.num{{padding-top:2px;color:#7f8982;font-size:.66rem;font-weight:700}}.end{{padding:72px 0 64px;text-align:center}}.end h2{{max-width:620px;margin:auto;font-size:clamp(2.2rem,5vw,3.3rem);line-height:1;letter-spacing:-.045em}}.back{{display:inline-flex;margin-top:18px;padding:9px 15px;border:1px solid var(--line);border-radius:999px;text-decoration:none;font-size:.72rem;font-weight:700}}</style></head><body>
+<meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:type" content="article"><meta property="og:url" content="{canonical}"><meta name="twitter:card" content="summary"><meta name="theme-color" content="#17382b"><link rel="manifest" href="/manifest.json?v=5"><link rel="apple-touch-icon" href="/sun-apple-touch-icon.png"><script type="application/ld+json">{schema}</script><style>{BASE_CSS}.banner{{margin-top:18px;padding:10px 13px;border:1px solid var(--line);color:var(--green-dark);font-size:.75rem}}.briefing-row{{display:grid;grid-template-columns:34px minmax(0,1fr);gap:10px;padding-right:46px}}.num{{padding-top:2px;color:#7f8982;font-size:.66rem;font-weight:700}}.end{{padding:72px 0 64px;text-align:center}}.end h2{{max-width:620px;margin:auto;font-size:clamp(2.2rem,5vw,3.3rem);line-height:1;letter-spacing:-.045em}}.back{{display:inline-flex;margin-top:18px;padding:9px 15px;border:1px solid var(--line);border-radius:999px;text-decoration:none;font-size:.72rem;font-weight:700}}</style></head><body>
 {header_html()}
 <div class="shell banner">Je leest de editie van {esc(date_text)}. <a href="/">Ga naar de nieuwste editie →</a></div>
 <section class="hero"><div class="shell"><p class="date">{esc(date_text)}</p><h1>Dit gebeurt ook<b>.</b></h1><p class="lead">In een paar minuten weet je wat er goed gaat én wat je verder moet weten in deze editie. Zonder eindeloos scrollen.</p><div class="rule"></div></div></section>
@@ -2030,7 +2030,8 @@ def refresh_branding():
     """Apply the same crawlable sun favicon and brand name to every public HTML page."""
     tags = ('<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64">'
             '<link rel="icon" type="image/png" href="/favicon.png" sizes="96x96">'
-            '<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">'
+            '<link rel="apple-touch-icon" href="/sun-apple-touch-icon.png" sizes="180x180">'
+            '<link rel="manifest" href="/manifest.json?v=5">'
             '<meta property="og:site_name" content="Positief nieuws">'
             '<meta name="application-name" content="Positief nieuws">')
     count = 0
@@ -2038,9 +2039,10 @@ def refresh_branding():
         if any(part.startswith('.') for part in page.parts):
             continue
         markup = page.read_text(encoding='utf-8')
+        markup = re.sub(r'<svg class="brand-sun".*?</svg>', lambda _: '<img class="brand-sun" src="/sun-icon-512.png" width="32" height="32" alt="" aria-hidden="true">', markup, flags=re.S)
         if not re.search(r'</head\s*>', markup, re.I):
             continue
-        markup = re.sub(r'<link\b(?=[^>]*\brel\s*=\s*[\'"](?:icon|shortcut icon|apple-touch-icon)[\'"])[^>]*>\s*', '', markup, flags=re.I)
+        markup = re.sub(r'<link\b(?=[^>]*\brel\s*=\s*[\'"](?:icon|shortcut icon|apple-touch-icon|manifest)[\'"])[^>]*>\s*', '', markup, flags=re.I)
         markup = re.sub(r'<meta\b(?=[^>]*\b(?:property|name)\s*=\s*[\'"](?:og:site_name|application-name)[\'"])[^>]*>\s*', '', markup, flags=re.I)
         markup = re.sub(r'</head\s*>', tags + '</head>', markup, count=1, flags=re.I)
         if page == Path('index.html'):

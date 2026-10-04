@@ -1,11 +1,12 @@
-const CACHE_NAME = "positief-nieuws-v4";
+const CACHE_NAME = "positief-nieuws-v5";
 
 const CORE_ASSETS = [
   "/",
   "/index.html",
-  "/manifest.json",
-  "/icon-192-v2.png",
-  "/icon-512-v2.png",
+  "/manifest.json?v=5",
+  "/sun-icon-192.png",
+  "/sun-icon-512.png",
+  "/sun-apple-touch-icon.png",
   "/edities/index.json"
 ];
 
