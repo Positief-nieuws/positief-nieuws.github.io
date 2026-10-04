@@ -1,214 +1,1243 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Positief nieuws uit Nederland en de wereld. Twee keer per week een compacte selectie van wat er vooruitgaat, plus het nieuws dat je verder moet weten."
+  >
+
+  <meta property="og:title" content="Positief nieuws | Goed nieuws uit Nederland en de wereld">
+  <meta property="og:description" content="Positief nieuws uit Nederland en de wereld. Twee keer per week een compacte selectie van wat er vooruitgaat, plus het nieuws dat je verder moet weten.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://positief-nieuws.nl/">
+  <meta property="og:site_name" content="Positief nieuws">
+  <link rel="canonical" href="https://positief-nieuws.nl/">
+
+  <meta name="theme-color" content="#17382b">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Positief nieuws">
+  <link rel="manifest" href="/manifest.json?v=4">
+  <link rel="apple-touch-icon" href="/icon-192-v3.png">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Positief nieuws | Goed nieuws uit Nederland en de wereld">
+  <meta name="twitter:description" content="Positief nieuws uit Nederland en de wereld. Twee keer per week een compacte selectie van wat er vooruitgaat, plus het nieuws dat je verder moet weten.">
+
   <title>Positief nieuws | Goed nieuws uit Nederland en de wereld</title>
-  <meta name="description" content="Positief nieuws uit Nederland en de wereld. Twee keer per week een compacte selectie van wat er vooruitgaat, plus het nieuws dat je verder moet weten.">
-  <meta name="theme-color" content="#173f31">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://positief-nieuws.nl/",
+    "name": "Positief nieuws"
+  }
+  </script>
+
+  
   <style>
     :root {
-      --paper:#f7f5ec;
-      --ink:#151a17;
-      --green:#1f5b45;
-      --green-dark:#173f31;
-      --accent:#d6a13a;
-      --muted:#6d756f;
-      --line:rgba(23,63,49,.22);
-      --line-soft:rgba(23,63,49,.105);
-      --cream:#f4efe3;
-      --world:#edf2eb;
-      --brief:#f0ece4;
-      --white:#fff;
-      --content:820px;
-      --wide:1040px;
+      --paper: #f7f5ec;
+      --paper-deep: #f1efe5;
+      --ink: #151a17;
+      --green: #1f5b45;
+      --green-dark: #173f31;
+      --accent: #d6a13a;
+      --accent-soft: rgba(214, 161, 58, 0.18);
+      --muted: #68716b;
+      --line: rgba(23, 63, 49, 0.22);
+      --line-soft: rgba(23, 63, 49, 0.12);
+      --white: #ffffff;
+      --content: 748px;
+      --wide: 920px;
+      --header: 1080px;
     }
-    *{box-sizing:border-box}
-    html{font-size:17px}
-    body{
-      margin:0;
-      background:var(--paper);
-      color:var(--ink);
-      font-family:Arial,Helvetica,sans-serif;
-      line-height:1.52;
-      -webkit-font-smoothing:antialiased;
+
+    * { box-sizing: border-box; }
+    html {
+      scroll-behavior: smooth;
+      font-size: 17px;
     }
-    a{color:inherit}
-    .wide{width:min(calc(100% - 48px),var(--wide));margin:auto}
-    .shell{width:min(calc(100% - 48px),var(--content));margin:auto}
-
-    /* Masthead */
-    .site-header{padding:23px 0 17px;border-bottom:1px solid var(--line-soft)}
-    .header-row{display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .brand{display:inline-flex;align-items:center;gap:11px;text-decoration:none;font-weight:850;letter-spacing:-.025em}
-    .sun{width:27px;height:27px;color:var(--accent)}
-    .nav{display:flex;align-items:center;gap:21px}
-    .nav a{font-size:.71rem;font-weight:750;text-decoration:none}
-    .nav a:hover{color:var(--green)}
-    .nav .cta{padding:8px 14px;border:1px solid rgba(214,161,58,.48);border-radius:999px;color:#9a6d18}
-    .menu{display:none;width:42px;height:42px;border:1px solid var(--line);border-radius:12px;background:transparent}
-    .menu span{display:block;width:18px;height:2px;margin:4px auto;background:var(--green-dark)}
-
-    /* Editie-opening */
-    .edition-hero{padding:56px 0 34px}
-    .brandline{margin:0;color:var(--green);font-size:.66rem;font-weight:850;letter-spacing:.12em;text-transform:uppercase}
-    h1,h2,h3{font-family:Georgia,"Times New Roman",serif}
-    h1{max-width:760px;margin:10px 0 0;font-size:clamp(2.8rem,6vw,4.65rem);line-height:.98;letter-spacing:-.055em}
-    .hero-copy{max-width:650px;margin:19px 0 0;color:#39413c;font-size:1rem;line-height:1.55}
-    .issue-bar{
-      display:flex;align-items:center;gap:12px;flex-wrap:wrap;
-      margin-top:27px;padding:12px 0 11px;
-      border-top:1px solid var(--green-dark);border-bottom:1px solid var(--line);
-      color:var(--green-dark);font-size:.66rem;font-weight:800;letter-spacing:.02em;
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.52;
+      -webkit-font-smoothing: antialiased;
     }
-    .issue-bar strong{font-size:.64rem;letter-spacing:.1em;text-transform:uppercase}
-    .dot{color:#a6aca8}
 
-    /* Secties */
-    .news-section{padding:42px 0 46px}
-    .section-head{display:grid;grid-template-columns:42px 1fr auto;align-items:end;gap:12px;padding-bottom:10px;border-bottom:1px solid var(--green-dark)}
-    .section-no{color:#a0a59f;font-family:Georgia,"Times New Roman",serif;font-size:.85rem}
-    .section-head h2{margin:0;font-size:1.45rem;line-height:1.05;letter-spacing:-.035em}
-    .section-count{font-size:.64rem;font-weight:750;color:var(--green)}
-    .nl-section{background:#f8f3e8}
-    .world-section{background:var(--world)}
-    .brief-section{background:var(--brief)}
-    .article-row{display:flex;align-items:flex-start;gap:22px;padding:20px 0;border-bottom:1px solid var(--line-soft)}
-    .article-copy{flex:1 1 auto;min-width:0}
-    .article-row h3{margin:0;font-size:1.22rem;line-height:1.18;letter-spacing:-.027em}
-    .article-row h3 a{text-decoration:none}
-    .article-row h3 a:hover{text-decoration:underline;text-underline-offset:3px}
-    .teaser-one-line{margin:8px 0 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#464e49;font-size:.87rem}
-    .meta{display:flex;align-items:center;flex-wrap:wrap;gap:5px;margin-top:10px;color:var(--green);font-size:.63rem;font-weight:750}
-    .meta-sep{color:#969e99}
-    .thumb-link{flex:0 0 168px;width:168px;height:116px;text-decoration:none}
-    .thumb-art{width:100%;height:100%;overflow:hidden;border-radius:7px;background:var(--thumb-bg);color:var(--thumb-fg)}
-    .thumb-art svg{width:100%;height:100%;padding:12px}
 
-    /* Special: onderdeel van de editie, geen banner */
-    .special-wrap{padding:26px 0 28px;background:var(--paper)}
-    .special-card{
-      display:grid;grid-template-columns:92px minmax(0,1fr);gap:23px;align-items:center;
-      padding:24px 26px;
-      border-top:1px solid var(--green-dark);border-bottom:1px solid var(--green-dark);
+    h1,
+    h2,
+    h3,
+    .hero-title,
+    .article-title,
+    .page-title {
+      font-family: Georgia, "Times New Roman", serif;
     }
-    .special-sun{
-      display:flex;align-items:center;justify-content:center;width:82px;height:82px;
-      border-radius:50%;background:rgba(214,161,58,.11);color:var(--accent)
+
+    a { color: inherit; }
+    button, input { font: inherit; }
+    [hidden] { display: none !important; }
+
+    .header-shell {
+      width: min(calc(100% - 48px), var(--header));
+      margin: 0 auto;
     }
-    .special-sun svg{width:52px;height:52px}
-    .special-kicker{margin:0;color:var(--green);font-size:.65rem;font-weight:850;letter-spacing:.1em;text-transform:uppercase}
-    .special-card h2{margin:6px 0 0;font-size:1.62rem;line-height:1.05;letter-spacing:-.04em}
-    .special-card h2 a{text-decoration:none}
-    .special-card h2 a:hover{text-decoration:underline;text-underline-offset:4px}
-    .special-copy{margin:8px 0 0;color:#444d47;font-size:.86rem;line-height:1.5}
-    .special-link{display:inline-block;margin-top:10px;color:var(--green-dark);font-size:.72rem;font-weight:850;text-underline-offset:3px}
 
-    /* Briefing */
-    .brief-row{display:grid;grid-template-columns:34px minmax(0,1fr);gap:13px;padding:21px 0;border-bottom:1px solid var(--line-soft)}
-    .brief-number{padding-top:3px;color:#8e9690;font-size:.63rem;font-weight:800}
-    .brief-row h3{margin:0;font-size:1.12rem;line-height:1.2;letter-spacing:-.02em}
-    .brief-row h3 a{text-decoration:none}
-    .brief-row p{margin:7px 0 0;color:#49504c;font-size:.85rem;line-height:1.45}
-
-    /* Afsluiting */
-    .edition-end{padding:66px 0 54px;text-align:center}
-    .edition-end .sun{width:39px;height:39px}
-    .edition-end h2{margin:16px 0 0;font-size:2rem;line-height:1.05;letter-spacing:-.045em}
-    .edition-end p{margin:11px 0 0;color:var(--muted);font-size:.82rem}
-
-    .support{margin:0 auto 34px;padding:28px 30px;border:1px solid rgba(214,161,58,.34);border-radius:16px;background:rgba(255,255,255,.42)}
-    .support-grid{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px;align-items:center}
-    .support h2,.newsletter h2{margin:6px 0 0;font-size:1.5rem;line-height:1.08}
-    .support p,.newsletter p{margin:8px 0 0;color:var(--muted);font-size:.84rem}
-    .button{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:0 17px;border-radius:999px;background:var(--green-dark);color:white;font-size:.72rem;font-weight:800;text-decoration:none}
-    .newsletter{margin:0 auto 38px;padding:30px;background:var(--green);color:white}
-    .newsletter-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
-    .newsletter p{color:rgba(255,255,255,.72)}
-    .fake-form{display:flex;border-bottom:1px solid rgba(255,255,255,.6);padding-bottom:8px}
-    .fake-form span{flex:1;color:rgba(255,255,255,.64);font-size:.8rem}
-    .fake-form b{font-size:.72rem}
-
-    .archive-preview{padding:0 0 52px}
-    .archive-head{display:flex;justify-content:space-between;align-items:center;padding-bottom:9px;border-bottom:1px solid var(--line)}
-    .archive-head h2{margin:0;font-size:1.2rem}
-    .archive-head a{font-size:.68rem;font-weight:800}
-    .archive-item{display:grid;grid-template-columns:125px 1fr auto;gap:16px;padding:16px 0;border-bottom:1px solid var(--line-soft)}
-    .archive-item time{color:var(--green);font-size:.66rem;font-weight:800}
-    .archive-item strong{font-family:Georgia,"Times New Roman",serif;font-size:.98rem}
-
-    .seo-copy{padding:38px 0 56px;border-top:1px solid var(--line-soft);color:#59615c}
-    .seo-copy h2{margin:0;font-size:1.15rem;color:var(--ink)}
-    .seo-copy p{max-width:700px;margin:10px 0 0;font-size:.82rem;line-height:1.6}
-
-    footer{padding:0 0 30px;text-align:center;color:#909691;font-size:.68rem}
-
-    @media(max-width:760px){
-      .wide,.shell{width:min(calc(100% - 30px),100%)}
-      .site-header{padding:15px 0 10px}
-      .nav{display:none}
-      .menu{display:block}
-      .edition-hero{padding:39px 0 25px}
-      h1{font-size:clamp(2.45rem,12vw,3.55rem)}
-      .hero-copy{font-size:.94rem}
-      .issue-bar{gap:8px;font-size:.6rem}
-      .news-section{padding:34px 0 36px}
-      .section-head{grid-template-columns:30px 1fr auto;gap:8px}
-      .section-head h2{font-size:1.25rem}
-      .article-row{gap:13px;padding:18px 0}
-      .article-row h3{font-size:1.08rem}
-      .teaser-one-line{display:none}
-      .thumb-link{flex-basis:112px;width:112px;height:84px}
-      .thumb-art{border-radius:7px}
-      .meta{margin-top:8px;font-size:.59rem}
-      .special-wrap{padding:18px 0 20px}
-      .special-card{grid-template-columns:64px minmax(0,1fr);gap:15px;padding:20px 0}
-      .special-sun{width:60px;height:60px}
-      .special-sun svg{width:38px;height:38px}
-      .special-card h2{font-size:1.34rem}
-      .special-copy{font-size:.8rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-      .brief-row h3{font-size:1.04rem}
-      .brief-row p{font-size:.82rem}
-      .edition-end{padding:54px 0 42px}
-      .support{padding:23px 21px}
-      .support-grid,.newsletter-grid{grid-template-columns:1fr;gap:19px}
-      .button{width:100%}
-      .newsletter{padding:25px 22px}
-      .archive-item{grid-template-columns:88px 1fr auto;gap:10px}
-      .archive-item strong{font-size:.9rem}
+    .content-shell {
+      width: min(calc(100% - 48px), var(--content));
+      margin: 0 auto;
     }
-  
+
+    .wide-shell {
+      width: min(calc(100% - 48px), var(--wide));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      padding: 26px 0 18px;
+    }
+
+    .header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.02rem;
+      font-weight: 800;
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-sun {
+      width: 28px;
+      height: 28px;
+      color: var(--accent);
+      flex: 0 0 auto;
+    }
+
+    .brand span {
+      white-space: nowrap;
+    }
+
+    .mobile-menu-toggle {
+      display: none;
+      min-height: 42px;
+      padding: 0 13px;
+      border: 1px solid rgba(23, 63, 49, 0.16);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.3);
+      color: var(--green-dark);
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .menu-icon {
+      display: inline-flex;
+      width: 17px;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .menu-line {
+      display: block;
+      width: 17px;
+      height: 1.5px;
+      border-radius: 999px;
+      background: currentColor;
+      transition: transform 160ms ease, opacity 160ms ease;
+      transform-origin: center;
+    }
+
+    .menu-label {
+      font-size: .76rem;
+      font-weight: 750;
+      line-height: 1;
+    }
+
+    .site-header.menu-open .menu-line:nth-child(1) {
+      transform: translateY(5.5px) rotate(45deg);
+    }
+
+    .site-header.menu-open .menu-line:nth-child(2) {
+      opacity: 0;
+    }
+
+    .site-header.menu-open .menu-line:nth-child(3) {
+      transform: translateY(-5.5px) rotate(-45deg);
+    }
+
+    .app-nav-inner {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .app-nav a {
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.86rem;
+      font-weight: 600;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: color 120ms ease, border-color 120ms ease, background-color 120ms ease;
+    }
+
+    .app-nav a:hover,
+    .app-nav a.is-active { color: var(--accent); }
+
+    .app-nav .header-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 40px;
+      padding: 0 16px;
+      border: 1px solid rgba(214, 161, 58, 0.45);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.25);
+      color: var(--accent);
+      box-shadow: inset 0 0 0 1px rgba(214, 161, 58, 0.08);
+    }
+
+    .header-cta-icon {
+      width: 16px;
+      height: 16px;
+      flex: 0 0 auto;
+    }
+
+    .hero {
+      padding: 76px 0 34px;
+    }
+
+    .hero-date {
+      margin: 0 0 5px;
+      color: var(--green-dark);
+      font-size: 0.77rem;
+    }
+
+    .hero-title {
+      margin: 0;
+      color: #111512;
+      font-size: clamp(3rem, 6.1vw, 4.25rem);
+      line-height: 0.96;
+      letter-spacing: -0.055em;
+    }
+
+    .hero-title-dot {
+      color: var(--accent);
+    }
+
+    .hero-copy {
+      max-width: 650px;
+      margin: 18px 0 0;
+      color: #2d342f;
+      font-size: 1.02rem;
+      line-height: 1.55;
+    }
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      margin-top: 21px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.69rem;
+    }
+
+    .hero-meta-right {
+      display: flex;
+      gap: 18px;
+      white-space: nowrap;
+    }
+
+    .archive-banner {
+      display: none;
+      margin-top: 22px;
+      padding: 10px 13px;
+      border: 1px solid var(--line);
+      color: var(--green-dark);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.75rem;
+    }
+
+    .archive-banner.is-visible { display: block; }
+    .archive-banner a { font-weight: 800; }
+
+    main { padding-bottom: 90px; }
+
+    .news-section {
+      padding: 76px 0 72px;
+    }
+
+    main > .news-section:first-of-type {
+      padding-top: 38px;
+    }
+
+    /* Subtiele kleurvlakken per redactioneel blok */
+    .seo-intro {
+      padding: 34px 0 38px;
+      border-top: 1px solid var(--line-soft);
+      background: var(--paper);
+    }
+
+    .seo-intro-inner {
+      max-width: 650px;
+    }
+
+    .seo-intro h2 {
+      margin: 0 0 10px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.35rem;
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+    }
+
+    .seo-intro p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.58;
+    }
+
+    .news-section.nl-block {
+      background: #f8f3e8;
+    }
+
+    .news-section.world-block {
+      background: #eef3ed;
+    }
+
+    .news-section.briefing-block {
+      background: #f3efe7;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--green-dark);
+    }
+
+    .section-kicker {
+      margin: 0;
+      color: var(--green);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.67rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .section-count {
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.67rem;
+    }
+
+    .section-intro-visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .section-note {
+      max-width: 650px;
+      margin: 13px 0 3px;
+      color: var(--muted);
+      font-size: 0.86rem;
+      line-height: 1.5;
+    }
+
+    .state {
+      padding: 34px 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    .article-list {
+      display: block;
+    }
+
+    .article-row {
+      position: relative;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--line-soft);
+    }
+
+    .article-row.has-arrow {
+      padding-right: 46px;
+    }
+
+    .article-row:first-child { padding-top: 20px; }
+
+    .article-card-core {
+      display: flex;
+      align-items: flex-start;
+      gap: 22px;
+      min-width: 0;
+    }
+
+    .article-main {
+      flex: 1 1 auto;
+      min-width: 0;
+    }
+
+    .article-thumb {
+      display: block;
+      flex: 0 0 168px;
+      width: 168px;
+      height: 116px;
+      overflow: hidden;
+      border-radius: 11px;
+      background: rgba(23,63,49,.06);
+      text-decoration: none;
+    }
+
+    .article-thumb img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .18s ease;
+    }
+
+    .article-thumb:hover img {
+      transform: scale(1.025);
+    }
+
+    .article-title {
+      margin: 0;
+      max-width: 660px;
+      color: #121714;
+      font-size: 1.22rem;
+      font-weight: 700;
+      line-height: 1.18;
+      letter-spacing: -0.025em;
+    }
+
+    .article-title a {
+      text-decoration: none;
+    }
+
+    .article-title a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+    .teaser {
+      max-width: 650px;
+      margin: 8px 0 0;
+      color: #3f4742;
+      font-size: 0.88rem;
+      line-height: 1.48;
+    }
+
+    .teaser-one-line {
+      min-width: 0;
+      margin: 8px 0 0;
+      color: #3f4742;
+      font-size: 0.88rem;
+      line-height: 1.4;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 5px;
+      margin-top: 10px;
+      color: var(--green);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.64rem;
+      font-weight: 700;
+    }
+
+    .meta-sep { color: #919a94; }
+
+    .meta-category-link {
+      color: var(--green);
+      text-decoration: underline;
+      text-decoration-color: rgba(31,91,69,.28);
+      text-underline-offset: 2px;
+    }
+
+    .meta-category-link:hover {
+      text-decoration-color: currentColor;
+    }
+
+    .article-arrow {
+      position: absolute;
+      top: 22px;
+      right: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 27px;
+      height: 27px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      color: var(--green-dark);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.77rem;
+      text-decoration: none;
+      transition: transform .15s ease, background .15s ease;
+    }
+
+    .article-arrow:hover {
+      transform: translateX(2px);
+      background: rgba(31,91,69,.06);
+    }
+
+    .briefing-row {
+      display: grid;
+      grid-template-columns: 34px minmax(0,1fr);
+      gap: 10px;
+      padding-right: 46px;
+    }
+
+    .briefing-number {
+      padding-top: 2px;
+      color: #7f8982;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.66rem;
+      font-weight: 700;
+    }
+
+    .edition-end {
+      padding: 88px 0 68px;
+      text-align: center;
+    }
+
+    .edition-end-sun {
+      width: 42px;
+      height: 42px;
+      margin: 0 auto 22px;
+      color: var(--accent);
+      display: block;
+    }
+
+    .edition-end h2 {
+      max-width: 620px;
+      margin: 0 auto;
+      color: #111512;
+      font-size: clamp(2.45rem, 5.2vw, 3.6rem);
+      line-height: .98;
+      letter-spacing: -0.05em;
+    }
+
+    .edition-end p {
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .end-actions {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
+
+    .quiet-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      padding: 0 15px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: transparent;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .quiet-button:hover { background: rgba(31,91,69,.05); }
+
+    #install-strip { display: none; }
+    #install-strip.is-visible { display: inline-flex; flex-direction: column; align-items: center; }
+    #install-dismiss { display: none; }
+
+    .install-copy {
+      display: none;
+      margin: 10px 0 0 !important;
+      max-width: 480px;
+      color: var(--muted) !important;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.7rem !important;
+    }
+    .install-copy.is-visible { display: block; }
+
+    .ios-install-panel {
+      display: none;
+      max-width: 520px;
+      margin: 10px auto 0;
+      padding: 10px 12px;
+      border: 1px solid var(--line-soft);
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.7rem;
+    }
+    .ios-install-panel.is-visible { display: block; }
+
+    .special-feature {
+      margin: 28px auto 30px;
+      padding: 26px 30px;
+      border: 1px solid rgba(23, 63, 49, .18);
+      border-radius: 18px;
+      background:
+        radial-gradient(circle at 92% 18%, rgba(214,161,58,.14), transparent 30%),
+        #f3efe7;
+    }
+
+    .special-feature-grid {
+      display: grid;
+      grid-template-columns: 104px minmax(0,1fr);
+      align-items: center;
+      gap: 26px;
+    }
+
+    .special-feature-visual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 104px;
+      height: 104px;
+      border-radius: 50%;
+      background: rgba(214,161,58,.10);
+      border: 1px solid rgba(214,161,58,.30);
+      color: var(--accent);
+    }
+
+    .special-feature-sun {
+      width: 62px;
+      height: 62px;
+      display: block;
+    }
+
+    .special-feature .section-kicker {
+      color: var(--green);
+    }
+
+    .special-feature h2 {
+      margin: 7px 0 0;
+      color: #111512;
+      font-size: 1.78rem;
+      line-height: 1.05;
+      letter-spacing: -.04em;
+    }
+
+    .special-feature h2 a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .special-feature h2 a:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+
+    .special-feature-copy {
+      max-width: 650px;
+      margin: 9px 0 0;
+      color: #3f4742;
+      font-size: .88rem;
+      line-height: 1.5;
+    }
+
+    .special-feature-link {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 13px;
+      color: var(--green-dark);
+      font-size: .76rem;
+      font-weight: 800;
+      text-decoration: underline;
+      text-decoration-color: rgba(23,63,49,.28);
+      text-underline-offset: 3px;
+    }
+
+    .special-feature-link:hover {
+      text-decoration-color: currentColor;
+    }
+
+    .support-teaser {
+      margin: 0 auto 54px;
+      padding: 30px 34px;
+      border: 1px solid rgba(214, 161, 58, .32);
+      border-radius: 18px;
+      background:
+        radial-gradient(circle at 92% 18%, rgba(214,161,58,.11), transparent 29%),
+        rgba(255,255,255,.42);
+    }
+
+    .support-teaser-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .support-teaser .section-kicker {
+      color: var(--green);
+    }
+
+    .support-teaser h2 {
+      margin: 7px 0 0;
+      color: #111512;
+      font-size: 1.65rem;
+      line-height: 1.08;
+      letter-spacing: -.035em;
+    }
+
+    .support-teaser p {
+      max-width: 560px;
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: .86rem;
+      line-height: 1.55;
+    }
+
+    .support-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 19px;
+      border: 1px solid var(--green-dark);
+      border-radius: 999px;
+      background: var(--green-dark);
+      color: var(--white);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .76rem;
+      font-weight: 800;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: transform .15s ease, background .15s ease;
+    }
+
+    .support-button:hover {
+      transform: translateY(-1px);
+      background: var(--green);
+    }
+
+    .newsletter {
+      padding: 36px 42px;
+      background: var(--green);
+      color: var(--white);
+    }
+
+    .newsletter-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      align-items: end;
+      gap: 38px;
+    }
+
+    .newsletter .section-kicker { color: rgba(255,255,255,.7); }
+
+    .newsletter h2 {
+      max-width: 370px;
+      margin: 8px 0 0;
+      font-size: 2rem;
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+    }
+
+    .newsletter p {
+      margin: 12px 0 0;
+      color: rgba(255,255,255,.72);
+      font-size: 0.88rem;
+    }
+
+    .buttondown-form {
+      display: grid;
+      grid-template-columns: minmax(0,1fr) auto;
+      align-items: center;
+      gap: 8px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(255,255,255,.5);
+    }
+
+    .buttondown-form label,
+    .buttondown-note { display: none; }
+
+    .buttondown-form input[type="email"] {
+      min-width: 0;
+      border: 0;
+      outline: 0;
+      background: transparent;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.95rem;
+    }
+
+    .buttondown-form input[type="email"]::placeholder { color: rgba(255,255,255,.65); }
+
+    .buttondown-form input[type="submit"] {
+      min-height: 34px;
+      padding: 0 16px;
+      border: 0;
+      border-radius: 999px;
+      background: var(--white);
+      color: var(--green-dark);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.76rem;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .home-archive {
+      padding: 56px 0 80px;
+    }
+
+    .home-archive-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .home-archive-heading a {
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .78rem;
+      text-decoration: none;
+    }
+
+    .home-archive-list { display: block; }
+
+    .home-archive-item {
+      display: grid;
+      grid-template-columns: 76px minmax(0,1fr) 22px;
+      align-items: center;
+      gap: 14px;
+      min-height: 48px;
+      border-bottom: 1px solid var(--line-soft);
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .home-archive-date {
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .72rem;
+    }
+
+    .home-archive-title {
+      overflow: hidden;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .88rem;
+      font-weight: 500;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .home-archive-arrow {
+      color: var(--green-dark);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .88rem;
+      text-align: right;
+    }
+
+    .archive-page,
+    .about-page,
+    .privacy-page,
+    .signup-pending-page {
+      padding: 76px 0 96px;
+    }
+
+    .page-title {
+      margin: 8px 0 0;
+      color: #111512;
+      font-size: clamp(2.7rem, 6vw, 4rem);
+      line-height: .98;
+      letter-spacing: -.05em;
+    }
+
+    .archive-note,
+    .about-copy,
+    .privacy-copy,
+    .signup-pending-copy {
+      max-width: 670px;
+      color: #3f4742;
+      font-size: .95rem;
+    }
+
+    .signup-pending-card {
+      max-width: 670px;
+      margin-top: 28px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255,255,255,.58);
+    }
+
+    .signup-pending-card p {
+      margin: 0 0 14px;
+    }
+
+    .signup-pending-card p:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .signup-pending-actions {
+      margin-top: 24px;
+    }
+
+    .signup-pending-actions a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border: 1px solid var(--green-dark);
+      border-radius: 999px;
+      color: var(--green-dark);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .78rem;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .signup-pending-actions a:hover {
+      background: rgba(31,91,69,.05);
+    }
+
+    .archive-list {
+      margin-top: 34px;
+      border-top: 1px solid var(--line);
+    }
+
+    .archive-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--line-soft);
+      text-decoration: none;
+    }
+
+    .archive-date { font-size: .95rem; }
+    .archive-open {
+      color: var(--green);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .68rem;
+      font-weight: 800;
+    }
+
+    .about-copy,
+    .privacy-copy { margin-top: 28px; }
+
+    .about-copy a,
+    .privacy-copy a { color: var(--green-dark); font-weight: 700; }
+
+    .about-copy h2,
+    .privacy-copy h2 {
+      margin: 34px 0 10px;
+      color: #111512;
+      font-size: 1.25rem;
+      line-height: 1.15;
+      letter-spacing: -.025em;
+    }
+
+    .contact-block {
+      margin-top: 34px;
+      padding-top: 26px;
+      border-top: 1px solid var(--line);
+    }
+
+    .contact-email {
+      display: inline-block;
+      margin-top: 4px;
+    }
+
+    .privacy-copy ul {
+      margin: 12px 0 20px 20px;
+      padding: 0;
+    }
+
+    .privacy-copy li { margin: 7px 0; }
+
+    .privacy-updated {
+      margin-top: 30px;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .7rem;
+    }
+
+    .site-footer {
+      padding: 0 0 34px;
+      color: #8b928e;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .72rem;
+      text-align: center;
+    }
+
+    .site-footer a {
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    @media (max-width: 760px) {
+      .header-shell,
+      .content-shell,
+      .wide-shell { width: min(calc(100% - 30px), 100%); }
+
+      .site-header {
+        position: relative;
+        z-index: 30;
+        padding: 15px 0 9px;
+      }
+
+      .header-row {
+        position: relative;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .brand {
+        gap: 10px;
+        font-size: .98rem;
+        line-height: 1;
+        flex: 0 1 auto;
+        min-width: 0;
+      }
+
+      .brand-sun {
+        width: 31px;
+        height: 31px;
+      }
+
+      .mobile-menu-toggle {
+        display: inline-flex;
+        margin-left: auto;
+        flex: 0 0 auto;
+      }
+
+      .app-nav {
+        display: none;
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 0;
+        right: 0;
+        z-index: 40;
+        padding: 7px;
+        border: 1px solid rgba(23, 63, 49, 0.14);
+        border-radius: 18px;
+        background: rgba(247,245,236,.985);
+        box-shadow: 0 18px 44px rgba(23, 63, 49, 0.12);
+        backdrop-filter: blur(10px);
+      }
+
+      .site-header.menu-open .app-nav {
+        display: block;
+      }
+
+      .app-nav-inner {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+
+      .app-nav a {
+        display: flex;
+        align-items: center;
+        min-height: 43px;
+        padding: 0 12px;
+        border-radius: 12px;
+        font-size: .86rem;
+      }
+
+      .app-nav a:hover,
+      .app-nav a.is-active {
+        background: rgba(214, 161, 58, 0.08);
+      }
+
+      .app-nav #nav-about {
+        display: flex;
+      }
+
+      .app-nav .header-cta {
+        justify-content: flex-start;
+        min-height: 43px;
+        margin-top: 4px;
+        padding: 0 12px;
+        border-radius: 12px;
+        background: rgba(214, 161, 58, 0.08);
+      }
+
+      .hero { padding-top: 36px; }
+      .hero-title { font-size: clamp(2.75rem, 14vw, 4rem); }
+      .hero-copy { font-size: 1rem; }
+
+      .hero-meta {
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 9px;
+        margin-top: 17px;
+        padding-top: 11px;
+        font-size: .62rem;
+        line-height: 1.2;
+        white-space: nowrap;
+      }
+
+      .hero-meta-right {
+        gap: 9px;
+      }
+
+      .news-section { padding: 56px 0 54px; }
+      .article-row.has-arrow { padding-right: 40px; }
+      .article-card-core { gap: 13px; }
+      .article-thumb {
+        flex-basis: 112px;
+        width: 112px;
+        height: 84px;
+        border-radius: 9px;
+      }
+      .article-title { font-size: 1.14rem; }
+      .teaser-one-line { display: none; }
+      .teaser {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        font-size: .88rem;
+      }
+
+      .briefing-row { grid-template-columns: 28px minmax(0,1fr); }
+      .edition-end { padding: 72px 0 54px; }
+      .edition-end h2 { font-size: clamp(2.25rem, 11vw, 3.1rem); }
+
+      .special-feature {
+        margin: 20px auto 22px;
+        padding: 21px 20px;
+      }
+      .special-feature-grid {
+        grid-template-columns: 70px minmax(0,1fr);
+        gap: 16px;
+        align-items: start;
+      }
+      .special-feature-visual {
+        width: 70px;
+        height: 70px;
+      }
+      .special-feature-sun {
+        width: 43px;
+        height: 43px;
+      }
+      .special-feature h2 { font-size: 1.42rem; }
+      .special-feature-copy {
+        margin-top: 8px;
+        font-size: .84rem;
+        line-height: 1.45;
+      }
+      .special-feature-link { margin-top: 11px; }
+
+      .support-teaser {
+        margin-bottom: 40px;
+        padding: 24px 22px;
+      }
+      .support-teaser-grid { grid-template-columns: 1fr; gap: 20px; }
+      .support-teaser h2 { font-size: 1.48rem; }
+      .support-button { width: 100%; }
+
+      .newsletter { padding: 28px 22px; }
+      .newsletter-grid { grid-template-columns: 1fr; gap: 28px; }
+      .newsletter h2 { font-size: 1.8rem; }
+
+      .home-archive { padding-top: 44px; }
+      .home-archive-item { grid-template-columns: 67px minmax(0,1fr) 18px; }
+    }
+
+    @media (max-width: 480px) {
+      .brand { font-size: .92rem; }
+      .brand-sun { width: 29px; height: 29px; }
+
+      .hero { padding-top: 31px; }
+
+      .hero-meta {
+        gap: 7px;
+        font-size: .58rem;
+      }
+
+      .hero-meta-right {
+        gap: 7px;
+      }
+
+      .article-row { padding-top: 20px; padding-bottom: 20px; }
+      .article-arrow { top: 20px; width: 25px; height: 25px; }
+      .home-archive-title { font-size: .82rem; }
+    }
+
     /* ---------------------------------------------------------
-       Vrolijke Positief nieuws-accenten
-       Subtiel genoeg voor het editiegevoel, herkenbaar genoeg
-       om de site eigen en licht te houden.
+       Speelser redesign: subtiele 'friemeltjes' zonder de
+       rustige redactionele basis van Positief nieuws te verliezen.
        --------------------------------------------------------- */
 
-    .edition-hero,
-    .nl-section,
-    .world-section,
-    .brief-section,
-    .edition-end,
+    .hero,
+    .news-section,
     .newsletter,
-    .archive-preview {
+    .home-archive,
+    .seo-intro {
       position: relative;
       overflow: hidden;
       isolation: isolate;
     }
 
-    .edition-hero > .shell,
-    .nl-section > .shell,
-    .world-section > .shell,
-    .brief-section > .shell,
-    .edition-end > .shell,
+    .hero > .content-shell,
+    .news-section > .content-shell,
     .newsletter > *,
-    .archive-preview > * {
+    .home-archive > *,
+    .seo-intro > .content-shell {
       position: relative;
       z-index: 2;
     }
 
-    /* Zonsopkomst bij de editie-opening */
-    .edition-hero::before {
+    /* Zonsopkomst rechtsboven in de hero */
+    .hero::before {
       content: "";
       position: absolute;
       z-index: 0;
@@ -217,67 +1246,64 @@
       width: 132px;
       height: 66px;
       border-radius: 132px 132px 0 0;
-      background: rgba(214,161,58,.17);
-      border-bottom: 2px solid rgba(214,161,58,.58);
+      background: rgba(214, 161, 58, .17);
+      border-bottom: 2px solid rgba(214, 161, 58, .58);
       transform: rotate(-2deg);
       pointer-events: none;
     }
 
-    .edition-hero::after {
+    /* Kleine zonnestralen / handgetekende streepjes */
+    .hero::after {
       content: "";
       position: absolute;
       z-index: 0;
-      top: 141px;
+      top: 139px;
       right: max(88px, calc((100vw - 970px) / 2));
       width: 42px;
       height: 4px;
       border-radius: 999px;
-      background: rgba(214,161,58,.72);
+      background: rgba(214, 161, 58, .72);
       box-shadow:
-        18px 16px 0 -1px rgba(214,161,58,.56),
-        -12px 20px 0 -1px rgba(214,161,58,.48);
+        18px 16px 0 -1px rgba(214, 161, 58, .56),
+        -12px 20px 0 -1px rgba(214, 161, 58, .48);
       transform: rotate(-14deg);
       pointer-events: none;
     }
 
-    .issue-bar {
+    /* Een iets vrolijker ritme onder de hero */
+    .hero-meta {
       position: relative;
     }
 
-    .issue-bar::before {
+    .hero-meta::before {
       content: "";
       position: absolute;
       left: 0;
       top: -1px;
       width: 56px;
       height: 2px;
-      border-radius: 999px;
       background: var(--accent);
+      border-radius: 999px;
       transform: translateY(-50%);
     }
 
-    /* Nederland */
-    .nl-section {
-      background:
-        radial-gradient(circle at 92% 18%, rgba(214,161,58,.055), transparent 18%),
-        #f8f3e8;
-    }
-
-    .nl-section::after {
+    /* Nederland: zachte gouden cirkel aan de rand */
+    .nl-block::after {
       content: "";
       position: absolute;
       z-index: 0;
-      top: 72px;
+      top: 74px;
       right: -82px;
       width: 176px;
       height: 176px;
       border-radius: 50%;
-      background: rgba(214,161,58,.09);
-      border: 1px solid rgba(214,161,58,.16);
+      background: rgba(214, 161, 58, .09);
+      border: 1px solid rgba(214, 161, 58, .16);
       pointer-events: none;
     }
 
-    .nl-section::before {
+    /* Klein setje streepjes links, bewust onregelmatig */
+    .nl-block::before {
       content: "";
       position: absolute;
       z-index: 0;
@@ -286,22 +1312,16 @@
       width: 34px;
       height: 4px;
       border-radius: 999px;
-      background: rgba(214,161,58,.36);
+      background: rgba(214, 161, 58, .36);
       box-shadow:
-        11px 13px 0 -1px rgba(214,161,58,.26),
-        -4px 25px 0 -1px rgba(214,161,58,.21);
+        11px 13px 0 -1px rgba(214, 161, 58, .26),
+        -4px 25px 0 -1px rgba(214, 161, 58, .21);
       transform: rotate(17deg);
       pointer-events: none;
     }
 
-    /* Wereld */
-    .world-section {
-      background:
-        radial-gradient(circle at 8% 78%, rgba(31,91,69,.045), transparent 20%),
-        var(--world);
-    }
-
-    .world-section::before {
+    /* Wereld: groene boog als tegenhanger */
+    .world-block::before {
       content: "";
       position: absolute;
       z-index: 0;
@@ -309,12 +1329,12 @@
       top: 92px;
       width: 148px;
       height: 148px;
-      border: 2px solid rgba(31,91,69,.11);
+      border: 2px solid rgba(31, 91, 69, .11);
       border-radius: 50%;
       pointer-events: none;
     }
 
-    .world-section::after {
+    .world-block::after {
       content: "";
       position: absolute;
       z-index: 0;
@@ -323,22 +1343,16 @@
       width: 7px;
       height: 7px;
       border-radius: 50%;
-      background: rgba(31,91,69,.28);
+      background: rgba(31, 91, 69, .28);
       box-shadow:
-        21px -10px 0 rgba(214,161,58,.28),
-        36px 9px 0 rgba(31,91,69,.16),
-        12px 22px 0 rgba(214,161,58,.18);
+        21px -10px 0 rgba(214, 161, 58, .28),
+        36px 9px 0 rgba(31, 91, 69, .16),
+        12px 22px 0 rgba(214, 161, 58, .18);
       pointer-events: none;
     }
 
-    /* Wat je verder moet weten */
-    .brief-section {
-      background:
-        radial-gradient(circle at 90% 22%, rgba(214,161,58,.045), transparent 18%),
-        var(--brief);
-    }
-
-    .brief-section::after {
+    /* Briefing: stippenveld, subtiel omdat dit blok serieuzer is */
+    .briefing-block::after {
       content: "";
       position: absolute;
       z-index: 0;
@@ -347,22 +1361,21 @@
       width: 82px;
       height: 82px;
       opacity: .28;
-      background-image:
-        radial-gradient(circle, rgba(23,63,49,.42) 1.3px, transparent 1.6px);
+      background-image: radial-gradient(circle, rgba(23,63,49,.42) 1.3px, transparent 1.6px);
       background-size: 15px 15px;
       transform: rotate(7deg);
       pointer-events: none;
     }
 
-    /* Kleine handtekening bij sectiekoppen */
-    .section-head {
+    /* Kleine accentlijn bij de sectiekoppen */
+    .section-heading {
       position: relative;
     }
 
-    .section-head::after {
+    .section-heading::after {
       content: "";
       position: absolute;
-      left: 42px;
+      left: 0;
       bottom: -1px;
       width: 42px;
       height: 2px;
@@ -370,83 +1383,34 @@
       background: var(--accent);
     }
 
-    /* Kleine friemeltjes langs enkele artikelen, alleen desktop */
-    .article-row {
+    /* Eindpunt van de editie krijgt net iets meer 'zon' */
+    .edition-end {
       position: relative;
+      overflow: hidden;
     }
 
-    .article-row:nth-of-type(3n+1)::before {
-      content: "";
-      position: absolute;
-      left: -18px;
-      top: 30px;
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background: rgba(214,161,58,.28);
-    }
-
-    .article-row:nth-of-type(3n+2)::before {
-      content: "";
-      position: absolute;
-      left: -22px;
-      top: 31px;
-      width: 12px;
-      height: 2px;
-      border-radius: 999px;
-      background: rgba(31,91,69,.18);
-      transform: rotate(-18deg);
-    }
-
-    /* Einde van de editie */
     .edition-end::before {
       content: "";
       position: absolute;
-      top: 39px;
+      top: 56px;
       left: 50%;
       width: 116px;
       height: 116px;
       margin-left: -58px;
       border-radius: 50%;
-      border: 1px solid rgba(214,161,58,.13);
+      border: 1px solid rgba(214, 161, 58, .13);
       box-shadow:
-        0 0 0 22px rgba(214,161,58,.035),
-        0 0 0 44px rgba(214,161,58,.022);
+        0 0 0 22px rgba(214, 161, 58, .035),
+        0 0 0 44px rgba(214, 161, 58, .022);
       pointer-events: none;
     }
 
-    /* Steun: klein zonnig accent, niet bannerachtig */
-    .support {
-      position: relative;
-      overflow: hidden;
-      isolation: isolate;
-    }
-
-    .support::after {
-      content: "";
-      position: absolute;
-      right: -32px;
-      top: -38px;
-      width: 112px;
-      height: 112px;
-      border-radius: 50%;
-      border: 1px solid rgba(214,161,58,.18);
-      background: rgba(214,161,58,.045);
-      pointer-events: none;
-    }
-
-    .support > * {
+    .edition-end > .content-shell {
       position: relative;
       z-index: 2;
     }
 
-    /* Nieuwsbrief */
-    .newsletter {
-      background:
-        radial-gradient(circle at 92% 30%, rgba(214,161,58,.16), transparent 34%),
-        var(--green);
-    }
-
+    /* Nieuwsbrief: half zonnetje dat van rechts binnenkomt */
     .newsletter::after {
       content: "";
       position: absolute;
@@ -456,7 +1420,7 @@
       width: 178px;
       height: 178px;
       border-radius: 50%;
-      background: rgba(214,161,58,.18);
+      background: rgba(214, 161, 58, .18);
       border: 1px solid rgba(255,255,255,.12);
       pointer-events: none;
     }
@@ -478,6 +1442,133 @@
       pointer-events: none;
     }
 
+    /* Archief: één klein speels accent, verder rustig */
+    .home-archive::after {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      right: max(4px, calc((100vw - 1010px) / 2));
+      top: 35px;
+      width: 44px;
+      height: 44px;
+      border: 1px solid rgba(214, 161, 58, .25);
+      border-radius: 50%;
+      clip-path: inset(0 0 48% 0);
+      transform: rotate(9deg);
+      pointer-events: none;
+    }
+
+    @media (max-width: 760px) {
+      .hero::before {
+        top: 39px;
+        right: -34px;
+        width: 102px;
+        height: 51px;
+      }
+
+      .hero::after {
+        top: 111px;
+        right: 20px;
+        opacity: .72;
+      }
+
+      .nl-block::after {
+        width: 116px;
+        height: 116px;
+        right: -72px;
+        top: 54px;
+      }
+
+      .nl-block::before,
+      .world-block::after,
+      .briefing-block::after {
+        opacity: .55;
+      }
+
+      .world-block::before {
+        width: 104px;
+        height: 104px;
+        left: -74px;
+      }
+
+      .newsletter::after {
+        width: 132px;
+        height: 132px;
+        right: -55px;
+        bottom: -55px;
+      }
+
+      .newsletter::before,
+      .home-archive::after {
+        display: none;
+      }
+    }
+
+
+    /* V2: een paar procent vrolijker */
+    .hero {
+      background:
+        radial-gradient(circle at 87% 24%, rgba(214,161,58,.08), transparent 22%),
+        linear-gradient(180deg, rgba(255,255,255,.16), rgba(255,255,255,0));
+    }
+
+    .hero-title-dot {
+      display: inline-block;
+      text-shadow: 0 0 0 rgba(214,161,58,0);
+      transform: translateY(-1px);
+    }
+
+    .section-kicker {
+      letter-spacing: .095em;
+    }
+
+    .article-row:nth-child(3n+1)::before {
+      content: "";
+      position: absolute;
+      left: -18px;
+      top: 30px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: rgba(214,161,58,.28);
+    }
+
+    .article-row:nth-child(3n+2)::before {
+      content: "";
+      position: absolute;
+      left: -22px;
+      top: 31px;
+      width: 12px;
+      height: 2px;
+      border-radius: 999px;
+      background: rgba(31,91,69,.18);
+      transform: rotate(-18deg);
+    }
+
+    .nl-block {
+      background:
+        radial-gradient(circle at 92% 18%, rgba(214,161,58,.055), transparent 18%),
+        #f8f3e8;
+    }
+
+    .world-block {
+      background:
+        radial-gradient(circle at 8% 78%, rgba(31,91,69,.045), transparent 20%),
+        #eef3ed;
+    }
+
+    .briefing-block {
+      background:
+        radial-gradient(circle at 90% 22%, rgba(214,161,58,.045), transparent 18%),
+        #f3efe7;
+    }
+
+    .newsletter {
+      background:
+        radial-gradient(circle at 92% 30%, rgba(214,161,58,.16), transparent 34%),
+        var(--green);
+    }
+
     .newsletter h2::after {
       content: "";
       display: inline-block;
@@ -489,470 +1580,2399 @@
       vertical-align: .18em;
     }
 
-    /* Archief */
-    .archive-preview::after {
+    .home-archive-heading::before {
       content: "";
-      position: absolute;
-      z-index: 0;
-      right: 4px;
-      top: 8px;
-      width: 44px;
-      height: 44px;
-      border: 1px solid rgba(214,161,58,.25);
+      width: 18px;
+      height: 18px;
+      flex: 0 0 auto;
+      border: 2px solid rgba(214,161,58,.34);
       border-radius: 50%;
-      clip-path: inset(0 0 48% 0);
-      transform: rotate(9deg);
-      pointer-events: none;
+      clip-path: inset(0 0 50% 0);
+      transform: rotate(-8deg);
+      margin-right: -10px;
     }
 
-    @media(max-width:760px) {
-      .edition-hero::before {
-        top: 33px;
-        right: -34px;
-        width: 102px;
-        height: 51px;
-      }
-
-      .edition-hero::after {
-        top: 102px;
-        right: 20px;
-        opacity: .72;
-      }
-
-      .nl-section::after {
-        width: 116px;
-        height: 116px;
-        right: -72px;
-        top: 54px;
-      }
-
-      .nl-section::before,
-      .world-section::after,
-      .brief-section::after {
-        opacity: .55;
-      }
-
-      .world-section::before {
-        width: 104px;
-        height: 104px;
-        left: -74px;
-      }
-
-      .article-row:nth-of-type(3n+1)::before,
-      .article-row:nth-of-type(3n+2)::before {
+    @media (max-width: 760px) {
+      .article-row:nth-child(3n+1)::before,
+      .article-row:nth-child(3n+2)::before {
         display: none;
       }
 
-      .section-head::after {
-        left: 30px;
+      .hero {
+        background:
+          radial-gradient(circle at 104% 18%, rgba(214,161,58,.08), transparent 26%),
+          linear-gradient(180deg, rgba(255,255,255,.13), rgba(255,255,255,0));
+      }
+    }
+
+  
+    /* ---------------------------------------------------------
+       Editie-opmaak 2026-10:
+       merkzin als kicker, compacte editiebar en genummerde secties.
+       Bestaande Pixabay-thumbs en vrolijke achtergrondaccenten blijven.
+       --------------------------------------------------------- */
+
+    .hero-brandline {
+      margin: 0 0 9px;
+      color: var(--green);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .67rem;
+      font-weight: 850;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+    }
+
+    .hero-meta {
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      gap: 8px 11px;
+      border-top-color: var(--green-dark);
+      color: var(--green-dark);
+      font-weight: 700;
+    }
+
+    .hero-meta::before {
+      content: "";
+      position: absolute;
+      width: 55px;
+      height: 2px;
+      margin-top: -15px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    .hero-meta strong {
+      font-size: .63rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .hero-meta-dot {
+      color: #9ba29d;
+      font-weight: 400;
+    }
+
+    .section-heading {
+      position: relative;
+    }
+
+    .section-heading::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 42px;
+      height: 2px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    .section-title-group {
+      display: grid;
+      grid-template-columns: 32px minmax(0,1fr);
+      align-items: baseline;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .section-number {
+      color: #9aa09b;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: .83rem;
+    }
+
+    .section-title {
+      margin: 0;
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.42rem;
+      line-height: 1.08;
+      letter-spacing: -.033em;
+    }
+
+    .special-feature {
+      border-left: 0;
+      border-right: 0;
+      border-radius: 0;
+      background:
+        radial-gradient(circle at 92% 18%, rgba(214,161,58,.10), transparent 30%),
+        transparent;
+    }
+
+    @media (max-width: 760px) {
+      .hero-brandline {
+        margin-bottom: 8px;
+        font-size: .62rem;
       }
 
-      .newsletter::after {
-        width: 132px;
-        height: 132px;
-        right: -55px;
-        bottom: -55px;
+      .hero-meta {
+        flex-wrap: wrap;
+        white-space: normal;
+        gap: 7px;
       }
 
-      .newsletter::before,
-      .archive-preview::after,
-      .support::after {
-        display: none;
+      .hero-meta::before {
+        margin-top: -12px;
+      }
+
+      .section-title-group {
+        grid-template-columns: 26px minmax(0,1fr);
+        gap: 8px;
+      }
+
+      .section-title {
+        font-size: 1.22rem;
+      }
+
+      .section-number {
+        font-size: .76rem;
       }
     }
 
   </style>
+
 </head>
 <body>
+
+  <script>
+    if (window.location.protocol === "file:") {
+      const nativeFetch = window.fetch.bind(window);
+      window.fetch = (input, init) => {
+        if (typeof input === "string" && input.startsWith("./")) {
+          input = "https://positief-nieuws.nl/" + input.slice(2);
+        }
+        return nativeFetch(input, init);
+      };
+    }
+  </script>
+
   <header class="site-header">
-    <div class="wide header-row">
-      <a class="brand" href="#">
-        <svg class="sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <div class="header-shell header-row">
+      <a class="brand" href="./" aria-label="Positief nieuws homepage">
+        <svg class="brand-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <circle cx="12" cy="12" r="4.2" fill="currentColor"></circle>
           <path d="M12 1.8V5.1M12 18.9V22.2M22.2 12H18.9M5.1 12H1.8M19.2 4.8L16.8 7.2M7.2 16.8L4.8 19.2M19.2 19.2L16.8 16.8M7.2 7.2L4.8 4.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
         </svg>
         <span>Positief nieuws</span>
       </a>
-      <nav class="nav">
-        <a href="#">Vandaag</a><a href="#">Archief</a><a href="#">Onderwerpen</a><a href="#">Over</a><a class="cta" href="#">In je inbox</a>
+
+      <button
+        class="mobile-menu-toggle"
+        type="button"
+        aria-label="Menu openen"
+        aria-expanded="false"
+        aria-controls="mobile-navigation"
+      >
+        <span class="menu-icon" aria-hidden="true">
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+        </span>
+        <span class="menu-label">Menu</span>
+      </button>
+
+      <nav class="app-nav" id="mobile-navigation" aria-label="Hoofdnavigatie">
+        <div class="app-nav-inner">
+          <a id="nav-today" href="/">Vandaag</a>
+          <a id="nav-archive" href="/edities/">Archief</a>
+          <a id="nav-topics" href="/onderwerpen/">Onderwerpen</a>
+          <a id="nav-about" href="/over/">Over</a>
+          <a class="header-cta" href="/#nieuwsbrief"><svg class="header-cta-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 6.5h17a1 1 0 0 1 1 1v9a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2v-9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.7"></path><path d="m4.5 8 7.5 6 7.5-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>In je inbox</span></a>
+        </div>
       </nav>
-      <button class="menu" type="button" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </header>
 
-  <main>
-    <section class="edition-hero">
-      <div class="shell">
-        <p class="brandline">Dit gebeurt ook.</p>
-        <h1>Positief nieuws uit Nederland en de wereld</h1>
-        <p class="hero-copy">Twee keer per week een compacte selectie van wat er vooruitgaat. Plus het nieuws dat je verder moet weten.</p>
-        <div class="issue-bar">
-          <strong>Laatste editie</strong>
-          <span>1 oktober 2026</span><span class="dot">·</span>
-          <span>15 verhalen</span><span class="dot">·</span>
+  <script>
+    (function () {
+      const header = document.querySelector(".site-header");
+      const toggle = document.querySelector(".mobile-menu-toggle");
+      const nav = document.querySelector(".app-nav");
+
+      if (!header || !toggle || !nav) return;
+
+      function setMenu(open) {
+        header.classList.toggle("menu-open", open);
+        toggle.setAttribute("aria-expanded", open ? "true" : "false");
+        toggle.setAttribute("aria-label", open ? "Menu sluiten" : "Menu openen");
+      }
+
+      toggle.addEventListener("click", function () {
+        setMenu(!header.classList.contains("menu-open"));
+      });
+
+      nav.addEventListener("click", function (event) {
+        if (event.target.closest("a")) {
+          setMenu(false);
+        }
+      });
+
+      document.addEventListener("click", function (event) {
+        if (
+          header.classList.contains("menu-open") &&
+          !header.contains(event.target)
+        ) {
+          setMenu(false);
+        }
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          setMenu(false);
+          toggle.focus();
+        }
+      });
+
+      window.addEventListener("resize", function () {
+        if (window.innerWidth > 760) {
+          setMenu(false);
+        }
+      });
+    })();
+  </script>
+
+  <div id="today-view" class="app-view">
+    <div id="archive-banner" class="content-shell archive-banner">
+      Je leest een archiefeditie. <a href="./">Ga naar de nieuwste editie →</a>
+    </div>
+
+    <section class="hero">
+      <div class="content-shell">
+        <p class="hero-brandline">Dit gebeurt ook.</p>
+        <h1 class="hero-title">Positief nieuws uit Nederland en de wereld</h1>
+        <p class="hero-copy">
+          Twee keer per week een compacte selectie van wat er vooruitgaat.
+          Plus het nieuws dat je verder moet weten.
+        </p>
+        <p id="today-intro" hidden></p>
+
+        <div class="hero-meta">
+          <strong id="hero-edition-label">Laatste editie</strong>
+          <span id="edition-date">Editiedatum laden…</span>
+          <span class="hero-meta-dot" aria-hidden="true">·</span>
+          <span>15 verhalen</span>
+          <span class="hero-meta-dot" aria-hidden="true">·</span>
           <span>± 6 minuten</span>
         </div>
       </div>
     </section>
 
-    <section class="news-section nl-section">
-      <div class="shell">
-        <div class="section-head">
-          <span class="section-no">01</span>
-          <h2>Goed nieuws uit Nederland</h2>
-          <span class="section-count">6 verhalen</span>
+    <main>
+<section class="news-section nl-block">
+        <div class="content-shell">
+          <div class="section-heading">
+            <div class="section-title-group">
+              <span class="section-number">01</span>
+              <h2 class="section-title">Goed nieuws uit Nederland</h2>
+            </div>
+            <span class="section-count">6 verhalen</span>
+          </div>
+          <p class="section-intro-visually-hidden">
+            Zes positieve ontwikkelingen uit Nederland. Over mensen, gezondheid, wetenschap, natuur, sport en andere dingen die de goede kant op bewegen.
+          </p>
+          <div id="nl-state" class="state">Nieuws laden…</div>
+          <div id="nl-grid" class="article-list" hidden></div>
         </div>
-        
-    <article class="article-row">
-      <div class="article-copy">
-        <h3><a href="https://positief-nieuws.nl/artikelen/2026-10-01/dementalent-vrijwilligerswerk-mensen-met-dementie/">DemenTalent helpt mensen met dementie actief te blijven als vrijwilliger</a></h3>
-        <p class="teaser-one-line">Stichting DemenTalent koppelt mensen met dementie aan vrijwilligerswerk dat past bij hun interesses en mogelijkheden. Zo blijft er na het wegvallen van werk ruimte om mee te doen en iets bij te dragen.</p>
-        <div class="meta"><span>Mens</span><span class="meta-sep">·</span><span>Hart van Nederland</span></div>
-      </div>
-      <a class="thumb-link" href="https://positief-nieuws.nl/artikelen/2026-10-01/dementalent-vrijwilligerswerk-mensen-met-dementie/" aria-label="Lees DemenTalent helpt mensen met dementie actief te blijven als vrijwilliger">
-        
-    <div class="thumb-art" style="--thumb-bg:#d8e7df;--thumb-fg:#1f5b45">
-      <svg viewBox="0 0 100 92" aria-hidden="true">
-        <circle cx="80" cy="21" r="13" fill="#1f5b45" opacity=".08"/>
-        <g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="44" cy="35" r="11"/><path d="M20 72c3-17 13-26 24-26s21 9 24 26"/><circle cx="76" cy="47" r="7"/><path d="M66 72c2-10 7-16 14-18"/></g>
-      </svg>
-    </div>
-    
-      </a>
-    </article>
-    
+      </section>
 
-    <article class="article-row">
-      <div class="article-copy">
-        <h3><a href="https://positief-nieuws.nl/artikelen/2026-10-01/cibia-wageningen-voedselinnovaties-praktijk/">Nieuwe Wageningse faciliteit moet voedselinnovaties sneller naar de praktijk brengen</a></h3>
-        <p class="teaser-one-line">Wageningen University &amp; Research heeft CIBIA geopend, waar technologieontwikkeling, productontwikkeling en consumententests op één plek samenkomen.</p>
-        <div class="meta"><span>Energie &amp; innovatie</span><span class="meta-sep">·</span><span>Wageningen University &amp; Research</span></div>
-      </div>
-      <a class="thumb-link" href="https://positief-nieuws.nl/artikelen/2026-10-01/cibia-wageningen-voedselinnovaties-praktijk/" aria-label="Lees Nieuwe Wageningse faciliteit moet voedselinnovaties sneller naar de praktijk brengen">
-        
-    <div class="thumb-art" style="--thumb-bg:#dde7d4;--thumb-fg:#557a38">
-      <svg viewBox="0 0 100 92" aria-hidden="true">
-        <circle cx="78" cy="24" r="14" fill="#557a38" opacity=".08"/>
-        <g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="50" cy="50" r="18"/><path d="M50 12v12M50 76v12M12 50h12M76 50h12M23 23l9 9M68 68l9 9M77 23l-9 9M32 68l-9 9"/><path d="M42 50h16M50 42v16"/></g>
-      </svg>
-    </div>
-    
-      </a>
-    </article>
-    
 
-    <article class="article-row">
-      <div class="article-copy">
-        <h3><a href="https://positief-nieuws.nl/artikelen/2026-10-01/werkgevers-vrije-dagen-vrijwilligerswerk/">Werkgevers geven medewerkers vrije dagen voor vrijwilligerswerk</a></h3>
-        <p class="teaser-one-line">Een aantal bedrijven maakt onder werktijd ruimte voor maatschappelijke inzet. Medewerkers kunnen zo betaald tijd besteden aan vrijwilligerswerk dat ze belangrijk vinden.</p>
-        <div class="meta"><span>Mens</span><span class="meta-sep">·</span><span>Omrop Fryslân</span></div>
-      </div>
-      <a class="thumb-link" href="https://positief-nieuws.nl/artikelen/2026-10-01/werkgevers-vrije-dagen-vrijwilligerswerk/" aria-label="Lees Werkgevers geven medewerkers vrije dagen voor vrijwilligerswerk">
-        
-    <div class="thumb-art" style="--thumb-bg:#d8e7df;--thumb-fg:#1f5b45">
-      <svg viewBox="0 0 100 92" aria-hidden="true">
-        <circle cx="76" cy="27" r="15" fill="#1f5b45" opacity=".08"/>
-        <g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="44" cy="35" r="11"/><path d="M20 72c3-17 13-26 24-26s21 9 24 26"/><circle cx="76" cy="47" r="7"/><path d="M66 72c2-10 7-16 14-18"/></g>
-      </svg>
-    </div>
-    
-      </a>
-    </article>
-    
-
-    <article class="article-row">
-      <div class="article-copy">
-        <h3><a href="https://positief-nieuws.nl/artikelen/2026-10-01/wereldwijde-analyse-herstel-grondwater-na-droogte/">Wereldwijde analyse laat zien waar grondwater na droogte goed herstelt</a></h3>
-        <p class="teaser-one-line">Onderzoekers van Universiteit Utrecht ontwikkelden met een wereldwijd grondwatermodel een methode om te zien welke gebieden veerkrachtig zijn en waar langdurige droogte grotere risico&#x27;s geeft.</p>
-        <div class="meta"><span>Natuur &amp; klimaat</span><span class="meta-sep">·</span><span>Universiteit Utrecht via EurekAlert</span></div>
-      </div>
-      <a class="thumb-link" href="https://positief-nieuws.nl/artikelen/2026-10-01/wereldwijde-analyse-herstel-grondwater-na-droogte/" aria-label="Lees Wereldwijde analyse laat zien waar grondwater na droogte goed herstelt">
-        
-    <div class="thumb-art" style="--thumb-bg:#dbe6e7;--thumb-fg:#3d6e74">
-      <svg viewBox="0 0 100 92" aria-hidden="true">
-        <circle cx="74" cy="30" r="16" fill="#3d6e74" opacity=".08"/>
-        <g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 70C35 36 55 23 83 20 80 52 64 75 30 80Z"/><path d="M26 76c18-18 32-29 54-48"/><path d="M48 57c-5-9-12-14-21-17M59 46c2-9 7-16 15-21"/></g>
-      </svg>
-    </div>
-    
-      </a>
-    </article>
-    
-
-    <article class="article-row">
-      <div class="article-copy">
-        <h3><a href="https://positief-nieuws.nl/artikelen/2026-10-01/gerichte-revalidatie-jaren-na-kruisbandoperatie/">Gerichte revalidatie helpt ook jaren na een kruisbandoperatie nog vooruit</a></h3>
-        <p class="teaser-one-line">Een vier maanden durend oefenprogramma verbeterde klachten en spierkracht bij jonge volwassenen die één tot drie jaar na hun kruisbandoperatie nog problemen hadden.</p>
-        <div class="meta"><span>Gezondheid</span><span class="meta-sep">·</span><span>Scientias</span><span class="meta-sep">·</span><span>3 min</span></div>
-      </div>
-      <a class="thumb-link" href="https://positief-nieuws.nl/artikelen/2026-10-01/gerichte-revalidatie-jaren-na-kruisbandoperatie/" aria-label="Lees Gerichte revalidatie helpt ook jaren na een kruisbandoperatie nog vooruit">
-        
-    <div class="thumb-art" style="--thumb-bg:#e7ddd3;--thumb-fg:#8b5c42">
-      <svg viewBox="0 0 100 92" aria-hidden="true">
-        <circle cx="72" cy="33" r="12" fill="#8b5c42" opacity=".08"/>
-        <g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M49 78C27 61 18 49 18 35c0-12 8-20 19-20 7 0 12 4 15 9 3-5 8-9 15-9 11 0 19 8 19 20 0 14-9 26-37 43Z"/><path d="M26 46h15l6-12 8 25 6-13h17"/></g>
-      </svg>
-    </div>
-    
-      </a>
-    </article>
-    
-
-    <article class="article-row">
-      <div class="article-copy">
-        <h3><a href="https://positief-nieuws.nl/artikelen/2026-10-01/bladel-subsidie-laagdrempelige-herstelzorg/">Bladel maakt ruim een miljoen euro beschikbaar voor laagdrempelige herstelzorg</a></h3>
-        <p class="teaser-one-line">Nieuwe subsidieregels moeten herstelcentra voor mensen met psychische kwetsbaarheid mogelijk maken, met vrije inloop, trainingen en ondersteuning zonder indicatie.</p>
-        <div class="meta"><span>Mens</span><span class="meta-sep">·</span><span>Omroep Brabant</span></div>
-      </div>
-      <a class="thumb-link" href="https://positief-nieuws.nl/artikelen/2026-10-01/bladel-subsidie-laagdrempelige-herstelzorg/" aria-label="Lees Bladel maakt ruim een miljoen euro beschikbaar voor laagdrempelige herstelzorg">
-        
-    <div class="thumb-art" style="--thumb-bg:#d8e7df;--thumb-fg:#1f5b45">
-      <svg viewBox="0 0 100 92" aria-hidden="true">
-        <circle cx="70" cy="18" r="13" fill="#1f5b45" opacity=".08"/>
-        <g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="44" cy="35" r="11"/><path d="M20 72c3-17 13-26 24-26s21 9 24 26"/><circle cx="76" cy="47" r="7"/><path d="M66 72c2-10 7-16 14-18"/></g>
-      </svg>
-    </div>
-    
-      </a>
-    </article>
-    
-      </div>
-    </section>
-
-    <section class="special-wrap">
-      <div class="shell">
-        <div class="special-card">
-          <div class="special-sun" aria-hidden="true">
-            <svg viewBox="0 0 64 64" fill="none">
+      <section class="special-feature content-shell" aria-labelledby="home-special-title">
+        <div class="special-feature-grid">
+          <div class="special-feature-visual" aria-hidden="true">
+            <svg class="special-feature-sun" viewBox="0 0 64 64" fill="none">
               <circle cx="32" cy="32" r="11" fill="currentColor"></circle>
-              <path d="M32 5V15M32 49V59M59 32H49M15 32H5M51.1 12.9L44 20M20 44L12.9 51.1M51.1 51.1L44 44M20 20L12.9 12.9" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"></path>
+              <path d="M32 5V15M32 49V59M59 32H49M15 32H5M51.1 12.9L44 20M20 44L12.9 51.1M51.1 51.1L44 44M20 20L12.9 12.9"
+                stroke="currentColor" stroke-width="3.2" stroke-linecap="round"></path>
+              <circle cx="32" cy="32" r="21" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2.5 5" opacity=".55"></circle>
             </svg>
           </div>
           <div>
-            <p class="special-kicker">Special · 12–15 min</p>
-            <h2><a href="https://positief-nieuws.nl/specials/nederland-gaat-ook-vooruit/">Nederland gaat óók vooruit.</a></h2>
-            <p class="special-copy">Twaalf ontwikkelingen die Nederland de afgelopen jaren aantoonbaar hebben veranderd. Van roken en criminaliteit tot werk, armoede en energie.</p>
-            <a class="special-link" href="https://positief-nieuws.nl/specials/nederland-gaat-ook-vooruit/">Lees de special →</a>
+            <p class="section-kicker">Special · 12–15 min</p>
+            <h2 id="home-special-title">
+              <a href="/specials/nederland-gaat-ook-vooruit/" onclick="trackSimpleEvent('special_home_click')">Nederland gaat óók vooruit.</a>
+            </h2>
+            <p class="special-feature-copy">Twaalf ontwikkelingen die je nauwelijks in het dagelijkse nieuws ziet, maar die Nederland de afgelopen jaren aantoonbaar hebben veranderd. Van roken en criminaliteit tot werk, armoede en energie.</p>
+            <a
+              class="special-feature-link"
+              href="/specials/nederland-gaat-ook-vooruit/"
+              onclick="trackSimpleEvent('special_home_click')"
+            >Lees de special →</a>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="news-section world-section">
-      <div class="shell">
-        <div class="section-head">
-          <span class="section-no">02</span>
-          <h2>Goed nieuws uit de wereld</h2>
-          <span class="section-count">6 verhalen</span>
+      <section class="news-section world-block">
+        <div class="content-shell">
+          <div class="section-heading">
+            <div class="section-title-group">
+              <span class="section-number">02</span>
+              <h2 class="section-title">Goed nieuws uit de wereld</h2>
+            </div>
+            <span class="section-count">6 verhalen</span>
+          </div>
+          <p class="section-note">
+            Zes positieve ontwikkelingen van buiten Nederland. Je leest eerst onze Nederlandse samenvatting; de oorspronkelijke bron kan Engelstalig zijn.
+          </p>
+          <div id="int-state" class="state">Nieuws laden…</div>
+          <div id="int-grid" class="article-list" hidden></div>
         </div>
-        
-    <article class="article-row">
-      <div class="article-copy">
-        <h3><a href="https://positief-nieuws.nl/artikelen/2026-10-01/mauritius-daling-diabetes-type-2/">Mauritius laat na jaren van stijging een daling van diabetes type 2 zien</a></h3>
-        <p class="teaser-one-line">Zeven bevolkingsonderzoeken over 34 jaar laten zien dat het aandeel volwassenen met diabetes type 2 na een piek in 2009 duidelijk is gedaald.</p>
-        <div class="meta"><span>Gezondheid</span><span class="meta-sep">·</span><span>Medical Xpress / EASD</span><span class="meta-sep">·</span><span>5 min</span></div>
-      </div>
-      <a class="thumb-link" href="https://positief-nieuws.nl/artikelen/2026-10-01/mauritius-daling-diabetes-type-2/" aria-label="Lees Mauritius laat na jaren van stijging een daling van diabetes type 2 zien">
-        
-    <div class="thumb-art" style="--thumb-bg:#e7ddd3;--thumb-fg:#8b5c42">
-      <svg viewBox="0 0 100 92" aria-hidden="true">
-        <circle cx="68" cy="21" r="14" fill="#8b5c42" opacity=".08"/>
-        <g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M49 78C27 61 18 49 18 35c0-12 8-20 19-20 7 0 12 4 15 9 3-5 8-9 15-9 11 0 19 8 19 20 0 14-9 26-37 43Z"/><path d="M26 46h15l6-12 8 25 6-13h17"/></g>
-      </svg>
-    </div>
-    
-      </a>
-    </article>
-    
+      </section>
 
-    <article class="article-row">
-      <div class="article-copy">
-        <h3><a href="https://positief-nieuws.nl/artikelen/2026-10-01/summer-isles-zeeherstel-na-baggerverbod/">Tien jaar zonder zware bodembaggering brengt Schotse zeebodem weer tot leven</a></h3>
-        <p class="teaser-one-line">In een beschermd zeegebied bij de Summer Isles melden onderzoekers, vissers en bewoners herstel van kwetsbare maerlbedden, schelpdieren en andere zeedieren.</p>
-        <div class="meta"><span>Natuur &amp; klimaat</span><span class="meta-sep">·</span><span>The Guardian</span><span class="meta-sep">·</span><span>6 min</span></div>
-      </div>
-      <a class="thumb-link" href="https://positief-nieuws.nl/artikelen/2026-10-01/summer-isles-zeeherstel-na-baggerverbod/" aria-label="Lees Tien jaar zonder zware bodembaggering brengt Schotse zeebodem weer tot leven">
-        
-    <div class="thumb-art" style="--thumb-bg:#dbe6e7;--thumb-fg:#3d6e74">
-      <svg viewBox="0 0 100 92" aria-hidden="true">
-        <circle cx="66" cy="24" r="15" fill="#3d6e74" opacity=".08"/>
-        <g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 70C35 36 55 23 83 20 80 52 64 75 30 80Z"/><path d="M26 76c18-18 32-29 54-48"/><path d="M48 57c-5-9-12-14-21-17M59 46c2-9 7-16 15-21"/></g>
-      </svg>
-    </div>
-    
-      </a>
-    </article>
-    
-
-    <article class="article-row">
-      <div class="article-copy">
-        <h3><a href="https://positief-nieuws.nl/artikelen/2026-10-01/geschilderde-ogen-vee-roofdieren-zimbabwe/">Geschilderde ogen op vee lijken roofdieren in Zimbabwe af te schrikken</a></h3>
-        <p class="teaser-one-line">Boeren experimenteren met opvallende ogen op de achterkant van koeien en ander vee. De eenvoudige methode is bedoeld om aanvallen door roofdieren te verminderen zonder dieren te doden.</p>
-        <div class="meta"><span>Natuur &amp; klimaat</span><span class="meta-sep">·</span><span>Mongabay</span></div>
-      </div>
-      <a class="thumb-link" href="https://positief-nieuws.nl/artikelen/2026-10-01/geschilderde-ogen-vee-roofdieren-zimbabwe/" aria-label="Lees Geschilderde ogen op vee lijken roofdieren in Zimbabwe af te schrikken">
-        
-    <div class="thumb-art" style="--thumb-bg:#dbe6e7;--thumb-fg:#3d6e74">
-      <svg viewBox="0 0 100 92" aria-hidden="true">
-        <circle cx="82" cy="27" r="16" fill="#3d6e74" opacity=".08"/>
-        <g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 70C35 36 55 23 83 20 80 52 64 75 30 80Z"/><path d="M26 76c18-18 32-29 54-48"/><path d="M48 57c-5-9-12-14-21-17M59 46c2-9 7-16 15-21"/></g>
-      </svg>
-    </div>
-    
-      </a>
-    </article>
-    
-
-    <article class="article-row">
-      <div class="article-copy">
-        <h3><a href="https://positief-nieuws.nl/artikelen/2026-10-01/jordanie-satellietdata-waterbeheer-landbouw/">Jordanië gebruikt satellietdata om schaarser landbouwwater slimmer in te zetten</a></h3>
-        <p class="teaser-one-line">Het WaPOR-programma combineert satellietgegevens met lokale kennis om te laten zien waar water in de landbouw het meest productief wordt gebruikt.</p>
-        <div class="meta"><span>Energie &amp; innovatie</span><span class="meta-sep">·</span><span>FAO</span></div>
-      </div>
-      <a class="thumb-link" href="https://positief-nieuws.nl/artikelen/2026-10-01/jordanie-satellietdata-waterbeheer-landbouw/" aria-label="Lees Jordanië gebruikt satellietdata om schaarser landbouwwater slimmer in te zetten">
-        
-    <div class="thumb-art" style="--thumb-bg:#dde7d4;--thumb-fg:#557a38">
-      <svg viewBox="0 0 100 92" aria-hidden="true">
-        <circle cx="80" cy="30" r="12" fill="#557a38" opacity=".08"/>
-        <g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="50" cy="50" r="18"/><path d="M50 12v12M50 76v12M12 50h12M76 50h12M23 23l9 9M68 68l9 9M77 23l-9 9M32 68l-9 9"/><path d="M42 50h16M50 42v16"/></g>
-      </svg>
-    </div>
-    
-      </a>
-    </article>
-    
-
-    <article class="article-row">
-      <div class="article-copy">
-        <h3><a href="https://positief-nieuws.nl/artikelen/2026-10-01/juice-aardpassage-koers-jupiter/">Aardpassage zet ruimtesonde Juice met weinig brandstof beter op koers naar Jupiter</a></h3>
-        <p class="teaser-one-line">ESA&#x27;s ruimtesonde gebruikte de zwaartekracht van de aarde om zijn baan twintig graden te verleggen en snelheid op te bouwen voor de lange reis naar Jupiter.</p>
-        <div class="meta"><span>Wetenschap</span><span class="meta-sep">·</span><span>ESA</span></div>
-      </div>
-      <a class="thumb-link" href="https://positief-nieuws.nl/artikelen/2026-10-01/juice-aardpassage-koers-jupiter/" aria-label="Lees Aardpassage zet ruimtesonde Juice met weinig brandstof beter op koers naar Jupiter">
-        
-    <div class="thumb-art" style="--thumb-bg:#e3dff0;--thumb-fg:#66558a">
-      <svg viewBox="0 0 100 92" aria-hidden="true">
-        <circle cx="78" cy="33" r="13" fill="#66558a" opacity=".08"/>
-        <g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M40 16h20M45 16v23L24 77h52L55 39V16"/><path d="M35 61h30"/><circle cx="42" cy="67" r="3"/><circle cx="57" cy="55" r="2.5"/></g>
-      </svg>
-    </div>
-    
-      </a>
-    </article>
-    
-
-    <article class="article-row">
-      <div class="article-copy">
-        <h3><a href="https://positief-nieuws.nl/artikelen/2026-10-01/oekraine-energieapparatuur-sneller-installeren-undp/">Nieuwe faciliteit moet energieapparatuur in Oekraïne sneller echt aan het werk krijgen</a></h3>
-        <p class="teaser-one-line">Een vijfjarig programma van de Oekraïense overheid en UNDP richt zich op de laatste stap: gedoneerde transformatoren, generatoren en andere apparatuur installeren en aansluiten.</p>
-        <div class="meta"><span>Energie &amp; innovatie</span><span class="meta-sep">·</span><span>UNDP</span></div>
-      </div>
-      <a class="thumb-link" href="https://positief-nieuws.nl/artikelen/2026-10-01/oekraine-energieapparatuur-sneller-installeren-undp/" aria-label="Lees Nieuwe faciliteit moet energieapparatuur in Oekraïne sneller echt aan het werk krijgen">
-        
-    <div class="thumb-art" style="--thumb-bg:#dde7d4;--thumb-fg:#557a38">
-      <svg viewBox="0 0 100 92" aria-hidden="true">
-        <circle cx="76" cy="18" r="14" fill="#557a38" opacity=".08"/>
-        <g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="50" cy="50" r="18"/><path d="M50 12v12M50 76v12M12 50h12M76 50h12M23 23l9 9M68 68l9 9M77 23l-9 9M32 68l-9 9"/><path d="M42 50h16M50 42v16"/></g>
-      </svg>
-    </div>
-    
-      </a>
-    </article>
-    
-      </div>
-    </section>
-
-    <section class="news-section brief-section">
-      <div class="shell">
-        <div class="section-head">
-          <span class="section-no">03</span>
-          <h2>Wat je verder moet weten</h2>
-          <span class="section-count">3 verhalen</span>
+      <section class="news-section briefing-block" id="headlines-section" hidden>
+        <div class="content-shell">
+          <div class="section-heading">
+            <div class="section-title-group">
+              <span class="section-number">03</span>
+              <h2 class="section-title">Wat je verder moet weten</h2>
+            </div>
+            <span class="section-count">3 verhalen</span>
+          </div>
+          <p class="section-note">
+            Niet per se positief, wel belangrijk. Drie onderwerpen die vandaag de Nederlandse nieuwskoppen domineren — kort en feitelijk.
+          </p>
+          <div id="headlines-state" class="state">Nieuws laden…</div>
+          <div id="headlines-grid" class="article-list" hidden></div>
         </div>
-        
-    <article class="brief-row">
-      <div class="brief-number">01</div>
-      <div>
-        <h3><a href="https://nos.nl/artikel/2633156-schrijfster-en-cabaretiere-paulien-cornelisse-50-overleden">Schrijver en cabaretier Paulien Cornelisse op 50-jarige leeftijd overleden</a></h3>
-        <p>Paulien Cornelisse is overleden aan de gevolgen van kanker. Ze werd bekend met haar boeken over taal, cabaretvoorstellingen, columns en haar recente rol in De Slimste Mens.</p>
-        <div class="meta"><span>NOS</span></div>
-      </div>
-    </article>
-    
+      </section>
 
-    <article class="brief-row">
-      <div class="brief-number">02</div>
-      <div>
-        <h3><a href="https://www.reuters.com/world/pilot-brawl-then-rapid-descent-passengers-recount-chaos-flydubai-flight-2026-09-30/">Onderzoek naar geweld in cockpit na noodlanding Flydubai-vlucht</a></h3>
-        <p>Op een vlucht van Dubai naar Tel Aviv werd de gezagvoerder aangevallen. Passagiers en meevliegende piloten grepen in en het toestel landde veilig in Saudi-Arabië; het motief wordt nog onderzocht.</p>
-        <div class="meta"><span>Reuters</span></div>
-      </div>
-    </article>
-    
+      <section class="edition-end">
+        <div class="content-shell">
+          <svg class="edition-end-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.2" fill="currentColor"></circle>
+            <path d="M12 1.8V5.1M12 18.9V22.2M22.2 12H18.9M5.1 12H1.8M19.2 4.8L16.8 7.2M7.2 16.8L4.8 19.2M19.2 19.2L16.8 16.8M7.2 7.2L4.8 4.8"
+              stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+          </svg>
+          <h2>Dit was de laatste editie.<br>Je bent weer bij.</h2>
+          <p>Geniet van je dag.</p>
 
-    <article class="brief-row">
-      <div class="brief-number">03</div>
-      <div>
-        <h3><a href="https://nos.nl/artikel/2633213-overheid-neemt-toezicht-op-makelaars-over-van-makelaars-zelf">Overheid wil verplicht register en klachtenloket voor makelaars</a></h3>
-        <p>Het kabinet wil het toezicht op makelaars niet langer alleen aan de branche overlaten. Er komen plannen voor een verplicht register, gedragsregels en een klachtenprocedure voor kopers en verkopers.</p>
-        <div class="meta"><span>NOS</span></div>
-      </div>
-    </article>
-    
-      </div>
-    </section>
+          <div class="end-actions">
+            <button id="share-edition" class="quiet-button" type="button">Deel deze editie</button>
 
-    <section class="edition-end">
-      <div class="shell">
-        <svg class="sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <circle cx="12" cy="12" r="4.2" fill="currentColor"></circle>
-          <path d="M12 1.8V5.1M12 18.9V22.2M22.2 12H18.9M5.1 12H1.8M19.2 4.8L16.8 7.2M7.2 16.8L4.8 19.2M19.2 19.2L16.8 16.8M7.2 7.2L4.8 4.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
-        </svg>
-        <h2>Dit was de laatste editie.<br>Je bent weer bij.</h2>
-        <p>Tot maandag. En voor nu: geniet van je dag.</p>
-      </div>
-    </section>
-
-    <section class="support shell">
-      <div class="support-grid">
-        <div>
-          <p class="brandline">Voor wie dit graag leest</p>
-          <h2>Vind je het fijn dat iemand dit twee keer per week voor je uitzoekt?</h2>
-          <p>Positief nieuws blijft gratis en zonder advertenties. Met een vrijwillige bijdrage help je mij om de selectie, site en nieuwsbrief te blijven maken.</p>
+            <div id="install-strip" aria-label="Installeer Positief nieuws">
+              <button id="install-button" class="quiet-button" type="button">Zet op beginscherm</button>
+              <button id="install-dismiss" type="button" aria-label="Installatiemelding sluiten">Niet nu</button>
+              <p class="install-copy" id="install-copy">Zet Positief nieuws op je beginscherm.</p>
+              <div id="ios-install-panel" class="ios-install-panel">
+                Op iPhone/iPad: open deze site in Safari, tik op de deelknop en kies ‘Zet op beginscherm’.
+              </div>
+            </div>
+          </div>
         </div>
-        <a class="button" href="https://positief-nieuws.nl/steun/">Ik steun Positief nieuws</a>
-      </div>
-    </section>
+      </section>
 
-    <section class="newsletter shell">
-      <div class="newsletter-grid">
-        <div>
-          <p class="brandline" style="color:rgba(255,255,255,.7)">Nieuwsbrief</p>
-          <h2>De volgende editie gewoon in je inbox.</h2>
-          <p>Maandag en donderdag. Kort genoeg om echt uit te lezen.</p>
+      <section class="support-teaser wide-shell" aria-labelledby="support-teaser-title">
+        <div class="support-teaser-grid">
+          <div>
+            <p class="section-kicker">Voor wie dit graag leest</p>
+            <h2 id="support-teaser-title">Vind je het fijn dat iemand dit twee keer per week voor je uitzoekt?</h2>
+            <p>Positief nieuws blijft gratis en zonder advertenties. Met een vrijwillige bijdrage help je mij om de selectie, site en nieuwsbrief te blijven maken.</p>
+          </div>
+          <a
+            class="support-button"
+            href="/steun/"
+            onclick="trackSimpleEvent('steun_teaser_click')"
+          >Ik steun Positief nieuws</a>
         </div>
-        <div class="fake-form" aria-hidden="true">
-          <span>jij@voorbeeld.nl</span><b>Aanmelden</b>
+      </section>
+
+
+      <section class="newsletter wide-shell" id="nieuwsbrief">
+        <div class="newsletter-grid">
+          <div class="newsletter-copy">
+            <p class="section-kicker">Nieuwsbrief</p>
+            <h2>De volgende editie gewoon in je inbox.</h2>
+            <p>Twee keer per week. Kort genoeg om echt uit te lezen.</p>
+          </div>
+
+          <div class="buttondown-wrap">
+            <form
+              action="https://buttondown.com/api/emails/embed-subscribe/positiefnieuws"
+              method="post"
+              class="buttondown-form"
+              onsubmit="if (window.sa_event) { sa_event('nieuwsbrief_inschrijving'); }"
+            >
+              <label for="bd-email">E-mailadres</label>
+              <input
+                type="email"
+                name="email"
+                id="bd-email"
+                placeholder="jij@voorbeeld.nl"
+                autocomplete="email"
+                required
+              >
+              <input type="hidden" name="embed" value="1">
+              <input type="submit" value="Aanmelden">
+              <p class="buttondown-note">Na inschrijving ontvang je een bevestigingsmail. Afmelden kan altijd.</p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-archive wide-shell" aria-label="Eerdere edities">
+        <div class="home-archive-heading">
+          <p class="section-kicker">Eerdere edities</p>
+          <a href="/edities/">Bekijk alle edities</a>
+        </div>
+        <div id="home-archive-state" class="state">Eerdere edities laden…</div>
+        <div id="home-archive-list" class="home-archive-list" hidden></div>
+      </section>
+
+
+      <section class="seo-intro" aria-labelledby="seo-intro-title">
+        <div class="content-shell">
+          <div class="seo-intro-inner">
+            <h2 id="seo-intro-title">Positief nieuws van vandaag en de afgelopen dagen</h2>
+            <p>
+              Op zoek naar positief nieuws van vandaag? Positief nieuws verzamelt iedere maandag en donderdag
+              twaalf positieve nieuwsverhalen uit Nederland en de rest van de wereld.
+              Over mensen, gezondheid, wetenschap, natuur, cultuur, innovatie en andere ontwikkelingen die laten zien wat er óók goed gaat.
+              Daarnaast bevat iedere editie drie belangrijke nieuwsitems die je helpen om bij te blijven bij wat er verder speelt.
+              Zo krijg je een compacte selectie van de nieuwste positieve ontwikkelingen, zonder eindeloze nieuwsstroom:
+              na vijftien verhalen ben je klaar. Eerdere edities vind je terug in het archief.
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <section id="archive-view" class="app-view archive-page" hidden>
+    <div class="content-shell">
+      <p class="section-kicker">Alle edities</p>
+      <h1 class="page-title">Archief</h1>
+      <p class="archive-note">
+        Lees eerdere edities van Positief nieuws terug. Elke editie bevat 6 positieve verhalen uit Nederland, 6 uit de wereld en 3 onderwerpen om bij te blijven.
+      </p>
+      <div id="archive-state" class="state">Archief laden…</div>
+      <div id="archive-list" class="archive-list" hidden></div>
+    </div>
+  </section>
+
+  <section id="about-view" class="app-view about-page" hidden>
+    <div class="content-shell">
+      <p class="section-kicker">Dit gebeurt ook.</p>
+      <h1 class="page-title">Over Positief nieuws</h1>
+      <div class="about-copy">
+        <p>Het nieuws bestaat niet alleen uit oorlog, politieke ruzie, ongelukken en crises. Iedere dag gaan er ook dingen vooruit: in wetenschap, gezondheid, natuur, technologie en gewoon tussen mensen. Alleen krijgen die verhalen vaak minder aandacht.</p>
+        <p>Positief nieuws laat zien wat er óók gebeurt, zonder het belangrijke nieuws weg te laten. Iedere editie bevat zes positieve verhalen uit Nederland, zes uit de wereld en drie onderwerpen die op dat moment belangrijk zijn om te weten.</p>
+        <p>Het doel is simpel: <strong>in een paar minuten weet je wat er goed gaat én wat je verder moet weten. Daarna ben je klaar.</strong></p>
+        <p>Geen eindeloze feed. Geen clickbait om je zo lang mogelijk vast te houden. Gewoon een compacte nieuwsselectie en daarna weer verder met je dag.</p>
+        <p>Nieuwe edities verschijnen op maandag en donderdag.</p>
+        <p><a href="#nieuwsbrief" id="about-newsletter-link">Ontvang Positief nieuws in je inbox →</a></p>
+
+        <p><a href="/steun/">Steun Positief nieuws met een vrijwillige bijdrage →</a></p>
+
+        <div class="contact-block">
+          <h2>Contact</h2>
+          <p>Een tip, vraag, foutje gezien of gewoon iets te melden? Stuur gerust een mail.</p>
+          <p>
+            <a
+              class="contact-email"
+              href="mailto:redactie@positief-nieuws.nl?subject=Bericht%20voor%20Positief%20nieuws"
+            >redactie@positief-nieuws.nl →</a>
+          </p>
+          <p><a href="#privacy">Lees de privacyverklaring →</a></p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="archive-preview shell">
-      <div class="archive-head">
-        <h2>Eerdere edities</h2><a href="#">Bekijk archief →</a>
+  <section id="privacy-view" class="app-view privacy-page" hidden>
+    <div class="content-shell">
+      <p class="section-kicker">Privacy</p>
+      <h1 class="page-title">Privacyverklaring</h1>
+
+      <div class="privacy-copy">
+        <p>Positief nieuws probeert zo weinig mogelijk persoonsgegevens te verzamelen. Hieronder staat in gewone taal welke gegevens we gebruiken en waarom.</p>
+
+        <h2>Nieuwsbrief</h2>
+        <p>Als je je inschrijft voor de nieuwsbrief, gebruiken we je e-mailadres om de nieuwsbrief te versturen en je inschrijving te beheren. Hiervoor gebruiken we Buttondown.</p>
+        <p>Buttondown kan voor de werking en statistieken van de nieuwsbrief ook technische gegevens verwerken, bijvoorbeeld over aflevering, opens of klikken, afhankelijk van de ingestelde nieuwsbriefstatistieken. Je kunt je op ieder moment afmelden via de afmeldlink in iedere nieuwsbrief.</p>
+
+        <h2>Website-statistieken</h2>
+        <p>We gebruiken Simple Analytics om te zien hoeveel mensen Positief nieuws bezoeken en hoe de site wordt gebruikt. Simple Analytics gebruikt geen cookies, slaat geen IP-adressen op en maakt geen persoonlijke bezoekersprofielen.</p>
+
+        <h2>Contact</h2>
+        <p>Als je ons mailt, gebruiken we je e-mailadres en de inhoud van je bericht alleen om je bericht te behandelen en te beantwoorden. Voor e-mail gebruiken we STRATO als mailprovider. Bewaartermijnen hangen af van wat nodig is voor de correspondentie.</p>
+
+        <h2>Vrijwillige bijdragen</h2>
+        <p>Wie Positief nieuws vrijwillig wil steunen, wordt via de steunpagina doorgestuurd naar een betaalverzoek van RegioBank. De betaling vindt plaats bij RegioBank. Op de bankrekening kunnen gegevens zichtbaar zijn die bij de betaling horen, zoals de naam van de rekeninghouder, het bedrag en de omschrijving van de betaling.</p>
+
+        <h2>Externe diensten</h2>
+        <ul>
+          <li><a href="https://buttondown.com/legal/privacy" target="_blank" rel="noopener noreferrer">Privacybeleid van Buttondown</a></li>
+          <li><a href="https://docs.simpleanalytics.com/privacy" target="_blank" rel="noopener noreferrer">Privacybeleid van Simple Analytics</a></li>
+          <li><a href="https://www.strato.nl/privacybeleid/" target="_blank" rel="noopener noreferrer">Privacybeleid van STRATO</a></li>
+        </ul>
+
+        <h2>Jouw gegevens</h2>
+        <p>Wil je weten welke persoonsgegevens we van je hebben, iets laten aanpassen of verwijderen, of heb je een andere privacyvraag? Mail dan naar <a href="mailto:privacy@positief-nieuws.nl?subject=Privacyvraag%20Positief%20nieuws">privacy@positief-nieuws.nl</a>.</p>
+
+        <p class="privacy-updated">Laatst bijgewerkt: 1 oktober 2026.</p>
       </div>
-      <div class="archive-item"><time>28 sep 2026</time><strong>Positief nieuws · 28 september</strong><span>→</span></div>
-      <div class="archive-item"><time>24 sep 2026</time><strong>Positief nieuws · 24 september</strong><span>→</span></div>
-    </section>
+    </div>
+  </section>
 
-    <section class="seo-copy">
-      <div class="shell">
-        <h2>Positief nieuws van vandaag en de afgelopen dagen</h2>
-        <p>Op zoek naar positief nieuws van vandaag? Positief nieuws verzamelt iedere maandag en donderdag de belangrijkste positieve ontwikkelingen uit Nederland en de rest van de wereld. Over mensen, gezondheid, wetenschap, natuur, innovatie en andere ontwikkelingen die laten zien wat er óók goed gaat. Daarnaast vind je drie belangrijke nieuwsitems om bij te blijven bij wat er verder speelt.</p>
+  <section id="signup-pending-view" class="app-view signup-pending-page" hidden>
+    <div class="content-shell">
+      <p class="section-kicker">Nieuwsbrief</p>
+      <h1 class="page-title">Nog één stap</h1>
+
+      <div class="signup-pending-card">
+        <div class="signup-pending-copy">
+          <p>Je aanmelding is ontvangen.</p>
+          <p><strong>Check je inbox en bevestig je e-mailadres via de link in de mail.</strong> Daarna ben je helemaal klaar.</p>
+          <p>Krijg je geen mail? Kijk dan ook even in je spamfolder.</p>
+        </div>
+
+        <div class="signup-pending-actions">
+          <a href="./">Terug naar Positief nieuws</a>
+        </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <footer>Positief nieuws · Dit gebeurt ook.</footer>
+  <section id="signup-confirmed-view" class="app-view signup-pending-page" hidden>
+    <div class="content-shell">
+      <p class="section-kicker">Nieuwsbrief</p>
+      <h1 class="page-title">Welkom bij Positief nieuws ☀️</h1>
+
+      <div class="signup-pending-card">
+        <div class="signup-pending-copy">
+          <p>Je e-mailadres is bevestigd.</p>
+          <p><strong>Vanaf nu ontvang je elke maandag en donderdag Positief nieuws in je inbox.</strong></p>
+          <p>Tot de volgende editie. En voor nu: geniet van je dag.</p>
+        </div>
+
+        <div class="signup-pending-actions">
+          <a href="./">Lees de nieuwste editie</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wide-shell">Positief nieuws · Dit gebeurt ook. · <a href="/steun/">Steun</a> · <a href="#privacy">Privacy</a></div>
+  </footer>
+<script>
+    // Oude ?editie=YYYY-MM-DD-links blijven werken en gaan naar de vaste editie-URL.
+    (function redirectLegacyEditionUrl() {
+      const params = new URLSearchParams(window.location.search);
+      const date = params.get("editie");
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(date || "")) return;
+
+      params.delete("editie");
+      const rest = params.toString();
+      const destination = `/edities/${encodeURIComponent(date)}/${rest ? `?${rest}` : ""}`;
+      window.location.replace(destination);
+    })();
+
+    const $ = (selector) =>
+      document.querySelector(selector);
+
+
+    function firstValue(
+      object,
+      keys,
+      fallback = ""
+    ) {
+
+      for (const key of keys) {
+
+        const value =
+          object?.[key];
+
+        if (
+          value !== undefined &&
+          value !== null &&
+          value !== ""
+        ) {
+          return value;
+        }
+
+      }
+
+      return fallback;
+    }
+
+
+    async function loadArticleImageCache() {
+      try {
+        const response = await fetch(
+          "./data/pixabay-images.json",
+          { cache: "no-store" }
+        );
+
+        if (!response.ok) {
+          return {};
+        }
+
+        const cache = await response.json();
+        return cache && typeof cache === "object" ? cache : {};
+      }
+      catch (error) {
+        console.warn("Afbeeldingencache kon niet worden geladen.", error);
+        return {};
+      }
+    }
+
+
+    function applyArticleImages(data, editionDate, imageCache) {
+      if (!data || !editionDate || !imageCache) {
+        return;
+      }
+
+      ["nl", "int"].forEach(
+        section => {
+          const sectionItems =
+            Array.isArray(data?.[section])
+              ? data[section]
+              : [];
+
+          sectionItems.forEach(
+            item => {
+              const slug =
+                String(
+                  item?.article_slug
+                  || item?.articleSlug
+                  || ""
+                ).trim();
+
+              if (!slug) {
+                return;
+              }
+
+              const cached =
+                imageCache[`${editionDate}/${slug}`];
+
+              if (
+                cached
+                && cached.image_path
+                && !item.image
+                && !item.image_url
+                && !item.imageUrl
+              ) {
+                item.image = cached.image_path;
+              }
+            }
+          );
+        }
+      );
+    }
+
+
+    function normalizeArticle(article) {
+
+      return {
+
+        title:
+          firstValue(
+            article,
+            [
+              "title",
+              "headline",
+              "kop",
+              "titel"
+            ]
+          ),
+
+        teaser:
+          firstValue(
+            article,
+            [
+              "teaser",
+              "description",
+              "summary",
+              "samenvatting",
+              "intro"
+            ]
+          ),
+
+        introLabel:
+          firstValue(
+            article,
+            [
+              "intro_label",
+              "introLabel",
+              "intro_short",
+              "introShort"
+            ]
+          ),
+
+        url:
+          firstValue(
+            article,
+            [
+              "url",
+              "link",
+              "articleUrl",
+              "article_url"
+            ],
+            "#"
+          ),
+
+        source:
+          firstValue(
+            article,
+            [
+              "source",
+              "bron",
+              "sourceName",
+              "source_name"
+            ]
+          ),
+
+        category:
+          firstValue(
+            article,
+            [
+              "category",
+              "categorie"
+            ]
+          ),
+
+        readingTime:
+          firstValue(
+            article,
+            [
+              "reading_time_minutes",
+              "readingTimeMinutes",
+              "reading_time",
+              "readingTime",
+              "leestijd"
+            ]
+          ),
+
+        articleSlug:
+          firstValue(
+            article,
+            [
+              "article_slug",
+              "articleSlug"
+            ]
+          ),
+
+        image:
+          firstValue(
+            article,
+            [
+              "image",
+              "imageUrl",
+              "image_url"
+            ]
+          ),
+
+        imageAlt:
+          firstValue(
+            article,
+            [
+              "imageAlt",
+              "image_alt",
+              "alt"
+            ],
+            ""
+          )
+
+      };
+    }
+
+
+    function sectionFromObject(
+      data,
+      keys
+    ) {
+
+      for (const key of keys) {
+
+        if (
+          Array.isArray(
+            data?.[key]
+          )
+        ) {
+          return data[key];
+        }
+
+      }
+
+      return null;
+    }
+
+
+    function sectionFromFlatArray(
+      data,
+      type
+    ) {
+
+      if (!Array.isArray(data)) {
+        return null;
+      }
+
+
+      const aliases = {
+        nl: [
+          "nl",
+          "nederland",
+          "netherlands",
+          "dutch"
+        ],
+        int: [
+          "int",
+          "internationaal",
+          "international",
+          "world",
+          "wereld"
+        ],
+        headlines: [
+          "headlines",
+          "headline",
+          "nieuwskoppen",
+          "belangrijk",
+          "main_news",
+          "main-news"
+        ]
+      };
+
+
+      const values =
+        aliases[type] || [];
+
+
+      const filtered =
+        data.filter(
+          item => {
+
+            const section =
+              String(
+                firstValue(
+                  item,
+                  [
+                    "section",
+                    "blok",
+                    "type",
+                    "region",
+                    "regio"
+                  ],
+                  ""
+                )
+              ).toLowerCase();
+
+            return values.includes(
+              section
+            );
+
+          }
+        );
+
+
+      return filtered.length
+        ? filtered
+        : null;
+    }
+
+
+    function getSection(
+      data,
+      type
+    ) {
+
+      const keyMap = {
+        nl: [
+          "nl",
+          "NL",
+          "nederland",
+          "netherlands",
+          "dutch"
+        ],
+        int: [
+          "int",
+          "INT",
+          "internationaal",
+          "international",
+          "world",
+          "wereld"
+        ],
+        headlines: [
+          "headlines",
+          "HEADLINES",
+          "nieuwskoppen",
+          "belangrijk",
+          "main_news",
+          "mainNews"
+        ]
+      };
+
+
+      const keys =
+        keyMap[type] || [];
+
+
+      return (
+        sectionFromObject(
+          data,
+          keys
+        )
+
+        ||
+
+        sectionFromFlatArray(
+          data,
+          type
+        )
+
+        ||
+
+        []
+      );
+    }
+
+
+    function safeText(value) {
+
+      const div =
+        document.createElement("div");
+
+      div.textContent =
+        value ?? "";
+
+      return div.innerHTML;
+    }
+
+
+    function safeUrl(value) {
+
+      if (
+        !value ||
+        value === "#"
+      ) {
+        return "#";
+      }
+
+
+      try {
+
+        const url =
+          new URL(
+            value,
+            window.location.href
+          );
+
+
+        if (
+          [
+            "http:",
+            "https:"
+          ].includes(
+            url.protocol
+          )
+        ) {
+          return url.href;
+        }
+
+      }
+
+      catch (_) {}
+
+
+      return "#";
+    }
+
+
+    const CATEGORY_ALIASES = Object.freeze({
+      "Archeologie & geschiedenis": "Cultuur",
+      "Cultuur & erfgoed": "Cultuur",
+      "Cultuur & media": "Cultuur",
+      "Geschiedenis & mens": "Cultuur",
+      "Economie & geld": "Economie",
+      "Economie & onderwijs": "Economie",
+      "Energie & innovatie": "Energie & innovatie",
+      "Gezondheid": "Gezondheid",
+      "Gezondheid & basisvoorzieningen": "Gezondheid",
+      "Voeding & leefstijl": "Gezondheid",
+      "Gewoon leuk": "Mens",
+      "Mens & innovatie": "Mens",
+      "Mens & samenleving": "Mens",
+      "Onderwijs & ontwikkeling": "Mens",
+      "Dieren": "Natuur & klimaat",
+      "Dieren & natuur": "Natuur & klimaat",
+      "Natuur & klimaat": "Natuur & klimaat",
+      "Natuur & landbouw": "Natuur & klimaat",
+      "Natuur & samenleving": "Natuur & klimaat",
+      "Natuur & wetenschap": "Natuur & klimaat",
+      "Technologie & innovatie": "Wetenschap",
+      "Wetenschap": "Wetenschap",
+      "Wetenschap & duurzaamheid": "Wetenschap",
+      "Wetenschap & innovatie": "Wetenschap",
+      "Wetenschap & ruimtevaart": "Wetenschap",
+      "Sport": "Sport",
+      "Cultuur": "Cultuur",
+      "Economie": "Economie",
+      "Mens": "Mens"
+    });
+
+
+    function canonicalCategory(value) {
+      const label = String(value ?? "").trim();
+      return CATEGORY_ALIASES[label] || label;
+    }
+
+
+    function categorySlug(value) {
+      return String(value ?? "")
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase()
+        .replace(/&/g, " en ")
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "");
+    }
+
+
+    function readingTimeLabel(value) {
+
+      const minutes =
+        Number.parseInt(
+          String(value ?? "").replace(/[^0-9]/g, ""),
+          10
+        );
+
+      if (
+        !Number.isFinite(minutes) ||
+        minutes < 1
+      ) {
+        return "";
+      }
+
+      return `${minutes} min lezen`;
+    }
+
+
+    function metaHtml(article) {
+
+      const parts = [];
+
+
+      if (article.category) {
+
+        const category = canonicalCategory(article.category);
+        const slug = categorySlug(category);
+        const categoryHtml = slug
+          ? `<a class="meta-category-link" href="/${slug}/">${safeText(category)}</a>`
+          : `<span>${safeText(category)}</span>`;
+
+        parts.push(categoryHtml);
+
+      }
+
+
+      if (article.source) {
+
+        parts.push(
+          `<span class="dot">${safeText(article.source)}</span>`
+        );
+
+      }
+
+
+      const readingTime =
+        readingTimeLabel(
+          article.readingTime
+        );
+
+      if (readingTime) {
+
+        parts.push(
+          `<span class="dot">${safeText(readingTime)}</span>`
+        );
+
+      }
+
+
+      return parts.length
+
+        ? `<div class="meta">${parts.join('<span class="meta-sep" aria-hidden="true">·</span>')}</div>`
+
+        : "";
+    }
+
+
+    function imageHtml(
+      article,
+      className
+    ) {
+
+      if (!article.image) {
+        return "";
+      }
+
+
+      return `
+        <div class="${className}">
+          <img
+            src="${safeUrl(article.image)}"
+            alt="${safeText(article.imageAlt)}"
+            loading="lazy"
+            onerror="this.closest('.${className}').remove()"
+          >
+        </div>
+      `;
+    }
+
+
+    function articleLink(
+      url,
+      label = "Lees het verhaal"
+    ) {
+
+      const href =
+        safeUrl(url);
+
+
+      if (href === "#") {
+        return "";
+      }
+
+
+      return `
+        <a
+          class="read-link"
+          href="${href}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ${safeText(label)} →
+        </a>
+      `;
+    }
+
+
+    function trackArticleClick(
+      article,
+      type,
+      href
+    ) {
+
+      if (typeof window.sa_event !== "function") {
+        return;
+      }
+
+      window.sa_event(
+        "article_click",
+        {
+          title: article.title || "Zonder titel",
+          source: article.source || "Onbekend",
+          category: canonicalCategory(article.category || "Onbekend"),
+          section: type || "onbekend",
+          edition: window.sa_metadata?.edition || "onbekend",
+          url: href || "onbekend"
+        }
+      );
+    }
+
+
+    function renderCard(
+      rawArticle,
+      type = "nl",
+      index = 0,
+      editionDate = ""
+    ) {
+
+      const article = normalizeArticle(rawArticle);
+      const card = document.createElement("article");
+      card.className = "article-row";
+
+      const internalArticleUrl =
+        article.articleSlug && editionDate
+          ? `/artikelen/${encodeURIComponent(editionDate)}/${encodeURIComponent(article.articleSlug)}/`
+          : "";
+
+      const href =
+        safeUrl(
+          internalArticleUrl || article.url
+        );
+
+      const isInternalArticle =
+        Boolean(internalArticleUrl);
+
+      const externalAttrs =
+        href !== "#" && !isInternalArticle
+          ? 'target="_blank" rel="noopener noreferrer"'
+          : "";
+
+      const thumbHtml =
+        type !== "headlines" && article.image
+          ? `
+            <a
+              class="article-thumb"
+              href="${href}"
+              ${externalAttrs}
+              aria-label="Lees ${safeText(article.title)}"
+            >
+              <img
+                src="${safeUrl(article.image)}"
+                alt="${safeText(article.imageAlt || article.title)}"
+                loading="lazy"
+                decoding="async"
+                onerror="this.closest('.article-thumb').remove()"
+              >
+            </a>
+          `
+          : "";
+
+      if (thumbHtml) {
+        card.classList.add("has-thumb");
+      }
+
+      const core = `
+        <div class="article-card-core">
+          <div class="article-main">
+            <h3 class="article-title">
+              <a href="${href}" ${externalAttrs}>${safeText(article.title)}</a>
+            </h3>
+            ${
+              article.teaser
+                ? (
+                    type === "headlines"
+                      ? `<p class="teaser">${safeText(article.teaser)}</p>`
+                      : `<p class="teaser-one-line">${safeText(article.teaser)}</p>`
+                  )
+                : ""
+            }
+            ${metaHtml(article)}
+          </div>
+          ${thumbHtml}
+        </div>
+      `;
+
+      card.innerHTML = type === "headlines"
+        ? `<div class="briefing-row"><div class="briefing-number">${String(index + 1).padStart(2, "0")}</div>${core}</div>`
+        : core;
+
+      if (href !== "#") {
+        if (type === "headlines") {
+          card.classList.add("has-arrow");
+          card.insertAdjacentHTML(
+            "beforeend",
+            `<a class="article-arrow" href="${href}" ${externalAttrs} aria-label="Lees ${safeText(article.title)}">↗</a>`
+          );
+        }
+
+        card
+          .querySelectorAll(
+            ".article-title a, .article-arrow, .article-thumb"
+          )
+          .forEach(
+            link => {
+              link.addEventListener(
+                "click",
+                () => {
+                  trackArticleClick(
+                    article,
+                    type,
+                    href
+                  );
+                }
+              );
+            }
+          );
+      }
+
+      return card;
+    }
+
+
+    function renderSection(
+      data,
+      type,
+      editionDate = ""
+    ) {
+
+      const items =
+        getSection(
+          data,
+          type
+        )
+
+        .map(
+          normalizeArticle
+        )
+
+        .filter(
+          item =>
+            item.title
+        );
+
+
+      if (type === "nl") {
+
+        const state =
+          $("#nl-state");
+
+        const grid =
+          $("#nl-grid");
+
+
+        if (!items.length) {
+
+          state.textContent =
+            "Geen Nederlandse verhalen gevonden in nieuws.json.";
+
+          return;
+        }
+
+
+        state.hidden = true;
+        grid.hidden = false;
+        grid.innerHTML = "";
+
+
+        items
+          .slice(0, 6)
+          .forEach(
+            (item, index) => {
+              grid.appendChild(renderCard(item, type, index, editionDate));
+            }
+          );
+
+      }
+
+
+      if (type === "int") {
+
+        const state =
+          $("#int-state");
+
+        const grid =
+          $("#int-grid");
+
+
+        if (!items.length) {
+
+          state.textContent =
+            "Geen internationale verhalen gevonden in nieuws.json.";
+
+          return;
+        }
+
+
+        state.hidden = true;
+        grid.hidden = false;
+        grid.innerHTML = "";
+
+
+        items
+          .slice(0, 6)
+          .forEach(
+            (item, index) => {
+              grid.appendChild(renderCard(item, type, index, editionDate));
+            }
+          );
+
+      }
+
+
+      if (type === "headlines") {
+
+        const section =
+          $("#headlines-section");
+
+        const state =
+          $("#headlines-state");
+
+        const grid =
+          $("#headlines-grid");
+
+
+        if (!items.length) {
+          return;
+        }
+
+
+        section.hidden = false;
+        state.hidden = true;
+        grid.hidden = false;
+        grid.innerHTML = "";
+
+
+        items
+          .slice(0, 3)
+          .forEach(
+            (item, index) => {
+              grid.appendChild(renderCard(item, type, index, editionDate));
+            }
+          );
+
+      }
+
+    }
+
+
+    function renderTodayIntro(data, isArchive = false) {
+
+      const items =
+        getSection(data, "nl")
+          .slice(0, 3)
+          .map(normalizeArticle)
+          .map(
+            article =>
+              article.introLabel
+              || article.title
+          )
+          .filter(Boolean);
+
+
+      if (!items.length) {
+        return;
+      }
+
+
+      let sentence;
+
+      if (items.length === 1) {
+
+        sentence =
+          `${isArchive ? "In deze editie" : "Vandaag"} lees je onder meer over ${items[0]}.`;
+
+      }
+
+      else if (items.length === 2) {
+
+        sentence =
+          `${isArchive ? "In deze editie" : "Vandaag"} lees je onder meer over ${items[0]} en ${items[1]}.`;
+
+      }
+
+      else {
+
+        sentence =
+          `${isArchive ? "In deze editie" : "Vandaag"} lees je onder meer over ${items[0]}, ${items[1]} en ${items[2]}.`;
+
+      }
+
+
+      $("#today-intro").textContent =
+        sentence;
+    }
+
+
+    function formatEditionDate(rawDate) {
+
+      let date;
+
+      const match =
+        String(rawDate || "")
+          .match(/^(\d{4})-(\d{2})-(\d{2})$/);
+
+
+      if (match) {
+
+        date =
+          new Date(
+            Number(match[1]),
+            Number(match[2]) - 1,
+            Number(match[3]),
+            12
+          );
+
+      }
+
+      else {
+
+        date =
+          rawDate
+            ? new Date(rawDate)
+            : new Date();
+
+      }
+
+
+      if (
+        Number.isNaN(
+          date.getTime()
+        )
+      ) {
+        return String(rawDate || "");
+      }
+
+
+      const text =
+        new Intl.DateTimeFormat(
+          "nl-NL",
+          {
+            weekday: "long",
+            day: "numeric",
+            month: "long",
+            year: "numeric"
+          }
+        ).format(date);
+
+
+      return text.charAt(0).toUpperCase() + text.slice(1);
+    }
+
+
+    function getRequestedEdition() {
+
+      const params =
+        new URLSearchParams(
+          window.location.search
+        );
+
+      const value =
+        params.get("editie");
+
+
+      return /^\d{4}-\d{2}-\d{2}$/.test(
+        value || ""
+      )
+        ? value
+        : null;
+    }
+
+
+    function setActiveNav(view) {
+
+      [
+        ["today", "#nav-today"],
+        ["archive", "#nav-archive"],
+        ["about", "#nav-about"]
+      ].forEach(
+        ([name, selector]) => {
+
+          const link =
+            $(selector);
+
+          if (link) {
+            link.classList.toggle(
+              "is-active",
+              name === view
+            );
+          }
+
+        }
+      );
+    }
+
+
+    function showAppView(view) {
+
+      const todayView =
+        $("#today-view");
+
+      const archiveView =
+        $("#archive-view");
+
+      const aboutView =
+        $("#about-view");
+
+      const privacyView =
+        $("#privacy-view");
+
+      const signupPendingView =
+        $("#signup-pending-view");
+
+      const signupConfirmedView =
+        $("#signup-confirmed-view");
+
+
+      todayView.hidden =
+        view !== "today";
+
+      archiveView.hidden =
+        view !== "archive";
+
+      aboutView.hidden =
+        view !== "about";
+
+      privacyView.hidden =
+        view !== "privacy";
+
+      signupPendingView.hidden =
+        view !== "signup-pending";
+
+      signupConfirmedView.hidden =
+        view !== "signup-confirmed";
+
+
+      setActiveNav(
+        view
+      );
+
+
+      if (view === "archive") {
+        loadArchiveIndex();
+      }
+
+
+      window.scrollTo(
+        {
+          top: 0,
+          behavior: "smooth"
+        }
+      );
+    }
+
+
+    function routeFromHash() {
+
+      const params =
+        new URLSearchParams(
+          window.location.search
+        );
+
+      if (
+        params.get("inschrijving") ===
+        "bevestigen"
+      ) {
+        showAppView(
+          "signup-pending"
+        );
+
+        return;
+      }
+
+      if (
+        params.get("inschrijving") ===
+        "bevestigd"
+      ) {
+        showAppView(
+          "signup-confirmed"
+        );
+
+        return;
+      }
+
+      const hash =
+        window.location.hash;
+
+
+      if (hash === "#archief") {
+
+        showAppView(
+          "archive"
+        );
+
+        return;
+      }
+
+
+      if (hash === "#over") {
+
+        showAppView(
+          "about"
+        );
+
+        return;
+      }
+
+
+      if (hash === "#privacy") {
+
+        showAppView(
+          "privacy"
+        );
+
+        return;
+      }
+
+
+      if (hash === "#nieuwsbrief") {
+        showAppView("today");
+        setTimeout(() => {
+          const newsletter = $("#nieuwsbrief");
+          if (newsletter) newsletter.scrollIntoView({ behavior: "smooth" });
+        }, 60);
+        return;
+      }
+
+
+      showAppView(
+        "today"
+      );
+    }
+
+
+
+    async function loadArchiveIndex() {
+
+      const state =
+        $("#archive-state");
+
+      const list =
+        $("#archive-list");
+
+
+      if (
+        list.dataset.loaded === "true"
+      ) {
+        return;
+      }
+
+
+      try {
+
+        const response =
+          await fetch(
+            "./edities/index.json",
+            {
+              cache: "no-store"
+            }
+          );
+
+
+        if (!response.ok) {
+          throw new Error(
+            `edities/index.json gaf status ${response.status}`
+          );
+        }
+
+
+        const entries =
+          await response.json();
+
+
+        list.innerHTML = "";
+
+
+        entries.forEach(
+          entry => {
+
+            const date =
+              entry?.date;
+
+            if (
+              !/^\d{4}-\d{2}-\d{2}$/.test(
+                date || ""
+              )
+            ) {
+              return;
+            }
+
+
+            const link =
+              document.createElement(
+                "a"
+              );
+
+            link.className =
+              "archive-item";
+
+            link.href =
+              `/edities/${encodeURIComponent(date)}/`;
+
+            link.innerHTML = `
+              <span class="archive-date">${safeText(formatEditionDate(date))}</span>
+              <span class="archive-open">Open editie →</span>
+            `;
+
+
+            list.appendChild(
+              link
+            );
+
+          }
+        );
+
+
+        state.hidden = true;
+        list.hidden = false;
+        list.dataset.loaded = "true";
+
+      }
+
+      catch (error) {
+
+        console.error(
+          error
+        );
+
+        state.textContent =
+          "Het archief kon niet worden geladen.";
+
+      }
+
+    }
+
+
+
+    async function loadHomeArchivePreview(currentEditionDate) {
+
+      const state = $("#home-archive-state");
+      const list = $("#home-archive-list");
+      if (!state || !list || list.dataset.loaded === "true") return;
+
+      try {
+        const response = await fetch("./edities/index.json", { cache: "no-store" });
+        if (!response.ok) throw new Error(`edities/index.json gaf status ${response.status}`);
+
+        const entries = (await response.json())
+          .filter(entry => /^\d{4}-\d{2}-\d{2}$/.test(entry?.date || ""))
+          .filter(entry => entry.date !== currentEditionDate)
+          .slice(0, 3);
+
+        list.innerHTML = "";
+
+        for (const entry of entries) {
+          let label = "Lees deze editie";
+
+          try {
+            const editionResponse = await fetch(`./edities/${entry.date}.json`, { cache: "no-store" });
+            if (editionResponse.ok) {
+              const editionData = await editionResponse.json();
+              const firstStory = getSection(editionData, "nl").map(normalizeArticle).find(item => item.title);
+              if (firstStory?.title) label = firstStory.title;
+            }
+          } catch (_) {}
+
+          const link = document.createElement("a");
+          link.className = "home-archive-item";
+          link.href = `/edities/${encodeURIComponent(entry.date)}/`;
+          link.innerHTML = `
+            <span class="home-archive-date">${safeText(formatEditionDate(entry.date).replace(/^\w+\s+/u, ""))}</span>
+            <span class="home-archive-title">${safeText(label)}</span>
+            <span class="home-archive-arrow">→</span>
+          `;
+          list.appendChild(link);
+        }
+
+        state.hidden = true;
+        list.hidden = false;
+        list.dataset.loaded = "true";
+      }
+      catch (error) {
+        console.error(error);
+        state.textContent = "Eerdere edities konden niet worden geladen.";
+      }
+    }
+
+
+    let analyticsLoaded = false;
+
+
+    function loadAnalytics(editionDate) {
+
+      window.sa_event =
+        window.sa_event ||
+        function () {
+          const args =
+            [].slice.call(arguments);
+
+          window.sa_event.q
+            ? window.sa_event.q.push(args)
+            : window.sa_event.q = [args];
+        };
+
+      window.sa_metadata = {
+        edition: editionDate || "onbekend"
+      };
+
+
+      if (analyticsLoaded) {
+        return;
+      }
+
+      analyticsLoaded = true;
+
+
+      const analyticsScript =
+        document.createElement("script");
+
+      analyticsScript.async = true;
+      analyticsScript.setAttribute(
+        "data-hostname",
+        "positief-nieuws.nl"
+      );
+      analyticsScript.src =
+        "https://scripts.simpleanalyticscdn.com/latest.js";
+
+
+      analyticsScript.addEventListener(
+        "load",
+        () => {
+
+          const autoEventsScript =
+            document.createElement("script");
+
+          autoEventsScript.async = true;
+          autoEventsScript.setAttribute(
+            "data-full-urls",
+            "true"
+          );
+          autoEventsScript.src =
+            "https://scripts.simpleanalyticscdn.com/auto-events.js";
+
+          document.body.appendChild(
+            autoEventsScript
+          );
+        }
+      );
+
+
+      document.body.appendChild(
+        analyticsScript
+      );
+    }
+
+
+    async function loadNews() {
+
+      try {
+
+        const requestedEdition =
+          getRequestedEdition();
+
+        const newsUrl =
+          requestedEdition
+            ? `./edities/${requestedEdition}.json`
+            : "./nieuws.json";
+
+
+        const [
+          response,
+          articleImageCache
+        ] =
+          await Promise.all(
+            [
+              fetch(
+                newsUrl,
+                {
+                  cache: "no-store"
+                }
+              ),
+              loadArticleImageCache()
+            ]
+          );
+
+
+        if (!response.ok) {
+
+          throw new Error(
+            `${newsUrl} gaf status ${response.status}`
+          );
+
+        }
+
+
+        const data =
+          await response.json();
+
+
+        const rawEditionDate =
+          data?.meta?.edition_date
+          || data?.edition?.date
+          || null;
+
+
+        applyArticleImages(
+          data,
+          rawEditionDate,
+          articleImageCache
+        );
+
+
+        $("#edition-date").textContent =
+          formatEditionDate(
+            rawEditionDate
+          );
+
+        const heroWeekday =
+          new Intl.DateTimeFormat(
+            "nl-NL",
+            {
+              weekday: "long",
+              timeZone: "Europe/Amsterdam"
+            }
+          ).format(
+            new Date(
+              `${rawEditionDate}T12:00:00+02:00`
+            )
+          );
+
+        const heroWeekdayEl =
+          $("#hero-weekday");
+
+        if (heroWeekdayEl) {
+          heroWeekdayEl.textContent =
+            ` in deze ${heroWeekday}-editie`;
+        }
+
+
+        const isArchive =
+          Boolean(
+            requestedEdition
+          );
+
+        const heroEditionLabel =
+          $("#hero-edition-label");
+
+        if (heroEditionLabel) {
+          heroEditionLabel.textContent =
+            isArchive ? "Archiefeditie" : "Laatste editie";
+        }
+
+
+        $("#archive-banner").classList.toggle(
+          "is-visible",
+          isArchive
+        );
+
+
+        renderTodayIntro(
+          data,
+          isArchive
+        );
+
+
+        renderSection(
+          data,
+          "nl",
+          rawEditionDate
+        );
+
+
+        renderSection(
+          data,
+          "int",
+          rawEditionDate
+        );
+
+
+        renderSection(
+          data,
+          "headlines",
+          rawEditionDate
+        );
+
+        loadHomeArchivePreview(rawEditionDate);
+
+        loadAnalytics(
+          rawEditionDate
+        );
+
+      }
+
+      catch (error) {
+
+        console.error(
+          error
+        );
+
+
+        $("#nl-state").textContent =
+          "Nieuws kon niet worden geladen.";
+
+
+        $("#int-state").textContent =
+          "Nieuws kon niet worden geladen.";
+
+
+        loadAnalytics(
+          "onbekend"
+        );
+
+      }
+
+    }
+
+
+    function setupShareButtons() {
+
+      const button = $("#share-edition");
+      if (!button) return;
+
+      const shareUrl =
+        window.location.origin
+        + window.location.pathname
+        + window.location.search;
+
+      const shareText =
+        "Positief nieuws. In een paar minuten weet je wat er goed gaat én wat je verder moet weten. Zonder eindeloos scrollen.";
+
+      button.addEventListener(
+        "click",
+        async () => {
+          trackSimpleEvent("share_edition");
+          if (navigator.share) {
+            try {
+              await navigator.share({
+                title: "Positief nieuws. Dit gebeurt ook.",
+                text: shareText,
+                url: shareUrl
+              });
+              return;
+            } catch (_) {}
+          }
+
+          window.open(
+            "https://wa.me/?text=" + encodeURIComponent(shareText + "\n\n" + shareUrl),
+            "_blank",
+            "noopener,noreferrer"
+          );
+        }
+      );
+    }
+
+
+    let deferredInstallPrompt = null;
+
+
+    function isStandaloneMode() {
+
+      return window.matchMedia(
+        "(display-mode: standalone)"
+      ).matches
+      || window.navigator.standalone === true;
+    }
+
+
+    function isIosDevice() {
+
+      return /iphone|ipad|ipod/i.test(
+        window.navigator.userAgent
+      );
+    }
+
+
+    function installDismissed() {
+
+      return localStorage.getItem(
+        "pn_install_dismissed"
+      ) === "1";
+    }
+
+
+    function trackSimpleEvent(name) {
+
+      if (typeof window.sa_event === "function") {
+        window.sa_event(name);
+      }
+    }
+
+
+    function hideInstallStrip() {
+
+      $("#install-strip").classList.remove(
+        "is-visible"
+      );
+    }
+
+
+    function showInstallStrip() {
+
+      if (
+        isStandaloneMode()
+        || installDismissed()
+      ) {
+        return;
+      }
+
+      $("#install-strip").classList.add(
+        "is-visible"
+      );
+    }
+
+
+    window.addEventListener(
+      "beforeinstallprompt",
+      event => {
+
+        event.preventDefault();
+
+        deferredInstallPrompt =
+          event;
+
+        $("#install-copy").textContent =
+          "Positief nieuws bij de hand. Installeer de app en lees de nieuwste editie vanaf je beginscherm.";
+
+        $("#ios-install-panel").classList.remove(
+          "is-visible"
+        );
+
+        $("#install-button").textContent =
+          "Zet op beginscherm";
+
+        showInstallStrip();
+
+      }
+    );
+
+
+    window.addEventListener(
+      "appinstalled",
+      () => {
+
+        trackSimpleEvent(
+          "app_installed"
+        );
+
+        deferredInstallPrompt =
+          null;
+
+        hideInstallStrip();
+
+      }
+    );
+
+
+    $("#install-button").addEventListener(
+      "click",
+      async () => {
+
+        trackSimpleEvent(
+          "app_install_click"
+        );
+
+        if (deferredInstallPrompt) {
+
+          deferredInstallPrompt.prompt();
+
+          await deferredInstallPrompt.userChoice;
+
+          deferredInstallPrompt =
+            null;
+
+          hideInstallStrip();
+
+          return;
+        }
+
+
+        if (isIosDevice()) {
+
+          trackSimpleEvent(
+            "ios_install_help"
+          );
+
+          $("#ios-install-panel").classList.add(
+            "is-visible"
+          );
+
+          $("#install-copy").textContent =
+            "Positief nieuws bij de hand. Zet de site via Safari op je beginscherm.";
+
+          return;
+        }
+
+
+        $("#install-copy").textContent =
+          "Gebruik in je browser ‘App installeren’ of ‘Toevoegen aan startscherm’.";
+        $("#install-copy").classList.add("is-visible");
+      }
+    );
+
+
+    $("#install-dismiss").addEventListener(
+      "click",
+      () => {
+
+        localStorage.setItem(
+          "pn_install_dismissed",
+          "1"
+        );
+
+        hideInstallStrip();
+
+      }
+    );
+
+
+    if (
+      isIosDevice()
+      && !isStandaloneMode()
+      && !installDismissed()
+    ) {
+
+      $("#install-copy").textContent =
+        "Positief nieuws bij de hand. Zet de site op je beginscherm en lees de nieuwste editie als een app.";
+
+      $("#install-button").textContent =
+        "Zet op beginscherm";
+
+      showInstallStrip();
+    }
+
+    if (!isStandaloneMode() && !installDismissed()) {
+      showInstallStrip();
+    }
+
+
+    setupShareButtons();
+    loadNews();
+    routeFromHash();
+
+
+    window.addEventListener(
+      "hashchange",
+      routeFromHash
+    );
+
+
+    $("#about-newsletter-link").addEventListener(
+      "click",
+      event => {
+
+        event.preventDefault();
+
+        history.replaceState(
+          null,
+          "",
+          window.location.pathname
+          + window.location.search
+        );
+
+        showAppView(
+          "today"
+        );
+
+
+        setTimeout(
+          () => {
+            $("#nieuwsbrief").scrollIntoView(
+              {
+                behavior: "smooth"
+              }
+            );
+          },
+          50
+        );
+
+      }
+    );
+
+
+    if ("serviceWorker" in navigator) {
+
+      window.addEventListener(
+        "load",
+        () => {
+
+          navigator.serviceWorker.register(
+            "/service-worker.js"
+          ).catch(
+            error => {
+              console.error(
+                "Service worker kon niet worden geregistreerd:",
+                error
+              );
+            }
+          );
+
+        }
+      );
+
+    }
+
+  </script>
+  <!-- production release 2026-08-29: typografie, warme accenten en dynamische editie-intro -->
 </body>
 </html>
+
+<style>
+  /* Compacte overgang rond de uitgelichte Special */
+  .nl-block { padding-bottom: 22px; }
+  .world-block { padding-top: 22px; }
+  @media (max-width: 760px) {
+    .nl-block { padding-bottom: 16px; }
+    .world-block { padding-top: 16px; }
+  }
+</style>
