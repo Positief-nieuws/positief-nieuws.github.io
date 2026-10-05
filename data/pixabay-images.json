@@ -270,14 +270,14 @@
     "height": 2000
   },
   "2026-10-05/seniorengym-klaar-landelijke-inzet-valpreventie": {
-    "query": "senior exercise balance training older adults home",
-    "pixabay_id": 2587066,
+    "query": "elderly woman chair exercise",
+    "pixabay_id": 100342,
     "image_path": "/images/artikelen/2026-10-05/seniorengym-klaar-landelijke-inzet-valpreventie.jpg",
-    "page_url": "https://pixabay.com/photos/yoga-strength-woman-balance-2587066/",
-    "photographer": "StockSnap",
-    "tags": "yoga, strength, woman, balance, nature, balancing, fit, fitness, young woman, fit woman, wellness, pose, yoga pose, posing, strength training, meditation, health, outdoors, beach, international yoga day",
-    "width": 5833,
-    "height": 3646
+    "page_url": "https://pixabay.com/photos/woman-elderly-portrait-old-senior-100342/",
+    "photographer": "geralt",
+    "tags": "woman, elderly, portrait, old, senior, aged, grandma, grandmother, elderly, elderly, elderly, senior, senior, grandma, grandma, grandma, grandma, grandma, grandmother, grandmother, grandmother",
+    "width": 1600,
+    "height": 1200
   },
   "2026-10-05/truly-naked-basta-grote-winnaars-gouden-kalveren": {
     "query": "Dutch film festival awards cinema stage",
@@ -358,5 +358,25 @@
     "tags": "moon, super moon, craters, full moon, moonlight, night sky, dark, sky, celestial body, nature, night, luna, lunar",
     "width": 1920,
     "height": 1280
+  },
+  "2026-10-05/meer-mannelijke-leraren-basisonderwijs": {
+    "query": "male teacher classroom primary school",
+    "pixabay_id": 3670453,
+    "image_path": "/images/artikelen/2026-10-05/meer-mannelijke-leraren-basisonderwijs.jpg",
+    "page_url": "https://pixabay.com/photos/education-student-boy-classroom-3670453/",
+    "photographer": "JhonDL",
+    "tags": "education, student, boy, classroom, child, school, education, education, education, student, student, student, student, school, school, school, school, school",
+    "width": 3000,
+    "height": 2000
+  },
+  "2026-10-05/luca-terugkeer-autocross-na-kanker": {
+    "query": "autocross racing car dirt track",
+    "pixabay_id": 4394450,
+    "image_path": "/images/artikelen/2026-10-05/luca-terugkeer-autocross-na-kanker.jpg",
+    "page_url": "https://pixabay.com/photos/car-racing-race-track-n%C3%BCrburgring-4394450/",
+    "photographer": "mibro",
+    "tags": "car racing, race track, nürburgring, sports, race car, motorsport, bmw, speed, quickly, car racing, car racing, race track, race car, race car, motorsport, bmw, bmw, bmw, bmw, bmw",
+    "width": 5442,
+    "height": 3628
   }
 }

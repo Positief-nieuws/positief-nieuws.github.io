@@ -1,24 +1,40 @@
 {
   "meta": {
     "edition_date": "2026-10-05",
-    "email_preheader": "Praktijkscholen helpen leerlingen met stagekosten, bedrijven benutten het stroomnet slimmer en de Nobelprijs bekroont een techniek die hersencellen met licht kan sturen."
+    "email_preheader": "Meer mannen kiezen voor de basisschool, bedrijven gebruiken het stroomnet slimmer en een reuzenkrekel herstelt dankzij vijftien jaar natuurbescherming."
   },
   "nl": [
     {
       "category": "Mens",
-      "title": "Vijf praktijkscholen helpen leerlingen aan fiets, koksjas of werkschoenen",
-      "teaser": "Een Rotterdamse pilot groeit van één naar vijf scholen. Leerlingen uit gezinnen met geldzorgen krijgen noodzakelijke stagebenodigdheden, zodat een fiets, ov-kaart of werkkleding niet bepaalt of ze kunnen meedoen.",
-      "source": "Rijnmond",
-      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNaUtuWEJYLUtpTkxIeUtkUlpSSTk3YWtSWlNuWU8yTGw4Zmwxbnh3TGNHX29PMXJjRzZTdTE1ei1senA3dTVDX2ZsdkhrbC1pRm4ycnFJYXdFSnd6UzBaWlprb2ZwQmRsWnNNOVdac2E5WjZwMFFORzkzVmJ6QVRERWxPcFowWEZEWVZPSDR2Z2lSWDVJQ0ctQmtvN0tnLThFdHUtUlJaZFFNUU1nSW5sMkdQOHpQMERiSk8taTZaeTRUejRMbXd2REJoeUduVjA?oc=5",
-      "article_slug": "praktijkscholen-helpen-leerlingen-stagekosten",
+      "title": "Meer mannen kiezen voor het basisonderwijs: één op de vijf nieuwe leraren is man",
+      "teaser": "Het aandeel mannen onder nieuwe basisschoolleraren groeit. Volgens berichtgeving van het AD is inmiddels één op de vijf nieuwe leraren man: een stap naar meer diversiteit voor de klas.",
+      "source": "AD / Paboweb",
+      "url": "https://www.ad.nl/binnenland/steeds-meer-meesters-voor-de-klas-mannen-kiezen-weer-vaker-voor-het-basisonderwijs-maar-waarom~a1eb9701/",
+      "article_slug": "meer-mannelijke-leraren-basisonderwijs",
       "article_body": [
-        "Steeds meer praktijkscholen in de regio Rotterdam krijgen geld om leerlingen uit gezinnen met weinig financiële ruimte te helpen met spullen die nodig zijn voor hun stage. Het kan gaan om veiligheidsschoenen, een koksjas, een fiets, een ov-abonnement of materialen voor een opleiding.",
-        "De pilot Van Pro naar Prof begon op één school en groeit nu naar vijf scholen. Iedere deelnemende school krijgt jaarlijks 12.750 euro. De aanleiding is praktisch: zonder de juiste kleding of vervoer konden leerlingen soms niet op stage verschijnen, met vertraging of uitval als gevolg.",
-        "De ondersteuning wordt snel ingezet wanneer schoolmedewerkers zien dat een leerling iets nodig heeft. Zo wordt voorkomen dat geldgebrek bepaalt of iemand kan leren, stage lopen en uiteindelijk een diploma halen."
+        "Meer mannen kiezen voor een loopbaan als basisschoolleraar. Het AD bericht op 2 oktober dat ongeveer twintig procent van de nieuwe leraren man is. Paboweb, het kennisplatform voor lerarenopleidingen basisonderwijs, lichtte die ontwikkeling dezelfde dag uit.",
+        "De berichtgeving beschrijft dat het beeld van het beroep verandert. Lesgeven op de basisschool wordt minder vanzelfsprekend gezien als vrouwenwerk. Een meer gemengd lerarenteam kan kinderen laten zien dat lesgeven en zorgen bij mannen én vrouwen passen.",
+        "De verhouding van één op de vijf gaat over nieuwe leraren, niet over alle leraren die nu voor de klas staan. Meer instroom is een positieve stap; goede begeleiding en behoud van leraren blijven nodig om die ontwikkeling duurzaam te maken."
       ],
-      "why_it_matters": "Een relatief klein bedrag voor vervoer of werkkleding kan het verschil maken tussen afhaken en doorgaan. De uitbreiding van één naar vijf scholen maakt van een incidentele oplossing een bredere aanpak.",
-      "image_query": "vocational students workshop school internship workwear",
-      "image_alt": "Illustratief beeld van leerlingen in het praktijkonderwijs"
+      "why_it_matters": "Een breder samengestelde groep leraren geeft kinderen meer verschillende voorbeelden. Elke gemotiveerde en goed opgeleide nieuwe leraar helpt bovendien het onderwijs te versterken.",
+      "image_query": "male teacher classroom primary school",
+      "image_alt": "Illustratief beeld van een mannelijke leraar voor een basisschoolklas"
+    },
+    {
+      "category": "Energie & innovatie",
+      "title": "Bedrijven gebruiken het stroomnet steeds flexibeler",
+      "teaser": "Bedrijven en netbeheerders hebben afspraken voor circa 4,4 gigawatt flexibel vermogen. Door stroomgebruik of teruglevering aan te passen bij drukte, wordt het bestaande net beter benut.",
+      "source": "Netbeheer Nederland",
+      "url": "https://www.netbeheernederland.nl/artikelen/nieuws/slimmer-netgebruik-wint-terrein-maar-vraag-naar-transportcapaciteit-groeit-nog",
+      "article_slug": "bedrijven-gebruiken-stroomnet-steeds-flexibeler",
+      "article_body": [
+        "Steeds meer bedrijven maken afspraken met netbeheerders om hun stroomafname of teruglevering aan te passen wanneer het net vol raakt. Netbeheer Nederland meldt op 5 oktober dat zulke afspraken in de eerste helft van 2026 verder zijn gegroeid.",
+        "Op 30 juni waren 394 contracten voor teruglevering en 375 voor afname actief. Samen vertegenwoordigen ze circa 4,4 gigawatt gecontracteerd flexibel vermogen. Dat is geen 4,4 gigawatt nieuwe netcapaciteit: het gaat om vermogen dat onder afspraken kan worden bijgestuurd.",
+        "Door die flexibiliteit ontstaat op sommige plekken ruimte voor nieuwe aansluitingen. Tegelijk groeit de vraag naar transportcapaciteit nog sneller dan het aanbod. Slimmer gebruik helpt, maar uitbreiding van kabels en stations blijft nodig."
+      ],
+      "why_it_matters": "Netcongestie remt bedrijven, woningbouw en verduurzaming. Flexibeler stroomgebruik lost het probleem niet volledig op, maar maakt aantoonbaar beter gebruik van de capaciteit die er al is.",
+      "image_query": "electricity grid industrial company smart energy flexible power Netherlands",
+      "image_alt": "Illustratief beeld van een elektriciteitsnet en bedrijventerrein"
     },
     {
       "category": "Gezondheid",
@@ -37,20 +53,20 @@
       "image_alt": "Illustratief beeld van neonatale screening in een ziekenhuis"
     },
     {
-      "category": "Gezondheid",
-      "title": "Ggz-organisaties bepalen voor het eerst samen welke onderzoeken het hardst nodig zijn",
-      "teaser": "Vijf landelijke organisaties hebben een gezamenlijke onderzoeksagenda voor de geestelijke gezondheidszorg gemaakt. Die moet nieuwe kennis sneller laten aansluiten op vragen uit de praktijk.",
-      "source": "de Nederlandse ggz",
-      "url": "https://www.denederlandseggz.nl/nieuws/2026/onderzoeksagenda-mentale-gezondheid-kwintet",
-      "article_slug": "eerste-gezamenlijke-onderzoeksagenda-ggz",
+      "category": "Mens",
+      "title": "Praktijkscholen helpen leerlingen aan fiets, koksjas of werkschoenen",
+      "teaser": "Een Rotterdamse pilot groeit van één naar vijf scholen. Leerlingen uit gezinnen met geldzorgen krijgen noodzakelijke stagebenodigdheden, zodat een fiets, ov-kaart of werkkleding niet bepaalt of ze kunnen meedoen.",
+      "source": "Rijnmond",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNaUtuWEJYLUtpTkxIeUtkUlpSSTk3YWtSWlNuWU8yTGw4Zmwxbnh3TGNHX29PMXJjRzZTdTE1ei1senA3dTVDX2ZsdkhrbC1pRm4ycnFJYXdFSnd6UzBaWlprb2ZwQmRsWnNNOVdac2E5WjZwMFFORzkzVmJ6QVRERWxPcFowWEZEWVZPSDR2Z2lSWDVJQ0ctQmtvN0tnLThFdHUtUlJaZFFNUU1nSW5sMkdQOHpQMERiSk8taTZaeTRUejRMbXd2REJoeUduVjA?oc=5",
+      "article_slug": "praktijkscholen-helpen-leerlingen-stagekosten",
       "article_body": [
-        "Vijf landelijke organisaties in de geestelijke gezondheidszorg hebben voor het eerst gezamenlijk onderzoeksprioriteiten vastgelegd. De agenda is ontwikkeld om wetenschappelijk onderzoek beter te laten aansluiten op de belangrijkste vragen in de ggz.",
-        "De onderzoeksagenda kwam tot stand met inbreng van professionals, onderzoekers, patiënten, naasten en instellingen. De vijf kennisgebieden lopen uiteen van de effecten van behandelingen tot mentale veerkracht, ervaringskennis en betere samenwerking.",
-        "De agenda wordt een belangrijk vertrekpunt voor een nieuw onderzoeksprogramma van ZonMw. Voor dat programma is door VWS 30 miljoen euro gereserveerd."
+        "Steeds meer praktijkscholen in de regio Rotterdam krijgen geld om leerlingen uit gezinnen met weinig financiële ruimte te helpen met spullen die nodig zijn voor hun stage. Het kan gaan om veiligheidsschoenen, een koksjas, een fiets, een ov-abonnement of materialen voor een opleiding.",
+        "De pilot Van Pro naar Prof begon op één school en groeit nu naar vijf scholen. Iedere deelnemende school krijgt jaarlijks 12.750 euro. De aanleiding is praktisch: zonder de juiste kleding of vervoer konden leerlingen soms niet op stage verschijnen, met vertraging of uitval als gevolg.",
+        "De ondersteuning wordt snel ingezet wanneer schoolmedewerkers zien dat een leerling iets nodig heeft. Zo wordt voorkomen dat geldgebrek bepaalt of iemand kan leren, stage lopen en uiteindelijk een diploma halen."
       ],
-      "why_it_matters": "Onderzoek levert meer op wanneer partijen vooraf gezamenlijk bepalen welke problemen het belangrijkst zijn en hoe kennis vervolgens de praktijk bereikt.",
-      "image_query": "mental health research meeting healthcare professionals",
-      "image_alt": "Illustratief beeld van zorgprofessionals die samen onderzoek bespreken"
+      "why_it_matters": "Een relatief klein bedrag voor vervoer of werkkleding kan het verschil maken tussen afhaken en doorgaan. De uitbreiding van één naar vijf scholen maakt van een incidentele oplossing een bredere aanpak.",
+      "image_query": "vocational students workshop school internship workwear",
+      "image_alt": "Illustratief beeld van leerlingen in het praktijkonderwijs"
     },
     {
       "category": "Gezondheid",
@@ -64,42 +80,25 @@
         "Het programma biedt oefeningen op maat en richt zich op het verkleinen van valrisico. Inmiddels starten verschillende lokale pilots. Daarnaast is een monitorings- en rapportagesysteem ontwikkeld waarmee gemeenten kunnen volgen hoeveel ouderen worden bereikt, doorverwezen en daadwerkelijk deelnemen.",
         "De combinatie van een toegankelijk programma en beter inzicht in bereik moet gemeenten helpen om valpreventie gerichter in te zetten en op te schalen."
       ],
-      "why_it_matters": "Valpreventie werkt pas echt als ouderen bereikt worden én gemeenten kunnen zien wat deelname oplevert. Deze stap maakt landelijke opschaling praktischer.",
-      "image_query": "senior exercise balance training older adults home",
-      "image_alt": "Illustratief beeld van ouderen die balansoefeningen doen"
+      "why_it_matters": "Ouderen bereiken en deelname volgen zijn belangrijke voorwaarden voor toegankelijke valpreventie. De pilots moeten laten zien hoe het programma en de gemeentelijke aanpak in de praktijk werken.",
+      "image_query": "elderly woman chair exercise",
+      "image_alt": "Illustratief beeld van een oudere vrouw die rustig oefeningen bij een stoel doet"
     },
     {
-      "category": "Cultuur",
-      "title": "Truly Naked en Basta grote winnaars van de Gouden Kalveren",
-      "teaser": "Het regiedebuut Truly Naked won zes prijzen, waaronder beste film, regie en scenario. De dramaserie Basta kreeg drie Gouden Kalveren.",
-      "source": "NOS",
-      "url": "https://nos.nl/artikel/2633459-dramafilm-truly-naked-en-serie-basta-grote-winnaars-gouden-kalveren",
-      "reading_time_minutes": 3,
-      "article_slug": "truly-naked-basta-grote-winnaars-gouden-kalveren",
+      "category": "Sport",
+      "title": "Na een zwaar kankertraject rijdt Luca weer races — en wordt kampioen",
+      "teaser": "De zestienjarige Luca uit Helmond won zondag het ASUZ-autocrosskampioenschap. Na behandelingen voor botkanker kon hij terugkeren naar de sport die hij zo graag beoefent.",
+      "source": "Omroep Brabant",
+      "url": "https://www.omroepbrabant.nl/nieuws/6029643/luca-16-won-de-strijd-voor-zijn-leven-en-wint-nu-ook-sportieve-strijd",
+      "article_slug": "luca-terugkeer-autocross-na-kanker",
       "article_body": [
-        "Truly Naked en Basta zijn de grote winnaars geworden van het Gouden Kalveren Gala tijdens het Nederlands Film Festival in Utrecht.",
-        "Truly Naked, het regiedebuut van de Nederlandse filmmaker Muriel d’Ansembourg, won zes prijzen, onder meer voor beste speelfilm, regie en scenario. Ook camera, montage en production design werden bekroond.",
-        "De dramaserie Basta won drie Gouden Kalveren. Daarmee stonden zowel een nieuw Nederlands filmdebuut als een grote dramaserie nadrukkelijk in de prijzen."
+        "Luca den Ronden kreeg in 2023, toen hij dertien was, de diagnose botkanker. Hij onderging chemotherapie en kreeg een knieprothese. De behandeling betekende een ingrijpende onderbreking van zijn dagelijks leven en zijn passie voor autocross.",
+        "In maart vorig jaar reed hij weer zijn eerste wedstrijd. Zondag werd hij in Deurne kampioen in de ASUZ-reeks, die uit zes wedstrijden bestaat. Voor hem maakte juist de terugkeer na die moeilijke periode de titel bijzonder.",
+        "Zijn medische traject is niet afgesloten: vorig jaar werd een uitzaaiing in zijn long verwijderd en hij blijft onder controle. Zijn verhaal laat zien hoeveel het kan betekenen om na ziekte weer ruimte te krijgen voor iets waar je plezier en eigenheid in vindt."
       ],
-      "why_it_matters": "De prijzen zetten verschillende vormen van Nederlands film- en serietalent in de schijnwerpers, van nieuw regietalent tot hoogwaardige televisieproducties.",
-      "image_query": "Dutch film festival awards cinema stage",
-      "image_alt": "Illustratief beeld van een filmfestival en prijsuitreiking"
-    },
-    {
-      "category": "Energie & innovatie",
-      "title": "Bedrijven gebruiken het stroomnet steeds flexibeler",
-      "teaser": "Steeds meer bedrijven verschuiven of beperken hun stroomgebruik op drukke momenten. Flexibele afspraken vertegenwoordigen inmiddels circa 4,4 gigawatt en helpen bestaande netcapaciteit beter te benutten.",
-      "source": "Netbeheer Nederland",
-      "url": "https://www.netbeheernederland.nl/artikelen/nieuws/slimmer-netgebruik-wint-terrein-maar-vraag-naar-transportcapaciteit-groeit-nog",
-      "article_slug": "bedrijven-gebruiken-stroomnet-steeds-flexibeler",
-      "article_body": [
-        "Steeds meer bedrijven maken afspraken met netbeheerders om hun elektriciteitsgebruik aan te passen op momenten dat het stroomnet vol zit. Ze verplaatsen verbruik, leveren tijdelijk minder terug of gebruiken minder vermogen tijdens piekuren.",
-        "Op 30 juni waren 394 flexibele contracten voor invoeding en 375 voor afname actief. Samen vertegenwoordigen deze afspraken circa 4,4 gigawatt aan gecontracteerd flexibel vermogen.",
-        "De druk op het net is daarmee niet opgelost: de vraag naar transportcapaciteit groeit nog steeds sneller dan de beschikbare ruimte. Wel laat de groei van flexibele contracten zien dat slimmer gebruik van het bestaande net op steeds meer plekken capaciteit kan vrijmaken voor andere gebruikers."
-      ],
-      "why_it_matters": "Netcongestie remt bedrijven, woningbouw en verduurzaming. Flexibeler stroomgebruik lost het probleem niet volledig op, maar maakt aantoonbaar beter gebruik van de capaciteit die er al is.",
-      "image_query": "electricity grid industrial company smart energy flexible power Netherlands",
-      "image_alt": "Illustratief beeld van een elektriciteitsnet en bedrijventerrein"
+      "why_it_matters": "Herstel gaat ook over het dagelijks leven terugvinden. Luca’s terugkeer naar zijn favoriete sport maakt dat heel concreet, zonder dat zijn verhaal iets voorspelt over het herstel van anderen.",
+      "image_query": "autocross racing car dirt track",
+      "image_alt": "Illustratief beeld van autocross, niet van Luca zelf"
     }
   ],
   "int": [
@@ -107,8 +106,8 @@
       "category": "Wetenschap",
       "title": "Nobelprijs bekroont techniek die hersencellen met licht kan sturen",
       "teaser": "De Nobelprijs voor Geneeskunde gaat naar drie pioniers van de optogenetica. Hun ontdekking gaf onderzoekers een ongekend precieze manier om zenuwcellen te sturen en veranderde het hersenonderzoek fundamenteel.",
-      "source": "NOS",
-      "url": "https://nos.nl/artikel/2633739-nobelprijs-voor-geneeskunde-voor-doorbraak-in-hersenonderzoek",
+      "source": "Stanford Medicine",
+      "url": "https://med.stanford.edu/content/sm/news/all-news/2026/10/deisseroth-nobel-prize.html",
       "article_slug": "nobelprijs-optogenetica-hersencellen-licht",
       "article_body": [
         "De Nobelprijs voor Geneeskunde 2026 gaat naar Karl Deisseroth, Peter Hegemann en Georg Nagel voor hun pionierswerk aan optogenetica.",
@@ -129,27 +128,11 @@
       "article_body": [
         "De wētāpunga, Nieuw-Zeelands zwaarste insect, heeft dankzij een langdurig fok- en herintroductieprogramma een duidelijk herstel doorgemaakt.",
         "In vijftien jaar vonden 45 herintroducties plaats en zijn ongeveer 11.000 dieren uitgezet op tien nieuwe locaties. Op onder meer Motuora en Tiritiri Matangi zijn inmiddels minstens vier generaties in het wild geboren, waarmee zelfstandige populaties zijn ontstaan.",
-        "De beschermingsstatus verbeterde van Threatened – Nationally Endangered naar Threatened – Nationally Increasing. Onderzoekers zien het programma als een uitgebreid voorbeeld van hoe fok, herintroductie en langdurige monitoring bedreigde ongewervelden kunnen helpen herstellen."
+        "De beschermingsstatus verbeterde van Threatened – Nationally Endangered in 2004 naar Threatened – Nationally Increasing in 2022. Een nieuwe wetenschappelijke publicatie beschrijft nu hoe het herstelprogramma werkte. De soort blijft bedreigd, maar de populatieontwikkeling is verbeterd."
       ],
       "why_it_matters": "Herstelprogramma’s voor insecten krijgen vaak minder aandacht dan die voor grote dieren. Hier is na vijftien jaar aantoonbaar populatieherstel bereikt.",
       "image_query": "giant weta New Zealand insect conservation forest",
       "image_alt": "Illustratief beeld van een grote wētā in Nieuw-Zeeland"
-    },
-    {
-      "category": "Natuur & klimaat",
-      "title": "Nieuw model voorspelt hoeveel zware golven mangrovebossen kunnen afremmen",
-      "teaser": "Onderzoekers hebben een model en online hulpmiddel ontwikkeld waarmee kustgemeenschappen beter kunnen inschatten hoeveel bescherming mangroves bieden tegen zware stormgolven.",
-      "source": "Mongabay",
-      "url": "https://news.mongabay.com/2026/10/mangroves-keep-waves-at-bay-a-new-study-helps-scientists-predict-how/",
-      "article_slug": "model-voorspelt-golfremming-mangroves",
-      "article_body": [
-        "Mangrovebossen staan al bekend als natuurlijke bescherming van tropische kusten. Nieuw onderzoek maakt het nu beter mogelijk om vooraf te berekenen hoeveel grote golven door zo’n bos worden afgezwakt.",
-        "De onderzoekers ontwikkelden een model voor zware stormgolven en koppelden dat aan een online hulpmiddel dat ook buiten het onderzoek gebruikt kan worden. Daarmee kunnen beheerders en ontwerpers per locatie beter inschatten wat mangroves bijdragen aan kustbescherming.",
-        "Dat maakt natuurherstel praktischer inzetbaar naast technische kustverdediging. Het model kan helpen om kwetsbare gemeenschappen gerichter te beschermen vóórdat een zware storm toeslaat."
-      ],
-      "why_it_matters": "Natuurgebaseerde kustbescherming wordt waardevoller wanneer het effect vooraf betrouwbaar kan worden berekend en meegenomen in concrete plannen.",
-      "image_query": "mangrove forest coast waves storm protection",
-      "image_alt": "Illustratief beeld van mangroves langs een tropische kust"
     },
     {
       "category": "Gezondheid",
@@ -168,11 +151,27 @@
       "image_alt": "Illustratief beeld van oudere mensen die actief deelnemen aan de samenleving"
     },
     {
+      "category": "Natuur & klimaat",
+      "title": "Nieuw model voorspelt hoeveel zware golven mangrovebossen kunnen afremmen",
+      "teaser": "Onderzoekers hebben een model en online hulpmiddel ontwikkeld waarmee kustgemeenschappen beter kunnen inschatten hoeveel bescherming mangroves bieden tegen zware stormgolven.",
+      "source": "Mongabay",
+      "url": "https://news.mongabay.com/2026/10/mangroves-keep-waves-at-bay-a-new-study-helps-scientists-predict-how/",
+      "article_slug": "model-voorspelt-golfremming-mangroves",
+      "article_body": [
+        "Mangrovebossen staan al bekend als natuurlijke bescherming van tropische kusten. Nieuw onderzoek maakt het nu beter mogelijk om vooraf te berekenen hoeveel grote golven door zo’n bos worden afgezwakt.",
+        "De onderzoekers ontwikkelden een model voor zware stormgolven en koppelden dat aan een online hulpmiddel dat ook buiten het onderzoek gebruikt kan worden. Daarmee kunnen beheerders en ontwerpers per locatie beter inschatten wat mangroves bijdragen aan kustbescherming.",
+        "Dat maakt natuurherstel praktischer inzetbaar naast technische kustverdediging. Het model kan helpen om kwetsbare gemeenschappen gerichter te beschermen vóórdat een zware storm toeslaat."
+      ],
+      "why_it_matters": "Natuurgebaseerde kustbescherming wordt waardevoller wanneer het effect vooraf betrouwbaar kan worden berekend en meegenomen in concrete plannen.",
+      "image_query": "mangrove forest coast waves storm protection",
+      "image_alt": "Illustratief beeld van mangroves langs een tropische kust"
+    },
+    {
       "category": "Energie & innovatie",
       "title": "Nieuwe reactor maakt grondstof voor plastic efficiënter met zuurstof en elektriciteit",
       "teaser": "Een nieuw elektrochemisch reactorontwerp verbetert de omzetting naar een belangrijke chemische bouwsteen voor plastics door lokale zuurgraad beter onder controle te houden.",
-      "source": "Phys.org / Seoul National University",
-      "url": "https://phys.org/news/2026-09-reactor-plastic-feedstock-synthesis-oxygen.html",
+      "source": "Seoul National University",
+      "url": "https://eng.snu.ac.kr/en/communication/promotion/news?bbsidx=8409&md=v",
       "article_slug": "nieuwe-reactor-plasticgrondstof-zuurstof-elektriciteit",
       "article_body": [
         "Onderzoekers van Seoul National University hebben een elektrochemische reactor ontworpen die een belangrijke grondstof voor kunststof efficiënter kan produceren met behulp van zuurstof en elektriciteit.",
@@ -193,7 +192,7 @@
       "article_body": [
         "ESA heeft de technologiedemonstratiesatelliet GOMX-5 gelanceerd. Een belangrijk doel is om de elektrische aandrijving al binnen 48 uur na de lancering operationeel te krijgen.",
         "Dat is relevant omdat satellieten in een drukker wordende baan om de aarde soms snel moeten kunnen uitwijken voor ander ruimteverkeer of brokstukken. GOMX-5 test daarom een grotendeels geautomatiseerde ingebruikname van cruciale systemen.",
-        "Daarnaast draagt de kleine satelliet nieuwe antennes, radio’s, boordcomputers en een compacte radar voor het waarnemen van schepen op zee. De komende maanden moet blijken hoe goed de nieuwe technologieën in de ruimte presteren."
+        "Daarnaast test de kleine satelliet onder meer een meedraaiend zonnepaneel en apparatuur voor het volgen van scheepvaart. De komende weken en maanden moet blijken hoe goed de nieuwe technologieën in de ruimte presteren."
       ],
       "why_it_matters": "Sneller kunnen reageren op botsingsgevaar helpt nieuwe ruimtepuinproblemen voorkomen en maakt satellietoperaties veiliger.",
       "image_query": "small satellite cubesat earth orbit space technology",
