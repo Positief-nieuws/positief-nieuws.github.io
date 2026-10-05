@@ -1,4 +1,4 @@
-const CACHE_NAME = "positief-nieuws-v6";
+const CACHE_NAME = "positief-nieuws-v7";
 
 const CORE_ASSETS = [
   "/",
@@ -37,7 +37,7 @@ self.addEventListener(
         )
     );
 
-    self.clients.claim();
+    event.waitUntil(self.clients.claim());
   }
 );
 
@@ -65,18 +65,23 @@ self.addEventListener(
       || url.pathname.endsWith("/data/pixabay-images.json")
       || /\/edities\/\d{4}-\d{2}-\d{2}\.json$/.test(url.pathname);
 
-    if (isNavigation || isFreshData) {
+    // Editorial images may be replaced without changing their URL.
+    const isArticleImage = url.pathname.startsWith("/images/artikelen/");
+
+    if (isNavigation || isFreshData || isArticleImage) {
       event.respondWith(
         fetch(
           request,
-          isFreshData ? { cache: "no-store" } : undefined
+          { cache: isFreshData ? "no-store" : "no-cache" }
         )
           .then(response => {
             if (response.ok) {
               const copy = response.clone();
 
-              caches.open(CACHE_NAME)
-                .then(cache => cache.put(request, copy));
+              event.waitUntil(
+                caches.open(CACHE_NAME)
+                  .then(cache => cache.put(request, copy))
+              );
             }
 
             return response;
