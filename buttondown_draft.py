@@ -227,6 +227,30 @@ def reading_time_label(article):
     return f"{minutes} min lezen" if minutes > 0 else ""
 
 
+def article_thumbnail_url(article, data):
+    """Use the same resolved image as the website, never a search URL."""
+    if not data:
+        return ""
+    cache_path = Path("data/pixabay-images.json")
+    try:
+        cache = json.loads(cache_path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return ""
+    slug = str(article.get("article_slug") or "").strip().strip("/")
+    entry = cache.get(f"{raw_edition_date(data)}/{slug}", {})
+    if not isinstance(entry, dict) or entry.get("query") != article.get("image_query"):
+        return ""
+    path = str(entry.get("image_path") or "").strip()
+    if not path:
+        return ""
+    url = urllib.parse.urljoin(SITE_URL, path)
+    parsed = urllib.parse.urlparse(url)
+    site = urllib.parse.urlparse(SITE_URL)
+    if parsed.scheme != "https" or parsed.netloc != site.netloc:
+        return ""
+    return url
+
+
 def article_html(article, data=None, prefer_own_page=False):
     title = esc(article.get("title"))
     teaser = esc(article.get("teaser") or article.get("summary"))
@@ -239,11 +263,24 @@ def article_html(article, data=None, prefer_own_page=False):
         raw_url = str(article.get("url") or "")
     url = esc(raw_url)
 
+    image_url = article_thumbnail_url(article, data) if prefer_own_page else ""
+    image_cell = ""
+    if image_url:
+        alt = esc(article.get("image_alt") or article.get("title"))
+        image_cell = f"""<td width="120" valign="top" style="width:120px;padding:0 16px 0 0;">
+          <a href="{url}" style="text-decoration:none;">
+            <img src="{esc(image_url)}" width="120" alt="{alt}"
+                 style="display:block;width:120px;max-width:100%;height:auto;border:0;border-radius:4px;">
+          </a>
+        </td>"""
+
     meta_parts = [part for part in (category, source, reading_time_label(article)) if part]
     meta = " &nbsp;·&nbsp; ".join(meta_parts)
 
     return f"""
       <div style="margin:0;padding:22px 0;border-bottom:1px solid rgba(23,63,49,.12);">
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;border-collapse:collapse;">
+          <tr>{image_cell}<td valign="top" style="padding:0;">
         <h2 style="margin:0 0 8px 0;font:700 22px Georgia,'Times New Roman',serif;line-height:1.2;letter-spacing:-.02em;color:{INK};">
           <a href="{url}" style="color:{INK} !important;text-decoration:none;">
             <span style="color:{INK} !important;">{title}</span>
@@ -257,6 +294,8 @@ def article_html(article, data=None, prefer_own_page=False):
         <p style="margin:10px 0 0 0;font:700 11px Arial,Helvetica,sans-serif;line-height:1.35;color:{GREEN};">
           {meta}
         </p>
+          </td></tr>
+        </table>
       </div>
     """
 
