@@ -440,7 +440,7 @@ def build_body(data, nl, international, headlines):
     {section_header(
         "Goed nieuws uit de wereld",
         "6 verhalen",
-        "Zes positieve ontwikkelingen van buiten Nederland. De oorspronkelijke bronnen zijn meestal Engelstalig; de samenvattingen zijn Nederlands."
+        "Zes positieve ontwikkelingen van buiten Nederland. Lees de samenvattingen en volledige artikelen in het Nederlands."
     )}
     {int_html}
   </div>
