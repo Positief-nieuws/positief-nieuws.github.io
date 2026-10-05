@@ -101,6 +101,7 @@
         <a class="nav-link" href="/edities/">Archief</a>
         <a class="nav-link is-active" href="/onderwerpen/">Onderwerpen</a>
         <a class="nav-link" href="/over/">Over</a>
+        <a href="/contact/" onclick="if(window.sa_event)window.sa_event('contact_click')">Contact</a>
         <a class="header-cta" href="/#nieuwsbrief"><svg class="header-cta-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 6.5h17a1 1 0 0 1 1 1v9a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2v-9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.7"></path><path d="m4.5 8 7.5 6 7.5-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>In je inbox</span></a>
       </div>
     </nav>
@@ -650,7 +651,7 @@
     </section>
     
   </main>
-  <footer>Positief nieuws · Dit gebeurt ook.</footer>
+  <footer>Positief nieuws · Dit gebeurt ook. · <a href="/contact/" onclick="if(window.sa_event)window.sa_event('contact_click')">Contact</a> · <a href="/tip/" onclick="if(window.sa_event)window.sa_event('tip_redactie_click')">Tip de redactie</a></footer>
   <script>
   window.sa_event =
     window.sa_event ||
@@ -697,8 +698,8 @@
   (function () {
     const analyticsScript = document.createElement("script");
     analyticsScript.async = true;
-      analyticsScript.setAttribute("data-metadata-collector", "pnAnalyticsMetadata");
     analyticsScript.setAttribute("data-hostname", "positief-nieuws.nl");
+    analyticsScript.setAttribute("data-metadata-collector", "pnAnalyticsMetadata");
     analyticsScript.src = "https://scripts.simpleanalyticscdn.com/latest.js";
     analyticsScript.addEventListener("load", function () {
       const autoEventsScript = document.createElement("script");

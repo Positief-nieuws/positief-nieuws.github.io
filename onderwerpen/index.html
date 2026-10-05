@@ -134,8 +134,8 @@
   (function () {
     const analyticsScript = document.createElement("script");
     analyticsScript.async = true;
-      analyticsScript.setAttribute("data-metadata-collector", "pnAnalyticsMetadata");
     analyticsScript.setAttribute("data-hostname", "positief-nieuws.nl");
+    analyticsScript.setAttribute("data-metadata-collector", "pnAnalyticsMetadata");
     analyticsScript.src = "https://scripts.simpleanalyticscdn.com/latest.js";
     analyticsScript.addEventListener("load", function () {
       const autoEventsScript = document.createElement("script");

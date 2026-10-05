@@ -175,7 +175,7 @@
       </div>
       <p class="article-note">Positief nieuws selecteert en vat ontwikkelingen samen in eigen woorden. De oorspronkelijke bron blijft leidend voor de volledige context en details.</p>
 
-      <section class="article-growth" aria-label="Ontvang en deel Positief nieuws">
+            <section class="article-growth" aria-label="Ontvang en deel Positief nieuws">
         <div class="article-newsletter" id="nieuwsbrief">
           <p class="growth-kicker">Dit gebeurt ook. In je inbox.</p>
           <h2>Meer van dit soort nieuws?</h2>
@@ -309,8 +309,8 @@
   (function () {
     const analyticsScript = document.createElement("script");
     analyticsScript.async = true;
-      analyticsScript.setAttribute("data-metadata-collector", "pnAnalyticsMetadata");
     analyticsScript.setAttribute("data-hostname", "positief-nieuws.nl");
+    analyticsScript.setAttribute("data-metadata-collector", "pnAnalyticsMetadata");
     analyticsScript.src = "https://scripts.simpleanalyticscdn.com/latest.js";
     analyticsScript.addEventListener("load", function () {
       const autoEventsScript = document.createElement("script");
@@ -329,7 +329,8 @@
   const url = document.querySelector('link[rel="canonical"]').href;
   const title = document.querySelector('h1').textContent.replace(/\.$/, '');
   const form = document.querySelector('#article-newsletter-form');
-  const metadata = {placement: 'article_end', article_url: url};
+  const isSpecial = window.sa_metadata?.page_type === 'special';
+  const metadata = {placement: isSpecial ? 'special_end' : 'article_end', article_url: url};
   function track(name, extra) {
     if (window.sa_event) window.sa_event(name, Object.assign({}, metadata, extra || {}));
   }
@@ -339,7 +340,7 @@
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(function (entries) {
       if (entries.some(entry => entry.isIntersecting)) {
-        track('article_newsletter_view');
+        track(isSpecial ? 'special_newsletter_view' : 'article_newsletter_view');
         observer.disconnect();
       }
     }, {threshold: 0.5});
@@ -347,14 +348,14 @@
   }
   block.querySelectorAll('[data-share-channel]').forEach(function (link) {
     link.addEventListener('click', function () {
-      track('article_share_click', {channel: link.dataset.shareChannel});
+      track(isSpecial ? 'special_share_click' : 'article_share_click', {channel: link.dataset.shareChannel});
     });
   });
   const nativeButton = document.querySelector('#article-native-share');
   if (navigator.share) {
     nativeButton.hidden = false;
     nativeButton.addEventListener('click', async function () {
-      track('article_share_click', {channel: 'native'});
+      track(isSpecial ? 'special_share_click' : 'article_share_click', {channel: 'native'});
       try { await navigator.share({title: title, text: title, url: url}); }
       catch (error) {
         if (error.name !== 'AbortError') document.querySelector('#article-share-status').textContent = 'Delen lukte niet. Gebruik WhatsApp, e-mail of kopieer de link.';
@@ -362,7 +363,7 @@
     });
   }
   document.querySelector('#article-copy-link').addEventListener('click', async function () {
-    track('article_share_click', {channel: 'copy'});
+    track(isSpecial ? 'special_share_click' : 'article_share_click', {channel: 'copy'});
     try {
       await navigator.clipboard.writeText(url);
       document.querySelector('#article-share-status').textContent = 'Link gekopieerd. Klaar om door te sturen.';
