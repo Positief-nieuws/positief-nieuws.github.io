@@ -1,225 +1,223 @@
 {
   "meta": {
-    "edition_date": "2026-10-01",
-    "email_preheader": "Mensen met dementie vinden nieuw vrijwilligerswerk, Mauritius ziet diabetes type 2 dalen en een Schotse zeebodem herstelt na tien jaar bescherming."
+    "edition_date": "2026-10-05",
+    "email_preheader": "Praktijkscholen helpen leerlingen met stagekosten, bedrijven benutten het stroomnet slimmer en de Nobelprijs bekroont een techniek die hersencellen met licht kan sturen."
   },
   "nl": [
     {
       "category": "Mens",
-      "title": "DemenTalent helpt mensen met dementie actief te blijven als vrijwilliger",
-      "teaser": "Stichting DemenTalent koppelt mensen met dementie aan vrijwilligerswerk dat past bij hun interesses en mogelijkheden. Zo blijft er na het wegvallen van werk ruimte om mee te doen en iets bij te dragen.",
-      "source": "Hart van Nederland",
-      "url": "https://www.hartvannederland.nl/het-beste-van-hart/persoonlijke-verhalen/artikelen/gelderland-kootwijk-koning-werkbezoek-dementie-stichting",
-      "article_slug": "dementalent-vrijwilligerswerk-mensen-met-dementie",
+      "title": "Vijf praktijkscholen helpen leerlingen aan fiets, koksjas of werkschoenen",
+      "teaser": "Een Rotterdamse pilot groeit van één naar vijf scholen. Leerlingen uit gezinnen met geldzorgen krijgen noodzakelijke stagebenodigdheden, zodat een fiets, ov-kaart of werkkleding niet bepaalt of ze kunnen meedoen.",
+      "source": "Rijnmond",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNaUtuWEJYLUtpTkxIeUtkUlpSSTk3YWtSWlNuWU8yTGw4Zmwxbnh3TGNHX29PMXJjRzZTdTE1ei1senA3dTVDX2ZsdkhrbC1pRm4ycnFJYXdFSnd6UzBaWlprb2ZwQmRsWnNNOVdac2E5WjZwMFFORzkzVmJ6QVRERWxPcFowWEZEWVZPSDR2Z2lSWDVJQ0ctQmtvN0tnLThFdHUtUlJaZFFNUU1nSW5sMkdQOHpQMERiSk8taTZaeTRUejRMbXd2REJoeUduVjA?oc=5",
+      "article_slug": "praktijkscholen-helpen-leerlingen-stagekosten",
       "article_body": [
-        "Een diagnose dementie betekent vaak dat werk, autorijden en andere vertrouwde rollen wegvallen. Stichting DemenTalent probeert juist daarna te kijken naar wat iemand nog wél kan en graag doet. De organisatie brengt mensen met dementie in contact met vrijwilligerswerk dat aansluit bij hun ervaring, interesses en mogelijkheden.",
-        "Dat kan uiteenlopen van helpen in het groen tot ondersteunen bij activiteiten. Het uitgangspunt is niet zorg ontvangen, maar ergens onderdeel van blijven en zelf iets bijdragen. Dat is relevant voor een groeiende groep: in Nederland leven volgens Hart van Nederland momenteel ongeveer 320.000 mensen met dementie.",
-        "Vrijwilligerswerk verandert niets aan de ziekte zelf. Wel kan een passende rol structuur, sociale contacten en een gevoel van betekenis bieden. De aanpak van DemenTalent laat daarmee zien dat ondersteuning ook kan beginnen bij talenten die iemand nog heeft, in plaats van alleen bij beperkingen."
+        "Steeds meer praktijkscholen in de regio Rotterdam krijgen geld om leerlingen uit gezinnen met weinig financiële ruimte te helpen met spullen die nodig zijn voor hun stage. Het kan gaan om veiligheidsschoenen, een koksjas, een fiets, een ov-abonnement of materialen voor een opleiding.",
+        "De pilot Van Pro naar Prof begon op één school en groeit nu naar vijf scholen. Iedere deelnemende school krijgt jaarlijks 12.750 euro. De aanleiding is praktisch: zonder de juiste kleding of vervoer konden leerlingen soms niet op stage verschijnen, met vertraging of uitval als gevolg.",
+        "De ondersteuning wordt snel ingezet wanneer schoolmedewerkers zien dat een leerling iets nodig heeft. Zo wordt voorkomen dat geldgebrek bepaalt of iemand kan leren, stage lopen en uiteindelijk een diploma halen."
       ],
-      "why_it_matters": "Wie door dementie werk en zelfstandigheid verliest, kan ook sociale rollen kwijtraken. Een passende vrijwilligersplek biedt een concrete manier om betrokken te blijven bij de samenleving.",
-      "image_query": "community volunteers gardening",
-      "image_alt": "Illustratief beeld van vrijwilligers die samen buiten werken"
-    },
-    {
-      "category": "Energie & innovatie",
-      "title": "Nieuwe Wageningse faciliteit moet voedselinnovaties sneller naar de praktijk brengen",
-      "teaser": "Wageningen University & Research heeft CIBIA geopend, waar technologieontwikkeling, productontwikkeling en consumententests op één plek samenkomen.",
-      "source": "Wageningen University & Research",
-      "url": "https://www.wur.nl/en/news/cibia-officially-opened-new-wageningen-facility-helps-bring-food-innovations-practice",
-      "article_slug": "cibia-wageningen-voedselinnovaties-praktijk",
-      "article_body": [
-        "Een goed idee voor duurzamer of gezonder voedsel is nog niet automatisch klaar voor de supermarkt of fabriek. Met CIBIA heeft Wageningen University & Research een nieuwe faciliteit geopend waarin verschillende stappen van voedselinnovatie dichter bij elkaar worden gebracht.",
-        "Onderzoekers en organisaties kunnen er technologie ontwikkelen, producten testen, opschalen en tegelijk onderzoeken hoe consumenten erop reageren. De faciliteit is bedoeld voor onder meer bedrijven, startups, onderzoeksorganisaties, maatschappelijke organisaties en overheden.",
-        "Het doel is vooral de afstand tussen onderzoek en toepassing kleiner te maken. Door ontwikkeling en beoordeling op één plek te combineren, kunnen kansrijke ideeën eerder worden getest op technische haalbaarheid én praktische bruikbaarheid voordat er op grotere schaal wordt geïnvesteerd."
-      ],
-      "why_it_matters": "Veel innovaties stranden tussen laboratorium en praktijk. Een gedeelde faciliteit die techniek, productontwikkeling en gebruikerstests combineert, kan die tussenstap sneller en beter toetsbaar maken.",
-      "image_query": "food laboratory research innovation",
-      "image_alt": "Illustratief beeld van onderzoek en innovatie rond voedsel"
-    },
-    {
-      "category": "Mens",
-      "title": "Werkgevers geven medewerkers vrije dagen voor vrijwilligerswerk",
-      "teaser": "Een aantal bedrijven maakt onder werktijd ruimte voor maatschappelijke inzet. Medewerkers kunnen zo betaald tijd besteden aan vrijwilligerswerk dat ze belangrijk vinden.",
-      "source": "Omrop Fryslân",
-      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOU0VZakV5bWt2UE5hdUZ6anhoY1VnOWRyZERfT2dIcXhvMy1scHZISWF5VnB0WnhFM0tucnNsMGE5M3lnUkZYQ1RMVU02aEFVY3hwYnVkbE1RWDZTY0VPeTVWUmFSYVJsWm5QRWFJWnJxVVJPajZTSG9PUjVCRzZPMU1hdDgwYkk0MGNfOTZibE9rcWo3OFExVzRWV19YSnZoRzFTLTNsOVROTTl3Qkx1RExQWWdQS2J3MThsMHZQNmVFSmNlSWV4cEZXYnQ?oc=5",
-      "article_slug": "werkgevers-vrije-dagen-vrijwilligerswerk",
-      "article_body": [
-        "Vrijwilligerswerk hoeft niet altijd in de avond of het weekend te gebeuren. Omrop Fryslân beschrijft bedrijven die medewerkers vrije dagen geven om zich vrijwillig in te zetten. Daarmee wordt maatschappelijke betrokkenheid onderdeel van het gewone werkende leven.",
-        "Voor werknemers verlaagt zo'n regeling de praktische drempel om ergens te helpen. Vrije tijd is voor veel mensen schaars, terwijl verenigingen en maatschappelijke organisaties juist sterk afhankelijk zijn van vrijwilligers. Door uren of dagen beschikbaar te stellen, kan een werkgever daar rechtstreeks ruimte voor maken.",
-        "Hoe groot dit verschijnsel inmiddels is, blijkt niet uit het kandidaatbericht. Wel laat het voorbeeld zien dat werkgevers vrijwilligerswerk niet alleen kunnen aanmoedigen met woorden, maar er ook daadwerkelijk werktijd voor kunnen vrijmaken."
-      ],
-      "why_it_matters": "Vrijwilligersorganisaties hebben mensen nodig, maar tijd is vaak de beperkende factor. Werkgevers die betaalde tijd beschikbaar stellen maken maatschappelijke inzet voor werknemers een stuk toegankelijker.",
-      "image_query": "volunteer community work team",
-      "image_alt": "Illustratief beeld van vrijwilligers die samen aan een maatschappelijke activiteit werken"
-    },
-    {
-      "category": "Natuur & klimaat",
-      "title": "Wereldwijde analyse laat zien waar grondwater na droogte goed herstelt",
-      "teaser": "Onderzoekers van Universiteit Utrecht ontwikkelden met een wereldwijd grondwatermodel een methode om te zien welke gebieden veerkrachtig zijn en waar langdurige droogte grotere risico's geeft.",
-      "source": "Universiteit Utrecht via EurekAlert",
-      "url": "https://www.eurekalert.org/news-releases/1145863",
-      "article_slug": "wereldwijde-analyse-herstel-grondwater-na-droogte",
-      "article_body": [
-        "Na een lange droogte is een paar dagen regen vaak niet genoeg om grondwaterreserves weer op peil te brengen. Onderzoekers van Universiteit Utrecht hebben daarom wereldwijd onderzocht hoe snel verschillende grondwatersystemen herstellen en welke factoren daar invloed op hebben.",
-        "Ze gebruikten een mondiaal model met een resolutie van ongeveer één kilometer. In de analyse werd 57 procent van de onderzochte locaties als veerkrachtig ingedeeld: daar herstelde het grondwater relatief snel en robuust na droogte. Andere gebieden bleken kwetsbaarder of instabieler, vooral waar droogtes elkaar snel opvolgen of veel grondwater wordt opgepompt.",
-        "De methode voorspelt niet exact wat er op iedere afzonderlijke plek gaat gebeuren. Wel maakt ze beter zichtbaar welke regio's extra aandacht nodig hebben en waar waterbeheer gericht kan worden aangepast."
-      ],
-      "why_it_matters": "Grondwater reageert veel trager dan oppervlaktewater. Weten welke systemen slecht herstellen kan helpen om eerder grenzen te stellen aan gebruik en gerichter maatregelen tegen toekomstige droogte te nemen.",
-      "image_query": "groundwater drought landscape water",
-      "image_alt": "Illustratief beeld van een droog landschap en water"
+      "why_it_matters": "Een relatief klein bedrag voor vervoer of werkkleding kan het verschil maken tussen afhaken en doorgaan. De uitbreiding van één naar vijf scholen maakt van een incidentele oplossing een bredere aanpak.",
+      "image_query": "vocational students workshop school internship workwear",
+      "image_alt": "Illustratief beeld van leerlingen in het praktijkonderwijs"
     },
     {
       "category": "Gezondheid",
-      "title": "Gerichte revalidatie helpt ook jaren na een kruisbandoperatie nog vooruit",
-      "teaser": "Een vier maanden durend oefenprogramma verbeterde klachten en spierkracht bij jonge volwassenen die één tot drie jaar na hun kruisbandoperatie nog problemen hadden.",
-      "source": "Scientias",
-      "url": "https://scientias.nl/knie-jaren-later-nog-steeds-niet-hersteld-van-een-kruisbandoperatie-een-nieuw-oefenprogramma-kan-helpen/",
-      "reading_time_minutes": 3,
-      "article_slug": "gerichte-revalidatie-jaren-na-kruisbandoperatie",
+      "title": "Hielprik screent baby’s nu gericht op ernstige OCTN2-deficiëntie",
+      "teaser": "Sinds 1 oktober is OCTN2-deficiëntie officieel een doelziekte in de hielprikscreening. Vroege opsporing maakt behandeling mogelijk voordat ernstige klachten ontstaan.",
+      "source": "RIVM",
+      "url": "https://draaiboekhielprikscreening.rivm.nl/",
+      "article_slug": "hielprik-octn2-deficientie-doelziekte",
       "article_body": [
-        "Een operatie aan de voorste kruisband betekent niet voor iedereen dat de knie binnen enkele maanden weer goed functioneert. Onderzoekers bekeken daarom of extra, gerichte begeleiding ook veel later nog verschil kan maken.",
-        "Aan het onderzoek deden 184 mensen tussen 18 en 40 jaar mee die één tot drie jaar eerder waren geopereerd en nog klachten hadden. Een deel volgde vier maanden een begeleid programma met oefeningen en uitleg; een controlegroep kreeg een eenmalige informatiesessie.",
-        "De deelnemers aan het intensievere programma gingen op meerdere punten vooruit, waaronder spierkracht, klachten en ervaren kwaliteit van leven. Dat betekent niet dat iedere knie volledig herstelt, maar het onderzoek laat wel zien dat blijvende klachten niet automatisch betekenen dat verdere revalidatie geen zin meer heeft."
+        "Sinds 1 oktober 2026 is OCTN2-deficiëntie officieel een doelziekte binnen de Nederlandse hielprikscreening. De zeldzame stofwisselingsziekte werd eerder alleen als nevenbevinding gevonden.",
+        "Bij de ernstige vorm kan een tekort aan carnitine leiden tot gevaarlijke problemen met energievoorziening, lever, hart en bloedsuiker. Als de aandoening kort na de geboorte wordt ontdekt, kunnen ernstige klachten met behandeling worden voorkomen.",
+        "De toevoeging betekent dat laboratoria en verwijzingscriteria zijn aangepast zodat baby’s met een verdachte uitslag gericht en snel kunnen worden doorverwezen."
       ],
-      "why_it_matters": "Mensen met langdurige klachten krijgen soms het gevoel dat het herstelvenster voorbij is. Dit onderzoek laat zien dat gerichte training ook later nog verbetering kan opleveren.",
-      "image_query": "physical therapy knee rehabilitation",
-      "image_alt": "Illustratief beeld van fysiotherapie en knierevalidatie"
+      "why_it_matters": "Dit is concrete preventieve gezondheidswinst: een ernstige maar behandelbare zeldzame ziekte wordt nu bewust en landelijk opgespoord voordat klachten ontstaan.",
+      "image_query": "newborn heel prick screening hospital baby healthcare",
+      "image_alt": "Illustratief beeld van neonatale screening in een ziekenhuis"
     },
     {
-      "category": "Mens",
-      "title": "Bladel maakt ruim een miljoen euro beschikbaar voor laagdrempelige herstelzorg",
-      "teaser": "Nieuwe subsidieregels moeten herstelcentra voor mensen met psychische kwetsbaarheid mogelijk maken, met vrije inloop, trainingen en ondersteuning zonder indicatie.",
-      "source": "Omroep Brabant",
-      "url": "https://www.omroepbrabant.nl/nieuws/6029208/gemeente-bladel-stelt-subsidie-beschikbaar-voor-herstelcentrum",
-      "article_slug": "bladel-subsidie-laagdrempelige-herstelzorg",
+      "category": "Gezondheid",
+      "title": "Ggz-organisaties bepalen voor het eerst samen welke onderzoeken het hardst nodig zijn",
+      "teaser": "Vijf landelijke organisaties hebben een gezamenlijke onderzoeksagenda voor de geestelijke gezondheidszorg gemaakt. Die moet nieuwe kennis sneller laten aansluiten op vragen uit de praktijk.",
+      "source": "de Nederlandse ggz",
+      "url": "https://www.denederlandseggz.nl/nieuws/2026/onderzoeksagenda-mentale-gezondheid-kwintet",
+      "article_slug": "eerste-gezamenlijke-onderzoeksagenda-ggz",
       "article_body": [
-        "De gemeente Bladel heeft een subsidieregeling vastgesteld voor herstelcentra voor mensen met psychische kwetsbaarheid. Het gaat om plekken waar inwoners zonder formele zorgindicatie kunnen binnenlopen voor activiteiten die gericht zijn op herstel en meedoen.",
-        "Een centrum dat voor de regeling in aanmerking wil komen, moet minimaal vijf dagen per week open zijn en onder meer vrije inloop, hersteltrainingen en een mogelijkheid voor tijdelijk verblijf bieden. De regels vragen ook aandacht voor fysieke toegankelijkheid en vervoer voor mensen die niet zelfstandig naar de locatie kunnen komen.",
-        "Voor 2027 en 2028 is maximaal 1.165.455 euro beschikbaar. Dat betekent nog niet dat het centrum er al is: organisaties kunnen tot november een aanvraag indienen. De regeling creëert dus vooral de financiële en inhoudelijke voorwaarden om zulke voorzieningen op te zetten."
+        "Vijf landelijke organisaties in de geestelijke gezondheidszorg hebben voor het eerst gezamenlijk onderzoeksprioriteiten vastgelegd. De agenda is ontwikkeld om wetenschappelijk onderzoek beter te laten aansluiten op de belangrijkste vragen in de ggz.",
+        "De onderzoeksagenda kwam tot stand met inbreng van professionals, onderzoekers, patiënten, naasten en instellingen. De vijf kennisgebieden lopen uiteen van de effecten van behandelingen tot mentale veerkracht, ervaringskennis en betere samenwerking.",
+        "De agenda wordt een belangrijk vertrekpunt voor een nieuw onderzoeksprogramma van ZonMw. Voor dat programma is door VWS 30 miljoen euro gereserveerd."
       ],
-      "why_it_matters": "Ondersteuning bij psychische problemen begint niet altijd met specialistische behandeling. Een plek waar mensen zonder indicatie terechtkunnen kan de stap naar contact, herstel en dagelijkse structuur kleiner maken.",
-      "image_query": "community support group meeting",
-      "image_alt": "Illustratief beeld van mensen tijdens een laagdrempelige groepsbijeenkomst"
+      "why_it_matters": "Onderzoek levert meer op wanneer partijen vooraf gezamenlijk bepalen welke problemen het belangrijkst zijn en hoe kennis vervolgens de praktijk bereikt.",
+      "image_query": "mental health research meeting healthcare professionals",
+      "image_alt": "Illustratief beeld van zorgprofessionals die samen onderzoek bespreken"
+    },
+    {
+      "category": "Gezondheid",
+      "title": "Seniorengym is klaar voor landelijke inzet tegen valincidenten",
+      "teaser": "Het online programma voor zelfstandig wonende ouderen start met lokale pilots en heeft nu ook een monitoringssysteem waarmee gemeenten bereik en deelname kunnen volgen.",
+      "source": "Zorg voor innoveren",
+      "url": "https://www.zorgvoorinnoveren.nl/nieuws-en-agenda/nieuws/seniorengym-monitorings-en-rapportagesysteem-voor-valpreventie-klaar-voor-landelijke-inzet/",
+      "article_slug": "seniorengym-klaar-landelijke-inzet-valpreventie",
+      "article_body": [
+        "Seniorengym, een online beweeg- en kennisprogramma voor zelfstandig wonende ouderen, is na een opschalingstraject klaar voor bredere landelijke inzet.",
+        "Het programma biedt oefeningen op maat en richt zich op het verkleinen van valrisico. Inmiddels starten verschillende lokale pilots. Daarnaast is een monitorings- en rapportagesysteem ontwikkeld waarmee gemeenten kunnen volgen hoeveel ouderen worden bereikt, doorverwezen en daadwerkelijk deelnemen.",
+        "De combinatie van een toegankelijk programma en beter inzicht in bereik moet gemeenten helpen om valpreventie gerichter in te zetten en op te schalen."
+      ],
+      "why_it_matters": "Valpreventie werkt pas echt als ouderen bereikt worden én gemeenten kunnen zien wat deelname oplevert. Deze stap maakt landelijke opschaling praktischer.",
+      "image_query": "senior exercise balance training older adults home",
+      "image_alt": "Illustratief beeld van ouderen die balansoefeningen doen"
+    },
+    {
+      "category": "Cultuur",
+      "title": "Truly Naked en Basta grote winnaars van de Gouden Kalveren",
+      "teaser": "Het regiedebuut Truly Naked won zes prijzen, waaronder beste film, regie en scenario. De dramaserie Basta kreeg drie Gouden Kalveren.",
+      "source": "NOS",
+      "url": "https://nos.nl/artikel/2633459-dramafilm-truly-naked-en-serie-basta-grote-winnaars-gouden-kalveren",
+      "reading_time_minutes": 3,
+      "article_slug": "truly-naked-basta-grote-winnaars-gouden-kalveren",
+      "article_body": [
+        "Truly Naked en Basta zijn de grote winnaars geworden van het Gouden Kalveren Gala tijdens het Nederlands Film Festival in Utrecht.",
+        "Truly Naked, het regiedebuut van de Nederlandse filmmaker Muriel d’Ansembourg, won zes prijzen, onder meer voor beste speelfilm, regie en scenario. Ook camera, montage en production design werden bekroond.",
+        "De dramaserie Basta won drie Gouden Kalveren. Daarmee stonden zowel een nieuw Nederlands filmdebuut als een grote dramaserie nadrukkelijk in de prijzen."
+      ],
+      "why_it_matters": "De prijzen zetten verschillende vormen van Nederlands film- en serietalent in de schijnwerpers, van nieuw regietalent tot hoogwaardige televisieproducties.",
+      "image_query": "Dutch film festival awards cinema stage",
+      "image_alt": "Illustratief beeld van een filmfestival en prijsuitreiking"
+    },
+    {
+      "category": "Energie & innovatie",
+      "title": "Bedrijven gebruiken het stroomnet steeds flexibeler",
+      "teaser": "Steeds meer bedrijven verschuiven of beperken hun stroomgebruik op drukke momenten. Flexibele afspraken vertegenwoordigen inmiddels circa 4,4 gigawatt en helpen bestaande netcapaciteit beter te benutten.",
+      "source": "Netbeheer Nederland",
+      "url": "https://www.netbeheernederland.nl/artikelen/nieuws/slimmer-netgebruik-wint-terrein-maar-vraag-naar-transportcapaciteit-groeit-nog",
+      "article_slug": "bedrijven-gebruiken-stroomnet-steeds-flexibeler",
+      "article_body": [
+        "Steeds meer bedrijven maken afspraken met netbeheerders om hun elektriciteitsgebruik aan te passen op momenten dat het stroomnet vol zit. Ze verplaatsen verbruik, leveren tijdelijk minder terug of gebruiken minder vermogen tijdens piekuren.",
+        "Op 30 juni waren 394 flexibele contracten voor invoeding en 375 voor afname actief. Samen vertegenwoordigen deze afspraken circa 4,4 gigawatt aan gecontracteerd flexibel vermogen.",
+        "De druk op het net is daarmee niet opgelost: de vraag naar transportcapaciteit groeit nog steeds sneller dan de beschikbare ruimte. Wel laat de groei van flexibele contracten zien dat slimmer gebruik van het bestaande net op steeds meer plekken capaciteit kan vrijmaken voor andere gebruikers."
+      ],
+      "why_it_matters": "Netcongestie remt bedrijven, woningbouw en verduurzaming. Flexibeler stroomgebruik lost het probleem niet volledig op, maar maakt aantoonbaar beter gebruik van de capaciteit die er al is.",
+      "image_query": "electricity grid industrial company smart energy flexible power Netherlands",
+      "image_alt": "Illustratief beeld van een elektriciteitsnet en bedrijventerrein"
     }
   ],
   "int": [
     {
-      "category": "Gezondheid",
-      "title": "Mauritius laat na jaren van stijging een daling van diabetes type 2 zien",
-      "teaser": "Zeven bevolkingsonderzoeken over 34 jaar laten zien dat het aandeel volwassenen met diabetes type 2 na een piek in 2009 duidelijk is gedaald.",
-      "source": "Medical Xpress / EASD",
-      "url": "https://medicalxpress.com/news/2026-09-mauritius-country-reversing-diabetes-epidemic.html",
-      "reading_time_minutes": 5,
-      "article_slug": "mauritius-daling-diabetes-type-2",
+      "category": "Wetenschap",
+      "title": "Nobelprijs bekroont techniek die hersencellen met licht kan sturen",
+      "teaser": "De Nobelprijs voor Geneeskunde gaat naar drie pioniers van de optogenetica. Hun ontdekking gaf onderzoekers een ongekend precieze manier om zenuwcellen te sturen en veranderde het hersenonderzoek fundamenteel.",
+      "source": "NOS",
+      "url": "https://nos.nl/artikel/2633739-nobelprijs-voor-geneeskunde-voor-doorbraak-in-hersenonderzoek",
+      "article_slug": "nobelprijs-optogenetica-hersencellen-licht",
       "article_body": [
-        "Mauritius volgt diabetes type 2 al sinds 1987 met herhaalde bevolkingsonderzoeken waarbij steeds dezelfde uitgebreide glucosetest wordt gebruikt. Daardoor kunnen veranderingen over tientallen jaren beter met elkaar worden vergeleken dan wanneer meetmethoden tussentijds wisselen.",
-        "De prevalentie liep eerst sterk op en bereikte in 2009 23,3 procent. In 2021 was dat gedaald naar 19,9 procent. Tussen 2009 en 2021 daalde het aandeel volgens de onderzoekers met 11 procent bij mannen en 16 procent bij vrouwen.",
-        "De studie kan niet één maatregel aanwijzen als oorzaak. De onderzoekers noemen een combinatie van preventiebeleid, screening, voorlichting en brede publieke gezondheidszorg als mogelijke bijdrage. De uitkomst laat vooral zien dat een langdurige stijgende trend niet per definitie onomkeerbaar is."
+        "De Nobelprijs voor Geneeskunde 2026 gaat naar Karl Deisseroth, Peter Hegemann en Georg Nagel voor hun pionierswerk aan optogenetica.",
+        "Bij optogenetica worden lichtgevoelige eiwitten gebruikt om specifieke zenuwcellen met licht te activeren of juist af te remmen. Daardoor kunnen onderzoekers veel preciezer bestuderen welke hersencellen betrokken zijn bij gedrag, beweging en ziekteprocessen.",
+        "De methode wordt inmiddels wereldwijd gebruikt in fundamenteel hersenonderzoek en heeft nieuwe onderzoekslijnen geopend rond onder meer parkinson, depressie, verslaving en angst. De Nobelprijs bekroont geen kant-en-klare behandeling, maar een techniek die het hersenonderzoek ingrijpend heeft veranderd."
       ],
-      "why_it_matters": "Diabetes type 2 neemt in veel landen toe. Een langdurige daling, gemeten met steeds dezelfde methode, biedt waardevolle aanwijzingen dat preventie en toegankelijk zorgbeleid op bevolkingsniveau verschil kunnen maken.",
-      "image_query": "blood glucose test healthcare",
-      "image_alt": "Illustratief beeld van een bloedsuikermeting"
+      "why_it_matters": "Door zenuwcellen heel precies te kunnen aan- en uitzetten, kunnen onderzoekers hersencircuits veel beter begrijpen. Dat vormt een belangrijke basis voor toekomstig onderzoek naar neurologische en psychiatrische aandoeningen.",
+      "image_query": "optogenetics brain neurons light laboratory neuroscience",
+      "image_alt": "Illustratief beeld van hersencellen en licht in neurowetenschappelijk onderzoek"
     },
     {
       "category": "Natuur & klimaat",
-      "title": "Tien jaar zonder zware bodembaggering brengt Schotse zeebodem weer tot leven",
-      "teaser": "In een beschermd zeegebied bij de Summer Isles melden onderzoekers, vissers en bewoners herstel van kwetsbare maerlbedden, schelpdieren en andere zeedieren.",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/environment/2026/sep/30/beyond-priceless-how-a-halt-to-dredging-saved-the-seas-of-scotlands-summer-isles",
-      "reading_time_minutes": 6,
-      "article_slug": "summer-isles-zeeherstel-na-baggerverbod",
+      "title": "Reuzenkrekel krabbelt terug na vijftien jaar fok- en herstelwerk",
+      "teaser": "Meer dan 11.000 wētāpunga zijn in Nieuw-Zeeland gekweekt en uitgezet. Op meerdere plekken ontstonden zelfstandige populaties en de beschermingsstatus van de soort verbeterde.",
+      "source": "New Zealand Department of Conservation",
+      "url": "https://www.doc.govt.nz/news/media-releases/2026-media-releases/science-paper-outlines-blueprint-for-successful-giant-weta-recovery/",
+      "article_slug": "reuzenkrekel-wetapunga-herstel-fokprogramma",
       "article_body": [
-        "Voor de noordwestkust van Schotland geldt inmiddels tien jaar een verbod op het met zware sleepwerktuigen opvissen van sint-jakobsschelpen in een beschermd zeegebied van ongeveer 600 vierkante kilometer. Die maatregel was bedoeld om kwetsbare maerlbedden en ander zeeleven te beschermen.",
-        "Lokale metingen en een nieuw overzicht van tien jaar burgeronderzoek laten herstel zien. Bewoners en vissers melden meer schelpdieren en verschillende vissoorten, terwijl ook walvissen, bruinvissen en dolfijnen vaker worden gezien. Vooral de maerlhabitats, die zeer langzaam groeien en gemakkelijk beschadigen, lijken te profiteren.",
-        "Niet alle problemen zijn verdwenen: illegale bodemberoering en andere druk op het ecosysteem blijven bestaan. Toch laat het gebied zien dat bescherming over langere tijd daadwerkelijk ruimte kan geven aan beschadigde zeenatuur om zich te herstellen."
+        "De wētāpunga, Nieuw-Zeelands zwaarste insect, heeft dankzij een langdurig fok- en herintroductieprogramma een duidelijk herstel doorgemaakt.",
+        "In vijftien jaar vonden 45 herintroducties plaats en zijn ongeveer 11.000 dieren uitgezet op tien nieuwe locaties. Op onder meer Motuora en Tiritiri Matangi zijn inmiddels minstens vier generaties in het wild geboren, waarmee zelfstandige populaties zijn ontstaan.",
+        "De beschermingsstatus verbeterde van Threatened – Nationally Endangered naar Threatened – Nationally Increasing. Onderzoekers zien het programma als een uitgebreid voorbeeld van hoe fok, herintroductie en langdurige monitoring bedreigde ongewervelden kunnen helpen herstellen."
       ],
-      "why_it_matters": "Beschermde natuurgebieden werken alleen als de bescherming in de praktijk standhoudt. Een herstelproces dat na tien jaar zichtbaar wordt, laat zien waarom geduld en langdurig beheer bij zeenatuur nodig zijn.",
-      "image_query": "scotland sea coast marine life",
-      "image_alt": "Illustratief beeld van de Schotse kust en zee"
+      "why_it_matters": "Herstelprogramma’s voor insecten krijgen vaak minder aandacht dan die voor grote dieren. Hier is na vijftien jaar aantoonbaar populatieherstel bereikt.",
+      "image_query": "giant weta New Zealand insect conservation forest",
+      "image_alt": "Illustratief beeld van een grote wētā in Nieuw-Zeeland"
     },
     {
       "category": "Natuur & klimaat",
-      "title": "Geschilderde ogen op vee lijken roofdieren in Zimbabwe af te schrikken",
-      "teaser": "Boeren experimenteren met opvallende ogen op de achterkant van koeien en ander vee. De eenvoudige methode is bedoeld om aanvallen door roofdieren te verminderen zonder dieren te doden.",
+      "title": "Nieuw model voorspelt hoeveel zware golven mangrovebossen kunnen afremmen",
+      "teaser": "Onderzoekers hebben een model en online hulpmiddel ontwikkeld waarmee kustgemeenschappen beter kunnen inschatten hoeveel bescherming mangroves bieden tegen zware stormgolven.",
       "source": "Mongabay",
-      "url": "https://news.mongabay.com/2026/09/turning-vulnerable-livestock-into-four-eyed-beasts-helps-protect-them-in-zimbabwe/",
-      "article_slug": "geschilderde-ogen-vee-roofdieren-zimbabwe",
+      "url": "https://news.mongabay.com/2026/10/mangroves-keep-waves-at-bay-a-new-study-helps-scientists-predict-how/",
+      "article_slug": "model-voorspelt-golfremming-mangroves",
       "article_body": [
-        "In delen van Zimbabwe leven veehouders dicht bij gebieden met leeuwen, luipaarden, wilde honden en andere roofdieren. Aanvallen op vee kunnen voor gezinnen grote financiële gevolgen hebben en leiden soms tot het doden van wilde dieren uit voorzorg of wraak.",
-        "Een opvallend experiment probeert dat conflict op een goedkope manier te verminderen: boeren schilderen grote zwart-witte ogen op de achterkant van hun dieren. Het idee is dat roofdieren, die vaak vanuit een hinderlaag aanvallen, het gevoel krijgen dat ze gezien zijn.",
-        "Er zijn nog geen grote Zimbabwaanse studies die bewijzen hoe goed de methode werkt. Een lokale boer rapporteert wel veel minder verlies sinds hij ermee begon, en eerder onderzoek in Botswana vond eveneens minder aanvallen bij vee met geschilderde ogen. De aanpak is dus veelbelovend, maar geen garantie."
+        "Mangrovebossen staan al bekend als natuurlijke bescherming van tropische kusten. Nieuw onderzoek maakt het nu beter mogelijk om vooraf te berekenen hoeveel grote golven door zo’n bos worden afgezwakt.",
+        "De onderzoekers ontwikkelden een model voor zware stormgolven en koppelden dat aan een online hulpmiddel dat ook buiten het onderzoek gebruikt kan worden. Daarmee kunnen beheerders en ontwerpers per locatie beter inschatten wat mangroves bijdragen aan kustbescherming.",
+        "Dat maakt natuurherstel praktischer inzetbaar naast technische kustverdediging. Het model kan helpen om kwetsbare gemeenschappen gerichter te beschermen vóórdat een zware storm toeslaat."
       ],
-      "why_it_matters": "Als boeren hun vee kunnen beschermen zonder roofdieren te bestrijden, wordt samenleven met wilde dieren gemakkelijker. Juist simpele, goedkope oplossingen kunnen daardoor veel waarde hebben.",
-      "image_query": "cattle africa savanna",
-      "image_alt": "Illustratief beeld van runderen in een Afrikaans landschap"
+      "why_it_matters": "Natuurgebaseerde kustbescherming wordt waardevoller wanneer het effect vooraf betrouwbaar kan worden berekend en meegenomen in concrete plannen.",
+      "image_query": "mangrove forest coast waves storm protection",
+      "image_alt": "Illustratief beeld van mangroves langs een tropische kust"
+    },
+    {
+      "category": "Gezondheid",
+      "title": "Meer landen pakken leeftijdsdiscriminatie en langdurige zorg structureel aan",
+      "teaser": "Wereldwijd hebben meer landen wetten tegen leeftijdsdiscriminatie en beleid voor langdurige zorg dan enkele jaren geleden. De WHO ziet echte vooruitgang, maar waarschuwt dat financiering achterblijft.",
+      "source": "WHO",
+      "url": "https://www.who.int/marshallislands/news/detail-global/01-10-2026-un-decade-of-healthy-ageing-midpoint-report-finds-progress--calls-for-greater-investment",
+      "article_slug": "meer-landen-beleid-gezond-ouder-worden",
+      "article_body": [
+        "Halverwege de VN-Decade of Healthy Ageing ziet de Wereldgezondheidsorganisatie meetbare vooruitgang in hoe landen ouder worden ondersteunen. Het aandeel landen met wetgeving tegen leeftijdsdiscriminatie steeg van 44,5 procent in 2018 naar 57,7 procent.",
+        "Ook langdurige zorg krijgt vaker een plek in nationaal beleid. Het aandeel landen met zo’n beleid steeg van 49 procent in 2023 naar 56,7 procent.",
+        "De WHO benadrukt tegelijk dat de vooruitgang ongelijk verdeeld is en dat veel landen nog te weinig geld reserveren voor langdurige zorg. De richting is positief, maar opschaling en financiering blijven nodig."
+      ],
+      "why_it_matters": "Gezond ouder worden hangt niet alleen af van medische zorg, maar ook van wetgeving, ondersteuning en toegankelijke langdurige zorg. Juist op die structurele voorwaarden is in meer landen vooruitgang zichtbaar.",
+      "image_query": "healthy ageing older adults community healthcare",
+      "image_alt": "Illustratief beeld van oudere mensen die actief deelnemen aan de samenleving"
     },
     {
       "category": "Energie & innovatie",
-      "title": "Jordanië gebruikt satellietdata om schaarser landbouwwater slimmer in te zetten",
-      "teaser": "Het WaPOR-programma combineert satellietgegevens met lokale kennis om te laten zien waar water in de landbouw het meest productief wordt gebruikt.",
-      "source": "FAO",
-      "url": "https://www.fao.org/jordan/news/detail//1/en",
-      "article_slug": "jordanie-satellietdata-waterbeheer-landbouw",
+      "title": "Nieuwe reactor maakt grondstof voor plastic efficiënter met zuurstof en elektriciteit",
+      "teaser": "Een nieuw elektrochemisch reactorontwerp verbetert de omzetting naar een belangrijke chemische bouwsteen voor plastics door lokale zuurgraad beter onder controle te houden.",
+      "source": "Phys.org / Seoul National University",
+      "url": "https://phys.org/news/2026-09-reactor-plastic-feedstock-synthesis-oxygen.html",
+      "article_slug": "nieuwe-reactor-plasticgrondstof-zuurstof-elektriciteit",
       "article_body": [
-        "Water is in Jordanië een schaarse hulpbron en landbouw is een belangrijke gebruiker. Met het WaPOR-programma werken de FAO, de University of Jordan en het International Water Management Institute aan een manier om watergebruik beter zichtbaar en vergelijkbaar te maken.",
-        "WaPOR gebruikt satellietgegevens om onder meer verdamping, vegetatiegroei en waterproductiviteit te volgen. Die informatie kan worden gecombineerd met lokale gegevens, zodat beleidsmakers en landbouworganisaties beter kunnen zien waar water efficiënt wordt gebruikt en waar verbetering mogelijk is.",
-        "Tijdens een nationale bijeenkomst zijn de resultaten van de tweede projectfase besproken en plannen voor verdere toepassing gemaakt. Het programma lost waterschaarste niet op, maar geeft beheerders wel meer feitelijke informatie om keuzes over landbouw en waterverdeling te onderbouwen."
+        "Onderzoekers van Seoul National University hebben een elektrochemische reactor ontworpen die een belangrijke grondstof voor kunststof efficiënter kan produceren met behulp van zuurstof en elektriciteit.",
+        "Een probleem bij dit soort reacties is dat de zuurgraad vlak bij de elektroden sterk kan veranderen. Daardoor ontstaan minder gewenste reacties en kan product weer worden afgebroken. Door elektroden dichter bij elkaar te plaatsen en de vloeistof gericht te laten stromen, blijven de omstandigheden stabieler.",
+        "Het onderzoek is nog geen kant-en-klare vervanging voor industriële productie, maar laat zien hoe elektrochemie chemische processen selectiever en mogelijk energiezuiniger kan maken."
       ],
-      "why_it_matters": "Bij waterschaarste telt niet alleen hoeveel water beschikbaar is, maar ook hoe effectief het wordt gebruikt. Satellietdata kunnen beslissingen ondersteunen op plekken waar meten op de grond lastig of duur is.",
-      "image_query": "agriculture irrigation satellite field",
-      "image_alt": "Illustratief beeld van geïrrigeerde landbouwgrond"
+      "why_it_matters": "Veel verduurzaming van de chemische industrie draait om efficiëntere productieprocessen. Een reactor die reacties beter stuurt kan daarbij een belangrijke bouwsteen worden.",
+      "image_query": "electrochemical reactor laboratory green chemistry",
+      "image_alt": "Illustratief beeld van een elektrochemische reactor in een laboratorium"
     },
     {
       "category": "Wetenschap",
-      "title": "Aardpassage zet ruimtesonde Juice met weinig brandstof beter op koers naar Jupiter",
-      "teaser": "ESA's ruimtesonde gebruikte de zwaartekracht van de aarde om zijn baan twintig graden te verleggen en snelheid op te bouwen voor de lange reis naar Jupiter.",
+      "title": "Nieuwe ESA-satelliet test snellere botsingsvermijding in steeds drukkere ruimte",
+      "teaser": "CubeSat GOMX-5 is gelanceerd met een grotendeels geautomatiseerd systeem dat de aandrijving snel gebruiksklaar moet maken voor uitwijkmanoeuvres.",
       "source": "ESA",
-      "url": "https://www.esa.int/Science_Exploration/Space_Science/Juice/Successful_Earth_flyby_improves_Juice_s_course_to_Jupiter",
-      "article_slug": "juice-aardpassage-koers-jupiter",
+      "url": "https://www.esa.int/Enabling_Support/Space_Engineering_Technology/Shaping_the_Future/GOMX-5_Successfully_Launched",
+      "article_slug": "esa-gomx5-snellere-botsingsvermijding-ruimte",
       "article_body": [
-        "De Europese ruimtesonde Juice heeft de aarde opnieuw gebruikt als natuurlijke stuurhulp op weg naar Jupiter. Op 28 september vloog het vaartuig op ongeveer 8.640 kilometer boven de Indische Oceaan langs onze planeet.",
-        "Door de zwaartekracht van de aarde veranderde de vliegrichting met ongeveer twintig graden en nam de snelheid met circa 3,5 kilometer per seconde toe. Zulke manoeuvres besparen grote hoeveelheden brandstof die anders nodig zouden zijn om de baan met de eigen motoren aan te passen.",
-        "De navigatie bleek bovendien nauwkeurig: in de vier weken vóór de passage was slechts één kleine koerscorrectie nodig. Juice is onderweg naar het Jupiterstelsel, waar de sonde vanaf 2031 onder meer de grote ijsmanen Ganymedes, Callisto en Europa gaat onderzoeken."
+        "ESA heeft de technologiedemonstratiesatelliet GOMX-5 gelanceerd. Een belangrijk doel is om de elektrische aandrijving al binnen 48 uur na de lancering operationeel te krijgen.",
+        "Dat is relevant omdat satellieten in een drukker wordende baan om de aarde soms snel moeten kunnen uitwijken voor ander ruimteverkeer of brokstukken. GOMX-5 test daarom een grotendeels geautomatiseerde ingebruikname van cruciale systemen.",
+        "Daarnaast draagt de kleine satelliet nieuwe antennes, radio’s, boordcomputers en een compacte radar voor het waarnemen van schepen op zee. De komende maanden moet blijken hoe goed de nieuwe technologieën in de ruimte presteren."
       ],
-      "why_it_matters": "Zwaartekrachtsmanoeuvres maken verre ruimtemissies mogelijk zonder enorme brandstofvoorraden. Elke geslaagde passage brengt Juice dichter bij jarenlang onderzoek van werelden die mogelijk ondergrondse oceanen hebben.",
-      "image_query": "jupiter spacecraft earth space",
-      "image_alt": "Illustratief beeld van een ruimtesonde op weg naar Jupiter"
-    },
-    {
-      "category": "Energie & innovatie",
-      "title": "Nieuwe faciliteit moet energieapparatuur in Oekraïne sneller echt aan het werk krijgen",
-      "teaser": "Een vijfjarig programma van de Oekraïense overheid en UNDP richt zich op de laatste stap: gedoneerde transformatoren, generatoren en andere apparatuur installeren en aansluiten.",
-      "source": "UNDP",
-      "url": "https://www.undp.org/ukraine/press-releases/ministry-energy-and-undp-launch-ukraine-energy-installation-facility-accelerate-energy-recovery-and-strengthen-resilience",
-      "article_slug": "oekraine-energieapparatuur-sneller-installeren-undp",
-      "article_body": [
-        "Oekraïne heeft door beschadiging van zijn energiesysteem veel nieuwe apparatuur nodig. Maar een transformator, generator of batterij die in een opslagloods staat, levert nog geen elektriciteit. Juist die laatste stap is het doel van de nieuwe Ukraine Energy Installation Facility.",
-        "Het vijfjarige programma van het Oekraïense ministerie van Energie en UNDP financiert onder meer technisch ontwerp, voorbereiding van locaties, installatie, aansluiting op het net en ingebruikname. Zo moeten gedoneerde en aangekochte systemen sneller daadwerkelijk stroom of warmte kunnen leveren.",
-        "De faciliteit kan verschillende soorten technologie ondersteunen, waaronder transformatoren, warmtekrachtinstallaties, hernieuwbare energie en batterijopslag. Het programma is daarmee geen nieuwe levering van apparatuur op zichzelf, maar een manier om bestaande investeringen sneller bruikbaar te maken."
-      ],
-      "why_it_matters": "Bij herstel van infrastructuur zit de bottleneck vaak niet alleen in spullen, maar in installatie en aansluiting. Door juist die stap te financieren kan beschikbare apparatuur eerder essentiële diensten ondersteunen.",
-      "image_query": "energy infrastructure solar battery power grid",
-      "image_alt": "Illustratief beeld van moderne energie-infrastructuur"
+      "why_it_matters": "Sneller kunnen reageren op botsingsgevaar helpt nieuwe ruimtepuinproblemen voorkomen en maakt satellietoperaties veiliger.",
+      "image_query": "small satellite cubesat earth orbit space technology",
+      "image_alt": "Illustratief beeld van een kleine satelliet in een baan om de aarde"
     }
   ],
   "headlines": [
     {
-      "title": "Schrijver en cabaretier Paulien Cornelisse op 50-jarige leeftijd overleden",
-      "teaser": "Paulien Cornelisse is overleden aan de gevolgen van kanker. Ze werd bekend met haar boeken over taal, cabaretvoorstellingen, columns en haar recente rol in De Slimste Mens.",
-      "source": "NOS",
-      "url": "https://nos.nl/artikel/2633156-schrijfster-en-cabaretiere-paulien-cornelisse-50-overleden"
-    },
-    {
-      "title": "Onderzoek naar geweld in cockpit na noodlanding Flydubai-vlucht",
-      "teaser": "Op een vlucht van Dubai naar Tel Aviv werd de gezagvoerder aangevallen. Passagiers en meevliegende piloten grepen in en het toestel landde veilig in Saudi-Arabië; het motief wordt nog onderzocht.",
+      "title": "Spanje houdt op 29 november vervroegde parlementsverkiezingen",
+      "teaser": "Premier Pedro Sánchez heeft vervroegde verkiezingen uitgeschreven nadat zijn regering belangrijke woningmaatregelen niet door het parlement kreeg.",
       "source": "Reuters",
-      "url": "https://www.reuters.com/world/pilot-brawl-then-rapid-descent-passengers-recount-chaos-flydubai-flight-2026-09-30/"
+      "url": "https://www.reuters.com/world/europe/spanish-pm-sanchez-make-morning-announcement-amid-speculation-about-early-2026-10-05/"
     },
     {
-      "title": "Overheid wil verplicht register en klachtenloket voor makelaars",
-      "teaser": "Het kabinet wil het toezicht op makelaars niet langer alleen aan de branche overlaten. Er komen plannen voor een verplicht register, gedragsregels en een klachtenprocedure voor kopers en verkopers.",
-      "source": "NOS",
-      "url": "https://nos.nl/artikel/2633213-overheid-neemt-toezicht-op-makelaars-over-van-makelaars-zelf"
+      "title": "Flávio Bolsonaro en Lula naar tweede ronde Braziliaanse presidentsverkiezingen",
+      "teaser": "Flávio Bolsonaro eindigde in de eerste ronde nipt voor president Lula. Geen van beiden haalde een meerderheid; de tweede ronde is op 25 oktober.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/americas/brazilians-head-polls-high-stakes-polarized-election-2026-10-04/"
+    },
+    {
+      "title": "Rusland kondigt intensivering van aanvallen op Oekraïne aan",
+      "teaser": "Moskou zegt de aanvallen te zullen opvoeren nadat Oekraïne aankondigde vaker Russische olieraffinaderijen te willen treffen. Beide landen voeren hun aanvallen verder op.",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/world/europe/russia-intensify-strikes-ukraine-after-zelenskiy-interview-2026-10-04/"
     }
   ]
 }
