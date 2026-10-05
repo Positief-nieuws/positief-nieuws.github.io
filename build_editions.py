@@ -673,6 +673,10 @@ def resolve_pixabay_image(item, date_value):
         "order": "popular",
         "per_page": 20,
     }
+    # Select a specific Pixabay photo when the editor supplies its ID.
+    if query.startswith("id:") and query[3:].isdigit():
+        params.pop("q", None)
+        params["id"] = int(query[3:])
     search_url = PIXABAY_API_URL + "?" + urllib.parse.urlencode(params)
     request = urllib.request.Request(
         search_url,
@@ -1034,7 +1038,7 @@ def render_edition(data, date_value):
 <section class="hero"><div class="shell"><p class="date">{esc(date_text)}</p><h1>Dit gebeurt ook<b>.</b></h1><p class="lead">In een paar minuten weet je wat er goed gaat én wat je verder moet weten in deze editie. Zonder eindeloos scrollen.</p><div class="rule"></div></div></section>
 <main>
 <section class="section alt"><div class="shell"><div class="heading"><p class="kicker">Goed nieuws uit Nederland</p><span class="count">6 verhalen</span></div>{nl_html}</div></section>
-<section class="section"><div class="shell"><div class="heading"><p class="kicker">Goed nieuws uit de wereld</p><span class="count">6 verhalen</span></div><p class="note">De artikelen waar we naar verwijzen zijn Engelstalig.</p>{int_html}</div></section>
+<section class="section"><div class="shell"><div class="heading"><p class="kicker">Goed nieuws uit de wereld</p><span class="count">6 verhalen</span></div><p class="note">Zes positieve ontwikkelingen van buiten Nederland. Lees de samenvattingen en volledige artikelen in het Nederlands.</p>{int_html}</div></section>
 <section class="section alt"><div class="shell"><div class="heading"><p class="kicker">Wat je verder moet weten</p><span class="count">3 verhalen</span></div><p class="note">Niet per se positief, wel belangrijk.</p>{head_html}</div></section>
 <section class="end"><div class="shell"><h2>Dit was het voor deze editie.<br>Je bent weer bij.</h2><p>Geniet van je dag.</p><a class="back" href="/">Lees de nieuwste editie</a></div></section>
 </main><footer>Positief nieuws · Dit gebeurt ook. · <a href="/contact/" onclick="if(window.sa_event)window.sa_event('contact_click')">Contact</a> · <a href="/tip/" onclick="if(window.sa_event)window.sa_event('tip_redactie_click')">Tip de redactie</a></footer>{analytics_html({'page_type':'edition','edition':date_value})}</body></html>"""
