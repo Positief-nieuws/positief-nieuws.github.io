@@ -19,7 +19,8 @@
       "why_it_matters": "Een breder samengestelde groep leraren geeft kinderen meer verschillende voorbeelden. Elke gemotiveerde en goed opgeleide nieuwe leraar helpt bovendien het onderwijs te versterken.",
       "image_query": "id:593313",
       "image_alt": "Illustratief beeld bij het artikel over mannelijke leraren",
-      "image_pick": 0
+      "image_pick": 0,
+      "email_title": "Eén op de vijf nieuwe basisschoolleraren is man"
     },
     {
       "category": "Energie & innovatie",
@@ -35,7 +36,8 @@
       ],
       "why_it_matters": "Netcongestie remt bedrijven, woningbouw en verduurzaming. Flexibeler stroomgebruik lost het probleem niet volledig op, maar maakt aantoonbaar beter gebruik van de capaciteit die er al is.",
       "image_query": "electricity grid industrial company smart energy flexible power Netherlands",
-      "image_alt": "Illustratief beeld van een elektriciteitsnet en bedrijventerrein"
+      "image_alt": "Illustratief beeld van een elektriciteitsnet en bedrijventerrein",
+      "email_title": "Bedrijven gebruiken het stroomnet slimmer"
     },
     {
       "category": "Gezondheid",
@@ -51,7 +53,8 @@
       ],
       "why_it_matters": "Dit is concrete preventieve gezondheidswinst: een ernstige maar behandelbare zeldzame ziekte wordt nu bewust en landelijk opgespoord voordat klachten ontstaan.",
       "image_query": "newborn heel prick screening hospital baby healthcare",
-      "image_alt": "Illustratief beeld van neonatale screening in een ziekenhuis"
+      "image_alt": "Illustratief beeld van neonatale screening in een ziekenhuis",
+      "email_title": "Hielprik spoort zeldzame ziekte eerder op"
     },
     {
       "category": "Mens",
@@ -67,7 +70,8 @@
       ],
       "why_it_matters": "Een relatief klein bedrag voor vervoer of werkkleding kan het verschil maken tussen afhaken en doorgaan. De uitbreiding van één naar vijf scholen maakt van een incidentele oplossing een bredere aanpak.",
       "image_query": "vocational students workshop school internship workwear",
-      "image_alt": "Illustratief beeld van leerlingen in het praktijkonderwijs"
+      "image_alt": "Illustratief beeld van leerlingen in het praktijkonderwijs",
+      "email_title": "Praktijkscholen helpen met stagekosten"
     },
     {
       "category": "Gezondheid",
@@ -83,7 +87,8 @@
       ],
       "why_it_matters": "Ouderen bereiken en deelname volgen zijn belangrijke voorwaarden voor toegankelijke valpreventie. De pilots moeten laten zien hoe het programma en de gemeentelijke aanpak in de praktijk werken.",
       "image_query": "elderly woman chair exercise",
-      "image_alt": "Illustratief beeld van een oudere vrouw die rustig oefeningen bij een stoel doet"
+      "image_alt": "Illustratief beeld van een oudere vrouw die rustig oefeningen bij een stoel doet",
+      "email_title": "Seniorengym klaar voor landelijke inzet"
     },
     {
       "category": "Sport",
@@ -99,7 +104,8 @@
       ],
       "why_it_matters": "Herstel gaat ook over het dagelijks leven terugvinden. Luca’s terugkeer naar zijn favoriete sport maakt dat heel concreet, zonder dat zijn verhaal iets voorspelt over het herstel van anderen.",
       "image_query": "autocross racing car dirt track",
-      "image_alt": "Illustratief beeld van autocross, niet van Luca zelf"
+      "image_alt": "Illustratief beeld van autocross, niet van Luca zelf",
+      "email_title": "Luca wordt kampioen na kanker"
     }
   ],
   "int": [
@@ -117,7 +123,8 @@
       ],
       "why_it_matters": "Door zenuwcellen heel precies te kunnen aan- en uitzetten, kunnen onderzoekers hersencircuits veel beter begrijpen. Dat vormt een belangrijke basis voor toekomstig onderzoek naar neurologische en psychiatrische aandoeningen.",
       "image_query": "optogenetics brain neurons light laboratory neuroscience",
-      "image_alt": "Illustratief beeld van hersencellen en licht in neurowetenschappelijk onderzoek"
+      "image_alt": "Illustratief beeld van hersencellen en licht in neurowetenschappelijk onderzoek",
+      "email_title": "Nobelprijs voor hersencellen sturen met licht"
     },
     {
       "category": "Natuur & klimaat",
@@ -133,7 +140,8 @@
       ],
       "why_it_matters": "Herstelprogramma’s voor insecten krijgen vaak minder aandacht dan die voor grote dieren. Hier is na vijftien jaar aantoonbaar populatieherstel bereikt.",
       "image_query": "giant weta New Zealand insect conservation forest",
-      "image_alt": "Illustratief beeld van een grote wētā in Nieuw-Zeeland"
+      "image_alt": "Illustratief beeld van een grote wētā in Nieuw-Zeeland",
+      "email_title": "Reuzenkrekel krabbelt terug"
     },
     {
       "category": "Gezondheid",
@@ -149,7 +157,8 @@
       ],
       "why_it_matters": "Gezond ouder worden hangt niet alleen af van medische zorg, maar ook van wetgeving, ondersteuning en toegankelijke langdurige zorg. Juist op die structurele voorwaarden is in meer landen vooruitgang zichtbaar.",
       "image_query": "healthy ageing older adults community healthcare",
-      "image_alt": "Illustratief beeld van oudere mensen die actief deelnemen aan de samenleving"
+      "image_alt": "Illustratief beeld van oudere mensen die actief deelnemen aan de samenleving",
+      "email_title": "Meer landen werken aan gezond ouder worden"
     },
     {
       "category": "Natuur & klimaat",
@@ -165,7 +174,8 @@
       ],
       "why_it_matters": "Natuurgebaseerde kustbescherming wordt waardevoller wanneer het effect vooraf betrouwbaar kan worden berekend en meegenomen in concrete plannen.",
       "image_query": "mangrove forest coast waves storm protection",
-      "image_alt": "Illustratief beeld van mangroves langs een tropische kust"
+      "image_alt": "Illustratief beeld van mangroves langs een tropische kust",
+      "email_title": "Model berekent bescherming door mangroves"
     },
     {
       "category": "Energie & innovatie",
@@ -181,7 +191,8 @@
       ],
       "why_it_matters": "Veel verduurzaming van de chemische industrie draait om efficiëntere productieprocessen. Een reactor die reacties beter stuurt kan daarbij een belangrijke bouwsteen worden.",
       "image_query": "electrochemical reactor laboratory green chemistry",
-      "image_alt": "Illustratief beeld van een elektrochemische reactor in een laboratorium"
+      "image_alt": "Illustratief beeld van een elektrochemische reactor in een laboratorium",
+      "email_title": "Nieuwe reactor maakt plasticgrondstof efficiënter"
     },
     {
       "category": "Wetenschap",
@@ -197,7 +208,8 @@
       ],
       "why_it_matters": "Sneller kunnen reageren op botsingsgevaar helpt nieuwe ruimtepuinproblemen voorkomen en maakt satellietoperaties veiliger.",
       "image_query": "small satellite cubesat earth orbit space technology",
-      "image_alt": "Illustratief beeld van een kleine satelliet in een baan om de aarde"
+      "image_alt": "Illustratief beeld van een kleine satelliet in een baan om de aarde",
+      "email_title": "ESA test snellere botsingsvermijding"
     }
   ],
   "headlines": [
