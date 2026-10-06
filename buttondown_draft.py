@@ -252,7 +252,7 @@ def article_thumbnail_url(article, data):
 
 
 def article_html(article, data=None, prefer_own_page=False):
-    title = esc(article.get("title"))
+    title = esc(article.get("email_title") or article.get("title"))
     teaser = esc(article.get("teaser") or article.get("summary"))
     source = esc(article.get("source"))
     category = esc(article.get("category"))
@@ -264,38 +264,25 @@ def article_html(article, data=None, prefer_own_page=False):
     url = esc(raw_url)
 
     image_url = article_thumbnail_url(article, data) if prefer_own_page else ""
-    image_cell = ""
+    image_html = ""
     if image_url:
         alt = esc(article.get("image_alt") or article.get("title"))
-        image_cell = f"""<td width="120" valign="top" style="width:120px;padding:0 16px 0 0;">
-          <a href="{url}" style="text-decoration:none;">
-            <img src="{esc(image_url)}" width="120" alt="{alt}"
-                 style="display:block;width:120px;max-width:100%;height:auto;border:0;border-radius:4px;">
-          </a>
-        </td>"""
+        image_html = f"""<a href="{url}" style="display:block;text-decoration:none;margin-bottom:12px;">
+          <img src="{esc(image_url)}" width="240" alt="{alt}"
+               style="display:block;width:240px;max-width:100%;height:auto;border:0;border-radius:4px;">
+        </a>"""
 
-    meta_parts = [part for part in (category, source, reading_time_label(article)) if part]
+    meta_parts = [part for part in (category, source) if part]
     meta = " &nbsp;·&nbsp; ".join(meta_parts)
-
+    teaser_html = "" if prefer_own_page else f'<p style="margin:0 0 10px;font:15px Arial,Helvetica,sans-serif;line-height:1.5;color:#3f4742;">{teaser}</p>'
     return f"""
       <div style="margin:0;padding:22px 0;border-bottom:1px solid rgba(23,63,49,.12);">
-        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;border-collapse:collapse;">
-          <tr>{image_cell}<td valign="top" style="padding:0;">
-        <h2 style="margin:0 0 8px 0;font:700 22px Georgia,'Times New Roman',serif;line-height:1.2;letter-spacing:-.02em;color:{INK};">
-          <a href="{url}" style="color:{INK} !important;text-decoration:none;">
-            <span style="color:{INK} !important;">{title}</span>
-          </a>
+        {image_html}
+        <h2 style="margin:0 0 10px;font:700 22px Georgia,'Times New Roman',serif;line-height:1.25;color:{INK};overflow-wrap:break-word;">
+          <a href="{url}" style="color:{INK} !important;text-decoration:none;">{title}</a>
         </h2>
-
-        <p style="margin:0;font:15px Arial,Helvetica,sans-serif;line-height:1.5;color:#3f4742;">
-          {teaser}
-        </p>
-
-        <p style="margin:10px 0 0 0;font:700 11px Arial,Helvetica,sans-serif;line-height:1.35;color:{GREEN};">
-          {meta}
-        </p>
-          </td></tr>
-        </table>
+        {teaser_html}
+        <p style="margin:0;font:700 11px Arial,Helvetica,sans-serif;line-height:1.4;color:{GREEN};">{meta}</p>
       </div>
     """
 
@@ -396,7 +383,7 @@ def build_body(data, nl, international, headlines):
 <div style="display:none;max-height:0;overflow:hidden;opacity:0;color:transparent;font-size:1px;line-height:1px;mso-hide:all;">
   {preheader}
 </div>
-<div style="width:100%;max-width:780px;margin:0 auto;box-sizing:border-box;background:{PAPER};padding:32px 28px;color:{INK};font-family:Arial,Helvetica,sans-serif;">
+<div style="width:100%;max-width:780px;margin:0 auto;box-sizing:border-box;background:{PAPER};padding:24px 20px;color:{INK};font-family:Arial,Helvetica,sans-serif;">
 
   <div style="margin-bottom:48px;">
     <p style="margin:0;font:800 19px Arial,Helvetica,sans-serif;letter-spacing:-.02em;color:{INK};">
@@ -414,8 +401,7 @@ def build_body(data, nl, international, headlines):
     </h1>
 
     <p style="margin:20px 0 0 0;font:17px Arial,Helvetica,sans-serif;line-height:1.55;color:#2d342f;">
-      In een paar minuten weet je wat er goed gaat én wat je verder moet weten
-      in deze {weekday}-editie. Zonder eindeloos scrollen.
+      Goed nieuws en wat je verder moet weten. In een paar minuten bijgepraat.
     </p>
 
     <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
@@ -431,25 +417,25 @@ def build_body(data, nl, international, headlines):
     </table>
   </div>
 
-  <div style="margin:0 -28px;padding:34px 28px;background:{NL_BG};">
+  <div style="margin:0 -20px;padding:28px 20px;background:{NL_BG};">
     {section_header("Goed nieuws uit Nederland", "6 verhalen")}
     {nl_html}
   </div>
 
-  <div style="margin:0 -28px;padding:34px 28px;background:{WORLD_BG};">
+  <div style="margin:0 -20px;padding:28px 20px;background:{WORLD_BG};">
     {section_header(
         "Goed nieuws uit de wereld",
         "6 verhalen",
-        "Zes positieve ontwikkelingen van buiten Nederland. Lees de samenvattingen en volledige artikelen in het Nederlands."
+        ""
     )}
     {int_html}
   </div>
 
-  <div style="margin:0 -28px;padding:34px 28px;background:{BRIEFING_BG};">
+  <div style="margin:0 -20px;padding:28px 20px;background:{BRIEFING_BG};">
     {section_header(
         "Wat je verder moet weten",
         "3 verhalen",
-        "Niet per se positief, wel belangrijk. Drie onderwerpen die vandaag de Nederlandse nieuwskoppen domineren. Kort en feitelijk."
+        "Kort en feitelijk."
     )}
     {headlines_html}
   </div>
