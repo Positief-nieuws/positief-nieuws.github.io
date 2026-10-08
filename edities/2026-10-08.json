@@ -1,0 +1,247 @@
+{
+  "meta": {
+    "edition_date": "2026-10-08",
+    "email_preheader": "Een dorpsbus houdt mensen verbonden, kinderen krijgen een donorhart en zonnepompen brengen water naar Amazonegezinnen."
+  },
+  "nl": [
+    {
+      "category": "Mens",
+      "title": "Telefoonvrije school ziet leerlingen weer meer met elkaar praten",
+      "teaser": "Het Amsterdams Lyceum houdt telefoons al sinds 2023 de hele schooldag opgeborgen. Medewerkers ervaren meer contact tussen leerlingen.",
+      "source": "EenVandaag",
+      "url": "https://eenvandaag.avrotros.nl/artikelen/smartphones-vanaf-volgend-jaar-echt-helemaal-uit-de-klas-hoe-dat-deze-telefoonvrije-school-al-3-jaar-lukt-164995",
+      "article_slug": "telefoonvrije-school-meer-contact",
+      "article_body": [
+        "Op Het Amsterdams Lyceum gaan telefoons aan het begin van de schooldag in een afgesloten hoesje. Ook in de gang, kantine en pauzes blijven ze opgeborgen. De school werkt sinds augustus 2023 op die manier.",
+        "In een reportage van EenVandaag vertellen de conciërge en rector dat leerlingen meer met elkaar praten en beter aanspreekbaar zijn. Het is een praktisch voorbeeld van hoe een school rust en ontmoeting probeert terug te brengen.",
+        "Die ervaringen zijn geen bewijs dat dezelfde aanpak op elke school dezelfde effecten heeft. De reportage laat ook zien dat regels elders worden omzeild. Het landelijke advies voor 2027 is bovendien een beleidsvoornemen; het werkende schoolvoorbeeld staat hier centraal."
+      ],
+      "why_it_matters": "Een schooldag biedt ruimte om sociale vaardigheden te oefenen. Deze ervaring laat zien hoe een concreet telefoonbeleid daar volgens medewerkers aan kan bijdragen.",
+      "image_query": "students talking school classroom",
+      "image_alt": "Illustratief beeld bij Telefoonvrije school ziet leerlingen weer meer met elkaar praten",
+      "image_pick": 0,
+      "email_title": "Telefoonvrije school ziet leerlingen weer meer met elkaar praten"
+    },
+    {
+      "category": "Energie & innovatie",
+      "title": "Twintig miljoen euro extra voor kansrijke Nederlandse innovaties",
+      "teaser": "Het budget van het Innovatiekrediet wordt met twintig miljoen euro verhoogd. Daardoor kunnen meer ondernemers financiering aanvragen voor risicovolle ontwikkeling.",
+      "source": "RVO",
+      "url": "https://www.rvo.nl/nieuws/innovatiekrediet-verruimd-met-eu-20-miljoen",
+      "article_slug": "innovatiekrediet-twintig-miljoen-extra",
+      "article_body": [
+        "Nederlandse bedrijven krijgen meer ruimte om nieuwe technieken door te ontwikkelen. RVO meldt dat het budget van het Innovatiekrediet dit jaar met twintig miljoen euro wordt verhoogd.",
+        "Het krediet is bedoeld voor projecten met flinke technische risico’s en een goed marktperspectief. Het ondersteunt juist de fase waarin een idee nog niet klaar is voor de markt en andere financiering moeilijk kan zijn.",
+        "RVO noemt onder eerdere ontvangers een ontwikkelaar van ultradunne coatings en een bedrijf dat een autonome onkruidverdelger bouwt. Extra budget is nog geen garantie op succesvolle producten: aanvragen moeten worden beoordeeld en ontwikkeling kan mislukken."
+      ],
+      "why_it_matters": "Financiering kan helpen om bruikbare uitvindingen voorbij de tekentafel te brengen. De concrete vooruitgang is hier het grotere beschikbare budget.",
+      "image_query": "engineering innovation laboratory",
+      "image_alt": "Illustratief beeld bij Twintig miljoen euro extra voor kansrijke Nederlandse innovaties",
+      "image_pick": 0,
+      "email_title": "Twintig miljoen euro extra voor kansrijke Nederlandse innovaties"
+    },
+    {
+      "category": "Mens",
+      "title": "Vrijwilligers houden Brabantse dorpen bereikbaar met De Dorpsbus",
+      "teaser": "In dorpen rond Breda brengen buurtbewoners elkaar waar ze moeten zijn. De Dorpsbus heeft inmiddels structurele ondersteuning van de gemeente.",
+      "source": "EenVandaag",
+      "url": "https://eenvandaag.avrotros.nl/artikelen/kabinet-wil-ov-in-de-regio-verbeteren-in-brabant-zorgen-deze-vrijwilligers-nu-al-zelf-voor-vervoer-165006",
+      "article_slug": "dorpsbus-brabant-vrijwilligers",
+      "article_body": [
+        "Een bezoek aan familie of een afspraak wordt lastig als de bushalte verdwijnt. In Sprundel, Sint Willebrord en omliggende dorpen helpen vrijwilligers bewoners daarom met De Dorpsbus. Een centraal telefoonnummer verbindt reizigers met de planners en chauffeurs.",
+        "Het initiatief begon zeven jaar geleden als proef. Toen Arriva en de provincie ermee wilden stoppen, nam de gemeente de ondersteuning over. Volgens vrijwilliger René Lodewijks is die nu structureel geregeld.",
+        "EenVandaag beschrijft het vervoer op 6 oktober als een werkende lokale oplossing. De Dorpsbus vervangt geen volwaardig regionaal vervoersnet, maar maakt voor de mensen die ervan afhankelijk zijn wel een concreet verschil."
+      ],
+      "why_it_matters": "Bereikbaarheid gaat ook over zelfstandig blijven en andere mensen kunnen ontmoeten. Deze oplossing bestaat al en rust op samenwerking tussen bewoners en gemeente.",
+      "image_query": "community minibus elderly passengers",
+      "image_alt": "Illustratief beeld bij Vrijwilligers houden Brabantse dorpen bereikbaar met De Dorpsbus",
+      "image_pick": 0,
+      "email_title": "Vrijwilligers houden Brabantse dorpen bereikbaar met De Dorpsbus"
+    },
+    {
+      "category": "Natuur & klimaat",
+      "title": "Nieuw stukje natuur verbindt Limburgse bossen en graslanden",
+      "teaser": "Bij de Berghof in Wijlre wordt landbouwgrond ingericht als natuur. Het perceel vormt een ontbrekende verbinding tussen waardevolle natuurgebieden.",
+      "source": "Bosgroepen / Nature Today",
+      "url": "https://www.naturetoday.com/nl/nl/nature-reports/message/?msg=35891",
+      "article_slug": "berghof-verbindt-limburgse-natuur",
+      "article_body": [
+        "In het Zuid-Limburgse Heuvelland krijgt een voormalig agrarisch grasland een nieuwe functie. Eigenaren, provincie Limburg en Bosgroep Zuid Nederland werken bij de Berghof aan natuur tussen bestaande bossen, een voedselbos en de soortenrijke Berghofweide.",
+        "De werkzaamheden moeten ruimte maken voor heischraal grasland en kalkgrasland. Ook komt er een ecologische strook die de gebieden verbindt. Op delen van de helling wordt grond afgeplagd; andere stroken blijven liggen om water en erosie af te remmen.",
+        "Volgens Bosgroepen loopt de uitvoering tot eind oktober. De eerste effecten van de verbindingsstrook worden volgend voorjaar verwacht. De aanleg is dus begonnen, maar de gewenste soortenrijkdom moet zich nog ontwikkelen."
+      ],
+      "why_it_matters": "Aaneengesloten leefgebied geeft planten en dieren meer ruimte. Dit project koppelt natuurherstel aan zorgvuldig beheer van water en bodem.",
+      "image_query": "limburg hills grassland nature",
+      "image_alt": "Illustratief beeld bij Nieuw stukje natuur verbindt Limburgse bossen en graslanden",
+      "image_pick": 0,
+      "email_title": "Nieuw stukje natuur verbindt Limburgse bossen en graslanden"
+    },
+    {
+      "category": "Mens",
+      "title": "Bij Tante Lali brengt een betaalbare maaltijd inwoners samen",
+      "teaser": "In Uden organiseert Stichting Tante Lali wekelijks gezonde, betaalbare maaltijden. Het initiatief kreeg deze week erkenning voor zijn toegankelijke ontmoetingsplek.",
+      "source": "Gemeente Maashorst",
+      "url": "https://www.gemeentemaashorst.nl/nieuws/2026/10/07/stichting-tante-lali-wint-allereerste-waarderingsprijs-inclusie",
+      "article_slug": "tante-lali-maaltijden-ontmoeting",
+      "article_body": [
+        "Samen eten kan een eenvoudige manier zijn om weer onder mensen te komen. Stichting Tante Lali biedt daarvoor elke week een laagdrempelige plek in de Protestantse Kerk in Uden. Iedereen is welkom bij de gezonde en betaalbare maaltijden.",
+        "De gemeente Maashorst kende de stichting op 6 oktober de eerste waarderingsprijs Meedoen in Maashorst toe. Daar hoort duizend euro bij. Volgens de gemeente helpt het initiatief inwoners elkaar te ontmoeten en versterkt het de sociale samenhang.",
+        "De prijs is de actuele aanleiding; de waarde zit in de terugkerende maaltijden. De gemeentelijke bekendmaking bevat geen effectonderzoek naar eenzaamheid en geen bezoekersaantallen. We presenteren het daarom als een concreet lokaal initiatief, niet als bewezen oplossing voor eenzaamheid."
+      ],
+      "why_it_matters": "Een betaalbare maaltijd en een open deur kunnen ontmoeting bereikbaar maken. Hier krijgt die aandacht wekelijks een praktische vorm.",
+      "image_query": "community dinner shared meal",
+      "image_alt": "Illustratief beeld bij Bij Tante Lali brengt een betaalbare maaltijd inwoners samen",
+      "image_pick": 0,
+      "email_title": "Bij Tante Lali brengt een betaalbare maaltijd inwoners samen"
+    },
+    {
+      "category": "Cultuur",
+      "title": "Allard Pierson geeft geroofde vaas vrijwillig terug aan Sicilië",
+      "teaser": "Een antieke vaas keert terug nadat herkomstonderzoek aantoonde dat die illegaal was opgegraven. Het museum kiest voor teruggave en samenwerking.",
+      "source": "NOS",
+      "url": "https://nos.nl/artikel/2633996-geroofde-vaas-terug-naar-sicilie-afscheid-pijnlijk-maar-dient-hoger-doel",
+      "article_slug": "allard-pierson-vaas-terug-sicilie",
+      "article_body": [
+        "Het Amsterdamse Allard Pierson heeft de Centuripe pyxis overgedragen aan een Italiaanse delegatie. De rijk versierde vaas uit de derde eeuw voor Christus was in 1997 gekocht, maar bleek afkomstig van grafroof op Sicilië.",
+        "Een teruggevonden fotorolletje hielp de herkomst te reconstrueren. De foto’s weerspraken het verhaal van de handelaar dat het stuk al vóór 1970 in Zwitsers privébezit was.",
+        "Het museum was juridisch niet verplicht de vaas terug te geven, maar besloot verantwoordelijkheid te nemen. Het wil met Siciliaanse experts verder onderzoek doen naar dergelijk aardewerk en naar andere stukken uit de eigen collectie."
+      ],
+      "why_it_matters": "Herkomstonderzoek kan tot herstel leiden. Deze teruggave brengt erfgoed terug en opent de deur naar gedeeld onderzoek.",
+      "image_query": "ancient greek pottery museum",
+      "image_alt": "Illustratief beeld bij Allard Pierson geeft geroofde vaas vrijwillig terug aan Sicilië",
+      "image_pick": 0,
+      "email_title": "Allard Pierson geeft geroofde vaas vrijwillig terug aan Sicilië"
+    }
+  ],
+  "int": [
+    {
+      "category": "Gezondheid",
+      "title": "Nieuwe bewaarmethode maakt donorharten bruikbaar voor kinderen",
+      "teaser": "Amerikaanse artsen hebben een techniek voor het bewaren van donorharten succesvol bij kinderen toegepast. De eerste publicatie beschrijft vijf transplantaties.",
+      "source": "Vanderbilt Health",
+      "url": "https://news.vumc.org/2026/10/07/monroe-carell-jr-childrens-hospital-at-vanderbilt-leads-breakthrough-heart-recovery-method-for-pediatric-transplants/",
+      "article_slug": "donorhart-kinderen-bewaarmethode",
+      "article_body": [
+        "Bij Vanderbilt zijn donorharten met een koude, zuurstofrijke vloeistof bewaard en vervolgens bij kinderen getransplanteerd. De methode heet REUP en werd eerder voor volwassenen ontwikkeld.",
+        "Het ziekenhuis meldt dat de eerste vijf ontvangers tussen twee dagen en veertien jaar oud waren. Hun harten functioneerden na de operatie goed. Volgens Vanderbilt zijn daarna nog vijf kinderen met de methode geholpen; die vervolggroep moet worden onderscheiden van de vijf beschreven patiënten.",
+        "De techniek kan harten bruikbaar maken die anders niet beschikbaar waren geweest. Dat biedt perspectief voor kinderen op de wachtlijst. Het gaat nog om een kleine eerste groep: deze resultaten bewijzen geen langdurige veiligheid of brede toepasbaarheid."
+      ],
+      "why_it_matters": "Voor een kind dat wacht op een donorhart kan een groter donoraanbod veel betekenen. Hier is de stap naar daadwerkelijke behandeling al gezet.",
+      "image_query": "pediatric hospital cardiac care",
+      "image_alt": "Illustratief beeld bij Nieuwe bewaarmethode maakt donorharten bruikbaar voor kinderen",
+      "image_pick": 0,
+      "email_title": "Nieuwe bewaarmethode maakt donorharten bruikbaar voor kinderen",
+      "reading_time_minutes": 4
+    },
+    {
+      "category": "Natuur & klimaat",
+      "title": "Geredde luipaardkatten oefenen voor hun terugkeer naar het bos",
+      "teaser": "Een Thais opvangcentrum leert jonge luipaardkatten weer jagen en klimmen. De sterfte in de opvang is volgens het team lager dan in eerdere jaren.",
+      "source": "Mongabay",
+      "url": "https://news.mongabay.com/2026/10/a-few-are-afraid-of-the-chicks-preparing-thailands-rescued-leopard-cats-for-life-in-the-wild/",
+      "article_slug": "luipaardkatten-thailand-opvang-vrijlating",
+      "article_body": [
+        "In Khon Kaen verzorgt een overheidscentrum jonge luipaardkatten die gewond of zonder moeder zijn gevonden. Voor hun vrijlating oefenen de dieren in begroeide verblijven, met zo weinig mogelijk menselijk contact.",
+        "Mongabay volgde een groep waarvan negen dieren in beschermd bos werd vrijgelaten. Het centrum meldt dat van zestig dit jaar opgevangen jongen er twintig stierven: ongeveer een derde, tegenover circa zestig procent in eerdere jaren.",
+        "Dat is een bemoedigende verbetering binnen de opvang. Hoeveel dieren na vrijlating overleven, weet het team nog niet. Cameravallen tonen jagende katten, maar individuele dieren zijn moeilijk te volgen. Meer opgevangen jongen betekent bovendien niet dat het met de wilde populatie beter gaat."
+      ],
+      "why_it_matters": "Deskundige opvang geeft kwetsbare dieren een nieuwe kans. De vooruitgang is concreet, terwijl beter volgen na vrijlating nodig blijft.",
+      "image_query": "leopard cat forest",
+      "image_alt": "Illustratief beeld bij Geredde luipaardkatten oefenen voor hun terugkeer naar het bos",
+      "image_pick": 0,
+      "email_title": "Geredde luipaardkatten oefenen voor hun terugkeer naar het bos"
+    },
+    {
+      "category": "Energie & innovatie",
+      "title": "Zonnepompen brengen water naar gezinnen in het Amazonewoud",
+      "teaser": "In het Braziliaanse Nova Sociedade gebruiken 36 gezinnen een watersysteem op zonne-energie. Het helpt de afhankelijkheid van diesel te verminderen.",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/b3090d1efb1b44beef07e6d60a90f834",
+      "article_slug": "zonnepompen-amazone-water",
+      "article_body": [
+        "Zonnepanelen drijven sinds juni waterpompen aan in Nova Sociedade. De pompen vullen opslagtanks voor alle 36 gezinnen. Ook huishoudelijke systemen met batterijen zijn uitgedeeld.",
+        "De hulporganisatie Saúde e Alegria ondersteunt daarnaast 29 andere gemeenschappen met vergelijkbare watertechniek. De voorzieningen verbeteren de voorbereiding op droogte, maar nemen het risico op waterschaarste niet weg."
+      ],
+      "why_it_matters": "Betrouwbare energie kan dagelijkse basisvoorzieningen bereikbaar maken, ook ver van het elektriciteitsnet.",
+      "image_query": "solar panels water pump village",
+      "image_alt": "Illustratief beeld bij Zonnepompen brengen water naar gezinnen in het Amazonewoud",
+      "image_pick": 0,
+      "email_title": "Zonnepompen brengen water naar gezinnen in het Amazonewoud"
+    },
+    {
+      "category": "Gezondheid",
+      "title": "Langdurig onderzoek ondersteunt behandeling van sikkelcelziekte bij Afrikaanse kinderen",
+      "teaser": "Een studie met 606 deelnemers in vier Afrikaanse landen vond bij hydroxyurea geen toename van klinisch vastgestelde infecties.",
+      "source": "Imperial College London / EurekAlert",
+      "url": "https://www.eurekalert.org/news-releases/1146717",
+      "article_slug": "sikkelcelziekte-hydroxyurea-infecties",
+      "article_body": [
+        "Voor kinderen met sikkelcelziekte kan hydroxyurea ernstige complicaties verminderen. Toch bestaat in gebieden met beperkte zorg terughoudendheid, omdat het middel ook bepaalde afweercellen verlaagt.",
+        "Een nieuwe analyse van het REACH-onderzoek geeft geruststellende resultaten. Onderzoekers volgden 606 kinderen en jongvolwassenen in Angola, Congo, Kenia en Uganda. Bij langdurig gebruik nam het aantal of de ernst van vastgestelde infecties niet toe.",
+        "Het onderzoek ondersteunt ruimere toepassing onder medische begeleiding. Veel infecties werden achteraf vastgesteld op basis van de ziektegeschiedenis, zonder directe laboratoriumtest. Het resultaat betekent daarom niet dat het middel geen bijwerkingen heeft of zonder controle kan worden gebruikt."
+      ],
+      "why_it_matters": "Goed onderbouwde zorg kan een behandeling bereikbaarder maken waar de ziektelast groot is. Langdurige gegevens helpen onzekerheid bij behandelaars verminderen.",
+      "image_query": "medical research blood cells",
+      "image_alt": "Illustratief beeld bij Langdurig onderzoek ondersteunt behandeling van sikkelcelziekte bij Afrikaanse kinderen",
+      "image_pick": 0,
+      "email_title": "Langdurig onderzoek ondersteunt behandeling van sikkelcelziekte bij Afrikaanse kinderen"
+    },
+    {
+      "category": "Wetenschap",
+      "title": "Acht jaar daktuinonderzoek laat zien hoe tomatenteelt zuiniger kan",
+      "teaser": "Een Spaanse studie laat zien dat goed licht en teruggewonnen voedingsstoffen de teelt in een dakkas kunnen verbeteren.",
+      "source": "ICTA-UAB / Agronomy for Sustainable Development",
+      "url": "https://link.springer.com/article/10.1007/s13593-026-01118-6",
+      "article_slug": "dakkas-tomaten-acht-jaar-onderzoek",
+      "article_body": [
+        "Onderzoekers in Barcelona analyseerden elf tomatenteelten tussen 2015 en 2023 in een kas op een universiteitsgebouw. Ze onderzochten opbrengsten en milieubelasting over acht jaar.",
+        "Licht bleek bepalend. Verouderde dakpanelen lieten steeds minder door; na vervanging steeg de oogst sterk. Ook struviet, een fosfaatrijke meststof uit afvalwater, kon bij een geschikte dosering vergelijkbaar presteren met gewone minerale bemesting.",
+        "De studie biedt praktische lessen over onderhoud en hergebruik van voedingsstoffen. Het blijft onderzoek in één specifieke dakkas. Binnenteelt onder kunstlicht bleek bovendien niet vanzelf duurzamer: de herkomst van de benodigde elektriciteit maakt veel verschil."
+      ],
+      "why_it_matters": "Soms zit vooruitgang in beter onderhoud en slimmer hergebruik. Langdurig onderzoek helpt voorkomen dat stadslandbouw alleen op mooie beloften wordt beoordeeld.",
+      "image_query": "rooftop greenhouse tomatoes",
+      "image_alt": "Illustratief beeld bij Acht jaar daktuinonderzoek laat zien hoe tomatenteelt zuiniger kan",
+      "image_pick": 0,
+      "email_title": "Acht jaar daktuinonderzoek laat zien hoe tomatenteelt zuiniger kan",
+      "reading_time_minutes": 3
+    },
+    {
+      "category": "Mens",
+      "title": "Meer geld dan toegezegd voor landrechten van bosgemeenschappen",
+      "teaser": "Donoren melden 2,35 miljard dollar voor landrechten van inheemse volken en lokale gemeenschappen. Het doel was 1,7 miljard dollar.",
+      "source": "Mongabay",
+      "url": "https://news.mongabay.com/2026/10/international-pledge-to-fund-forest-rights-exceeds-target-but-direct-funding-remains-low/",
+      "article_slug": "financiering-landrechten-bosgemeenschappen",
+      "article_body": [
+        "Een vijfjarige internationale financieringsafspraak voor landrechten heeft volgens de deelnemende donoren meer geld opgeleverd dan toegezegd. Over 2021 tot en met 2025 rapporteren zij 2,35 miljard dollar.",
+        "Dat is een stap voor gemeenschappen die afhankelijk zijn van bossen en een belangrijke rol spelen bij hun bescherming. Maar geld beschikbaar stellen is nog niet hetzelfde als aantoonbaar veiliggestelde grondrechten.",
+        "Mongabay beschrijft ook de beperking: in 2025 ging slechts 7,2 procent rechtstreeks naar organisaties van inheemse volken en lokale gemeenschappen. Veel middelen lopen via tussenpartijen. Betrokken vertegenwoordigers vragen daarom om meer directe zeggenschap en transparantie."
+      ],
+      "why_it_matters": "Landrechten helpen mensen beslissen over hun leefgebied. Het behaalde financieringsdoel biedt kansen, maar wie het geld beheert en ontvangt blijft essentieel.",
+      "image_query": "indigenous community rainforest",
+      "image_alt": "Illustratief beeld bij Meer geld dan toegezegd voor landrechten van bosgemeenschappen",
+      "image_pick": 0,
+      "email_title": "Meer geld dan toegezegd voor landrechten van bosgemeenschappen"
+    }
+  ],
+  "headlines": [
+    {
+      "title": "Huishoudens consumeerden in augustus 2,1 procent meer",
+      "teaser": "Volgens voorlopige CBS-cijfers groeide de consumptie ten opzichte van augustus 2025, gecorrigeerd voor prijzen en koopdagen. De omstandigheden waren in september iets ongunstiger.",
+      "source": "CBS",
+      "url": "https://www.cbs.nl/nl-nl/nieuws/2026/41/consumptie-huishoudens-groeit-met-ruim-2-procent-in-augustus"
+    },
+    {
+      "title": "Kabinet, vakbonden en werkgevers hervatten overleg in het Catshuis",
+      "teaser": "Werkgevers en vakbonden reageerden positief na het gesprek van 7 oktober. Een constructief gesprek is een begin; concrete afspraken moeten nog volgen.",
+      "source": "EenVandaag",
+      "url": "https://eenvandaag.avrotros.nl/artikelen/polder-terug-in-het-catshuis-vakbonden-en-werkgevers-positief-na-gesprek-met-kabinet-165018"
+    },
+    {
+      "title": "Nobelprijs voor Literatuur wordt vandaag bekendgemaakt",
+      "teaser": "De bekendmaking staat op donderdag 8 oktober vanaf 13.00 uur Nederlandse tijd gepland. Bij het maken van dit ochtendconcept was de winnaar nog niet bekend.",
+      "source": "Nobel Prize Museum",
+      "url": "https://www.nobelprizemuseum.se/program/livesandningar-arets-nobelpriser/"
+    }
+  ]
+}
