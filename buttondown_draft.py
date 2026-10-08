@@ -267,22 +267,30 @@ def article_html(article, data=None, prefer_own_page=False):
     image_html = ""
     if image_url:
         alt = esc(article.get("image_alt") or article.get("title"))
-        image_html = f"""<a href="{url}" style="display:block;text-decoration:none;margin-bottom:12px;">
-          <img src="{esc(image_url)}" width="240" alt="{alt}"
-               style="display:block;width:240px;max-width:100%;height:auto;border:0;border-radius:4px;">
-        </a>"""
+        image_html = f"""<td width="25%" valign="top" style="width:25%;padding:0 0 0 18px;">
+          <a href="{url}" style="display:block;text-decoration:none;">
+            <img src="{esc(image_url)}" width="150" alt="{alt}"
+                 style="display:block;width:100%;max-width:150px;height:auto;border:0;border-radius:8px;">
+          </a>
+        </td>"""
 
     meta_parts = [part for part in (category, source) if part]
     meta = " &nbsp;·&nbsp; ".join(meta_parts)
-    teaser_html = "" if prefer_own_page else f'<p style="margin:0 0 10px;font:15px Arial,Helvetica,sans-serif;line-height:1.5;color:#3f4742;">{teaser}</p>'
+    teaser_html = f'<p style="margin:0 0 10px;font:14px Arial,Helvetica,sans-serif;line-height:1.5;color:#3f4742;">{teaser}</p>' if teaser else ""
     return f"""
       <div style="margin:0;padding:22px 0;border-bottom:1px solid rgba(23,63,49,.12);">
-        {image_html}
-        <h2 style="margin:0 0 10px;font:700 22px Georgia,'Times New Roman',serif;line-height:1.25;color:{INK};overflow-wrap:break-word;">
-          <a href="{url}" style="color:{INK} !important;text-decoration:none;">{title}</a>
-        </h2>
-        {teaser_html}
-        <p style="margin:0;font:700 11px Arial,Helvetica,sans-serif;line-height:1.4;color:{GREEN};">{meta}</p>
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;border-collapse:collapse;table-layout:fixed;">
+          <tr>
+            <td valign="top" style="padding:0;vertical-align:top;">
+              <h2 style="margin:0 0 8px;font:700 22px Georgia,'Times New Roman',serif;line-height:1.2;color:{INK};overflow-wrap:break-word;">
+                <a href="{url}" style="color:{INK} !important;text-decoration:none;">{title}</a>
+              </h2>
+              {teaser_html}
+              <p style="margin:0;font:700 11px Arial,Helvetica,sans-serif;line-height:1.4;color:{GREEN};">{meta}</p>
+            </td>
+            {image_html}
+          </tr>
+        </table>
       </div>
     """
 
@@ -396,12 +404,12 @@ def build_body(data, nl, international, headlines):
       {esc(edition_date_text(data))}
     </p>
 
-    <h1 style="margin:0;font:700 46px Georgia,'Times New Roman',serif;line-height:.98;letter-spacing:-.045em;color:{INK};">
-      Dit gebeurt ook<span style="color:{ACCENT};">.</span>
+    <h1 style="margin:0;font:700 46px Georgia,'Times New Roman',serif;line-height:1.06;letter-spacing:-.035em;color:{INK};">
+      Positief nieuws uit Nederland en de wereld
     </h1>
 
     <p style="margin:20px 0 0 0;font:17px Arial,Helvetica,sans-serif;line-height:1.55;color:#2d342f;">
-      Goed nieuws en wat je verder moet weten. In een paar minuten bijgepraat.
+      Het belangrijkste positieve nieuws van vandaag, uit Nederland en de wereld. In een paar minuten weet je wat er goed gaat én wat je verder moet weten.
     </p>
 
     <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
