@@ -380,14 +380,16 @@
     "height": 3628
   },
   "2026-10-08/telefoonvrije-school-meer-contact": {
-    "query": "id:8503167",
-    "pixabay_id": 8503167,
+    "query": "pexels:8456153",
+    "pixabay_id": null,
+    "source": "Pexels",
+    "pexels_id": 8456153,
     "image_path": "/images/artikelen/2026-10-08/telefoonvrije-school-meer-contact.jpg",
-    "page_url": "https://pixabay.com/photos/children-school-friends-fun-8503167/",
-    "photographer": "Anilsharma26",
-    "tags": "children, school, friends, fun, beautiful, asian",
-    "width": 6720,
-    "height": 4480
+    "page_url": "https://www.pexels.com/photo/boy-in-blue-and-white-striped-polo-shirt-standing-beside-boy-in-pink-polo-shirt-8456153/",
+    "photographer": "Norma Mortenson",
+    "tags": "",
+    "width": 0,
+    "height": 0
   },
   "2026-10-08/innovatiekrediet-twintig-miljoen-extra": {
     "query": "engineering innovation laboratory",
