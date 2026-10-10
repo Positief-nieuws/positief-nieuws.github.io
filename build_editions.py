@@ -1886,39 +1886,36 @@ def homepage_story_url(item, edition_date):
 def homepage_story_html(item, edition_date, section, index):
     title = item.get("title") or item.get("headline") or ""
     url = homepage_story_url(item, edition_date)
-    internal = url.startswith(SITE_URL + "/")
-    attrs = "" if internal else 'target="_blank" rel="noopener noreferrer"'
-    title_html = f'<a href="{esc(url)}" {attrs}>{esc(title)}</a>' if url else esc(title)
+    attrs = "" if url.startswith(SITE_URL + "/") else 'target="_blank" rel="noopener noreferrer"'
+    link = f'<a href="{esc(url)}" {attrs}>{esc(title)}</a>' if url else esc(title)
     teaser = item.get("teaser") or item.get("summary") or item.get("description") or ""
-    teaser_class = "teaser" if section == "headlines" else "teaser-one-line"
     category = canonical_category(category_label(item)) or category_label(item)
-    meta = []
-    if category:
-        slug = slugify_category(category)
-        meta.append(f'<a class="meta-category-link" href="/{esc(slug)}/">{esc(category)}</a>')
-    if item.get("source"):
-        meta.append(f'<span class="dot">{esc(item["source"])}</span>')
-    if reading_time(item):
-        meta.append(f'<span class="dot">{esc(reading_time(item))}</span>')
-    meta_html = '<div class="meta">' + '<span class="meta-sep" aria-hidden="true">·</span>'.join(meta) + '</div>' if meta else ""
-    thumb = ""
-    if section != "headlines":
-        slug = str(item.get("article_slug") or "").strip().strip("/")
-        cached = _load_pixabay_cache().get(f"{edition_date}/{slug}") or {}
-        image_path = cached.get("image_path") if cached.get("query") == item.get("image_query") else None
-        if image_path and Path(str(image_path).lstrip("/")).is_file() and url:
-            thumb = f'<a class="article-thumb" href="{esc(url)}" {attrs} aria-label="Lees {esc(title)}"><img src="{esc(image_path)}" alt="{esc(item.get("image_alt") or title)}" loading="lazy" decoding="async"></a>'
-    core = f'<div class="article-card-core"><div class="article-main"><h3 class="article-title">{title_html}</h3>'
-    if teaser:
-        core += f'<p class="{teaser_class}">{esc(teaser)}</p>'
-    core += meta_html + '</div>' + thumb + '</div>'
-    classes = "article-row" + (" has-thumb" if thumb else "")
+    meta = category_meta_html(item)
+    region = "Nederland" if section == "nl" else "Wereld"
+    badge = f'<div class="badge">{region} · {esc(category)}</div>'
+    image = ""
+    slug = str(item.get("article_slug") or "").strip().strip("/")
+    cached = _load_pixabay_cache().get(f"{edition_date}/{slug}") or {}
+    path = cached.get("image_path") if cached.get("query") == item.get("image_query") else None
+    if section != "headlines" and path and Path(str(path).lstrip("/")).is_file():
+        eager = section == "nl" and index == 0
+        image = f'<a class="article-thumb" href="{esc(url)}" {attrs} aria-label="Lees {esc(title)}"><img class="story-photo" src="{esc(path)}" alt="{esc(item.get("image_alt") or title)}" loading="{"eager" if eager else "lazy"}" decoding="async"></a>'
     if section == "headlines":
-        core = f'<div class="briefing-row"><div class="briefing-number">{index + 1:02d}</div>{core}</div>'
-        if url:
-            classes += " has-arrow"
-            core += f'<a class="article-arrow" href="{esc(url)}" {attrs} aria-label="Lees {esc(title)}">↗</a>'
-    return f'<article class="{classes}">{core}</article>'
+        return f'<article class="short"><span class="count">{index+1:02d} / 03</span><h3 class="article-title">{link}</h3><p class="teaser">{esc(teaser)}</p>{meta}</article>'
+    if section == "nl" and index < 3:
+        hero = index == 0
+        cls, body, heading = ("hero-card", "hero-body", "h2") if hero else ("side-card", "side-body", "h3")
+        return f'<article class="{cls}">{image}<div class="{body}">{badge}<{heading} class="article-title">{link}</{heading}>' + (f'<p>{esc(teaser)}</p>' if hero else "") + meta + '</div></article>'
+    return f'<article class="list-item">{image}<div>{badge}<h3 class="article-title">{link}</h3><p class="teaser-one-line">{esc(teaser)}</p>{meta}</div></article>'
+
+
+def homepage_cards_html(stories, edition_date, section):
+    cards = [homepage_story_html(item, edition_date, section, i) for i, item in enumerate(stories)]
+    if section == "nl":
+        top = '<section class="homepage-top" aria-label="Uitgelichte verhalen">' + ''.join(cards[:1]) + '<div class="sidecol">' + ''.join(cards[1:3]) + '</div></section>'
+        rest = '<section class="block"><div class="blocktitle"><div><h2>Meer goed nieuws uit Nederland</h2><div class="accent"></div></div><p>' + str(len(cards[3:])) + ' verhalen</p></div><div class="story-grid">' + ''.join(cards[3:]) + '</div></section>' if len(cards) > 3 else ""
+        return top + rest
+    return '<div class="' + ("shorts" if section == "headlines" else "story-grid") + '">' + ''.join(cards) + '</div>'
 
 
 def update_homepage(data):
@@ -1938,7 +1935,9 @@ def update_homepage(data):
     story_list = []
     for section, limit in [("nl", 6), ("int", 6), ("headlines", 3)]:
         stories = [item for item in items(data, section) if item.get("title") or item.get("headline")][:limit]
-        cards = "\n".join(homepage_story_html(item, edition_date, section, index) for index, item in enumerate(stories))
+        if section == "nl" and edition_date == "2026-10-08":
+            stories.sort(key=lambda item: item.get("article_slug") != "berghof-verbindt-limburgse-natuur")
+        cards = homepage_cards_html(stories, edition_date, section)
         block = f'<!-- homepage-{section}:start --><div id="{section}-grid" class="article-list"' + ("" if stories else " hidden") + f'>{cards}</div><!-- homepage-{section}:end -->'
         markup, count = re.subn(rf'<!-- homepage-{section}:start -->.*?<!-- homepage-{section}:end -->', lambda _: block, markup, flags=re.S)
         if count != 1:
