@@ -655,55 +655,65 @@ def resolve_pixabay_image(item, date_value):
         if cached_path.exists():
             return cached
 
-    api_key = os.environ.get("PIXABAY_API_KEY", "").strip()
-    if not api_key:
-        print(
-            f"WAARSCHUWING: image_query aanwezig bij '{item.get('title', slug)}', "
-            "maar PIXABAY_API_KEY ontbreekt. Artikel blijft zonder beeld."
+    if query.startswith("pexels:") and query[7:].isdigit():
+        photo_id = int(query[7:])
+        hit = {
+            "largeImageURL": f"https://images.pexels.com/photos/{photo_id}/pexels-photo-{photo_id}.jpeg?auto=compress&w=1280",
+            "pageURL": str(item.get("image_page_url") or f"https://www.pexels.com/photo/{photo_id}/"),
+            "user": str(item.get("image_photographer") or "Pexels-contributor"),
+            "source": "Pexels",
+            "pexels_id": photo_id,
+        }
+    else:
+        api_key = os.environ.get("PIXABAY_API_KEY", "").strip()
+        if not api_key:
+            print(
+                f"WAARSCHUWING: image_query aanwezig bij '{item.get('title', slug)}', "
+                "maar PIXABAY_API_KEY ontbreekt. Artikel blijft zonder beeld."
+            )
+            return None
+
+        params = {
+            "key": api_key,
+            "q": query,
+            "lang": "en",
+            "image_type": "photo",
+            "orientation": "horizontal",
+            "safesearch": "true",
+            "order": "popular",
+            "per_page": 20,
+        }
+        # Select a specific Pixabay photo when the editor supplies its ID.
+        if query.startswith("id:") and query[3:].isdigit():
+            params.pop("q", None)
+            params["id"] = int(query[3:])
+        search_url = PIXABAY_API_URL + "?" + urllib.parse.urlencode(params)
+        request = urllib.request.Request(
+            search_url,
+            headers={"User-Agent": "PositiefNieuws/1.0 (+https://positief-nieuws.nl/)"},
         )
-        return None
 
-    params = {
-        "key": api_key,
-        "q": query,
-        "lang": "en",
-        "image_type": "photo",
-        "orientation": "horizontal",
-        "safesearch": "true",
-        "order": "popular",
-        "per_page": 20,
-    }
-    # Select a specific Pixabay photo when the editor supplies its ID.
-    if query.startswith("id:") and query[3:].isdigit():
-        params.pop("q", None)
-        params["id"] = int(query[3:])
-    search_url = PIXABAY_API_URL + "?" + urllib.parse.urlencode(params)
-    request = urllib.request.Request(
-        search_url,
-        headers={"User-Agent": "PositiefNieuws/1.0 (+https://positief-nieuws.nl/)"},
-    )
+        try:
+            with urllib.request.urlopen(request, timeout=20) as response:
+                payload = json.loads(response.read().decode("utf-8"))
+        except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, json.JSONDecodeError) as exc:
+            print(f"WAARSCHUWING: Pixabay zoeken mislukt voor '{query}': {exc}")
+            return None
 
-    try:
-        with urllib.request.urlopen(request, timeout=20) as response:
-            payload = json.loads(response.read().decode("utf-8"))
-    except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, json.JSONDecodeError) as exc:
-        print(f"WAARSCHUWING: Pixabay zoeken mislukt voor '{query}': {exc}")
-        return None
+        hits = payload.get("hits") if isinstance(payload, dict) else None
+        if not isinstance(hits, list) or not hits:
+            print(f"WAARSCHUWING: geen Pixabay-foto gevonden voor '{query}'.")
+            return None
 
-    hits = payload.get("hits") if isinstance(payload, dict) else None
-    if not isinstance(hits, list) or not hits:
-        print(f"WAARSCHUWING: geen Pixabay-foto gevonden voor '{query}'.")
-        return None
+        pick_raw = item.get("image_pick", 0)
+        try:
+            pick = max(0, int(pick_raw))
+        except (TypeError, ValueError):
+            pick = 0
+        if pick >= len(hits):
+            pick = 0
 
-    pick_raw = item.get("image_pick", 0)
-    try:
-        pick = max(0, int(pick_raw))
-    except (TypeError, ValueError):
-        pick = 0
-    if pick >= len(hits):
-        pick = 0
-
-    hit = hits[pick]
+        hit = hits[pick]
     image_url = str(hit.get("largeImageURL") or hit.get("webformatURL") or "").strip()
     if not image_url:
         print(f"WAARSCHUWING: Pixabay-resultaat voor '{query}' bevat geen bruikbare afbeeldings-URL.")
@@ -738,6 +748,7 @@ def resolve_pixabay_image(item, date_value):
     result = {
         "query": query,
         "pixabay_id": hit.get("id"),
+        **({"source": "Pexels", "pexels_id": hit["pexels_id"]} if hit.get("source") == "Pexels" else {}),
         "image_path": "/" + target_path.as_posix(),
         "page_url": str(hit.get("pageURL") or "https://pixabay.com/").strip(),
         "photographer": str(hit.get("user") or "Pixabay-contributor").strip(),
@@ -747,7 +758,7 @@ def resolve_pixabay_image(item, date_value):
     }
     cache[cache_key] = result
     _write_pixabay_cache(cache)
-    print(f"Pixabay-foto opgeslagen: {target_path} (zoekterm: {query!r})")
+    print(f"Foto opgeslagen: {target_path} (beeldkeuze: {query!r})")
     return result
 
 
@@ -760,9 +771,10 @@ def article_image_html(item, image_data):
     page_url = esc(image_data.get("page_url") or "https://pixabay.com/")
     photographer = esc(image_data.get("photographer") or "Pixabay-contributor")
     alt = esc(item.get("image_alt") or item.get("title") or "Illustratief beeld")
+    image_source = esc(image_data.get("source") or "Pixabay")
     return f"""<figure class="article-figure">
         <img src="{image_path}" alt="{alt}" loading="eager" fetchpriority="high">
-        <figcaption>Illustratief beeld · Foto: {photographer} via <a href="{page_url}" target="_blank" rel="noopener noreferrer">Pixabay</a>.</figcaption>
+        <figcaption>Illustratief beeld · Foto: {photographer} via <a href="{page_url}" target="_blank" rel="noopener noreferrer">{image_source}</a>.</figcaption>
       </figure>"""
 
 
