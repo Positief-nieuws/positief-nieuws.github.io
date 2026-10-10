@@ -351,7 +351,7 @@ def header_html(active=""):
     <nav class="app-nav" id="mobile-navigation" aria-label="Hoofdnavigatie">
       <div class="app-nav-inner">
         <a class="nav-link{active_class('today')}" href="/">Vandaag</a>
-        <a class="nav-link{active_class('archive')}" href="/edities/">Archief</a>
+        <a class="nav-link{active_class('archive')}" href="/edities/">Edities</a>
         <a class="nav-link{active_class('topics')}" href="/onderwerpen/">Onderwerpen</a>
         <a class="nav-link{active_class('about')}" href="/over/">Over</a>
         <a href="/contact/" onclick="if(window.sa_event)window.sa_event('contact_click')">Contact</a>
@@ -1779,9 +1779,6 @@ def render_topic_page(topic):
       </div>
     </section>
 
-    {signals_html}
-    {context_html}
-
     <section class="section topic-archive">
       <div class="shell">
         <div class="topic-archive-heading">
@@ -1793,6 +1790,8 @@ def render_topic_page(topic):
       </div>
     </section>
 
+    {signals_html}
+    {context_html}
     {render_topic_why(label)}
   </main>
   <footer>Positief nieuws · Dit gebeurt ook. · <a href="/contact/" onclick="if(window.sa_event)window.sa_event('contact_click')">Contact</a> · <a href="/tip/" onclick="if(window.sa_event)window.sa_event('tip_redactie_click')">Tip de redactie</a></footer>
@@ -2148,6 +2147,61 @@ def refresh_articles():
     refresh_branding()
 
 
+
+SITE_THEME_CSS = r"""
+:root{--paper:#fffcf7;--ink:#182e35;--green:#176e5c;--green-dark:#0e5947;--accent:#d6a13a;--muted:#657570;--line: #dfe8e2;--line2:#e4ebe6;--header:1120px}
+body{background:#fffcf7;color:#182e35;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+body.topics-index h1,body.topics-index h2,body.topics-index h3,body h1,body h2,body h3,body h4,body .archive-title,body .topic-title{font-family:inherit!important;font-weight:800;letter-spacing:-.035em}
+.site-header{background:#fff!important;border-bottom:1px solid #e1e9e5;position:sticky;top:0;z-index:50;padding:0!important}
+.site-header .header-shell{width:min(calc(100% - 56px),1120px);padding:0;margin:auto;max-width:1120px}
+.site-header .header-row{display:flex;align-items:center;justify-content:space-between;gap:24px;height:76px;min-height:76px;padding:0}
+.site-header .brand{display:inline-flex;align-items:center;gap:12px;font:800 25px/1.1 Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;letter-spacing:-1px;text-decoration:none;color:#182e35}
+.site-header .brand-sun{width:32px;height:32px;flex:0 0 32px;background:#fff;filter:brightness(1.09);mix-blend-mode:multiply}
+.site-header .app-nav-inner{display:flex;align-items:center;gap:30px}.site-header .app-nav a{font-size:13px;font-weight:800;text-decoration:none;color:#182e35}
+.site-header .app-nav a[href="/onderwerpen/"]{order:1}.site-header .app-nav a[href="/edities/"]{order:2}.site-header .app-nav a[href="/over/"]{order:3}.site-header .app-nav a[href="/contact/"]{order:4}.site-header .header-cta{order:5;background:#176e5c;color:#fff!important;border:0;border-radius:999px;display:inline-flex;gap:8px;align-items:center;justify-content:center;min-height:40px;padding:0 18px;box-shadow:none}.header-cta-icon{width:16px;height:16px}
+.site-header .app-nav a.is-active{color:#0e5947}.site-header .mobile-menu-toggle{display:none}
+.pn-topicbar{background:#fff;border-bottom:1px solid #e1e9e5}.pn-topics{max-width:1120px;margin:auto;padding:13px 0;display:flex;flex-wrap:wrap;gap:9px;align-items:center}.pn-topics a{font-size:12px;font-weight:750;text-decoration:none;border:1px solid #e1e9e5;background:#f4f8f4;padding:7px 12px;border-radius:999px;color:#35574b}.pn-topics a:hover,.pn-topics a[aria-current="page"]{background:#176e5c;border-color:#176e5c;color:#fff}
+body:not(.pn-home) .hero{padding:45px 0 30px}body:not(.pn-home) .hero:after{display:none}body:not(.pn-home) h1{font-size:clamp(34px,4vw,52px);line-height:1.1}body:not(.pn-home) .lead,body:not(.pn-home) .subtitle{font-size:17px;line-height:1.65;color:#52645d}body:not(.pn-home) .kicker,body:not(.pn-home) .eyebrow{color:#176e5c;letter-spacing:.08em;font-size:11px;font-weight:800}
+body:not(.pn-home) .section{padding:30px 0 40px}body:not(.pn-home) .section.alt{background:#f0f5ee}body:not(.pn-home) .heading,body:not(.pn-home) .topic-archive-heading{border-bottom:2px solid #dfe8e2;padding-bottom:14px}body:not(.pn-home) .heading h2,body:not(.pn-home) .topic-archive-heading h2{font-size:26px;line-height:1.2}
+body:not(.pn-home) .article:not(main.article){background:#fff;border:1px solid #e1e9e5;border-radius:16px;padding:20px;margin:12px 0}body:not(.pn-home) .article h3{font-size:21px;line-height:1.25}body:not(.pn-home) .article .arrow{right:14px;top:14px}.article-thumb{border-radius:12px}
+.topic-signals{background:#f0f5ee;padding:40px 0;border-color:#dfe8e2}.topic-signal{border-radius:17px;background:#fff;border-color:#dfe8e2}.topic-signal-note{border-radius:10px;background:#fff}.topic-why{background:#eaf2e8}.topic-dossier-meta{border-color:#dfe8e2}.topic-region-head{border-color:#dfe8e2}
+body:not(.pn-home) .archive-list{border:0;display:grid;gap:12px}body:not(.pn-home) .archive-item{background:#fff;border:1px solid #e1e9e5;border-radius:15px;padding:20px}.topic-card{border-radius:18px!important;border-color:#dfe8e2!important;background:#fff!important}.topic-card h2{font-family:inherit}.topic-card:hover{box-shadow:0 8px 24px #173f310d}
+.support-card,.callout,.support-teaser,.article-share,.brand-note{border-radius:18px!important}.support-card,.callout,.article-share{background:#fff!important;border-color:#dfe8e2!important}.brand-note{background:#eaf2e8!important}.article-newsletter{background:#176e5c;border-radius:18px}.support-button{border-radius:999px!important;background:#176e5c!important}.article-body{font-family:inherit;line-height:1.75}.article-body h2{font-family:inherit}.article-figure-media{border-radius:18px;overflow:hidden}.site-footer,body:not(.pn-home)>footer{background:#f0f5ee;color:#657570;padding:28px 15px;margin-top:30px;border-top:1px solid #dfe8e2}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #d6a13a;outline-offset:4px}
+@media(max-width:1180px){.pn-topics{margin-inline:28px}}
+@media(max-width:900px) and (min-width:761px){.site-header .app-nav-inner{gap:15px}.site-header .brand{font-size:21px}.site-header .header-cta{padding:0 12px}}
+@media(max-width:760px){.site-header .header-shell{width:calc(100% - 38px)}.site-header .header-row{height:68px;min-height:68px;position:relative;gap:12px}.site-header .brand{font-size:22px;gap:10px}.site-header .mobile-menu-toggle{display:inline-flex;align-items:center;justify-content:center;gap:8px;margin-left:auto;padding:0 13px;min-height:42px;border:1px solid #dfe8e2;border-radius:999px;background:#fff;color:#0e5947}.menu-icon{display:flex;width:17px;flex-direction:column;gap:4px}.menu-line{display:block;width:17px;height:1.5px;background:currentColor;border-radius:999px}.menu-label{font-size:12px;font-weight:750}.site-header .app-nav{display:none;position:absolute;top:calc(100% + 1px);left:-19px;right:-19px;padding:12px 19px;background:#fff;border:1px solid #e1e9e5;box-shadow:0 14px 25px #182e3512;border-radius:0 0 16px 16px;z-index:60}.site-header.menu-open .app-nav{display:block}.site-header .app-nav-inner{flex-direction:column;align-items:stretch;gap:2px}.site-header .app-nav a{display:flex;align-items:center;min-height:42px;padding:0 13px;border-radius:10px}.site-header .header-cta{justify-content:center!important;margin-top:5px}.pn-topics{margin:0;padding:12px 19px;gap:7px}.pn-topics a{font-size:11px;padding:6px 10px}body:not(.pn-home) .hero{padding:30px 0 24px}body:not(.pn-home) .hero h1{font-size:36px}body:not(.pn-home) .lead,body:not(.pn-home) .subtitle{font-size:15px}body:not(.pn-home) .article:not(main.article){padding:16px;margin:10px 0}body:not(.pn-home) .article h3{font-size:18px}.article-layout{gap:13px}.article-thumb{flex:0 0 100px;width:100px;height:85px}body:not(.pn-home) .article .arrow{position:static;margin-top:10px}.topic-signal-grid{grid-template-columns:1fr}.topic-archive-heading{flex-direction:column;align-items:flex-start;gap:8px}.topic-signals{padding:30px 0}.topic-signal{min-height:0}.topic-archive-heading h2{font-size:24px!important}body:not(.pn-home) .archive-item{grid-template-columns:82px minmax(0,1fr) 20px;gap:12px;padding:16px}.content-shell{max-width:calc(100% - 38px)}
+}
+"""
+
+def refresh_site_design():
+    """Apply the shared design to both generated and existing pages without changing content."""
+    Path("site-theme.css").write_text(SITE_THEME_CSS, encoding="utf-8")
+    topics = [("Mens", "mens"), ("Natuur & klimaat", "natuur-en-klimaat"), ("Gezondheid", "gezondheid"), ("Energie & innovatie", "energie-en-innovatie"), ("Wetenschap", "wetenschap"), ("Cultuur", "cultuur"), ("Economie", "economie"), ("Sport", "sport")]
+    for path in sorted(Path(".").rglob("*.html")):
+        text = path.read_text(encoding="utf-8")
+        if not re.search(r'<header\b[^>]*class="site-header"', text):
+            continue  # Historical redirect pages keep their redirect and canonical target.
+        home = path == Path("index.html")
+        text = re.sub(r'<!-- site-design:start -->.*?<!-- site-design:end -->', '', text, flags=re.S)
+        if not home:
+            active = "about" if path.parts[0] == "over" else "archive" if path.parts[0] == "edities" else "topics" if path.parts[0] in {"onderwerpen", *(slug for _, slug in topics)} else ""
+            markup = header_html(active)
+            header, menu_script = markup.split("<script>", 1)
+            # Retain existing scripts; pages without menu logic receive the shared controller.
+            scripts = re.findall(r'<script\b[^>]*>(.*?)</script>', text, flags=re.S)
+            has_menu = any('mobile-menu-toggle' in script for script in scripts)
+            text = re.sub(r'<header\b[^>]*class="site-header"[^>]*>.*?</header>', lambda _: header.rstrip(), text, count=1, flags=re.S)
+            links = ''.join(f'<a href="/{slug}/"' + (' aria-current="page"' if path.parts[0] == slug else '') + f'>{esc(label)}</a>' for label, slug in topics)
+            bar = f'<nav class="pn-topicbar" aria-label="Nieuwsonderwerpen"><div class="pn-topics">{links}</div></nav>'
+            text = text.replace('</header>', '</header><!-- site-design:start -->' + bar + ('' if has_menu else '<script>' + menu_script) + '<!-- site-design:end -->', 1)
+        elif 'pn-home' not in re.search(r'<body\b[^>]*>', text).group():
+            text = re.sub(r'<body\b([^>]*)>', lambda m: '<body' + m.group(1) + ' class="pn-home">', text, count=1)
+        text = re.sub(r'<link rel="stylesheet" href="/site-theme.css[^"]*">', '', text)
+        text = text.replace('</head>', '<link rel="stylesheet" href="/site-theme.css?v=20261010b"></head>', 1)
+        path.write_text(text, encoding="utf-8")
+    print("Gedeelde vormgeving toegepast op alle inhoudspagina’s.")
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--validate-current", action="store_true", help="Valideer alleen nieuws.json en stop daarna.")
@@ -2169,6 +2223,8 @@ def main():
             build_site()
             refresh_special_growth()
             refresh_branding()
+        if not args.validate_current:
+            refresh_site_design()
     except Exception as exc:
         print(f"FOUT: {exc}", file=sys.stderr)
         sys.exit(1)
