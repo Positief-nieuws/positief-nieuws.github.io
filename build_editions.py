@@ -2192,9 +2192,7 @@ def refresh_site_design():
             scripts = re.findall(r'<script\b[^>]*>(.*?)</script>', text, flags=re.S)
             has_menu = any('mobile-menu-toggle' in script for script in scripts)
             text = re.sub(r'<header\b[^>]*class="site-header"[^>]*>.*?</header>', lambda _: header.rstrip(), text, count=1, flags=re.S)
-            links = ''.join(f'<a href="/{slug}/"' + (' aria-current="page"' if path.parts[0] == slug else '') + f'>{esc(label)}</a>' for label, slug in topics)
-            bar = f'<nav class="pn-topicbar" aria-label="Nieuwsonderwerpen"><div class="pn-topics">{links}</div></nav>'
-            text = text.replace('</header>', '</header><!-- site-design:start -->' + bar + ('' if has_menu else '<script>' + menu_script) + '<!-- site-design:end -->', 1)
+            text = text.replace('</header>', '</header><!-- site-design:start -->' + ('' if has_menu else '<script>' + menu_script) + '<!-- site-design:end -->', 1)
         elif 'pn-home' not in re.search(r'<body\b[^>]*>', text).group():
             text = re.sub(r'<body\b([^>]*)>', lambda m: '<body' + m.group(1) + ' class="pn-home">', text, count=1)
         text = re.sub(r'<link rel="stylesheet" href="/site-theme.css[^"]*">', '', text)
