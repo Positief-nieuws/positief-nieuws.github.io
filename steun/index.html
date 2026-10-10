@@ -169,17 +169,72 @@
       .support-button { width: 100%; }
     }
   </style>
-<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64"><link rel="icon" type="image/png" href="/favicon.png" sizes="96x96"><link rel="apple-touch-icon" href="/sun-apple-touch-icon.png" sizes="180x180"><link rel="manifest" href="/manifest.json?v=5"><meta property="og:site_name" content="Positief nieuws"><meta name="application-name" content="Positief nieuws"><!-- edition-analytics:start --><script src="/edition-analytics.js?v=1" data-page-type="other" data-edition=""></script><!-- edition-analytics:end --></head>
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64"><link rel="icon" type="image/png" href="/favicon.png" sizes="96x96"><link rel="apple-touch-icon" href="/sun-apple-touch-icon.png" sizes="180x180"><link rel="manifest" href="/manifest.json?v=5"><meta property="og:site_name" content="Positief nieuws"><meta name="application-name" content="Positief nieuws"><!-- edition-analytics:start --><script src="/edition-analytics.js?v=1" data-page-type="other" data-edition=""></script><!-- edition-analytics:end --><link rel="stylesheet" href="/site-theme.css?v=20261010b"></head>
 <body>
   <header class="site-header">
-    <div class="header-shell header-row">
-      <a class="brand" href="/" aria-label="Positief nieuws homepage">
-        <img class="brand-sun" src="/sun-icon-512.png" width="32" height="32" alt="" aria-hidden="true">
-        <span>Positief nieuws</span>
-      </a>
-      <a class="back-link" href="/">← Terug naar Positief nieuws</a>
-    </div>
-  </header>
+  <div class="header-shell header-row">
+    <a class="brand" href="/" aria-label="Positief nieuws homepage">
+      <img class="brand-sun" src="/sun-icon-512.png" width="32" height="32" alt="" aria-hidden="true">
+      <span>Positief nieuws</span>
+    </a>
+
+    <button class="mobile-menu-toggle" type="button" aria-label="Menu openen" aria-expanded="false" aria-controls="mobile-navigation">
+      <span class="menu-icon" aria-hidden="true">
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+      </span>
+      <span class="menu-label">Menu</span>
+    </button>
+
+    <nav class="app-nav" id="mobile-navigation" aria-label="Hoofdnavigatie">
+      <div class="app-nav-inner">
+        <a class="nav-link" href="/">Vandaag</a>
+        <a class="nav-link" href="/edities/">Edities</a>
+        <a class="nav-link" href="/onderwerpen/">Onderwerpen</a>
+        <a class="nav-link" href="/over/">Over</a>
+        <a href="/contact/" onclick="if(window.sa_event)window.sa_event('contact_click')">Contact</a>
+        <a class="header-cta" href="/#nieuwsbrief"><svg class="header-cta-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 6.5h17a1 1 0 0 1 1 1v9a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2v-9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.7"></path><path d="m4.5 8 7.5 6 7.5-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>In je inbox</span></a>
+      </div>
+    </nav>
+  </div>
+</header><!-- site-design:start --><nav class="pn-topicbar" aria-label="Nieuwsonderwerpen"><div class="pn-topics"><a href="/mens/">Mens</a><a href="/natuur-en-klimaat/">Natuur &amp; klimaat</a><a href="/gezondheid/">Gezondheid</a><a href="/energie-en-innovatie/">Energie &amp; innovatie</a><a href="/wetenschap/">Wetenschap</a><a href="/cultuur/">Cultuur</a><a href="/economie/">Economie</a><a href="/sport/">Sport</a></div></nav><script>
+  (function () {
+    const header = document.querySelector(".site-header");
+    const toggle = document.querySelector(".mobile-menu-toggle");
+    const nav = document.querySelector(".app-nav");
+    if (!header || !toggle || !nav) return;
+
+    function setMenu(open) {
+      header.classList.toggle("menu-open", open);
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      toggle.setAttribute("aria-label", open ? "Menu sluiten" : "Menu openen");
+    }
+
+    toggle.addEventListener("click", function () {
+      setMenu(!header.classList.contains("menu-open"));
+    });
+
+    nav.addEventListener("click", function (event) {
+      if (event.target.closest("a")) setMenu(false);
+    });
+
+    document.addEventListener("click", function (event) {
+      if (header.classList.contains("menu-open") && !header.contains(event.target)) setMenu(false);
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        setMenu(false);
+        toggle.focus();
+      }
+    });
+
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 760) setMenu(false);
+    });
+  })();
+</script><!-- site-design:end -->
 
   <main>
     <div class="content-shell">
