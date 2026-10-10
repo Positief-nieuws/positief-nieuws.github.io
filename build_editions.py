@@ -1936,7 +1936,7 @@ def update_homepage(data):
     for section, limit in [("nl", 6), ("int", 6), ("headlines", 3)]:
         stories = [item for item in items(data, section) if item.get("title") or item.get("headline")][:limit]
         if section == "nl" and edition_date == "2026-10-08":
-            stories.sort(key=lambda item: item.get("article_slug") != "berghof-verbindt-limburgse-natuur")
+            stories.sort(key=lambda item: {"telefoonvrije-school-meer-contact": 0, "berghof-verbindt-limburgse-natuur": 1}.get(item.get("article_slug"), 2))
         cards = homepage_cards_html(stories, edition_date, section)
         block = f'<!-- homepage-{section}:start --><div id="{section}-grid" class="article-list"' + ("" if stories else " hidden") + f'>{cards}</div><!-- homepage-{section}:end -->'
         markup, count = re.subn(rf'<!-- homepage-{section}:start -->.*?<!-- homepage-{section}:end -->', lambda _: block, markup, flags=re.S)
