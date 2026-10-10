@@ -1928,7 +1928,7 @@ def update_homepage(data):
     datetime.strptime(edition_date, "%Y-%m-%d")
     markup = homepage.read_text(encoding="utf-8")
     graph = [
-        {"@type": "Organization", "@id": SITE_URL + "/#publisher", "name": "Positief nieuws", "url": SITE_URL + "/"},
+        {"@type": "Organization", "@id": SITE_URL + "/#publisher", "name": "Positief nieuws", "url": SITE_URL + "/", "logo": {"@type": "ImageObject", "url": SITE_URL + "/sun-icon-512.png", "width": 512, "height": 512}},
         {"@type": "WebSite", "@id": SITE_URL + "/#website", "url": SITE_URL + "/", "name": "Positief nieuws", "inLanguage": "nl-NL", "publisher": {"@id": SITE_URL + "/#publisher"}},
         {"@type": "CollectionPage", "@id": SITE_URL + "/#homepage", "url": SITE_URL + "/", "name": "Positief nieuws uit Nederland en de wereld", "description": "Twaalf positieve nieuwsverhalen uit Nederland en de wereld, plus drie belangrijke nieuwsitems. Elke maandag en donderdag een nieuwe editie.", "inLanguage": "nl-NL", "isPartOf": {"@id": SITE_URL + "/#website"}, "publisher": {"@id": SITE_URL + "/#publisher"}, "dateModified": edition_date, "relatedLink": f"{SITE_URL}/edities/{edition_date}/", "mainEntity": {"@id": SITE_URL + "/#edition-stories"}},
     ]
