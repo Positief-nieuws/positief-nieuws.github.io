@@ -111,21 +111,21 @@
   ],
   "int": [
     {
-      "category": "Mens",
-      "title": "Meer dan zeventig kinderen in Sudan terug bij hun familie na vrijlating",
-      "teaser": "UNICEF meldt dat vrijgelaten kinderen met hun familie zijn herenigd en begeleiding blijven krijgen. Sommige kinderen gaan weer naar school of volgen een vakopleiding.",
+      "category": "Natuur & klimaat",
+      "title": "Verkeersheffing draagt bij aan schonere lucht in Manhattan",
+      "email_title": "Verkeersheffing draagt bij aan schonere lucht in Manhattan",
+      "article_slug": "manhattan-verkeersheffing-minder-fijnstof",
+      "source": "Columbia Climate School",
+      "url": "https://news.climate.columbia.edu/2026/10/07/study-nyc-congestion-pricing-air-quality/",
+      "image_query": "id:7307565",
+      "image_alt": "Skyline van Lower Manhattan; illustratief beeld",
+      "teaser": "Nieuw onderzoek koppelt het eerste jaar van de verkeersheffing aan ongeveer 13 procent minder fijnstof binnen de zone. De onderzoekers hielden rekening met het weer en regionale ontwikkelingen.",
       "article_body": [
-        "Voor een kind dat van zijn familie is gescheiden, is thuiskomen een ingrijpende stap. UNICEF meldt dat in Sudan inmiddels meer dan zeventig kinderen zijn vrijgelaten en met hun familie herenigd. Getrainde sociaal werkers blijven hen begeleiden.",
-        "In een nieuw interview vertelt sociaal werker Zahia Awad hoe zij families opspoort en kinderen helpt hun leven weer op te bouwen. Acht kinderen die zij volgde, hervatten na hun vrijlating school, vakonderwijs of hun sociale leven.",
-        "Deze voorbeelden zijn geen landelijke effectmeting. De oorlog en de risico’s voor kinderen duren voort. Het positieve nieuws is dat voor deze kinderen hereniging en langdurige steun daadwerkelijk zijn georganiseerd."
+        "De lucht in het centrum van Manhattan is schoner geworden sinds New York een heffing invoerde voor voertuigen die de drukke binnenstad inrijden. Een op 7 oktober gepubliceerd onderzoek schat dat de maatregel de concentratie fijnstof binnen de zone met ongeveer 13 procent verlaagde.",
+        "De onderzoekers vergeleken metingen uit 2025 met eerdere jaren en met locaties buiten de zone. Ze corrigeerden voor het weer, seizoenen en regionale trends. De geschatte verbetering past bij de afname van het verkeer.",
+        "Het onderzoek meet luchtkwaliteit, niet hoeveel mensen daardoor gezonder zijn geworden. Mogelijke verschuiving van vervuiling naar omliggende wijken vraagt om verdere monitoring."
       ],
-      "why_it_matters": "Opvang stopt niet bij vrijlating. Contact met familie, onderwijs en begeleiding geven kinderen mogelijkheden om opnieuw aansluiting te vinden.",
-      "source": "UNICEF Sudan",
-      "url": "https://www.unicef.org/sudan/stories/walking-alongside-children-road-recovery",
-      "article_slug": "sudan-kinderen-familie-hereniging",
-      "image_query": "",
-      "image_alt": "Illustratief beeld bij Meer dan zeventig kinderen in Sudan terug bij hun familie na vrijlating",
-      "email_title": "Meer dan zeventig kinderen in Sudan terug bij hun familie na vrijlating"
+      "why_it_matters": "Een drukke stad laat een meetbare verbetering zien na een concrete verkeersmaatregel. Dat geeft andere steden informatie over wat kan werken."
     },
     {
       "category": "Natuur & klimaat",
@@ -158,8 +158,8 @@
       "source": "UW Medicine / Phys.org",
       "url": "https://phys.org/news/2026-10-dna-typewriter-cells-history-mouse.html",
       "article_slug": "dna-logboek-muizenembryo",
-      "image_query": "",
-      "image_alt": "Illustratief beeld bij DNA-logboek laat zien hoe één cel uitgroeit tot een muizenembryo",
+      "image_query": "id:563423",
+      "image_alt": "Laboratoriummedewerker verwerkt een monster; illustratief beeld",
       "email_title": "DNA-logboek laat zien hoe één cel uitgroeit tot een muizenembryo",
       "reading_time_minutes": 5
     },
@@ -176,8 +176,8 @@
       "source": "WHO Afrika",
       "url": "https://www.afro.who.int/countries/angola/news/floods-hope-recovery-through-psychosocial-support",
       "article_slug": "angola-gezinnen-psychosociale-steun",
-      "image_query": "",
-      "image_alt": "Illustratief beeld bij Gezinnen in Angola krijgen steun die ook de emotionele schade van overstromingen erkent",
+      "image_query": "id:2847508",
+      "image_alt": "Handen op elkaar als symbool van steun en verbondenheid; illustratief beeld",
       "email_title": "Gezinnen in Angola krijgen steun die ook de emotionele schade van overstromingen erkent",
       "reading_time_minutes": 4
     },
@@ -194,8 +194,8 @@
       "source": "VN / UNDP Moldavië",
       "url": "https://moldova.un.org/en/324204-vadul-ra%C8%99cov-bell-tower-restored-european-union-and-undp-support-inaugurated-together",
       "article_slug": "moldavie-klokkentoren-gerestaureerd",
-      "image_query": "",
-      "image_alt": "Illustratief beeld bij Vier eeuwen oude klokkentoren in Moldavië gerestaureerd en heropend",
+      "image_query": "id:5339329",
+      "image_alt": "Detail van een kerkklok; illustratief beeld, niet de gerestaureerde toren",
       "email_title": "Vier eeuwen oude klokkentoren in Moldavië gerestaureerd en heropend"
     },
     {
@@ -211,8 +211,8 @@
       "source": "Good News Network / International Animal Rescue",
       "url": "https://www.goodnewsnetwork.org/sloth-bear-given-a-name-by-julia-roberts-is-flourishing/",
       "article_slug": "odum-lippenbeer-langdurige-zorg",
-      "image_query": "",
-      "image_alt": "Illustratief beeld bij Geredde lippenbeer Odum krijgt ook zeventien jaar later zorg op maat",
+      "image_query": "id:1341164",
+      "image_alt": "Lippenbeer in een dierentuin; illustratief beeld, niet Odum",
       "email_title": "Geredde lippenbeer Odum krijgt ook zeventien jaar later zorg op maat"
     }
   ],
