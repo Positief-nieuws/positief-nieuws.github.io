@@ -1803,7 +1803,22 @@ body{background:#fffcf7;color:#182e35;font-family:Inter,ui-sans-serif,-apple-sys
 .site-header{background:#f7f5ec}.app-nav #nav-about{order:3}.app-nav #nav-contact{order:4}
 @media(min-width:761px){#nl-grid > .block .story-grid > .list-item:last-child:nth-child(odd){grid-column:1/-1}}
 </style><style id="mobile-story-intros">@media(max-width:760px){#today-view .hero-body>p,#today-view .list-item .teaser-one-line,#today-view .short .teaser{display:none!important}}</style>
-<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64"><link rel="icon" type="image/png" href="/favicon.png" sizes="96x96"><link rel="apple-touch-icon" href="/sun-apple-touch-icon.png" sizes="180x180"><link rel="manifest" href="/manifest.json?v=5"><meta property="og:site_name" content="Positief nieuws"><meta name="application-name" content="Positief nieuws"><!-- edition-analytics:start --><script src="/edition-analytics.js?v=1" data-page-type="homepage" data-edition="2026-10-12"></script><!-- edition-analytics:end --><link rel="stylesheet" href="/site-theme.css?v=20261010b"></head>
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64"><link rel="icon" type="image/png" href="/favicon.png" sizes="96x96"><link rel="apple-touch-icon" href="/sun-apple-touch-icon.png" sizes="180x180"><link rel="manifest" href="/manifest.json?v=5"><meta property="og:site_name" content="Positief nieuws"><meta name="application-name" content="Positief nieuws"><!-- edition-analytics:start --><script src="/edition-analytics.js?v=1" data-page-type="homepage" data-edition="2026-10-12"></script><!-- edition-analytics:end --><link rel="stylesheet" href="/site-theme.css?v=20261010b"><style id="edition-preview-style">
+.home-archive-list .edition-preview{display:flex;flex-direction:column;align-items:stretch;gap:0;padding:20px 19px 18px;text-align:left;min-width:0;border:1px solid var(--line);border-radius:17px;background:#fff;overflow:hidden;transition:border-color .18s,box-shadow .18s}
+.home-archive-list .edition-preview:hover{text-decoration:none;border-color:#a4bfb4;box-shadow:0 5px 18px #182e350a}
+.edition-preview-mast{display:flex;align-items:center;justify-content:space-between;font-size:12px;font-weight:850;letter-spacing:-.3px;border-bottom:1px solid var(--line);padding-bottom:10px;color:var(--green)}
+.edition-preview-sun{color:#d6a141;font-size:23px;line-height:1}
+.edition-preview-date{margin:13px 0 15px!important;font-size:20px!important;line-height:1.25!important;font-weight:850!important;letter-spacing:-.5px}
+.edition-preview-photos{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:4px;height:124px;border-radius:9px;overflow:hidden;background:var(--soft)}
+.edition-preview-photos img{width:100%;height:124px;min-width:0;object-fit:cover}
+.edition-preview-counts{margin:13px 0 10px;font-size:10px;line-height:1.6;color:var(--muted)}
+.edition-preview-stories{list-style:none;padding:0;margin:0 0 18px;flex:1}
+.edition-preview-stories li{font-size:13px;line-height:1.45;font-weight:700;padding:8px 0 8px 12px;position:relative;border-bottom:1px solid #eef2ee}
+.edition-preview-stories li:before{content:"";position:absolute;left:0;top:15px;width:4px;height:4px;background:var(--yellow);border-radius:50%}
+.edition-preview-stories li:last-child{border:0}
+.edition-preview-open{display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:800;color:var(--green);padding-top:12px;border-top:1px solid var(--line)}
+@media(max-width:760px){.home-archive-list .edition-preview{padding:18px}.edition-preview-photos,.edition-preview-photos img{height:138px}.edition-preview-date{font-size:21px!important}.edition-preview-stories li{font-size:14px}}
+</style></head>
 <body class="pn-home"><a class="skip" href="#main">Ga naar inhoud</a>
 
   <script>
@@ -3115,55 +3130,48 @@ body{background:#fffcf7;color:#182e35;font-family:Inter,ui-sans-serif,-apple-sys
 
 
     async function loadHomeArchivePreview(currentEditionDate) {
-
       const state = $("#home-archive-state");
       const list = $("#home-archive-list");
       if (!state || !list || list.dataset.loaded === "true") return;
-
       try {
         const response = await fetch("./edities/index.json", { cache: "no-store" });
-        if (!response.ok) throw new Error(`edities/index.json gaf status ${response.status}`);
-
+        if (!response.ok) throw new Error("Archief niet beschikbaar");
         const entries = (await response.json())
           .filter(entry => /^\d{4}-\d{2}-\d{2}$/.test(entry?.date || ""))
-          .filter(entry => entry.date !== currentEditionDate)
-          .slice(0, 3);
-
-        list.innerHTML = "";
-
-        for (const entry of entries) {
-          let label = "Lees deze editie";
-
+          .filter(entry => entry.date !== currentEditionDate).slice(0, 3);
+        const imageCache = await loadArticleImageCache();
+        const cards = await Promise.all(entries.map(async entry => {
+          let stories = [], counts = "Lees de volledige editie";
           try {
-            const editionResponse = await fetch(`./edities/${entry.date}.json`, { cache: "no-store" });
-            if (editionResponse.ok) {
-              const editionData = await editionResponse.json();
-              const firstStory = getSection(editionData, "nl").map(normalizeArticle).find(item => item.title);
-              if (firstStory?.title) label = firstStory.title;
+            const res = await fetch(`./edities/${entry.date}.json`, { cache: "no-store" });
+            if (res.ok) {
+              const data = await res.json();
+              applyArticleImages(data, entry.date, imageCache);
+              const nl = getSection(data, "nl").map(normalizeArticle).filter(x => x.title);
+              const world = getSection(data, "int").map(normalizeArticle).filter(x => x.title);
+              stories = [nl[0], world[0], nl[1]].filter(Boolean);
+              counts = `${nl.length} uit Nederland · ${world.length} uit de wereld · ${getSection(data, "headlines").length} actualiteiten`;
             }
           } catch (_) {}
-
-          const link = document.createElement("a");
-          link.className = "home-archive-item";
-          link.href = `/edities/${encodeURIComponent(entry.date)}/`;
-          link.innerHTML = `
-            <span class="home-archive-date">${safeText(formatEditionDate(entry.date).replace(/^\w+\s+/u, ""))}</span>
-            <span class="home-archive-title">${safeText(label)}</span>
-            <span class="home-archive-arrow">→</span>
-          `;
-          list.appendChild(link);
-        }
-
-        state.hidden = true;
-        list.hidden = false;
-        list.dataset.loaded = "true";
-      }
-      catch (error) {
-        console.error(error);
-        state.textContent = "Eerdere edities konden niet worden geladen.";
+          const card = document.createElement("a");
+          card.className = "home-archive-item edition-preview";
+          card.href = `/edities/${encodeURIComponent(entry.date)}/`;
+          const photos = stories.filter(x => x.image && /^(\/[^\/]|https?:\/\/)/i.test(x.image)).map(x => `<img src="${safeText(x.image)}" alt="" loading="lazy" decoding="async">`).join("");
+          card.innerHTML = `
+            <div class="edition-preview-mast"><span>Positief nieuws</span><span class="edition-preview-sun" aria-hidden="true">☀</span></div>
+            <h3 class="edition-preview-date">${safeText(formatEditionDate(entry.date))}</h3>
+            ${photos ? `<div class="edition-preview-photos">${photos}</div>` : ""}
+            <p class="edition-preview-counts">${safeText(counts)}</p>
+            <ul class="edition-preview-stories">${stories.map(x => `<li>${safeText(x.title)}</li>`).join("")}</ul>
+            <span class="edition-preview-open">Lees deze editie <span aria-hidden="true">→</span></span>`;
+          return card;
+        }));
+        list.replaceChildren(...cards);
+        state.hidden = true; list.hidden = false; list.dataset.loaded = "true";
+      } catch (error) {
+        console.error(error); state.textContent = "Eerdere edities konden niet worden geladen.";
       }
     }
-
 
     let analyticsLoaded = false;
 
