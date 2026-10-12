@@ -500,5 +500,77 @@
     "tags": "man, farmer, harvest, indigenous, corn, traditional, portrait, monochrome",
     "width": 6240,
     "height": 4160
+  },
+  "2026-10-12/goederenexport-augustus-groeit": {
+    "query": "id:6631117",
+    "pixabay_id": 6631117,
+    "image_path": "/images/artikelen/2026-10-12/goederenexport-augustus-groeit.jpg",
+    "page_url": "https://pixabay.com/photos/container-ship-container-transport-6631117/",
+    "photographer": "dendoktoor",
+    "tags": "container ship, container transport, seagoing vessel, boat, vessel, freighter, means of transport sea containers, transport",
+    "width": 5417,
+    "height": 3611
+  },
+  "2026-10-12/kaasjeskruiddikkopje-rupsen-westerschelde": {
+    "query": "id:10440681",
+    "pixabay_id": 10440681,
+    "image_path": "/images/artikelen/2026-10-12/kaasjeskruiddikkopje-rupsen-westerschelde.jpg",
+    "page_url": "https://pixabay.com/photos/butterfly-mallow-skipper-10440681/",
+    "photographer": "terbe_rezso",
+    "tags": "butterfly, mallow skipper, carcharodus alceae, flower, macro, detailed, wings, yellow flower, blurred background, nature, spring, bokeh, wildlife, yellow, summer, soft focus, wallpaper, brown, insect, blossom",
+    "width": 3242,
+    "height": 2432
+  },
+  "2026-10-12/eerste-achterhoek-pride-walk": {
+    "query": "id:4552833",
+    "pixabay_id": 4552833,
+    "image_path": "/images/artikelen/2026-10-12/eerste-achterhoek-pride-walk.jpg",
+    "page_url": "https://pixabay.com/photos/flag-pride-rainbow-symbol-lesbian-4552833/",
+    "photographer": "Astrobobo",
+    "tags": "flag, pride, rainbow, symbol, lesbian, banner, homosexual, bisexual, transgender, freedom, blue, proud, march, marching, human, rights, blue sky, lgbtiqa, pride month, rainbow flag, world pride",
+    "width": 4449,
+    "height": 2966
+  },
+  "2026-10-12/ooievaar-bever-natuurherstel": {
+    "query": "id:9614143",
+    "pixabay_id": 9614143,
+    "image_path": "/images/artikelen/2026-10-12/ooievaar-bever-natuurherstel.jpg",
+    "page_url": "https://pixabay.com/photos/stork-nest-nature-bird-wildlife-9614143/",
+    "photographer": "Gruendercoach",
+    "tags": "stork, nest, nature, bird, wildlife, bird nest, white stork, stork nest, rattle stork, adebable, nest building, brood",
+    "width": 6000,
+    "height": 4000
+  },
+  "2026-10-12/hodgkinlymfoom-betere-standaardbehandeling": {
+    "query": "id:4099432",
+    "pixabay_id": 4099432,
+    "image_path": "/images/artikelen/2026-10-12/hodgkinlymfoom-betere-standaardbehandeling.jpg",
+    "page_url": "https://pixabay.com/photos/treatment-hospital-clinic-medicine-4099432/",
+    "photographer": "fernandozhiminaicela",
+    "tags": "treatment, hospital, clinic, medicine, laboratory, diagnosis, patient, healthcare",
+    "width": 6016,
+    "height": 4016
+  },
+  "2026-10-12/den-dolder-buitenpoort-natuur": {
+    "query": "pexels:34076806",
+    "pixabay_id": null,
+    "source": "Pexels",
+    "pexels_id": 34076806,
+    "image_path": "/images/artikelen/2026-10-12/den-dolder-buitenpoort-natuur.jpg",
+    "page_url": "https://www.pexels.com/photo/34076806/",
+    "photographer": "Pexels-contributor",
+    "tags": "",
+    "width": 0,
+    "height": 0
+  },
+  "2026-10-12/acht-orang-oetans-beschermd-bos": {
+    "query": "id:9967417",
+    "pixabay_id": 9967417,
+    "image_path": "/images/artikelen/2026-10-12/acht-orang-oetans-beschermd-bos.jpg",
+    "page_url": "https://pixabay.com/photos/orangutan-borneo-orangutan-great-ape-9967417/",
+    "photographer": "SasReu",
+    "tags": "orangutan, borneo orangutan, great ape, primate, rainforest, endangered species, wildlife portrait, nature photography, jungle animal, expressive face, conservation, borneo wildlife, close up, tropical forest",
+    "width": 5730,
+    "height": 3820
   }
 }
