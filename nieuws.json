@@ -1,249 +1,239 @@
 {
   "meta": {
-    "edition_date": "2026-10-08",
-    "email_preheader": "Een dorpsbus houdt mensen verbonden, kinderen krijgen een donorhart en zonnepompen brengen water naar Amazonegezinnen."
+    "edition_date": "2026-10-12",
+    "email_preheader": "Groei van de goederenexport, honderden vlinderrupsen en de eerste Achterhoek Pride Walk."
   },
   "nl": [
     {
-      "category": "Mens",
-      "title": "Telefoonvrije school ziet leerlingen weer meer met elkaar praten",
-      "teaser": "Het Amsterdams Lyceum houdt telefoons al sinds 2023 de hele schooldag opgeborgen. Medewerkers ervaren meer contact tussen leerlingen.",
-      "source": "EenVandaag",
-      "url": "https://eenvandaag.avrotros.nl/artikelen/smartphones-vanaf-volgend-jaar-echt-helemaal-uit-de-klas-hoe-dat-deze-telefoonvrije-school-al-3-jaar-lukt-164995",
-      "article_slug": "telefoonvrije-school-meer-contact",
+      "category": "Economie",
+      "title": "Nederlandse goederenexport groeit in augustus met bijna vijf procent",
+      "teaser": "Nederlandse bedrijven voerden meer goederen uit dan een jaar eerder. Vooral machines en transportmiddelen droegen bij aan de groei, meldt het CBS.",
       "article_body": [
-        "Op Het Amsterdams Lyceum gaan telefoons aan het begin van de schooldag in een afgesloten hoesje. Ook in de gang, kantine en pauzes blijven ze opgeborgen. De school werkt sinds augustus 2023 op die manier.",
-        "In een reportage van EenVandaag vertellen de conciërge en rector dat leerlingen meer met elkaar praten en beter aanspreekbaar zijn. Het is een praktisch voorbeeld van hoe een school rust en ontmoeting probeert terug te brengen.",
-        "Die ervaringen zijn geen bewijs dat dezelfde aanpak op elke school dezelfde effecten heeft. De reportage laat ook zien dat regels elders worden omzeild. Het landelijke advies voor 2027 is bovendien een beleidsvoornemen; het werkende schoolvoorbeeld staat hier centraal."
+        "De Nederlandse goederenexport is in augustus met bijna vijf procent gegroeid ten opzichte van dezelfde maand een jaar eerder. Volgens het ANP, op basis van nieuwe CBS-cijfers, werden vooral meer machines en transportmiddelen uitgevoerd.",
+        "Ook in juli was er groei, toen van 2,3 procent. De invoer van goederen steeg in augustus met twee procent, met name door machines en elektrotechnische apparaten.",
+        "Een stijging van de export is een positief signaal voor bedrijvigheid, maar zegt niet dat elk bedrijf of huishouden erop vooruitgaat. Het gaat bovendien om maandcijfers: een bredere economische trend vraagt een langere reeks."
       ],
-      "why_it_matters": "Een schooldag biedt ruimte om sociale vaardigheden te oefenen. Deze ervaring laat zien hoe een concreet telefoonbeleid daar volgens medewerkers aan kan bijdragen.",
-      "image_query": "pexels:8456153",
-      "image_page_url": "https://www.pexels.com/photo/boy-in-blue-and-white-striped-polo-shirt-standing-beside-boy-in-pink-polo-shirt-8456153/",
-      "image_photographer": "Norma Mortenson",
-      "image_alt": "Illustratieve foto van een groep leerlingen die in een schoolgang met elkaar praten en lachen, zonder telefoons",
-      "image_pick": 0,
-      "email_title": "Telefoonvrije school ziet leerlingen weer meer met elkaar praten"
-    },
-    {
-      "category": "Energie & innovatie",
-      "title": "Twintig miljoen euro extra voor kansrijke Nederlandse innovaties",
-      "teaser": "Het budget van het Innovatiekrediet wordt met twintig miljoen euro verhoogd. Daardoor kunnen meer ondernemers financiering aanvragen voor risicovolle ontwikkeling.",
-      "source": "RVO",
-      "url": "https://www.rvo.nl/nieuws/innovatiekrediet-verruimd-met-eu-20-miljoen",
-      "article_slug": "innovatiekrediet-twintig-miljoen-extra",
-      "article_body": [
-        "Nederlandse bedrijven krijgen meer ruimte om nieuwe technieken door te ontwikkelen. RVO meldt dat het budget van het Innovatiekrediet dit jaar met twintig miljoen euro wordt verhoogd.",
-        "Het krediet is bedoeld voor projecten met flinke technische risico’s en een goed marktperspectief. Het ondersteunt juist de fase waarin een idee nog niet klaar is voor de markt en andere financiering moeilijk kan zijn.",
-        "RVO noemt onder eerdere ontvangers een ontwikkelaar van ultradunne coatings en een bedrijf dat een autonome onkruidverdelger bouwt. Extra budget is nog geen garantie op succesvolle producten: aanvragen moeten worden beoordeeld en ontwikkeling kan mislukken."
-      ],
-      "why_it_matters": "Financiering kan helpen om bruikbare uitvindingen voorbij de tekentafel te brengen. De concrete vooruitgang is hier het grotere beschikbare budget.",
-      "image_query": "engineering innovation laboratory",
-      "image_alt": "Illustratief beeld bij Twintig miljoen euro extra voor kansrijke Nederlandse innovaties",
-      "image_pick": 0,
-      "email_title": "Twintig miljoen euro extra voor kansrijke Nederlandse innovaties"
-    },
-    {
-      "category": "Mens",
-      "title": "Vrijwilligers houden Brabantse dorpen bereikbaar met De Dorpsbus",
-      "teaser": "In dorpen rond Breda brengen buurtbewoners elkaar waar ze moeten zijn. De Dorpsbus heeft inmiddels structurele ondersteuning van de gemeente.",
-      "source": "EenVandaag",
-      "url": "https://eenvandaag.avrotros.nl/artikelen/kabinet-wil-ov-in-de-regio-verbeteren-in-brabant-zorgen-deze-vrijwilligers-nu-al-zelf-voor-vervoer-165006",
-      "article_slug": "dorpsbus-brabant-vrijwilligers",
-      "article_body": [
-        "Een bezoek aan familie of een afspraak wordt lastig als de bushalte verdwijnt. In Sprundel, Sint Willebrord en omliggende dorpen helpen vrijwilligers bewoners daarom met De Dorpsbus. Een centraal telefoonnummer verbindt reizigers met de planners en chauffeurs.",
-        "Het initiatief begon zeven jaar geleden als proef. Toen Arriva en de provincie ermee wilden stoppen, nam de gemeente de ondersteuning over. Volgens vrijwilliger René Lodewijks is die nu structureel geregeld.",
-        "EenVandaag beschrijft het vervoer op 6 oktober als een werkende lokale oplossing. De Dorpsbus vervangt geen volwaardig regionaal vervoersnet, maar maakt voor de mensen die ervan afhankelijk zijn wel een concreet verschil."
-      ],
-      "why_it_matters": "Bereikbaarheid gaat ook over zelfstandig blijven en andere mensen kunnen ontmoeten. Deze oplossing bestaat al en rust op samenwerking tussen bewoners en gemeente.",
-      "image_query": "community minibus elderly passengers",
-      "image_alt": "Illustratief beeld bij Vrijwilligers houden Brabantse dorpen bereikbaar met De Dorpsbus",
-      "image_pick": 0,
-      "email_title": "Vrijwilligers houden Brabantse dorpen bereikbaar met De Dorpsbus"
+      "why_it_matters": "De cijfers laten zien dat er vraag is naar goederen die Nederland uitvoert. Dat biedt perspectief voor bedrijven, zonder dat een algemeen welvaartsoordeel uit één maand volgt.",
+      "source": "ANP / CBS",
+      "url": "https://www.welingelichtekringen.nl/economie/nederlandse-goederenexport-groeit-met-bijna-5-procent-in-augustus",
+      "article_slug": "goederenexport-augustus-groeit",
+      "image_query": "id:6631117",
+      "image_alt": "Containerschip op zee; illustratief beeld",
+      "email_title": "Nederlandse goederenexport groeit in augustus met bijna vijf procent"
     },
     {
       "category": "Natuur & klimaat",
-      "title": "Nieuw stukje natuur verbindt Limburgse bossen en graslanden",
-      "teaser": "Bij de Berghof in Wijlre wordt landbouwgrond ingericht als natuur. Het perceel vormt een ontbrekende verbinding tussen waardevolle natuurgebieden.",
-      "source": "Bosgroepen / Nature Today",
-      "url": "https://www.naturetoday.com/nl/nl/nature-reports/message/?msg=35891",
-      "article_slug": "berghof-verbindt-limburgse-natuur",
+      "title": "Teruggekeerde vlinder laat zich met honderden rupsen zien langs de Westerschelde",
+      "teaser": "Op een dijktraject van anderhalve kilometer zijn 390 rupsen van het kaasjeskruiddikkopje gevonden. De soort keerde in 2009 terug in Nederland en breidt zich uit.",
       "article_body": [
-        "In het Zuid-Limburgse Heuvelland krijgt een voormalig agrarisch grasland een nieuwe functie. Eigenaren, provincie Limburg en Bosgroep Zuid Nederland werken bij de Berghof aan natuur tussen bestaande bossen, een voedselbos en de soortenrijke Berghofweide.",
-        "De werkzaamheden moeten ruimte maken voor heischraal grasland en kalkgrasland. Ook komt er een ecologische strook die de gebieden verbindt. Op delen van de helling wordt grond afgeplagd; andere stroken blijven liggen om water en erosie af te remmen.",
-        "Volgens Bosgroepen loopt de uitvoering tot eind oktober. De eerste effecten van de verbindingsstrook worden volgend voorjaar verwacht. De aanleg is dus begonnen, maar de gewenste soortenrijkdom moet zich nog ontwikkelen."
+        "Het kaasjeskruiddikkopje was sinds 1953 uit Nederland verdwenen. In 2009 werd de vlinder weer in Zuid-Limburg gemeld. Inmiddels is de soort volgens De Vlinderstichting in heel Zeeland aanwezig en zijn er ook meldingen in Zuid-Holland en West-Brabant.",
+        "Een gerichte zoektocht op 2 oktober leverde langs de Westerschelde 390 rupsen op, op een dijkdeel van anderhalve kilometer. De rupsen verstoppen zich in dichtgevouwen blaadjes van kaasjeskruid.",
+        "De telling maakt de terugkeer zichtbaar, maar is geen landelijke populatiemeting. De warmteminnende soort profiteert waarschijnlijk van klimaatopwarming; dat maakt opwarming niet gunstig voor de natuur als geheel."
       ],
-      "why_it_matters": "Aaneengesloten leefgebied geeft planten en dieren meer ruimte. Dit project koppelt natuurherstel aan zorgvuldig beheer van water en bodem.",
-      "image_query": "limburg hills grassland nature",
-      "image_alt": "Illustratief beeld bij Nieuw stukje natuur verbindt Limburgse bossen en graslanden",
-      "image_pick": 0,
-      "email_title": "Nieuw stukje natuur verbindt Limburgse bossen en graslanden"
+      "why_it_matters": "Dit is een concreet verhaal over de terugkeer van één soort. De nuance voorkomt dat een lokale meevaller wordt aangezien voor algemeen biodiversiteitsherstel.",
+      "source": "De Vlinderstichting / Nature Today",
+      "url": "https://www.naturetoday.com/intl/nl/nature-reports/message/?msg=35909",
+      "article_slug": "kaasjeskruiddikkopje-rupsen-westerschelde",
+      "image_query": "id:10440681",
+      "image_alt": "Kaasjeskruiddikkopje op een gele bloem; illustratief beeld",
+      "email_title": "Teruggekeerde vlinder laat zich met honderden rupsen zien langs de Westerschelde"
     },
     {
       "category": "Mens",
-      "title": "Bij Tante Lali brengt een betaalbare maaltijd inwoners samen",
-      "teaser": "In Uden organiseert Stichting Tante Lali wekelijks gezonde, betaalbare maaltijden. Het initiatief kreeg deze week erkenning voor zijn toegankelijke ontmoetingsplek.",
-      "source": "Gemeente Maashorst",
-      "url": "https://www.gemeentemaashorst.nl/nieuws/2026/10/07/stichting-tante-lali-wint-allereerste-waarderingsprijs-inclusie",
-      "article_slug": "tante-lali-maaltijden-ontmoeting",
+      "title": "Eerste Achterhoek Pride Walk brengt 130 mensen samen in Doetinchem",
+      "teaser": "Na uitstel door extreme hitte ging de eerste wandeling op 9 oktober alsnog door. Deelnemers en vrijwilligers maakten ruimte voor zichtbaarheid en ontmoeting.",
       "article_body": [
-        "Samen eten kan een eenvoudige manier zijn om weer onder mensen te komen. Stichting Tante Lali biedt daarvoor elke week een laagdrempelige plek in de Protestantse Kerk in Uden. Iedereen is welkom bij de gezonde en betaalbare maaltijden.",
-        "De gemeente Maashorst kende de stichting op 6 oktober de eerste waarderingsprijs Meedoen in Maashorst toe. Daar hoort duizend euro bij. Volgens de gemeente helpt het initiatief inwoners elkaar te ontmoeten en versterkt het de sociale samenhang.",
-        "De prijs is de actuele aanleiding; de waarde zit in de terugkerende maaltijden. De gemeentelijke bekendmaking bevat geen effectonderzoek naar eenzaamheid en geen bezoekersaantallen. We presenteren het daarom als een concreet lokaal initiatief, niet als bewezen oplossing voor eenzaamheid."
+        "In Doetinchem liepen op vrijdag 9 oktober ongeveer 130 mensen mee met de eerste Achterhoek Pride Walk. De organisatie meldt een warme sfeer, ondanks het koude en natte weer.",
+        "De wandeling had in juni moeten plaatsvinden, maar werd vanwege extreme hitte afgelast. Tijdens het Coming Out Weekend kon de COC Stadsgroep Doetinchem het evenement alsnog organiseren.",
+        "De waarde zit in de gezamenlijke zichtbaarheid en het gevoel er niet alleen voor te staan. Het verslag is van de organisator zelf; het bewijst geen meetbare verbetering van de veiligheid van lhbti+’ers in de regio."
       ],
-      "why_it_matters": "Een betaalbare maaltijd en een open deur kunnen ontmoeting bereikbaar maken. Hier krijgt die aandacht wekelijks een praktische vorm.",
-      "image_query": "community dinner shared meal",
-      "image_alt": "Illustratief beeld bij Bij Tante Lali brengt een betaalbare maaltijd inwoners samen",
-      "image_pick": 0,
-      "email_title": "Bij Tante Lali brengt een betaalbare maaltijd inwoners samen"
+      "why_it_matters": "Ook buiten de grote steden kan een openbare ontmoeting herkenning en steun bieden. Hier is een eerste regionale stap daadwerkelijk gezet.",
+      "source": "Achterhoek Pride",
+      "url": "https://achterhoekpride.nl/eerste-achterhoek-pride-walk-kleurt-doetinchem-met-130-wandelaars/",
+      "article_slug": "eerste-achterhoek-pride-walk",
+      "image_query": "id:4552833",
+      "image_alt": "Regenboogvlag boven een Europese straat; illustratief beeld",
+      "email_title": "Eerste Achterhoek Pride Walk brengt 130 mensen samen in Doetinchem"
     },
     {
-      "category": "Cultuur",
-      "title": "Allard Pierson geeft geroofde vaas vrijwillig terug aan Sicilië",
-      "teaser": "Een antieke vaas keert terug nadat herkomstonderzoek aantoonde dat die illegaal was opgegraven. Het museum kiest voor teruggave en samenwerking.",
-      "source": "NOS",
-      "url": "https://nos.nl/artikel/2633996-geroofde-vaas-terug-naar-sicilie-afscheid-pijnlijk-maar-dient-hoger-doel",
-      "article_slug": "allard-pierson-vaas-terug-sicilie",
+      "category": "Natuur & klimaat",
+      "title": "Ooievaar en bever laten zien dat natuurherstel werkt",
+      "teaser": "Van vrijwel verdwenen tot weer vertrouwde verschijningen: de terugkeer van ooievaar en bever laat zien wat langdurige bescherming en herintroductie kunnen opleveren.",
       "article_body": [
-        "Het Amsterdamse Allard Pierson heeft de Centuripe pyxis overgedragen aan een Italiaanse delegatie. De rijk versierde vaas uit de derde eeuw voor Christus was in 1997 gekocht, maar bleek afkomstig van grafroof op Sicilië.",
-        "Een teruggevonden fotorolletje hielp de herkomst te reconstrueren. De foto’s weerspraken het verhaal van de handelaar dat het stuk al vóór 1970 in Zwitsers privébezit was.",
-        "Het museum was juridisch niet verplicht de vaas terug te geven, maar besloot verantwoordelijkheid te nemen. Het wil met Siciliaanse experts verder onderzoek doen naar dergelijk aardewerk en naar andere stukken uit de eigen collectie."
+        "Villa VdB besteedde op 8 oktober op NPO Radio 1 aandacht aan de comeback van dieren in Nederland. De ooievaar en de bever zijn voorbeelden van soorten die na een sterke achteruitgang of verdwijning weer terugkeerden.",
+        "Rond 1970 waren er in Nederland nog ongeveer tien broedparen ooievaars. Sovon schat de broedpopulatie voor 2025 op 1.900 tot 2.200 paren. Het herstel volgde op een herintroductieprogramma dat in 1969 begon en op maatregelen die de soort hielpen.",
+        "De bever verdween in 1826 uit Nederland. Vanaf 1988 werden dieren teruggebracht, eerst in de Biesbosch en later in andere gebieden. Inmiddels heeft de soort de ruimtes tussen veel uitzetlocaties zelfstandig gekoloniseerd en neemt de verspreiding toe, meldt de Zoogdiervereniging.",
+        "Dit herstel ontstond over tientallen jaren, niet in één week. Het actuele WWF-rapport en het radiogesprek geven aanleiding om die successen te belichten. Ze betekenen niet dat de Nederlandse natuur als geheel herstelt: veel soorten en leefgebieden staan nog steeds onder druk."
       ],
-      "why_it_matters": "Herkomstonderzoek kan tot herstel leiden. Deze teruggave brengt erfgoed terug en opent de deur naar gedeeld onderzoek.",
-      "image_query": "ancient greek pottery museum",
-      "image_alt": "Illustratief beeld bij Allard Pierson geeft geroofde vaas vrijwillig terug aan Sicilië",
-      "image_pick": 0,
-      "email_title": "Allard Pierson geeft geroofde vaas vrijwillig terug aan Sicilië"
+      "why_it_matters": "Gerichte bescherming kan verdwijnen ombuigen naar terugkeer. Deze voorbeelden maken het resultaat van volgehouden natuurbeleid zichtbaar, zonder de bredere problemen te verbloemen.",
+      "source": "NPO Radio 1 / Sovon / Zoogdiervereniging",
+      "url": "https://www.nporadio1.nl/fragmenten/villa-vdb/01a11b46-55fd-7348-972d-6dcbd8ef7dcc/2026-10-08-de-comeback-van-de-nederlandse-natuur",
+      "article_slug": "ooievaar-bever-natuurherstel",
+      "image_query": "id:9614143",
+      "image_alt": "Ooievaar op een nest; illustratief beeld",
+      "email_title": "Ooievaar en bever laten zien dat natuurherstel werkt"
+    },
+    {
+      "category": "Gezondheid",
+      "title": "Nieuwe standaardbehandeling voor hodgkinlymfoom werkt beter en geeft minder bijwerkingen",
+      "teaser": "Een behandeling voor uitgebreid hodgkinlymfoom is nu opgenomen in de Nederlandse richtlijn. Patiënten krijgen daarmee een combinatie die beter werkt en minder belastend is.",
+      "article_body": [
+        "Voor patiënten tot 60 jaar met uitgebreid hodgkinlymfoom is de medicijncombinatie BrECADD nu de voorkeursbehandeling in de Nederlandse behandelrichtlijn. KWF maakte de wijziging op 9 oktober bekend. De behandeling wordt sinds augustus 2025 vergoed; de opname in de richtlijn verankert haar verder in de Nederlandse zorg.",
+        "De internationale HD21-studie vergeleek BrECADD met de bestaande intensieve behandeling bij 1.500 deelnemers. Na vier jaar was naar schatting 94 procent van de patiënten in de nieuwe behandelgroep in leven zonder dat de ziekte was verergerd, tegenover 91 procent in de vergelijkingsgroep. Behandelingsgerelateerde morbiditeit trad op bij 42 procent, tegenover 59 procent.",
+        "De combinatie vermijdt drie belastende medicijnen en bevat onder meer een middel dat kankercellen gerichter aanpakt. De onderzoekers zagen ook vaker herstel van de functie van eierstokken en zaadballen. De resultaten betekenen niet dat alle patiënten blijvend genezen zijn; de verandering betreft deze specifieke vorm en fase van lymfeklierkanker."
+      ],
+      "why_it_matters": "Onderzoek krijgt hier een concrete toepassing in de spreekkamer: een betere balans tussen het bestrijden van kanker en de belasting van de behandeling.",
+      "source": "KWF / HD21-studie",
+      "url": "https://www.kwf.nl/nieuws/nieuwe-behandeling-hodgkinlymfoom-werkt-beter-en-geeft-minder-schade",
+      "article_slug": "hodgkinlymfoom-betere-standaardbehandeling",
+      "image_query": "id:4099432",
+      "image_alt": "Zorgverlener legt een hand op de hand van een patiënt; illustratief beeld",
+      "email_title": "Nieuwe standaardbehandeling voor hodgkinlymfoom werkt beter en geeft minder bijwerkingen"
+    },
+    {
+      "category": "Natuur & klimaat",
+      "title": "Van de trein zo het bos in: Den Dolder opent nieuwe Buitenpoort",
+      "teaser": "Station Den Dolder helpt bezoekers sinds 7 oktober hun weg naar de Utrechtse Heuvelrug te vinden. Wandelinformatie en bewegwijzering maken de overstap van trein naar natuur eenvoudiger.",
+      "article_body": [
+        "Een uitstapje naar het bos begint in Den Dolder voortaan al op het station. Op 7 oktober werd daar een Buitenpoort geopend: een herkenbare toegang tot de natuur, met wandelinformatie en verwijzingen naar routes.",
+        "Vanaf het station loop je het Willem Arntszbos in. Den Dolder is de vierde Buitenpoort van Nederland, na Bussum Zuid, Baarn en Castricum. Het initiatief verbindt openbaar vervoer met natuurgebieden en stimuleert ook het gebruik van de fiets.",
+        "De provincie, NS, ProRail, gemeenten, terreinbeheerders en het nationaal park werken hiervoor samen. De voorziening is geopend; hoeveel autoritten ermee worden vervangen, is nog niet bekend."
+      ],
+      "why_it_matters": "Een duidelijk beginpunt verlaagt de drempel om zonder auto de natuur in te gaan. De vooruitgang is hier een praktische, al geopende voorziening.",
+      "source": "Provincie Utrecht / Nature Today",
+      "url": "https://www.naturetoday.com/intl/nl/nature-reports/message/?msg=35917",
+      "article_slug": "den-dolder-buitenpoort-natuur",
+      "image_query": "pexels:34076806",
+      "image_alt": "Bospad in Varsseveld; illustratief beeld",
+      "email_title": "Van de trein zo het bos in: Den Dolder opent nieuwe Buitenpoort",
+      "image_page_url": "https://www.pexels.com/photo/34076806/"
     }
   ],
   "int": [
     {
-      "category": "Gezondheid",
-      "title": "Nieuwe bewaarmethode maakt donorharten bruikbaar voor kinderen",
-      "teaser": "Amerikaanse artsen hebben een techniek voor het bewaren van donorharten succesvol bij kinderen toegepast. De eerste publicatie beschrijft vijf transplantaties.",
-      "source": "Vanderbilt Health",
-      "url": "https://news.vumc.org/2026/10/07/monroe-carell-jr-childrens-hospital-at-vanderbilt-leads-breakthrough-heart-recovery-method-for-pediatric-transplants/",
-      "article_slug": "donorhart-kinderen-bewaarmethode",
+      "category": "Mens",
+      "title": "Meer dan zeventig kinderen in Sudan terug bij hun familie na vrijlating",
+      "teaser": "UNICEF meldt dat vrijgelaten kinderen met hun familie zijn herenigd en begeleiding blijven krijgen. Sommige kinderen gaan weer naar school of volgen een vakopleiding.",
       "article_body": [
-        "Bij Vanderbilt zijn donorharten met een koude, zuurstofrijke vloeistof bewaard en vervolgens bij kinderen getransplanteerd. De methode heet REUP en werd eerder voor volwassenen ontwikkeld.",
-        "Het ziekenhuis meldt dat de eerste vijf ontvangers tussen twee dagen en veertien jaar oud waren. Hun harten functioneerden na de operatie goed. Volgens Vanderbilt zijn daarna nog vijf kinderen met de methode geholpen; die vervolggroep moet worden onderscheiden van de vijf beschreven patiënten.",
-        "De techniek kan harten bruikbaar maken die anders niet beschikbaar waren geweest. Dat biedt perspectief voor kinderen op de wachtlijst. Het gaat nog om een kleine eerste groep: deze resultaten bewijzen geen langdurige veiligheid of brede toepasbaarheid."
+        "Voor een kind dat van zijn familie is gescheiden, is thuiskomen een ingrijpende stap. UNICEF meldt dat in Sudan inmiddels meer dan zeventig kinderen zijn vrijgelaten en met hun familie herenigd. Getrainde sociaal werkers blijven hen begeleiden.",
+        "In een nieuw interview vertelt sociaal werker Zahia Awad hoe zij families opspoort en kinderen helpt hun leven weer op te bouwen. Acht kinderen die zij volgde, hervatten na hun vrijlating school, vakonderwijs of hun sociale leven.",
+        "Deze voorbeelden zijn geen landelijke effectmeting. De oorlog en de risico’s voor kinderen duren voort. Het positieve nieuws is dat voor deze kinderen hereniging en langdurige steun daadwerkelijk zijn georganiseerd."
       ],
-      "why_it_matters": "Voor een kind dat wacht op een donorhart kan een groter donoraanbod veel betekenen. Hier is de stap naar daadwerkelijke behandeling al gezet.",
-      "image_query": "pediatric hospital cardiac care",
-      "image_alt": "Illustratief beeld bij Nieuwe bewaarmethode maakt donorharten bruikbaar voor kinderen",
-      "image_pick": 0,
-      "email_title": "Nieuwe bewaarmethode maakt donorharten bruikbaar voor kinderen",
-      "reading_time_minutes": 4
+      "why_it_matters": "Opvang stopt niet bij vrijlating. Contact met familie, onderwijs en begeleiding geven kinderen mogelijkheden om opnieuw aansluiting te vinden.",
+      "source": "UNICEF Sudan",
+      "url": "https://www.unicef.org/sudan/stories/walking-alongside-children-road-recovery",
+      "article_slug": "sudan-kinderen-familie-hereniging",
+      "image_query": "",
+      "image_alt": "Illustratief beeld bij Meer dan zeventig kinderen in Sudan terug bij hun familie na vrijlating",
+      "email_title": "Meer dan zeventig kinderen in Sudan terug bij hun familie na vrijlating"
     },
     {
       "category": "Natuur & klimaat",
-      "title": "Geredde luipaardkatten oefenen voor hun terugkeer naar het bos",
-      "teaser": "Een Thais opvangcentrum leert jonge luipaardkatten weer jagen en klimmen. De sterfte in de opvang is volgens het team lager dan in eerdere jaren.",
-      "source": "Mongabay",
-      "url": "https://news.mongabay.com/2026/10/a-few-are-afraid-of-the-chicks-preparing-thailands-rescued-leopard-cats-for-life-in-the-wild/",
-      "article_slug": "luipaardkatten-thailand-opvang-vrijlating",
+      "title": "Acht geredde orang-oetans krijgen een nieuwe plek in beschermd bos",
+      "teaser": "Drie moeders met jongen en twee jonge mannetjes zijn in West-Kalimantan teruggebracht naar bos. Hun eerdere leefgebied was door branden onveilig geworden.",
       "article_body": [
-        "In Khon Kaen verzorgt een overheidscentrum jonge luipaardkatten die gewond of zonder moeder zijn gevonden. Voor hun vrijlating oefenen de dieren in begroeide verblijven, met zo weinig mogelijk menselijk contact.",
-        "Mongabay volgde een groep waarvan negen dieren in beschermd bos werd vrijgelaten. Het centrum meldt dat van zestig dit jaar opgevangen jongen er twintig stierven: ongeveer een derde, tegenover circa zestig procent in eerdere jaren.",
-        "Dat is een bemoedigende verbetering binnen de opvang. Hoeveel dieren na vrijlating overleven, weet het team nog niet. Cameravallen tonen jagende katten, maar individuele dieren zijn moeilijk te volgen. Meer opgevangen jongen betekent bovendien niet dat het met de wilde populatie beter gaat."
+        "Acht orang-oetans die waren gered uit door branden bedreigde gebieden op Borneo, zijn op 9 oktober vrijgelaten in het beschermde Batu Nyambu-bos. Het gaat om drie moeders met hun jongen en twee jonge mannetjes.",
+        "Indonesische autoriteiten en opvangorganisatie YIARI kozen het gebied vanwege voedsel, water en de verbinding met andere bossen. Het reservaat beslaat ongeveer 23.000 hectare.",
+        "Volgens de autoriteiten werden tussen augustus en 9 oktober 46 orang-oetans uit brandgevaar gered. De vrijlating van deze acht dieren is een concreet resultaat, maar de bedreiging van hun leefgebied blijft groot."
       ],
-      "why_it_matters": "Deskundige opvang geeft kwetsbare dieren een nieuwe kans. De vooruitgang is concreet, terwijl beter volgen na vrijlating nodig blijft.",
-      "image_query": "leopard cat forest",
-      "image_alt": "Illustratief beeld bij Geredde luipaardkatten oefenen voor hun terugkeer naar het bos",
-      "image_pick": 0,
-      "email_title": "Geredde luipaardkatten oefenen voor hun terugkeer naar het bos"
-    },
-    {
-      "category": "Energie & innovatie",
-      "title": "Zonnepompen brengen water naar gezinnen in het Amazonewoud",
-      "teaser": "In het Braziliaanse Nova Sociedade gebruiken 36 gezinnen een watersysteem op zonne-energie. Het helpt de afhankelijkheid van diesel te verminderen.",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/b3090d1efb1b44beef07e6d60a90f834",
-      "article_slug": "zonnepompen-amazone-water",
-      "article_body": [
-        "Zonnepanelen drijven sinds juni waterpompen aan in Nova Sociedade. De pompen vullen opslagtanks voor alle 36 gezinnen. Ook huishoudelijke systemen met batterijen zijn uitgedeeld.",
-        "De hulporganisatie Saúde e Alegria ondersteunt daarnaast 29 andere gemeenschappen met vergelijkbare watertechniek. De voorzieningen verbeteren de voorbereiding op droogte, maar nemen het risico op waterschaarste niet weg."
-      ],
-      "why_it_matters": "Betrouwbare energie kan dagelijkse basisvoorzieningen bereikbaar maken, ook ver van het elektriciteitsnet.",
-      "image_query": "solar panels water pump village",
-      "image_alt": "Illustratief beeld bij Zonnepompen brengen water naar gezinnen in het Amazonewoud",
-      "image_pick": 0,
-      "email_title": "Zonnepompen brengen water naar gezinnen in het Amazonewoud"
-    },
-    {
-      "category": "Gezondheid",
-      "title": "Langdurig onderzoek ondersteunt behandeling van sikkelcelziekte bij Afrikaanse kinderen",
-      "teaser": "Een studie met 606 deelnemers in vier Afrikaanse landen vond bij hydroxyurea geen toename van klinisch vastgestelde infecties.",
-      "source": "Imperial College London / EurekAlert",
-      "url": "https://www.eurekalert.org/news-releases/1146717",
-      "article_slug": "sikkelcelziekte-hydroxyurea-infecties",
-      "article_body": [
-        "Voor kinderen met sikkelcelziekte kan hydroxyurea ernstige complicaties verminderen. Toch bestaat in gebieden met beperkte zorg terughoudendheid, omdat het middel ook bepaalde afweercellen verlaagt.",
-        "Een nieuwe analyse van het REACH-onderzoek geeft geruststellende resultaten. Onderzoekers volgden 606 kinderen en jongvolwassenen in Angola, Congo, Kenia en Uganda. Bij langdurig gebruik nam het aantal of de ernst van vastgestelde infecties niet toe.",
-        "Het onderzoek ondersteunt ruimere toepassing onder medische begeleiding. Veel infecties werden achteraf vastgesteld op basis van de ziektegeschiedenis, zonder directe laboratoriumtest. Het resultaat betekent daarom niet dat het middel geen bijwerkingen heeft of zonder controle kan worden gebruikt."
-      ],
-      "why_it_matters": "Goed onderbouwde zorg kan een behandeling bereikbaarder maken waar de ziektelast groot is. Langdurige gegevens helpen onzekerheid bij behandelaars verminderen.",
-      "image_query": "medical research blood cells",
-      "image_alt": "Illustratief beeld bij Langdurig onderzoek ondersteunt behandeling van sikkelcelziekte bij Afrikaanse kinderen",
-      "image_pick": 0,
-      "email_title": "Langdurig onderzoek ondersteunt behandeling van sikkelcelziekte bij Afrikaanse kinderen"
+      "why_it_matters": "Redding krijgt pas vervolg als dieren opnieuw leefruimte vinden. Deze verplaatsing geeft acht dieren die kans, terwijl bescherming van hun oorspronkelijke bossen nodig blijft.",
+      "source": "AFP / Phys.org",
+      "url": "https://phys.org/news/2026-10-indonesia-orangutans-forest.html",
+      "article_slug": "acht-orang-oetans-beschermd-bos",
+      "image_query": "id:9967417",
+      "image_alt": "Orang-oetan op Borneo; illustratief beeld",
+      "email_title": "Acht geredde orang-oetans krijgen een nieuwe plek in beschermd bos",
+      "reading_time_minutes": 2
     },
     {
       "category": "Wetenschap",
-      "title": "Acht jaar daktuinonderzoek laat zien hoe tomatenteelt zuiniger kan",
-      "teaser": "Een Spaanse studie laat zien dat goed licht en teruggewonnen voedingsstoffen de teelt in een dakkas kunnen verbeteren.",
-      "source": "ICTA-UAB / Agronomy for Sustainable Development",
-      "url": "https://link.springer.com/article/10.1007/s13593-026-01118-6",
-      "article_slug": "dakkas-tomaten-acht-jaar-onderzoek",
+      "title": "DNA-logboek laat zien hoe één cel uitgroeit tot een muizenembryo",
+      "teaser": "Onderzoekers hebben de afstamming van cellen gedurende 13,5 dagen vastgelegd. Het nieuwe systeem schrijft opeenvolgende herkenningstekens in het DNA.",
       "article_body": [
-        "Onderzoekers in Barcelona analyseerden elf tomatenteelten tussen 2015 en 2023 in een kas op een universiteitsgebouw. Ze onderzochten opbrengsten en milieubelasting over acht jaar.",
-        "Licht bleek bepalend. Verouderde dakpanelen lieten steeds minder door; na vervanging steeg de oogst sterk. Ook struviet, een fosfaatrijke meststof uit afvalwater, kon bij een geschikte dosering vergelijkbaar presteren met gewone minerale bemesting.",
-        "De studie biedt praktische lessen over onderhoud en hergebruik van voedingsstoffen. Het blijft onderzoek in één specifieke dakkas. Binnenteelt onder kunstlicht bleek bovendien niet vanzelf duurzamer: de herkomst van de benodigde elektriciteit maakt veel verschil."
+        "Een lichaam begint als één bevruchte eicel. Onderzoekers van onder meer de University of Washington hebben nu met een DNA-logboek gevolgd hoe cellen zich delen en verschillende taken krijgen in een muizenembryo.",
+        "Het systeem, DNA Typewriter, schrijft bij celdelingen nieuwe tekens in het erfelijk materiaal. Uit gedeelde tekens konden de onderzoekers celverwantschappen over 13,5 dagen reconstrueren. De studie verscheen in Science.",
+        "De onderzoekers startten met honderd bevruchte eicellen en onderzochten tien embryo’s. De uitgebreidste analyse betrof één embryo met een bijzonder rijke registratie. Dit is fundamenteel muizenonderzoek, geen nieuwe behandeling voor mensen."
       ],
-      "why_it_matters": "Soms zit vooruitgang in beter onderhoud en slimmer hergebruik. Langdurig onderzoek helpt voorkomen dat stadslandbouw alleen op mooie beloften wordt beoordeeld.",
-      "image_query": "rooftop greenhouse tomatoes",
-      "image_alt": "Illustratief beeld bij Acht jaar daktuinonderzoek laat zien hoe tomatenteelt zuiniger kan",
-      "image_pick": 0,
-      "email_title": "Acht jaar daktuinonderzoek laat zien hoe tomatenteelt zuiniger kan",
-      "reading_time_minutes": 3
+      "why_it_matters": "Een beter zicht op de vorming van organen helpt onderzoekers begrijpen hoe ontwikkeling verloopt. Mogelijke medische toepassingen vragen nog veel vervolgonderzoek.",
+      "source": "UW Medicine / Phys.org",
+      "url": "https://phys.org/news/2026-10-dna-typewriter-cells-history-mouse.html",
+      "article_slug": "dna-logboek-muizenembryo",
+      "image_query": "",
+      "image_alt": "Illustratief beeld bij DNA-logboek laat zien hoe één cel uitgroeit tot een muizenembryo",
+      "email_title": "DNA-logboek laat zien hoe één cel uitgroeit tot een muizenembryo",
+      "reading_time_minutes": 5
     },
     {
-      "category": "Mens",
-      "title": "Meer geld dan toegezegd voor landrechten van bosgemeenschappen",
-      "teaser": "Donoren melden 2,35 miljard dollar voor landrechten van inheemse volken en lokale gemeenschappen. Het doel was 1,7 miljard dollar.",
-      "source": "Mongabay",
-      "url": "https://news.mongabay.com/2026/10/international-pledge-to-fund-forest-rights-exceeds-target-but-direct-funding-remains-low/",
-      "article_slug": "financiering-landrechten-bosgemeenschappen",
+      "category": "Gezondheid",
+      "title": "Gezinnen in Angola krijgen steun die ook de emotionele schade van overstromingen erkent",
+      "teaser": "Meer dan tweehonderd gezinnen kregen wekelijkse psychosociale begeleiding. Met Nederlandse financiële steun zijn ook vijftig hulpverleners opgeleid.",
       "article_body": [
-        "Een vijfjarige internationale financieringsafspraak voor landrechten heeft volgens de deelnemende donoren meer geld opgeleverd dan toegezegd. Over 2021 tot en met 2025 rapporteren zij 2,35 miljard dollar.",
-        "Dat is een stap voor gemeenschappen die afhankelijk zijn van bossen en een belangrijke rol spelen bij hun bescherming. Maar geld beschikbaar stellen is nog niet hetzelfde als aantoonbaar veiliggestelde grondrechten.",
-        "Mongabay beschrijft ook de beperking: in 2025 ging slechts 7,2 procent rechtstreeks naar organisaties van inheemse volken en lokale gemeenschappen. Veel middelen lopen via tussenpartijen. Betrokken vertegenwoordigers vragen daarom om meer directe zeggenschap en transparantie."
+        "Na overstromingen hebben mensen niet alleen een dak of voedsel nodig. In Benguela, Angola, organiseerden de WHO en lokale gezondheidsdiensten daarom terugkerende psychosociale sessies voor getroffen gezinnen.",
+        "Volgens de WHO kregen meer dan tweehonderd gezinnen gedurende de interventie wekelijkse begeleiding. Vijftig professionals werden getraind in het herkennen van psychische nood, eerste ondersteuning en doorverwijzing.",
+        "Nederland financierde de inzet van een specialist voor drie maanden. Het bericht beschrijft geleverde hulp en opleiding, maar bevat geen onafhankelijk gemeten effect op klachten of herstel."
       ],
-      "why_it_matters": "Landrechten helpen mensen beslissen over hun leefgebied. Het behaalde financieringsdoel biedt kansen, maar wie het geld beheert en ontvangt blijft essentieel.",
-      "image_query": "indigenous community rainforest",
-      "image_alt": "Illustratief beeld bij Meer geld dan toegezegd voor landrechten van bosgemeenschappen",
-      "image_pick": 0,
-      "email_title": "Meer geld dan toegezegd voor landrechten van bosgemeenschappen"
+      "why_it_matters": "Zorg voor de gevolgen van een ramp omvat ook angst en verlies. Lokale scholing kan bovendien kennis achterlaten voor volgende noodsituaties.",
+      "source": "WHO Afrika",
+      "url": "https://www.afro.who.int/countries/angola/news/floods-hope-recovery-through-psychosocial-support",
+      "article_slug": "angola-gezinnen-psychosociale-steun",
+      "image_query": "",
+      "image_alt": "Illustratief beeld bij Gezinnen in Angola krijgen steun die ook de emotionele schade van overstromingen erkent",
+      "email_title": "Gezinnen in Angola krijgen steun die ook de emotionele schade van overstromingen erkent",
+      "reading_time_minutes": 4
+    },
+    {
+      "category": "Cultuur",
+      "title": "Vier eeuwen oude klokkentoren in Moldavië gerestaureerd en heropend",
+      "teaser": "De toren van Vadul Rașcov is na restauratie opnieuw ingewijd met de lokale gemeenschap. Historisch metselwerk is beschermd en het dak met traditionele houten shingles herbouwd.",
+      "article_body": [
+        "In Vadul Rașcov, Moldavië, heeft een klokkentoren uit de zeventiende eeuw weer toekomst. De gemeenschap vierde de voltooiing van de conservering en restauratie, meldt de VN op 10 oktober.",
+        "Het werk richtte zich op het oude stenen metselwerk, dat door weer en ouderdom was aangetast. Er kwam een beschermende constructie en het historische dak werd herbouwd met traditionele houten shingles. De Europese Unie financierde het werk via een UNDP-programma.",
+        "De toren hoort bij een historisch kerkhof en diende ook als toegangspoort. De restauratie is afgerond; verwachte opbrengsten voor toerisme en lokale ontwikkeling zijn nog geen gemeten resultaten."
+      ],
+      "why_it_matters": "Behoud van een vertrouwd monument beschermt lokaal erfgoed en vakmanschap. Hier gaat het om zichtbaar afgerond werk, niet alleen een restauratieplan.",
+      "source": "VN / UNDP Moldavië",
+      "url": "https://moldova.un.org/en/324204-vadul-ra%C8%99cov-bell-tower-restored-european-union-and-undp-support-inaugurated-together",
+      "article_slug": "moldavie-klokkentoren-gerestaureerd",
+      "image_query": "",
+      "image_alt": "Illustratief beeld bij Vier eeuwen oude klokkentoren in Moldavië gerestaureerd en heropend",
+      "email_title": "Vier eeuwen oude klokkentoren in Moldavië gerestaureerd en heropend"
+    },
+    {
+      "category": "Natuur & klimaat",
+      "title": "Geredde lippenbeer Odum krijgt ook zeventien jaar later zorg op maat",
+      "teaser": "Een nieuwe terugblik laat zien hoe een beer uit de dansberentraditie verder leeft in opvang. Zijn zorg eindigde niet bij de redding in 2009.",
+      "article_body": [
+        "Lippenbeer Odum werd in 2009 bevrijd uit een leven waarin hij voor toeristen moest optreden. Zeventien jaar later woont hij nog altijd in het Bannerghatta Bear Rescue Centre in India en krijgt hij langdurige verzorging.",
+        "International Animal Rescue deelde voor de Wereldlippenberendag van 12 oktober nieuwe beelden en een update. Volgens de organisatie brengt de inmiddels 26-jarige beer zijn dagen door met eten, baden en rusten in een aangepaste hangmat.",
+        "De redding zelf is oud nieuws. De actuele aanleiding is de terugblik op blijvende opvang. Dit verhaal beschrijft dierenwelzijn in een opvangcentrum, niet een vrijlating of herstel van wilde populaties."
+      ],
+      "why_it_matters": "Een dier redden vraagt ook jaren later aandacht en middelen. Odums verhaal maakt die langdurige verantwoordelijkheid zichtbaar.",
+      "source": "Good News Network / International Animal Rescue",
+      "url": "https://www.goodnewsnetwork.org/sloth-bear-given-a-name-by-julia-roberts-is-flourishing/",
+      "article_slug": "odum-lippenbeer-langdurige-zorg",
+      "image_query": "",
+      "image_alt": "Illustratief beeld bij Geredde lippenbeer Odum krijgt ook zeventien jaar later zorg op maat",
+      "email_title": "Geredde lippenbeer Odum krijgt ook zeventien jaar later zorg op maat"
     }
   ],
   "headlines": [
     {
-      "title": "Huishoudens consumeerden in augustus 2,1 procent meer",
-      "teaser": "Volgens voorlopige CBS-cijfers groeide de consumptie ten opzichte van augustus 2025, gecorrigeerd voor prijzen en koopdagen. De omstandigheden waren in september iets ongunstiger.",
-      "source": "CBS",
-      "url": "https://www.cbs.nl/nl-nl/nieuws/2026/41/consumptie-huishoudens-groeit-met-ruim-2-procent-in-augustus"
+      "title": "Gasprijzen liggen hoger dan een jaar geleden",
+      "teaser": "De NOS meldt dat huishoudens deze herfst met hogere gastarieven te maken krijgen. Prijsvergelijkers zien ook meer belangstelling voor meerjarige vaste contracten.",
+      "source": "NOS",
+      "url": "https://nos.nl/artikel/2634409-huishoudens-gaan-komende-tijd-meer-betalen-voor-gas-toename-in-vaste-energiecontracten"
     },
     {
-      "title": "Kabinet, vakbonden en werkgevers hervatten overleg in het Catshuis",
-      "teaser": "Werkgevers en vakbonden reageerden positief na het gesprek van 7 oktober. Een constructief gesprek is een begin; concrete afspraken moeten nog volgen.",
-      "source": "EenVandaag",
-      "url": "https://eenvandaag.avrotros.nl/artikelen/polder-terug-in-het-catshuis-vakbonden-en-werkgevers-positief-na-gesprek-met-kabinet-165018"
+      "title": "Wereldhandel bereikte 35 biljoen dollar, maar groei is ongelijk verdeeld",
+      "teaser": "UNCTAD meldt een recordwaarde voor 2025. Veel ontwikkelingslanden blijven achter; hogere handelswaarden in 2026 hangen ook samen met gestegen energieprijzen.",
+      "source": "UN News / UNCTAD",
+      "url": "https://news.un.org/en/story/2026/10/1168566"
     },
     {
-      "title": "Nobelprijs voor Literatuur wordt vandaag bekendgemaakt",
-      "teaser": "De bekendmaking staat op donderdag 8 oktober vanaf 13.00 uur Nederlandse tijd gepland. Bij het maken van dit ochtendconcept was de winnaar nog niet bekend.",
-      "source": "Nobel Prize Museum",
-      "url": "https://www.nobelprizemuseum.se/program/livesandningar-arets-nobelpriser/"
+      "title": "Prijs voor economische wetenschappen wordt op 12 oktober bekendgemaakt",
+      "teaser": "De officiële aankondiging staat vandaag gepland vanaf 11.45 uur Nederlandse tijd. Bij het verschijnen van deze ochtendeditie is de winnaar nog niet bekend.",
+      "source": "NobelPrize.org",
+      "url": "https://www.nobelprize.org/prizes/about/prize-announcement-dates/"
     }
   ]
 }
