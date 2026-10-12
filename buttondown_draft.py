@@ -14,12 +14,12 @@ NEWS_FILE = Path("nieuws.json")
 BUTTONDOWN_URL = "https://api.buttondown.com/v1/emails"
 SITE_URL = "https://positief-nieuws.nl/"
 
-PAPER = "#f7f5ec"
-INK = "#151a17"
-GREEN = "#1f5b45"
-GREEN_DARK = "#173f31"
-ACCENT = "#d6a13a"
-MUTED = "#68716b"
+PAPER = "#fffcf7"
+INK = "#182e35"
+GREEN = "#176e5c"
+GREEN_DARK = "#0e5947"
+ACCENT = "#f5cc72"
+MUTED = "#64777a"
 LINE = "rgba(23,63,49,.16)"
 NL_BG = "#f8f3e8"
 WORLD_BG = "#eef3ed"
@@ -251,48 +251,22 @@ def article_thumbnail_url(article, data):
     return url
 
 
-def article_html(article, data=None, prefer_own_page=False):
+def article_html(article, data=None, prefer_own_page=False, featured=False):
     title = esc(article.get("email_title") or article.get("title"))
     teaser = esc(article.get("teaser") or article.get("summary"))
-    source = esc(article.get("source"))
-    category = esc(article.get("category"))
-
-    if prefer_own_page and data and article.get("article_slug"):
-        raw_url = buttondown_article_url(data, article)
-    else:
-        raw_url = str(article.get("url") or "")
+    raw_url = buttondown_article_url(data, article) if prefer_own_page and data and article.get("article_slug") else str(article.get("url") or "")
     url = esc(raw_url)
-
     image_url = article_thumbnail_url(article, data) if prefer_own_page else ""
+    meta = " &nbsp;·&nbsp; ".join(esc(part) for part in (article.get("category"), article.get("source"), reading_time_label(article)) if part)
     image_html = ""
     if image_url:
-        alt = esc(article.get("image_alt") or article.get("title"))
-        image_html = f"""<td width="25%" valign="top" style="width:25%;padding:0 0 0 18px;">
-          <a href="{url}" style="display:block;text-decoration:none;">
-            <img src="{esc(image_url)}" width="150" alt="{alt}"
-                 style="display:block;width:100%;max-width:150px;height:auto;border:0;border-radius:8px;">
-          </a>
-        </td>"""
-
-    meta_parts = [part for part in (category, source) if part]
-    meta = " &nbsp;·&nbsp; ".join(meta_parts)
-    teaser_html = f'<p style="margin:0 0 10px;font:14px Arial,Helvetica,sans-serif;line-height:1.5;color:#3f4742;">{teaser}</p>' if teaser else ""
-    return f"""
-      <div style="margin:0;padding:22px 0;border-bottom:1px solid rgba(23,63,49,.12);">
-        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;border-collapse:collapse;table-layout:fixed;">
-          <tr>
-            <td valign="top" style="padding:0;vertical-align:top;">
-              <h2 style="margin:0 0 8px;font:700 22px Georgia,'Times New Roman',serif;line-height:1.2;color:{INK};overflow-wrap:break-word;">
-                <a href="{url}" style="color:{INK} !important;text-decoration:none;">{title}</a>
-              </h2>
-              {teaser_html}
-              <p style="margin:0;font:700 11px Arial,Helvetica,sans-serif;line-height:1.4;color:{GREEN};">{meta}</p>
-            </td>
-            {image_html}
-          </tr>
-        </table>
-      </div>
-    """
+        image_html = f'<a href="{url}" style="text-decoration:none"><img src="{esc(image_url)}" width="660" alt="{esc(article.get("image_alt") or article.get("title"))}" style="display:block;width:100%;height:auto;max-height:{340 if featured else 190}px;object-fit:cover;border:0;border-radius:16px 16px 0 0;"></a>'
+    return f"""<div class="story-card" style="margin:0 0 16px;border:1px solid #e1e9e5;border-radius:17px;overflow:hidden;background:#fff;">
+      {image_html}<div style="padding:{'24px 26px 28px' if featured else '18px 20px'};">
+      <p style="margin:0 0 10px;font:800 10px Arial,Helvetica,sans-serif;text-transform:uppercase;letter-spacing:.08em;color:{GREEN};">{esc(article.get('category') or ('Uitgelicht' if featured else 'Actualiteit'))}</p>
+      <h2 style="margin:0 0 12px;font:800 {'34' if featured else '20'}px Arial,Helvetica,sans-serif;line-height:1.18;letter-spacing:-.035em;color:{INK};"><a href="{url}" style="color:{INK};text-decoration:none;">{title}</a></h2>
+      {f'<p class="story-intro" style="margin:0 0 12px;font:14px Arial,Helvetica,sans-serif;line-height:1.6;color:{MUTED};">{teaser}</p>' if teaser else ''}
+      <p style="margin:0;font:700 11px Arial,Helvetica,sans-serif;line-height:1.5;color:{GREEN};">{meta}</p></div></div>"""
 
 
 def section_header(label, count, note=""):
@@ -344,8 +318,8 @@ def build_share_block(data):
     )
 
     return f"""
-    <div style="margin:46px 0 0 0;padding:28px 22px;border:1px solid rgba(23,63,49,.18);text-align:center;background:rgba(255,255,255,.34);">
-      <p style="margin:0 0 7px 0;font:700 22px Georgia,'Times New Roman',serif;line-height:1.15;color:{INK};">
+    <div style="margin:46px 0 0 0;padding:28px 22px;border:1px solid rgba(23,63,49,.18);text-align:center;background:#f0f5ee;border-radius:17px;">
+      <p style="margin:0 0 7px 0;font:700 22px Arial,Helvetica,sans-serif;line-height:1.15;color:{INK};">
         Ken je iemand die dit ook fijn zou vinden?
       </p>
 
@@ -379,101 +353,51 @@ def build_share_block(data):
     """
 
 
+def homepage_email_order(data, stories):
+    stories = list(stories)
+    # Same historical editorial override as both homepage renderers.
+    if raw_edition_date(data) == "2026-10-08":
+        priorities = {"telefoonvrije-school-meer-contact": 0, "berghof-verbindt-limburgse-natuur": 1}
+        stories.sort(key=lambda item: priorities.get(item.get("article_slug"), 2))
+    return stories
+
+
+def email_pair(stories, data, own_pages=True):
+    cells = ''.join(f'<td class="email-column" width="50%" valign="top" style="width:50%;padding:0 7px;vertical-align:top;">{article_html(item, data, own_pages)}</td>' for item in stories)
+    return f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;table-layout:fixed;border-collapse:collapse;"><tr>{cells}</tr></table>'
+
+
 def build_body(data, nl, international, headlines):
-    nl_html = "\n".join(article_html(article, data, True) for article in nl)
-    int_html = "\n".join(article_html(article, data, True) for article in international)
-    headlines_html = "\n".join(article_html(article, data, False) for article in headlines)
-    share_block = build_share_block(data)
-    weekday = esc(edition_weekday(data))
+    nl = homepage_email_order(data, nl)
+    nl_html = article_html(nl[0], data, True, featured=True) + email_pair(nl[1:3], data)
+    nl_html += section_header("Meer goed nieuws uit Nederland", "3 verhalen")
+    nl_html += '<div style="height:16px"></div>' + ''.join(article_html(item, data, True) for item in nl[3:])
+    world = ''.join(email_pair(international[i:i+2], data) for i in range(0, len(international), 2))
+    briefing = ''.join(article_html(item, data) for item in headlines)
     preheader = esc(build_preheader(data, nl))
-
     return f"""<!-- buttondown-editor-mode: fancy -->
-<div style="display:none;max-height:0;overflow:hidden;opacity:0;color:transparent;font-size:1px;line-height:1px;mso-hide:all;">
-  {preheader}
-</div>
-<div style="width:100%;max-width:780px;margin:0 auto;box-sizing:border-box;background:{PAPER};padding:24px 20px;color:{INK};font-family:Arial,Helvetica,sans-serif;">
-
-  <div style="margin-bottom:48px;">
-    <p style="margin:0;font:800 19px Arial,Helvetica,sans-serif;letter-spacing:-.02em;color:{INK};">
-      <span style="color:{ACCENT};font-size:22px;vertical-align:-1px;">☀</span>&nbsp; Positief nieuws.
-    </p>
+<style>@media(max-width:760px){{.story-intro{{display:none!important}}.email-column{{display:block!important;width:100%!important;padding:0!important}}.email-shell{{padding:20px 16px!important}}.email-title{{font-size:38px!important}}}}</style>
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;color:transparent;font-size:1px;line-height:1px;mso-hide:all;">{preheader}</div>
+<div class="email-shell" style="width:100%;max-width:740px;margin:0 auto;box-sizing:border-box;background:{PAPER};padding:28px 28px;color:{INK};font-family:Arial,Helvetica,sans-serif;">
+  <div style="padding:0 0 22px;border-bottom:1px solid #e1e9e5;">
+    <a href="{esc(buttondown_edition_url(data))}" style="font:800 25px Arial,Helvetica,sans-serif;letter-spacing:-1px;color:{INK};text-decoration:none;"><img src="{SITE_URL}sun-icon-512.png" width="32" height="32" alt="" style="display:inline-block;width:32px;height:32px;vertical-align:middle;margin-right:8px;">Positief nieuws</a>
   </div>
-
-  <div style="margin-bottom:42px;">
-    <p style="margin:0 0 7px 0;font:13px Arial,Helvetica,sans-serif;color:{GREEN_DARK};">
-      {esc(edition_date_text(data))}
-    </p>
-
-    <h1 style="margin:0;font:700 46px Georgia,'Times New Roman',serif;line-height:1.06;letter-spacing:-.035em;color:{INK};">
-      Positief nieuws uit Nederland en de wereld
-    </h1>
-
-    <p style="margin:20px 0 0 0;font:17px Arial,Helvetica,sans-serif;line-height:1.55;color:#2d342f;">
-      Het belangrijkste positieve nieuws van vandaag, uit Nederland en de wereld. In een paar minuten weet je wat er goed gaat én wat je verder moet weten.
-    </p>
-
-    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
-           style="width:100%;margin-top:22px;border-collapse:collapse;border-top:1px solid rgba(23,63,49,.22);">
-      <tr>
-        <td style="padding-top:13px;font:11px Arial,Helvetica,sans-serif;color:{MUTED};">
-          maandag · donderdag
-        </td>
-        <td align="right" style="padding-top:13px;font:11px Arial,Helvetica,sans-serif;color:{MUTED};white-space:nowrap;">
-          15 verhalen &nbsp;&nbsp; ongeveer 6 minuten
-        </td>
-      </tr>
-    </table>
+  <div style="padding:30px 0 26px;">
+    <p style="margin:0 0 14px;font:700 12px Arial,Helvetica,sans-serif;color:{GREEN};">Editie van {esc(edition_date_text(data))}</p>
+    <h1 class="email-title" style="margin:0 0 16px;font:900 52px Arial,Helvetica,sans-serif;line-height:1.04;letter-spacing:-.055em;color:{INK};">Positief <span style="color:#168268;">nieuws</span></h1>
+    <p style="margin:0;font:15px Arial,Helvetica,sans-serif;line-height:1.65;color:{MUTED};">Twaalf positieve verhalen uit Nederland en de wereld. Plus drie ontwikkelingen om bij te blijven. Geen eindeloze nieuwsstroom.</p>
+    <p style="margin:15px 0 0;font:12px Arial,Helvetica,sans-serif;color:{MUTED};">6 uit Nederland · 6 uit de wereld · 3 korte actualiteiten</p>
   </div>
-
-  <div style="margin:0 -20px;padding:28px 20px;background:{NL_BG};">
-    {section_header("Goed nieuws uit Nederland", "6 verhalen")}
-    {nl_html}
+  {nl_html}
+  <div style="margin-top:36px;">{section_header("Goed nieuws uit de wereld", "6 verhalen")}<div style="height:16px"></div>{world}</div>
+  <div style="margin-top:30px;">{section_header("Wat je verder moet weten", "3 korte actualiteiten")}<div style="height:16px"></div>{briefing}</div>
+  <div style="padding:32px 15px;margin-top:30px;border-top:1px solid #e1e9e5;text-align:center;">
+    <h2 style="margin:0 0 9px;font:800 27px Arial,Helvetica,sans-serif;letter-spacing:-.04em;color:{INK};">Dit was het voor vandaag.<br>Je bent weer bij.</h2><p style="margin:0;font:14px Arial,Helvetica,sans-serif;color:{MUTED};">Geniet van je dag.</p>
   </div>
-
-  <div style="margin:0 -20px;padding:28px 20px;background:{WORLD_BG};">
-    {section_header(
-        "Goed nieuws uit de wereld",
-        "6 verhalen",
-        ""
-    )}
-    {int_html}
-  </div>
-
-  <div style="margin:0 -20px;padding:28px 20px;background:{BRIEFING_BG};">
-    {section_header(
-        "Wat je verder moet weten",
-        "3 verhalen",
-        "Kort en feitelijk."
-    )}
-    {headlines_html}
-  </div>
-
-  <div style="padding:68px 0 18px 0;text-align:center;">
-    <p style="margin:0 0 16px 0;font:30px Arial,Helvetica,sans-serif;color:{ACCENT};">☀</p>
-
-    <h2 style="margin:0;font:700 34px Georgia,'Times New Roman',serif;line-height:1.02;letter-spacing:-.04em;color:{INK};">
-      Dit was het voor vandaag.<br>Je bent weer bij.
-    </h2>
-
-    <p style="margin:16px 0 0 0;font:14px Arial,Helvetica,sans-serif;color:{MUTED};">
-      Geniet van je dag.
-    </p>
-  </div>
-
-  {share_block}
-
-  <p style="margin:34px 0 0 0;text-align:center;font:11px Arial,Helvetica,sans-serif;color:#8b928e;">
-    Positief nieuws · Dit gebeurt ook.
-  </p>
-
-  <p style="margin:10px 0 0 0;text-align:center;font:11px Arial,Helvetica,sans-serif;line-height:1.5;color:#8b928e;">
-    <a href="{{{{ unsubscribe_url }}}}" style="color:#68716b;text-decoration:underline;text-underline-offset:2px;">
-      Afmelden
-    </a>
-  </p>
-
-</div>
-"""
+  {build_share_block(data)}
+  <p style="margin:28px 0 0;text-align:center;font:11px Arial,Helvetica,sans-serif;color:{MUTED};">Positief nieuws · Dit gebeurt ook.</p>
+  <p style="text-align:center;font:11px Arial,Helvetica,sans-serif;"><a href="{{{{ unsubscribe_url }}}}" style="color:{MUTED};text-decoration:underline;">Afmelden</a></p>
+</div>"""
 
 
 def build_subject(data):
