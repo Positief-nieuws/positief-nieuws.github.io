@@ -264,7 +264,7 @@ def article_html(article, data=None, prefer_own_page=False, featured=False):
     return f"""<div class="story-card" style="margin:0 0 16px;border:1px solid #e1e9e5;border-radius:17px;overflow:hidden;background:#fff;">
       {image_html}<div style="padding:{'24px 26px 28px' if featured else '18px 20px'};">
       <p style="margin:0 0 10px;font:800 10px Arial,Helvetica,sans-serif;text-transform:uppercase;letter-spacing:.08em;color:{GREEN};">{esc(article.get('category') or ('Uitgelicht' if featured else 'Actualiteit'))}</p>
-      <h2 style="margin:0 0 12px;font:800 {'34' if featured else '20'}px Arial,Helvetica,sans-serif;line-height:1.18;letter-spacing:-.035em;color:{INK};"><a href="{url}" style="color:{INK};text-decoration:none;">{title}</a></h2>
+      <h2 style="margin:0 0 12px;font:800 {'34' if featured else '20'}px Arial,Helvetica,sans-serif;line-height:1.18;letter-spacing:-.035em;color:{INK};"><a href="{url}" style="color:{INK} !important;text-decoration:none;">{title}</a></h2>
       {f'<p class="story-intro" style="margin:0 0 12px;font:14px Arial,Helvetica,sans-serif;line-height:1.6;color:{MUTED};">{teaser}</p>' if teaser else ''}
       <p style="margin:0;font:700 11px Arial,Helvetica,sans-serif;line-height:1.5;color:{GREEN};">{meta}</p></div></div>"""
 
@@ -331,13 +331,13 @@ def build_share_block(data):
         <tr>
           <td style="padding:0 5px 10px 5px;">
             <a href="{whatsapp_share_url}"
-               style="display:inline-block;padding:10px 16px;border:1px solid rgba(214,161,58,.65);border-radius:999px;font:800 12px Arial,Helvetica,sans-serif;color:{GREEN_DARK};text-decoration:none;">
+               style="display:inline-block;padding:10px 16px;border:1px solid rgba(214,161,58,.65);border-radius:999px;font:800 12px Arial,Helvetica,sans-serif;color:{GREEN_DARK} !important;text-decoration:none;">
               Deel via WhatsApp
             </a>
           </td>
           <td style="padding:0 5px 10px 5px;">
             <a href="{email_share_url}"
-               style="display:inline-block;padding:10px 16px;border:1px solid rgba(214,161,58,.65);border-radius:999px;font:800 12px Arial,Helvetica,sans-serif;color:{GREEN_DARK};text-decoration:none;">
+               style="display:inline-block;padding:10px 16px;border:1px solid rgba(214,161,58,.65);border-radius:999px;font:800 12px Arial,Helvetica,sans-serif;color:{GREEN_DARK} !important;text-decoration:none;">
               Deel via e-mail
             </a>
           </td>
@@ -345,7 +345,7 @@ def build_share_block(data):
       </table>
 
       <p style="margin:8px 0 0 0;font:12px Arial,Helvetica,sans-serif;color:{MUTED};">
-        <a href="{newsletter_online_url}" style="color:{GREEN_DARK};text-decoration:underline;text-underline-offset:2px;">
+        <a href="{newsletter_online_url}" style="color:{GREEN_DARK} !important;text-decoration:underline;text-underline-offset:2px;">
           Lees deze editie online
         </a>
       </p>
@@ -380,7 +380,7 @@ def build_body(data, nl, international, headlines):
 <div style="display:none;max-height:0;overflow:hidden;opacity:0;color:transparent;font-size:1px;line-height:1px;mso-hide:all;">{preheader}</div>
 <div class="email-shell" style="width:100%;max-width:740px;margin:0 auto;box-sizing:border-box;background:{PAPER};padding:28px 28px;color:{INK};font-family:Arial,Helvetica,sans-serif;">
   <div style="padding:0 0 22px;border-bottom:1px solid #e1e9e5;">
-    <a href="{esc(buttondown_edition_url(data))}" style="font:800 25px Arial,Helvetica,sans-serif;letter-spacing:-1px;color:{INK};text-decoration:none;"><img src="{SITE_URL}sun-icon-512.png" width="32" height="32" alt="" style="display:inline-block;width:32px;height:32px;vertical-align:middle;margin-right:8px;">Positief nieuws</a>
+    <a href="{esc(buttondown_edition_url(data))}" style="font:800 25px Arial,Helvetica,sans-serif;letter-spacing:-1px;color:{INK} !important;text-decoration:none;"><img src="{SITE_URL}sun-icon-512.png" width="32" height="32" alt="" style="display:inline-block;width:32px;height:32px;vertical-align:middle;margin-right:8px;">Positief nieuws</a>
   </div>
   <div style="padding:30px 0 26px;">
     <p style="margin:0 0 14px;font:700 12px Arial,Helvetica,sans-serif;color:{GREEN};">Editie van {esc(edition_date_text(data))}</p>
