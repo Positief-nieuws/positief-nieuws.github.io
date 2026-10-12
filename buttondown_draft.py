@@ -386,7 +386,7 @@ def build_body(data, nl, international, headlines):
     <p style="margin:0 0 14px;font:700 12px Arial,Helvetica,sans-serif;color:{GREEN};">Editie van {esc(edition_date_text(data))}</p>
     <h1 class="email-title" style="margin:0 0 16px;font:900 52px Arial,Helvetica,sans-serif;line-height:1.04;letter-spacing:-.055em;color:{INK};">Positief <span style="color:#168268;">nieuws</span></h1>
     <p style="margin:0;font:15px Arial,Helvetica,sans-serif;line-height:1.65;color:{MUTED};">Twaalf positieve verhalen uit Nederland en de wereld. Plus drie ontwikkelingen om bij te blijven. Geen eindeloze nieuwsstroom.</p>
-    <p style="margin:15px 0 0;font:12px Arial,Helvetica,sans-serif;color:{MUTED};">6 uit Nederland · 6 uit de wereld · 3 korte actualiteiten</p>
+    <p style="margin:15px 0 0;font:12px Arial,Helvetica,sans-serif;color:{MUTED};">Elke maandag en donderdag · 6 uit Nederland · 6 uit de wereld · 3 korte actualiteiten</p>
   </div>
   {nl_html}
   <div style="margin-top:36px;">{section_header("Goed nieuws uit de wereld", "6 verhalen")}<div style="height:16px"></div>{world}</div>
