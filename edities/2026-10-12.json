@@ -164,22 +164,21 @@
       "reading_time_minutes": 5
     },
     {
-      "category": "Gezondheid",
-      "title": "Gezinnen in Angola krijgen steun die ook de emotionele schade van overstromingen erkent",
-      "teaser": "Meer dan tweehonderd gezinnen kregen wekelijkse psychosociale begeleiding. Met Nederlandse financiële steun zijn ook vijftig hulpverleners opgeleid.",
+      "category": "Natuur & klimaat",
+      "title": "Reuzenschildpadden floreren op beschermd Aldabra",
+      "email_title": "Reuzenschildpadden floreren op beschermd Aldabra",
+      "teaser": "Op het beschermde atol in de Seychellen leven naar schatting 180.000 Aldabra-reuzenschildpadden. Een nieuw onderzoek bevestigt een grote, stabiele wilde populatie.",
       "article_body": [
-        "Na overstromingen hebben mensen niet alleen een dak of voedsel nodig. In Benguela, Angola, organiseerden de WHO en lokale gezondheidsdiensten daarom terugkerende psychosociale sessies voor getroffen gezinnen.",
-        "Volgens de WHO kregen meer dan tweehonderd gezinnen gedurende de interventie wekelijkse begeleiding. Vijftig professionals werden getraind in het herkennen van psychische nood, eerste ondersteuning en doorverwijzing.",
-        "Nederland financierde de inzet van een specialist voor drie maanden. Het bericht beschrijft geleverde hulp en opleiding, maar bevat geen onafhankelijk gemeten effect op klachten of herstel."
+        "Op Aldabra, een beschermd atol in de Seychellen, leven naar schatting ongeveer 180.000 reuzenschildpadden. Dat blijkt uit onderzoek van de Seychelles Islands Foundation en de Universiteit van Exeter, waarover de universiteit op 7 oktober berichtte.",
+        "De onderzoekers analyseerden tellingen uit 2018 tot en met 2022. Met een statistisch model hielden ze rekening met dieren die tijdens het veldwerk verborgen bleven in de begroeiing. De populatie was in de goed vergelijkbare onderzoeksjaren relatief stabiel.",
+        "Aldabra wordt al tientallen jaren beschermd. De nieuwe schatting is hoger dan eerdere cijfers, maar betekent niet dat de populatie onlangs plotseling is gegroeid. Het positieve resultaat is dat hier een zeer grote wilde populatie standhoudt."
       ],
-      "why_it_matters": "Zorg voor de gevolgen van een ramp omvat ook angst en verlies. Lokale scholing kan bovendien kennis achterlaten voor volgende noodsituaties.",
-      "source": "WHO Afrika",
-      "url": "https://www.afro.who.int/countries/angola/news/floods-hope-recovery-through-psychosocial-support",
-      "article_slug": "angola-gezinnen-psychosociale-steun",
-      "image_query": "id:2847508",
-      "image_alt": "Handen op elkaar als symbool van steun en verbondenheid; illustratief beeld",
-      "email_title": "Gezinnen in Angola krijgen steun die ook de emotionele schade van overstromingen erkent",
-      "reading_time_minutes": 4
+      "why_it_matters": "Langdurige natuurbescherming helpt deze bijzondere soort in stand te houden. De betere schatting geeft beheerders een betrouwbaar uitgangspunt om de populatie te blijven volgen.",
+      "source": "Universiteit van Exeter / Seychelles Islands Foundation",
+      "url": "https://news.exeter.ac.uk/faculty-of-environment-science-and-economy/ecology-and-conservation/new-study-reports-largest-ever-population-estimate-for-seychelles-giant-tortoises/",
+      "article_slug": "aldabra-reuzenschildpadden-stabiele-populatie",
+      "image_query": "id:854045",
+      "image_alt": "Aldabra-reuzenschildpad; illustratief beeld"
     },
     {
       "category": "Cultuur",
