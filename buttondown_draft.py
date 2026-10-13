@@ -67,11 +67,11 @@ def load_news():
         or []
     )
 
-    if len(nl) < 6:
+    if len(nl) != 6:
         raise ValueError("nieuws.json moet 6 Nederlandse positieve verhalen bevatten.")
-    if len(international) < 6:
+    if len(international) != 6:
         raise ValueError("nieuws.json moet 6 internationale positieve verhalen bevatten.")
-    if len(headlines) < 3:
+    if len(headlines) != 3:
         raise ValueError("nieuws.json moet 3 berichten bevatten onder 'headlines'.")
 
     return data, nl[:6], international[:6], headlines[:3]
@@ -445,6 +445,15 @@ def main():
 
     try:
         data, nl, international, headlines = load_news()
+        # Gate before any external API mutation, including manual workflow runs.
+        from editorial_check import check
+        edition = raw_edition_date(data)
+        dossier_path = Path("redactie") / f"{edition}.json"
+        if not dossier_path.exists():
+            raise ValueError("Redactioneel dossier ontbreekt; geen Buttondown-concept gemaakt.")
+        report = check(data, json.loads(dossier_path.read_text(encoding="utf-8")))
+        if not report["ready"]:
+            raise ValueError("Redactionele controle: " + "; ".join(report["errors"]))
         subject = build_subject(data)
         preheader = build_preheader(data, nl)
         body = build_body(data, nl, international, headlines)

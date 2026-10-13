@@ -26,7 +26,7 @@ import re
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from email.utils import parsedate_to_datetime
 from html import unescape
 from html.parser import HTMLParser
@@ -49,406 +49,16 @@ CURATED_DATE_WORKERS = 6
 CURATED_UNKNOWN_DATE_BONUS = 5
 CURATED_UNKNOWN_DATE_PENALTY = -4
 
-SOURCES = [{'publisher': 'NOS',
-  'region': 'nl',
-  'mode': 'rss',
-  'url': 'https://feeds.nos.nl/nosnieuwsalgemeen',
-  'weight': 2.3,
-  'hint': None},
- {'publisher': 'NOS',
-  'region': 'nl',
-  'mode': 'rss',
-  'url': 'https://feeds.nos.nl/nosnieuwseconomie',
-  'weight': 2.3,
-  'hint': 'Economie & geld'},
- {'publisher': 'NOS',
-  'region': 'nl',
-  'mode': 'rss',
-  'url': 'https://feeds.nos.nl/nosnieuwscultuurenmedia',
-  'weight': 2.3,
-  'hint': 'Cultuur & media'},
- {'publisher': 'NOS',
-  'region': 'nl',
-  'mode': 'rss',
-  'url': 'https://feeds.nos.nl/nosnieuwstech',
-  'weight': 2.3,
-  'hint': 'Technologie & innovatie'},
- {'publisher': 'NOS',
-  'region': 'nl',
-  'mode': 'rss',
-  'url': 'https://feeds.nos.nl/nosnieuwsopmerkelijk',
-  'weight': 2.2,
-  'hint': 'Gewoon leuk'},
- {'publisher': 'NOS',
-  'region': 'nl',
-  'mode': 'rss',
-  'url': 'https://feeds.nos.nl/nossportalgemeen',
-  'weight': 2.3,
-  'hint': 'Sport'},
- {'publisher': 'PBL',
-  'region': 'nl',
-  'mode': 'rss',
-  'url': 'https://www.pbl.nl/feed/article/rss.xml',
-  'weight': 2.5,
-  'hint': 'Natuur & klimaat'},
- {'publisher': 'PBL',
-  'region': 'nl',
-  'mode': 'rss',
-  'url': 'https://www.pbl.nl/feed/topic/20/article/rss.xml',
-  'weight': 2.5,
-  'hint': 'Mens & samenleving'},
- {'publisher': 'PBL',
-  'region': 'nl',
-  'mode': 'rss',
-  'url': 'https://www.pbl.nl/feed/topic/17/article/rss.xml',
-  'weight': 2.5,
-  'hint': 'Economie & geld'},
- {'publisher': 'PBL',
-  'region': 'nl',
-  'mode': 'rss',
-  'url': 'https://www.pbl.nl/feed/topic/13/article/rss.xml',
-  'weight': 2.5,
-  'hint': 'Natuur & klimaat'},
- {'publisher': 'PBL',
-  'region': 'nl',
-  'mode': 'rss',
-  'url': 'https://www.pbl.nl/feed/topic/9/article/rss.xml',
-  'weight': 2.5,
-  'hint': 'Voeding & leefstijl'},
- {'publisher': 'PBL',
-  'region': 'nl',
-  'mode': 'rss',
-  'url': 'https://www.pbl.nl/feed/topic/11/article/rss.xml',
-  'weight': 2.5,
-  'hint': 'Natuur & klimaat'},
- {'publisher': 'KNMI',
-  'region': 'nl',
-  'mode': 'rss',
-  'url': 'https://www.knmi.nl/rssfeeds/rss_KNMInieuwsberichten',
-  'weight': 2.5,
-  'hint': 'Natuur & klimaat'},
- {'publisher': 'KNMI',
-  'region': 'nl',
-  'mode': 'rss',
-  'url': 'https://www.knmi.nl/rssfeeds/rss_KNMIklimaatberichten',
-  'weight': 2.5,
-  'hint': 'Natuur & klimaat'},
- {'publisher': 'RIVM',
-  'region': 'nl',
-  'mode': 'rss',
-  'url': 'https://www.rivm.nl/nieuws/rss.xml',
-  'weight': 2.5,
-  'hint': 'Gezondheid'},
- {'publisher': 'Scientias',
-  'region': 'nl',
-  'mode': 'rss',
-  'url': 'https://feeds.feedburner.com/scientias-wetenschap',
-  'weight': 2.0,
-  'hint': 'Wetenschap'},
- {'publisher': 'Nature Today',
-  'region': 'nl',
-  'mode': 'rss',
-  'url': 'https://www.naturetoday.com/intl/nl/nature-reports/rss',
-  'weight': 2.1,
-  'hint': 'Natuur & klimaat'},
- {'publisher': 'CBS',
-  'region': 'nl',
-  'mode': 'google_site',
-  'domain': 'cbs.nl',
-  'weight': 2.6,
-  'hint': 'Economie & geld'},
- {'publisher': 'Wageningen University & Research',
-  'region': 'nl',
-  'mode': 'google_site',
-  'domain': 'wur.nl',
-  'weight': 2.7,
-  'hint': 'Wetenschap'},
- {'publisher': 'Universiteit Twente',
-  'region': 'nl',
-  'mode': 'google_site',
-  'domain': 'utwente.nl',
-  'weight': 2.6,
-  'hint': 'Technologie & innovatie'},
- {'publisher': 'TU Delft',
-  'region': 'nl',
-  'mode': 'google_site',
-  'domain': 'tudelft.nl',
-  'weight': 2.6,
-  'hint': 'Technologie & innovatie'},
- {'publisher': 'Universiteit Utrecht',
-  'region': 'nl',
-  'mode': 'google_site',
-  'domain': 'uu.nl',
-  'weight': 2.5,
-  'hint': 'Wetenschap'},
- {'publisher': 'Radboud Universiteit',
-  'region': 'nl',
-  'mode': 'google_site',
-  'domain': 'ru.nl',
-  'weight': 2.5,
-  'hint': 'Wetenschap'},
- {'publisher': 'TNO',
-  'region': 'nl',
-  'mode': 'google_site',
-  'domain': 'tno.nl',
-  'weight': 2.6,
-  'hint': 'Technologie & innovatie'},
- {'publisher': 'NEMO Kennislink',
-  'region': 'nl',
-  'mode': 'google_site',
-  'domain': 'nemokennislink.nl',
-  'weight': 2.2,
-  'hint': 'Wetenschap'},
- {'publisher': 'RVO',
-  'region': 'nl',
-  'mode': 'google_site',
-  'domain': 'rvo.nl',
-  'weight': 2.3,
-  'hint': 'Economie & geld'},
- {'publisher': 'Rijksoverheid',
-  'region': 'nl',
-  'mode': 'google_site',
-  'domain': 'rijksoverheid.nl',
-  'weight': 2.4,
-  'hint': 'Mens & samenleving'},
- {'publisher': 'Voedingscentrum',
-  'region': 'nl',
-  'mode': 'google_site',
-  'domain': 'voedingscentrum.nl',
-  'weight': 2.4,
-  'hint': 'Voeding & leefstijl'},
- {'publisher': 'Milieu Centraal',
-  'region': 'nl',
-  'mode': 'google_site',
-  'domain': 'milieucentraal.nl',
-  'weight': 2.1,
-  'hint': 'Natuur & klimaat'},
- {'publisher': 'Staatsbosbeheer',
-  'region': 'nl',
-  'mode': 'google_site',
-  'domain': 'staatsbosbeheer.nl',
-  'weight': 2.2,
-  'hint': 'Natuur & klimaat'},
- {'publisher': 'Oranje Fonds',
-  'region': 'nl',
-  'mode': 'google_site',
-  'domain': 'oranjefonds.nl',
-  'weight': 2.2,
-  'hint': 'Mens & samenleving'},
- {'publisher': 'Humanitas',
-  'region': 'nl',
-  'mode': 'google_site',
-  'domain': 'humanitas.nl',
-  'weight': 2.1,
-  'hint': 'Mens & samenleving'},
- {'publisher': 'EenVandaag',
-  'region': 'nl',
-  'mode': 'google_site',
-  'domain': 'eenvandaag.avrotros.nl',
-  'weight': 2.4,
-  'hint': None},
- {'publisher': 'De Ondernemer',
-  'region': 'nl',
-  'mode': 'google_site',
-  'domain': 'deondernemer.nl',
-  'weight': 2.1,
-  'hint': 'Economie & geld'},
- {'publisher': 'NU.nl',
-  'region': 'nl',
-  'mode': 'curated_html',
-  'url': 'https://www.nu.nl/goed-nieuws',
-  'weight': 2.3,
-  'hint': None,
-  'curation_bonus': 25,
-  'curated_source': 'NU.nl Goed nieuws'},
- {'publisher': 'NU.nl', 'region': 'nl', 'mode': 'google_site', 'domain': 'nu.nl', 'weight': 2.3, 'hint': None},
- {'publisher': 'RTL Nieuws', 'region': 'nl', 'mode': 'google_site', 'domain': 'rtl.nl', 'weight': 2.3, 'hint': None},
- {'publisher': 'RTV Oost', 'region': 'nl', 'mode': 'google_site', 'domain': 'rtvoost.nl', 'weight': 2.2, 'hint': None},
- {'publisher': 'Omroep Brabant',
-  'region': 'nl',
-  'mode': 'google_site',
-  'domain': 'omroepbrabant.nl',
-  'weight': 2.2,
-  'hint': None},
- {'publisher': 'Omroep Gelderland',
-  'region': 'nl',
-  'mode': 'google_site',
-  'domain': 'gld.nl',
-  'weight': 2.2,
-  'hint': None},
- {'publisher': 'Rijnmond', 'region': 'nl', 'mode': 'google_site', 'domain': 'rijnmond.nl', 'weight': 2.2, 'hint': None},
- {'publisher': 'NH Nieuws',
-  'region': 'nl',
-  'mode': 'google_site',
-  'domain': 'nhnieuws.nl',
-  'weight': 2.2,
-  'hint': None},
- {'publisher': 'RTV Noord',
-  'region': 'nl',
-  'mode': 'google_site',
-  'domain': 'rtvnoord.nl',
-  'weight': 2.2,
-  'hint': None},
- {'publisher': 'Omrop Fryslân',
-  'region': 'nl',
-  'mode': 'google_site',
-  'domain': 'omropfryslan.nl',
-  'weight': 2.2,
-  'hint': None},
- {'publisher': 'AT5', 'region': 'nl', 'mode': 'google_site', 'domain': 'at5.nl', 'weight': 2.1, 'hint': None},
- {'publisher': '1Limburg', 'region': 'nl', 'mode': 'google_site', 'domain': '1limburg.nl', 'weight': 2.1, 'hint': None},
- {'publisher': 'Hart van Nederland',
-  'region': 'nl',
-  'mode': 'google_site',
-  'domain': 'hartvannederland.nl',
-  'weight': 2.0,
-  'hint': None},
- {'publisher': 'MIT News',
-  'region': 'int',
-  'mode': 'rss',
-  'url': 'https://news.mit.edu/rss/feed',
-  'weight': 2.7,
-  'hint': 'Wetenschap'},
- {'publisher': 'NASA',
-  'region': 'int',
-  'mode': 'rss',
-  'url': 'https://www.nasa.gov/news-release/feed/',
-  'weight': 2.7,
-  'hint': 'Wetenschap'},
- {'publisher': 'BBC',
-  'region': 'int',
-  'mode': 'rss',
-  'url': 'https://feeds.bbci.co.uk/news/science_and_environment/rss.xml',
-  'weight': 2.5,
-  'hint': 'Wetenschap'},
- {'publisher': 'BBC',
-  'region': 'int',
-  'mode': 'rss',
-  'url': 'https://feeds.bbci.co.uk/news/business/rss.xml',
-  'weight': 2.5,
-  'hint': 'Economie & geld'},
- {'publisher': 'The Guardian',
-  'region': 'int',
-  'mode': 'rss',
-  'url': 'https://www.theguardian.com/environment/rss',
-  'weight': 2.4,
-  'hint': 'Natuur & klimaat'},
- {'publisher': 'The Guardian',
-  'region': 'int',
-  'mode': 'rss',
-  'url': 'https://www.theguardian.com/science/rss',
-  'weight': 2.4,
-  'hint': 'Wetenschap'},
- {'publisher': 'UN News',
-  'region': 'int',
-  'mode': 'rss',
-  'url': 'https://news.un.org/feed/subscribe/en/news/all/rss.xml',
-  'weight': 2.5,
-  'hint': 'Mens & samenleving'},
- {'publisher': 'BBC',
-  'region': 'int',
-  'mode': 'rss',
-  'url': 'https://feeds.bbci.co.uk/news/health/rss.xml',
-  'weight': 2.5,
-  'hint': 'Gezondheid'},
- {'publisher': 'BBC',
-  'region': 'int',
-  'mode': 'rss',
-  'url': 'https://feeds.bbci.co.uk/news/technology/rss.xml',
-  'weight': 2.5,
-  'hint': 'Technologie & innovatie'},
- {'publisher': 'The Guardian',
-  'region': 'int',
-  'mode': 'rss',
-  'url': 'https://www.theguardian.com/global-development/rss',
-  'weight': 2.4,
-  'hint': 'Mens & samenleving'},
- {'publisher': 'Phys.org',
-  'region': 'int',
-  'mode': 'rss',
-  'url': 'https://phys.org/rss-feed/',
-  'weight': 2.3,
-  'hint': 'Wetenschap'},
- {'publisher': 'Medical Xpress',
-  'region': 'int',
-  'mode': 'rss',
-  'url': 'https://medicalxpress.com/rss-feed/',
-  'weight': 2.3,
-  'hint': 'Gezondheid'},
- {'publisher': 'ESA', 'region': 'int', 'mode': 'google_site', 'domain': 'esa.int', 'weight': 2.6, 'hint': 'Wetenschap'},
- {'publisher': 'WHO', 'region': 'int', 'mode': 'google_site', 'domain': 'who.int', 'weight': 2.6, 'hint': 'Gezondheid'},
- {'publisher': 'UNICEF',
-  'region': 'int',
-  'mode': 'google_site',
-  'domain': 'unicef.org',
-  'weight': 2.5,
-  'hint': 'Mens & samenleving'},
- {'publisher': 'OECD',
-  'region': 'int',
-  'mode': 'google_site',
-  'domain': 'oecd.org',
-  'weight': 2.5,
-  'hint': 'Economie & geld'},
- {'publisher': 'UNEP',
-  'region': 'int',
-  'mode': 'google_site',
-  'domain': 'unep.org',
-  'weight': 2.5,
-  'hint': 'Natuur & klimaat'},
- {'publisher': 'Smithsonian Magazine',
-  'region': 'int',
-  'mode': 'google_site',
-  'domain': 'smithsonianmag.com',
-  'weight': 2.3,
-  'hint': 'Geschiedenis & mens'},
- {'publisher': 'ScienceDaily',
-  'region': 'int',
-  'mode': 'google_site',
-  'domain': 'sciencedaily.com',
-  'weight': 2.2,
-  'hint': 'Wetenschap'},
- {'publisher': 'Positive News',
-  'region': 'int',
-  'mode': 'google_site',
-  'domain': 'positive.news',
-  'weight': 2.0,
-  'hint': 'Mens & samenleving'},
- {'publisher': 'Mongabay',
-  'region': 'int',
-  'mode': 'google_site',
-  'domain': 'mongabay.com',
-  'weight': 2.4,
-  'hint': 'Natuur & klimaat'},
- {'publisher': 'Yale Environment 360',
-  'region': 'int',
-  'mode': 'google_site',
-  'domain': 'e360.yale.edu',
-  'weight': 2.4,
-  'hint': 'Natuur & klimaat'},
- {'publisher': 'Good News Network',
-  'region': 'int',
-  'mode': 'google_site',
-  'domain': 'goodnewsnetwork.org',
-  'weight': 1.9,
-  'hint': 'Gewoon leuk'},
- {'publisher': 'UNDP',
-  'region': 'int',
-  'mode': 'google_site',
-  'domain': 'undp.org',
-  'weight': 2.5,
-  'hint': 'Mens & samenleving'},
- {'publisher': 'FAO',
-  'region': 'int',
-  'mode': 'google_site',
-  'domain': 'fao.org',
-  'weight': 2.5,
-  'hint': 'Voeding & leefstijl'},
- {'publisher': 'European Space Agency',
-  'region': 'int',
-  'mode': 'google_site',
-  'domain': 'esa.int',
-  'weight': 2.6,
-  'hint': 'Wetenschap'}]
+from source_registry import (load_registry, active_channels, canonical_url, load_history,
+                             history_matches, due, atomic_json)
+from zoneinfo import ZoneInfo
+from build_editions import canonical_category
+
+SOURCES = active_channels()
+HEALTH_PATH = ROOT / "source_health.json"
+STATE_PATH = ROOT / "source_state.json"
+CHANNEL_HEALTH = {}
+CHANNEL_STATE = {}
 
 # Brede positieve signalen. Dit is alleen VOORSELECTIE.
 # Een match betekent dus niet automatisch dat iets in Goed nieuws hoort.
@@ -562,22 +172,19 @@ def parse_date(value):
     except Exception:
         return None
 
-def google_site_feed(domain, region):
-    # Gericht zoeken naar mogelijke positieve ontwikkelingen.
-    if region == "nl":
-        cues = (
-            'doorbraak OR succes OR wint OR goud OR gered OR herstel OR verbetert OR '
-            'ontdekking OR innovatie OR helpt OR vrijwilligers OR daalt OR groeit OR oplossing'
-        )
-        q = f"site:{domain} ({cues}) when:7d"
-        return "https://news.google.com/rss/search?q=" + urllib.parse.quote_plus(q) + "&hl=nl&gl=NL&ceid=NL:nl"
-
-    cues = (
-        'breakthrough OR success OR wins OR gold OR rescued OR recovery OR improves OR '
-        'discovery OR innovation OR helps OR volunteers OR falls OR growth OR solution'
-    )
-    q = f"site:{domain} ({cues}) when:7d"
-    return "https://news.google.com/rss/search?q=" + urllib.parse.quote_plus(q) + "&hl=en-US&gl=US&ceid=US:en"
+def google_site_feed(domain, region, language=None):
+    language = language or ("nl" if region == "nl" else "en")
+    if language == "nl":
+        cues = "doorbraak OR succes OR herstel OR verbetering OR ontdekking OR helpt OR oplossing"
+        locale = "&hl=nl&gl=NL&ceid=NL:nl"
+    elif language == "de":
+        cues = "Fortschritt OR Erfolg OR Forschung OR verbessert OR gerettet OR Lösung"
+        locale = "&hl=de&gl=DE&ceid=DE:de"
+    else:
+        cues = "breakthrough OR success OR recovery OR improvement OR discovery OR solution"
+        locale = "&hl=en-US&gl=US&ceid=US:en"
+    query = f"site:{domain} ({cues}) when:7d"
+    return "https://news.google.com/rss/search?q=" + urllib.parse.quote_plus(query) + locale
 
 
 class NuGoodNewsParser(HTMLParser):
@@ -666,7 +273,7 @@ def parse_nu_good_news(raw, max_items=30):
 def source_url(src):
     if src["mode"] == "rss":
         return src["url"]
-    return google_site_feed(src["domain"], src["region"])
+    return google_site_feed(src["domain"], src["region"], src.get("language"))
 
 def fetch(url, html=False, timeout=20):
     headers = {
@@ -821,9 +428,10 @@ def parse_feed(raw):
         title = child_text(node, {"title"})
         url = node_link(node)
         summary = child_text(node, {"description","summary","content","encoded"})
-        published = parse_date(child_text(node, {"pubdate","published","updated","date"}))
+        published = parse_date(child_text(node, {"pubdate", "published", "date"}))
+        updated = parse_date(child_text(node, {"updated"}))
         if title and url:
-            items.append({"title": title, "url": url, "summary": summary, "published": published})
+            items.append({"title": title, "url": url, "summary": summary, "published": published, "updated": updated})
     return items
 
 def contains(text, terms):
@@ -849,8 +457,8 @@ def category_hint(title, summary, source_hint=None):
     if source_hint:
         scores[source_hint] = scores.get(source_hint, 0) + 1
     if not scores:
-        return source_hint or "Onbekend"
-    return max(scores, key=scores.get)
+        return canonical_category(source_hint or "") or "Onbekend"
+    return canonical_category(max(scores, key=scores.get)) or "Onbekend"
 
 def compact_summary(text, max_chars=420):
     text = clean(text)
@@ -861,11 +469,8 @@ def compact_summary(text, max_chars=420):
     return text
 
 def normurl(url):
-    try:
-        p = urlparse(url)
-        return (p.netloc.lower() + p.path.rstrip("/")).lower()
-    except Exception:
-        return url.lower().rstrip("/")
+    return canonical_url(url)
+
 
 def title_tokens(title):
     words = re.findall(r"[a-z0-9à-ÿ]+", clean(title).lower())
@@ -1030,81 +635,100 @@ def add_reading_times(items):
     return items
 
 
-def collect():
-    now = datetime.now(timezone.utc)
-    candidates = []
-    errors = []
-    seen_urls = set()
-
-    for src in SOURCES:
-        try:
-            if src["mode"] == "curated_html":
-                items = parse_nu_good_news(fetch(src["url"], html=True))
-                enrich_curated_dates(items)
-            else:
-                items = parse_feed(fetch(source_url(src)))
-        except Exception as exc:
-            errors.append(f'{src["publisher"]}: {type(exc).__name__}: {exc}')
-            continue
-
+def collect(now=None, sources=None, history=None, force=False):
+    global CHANNEL_HEALTH, CHANNEL_STATE
+    now = now or datetime.now(timezone.utc)
+    history = load_history() if history is None else history
+    sources = SOURCES if sources is None else sources
+    state = json.loads(STATE_PATH.read_text(encoding="utf-8")) if STATE_PATH.exists() else {}
+    health, saved = {}, {}
+    candidates, errors, seen_urls = [], [], set()
+    def read_channel(src):
+        cid = src["channel_id"]
+        previous = state.get(cid, {})
+        use_cache = not force and not due(src, previous, now)
+        source_error = None
+        if use_cache:
+            items = [{**x, "published":parse_date(x.get("published")), "updated":parse_date(x.get("updated"))} for x in previous.get("items",[])]
+        else:
+            try:
+                if src["mode"] == "curated_html":
+                    items = parse_nu_good_news(fetch(src["url"], html=True))
+                    enrich_curated_dates(items)
+                else:
+                    raw = fetch(source_url(src))
+                    if lname(ET.fromstring(raw).tag) not in {"rss","feed","rdf"}:
+                        raise ValueError("Respons is geen RSS/Atom-feed")
+                    items = parse_feed(raw)
+                # Cache only discovery metadata, not copied article text.
+                serialized = [{"title":x["title"],"url":x["url"],"summary":"",
+                    "published":x.get("published").isoformat() if x.get("published") else None,
+                    "updated":x.get("updated").isoformat() if x.get("updated") else None,
+                    "cached_signal_score":cue_score(x["title"],x.get("summary",""),src["region"]),
+                    "cached_category_hint":category_hint(x["title"],x.get("summary",""),src.get("hint"))}
+                    for x in items]
+                previous = {"last_success_at":now.isoformat(),"last_error":None,"items":serialized}
+            except Exception as exc:
+                source_error = f"{type(exc).__name__}: {exc}"
+                previous = {**previous,"last_error":source_error}
+                items = [{**x,"published":parse_date(x.get("published")),"updated":parse_date(x.get("updated"))} for x in previous.get("items",[])]
+        return src, items, previous, source_error, use_cache
+    with concurrent.futures.ThreadPoolExecutor(max_workers=6) as executor:
+        fetched = list(executor.map(read_channel, sources))
+    for src, items, previous, source_error, use_cache in fetched:
+        cid = src["channel_id"]
+        saved[cid] = previous
+        if source_error: errors.append(f'{src["publisher"]} ({cid}): {source_error}')
+        health[cid] = {"source_id":src["source_id"],"organization_id":src["organization_id"],
+            "mode":src["mode"],"last_success_at":previous.get("last_success_at"),
+            "last_error":source_error,"cached":use_cache or bool(source_error),"items":len(items),
+            "check_frequency":src["check_frequency"],"checked_at":now.isoformat(),
+            "next_check_at":(now if source_error else datetime.fromisoformat(previous["last_success_at"])+timedelta(hours={"every_edition":20,"twice_weekly":72,"weekly":168}[src["check_frequency"]])).isoformat()}
         for x in items:
-            title = clean(x["title"])
-            summary = clean(x["summary"])
-            combined = f"{title} {summary}"
-
-            if contains(title, HARD_BLOCK) or contains(title, JUNK_TERMS):
-                continue
-
-            pub = x["published"]
-            age = None
-            if pub is not None:
-                age = max(0.0, (now - pub).total_seconds() / 3600)
-                if age > MAX_AGE_HOURS:
-                    continue
-
+            title, summary = clean(x["title"]), clean(x.get("summary"))
+            if contains(title, JUNK_TERMS): continue
+            pub = x.get("published")
+            age = (now-pub).total_seconds()/3600 if pub else None
+            if age is not None and age > MAX_AGE_HOURS: continue
+            date_warnings=[]
+            if age is not None and age < -1: date_warnings.append("future_publication_date")
+            if pub is None: date_warnings.append("publication_date_unknown")
+            if src["mode"] == "google_site": date_warnings.append("search_date_requires_original_check")
             url_key = normurl(x["url"])
-            if url_key in seen_urls:
-                continue
+            if url_key in seen_urls: continue
             seen_urls.add(url_key)
-
-            signal = cue_score(title, summary, src["region"])
-            # Directe RSS-feeds zijn breed. Zonder enig positief signaal worden ze te groot.
-            # Voor Google-site-search en gecureerde Goed nieuws-pagina’s is 0 toegestaan.
-            if src["mode"] == "rss" and signal <= 0:
-                continue
-
-            curation_bonus = src.get("curation_bonus", 0)
-            freshness_penalty = 0
-
-            # Een gecureerd item zonder verifieerbare datum mag de shortlist niet
-            # domineren puur omdat het op een "Goed nieuws"-overzicht staat.
-            if src["mode"] == "curated_html" and pub is None:
-                curation_bonus = min(curation_bonus, CURATED_UNKNOWN_DATE_BONUS)
-                freshness_penalty = CURATED_UNKNOWN_DATE_PENALTY
-
-            candidates.append({
-                "id": item_id(src["publisher"], title, x["url"]),
-                "region": src["region"],
-                "source": src["publisher"],
-                "title": title,
-                "summary": compact_summary(summary),
-                "url": x["url"],
-                "published": pub.isoformat() if pub else None,
-                "hours_old": round(age, 1) if age is not None else None,
-                "category_hint": category_hint(title, summary, src.get("hint")),
-                "signal_score": signal,
-                "source_weight": src.get("weight", 1.0),
-                "curation_bonus": curation_bonus,
-                "freshness_penalty": freshness_penalty,
-                "curated_source": src.get("curated_source"),
-                "discovery": src["mode"],
-            })
-
+            signal = x.get("cached_signal_score", cue_score(title, summary, src["region"]))
+            # A source, German feeds and stories about recovery from a crisis must
+            # not disappear simply because an NL/EN positive keyword is absent.
+            curation_bonus = min(src.get("curation_bonus",0),5)
+            penalty = -4 if date_warnings else 0
+            if date_warnings: curation_bonus=0
+            entry = {"id":item_id(src["source_id"],title,x["url"]), "source_id":src["source_id"],
+                "organization_id":src["organization_id"], "channel_id":cid,
+                "source_category":src["source_category"], "region":src["region"],
+                "region_basis":"source_hint_requires_editorial_check", "source":src["publisher"],
+                "title":title,"summary":compact_summary(summary),"url":x["url"],
+                "published":pub.isoformat() if pub else None,
+                "updated":x.get("updated").isoformat() if x.get("updated") else None,
+                "event_date":None,"date_warnings":date_warnings,
+                "hours_old":round(age,1) if age is not None else None,
+                "category_hint":canonical_category(x.get("cached_category_hint") or "") or category_hint(title,summary,src.get("hint")),
+                "priority":src.get("priority","P2"),"language":src.get("language","en"),
+                "signal_score":signal,"source_weight":src.get("weight",1),
+                "curation_bonus":curation_bonus,"freshness_penalty":penalty,
+                "curated_source":src.get("curated_source"),"discovery":src["mode"],
+                "editorial_warnings":["negative_keyword_requires_context"] if contains(title,HARD_BLOCK) else [],
+                "history_matches":history_matches(x,history),"source_error":source_error}
+            # Title similarity is a warning; follow-up developments remain possible.
+            entry["history_matches"] += [{"edition_date":h["edition_date"],"title":h.get("title",""),"kind":"similar_title"}
+                for h in history if near_duplicate(entry,{"title":h.get("title","")})][:5]
+            candidates.append(entry)
+    CHANNEL_HEALTH, CHANNEL_STATE = health, saved
     return candidates, errors
 
 def rank(item):
     freshness = 0
-    if item["hours_old"] is not None:
+    if item["hours_old"] is not None and item["hours_old"] >= 0:
         if item["hours_old"] <= 24:
             freshness = 5
         elif item["hours_old"] <= 48:
@@ -1117,29 +741,27 @@ def rank(item):
         + freshness
         + item.get("curation_bonus", 0)
         + item.get("freshness_penalty", 0)
+        + {"P1":2,"P2":1,"P3":0}.get(item.get("priority"),0)
     )
 
 def shortlist(items, region):
     pool = [x for x in items if x["region"] == region]
-    pool.sort(key=lambda x: (-rank(x), x["hours_old"] if x["hours_old"] is not None else 9999))
-
-    selected = []
-    per_source = {}
-
-    for item in pool:
-        if len(selected) >= MAX_PER_REGION:
-            break
-        if per_source.get(item["source"], 0) >= MAX_PER_SOURCE:
-            continue
-        if any(near_duplicate(item, other) for other in selected):
-            continue
-        selected.append(item)
-        per_source[item["source"]] = per_source.get(item["source"], 0) + 1
-
+    pool.sort(key=lambda x:(bool(x.get("date_warnings")),bool(x.get("history_matches")), -rank(x)))
+    selected, per_source, per_theme = [], {}, {}
+    # First pass gives varied themes a place. Second fills remaining slots.
+    for source_limit, theme_limit in ((2, 10), (MAX_PER_SOURCE, MAX_PER_REGION)):
+        for item in pool:
+            if len(selected) >= MAX_PER_REGION: break
+            if item in selected: continue
+            org=item.get("organization_id",item["source"])
+            theme=item["category_hint"]
+            if per_source.get(org,0)>=source_limit or per_theme.get(theme,0)>=theme_limit: continue
+            if any(near_duplicate(item,other) for other in selected): continue
+            selected.append(item);per_source[org]=per_source.get(org,0)+1;per_theme[theme]=per_theme.get(theme,0)+1
     return selected
 
 def main():
-    all_candidates, errors = collect()
+    all_candidates, errors = collect(force="--force" in __import__("sys").argv)
     nl = shortlist(all_candidates, "nl")
     intl = shortlist(all_candidates, "int")
 
@@ -1147,12 +769,12 @@ def main():
     add_reading_times(nl)
     add_reading_times(intl)
 
-    now = datetime.now().astimezone()
+    now = datetime.now(ZoneInfo("Europe/Amsterdam"))
 
     data = {
         "meta": {
             "generated_at": now.isoformat(),
-            "generator": "Goed nieuws kandidaten 0.3",
+            "generator": "Positief nieuws kandidaten 0.4",
             "purpose": "Voorselectie voor AI-redactie; dit is NIET de definitieve Goed nieuws-editie.",
             "max_age_hours": MAX_AGE_HOURS,
             "max_per_region": MAX_PER_REGION,
@@ -1165,17 +787,32 @@ def main():
                 "feed_errors": len(errors),
             },
             "feed_errors": errors,
+            "collection_complete": len(errors) == 0 and len(nl) >= 6 and len(intl) >= 6,
+            "source_registry": "sources.json",
+            "registry_sha256": hashlib.sha256((ROOT/"sources.json").read_bytes()).hexdigest(),
+            "editorial_policy": "editorial_policy.json",
+            "active_channels": len(SOURCES),
+            "channel_health": CHANNEL_HEALTH,
         },
         "editorial_brief": {
             "audience": "Nederlandse lezers",
-            "target": "Kies later 6 Nederlandse/relevante verhalen en 6 internationale verhalen.",
+            "target": "Kies 6 Nederlandse verhalen, 6 internationale verhalen en 3 actuele headlines voor maandag/donderdag.",
+            "output_contract": {
+                "news": "Bestaande nieuws.json-structuur behouden; regio bepalen op het nieuwsfeit.",
+                "dossier": "Maak tijdens brononderzoek het dossier volgens REDACTIE.txt en prepare_dossier.py; geen tweede handmatige onderzoeksronde.",
+                "approval": "approved blijft false totdat de eigenaar de exacte editie heeft beoordeeld.",
+                "check": "editorial_check.py moet slagen; live publicatie vraagt afzonderlijke toestemming.",
+            },
             "principles": [
                 "Echt positief nieuws, niet alleen een positief woord in een negatieve kop.",
                 "Nederlandse selectie moet relevant zijn voor Nederlandse lezers.",
                 "Universele vooruitgang in gezondheid, wetenschap, natuur, dieren en technologie mag ook.",
                 "Geen dubbel nieuwsfeit.",
                 "Bron- en categorievariatie.",
-                "Gecureerde goed-nieuwsbronnen krijgen extra voorrang in de voorselectie, maar worden niet automatisch geselecteerd.",
+                "Nieuwsfilters leveren ideeën; controleer primaire bewijsbronnen en het dossier volgens REDACTIE.txt.",
+                "Regionale indeling is een bronhint: stel NL/wereld vast op het nieuwsfeit.",
+                "Controleer datumwaarschuwingen en historische matches; geen automatische goedkeuring.",
+                "Voer editorial_check.py uit voor iedere publicatie en ieder nieuwsbriefconcept.",
                 "Geen vacatures, losse weersverwachtingen, celebrity-fluff of puur triviale uitslagen.",
                 "Eerste verhaal moet direct prettig en positief voelen.",
                 "Behoud reading_time_minutes bij geselecteerde artikelen als die waarde beschikbaar is.",
@@ -1185,7 +822,9 @@ def main():
         "international_candidates": intl,
     }
 
-    OUTPUT.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    atomic_json(OUTPUT, data)
+    atomic_json(HEALTH_PATH, {"generated_at":now.isoformat(),"channels":CHANNEL_HEALTH})
+    atomic_json(STATE_PATH, CHANNEL_STATE)
 
     print(f"Ruwe kandidaten: {len(all_candidates)}")
     print(f"NL shortlist: {len(nl)} | bronnen: {len({x['source'] for x in nl})}")
