@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "publication_days": [
+    "maandag",
+    "donderdag"
+  ],
+  "timezone": "Europe/Amsterdam",
+  "counts": {
+    "nl": 6,
+    "int": 6,
+    "headlines": 3
+  },
+  "max_publication_age_days": 7,
+  "max_older_exceptions": 2,
+  "minimum_score": 7,
+  "minimum_themes": 5,
+  "max_stories_per_theme": 4,
+  "max_stories_per_organization": 2,
+  "newsletter_word_budget": 1200,
+  "require_approval": true,
+  "allowed_categories": [
+    "Cultuur",
+    "Economie",
+    "Energie & innovatie",
+    "Gezondheid",
+    "Mens",
+    "Natuur & klimaat",
+    "Wetenschap",
+    "Sport"
+  ]
+}

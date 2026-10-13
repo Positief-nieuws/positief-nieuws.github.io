@@ -1,0 +1,71 @@
+POSITIEF NIEUWS — REDACTIONELE WERKWIJZE
+Vaste editie: maandag en donderdag; 6 NL-verhalen, 6 wereldverhalen, 3 actualiteiten.
+Kern: positief nieuws dat daadwerkelijk klopt. Geen automatische publicatie uit feeds.
+
+1. VOORBEREIDING
+De bestaande GitHub-verzameling maakt kandidaten.json. sources.json is het enige bronregister voor auto_news.py. source_health.json toont bereikbaarheid en volgende controle; source_state.json bewaart uitsluitend ontdekkingsmetadata, geen gekopieerde artikeltekst. De lijst beperkt zich tot 40 kandidaten per bronregio met organisatie- en themaspreiding. De bronregio is een hint: beoordeel zowel NL- als wereldkandidaten en classificeer op het nieuwsfeit. Een buitenlandse publicatie over Nederland kan in de NL-selectie.
+
+Alle 55 aangeleverde vermeldingen zijn in sources.json terug te vinden via register_ids. C-bronnen en het dubbele Goodnews-archief worden niet als verplichte actualiteitenbron opgehaald. Een fout of leeg zoekresultaat bewijst niet dat er geen nieuws is. Een valide zoekfeed bewijst niet dat alles van die website is gevonden. Feedcontrole moet bij problemen vanuit GitHub herhaald worden.
+
+2. SELECTIE
+Begin met concrete resultaten uit A-bronnen; gebruik B om onderwerpen te ontdekken en zoek hun onderliggende bewijs. C is inspiratie. Universiteiten, NGO's, overheid en brancheorganisaties kunnen belanghebbende zijn. Controleer methode, onderliggende data, beperkingen en waar nodig onafhankelijke bevestiging. Nature/Frontiers is A voor onderzoek, B voor nieuws/commentaar. Peer review maakt een claim niet automatisch juist.
+
+Positieve verhalen moeten werkelijk een verbetering, resultaat of ontdekking beschrijven. Een plan, prototype, subsidie of besluit kan nieuws zijn, maar is geen bewezen maatschappelijk effect. Leg het bereikte stadium uit. Behandel medisch onderzoek, correlatie, causaliteit, dierproeven en klinische resultaten zorgvuldig. Gebruik eigen woorden; neem geen beschermde tekst of foto's over zonder rechten.
+
+De drie headlines hoeven niet positief te zijn; wel actueel, controleerbaar en nuttig.
+
+3. DOSSIER MAKEN
+Maak in een lokale onderzoekskopie de voorgestelde nieuws.json, niet direct in main.
+Laat de AI-redacteur tijdens hetzelfde brononderzoek nieuws en dossier samen voorbereiden. Zo is het dossier het vastleggen van de al noodzakelijke controle, geen tweede onderzoeksronde. Het hulpcommando hieronder is een veilige checklist als er nog geen dossier is; bekende bron-ID’s en aangeleverde datums worden voorgesteld, maar niet automatisch geaccordeerd.
+
+Start de checklist:
+  python prepare_dossier.py --news /pad/naar/concept.json --output /pad/naar/redactie/YYYY-MM-DD.json
+De checklist begint ongeaccordeerd. Datums, scores en bewijs worden bewust niet automatisch ingevuld.
+
+Vul per bericht in:
+- source_id en organization_id uit sources.json; gebruik de passende geregistreerde bron. Nieuwe oorspronkelijke bron? Voeg één registerrecord toe, eventueel met channels: [] voor een bron die alleen als bewijs wordt gebruikt.
+- article_url moet gelijk zijn aan de zichtbare bronlink in nieuws.json.
+- region is nl of int, op basis van het feit; region_checked pas waar na controle.
+- publication_date, event_date en checked_on als YYYY-MM-DD. event_date kan de einddatum van de onderzochte periode zijn; leg de periode in support uit. Unknown is geen bewijs van actualiteit.
+- dates_checked na verificatie. Een nieuwszoekdatum of update is niet automatisch de oorspronkelijke publicatiedatum.
+- new_development als gebeurtenis/onderzoek ouder is dan de publicatie: wat is nu nieuw?
+- topic_id als stabiele sleutel voor het nieuwsfeit; gebruik dezelfde sleutel bij vervolgbericht. DOI/rapport-ID waar beschikbaar.
+- evidence.primary_url naar rapport, studie, data, besluit of controleerbare oorspronkelijke publicatie. claim: wat beweren we? support: hoe volgt dit uit de bron? limitations: welke nuance hoort erbij? verified pas waar na lezen/controle.
+- rights.text = original_summary. rights.image = not_used, licensed of existing_licensed. Bij beeldgebruik image_evidence invullen met herleidbare licentie/cache/bron en controle. not_used is alleen passend als er daadwerkelijk geen beeld bij dat nieuwsbericht wordt toegepast.
+- duplicate_review: controleer edities/*.json op hetzelfde feit, canonieke URL, onderwerp-ID en DOI. Titelmatches uit kandidaten.json zijn waarschuwingen. Noteer reden; bij eerdere publicatie new_fact met concrete nieuwe ontwikkeling. Alleen andere woorden maken geen nieuw feit.
+
+Score voor 12 positieve verhalen: vijf gehele scores van 0–2 voor positieve waarde, bewijs, actualiteit, relevantie en originaliteit. Minimum 7/10 én alle vereiste controles. positive_result en verklaring moeten aantoonbare vooruitgang beschrijven. De score is een hulpmiddel; ontbrekend bewijs blijft een stopreden.
+
+4. SPREIDING EN LEESTIJD
+Streef naar minimaal vijf van de bestaande acht hoofdthema's, hoogstens vier verhalen over hetzelfde thema en hoogstens twee van dezelfde organisatie. Een gemotiveerde uitzondering mag, via variation_exception_reason; voeg geen zwak verhaal toe om een quotum te vullen. Controleer daarnaast wereldregio's, onderwijs en verschillen binnen brede thema's handmatig.
+
+Oudere bronpublicaties: hoogstens twee per editie en elk met older_exception_reason. Een recent gepubliceerd onderzoek over een oudere periode kan actueel nieuws zijn; leg dit uit.
+
+De controle telt de echte gegenereerde nieuwsbrieftekst, inclusief koppen en vaste tekst. Budget: 1.200 woorden, ongeveer zes minuten bij 200 woorden/minuut. De bestaande reading_time_minutes is de leestijd van een bronartikel, niet van onze nieuwsbrief.
+
+5. GOEDKEURING EN CONTROLE
+Dossier.bindingsveld news_sha256 verwijst naar de exacte voorgestelde nieuws.json. Het hulpscript genereert die waarde. Wijzigt de nieuwsinhoud? Werk het dossier bewust bij en beoordeel opnieuw; kopieer geen oud akkoord. Zet approved: true en approved_by pas na expliciete redactionele beoordeling van precies die editie. De techniek controleert volledigheid en consistentie; zij kan geen menselijke broncontrole bewijzen.
+
+  python editorial_check.py --news /pad/naar/concept.json --dossier /pad/naar/redactie/YYYY-MM-DD.json --report /pad/naar/controle.json
+Een niet-gereed rapport blokkeert archiefbouw via de gewijzigde workflow en het maken van Buttondown-concepten. Een goedkeuringsvlag voor de redactie is geen toestemming om live te publiceren: vraag afzonderlijk toestemming aan de eigenaar.
+
+BELANGRIJK VOOR DE BESTAANDE GITHUB PAGES-SITE:
+Een directe push van nieuws.json naar main kan al zichtbaar worden voordat Actions zijn controle uitvoert. De controle beschermt de latere archief- en nieuwsbriefstappen, maar maakt main geen veilige conceptomgeving. Werk en controleer eerst lokaal/in een branch. Zet niets op main vóór expliciete toestemming voor live publicatie. Het huidige Pages-ontwerp wordt niet gewijzigd.
+
+6. PUBLICATIE NA AFZONDERLIJK AKKOORD
+Neem na geslaagde lokale controle en live akkoord de gecontroleerde nieuws.json én bijbehorend dossier op dezelfde goedgekeurde versie mee. Bewaar dossier als redactie/YYYY-MM-DD.json zodat de workflow en het Buttondown-script het kunnen vinden. Het repo is openbaar: zet er geen persoonsgegevens, privénotities of beschermde bronpassages in. Gebruik korte eigen bewijsnotities.
+
+Bestaande route blijft: nieuws.json-update → Bewaar editie → website/archiefbouw → Buttondown-concept. Verzenden vanuit Buttondown blijft een aparte beslissing. Handmatige Buttondown-runs doorlopen dezelfde dossiercontrole; dubbele concepten bij herstart zijn nog mogelijk, zoals voorheen.
+
+7. BRONNENBEHEER
+Nieuwe bron met bestaande mode: voeg een record/kanaal toe in sources.json; geen workflowwijziging. source_id en organization_id zijn stabiel; gedeelde kanalen en nieuwsbrieven van dezelfde aanbieder gebruiken dezelfde organisatie-ID. Prioriteit P1/P2/P3 helpt de rangorde; check_frequency is every_edition (20 uur), twice_weekly (72 uur), weekly (168 uur) of manual. C en manual worden niet structureel opgehaald.
+
+Nieuwe kanalen eerst controleren: HTTP, RSS/Atom of bruikbare HTML, datumvelden, actuele items en relevantie van de zoekresultaten. Noteer checked_at, verification_status en verification_items. enabled alleen na controle; een nieuw enabled kanaal met origin:new zonder verified wordt geweigerd. Voor zoekkanalen configureer language: nl/en/de; uitbreiding naar een andere taal vraagt een gerichte aanpassing. Een geldig maar leeg zoekkanaal blijft een onvolledige monitor; beoordeel dekking periodiek.
+
+Bij geldige officiële feed staat de Google-zoekroute uit als reserve. Mislukte feeds zijn behouden met foutstatus en waar mogelijk een getest zoekalternatief. Reserve omschakelen vraagt alleen registerbeheer. Bestaande bronrecords en alternatieve feeds blijven terug te vinden.
+
+8. HERSTEL EN PROEF
+Voorbeeldtests: python -m unittest discover -s tests -v
+Een proef gebeurt in een aparte lokale map. Websitebouw schrijft daar wel HTML; het verstuurt niets. Maak nieuwsbrief-HTML met de bestaande renderfuncties zonder main()/create_draft() aan te roepen. Een technische proef met bestaande content is geen nieuwe journalistiek geverifieerde editie.
+
+Rollback via Git-revert van de gerichte code/configuratie-commits. Revert van nieuws.json kan opnieuw een build/concept activeren. Een verzonden e-mail kan niet worden teruggedraaid.

@@ -1,0 +1,4030 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "source_id": "nos",
+      "organization_id": "nos",
+      "name": "NOS",
+      "website": "https://nos.nl/",
+      "category": "B",
+      "topics": [
+        "Economie & geld",
+        "Cultuur & media",
+        "Technologie & innovatie",
+        "Gewoon leuk",
+        "Sport",
+        "Brede NL-nieuwsfilter, controle naar primaire bron"
+      ],
+      "geography": "nl",
+      "source_type": "journalism",
+      "reliability_notes": "Ontdekkingsbron; herleid belangrijke claims tot oorspronkelijk onderzoek, data of besluiten.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "register_ids": [
+        "B06"
+      ],
+      "channels": [
+        {
+          "mode": "rss",
+          "url": "https://feeds.nos.nl/nosnieuwsalgemeen",
+          "weight": 2.3,
+          "hint": null,
+          "channel_id": "nos-9b10ea3d",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 20,
+          "verification_error": null
+        },
+        {
+          "mode": "rss",
+          "url": "https://feeds.nos.nl/nosnieuwseconomie",
+          "weight": 2.3,
+          "hint": "Economie & geld",
+          "channel_id": "nos-5349ac21",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 20,
+          "verification_error": null
+        },
+        {
+          "mode": "rss",
+          "url": "https://feeds.nos.nl/nosnieuwscultuurenmedia",
+          "weight": 2.3,
+          "hint": "Cultuur & media",
+          "channel_id": "nos-521b82d5",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 20,
+          "verification_error": null
+        },
+        {
+          "mode": "rss",
+          "url": "https://feeds.nos.nl/nosnieuwstech",
+          "weight": 2.3,
+          "hint": "Technologie & innovatie",
+          "channel_id": "nos-2822a4e2",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 20,
+          "verification_error": null
+        },
+        {
+          "mode": "rss",
+          "url": "https://feeds.nos.nl/nosnieuwsopmerkelijk",
+          "weight": 2.2,
+          "hint": "Gewoon leuk",
+          "channel_id": "nos-afda4f58",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 20,
+          "verification_error": null
+        },
+        {
+          "mode": "rss",
+          "url": "https://feeds.nos.nl/nossportalgemeen",
+          "weight": 2.3,
+          "hint": "Sport",
+          "channel_id": "nos-4416167e",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 20,
+          "verification_error": null
+        }
+      ],
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://nos.nl/"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "pbl",
+      "organization_id": "pbl",
+      "name": "PBL",
+      "website": "https://www.pbl.nl",
+      "category": "A",
+      "topics": [
+        "Natuur & klimaat",
+        "Mens & samenleving",
+        "Economie & geld",
+        "Voeding & leefstijl"
+      ],
+      "geography": "nl",
+      "source_type": "original_information",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "rss",
+          "url": "https://www.pbl.nl/feed/article/rss.xml",
+          "weight": 2.5,
+          "hint": "Natuur & klimaat",
+          "channel_id": "pbl-14c50a0c",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 25,
+          "verification_error": null
+        },
+        {
+          "mode": "rss",
+          "url": "https://www.pbl.nl/feed/topic/20/article/rss.xml",
+          "weight": 2.5,
+          "hint": "Mens & samenleving",
+          "channel_id": "pbl-7dfee1f5",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 25,
+          "verification_error": null
+        },
+        {
+          "mode": "rss",
+          "url": "https://www.pbl.nl/feed/topic/17/article/rss.xml",
+          "weight": 2.5,
+          "hint": "Economie & geld",
+          "channel_id": "pbl-de68b5a4",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 25,
+          "verification_error": null
+        },
+        {
+          "mode": "rss",
+          "url": "https://www.pbl.nl/feed/topic/13/article/rss.xml",
+          "weight": 2.5,
+          "hint": "Natuur & klimaat",
+          "channel_id": "pbl-22809111",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 25,
+          "verification_error": null
+        },
+        {
+          "mode": "rss",
+          "url": "https://www.pbl.nl/feed/topic/9/article/rss.xml",
+          "weight": 2.5,
+          "hint": "Voeding & leefstijl",
+          "channel_id": "pbl-e1f4b3c9",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 25,
+          "verification_error": null
+        },
+        {
+          "mode": "rss",
+          "url": "https://www.pbl.nl/feed/topic/11/article/rss.xml",
+          "weight": 2.5,
+          "hint": "Natuur & klimaat",
+          "channel_id": "pbl-57bbffb9",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 25,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "knmi",
+      "organization_id": "knmi",
+      "name": "KNMI",
+      "website": "https://www.knmi.nl",
+      "category": "A",
+      "topics": [
+        "Natuur & klimaat"
+      ],
+      "geography": "nl",
+      "source_type": "original_information",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "rss",
+          "url": "https://www.knmi.nl/rssfeeds/rss_KNMInieuwsberichten",
+          "weight": 2.5,
+          "hint": "Natuur & klimaat",
+          "channel_id": "knmi-dd2d2bf6",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 5,
+          "verification_error": null
+        },
+        {
+          "mode": "rss",
+          "url": "https://www.knmi.nl/rssfeeds/rss_KNMIklimaatberichten",
+          "weight": 2.5,
+          "hint": "Natuur & klimaat",
+          "channel_id": "knmi-5fdfcbc6",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 5,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "rivm",
+      "organization_id": "rivm",
+      "name": "RIVM",
+      "website": "https://www.rivm.nl/rss",
+      "category": "A",
+      "topics": [
+        "Gezondheid",
+        "Gezondheid, preventie, milieu; nieuws en onderzoek"
+      ],
+      "geography": "nl",
+      "source_type": "original_information",
+      "reliability_notes": "Primaire bron binnen expertise; methode, beperkingen en onderzoekstype per bericht controleren.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "register_ids": [
+        "A02"
+      ],
+      "channels": [
+        {
+          "mode": "rss",
+          "url": "https://www.rivm.nl/nieuws/rss.xml",
+          "weight": 2.5,
+          "hint": "Gezondheid",
+          "channel_id": "rivm-23acca8d",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "feed_items": 20,
+          "verification_items": 20,
+          "verification_error": null
+        }
+      ],
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://www.rivm.nl/rss"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "scientias",
+      "organization_id": "scientias",
+      "name": "Scientias",
+      "website": "https://feeds.feedburner.com",
+      "category": "B",
+      "topics": [
+        "Wetenschap"
+      ],
+      "geography": "nl",
+      "source_type": "journalism",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "rss",
+          "url": "https://feeds.feedburner.com/scientias-wetenschap",
+          "weight": 2.0,
+          "hint": "Wetenschap",
+          "channel_id": "scientias-17a36549",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 8,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "nature-today",
+      "organization_id": "nature-today",
+      "name": "Nature Today",
+      "website": "https://www.naturetoday.com",
+      "category": "B",
+      "topics": [
+        "Natuur & klimaat"
+      ],
+      "geography": "nl",
+      "source_type": "journalism",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "rss",
+          "url": "https://www.naturetoday.com/intl/nl/nature-reports/rss",
+          "weight": 2.1,
+          "hint": "Natuur & klimaat",
+          "channel_id": "nature-today-cc381c99",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 200,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "cbs",
+      "organization_id": "cbs",
+      "name": "CBS",
+      "website": "https://www.cbs.nl/nl-nl/rss-feeds",
+      "category": "A",
+      "topics": [
+        "Economie & geld",
+        "Statistiek: samenleving, welzijn, gezondheid, milieu"
+      ],
+      "geography": "nl",
+      "source_type": "original_information",
+      "reliability_notes": "Primaire bron binnen expertise; methode, beperkingen en onderzoekstype per bericht controleren.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "register_ids": [
+        "A01"
+      ],
+      "channels": [
+        {
+          "mode": "google_site",
+          "domain": "cbs.nl",
+          "weight": 2.6,
+          "hint": "Economie & geld",
+          "channel_id": "cbs-46de04ea",
+          "enabled": false,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 7,
+          "verification_error": null,
+          "fallback": true
+        },
+        {
+          "channel_id": "cbs-e28714dd",
+          "mode": "rss",
+          "url": "https://www.cbs.nl/nl-nl/rss-feeds/alle-nieuwsberichten",
+          "enabled": true,
+          "language": "nl",
+          "weight": 2.5,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "feed_items": 50,
+          "origin": "new",
+          "verification_error": null,
+          "verification_items": 50
+        }
+      ],
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://www.cbs.nl/nl-nl/rss-feeds",
+        "method": "curl fallback"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "wageningen-university-research",
+      "organization_id": "wageningen-university-research",
+      "name": "Wageningen University & Research",
+      "website": "https://www.wur.nl/nl/nieuws-achtergronden/nieuws",
+      "category": "A",
+      "topics": [
+        "Wetenschap",
+        "Voedsel, biodiversiteit, landbouw, milieu"
+      ],
+      "geography": "nl",
+      "source_type": "original_information",
+      "reliability_notes": "Primaire bron binnen expertise; methode, beperkingen en onderzoekstype per bericht controleren.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "register_ids": [
+        "A03"
+      ],
+      "channels": [
+        {
+          "mode": "google_site",
+          "domain": "wur.nl",
+          "weight": 2.7,
+          "hint": "Wetenschap",
+          "channel_id": "wageningen-university-research-777ab304",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 13,
+          "verification_error": null
+        }
+      ],
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://www.wur.nl/nl/nieuws-achtergronden/nieuws"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "universiteit-twente",
+      "organization_id": "universiteit-twente",
+      "name": "Universiteit Twente",
+      "website": "https://www.utwente.nl/over-ons/nieuws-events-ceremonies/nieuws-en-evenementen/",
+      "category": "A",
+      "topics": [
+        "Technologie & innovatie",
+        "Onderzoek, innovaties, regionale doorbraken"
+      ],
+      "geography": "nl",
+      "source_type": "original_information",
+      "reliability_notes": "Primaire bron binnen expertise; methode, beperkingen en onderzoekstype per bericht controleren.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "register_ids": [
+        "A06"
+      ],
+      "channels": [
+        {
+          "mode": "google_site",
+          "domain": "utwente.nl",
+          "weight": 2.6,
+          "hint": "Technologie & innovatie",
+          "channel_id": "universiteit-twente-0f56b6b6",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 10,
+          "verification_error": null
+        }
+      ],
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://www.utwente.nl/over-ons/nieuws-events-ceremonies/nieuws-en-evenementen/"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "tu-delft",
+      "organization_id": "tu-delft",
+      "name": "TU Delft",
+      "website": "https://tudelft.nl",
+      "category": "A",
+      "topics": [
+        "Technologie & innovatie"
+      ],
+      "geography": "nl",
+      "source_type": "original_information",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "google_site",
+          "domain": "tudelft.nl",
+          "weight": 2.6,
+          "hint": "Technologie & innovatie",
+          "channel_id": "tu-delft-06e6cb05",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 13,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "universiteit-utrecht",
+      "organization_id": "universiteit-utrecht",
+      "name": "Universiteit Utrecht",
+      "website": "https://uu.nl",
+      "category": "A",
+      "topics": [
+        "Wetenschap"
+      ],
+      "geography": "nl",
+      "source_type": "original_information",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "google_site",
+          "domain": "uu.nl",
+          "weight": 2.5,
+          "hint": "Wetenschap",
+          "channel_id": "universiteit-utrecht-16935716",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 16,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "radboud-universiteit",
+      "organization_id": "radboud-universiteit",
+      "name": "Radboud Universiteit",
+      "website": "https://www.ru.nl/over-ons/nieuws",
+      "category": "A",
+      "topics": [
+        "Wetenschap",
+        "Wetenschap, zorg en samenleving"
+      ],
+      "geography": "nl",
+      "source_type": "original_information",
+      "reliability_notes": "Primaire bron binnen expertise; methode, beperkingen en onderzoekstype per bericht controleren.",
+      "priority": "P2",
+      "check_frequency": "twice_weekly",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "register_ids": [
+        "A08"
+      ],
+      "channels": [
+        {
+          "mode": "google_site",
+          "domain": "ru.nl",
+          "weight": 2.5,
+          "hint": "Wetenschap",
+          "channel_id": "radboud-universiteit-e0d8b0ee",
+          "enabled": false,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 30,
+          "verification_error": null,
+          "fallback": true
+        },
+        {
+          "channel_id": "radboud-universiteit-e702a8c5",
+          "mode": "rss",
+          "url": "https://www.ru.nl/over-ons/nieuws/feed",
+          "enabled": true,
+          "language": "nl",
+          "weight": 2.5,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "feed_items": 10,
+          "origin": "new",
+          "verification_items": 10,
+          "verification_error": null
+        },
+        {
+          "channel_id": "radboud-universiteit-804fdb51",
+          "mode": "rss",
+          "url": "https://www.ru.nl/en/about-us/news/feed",
+          "enabled": false,
+          "language": "nl",
+          "weight": 2.5,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "feed_items": 10,
+          "origin": "new"
+        }
+      ],
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://www.ru.nl/over-ons/nieuws"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "tno",
+      "organization_id": "tno",
+      "name": "TNO",
+      "website": "https://www.tno.nl/nl/newsroom/",
+      "category": "A",
+      "topics": [
+        "Technologie & innovatie",
+        "Innovatie en meetbaar effect"
+      ],
+      "geography": "nl",
+      "source_type": "original_information",
+      "reliability_notes": "Primaire bron binnen expertise; methode, beperkingen en onderzoekstype per bericht controleren.",
+      "priority": "P2",
+      "check_frequency": "twice_weekly",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "register_ids": [
+        "A10"
+      ],
+      "channels": [
+        {
+          "mode": "google_site",
+          "domain": "tno.nl",
+          "weight": 2.6,
+          "hint": "Technologie & innovatie",
+          "channel_id": "tno-eacb70bb",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 18,
+          "verification_error": null
+        }
+      ],
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://www.tno.nl/nl/newsroom/"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "nemo-kennislink",
+      "organization_id": "nemo-kennislink",
+      "name": "NEMO Kennislink",
+      "website": "https://nemokennislink.nl",
+      "category": "B",
+      "topics": [
+        "Wetenschap"
+      ],
+      "geography": "nl",
+      "source_type": "journalism",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "google_site",
+          "domain": "nemokennislink.nl",
+          "weight": 2.2,
+          "hint": "Wetenschap",
+          "channel_id": "nemo-kennislink-113c1670",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 3,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "rvo",
+      "organization_id": "rvo",
+      "name": "RVO",
+      "website": "https://rvo.nl",
+      "category": "A",
+      "topics": [
+        "Economie & geld"
+      ],
+      "geography": "nl",
+      "source_type": "original_information",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "google_site",
+          "domain": "rvo.nl",
+          "weight": 2.3,
+          "hint": "Economie & geld",
+          "channel_id": "rvo-8c8a63c0",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 12,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "rijksoverheid",
+      "organization_id": "rijksoverheid",
+      "name": "Rijksoverheid",
+      "website": "https://rijksoverheid.nl",
+      "category": "A",
+      "topics": [
+        "Mens & samenleving"
+      ],
+      "geography": "nl",
+      "source_type": "original_information",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "google_site",
+          "domain": "rijksoverheid.nl",
+          "weight": 2.4,
+          "hint": "Mens & samenleving",
+          "channel_id": "rijksoverheid-2cfdc353",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 25,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "voedingscentrum",
+      "organization_id": "voedingscentrum",
+      "name": "Voedingscentrum",
+      "website": "https://voedingscentrum.nl",
+      "category": "A",
+      "topics": [
+        "Voeding & leefstijl"
+      ],
+      "geography": "nl",
+      "source_type": "original_information",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "google_site",
+          "domain": "voedingscentrum.nl",
+          "weight": 2.4,
+          "hint": "Voeding & leefstijl",
+          "channel_id": "voedingscentrum-bac466ba",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 1,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "milieu-centraal",
+      "organization_id": "milieu-centraal",
+      "name": "Milieu Centraal",
+      "website": "https://milieucentraal.nl",
+      "category": "A",
+      "topics": [
+        "Natuur & klimaat"
+      ],
+      "geography": "nl",
+      "source_type": "original_information",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "google_site",
+          "domain": "milieucentraal.nl",
+          "weight": 2.1,
+          "hint": "Natuur & klimaat",
+          "channel_id": "milieu-centraal-5208feea",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 3,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "staatsbosbeheer",
+      "organization_id": "staatsbosbeheer",
+      "name": "Staatsbosbeheer",
+      "website": "https://staatsbosbeheer.nl",
+      "category": "A",
+      "topics": [
+        "Natuur & klimaat"
+      ],
+      "geography": "nl",
+      "source_type": "original_information",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "google_site",
+          "domain": "staatsbosbeheer.nl",
+          "weight": 2.2,
+          "hint": "Natuur & klimaat",
+          "channel_id": "staatsbosbeheer-dd798e1e",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 3,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "oranje-fonds",
+      "organization_id": "oranje-fonds",
+      "name": "Oranje Fonds",
+      "website": "https://oranjefonds.nl",
+      "category": "A",
+      "topics": [
+        "Mens & samenleving"
+      ],
+      "geography": "nl",
+      "source_type": "original_information",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "google_site",
+          "domain": "oranjefonds.nl",
+          "weight": 2.2,
+          "hint": "Mens & samenleving",
+          "channel_id": "oranje-fonds-7d66d421",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 0,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "humanitas",
+      "organization_id": "humanitas",
+      "name": "Humanitas",
+      "website": "https://humanitas.nl",
+      "category": "A",
+      "topics": [
+        "Mens & samenleving"
+      ],
+      "geography": "nl",
+      "source_type": "original_information",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "google_site",
+          "domain": "humanitas.nl",
+          "weight": 2.1,
+          "hint": "Mens & samenleving",
+          "channel_id": "humanitas-a100b00e",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 2,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "eenvandaag",
+      "organization_id": "eenvandaag",
+      "name": "EenVandaag",
+      "website": "https://eenvandaag.avrotros.nl",
+      "category": "B",
+      "topics": [],
+      "geography": "nl",
+      "source_type": "journalism",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "google_site",
+          "domain": "eenvandaag.avrotros.nl",
+          "weight": 2.4,
+          "hint": null,
+          "channel_id": "eenvandaag-26ff017a",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 23,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "de-ondernemer",
+      "organization_id": "de-ondernemer",
+      "name": "De Ondernemer",
+      "website": "https://deondernemer.nl",
+      "category": "B",
+      "topics": [
+        "Economie & geld"
+      ],
+      "geography": "nl",
+      "source_type": "journalism",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "google_site",
+          "domain": "deondernemer.nl",
+          "weight": 2.1,
+          "hint": "Economie & geld",
+          "channel_id": "de-ondernemer-2a684ccd",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 16,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "nu-nl",
+      "organization_id": "nu-nl",
+      "name": "NU.nl",
+      "website": "https://www.nu.nl/goed-nieuws",
+      "category": "B",
+      "topics": [
+        "Positief nieuwsfilter"
+      ],
+      "geography": "nl",
+      "source_type": "journalism",
+      "reliability_notes": "Ontdekkingsbron; herleid belangrijke claims tot oorspronkelijk onderzoek, data of besluiten.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Technische blokkade: HTTP Error 403: Forbidden; geen bewijs dat bron offline is.",
+      "register_ids": [
+        "B01"
+      ],
+      "channels": [
+        {
+          "mode": "curated_html",
+          "url": "https://www.nu.nl/goed-nieuws",
+          "weight": 2.3,
+          "hint": null,
+          "curation_bonus": 5,
+          "curated_source": "NU.nl Goed nieuws",
+          "channel_id": "nu-nl-d197f525",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "verification_items": 30,
+          "verification_error": null
+        },
+        {
+          "mode": "google_site",
+          "domain": "nu.nl",
+          "weight": 2.3,
+          "hint": null,
+          "channel_id": "nu-nl-2373bd9c",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 100,
+          "verification_error": null
+        }
+      ],
+      "page_verification": {
+        "error": "HTTP Error 403: Forbidden"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "rtl-nieuws",
+      "organization_id": "rtl-nieuws",
+      "name": "RTL Nieuws",
+      "website": "https://rtl.nl",
+      "category": "B",
+      "topics": [],
+      "geography": "nl",
+      "source_type": "journalism",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "google_site",
+          "domain": "rtl.nl",
+          "weight": 2.3,
+          "hint": null,
+          "channel_id": "rtl-nieuws-fc9ec594",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 82,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "rtv-oost",
+      "organization_id": "rtv-oost",
+      "name": "RTV Oost",
+      "website": "https://rtvoost.nl",
+      "category": "B",
+      "topics": [],
+      "geography": "nl",
+      "source_type": "journalism",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "google_site",
+          "domain": "rtvoost.nl",
+          "weight": 2.2,
+          "hint": null,
+          "channel_id": "rtv-oost-62a06086",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 0,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "omroep-brabant",
+      "organization_id": "omroep-brabant",
+      "name": "Omroep Brabant",
+      "website": "https://omroepbrabant.nl",
+      "category": "B",
+      "topics": [],
+      "geography": "nl",
+      "source_type": "journalism",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "google_site",
+          "domain": "omroepbrabant.nl",
+          "weight": 2.2,
+          "hint": null,
+          "channel_id": "omroep-brabant-4cee1621",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 100,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "omroep-gelderland",
+      "organization_id": "omroep-gelderland",
+      "name": "Omroep Gelderland",
+      "website": "https://gld.nl",
+      "category": "B",
+      "topics": [],
+      "geography": "nl",
+      "source_type": "journalism",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "google_site",
+          "domain": "gld.nl",
+          "weight": 2.2,
+          "hint": null,
+          "channel_id": "omroep-gelderland-9e494aa9",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 24,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "rijnmond",
+      "organization_id": "rijnmond",
+      "name": "Rijnmond",
+      "website": "https://rijnmond.nl",
+      "category": "B",
+      "topics": [],
+      "geography": "nl",
+      "source_type": "journalism",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "google_site",
+          "domain": "rijnmond.nl",
+          "weight": 2.2,
+          "hint": null,
+          "channel_id": "rijnmond-7317aa70",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 38,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "nh-nieuws",
+      "organization_id": "nh-nieuws",
+      "name": "NH Nieuws",
+      "website": "https://nhnieuws.nl",
+      "category": "B",
+      "topics": [],
+      "geography": "nl",
+      "source_type": "journalism",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "google_site",
+          "domain": "nhnieuws.nl",
+          "weight": 2.2,
+          "hint": null,
+          "channel_id": "nh-nieuws-c3e1d13b",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 59,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "rtv-noord",
+      "organization_id": "rtv-noord",
+      "name": "RTV Noord",
+      "website": "https://rtvnoord.nl",
+      "category": "B",
+      "topics": [],
+      "geography": "nl",
+      "source_type": "journalism",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "google_site",
+          "domain": "rtvnoord.nl",
+          "weight": 2.2,
+          "hint": null,
+          "channel_id": "rtv-noord-aeb9f7dc",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 21,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "omrop-frysl-n",
+      "organization_id": "omrop-frysl-n",
+      "name": "Omrop Fryslân",
+      "website": "https://omropfryslan.nl",
+      "category": "B",
+      "topics": [],
+      "geography": "nl",
+      "source_type": "journalism",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "google_site",
+          "domain": "omropfryslan.nl",
+          "weight": 2.2,
+          "hint": null,
+          "channel_id": "omrop-frysl-n-9cd100a5",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 20,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "at5",
+      "organization_id": "at5",
+      "name": "AT5",
+      "website": "https://at5.nl",
+      "category": "B",
+      "topics": [],
+      "geography": "nl",
+      "source_type": "journalism",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "google_site",
+          "domain": "at5.nl",
+          "weight": 2.1,
+          "hint": null,
+          "channel_id": "at5-b0fab1ac",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 16,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "1limburg",
+      "organization_id": "1limburg",
+      "name": "1Limburg",
+      "website": "https://1limburg.nl",
+      "category": "B",
+      "topics": [],
+      "geography": "nl",
+      "source_type": "journalism",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "google_site",
+          "domain": "1limburg.nl",
+          "weight": 2.1,
+          "hint": null,
+          "channel_id": "1limburg-a9b5043d",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 0,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "hart-van-nederland",
+      "organization_id": "hart-van-nederland",
+      "name": "Hart van Nederland",
+      "website": "https://hartvannederland.nl",
+      "category": "B",
+      "topics": [],
+      "geography": "nl",
+      "source_type": "journalism",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "google_site",
+          "domain": "hartvannederland.nl",
+          "weight": 2.0,
+          "hint": null,
+          "channel_id": "hart-van-nederland-c0c9d7d8",
+          "enabled": true,
+          "language": "nl",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 100,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "mit-news",
+      "organization_id": "mit-news",
+      "name": "MIT News",
+      "website": "https://news.mit.edu",
+      "category": "A",
+      "topics": [
+        "Wetenschap"
+      ],
+      "geography": "int",
+      "source_type": "original_information",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "rss",
+          "url": "https://news.mit.edu/rss/feed",
+          "weight": 2.7,
+          "hint": "Wetenschap",
+          "channel_id": "mit-news-39996f70",
+          "enabled": true,
+          "language": "en",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 50,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "nasa",
+      "organization_id": "nasa",
+      "name": "NASA",
+      "website": "https://www.nasa.gov",
+      "category": "A",
+      "topics": [
+        "Wetenschap"
+      ],
+      "geography": "int",
+      "source_type": "original_information",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "rss",
+          "url": "https://www.nasa.gov/news-release/feed/",
+          "weight": 2.7,
+          "hint": "Wetenschap",
+          "channel_id": "nasa-1b2f08c5",
+          "enabled": true,
+          "language": "en",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 10,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "bbc",
+      "organization_id": "bbc",
+      "name": "BBC",
+      "website": "https://feeds.bbci.co.uk",
+      "category": "B",
+      "topics": [
+        "Wetenschap",
+        "Economie & geld",
+        "Gezondheid",
+        "Technologie & innovatie"
+      ],
+      "geography": "int",
+      "source_type": "journalism",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "rss",
+          "url": "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml",
+          "weight": 2.5,
+          "hint": "Wetenschap",
+          "channel_id": "bbc-96afa9fb",
+          "enabled": true,
+          "language": "en",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 41,
+          "verification_error": null
+        },
+        {
+          "mode": "rss",
+          "url": "https://feeds.bbci.co.uk/news/business/rss.xml",
+          "weight": 2.5,
+          "hint": "Economie & geld",
+          "channel_id": "bbc-2e6b8155",
+          "enabled": true,
+          "language": "en",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 44,
+          "verification_error": null
+        },
+        {
+          "mode": "rss",
+          "url": "https://feeds.bbci.co.uk/news/health/rss.xml",
+          "weight": 2.5,
+          "hint": "Gezondheid",
+          "channel_id": "bbc-ae22e62c",
+          "enabled": true,
+          "language": "en",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 56,
+          "verification_error": null
+        },
+        {
+          "mode": "rss",
+          "url": "https://feeds.bbci.co.uk/news/technology/rss.xml",
+          "weight": 2.5,
+          "hint": "Technologie & innovatie",
+          "channel_id": "bbc-e5e8c2fe",
+          "enabled": true,
+          "language": "en",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 21,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "the-guardian",
+      "organization_id": "the-guardian",
+      "name": "The Guardian",
+      "website": "https://www.theguardian.com",
+      "category": "B",
+      "topics": [
+        "Natuur & klimaat",
+        "Wetenschap",
+        "Mens & samenleving"
+      ],
+      "geography": "int",
+      "source_type": "journalism",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "rss",
+          "url": "https://www.theguardian.com/environment/rss",
+          "weight": 2.4,
+          "hint": "Natuur & klimaat",
+          "channel_id": "the-guardian-b6e1677e",
+          "enabled": true,
+          "language": "en",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 25,
+          "verification_error": null
+        },
+        {
+          "mode": "rss",
+          "url": "https://www.theguardian.com/science/rss",
+          "weight": 2.4,
+          "hint": "Wetenschap",
+          "channel_id": "the-guardian-c62796ff",
+          "enabled": true,
+          "language": "en",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 27,
+          "verification_error": null
+        },
+        {
+          "mode": "rss",
+          "url": "https://www.theguardian.com/global-development/rss",
+          "weight": 2.4,
+          "hint": "Mens & samenleving",
+          "channel_id": "the-guardian-edb32b1a",
+          "enabled": true,
+          "language": "en",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 45,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "un-news",
+      "organization_id": "un-news",
+      "name": "UN News",
+      "website": "https://news.un.org/",
+      "category": "B",
+      "topics": [
+        "Mens & samenleving",
+        "Internationale ontwikkelingen en VN-resultaten"
+      ],
+      "geography": "int",
+      "source_type": "journalism",
+      "reliability_notes": "Ontdekkingsbron; herleid belangrijke claims tot oorspronkelijk onderzoek, data of besluiten.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Bestaande UN News-feed gaf geen geldig XML tijdens deze controle; eerst herstellen/hercontroleren.",
+      "register_ids": [
+        "A21"
+      ],
+      "channels": [
+        {
+          "mode": "rss",
+          "url": "https://news.un.org/feed/subscribe/en/news/all/rss.xml",
+          "weight": 2.5,
+          "hint": "Mens & samenleving",
+          "channel_id": "un-news-e821bea2",
+          "enabled": false,
+          "language": "en",
+          "verification_status": "failed",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_error": "not well-formed (invalid token): line 1, column 0"
+        },
+        {
+          "channel_id": "un-news-search-fallback",
+          "mode": "google_site",
+          "domain": "news.un.org",
+          "language": "en",
+          "weight": 2,
+          "enabled": true,
+          "origin": "new",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "fallback": true,
+          "verification_items": 61,
+          "verification_error": null
+        }
+      ],
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://news.un.org/en/"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "phys-org",
+      "organization_id": "phys-org",
+      "name": "Phys.org",
+      "website": "https://phys.org",
+      "category": "B",
+      "topics": [
+        "Wetenschap"
+      ],
+      "geography": "int",
+      "source_type": "journalism",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "rss",
+          "url": "https://phys.org/rss-feed/",
+          "weight": 2.3,
+          "hint": "Wetenschap",
+          "channel_id": "phys-org-6079fc21",
+          "enabled": true,
+          "language": "en",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 30,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "medical-xpress",
+      "organization_id": "medical-xpress",
+      "name": "Medical Xpress",
+      "website": "https://medicalxpress.com",
+      "category": "B",
+      "topics": [
+        "Gezondheid"
+      ],
+      "geography": "int",
+      "source_type": "journalism",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "rss",
+          "url": "https://medicalxpress.com/rss-feed/",
+          "weight": 2.3,
+          "hint": "Gezondheid",
+          "channel_id": "medical-xpress-d6b3e066",
+          "enabled": true,
+          "language": "en",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 30,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "esa",
+      "organization_id": "esa",
+      "name": "ESA",
+      "website": "https://esa.int",
+      "category": "A",
+      "topics": [
+        "Wetenschap"
+      ],
+      "geography": "int",
+      "source_type": "original_information",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "google_site",
+          "domain": "esa.int",
+          "weight": 2.6,
+          "hint": "Wetenschap",
+          "channel_id": "esa-9206f230",
+          "enabled": true,
+          "language": "en",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 100,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "who",
+      "organization_id": "who",
+      "name": "WHO",
+      "website": "https://www.who.int/news",
+      "category": "A",
+      "topics": [
+        "Gezondheid",
+        "Internationale volksgezondheid"
+      ],
+      "geography": "int",
+      "source_type": "original_information",
+      "reliability_notes": "Primaire bron binnen expertise; methode, beperkingen en onderzoekstype per bericht controleren.",
+      "priority": "P2",
+      "check_frequency": "twice_weekly",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "register_ids": [
+        "A20"
+      ],
+      "channels": [
+        {
+          "mode": "google_site",
+          "domain": "who.int",
+          "weight": 2.6,
+          "hint": "Gezondheid",
+          "channel_id": "who-78dba94b",
+          "enabled": true,
+          "language": "en",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 89,
+          "verification_error": null
+        }
+      ],
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://www.who.int/news"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "unicef",
+      "organization_id": "unicef",
+      "name": "UNICEF",
+      "website": "https://unicef.org",
+      "category": "A",
+      "topics": [
+        "Mens & samenleving"
+      ],
+      "geography": "int",
+      "source_type": "original_information",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "google_site",
+          "domain": "unicef.org",
+          "weight": 2.5,
+          "hint": "Mens & samenleving",
+          "channel_id": "unicef-cc5d3b14",
+          "enabled": true,
+          "language": "en",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 100,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "oecd",
+      "organization_id": "oecd",
+      "name": "OECD",
+      "website": "https://oecd.org",
+      "category": "A",
+      "topics": [
+        "Economie & geld"
+      ],
+      "geography": "int",
+      "source_type": "original_information",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "google_site",
+          "domain": "oecd.org",
+          "weight": 2.5,
+          "hint": "Economie & geld",
+          "channel_id": "oecd-fc730df4",
+          "enabled": true,
+          "language": "en",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 75,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "unep",
+      "organization_id": "unep",
+      "name": "UNEP",
+      "website": "https://unep.org",
+      "category": "A",
+      "topics": [
+        "Natuur & klimaat"
+      ],
+      "geography": "int",
+      "source_type": "original_information",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "google_site",
+          "domain": "unep.org",
+          "weight": 2.5,
+          "hint": "Natuur & klimaat",
+          "channel_id": "unep-14ddb591",
+          "enabled": true,
+          "language": "en",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 7,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "smithsonian-magazine",
+      "organization_id": "smithsonian-magazine",
+      "name": "Smithsonian Magazine",
+      "website": "https://smithsonianmag.com",
+      "category": "B",
+      "topics": [
+        "Geschiedenis & mens"
+      ],
+      "geography": "int",
+      "source_type": "journalism",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "google_site",
+          "domain": "smithsonianmag.com",
+          "weight": 2.3,
+          "hint": "Geschiedenis & mens",
+          "channel_id": "smithsonian-magazine-4e660515",
+          "enabled": true,
+          "language": "en",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 15,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "sciencedaily",
+      "organization_id": "sciencedaily",
+      "name": "ScienceDaily",
+      "website": "https://sciencedaily.com",
+      "category": "B",
+      "topics": [
+        "Wetenschap"
+      ],
+      "geography": "int",
+      "source_type": "journalism",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "google_site",
+          "domain": "sciencedaily.com",
+          "weight": 2.2,
+          "hint": "Wetenschap",
+          "channel_id": "sciencedaily-a60768e4",
+          "enabled": true,
+          "language": "en",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 75,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "positive-news",
+      "organization_id": "positive-news",
+      "name": "Positive News",
+      "website": "https://www.positive.news/",
+      "category": "B",
+      "topics": [
+        "Mens & samenleving",
+        "Internationale constructieve journalistiek"
+      ],
+      "geography": "int",
+      "source_type": "journalism",
+      "reliability_notes": "Ontdekkingsbron; herleid belangrijke claims tot oorspronkelijk onderzoek, data of besluiten.",
+      "priority": "P2",
+      "check_frequency": "twice_weekly",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "register_ids": [
+        "B23"
+      ],
+      "channels": [
+        {
+          "mode": "google_site",
+          "domain": "positive.news",
+          "weight": 2.0,
+          "hint": "Mens & samenleving",
+          "channel_id": "positive-news-19fe18a8",
+          "enabled": false,
+          "language": "en",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 3,
+          "verification_error": null,
+          "fallback": true
+        },
+        {
+          "channel_id": "positive-news-04ec3372",
+          "mode": "rss",
+          "url": "https://www.positive.news/feed/",
+          "enabled": true,
+          "language": "en",
+          "weight": 2.0,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "feed_items": 10,
+          "origin": "new",
+          "verification_items": 10,
+          "verification_error": null
+        }
+      ],
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://www.positive.news/"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "mongabay",
+      "organization_id": "mongabay",
+      "name": "Mongabay",
+      "website": "https://mongabay.com",
+      "category": "B",
+      "topics": [
+        "Natuur & klimaat"
+      ],
+      "geography": "int",
+      "source_type": "journalism",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "google_site",
+          "domain": "mongabay.com",
+          "weight": 2.4,
+          "hint": "Natuur & klimaat",
+          "channel_id": "mongabay-dddc0e95",
+          "enabled": true,
+          "language": "en",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 52,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "yale-environment-360",
+      "organization_id": "yale-environment-360",
+      "name": "Yale Environment 360",
+      "website": "https://e360.yale.edu",
+      "category": "B",
+      "topics": [
+        "Natuur & klimaat"
+      ],
+      "geography": "int",
+      "source_type": "journalism",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "google_site",
+          "domain": "e360.yale.edu",
+          "weight": 2.4,
+          "hint": "Natuur & klimaat",
+          "channel_id": "yale-environment-360-40316dc3",
+          "enabled": true,
+          "language": "en",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 2,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "good-news-network",
+      "organization_id": "good-news-network",
+      "name": "Good News Network",
+      "website": "https://goodnewsnetwork.org",
+      "category": "B",
+      "topics": [
+        "Gewoon leuk"
+      ],
+      "geography": "int",
+      "source_type": "journalism",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "google_site",
+          "domain": "goodnewsnetwork.org",
+          "weight": 1.9,
+          "hint": "Gewoon leuk",
+          "channel_id": "good-news-network-8f68fb57",
+          "enabled": true,
+          "language": "en",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 40,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "undp",
+      "organization_id": "undp",
+      "name": "UNDP",
+      "website": "https://undp.org",
+      "category": "A",
+      "topics": [
+        "Mens & samenleving"
+      ],
+      "geography": "int",
+      "source_type": "original_information",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "google_site",
+          "domain": "undp.org",
+          "weight": 2.5,
+          "hint": "Mens & samenleving",
+          "channel_id": "undp-6bef6935",
+          "enabled": true,
+          "language": "en",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 72,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "fao",
+      "organization_id": "fao",
+      "name": "FAO",
+      "website": "https://fao.org",
+      "category": "A",
+      "topics": [
+        "Voeding & leefstijl"
+      ],
+      "geography": "int",
+      "source_type": "original_information",
+      "reliability_notes": "Controleer concrete claims en beperkingen per bericht.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Geen automatische redactionele goedkeuring.",
+      "register_ids": [],
+      "channels": [
+        {
+          "mode": "google_site",
+          "domain": "fao.org",
+          "weight": 2.5,
+          "hint": "Voeding & leefstijl",
+          "channel_id": "fao-bc4a6458",
+          "enabled": true,
+          "language": "en",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "existing",
+          "curation_bonus": 0,
+          "verification_items": 60,
+          "verification_error": null
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "source_id": "natuurmonumenten",
+      "organization_id": "natuurmonumenten",
+      "name": "Natuurmonumenten",
+      "channels": [
+        {
+          "channel_id": "natuurmonumenten-fcaad45a",
+          "mode": "rss",
+          "url": "https://www.natuurmonumenten.nl/api/news?_format=rss",
+          "enabled": true,
+          "language": "nl",
+          "weight": 2.5,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "feed_items": 30,
+          "origin": "new",
+          "verification_items": 30,
+          "verification_error": null
+        }
+      ],
+      "topics": [
+        "Natuurherstel, soorten, gebieden"
+      ],
+      "register_ids": [
+        "A04"
+      ],
+      "website": "https://www.natuurmonumenten.nl/nieuws-en-pers",
+      "category": "A",
+      "source_type": "original_information",
+      "geography": "nl",
+      "reliability_notes": "Belanghebbende bron: bruikbaar voor eigen rapporten/activiteiten; onafhankelijke bevestiging en methode per claim.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://www.natuurmonumenten.nl/nieuws-en-pers"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "wwf-nederland",
+      "organization_id": "wwf-nederland",
+      "name": "WWF Nederland",
+      "channels": [
+        {
+          "channel_id": "wwf-nederland-search",
+          "mode": "google_site",
+          "domain": "wwf.nl",
+          "enabled": true,
+          "language": "nl",
+          "weight": 2.5,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "new",
+          "verification_items": 1,
+          "verification_error": null
+        }
+      ],
+      "topics": [
+        "Natuurbescherming en meetbare resultaten"
+      ],
+      "register_ids": [
+        "A05"
+      ],
+      "website": "https://www.wwf.nl/wat-we-doen/actueel/nieuws",
+      "category": "A",
+      "source_type": "original_information",
+      "geography": "nl",
+      "reliability_notes": "Belanghebbende bron: bruikbaar voor eigen rapporten/activiteiten; onafhankelijke bevestiging en methode per claim.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://www.wwf.nl/wat-we-doen/actueel/nieuws"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "rijksuniversiteit-groningen",
+      "organization_id": "rijksuniversiteit-groningen",
+      "name": "Rijksuniversiteit Groningen",
+      "channels": [
+        {
+          "channel_id": "rijksuniversiteit-groningen-search",
+          "mode": "google_site",
+          "domain": "rug.nl",
+          "enabled": true,
+          "language": "nl",
+          "weight": 2.5,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "new",
+          "verification_items": 25,
+          "verification_error": null
+        }
+      ],
+      "topics": [
+        "Onderzoek, wetenschap en innovatie"
+      ],
+      "register_ids": [
+        "A07"
+      ],
+      "website": "https://www.rug.nl/news/",
+      "category": "A",
+      "source_type": "original_information",
+      "geography": "nl",
+      "reliability_notes": "Primaire bron binnen expertise; methode, beperkingen en onderzoekstype per bericht controleren.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://www.rug.nl/news/"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "tu-eindhoven",
+      "organization_id": "tu-eindhoven",
+      "name": "TU Eindhoven",
+      "channels": [
+        {
+          "channel_id": "tu-eindhoven-search",
+          "mode": "google_site",
+          "domain": "tue.nl",
+          "enabled": true,
+          "language": "nl",
+          "weight": 2.5,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "new",
+          "verification_items": 14,
+          "verification_error": null
+        }
+      ],
+      "topics": [
+        "Technologie, mobiliteit, materialen"
+      ],
+      "register_ids": [
+        "A09"
+      ],
+      "website": "https://www.tue.nl/nieuws-en-evenementen/nieuwsoverzicht",
+      "category": "A",
+      "source_type": "original_information",
+      "geography": "nl",
+      "reliability_notes": "Primaire bron binnen expertise; methode, beperkingen en onderzoekstype per bericht controleren.",
+      "priority": "P2",
+      "check_frequency": "twice_weekly",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://www.tue.nl/nieuws-en-evenementen/nieuwsoverzicht"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "rijkswaterstaat",
+      "organization_id": "rijkswaterstaat",
+      "name": "Rijkswaterstaat",
+      "channels": [
+        {
+          "channel_id": "rijkswaterstaat-search",
+          "mode": "google_site",
+          "domain": "rijkswaterstaat.nl",
+          "enabled": true,
+          "language": "nl",
+          "weight": 2.5,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "new",
+          "verification_items": 6,
+          "verification_error": null
+        }
+      ],
+      "topics": [
+        "Water, herstel, mobiliteit en infrastructuur"
+      ],
+      "register_ids": [
+        "A11"
+      ],
+      "website": "https://www.rijkswaterstaat.nl/nieuws",
+      "category": "A",
+      "source_type": "original_information",
+      "geography": "nl",
+      "reliability_notes": "Primaire bron binnen expertise; methode, beperkingen en onderzoekstype per bericht controleren.",
+      "priority": "P2",
+      "check_frequency": "twice_weekly",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://www.rijkswaterstaat.nl/nieuws"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "nwo",
+      "organization_id": "nwo",
+      "name": "NWO",
+      "channels": [
+        {
+          "channel_id": "nwo-search",
+          "mode": "google_site",
+          "domain": "nwo.nl",
+          "enabled": true,
+          "language": "nl",
+          "weight": 2.5,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "new",
+          "verification_items": 4,
+          "verification_error": null
+        }
+      ],
+      "topics": [
+        "Wetenschappelijke resultaten en projecten"
+      ],
+      "register_ids": [
+        "A12"
+      ],
+      "website": "https://www.nwo.nl/nieuws",
+      "category": "A",
+      "source_type": "original_information",
+      "geography": "nl",
+      "reliability_notes": "Primaire bron binnen expertise; methode, beperkingen en onderzoekstype per bericht controleren.",
+      "priority": "P2",
+      "check_frequency": "twice_weekly",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://www.nwo.nl/nieuws"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "de-vlinderstichting",
+      "organization_id": "de-vlinderstichting",
+      "name": "De Vlinderstichting",
+      "channels": [
+        {
+          "channel_id": "de-vlinderstichting-search",
+          "mode": "google_site",
+          "domain": "vlinderstichting.nl",
+          "enabled": true,
+          "language": "nl",
+          "weight": 2.5,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "new",
+          "verification_items": 0,
+          "verification_error": null
+        }
+      ],
+      "topics": [
+        "Vlinders, libellen, monitoring natuur"
+      ],
+      "register_ids": [
+        "A13"
+      ],
+      "website": "https://www.vlinderstichting.nl/",
+      "category": "A",
+      "source_type": "original_information",
+      "geography": "nl",
+      "reliability_notes": "Primaire bron binnen expertise; methode, beperkingen en onderzoekstype per bericht controleren.",
+      "priority": "P2",
+      "check_frequency": "weekly",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://vlinderstichting.nl/"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "sovon",
+      "organization_id": "sovon",
+      "name": "Sovon",
+      "channels": [
+        {
+          "channel_id": "sovon-search",
+          "mode": "google_site",
+          "domain": "sovon.nl",
+          "enabled": true,
+          "language": "nl",
+          "weight": 2.5,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "new",
+          "verification_items": 0,
+          "verification_error": null
+        }
+      ],
+      "topics": [
+        "Vogelpopulaties en langjarige meetreeksen"
+      ],
+      "register_ids": [
+        "A14"
+      ],
+      "website": "https://www.sovon.nl/",
+      "category": "A",
+      "source_type": "original_information",
+      "geography": "nl",
+      "reliability_notes": "Primaire bron binnen expertise; methode, beperkingen en onderzoekstype per bericht controleren.",
+      "priority": "P2",
+      "check_frequency": "weekly",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://www.sovon.nl/"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "dokters-van-de-wereld",
+      "organization_id": "dokters-van-de-wereld",
+      "name": "Dokters van de Wereld",
+      "channels": [
+        {
+          "channel_id": "dokters-van-de-wereld-search",
+          "mode": "google_site",
+          "domain": "doktersvandewereld.org",
+          "enabled": true,
+          "language": "nl",
+          "weight": 2.5,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "new",
+          "verification_items": 2,
+          "verification_error": null
+        }
+      ],
+      "topics": [
+        "Toegang tot zorg en maatschappelijke projecten"
+      ],
+      "register_ids": [
+        "A15"
+      ],
+      "website": "https://doktersvandewereld.org/",
+      "category": "A",
+      "source_type": "original_information",
+      "geography": "nl",
+      "reliability_notes": "Belanghebbende bron: bruikbaar voor eigen rapporten/activiteiten; onafhankelijke bevestiging en methode per claim.",
+      "priority": "P2",
+      "check_frequency": "weekly",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://doktersvandewereld.org/"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "amnesty-international-nederland",
+      "organization_id": "amnesty-international-nederland",
+      "name": "Amnesty International Nederland",
+      "channels": [
+        {
+          "channel_id": "amnesty-international-nederland-search",
+          "mode": "google_site",
+          "domain": "amnesty.nl",
+          "enabled": true,
+          "language": "nl",
+          "weight": 2.5,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "new",
+          "verification_items": 8,
+          "verification_error": null
+        }
+      ],
+      "topics": [
+        "Mensenrechtensuccessen; primair over eigen acties"
+      ],
+      "register_ids": [
+        "A16"
+      ],
+      "website": "https://www.amnesty.nl/wat-we-doen/onze-successen/goed-nieuws",
+      "category": "A",
+      "source_type": "original_information",
+      "geography": "nl",
+      "reliability_notes": "Belanghebbende bron: bruikbaar voor eigen rapporten/activiteiten; onafhankelijke bevestiging en methode per claim.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://www.amnesty.nl/wat-we-doen/onze-successen/goed-nieuws",
+        "method": "curl fallback"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "inter-press-service-ips",
+      "organization_id": "inter-press-service-ips",
+      "name": "Inter Press Service / IPS",
+      "channels": [
+        {
+          "channel_id": "inter-press-service-ips-search",
+          "mode": "google_site",
+          "domain": "ipsnews.be",
+          "enabled": true,
+          "language": "nl",
+          "weight": 2.0,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "new",
+          "verification_items": 4,
+          "verification_error": null
+        }
+      ],
+      "topics": [
+        "Internationale berichtgeving; terugzoeken naar oorspronkelijke data"
+      ],
+      "register_ids": [
+        "A17"
+      ],
+      "website": "https://www.ipsnews.be/",
+      "category": "B",
+      "source_type": "journalism",
+      "geography": "int",
+      "reliability_notes": "Ontdekkingsbron; herleid belangrijke claims tot oorspronkelijk onderzoek, data of besluiten.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://www.ipsnews.be/"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "ember",
+      "organization_id": "ember",
+      "name": "Ember",
+      "channels": [
+        {
+          "channel_id": "ember-search",
+          "mode": "google_site",
+          "domain": "ember-energy.org",
+          "enabled": true,
+          "language": "en",
+          "weight": 2.5,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "new",
+          "verification_items": 2,
+          "verification_error": null
+        }
+      ],
+      "topics": [
+        "Onderzoek en cijfers over energie"
+      ],
+      "register_ids": [
+        "A18"
+      ],
+      "website": "https://ember-energy.org/",
+      "category": "A",
+      "source_type": "original_information",
+      "geography": "int",
+      "reliability_notes": "Primaire bron binnen expertise; methode, beperkingen en onderzoekstype per bericht controleren.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://ember-energy.org/"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "eurostat",
+      "organization_id": "eurostat",
+      "name": "Eurostat",
+      "channels": [
+        {
+          "channel_id": "eurostat-search",
+          "mode": "google_site",
+          "domain": "ec.europa.eu",
+          "enabled": true,
+          "language": "en",
+          "weight": 2.5,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "new",
+          "verification_items": 100,
+          "verification_error": null
+        }
+      ],
+      "topics": [
+        "Europese statistiek en voortgang"
+      ],
+      "register_ids": [
+        "A19"
+      ],
+      "website": "https://ec.europa.eu/eurostat/news",
+      "category": "A",
+      "source_type": "original_information",
+      "geography": "int",
+      "reliability_notes": "Primaire bron binnen expertise; methode, beperkingen en onderzoekstype per bericht controleren.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://ec.europa.eu/eurostat/news"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "plan-international",
+      "organization_id": "plan-international",
+      "name": "Plan International",
+      "channels": [
+        {
+          "channel_id": "plan-international-search",
+          "mode": "google_site",
+          "domain": "plan-international.org",
+          "enabled": true,
+          "language": "en",
+          "weight": 2.5,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "new",
+          "verification_items": 4,
+          "verification_error": null
+        }
+      ],
+      "topics": [
+        "Rechten, onderwijs, gezondheid van meisjes"
+      ],
+      "register_ids": [
+        "A22"
+      ],
+      "website": "https://plan-international.org/",
+      "category": "A",
+      "source_type": "original_information",
+      "geography": "int",
+      "reliability_notes": "Belanghebbende bron: bruikbaar voor eigen rapporten/activiteiten; onafhankelijke bevestiging en methode per claim.",
+      "priority": "P2",
+      "check_frequency": "weekly",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://plan-international.org/"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "world-economic-forum",
+      "organization_id": "world-economic-forum",
+      "name": "World Economic Forum",
+      "channels": [
+        {
+          "channel_id": "world-economic-forum-search",
+          "mode": "google_site",
+          "domain": "weforum.org",
+          "enabled": true,
+          "language": "en",
+          "weight": 2.5,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "new",
+          "verification_items": 54,
+          "verification_error": null
+        }
+      ],
+      "topics": [
+        "Internationale vergelijkende rapporten"
+      ],
+      "register_ids": [
+        "A23"
+      ],
+      "website": "https://www.weforum.org/publications/",
+      "category": "A",
+      "source_type": "original_information",
+      "geography": "int",
+      "reliability_notes": "Belanghebbende bron: bruikbaar voor eigen rapporten/activiteiten; onafhankelijke bevestiging en methode per claim.",
+      "priority": "P2",
+      "check_frequency": "weekly",
+      "limitations": "Technische blokkade: HTTP Error 403: Forbidden; geen bewijs dat bron offline is.",
+      "page_verification": {
+        "error": "HTTP Error 403: Forbidden"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "nature",
+      "organization_id": "nature",
+      "name": "Nature",
+      "channels": [
+        {
+          "channel_id": "nature-2457669d",
+          "mode": "rss",
+          "url": "https://www.nature.com/nature.rss",
+          "enabled": true,
+          "language": "en",
+          "weight": 2.5,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "feed_items": 75,
+          "origin": "new",
+          "verification_items": 75,
+          "verification_error": null
+        }
+      ],
+      "topics": [
+        "Peer-reviewed wetenschap; originele onderzoeken"
+      ],
+      "register_ids": [
+        "A24"
+      ],
+      "website": "https://www.nature.com/nature/articles",
+      "category": "A",
+      "source_type": "original_information",
+      "geography": "int",
+      "reliability_notes": "Primaire bron binnen expertise; methode, beperkingen en onderzoekstype per bericht controleren.",
+      "priority": "P2",
+      "check_frequency": "twice_weekly",
+      "limitations": "Cookie-omleiding; feed leesbaar, artikeltoegang afzonderlijk controleren. Controleer onderzoekstype, peer review, correcties/retracties en toegang; tijdschrifttitel is geen garantie voor een claim.",
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://www.nature.com/nature/articles?error=cookies_not_supported&code=5b266e8f-5fcc-4fbe-b836-8b53576b64dc",
+        "content_limitation": "Cookie-omleiding; feed leesbaar, artikeltoegang afzonderlijk controleren."
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "frontiers",
+      "organization_id": "frontiers",
+      "name": "Frontiers",
+      "channels": [
+        {
+          "channel_id": "frontiers-e155eddc",
+          "mode": "rss",
+          "url": "https://www.frontiersin.org/journals/marine-science/rss",
+          "enabled": true,
+          "language": "en",
+          "weight": 2.5,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "feed_items": 20,
+          "origin": "new",
+          "verification_items": 20,
+          "verification_error": null
+        }
+      ],
+      "topics": [
+        "Peer-reviewed marien onderzoek"
+      ],
+      "register_ids": [
+        "A25"
+      ],
+      "website": "https://www.frontiersin.org/journals/marine-science",
+      "category": "A",
+      "source_type": "original_information",
+      "geography": "int",
+      "reliability_notes": "Primaire bron binnen expertise; methode, beperkingen en onderzoekstype per bericht controleren.",
+      "priority": "P2",
+      "check_frequency": "weekly",
+      "limitations": "Controleer onderzoekstype, peer review, correcties/retracties en toegang; tijdschrifttitel is geen garantie voor een claim.",
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://www.frontiersin.org/journals/marine-science"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "iucn",
+      "organization_id": "iucn",
+      "name": "IUCN",
+      "channels": [
+        {
+          "channel_id": "iucn-search",
+          "mode": "google_site",
+          "domain": "iucn.org",
+          "enabled": true,
+          "language": "en",
+          "weight": 2.5,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "new",
+          "verification_items": 10,
+          "verification_error": null
+        }
+      ],
+      "topics": [
+        "Beschermingsstatus soorten, natuurbescherming"
+      ],
+      "register_ids": [
+        "A26"
+      ],
+      "website": "https://iucn.org/news",
+      "category": "A",
+      "source_type": "original_information",
+      "geography": "int",
+      "reliability_notes": "Primaire bron binnen expertise; methode, beperkingen en onderzoekstype per bericht controleren.",
+      "priority": "P2",
+      "check_frequency": "weekly",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://iucn.org/news"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "windeurope",
+      "organization_id": "windeurope",
+      "name": "WindEurope",
+      "channels": [
+        {
+          "channel_id": "windeurope-search",
+          "mode": "google_site",
+          "domain": "windeurope.org",
+          "enabled": true,
+          "language": "en",
+          "weight": 2.5,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "new",
+          "verification_items": 0,
+          "verification_error": null
+        }
+      ],
+      "topics": [
+        "Europese windenergie en sectorcijfers"
+      ],
+      "register_ids": [
+        "A27"
+      ],
+      "website": "https://windeurope.org/news/",
+      "category": "A",
+      "source_type": "original_information",
+      "geography": "int",
+      "reliability_notes": "Belanghebbende bron: bruikbaar voor eigen rapporten/activiteiten; onafhankelijke bevestiging en methode per claim.",
+      "priority": "P2",
+      "check_frequency": "weekly",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://windeurope.org/news/"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "goed-nieuws",
+      "organization_id": "goed-nieuws",
+      "name": "Goed Nieuws",
+      "channels": [
+        {
+          "channel_id": "goed-nieuws-c55312c6",
+          "mode": "rss",
+          "url": "https://www.goednieuwssite.org/feed/",
+          "enabled": true,
+          "language": "en",
+          "weight": 2.0,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "feed_items": 30,
+          "origin": "new",
+          "verification_error": null,
+          "verification_items": 30
+        },
+        {
+          "channel_id": "goed-nieuws-search-fallback",
+          "mode": "google_site",
+          "domain": "goednieuwssite.org",
+          "language": "nl",
+          "weight": 2,
+          "enabled": false,
+          "origin": "new",
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "fallback": true,
+          "verification_items": 0,
+          "verification_error": null
+        }
+      ],
+      "topics": [
+        "Positief nieuwsfilter, vaak via IPS"
+      ],
+      "register_ids": [
+        "B02"
+      ],
+      "website": "https://www.goednieuwssite.org/",
+      "category": "B",
+      "source_type": "journalism",
+      "geography": "int",
+      "reliability_notes": "Ontdekkingsbron; herleid belangrijke claims tot oorspronkelijk onderzoek, data of besluiten.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://www.goednieuwssite.org/"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "goodnews-eu",
+      "organization_id": "goodnews-eu",
+      "name": "Goodnews.eu",
+      "channels": [
+        {
+          "channel_id": "goodnews-eu-7f4cd12a",
+          "mode": "rss",
+          "url": "https://goodnews.eu/feed/",
+          "enabled": true,
+          "language": "de",
+          "weight": 2.0,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "feed_items": 14,
+          "origin": "new",
+          "verification_items": 14,
+          "verification_error": null
+        }
+      ],
+      "topics": [
+        "Dagelijkse Duitstalige nieuwsselectie"
+      ],
+      "register_ids": [
+        "B03"
+      ],
+      "website": "https://goodnews.eu/",
+      "category": "B",
+      "source_type": "journalism",
+      "geography": "int",
+      "reliability_notes": "Ontdekkingsbron; herleid belangrijke claims tot oorspronkelijk onderzoek, data of besluiten.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://goodnews.eu/"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "goodnews-eu-archief",
+      "organization_id": "goodnews-eu",
+      "name": "Goodnews.eu nieuwsbriefarchief",
+      "channels": [],
+      "topics": [
+        "Directe mediabronnen per bericht"
+      ],
+      "register_ids": [
+        "B04"
+      ],
+      "website": "https://steady.page/de/good-news-app",
+      "category": "B",
+      "source_type": "journalism",
+      "geography": "int",
+      "reliability_notes": "Ontdekkingsbron; herleid belangrijke claims tot oorspronkelijk onderzoek, data of besluiten.",
+      "priority": "P1",
+      "check_frequency": "manual",
+      "limitations": "Technische blokkade: HTTP Error 403: Forbidden; geen bewijs dat bron offline is.",
+      "page_verification": {
+        "error": "HTTP Error 403: Forbidden"
+      },
+      "enabled": false
+    },
+    {
+      "source_id": "maatschapwij",
+      "organization_id": "maatschapwij",
+      "name": "MaatschapWij",
+      "channels": [
+        {
+          "channel_id": "maatschapwij-search",
+          "mode": "google_site",
+          "domain": "maatschapwij.nu",
+          "enabled": true,
+          "language": "nl",
+          "weight": 2.0,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "new",
+          "verification_items": 4,
+          "verification_error": null
+        }
+      ],
+      "topics": [
+        "Maatschappelijke initiatieven en achtergrondverhalen"
+      ],
+      "register_ids": [
+        "B05"
+      ],
+      "website": "https://maatschapwij.nu/",
+      "category": "B",
+      "source_type": "journalism",
+      "geography": "nl",
+      "reliability_notes": "Ontdekkingsbron; herleid belangrijke claims tot oorspronkelijk onderzoek, data of besluiten.",
+      "priority": "P2",
+      "check_frequency": "twice_weekly",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://maatschapwij.nu/"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "omroep-west",
+      "organization_id": "omroep-west",
+      "name": "Omroep West",
+      "channels": [
+        {
+          "channel_id": "omroep-west-search",
+          "mode": "google_site",
+          "domain": "omroepwest.nl",
+          "enabled": true,
+          "language": "nl",
+          "weight": 2.0,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "new",
+          "verification_items": 23,
+          "verification_error": null
+        }
+      ],
+      "topics": [
+        "Lokale initiatieven en positieve resultaten"
+      ],
+      "register_ids": [
+        "B07"
+      ],
+      "website": "https://www.omroepwest.nl/",
+      "category": "B",
+      "source_type": "journalism",
+      "geography": "nl",
+      "reliability_notes": "Ontdekkingsbron; herleid belangrijke claims tot oorspronkelijk onderzoek, data of besluiten.",
+      "priority": "P2",
+      "check_frequency": "twice_weekly",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://www.omroepwest.nl/"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "omroep-flevoland",
+      "organization_id": "omroep-flevoland",
+      "name": "Omroep Flevoland",
+      "channels": [
+        {
+          "channel_id": "omroep-flevoland-search",
+          "mode": "google_site",
+          "domain": "omroepflevoland.nl",
+          "enabled": true,
+          "language": "nl",
+          "weight": 2.0,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "new",
+          "verification_items": 100,
+          "verification_error": null
+        }
+      ],
+      "topics": [
+        "Lokale projecten en maatschappelijke initiatieven"
+      ],
+      "register_ids": [
+        "B08"
+      ],
+      "website": "https://www.omroepflevoland.nl/",
+      "category": "B",
+      "source_type": "journalism",
+      "geography": "nl",
+      "reliability_notes": "Ontdekkingsbron; herleid belangrijke claims tot oorspronkelijk onderzoek, data of besluiten.",
+      "priority": "P2",
+      "check_frequency": "twice_weekly",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://www.omroepflevoland.nl/"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "duic",
+      "organization_id": "duic",
+      "name": "DUIC",
+      "channels": [
+        {
+          "channel_id": "duic-search",
+          "mode": "google_site",
+          "domain": "duic.nl",
+          "enabled": true,
+          "language": "nl",
+          "weight": 2.0,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "new",
+          "verification_items": 10,
+          "verification_error": null
+        }
+      ],
+      "topics": [
+        "Utrechtse projecten en lokaal nieuws"
+      ],
+      "register_ids": [
+        "B09"
+      ],
+      "website": "https://www.duic.nl/",
+      "category": "B",
+      "source_type": "journalism",
+      "geography": "nl",
+      "reliability_notes": "Ontdekkingsbron; herleid belangrijke claims tot oorspronkelijk onderzoek, data of besluiten.",
+      "priority": "P2",
+      "check_frequency": "weekly",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://www.duic.nl/"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "deutsche-welle",
+      "organization_id": "deutsche-welle",
+      "name": "Deutsche Welle",
+      "channels": [
+        {
+          "channel_id": "deutsche-welle-search",
+          "mode": "google_site",
+          "domain": "dw.com",
+          "enabled": true,
+          "language": "en",
+          "weight": 2.0,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "new",
+          "verification_items": 100,
+          "verification_error": null
+        }
+      ],
+      "topics": [
+        "Europese en mondiale wetenschaps- en oplossingsjournalistiek"
+      ],
+      "register_ids": [
+        "B10"
+      ],
+      "website": "https://www.dw.com/",
+      "category": "B",
+      "source_type": "journalism",
+      "geography": "int",
+      "reliability_notes": "Ontdekkingsbron; herleid belangrijke claims tot oorspronkelijk onderzoek, data of besluiten.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://www.dw.com/"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "tagesschau",
+      "organization_id": "tagesschau",
+      "name": "Tagesschau",
+      "channels": [
+        {
+          "channel_id": "tagesschau-d2a5d35b",
+          "mode": "rss",
+          "url": "https://www.tagesschau.de/index~atom.xml",
+          "enabled": true,
+          "language": "de",
+          "weight": 2.0,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "feed_items": 71,
+          "origin": "new",
+          "verification_items": 71,
+          "verification_error": null
+        },
+        {
+          "channel_id": "tagesschau-43c42343",
+          "mode": "rss",
+          "url": "https://www.tagesschau.de/index~rss2.xml",
+          "enabled": false,
+          "language": "de",
+          "weight": 2.0,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "feed_items": 61,
+          "origin": "new"
+        }
+      ],
+      "topics": [
+        "Duitse en internationale feitenjournalistiek"
+      ],
+      "register_ids": [
+        "B11"
+      ],
+      "website": "https://www.tagesschau.de/",
+      "category": "B",
+      "source_type": "journalism",
+      "geography": "int",
+      "reliability_notes": "Ontdekkingsbron; herleid belangrijke claims tot oorspronkelijk onderzoek, data of besluiten.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://www.tagesschau.de/"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "srf",
+      "organization_id": "srf",
+      "name": "SRF",
+      "channels": [
+        {
+          "channel_id": "srf-search",
+          "mode": "google_site",
+          "domain": "srf.ch",
+          "enabled": true,
+          "language": "de",
+          "weight": 2.0,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "new",
+          "verification_items": 100,
+          "verification_error": null
+        }
+      ],
+      "topics": [
+        "Zwitserse maatschappij- en wetenschapsjournalistiek"
+      ],
+      "register_ids": [
+        "B12"
+      ],
+      "website": "https://www.srf.ch/",
+      "category": "B",
+      "source_type": "journalism",
+      "geography": "int",
+      "reliability_notes": "Ontdekkingsbron; herleid belangrijke claims tot oorspronkelijk onderzoek, data of besluiten.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://www.srf.ch/"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "mdr",
+      "organization_id": "mdr",
+      "name": "MDR",
+      "channels": [
+        {
+          "channel_id": "mdr-dcaa6e33",
+          "mode": "rss",
+          "url": "https://www.mdr.de/index~atom.xml",
+          "enabled": true,
+          "language": "de",
+          "weight": 2.0,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "feed_items": 44,
+          "origin": "new",
+          "verification_items": 44,
+          "verification_error": null
+        },
+        {
+          "channel_id": "mdr-c498f410",
+          "mode": "rss",
+          "url": "https://www.mdr.de/index~rss2.xml",
+          "enabled": false,
+          "language": "de",
+          "weight": 2.0,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "feed_items": 44,
+          "origin": "new"
+        }
+      ],
+      "topics": [
+        "Duits regionaal en wetenschapsnieuws"
+      ],
+      "register_ids": [
+        "B13"
+      ],
+      "website": "https://www.mdr.de/",
+      "category": "B",
+      "source_type": "journalism",
+      "geography": "int",
+      "reliability_notes": "Ontdekkingsbron; herleid belangrijke claims tot oorspronkelijk onderzoek, data of besluiten.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://www.mdr.de/"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "der-spiegel",
+      "organization_id": "der-spiegel",
+      "name": "Der Spiegel",
+      "channels": [
+        {
+          "channel_id": "der-spiegel-7e6cdbaf",
+          "mode": "rss",
+          "url": "https://www.spiegel.de/schlagzeilen/index.rss",
+          "enabled": true,
+          "language": "de",
+          "weight": 2.0,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "feed_items": 30,
+          "origin": "new",
+          "verification_items": 30,
+          "verification_error": null
+        },
+        {
+          "channel_id": "der-spiegel-b3ea11db",
+          "mode": "rss",
+          "url": "https://www.spiegel.de/index.rss",
+          "enabled": false,
+          "language": "de",
+          "weight": 2.0,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "feed_items": 35,
+          "origin": "new"
+        }
+      ],
+      "topics": [
+        "Algemeen nieuws, wetenschap, internationale onderwerpen"
+      ],
+      "register_ids": [
+        "B14"
+      ],
+      "website": "https://www.spiegel.de/",
+      "category": "B",
+      "source_type": "journalism",
+      "geography": "int",
+      "reliability_notes": "Ontdekkingsbron; herleid belangrijke claims tot oorspronkelijk onderzoek, data of besluiten.",
+      "priority": "P1",
+      "check_frequency": "every_edition",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://www.spiegel.de/"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "zdfheute",
+      "organization_id": "zdfheute",
+      "name": "ZDFheute",
+      "channels": [
+        {
+          "channel_id": "zdfheute-60d39da3",
+          "mode": "rss",
+          "url": "https://www.zdfheute.de/rss/zdf/nachrichten",
+          "enabled": true,
+          "language": "de",
+          "weight": 2.0,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "feed_items": 157,
+          "origin": "new",
+          "verification_items": 158,
+          "verification_error": null
+        }
+      ],
+      "topics": [
+        "Duits nieuws, wetenschap en onderzoeksrapporten"
+      ],
+      "register_ids": [
+        "B15"
+      ],
+      "website": "https://www.zdfheute.de/",
+      "category": "B",
+      "source_type": "journalism",
+      "geography": "int",
+      "reliability_notes": "Ontdekkingsbron; herleid belangrijke claims tot oorspronkelijk onderzoek, data of besluiten.",
+      "priority": "P2",
+      "check_frequency": "twice_weekly",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://www.zdfheute.de/"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "deutschlandfunk-nova",
+      "organization_id": "deutschlandfunk-nova",
+      "name": "Deutschlandfunk Nova",
+      "channels": [
+        {
+          "channel_id": "deutschlandfunk-nova-a57f952d",
+          "mode": "rss",
+          "url": "https://www.deutschlandfunknova.de/feeds/index",
+          "enabled": true,
+          "language": "de",
+          "weight": 2.0,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "feed_items": 100,
+          "origin": "new",
+          "verification_items": 100,
+          "verification_error": null
+        }
+      ],
+      "topics": [
+        "Wetenschap en maatschappij"
+      ],
+      "register_ids": [
+        "B16"
+      ],
+      "website": "https://www.deutschlandfunknova.de/",
+      "category": "B",
+      "source_type": "journalism",
+      "geography": "int",
+      "reliability_notes": "Ontdekkingsbron; herleid belangrijke claims tot oorspronkelijk onderzoek, data of besluiten.",
+      "priority": "P2",
+      "check_frequency": "twice_weekly",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://www.deutschlandfunknova.de/"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "fluter",
+      "organization_id": "fluter",
+      "name": "Fluter",
+      "channels": [
+        {
+          "channel_id": "fluter-search",
+          "mode": "google_site",
+          "domain": "fluter.de",
+          "enabled": true,
+          "language": "de",
+          "weight": 2.0,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "new",
+          "verification_items": 0,
+          "verification_error": null
+        }
+      ],
+      "topics": [
+        "Maatschappelijke en jonge initiatieven"
+      ],
+      "register_ids": [
+        "B17"
+      ],
+      "website": "https://www.fluter.de/",
+      "category": "B",
+      "source_type": "journalism",
+      "geography": "int",
+      "reliability_notes": "Ontdekkingsbron; herleid belangrijke claims tot oorspronkelijk onderzoek, data of besluiten.",
+      "priority": "P2",
+      "check_frequency": "weekly",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://www.fluter.de/"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "reset",
+      "organization_id": "reset",
+      "name": "RESET",
+      "channels": [
+        {
+          "channel_id": "reset-search",
+          "mode": "google_site",
+          "domain": "reset.org",
+          "enabled": true,
+          "language": "de",
+          "weight": 2.0,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "new",
+          "verification_items": 3,
+          "verification_error": null
+        }
+      ],
+      "topics": [
+        "Technologische en maatschappelijke oplossingen"
+      ],
+      "register_ids": [
+        "B18"
+      ],
+      "website": "https://reset.org/",
+      "category": "B",
+      "source_type": "journalism",
+      "geography": "int",
+      "reliability_notes": "Ontdekkingsbron; herleid belangrijke claims tot oorspronkelijk onderzoek, data of besluiten.",
+      "priority": "P2",
+      "check_frequency": "twice_weekly",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://reset.org/"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "utopia",
+      "organization_id": "utopia",
+      "name": "Utopia",
+      "channels": [
+        {
+          "channel_id": "utopia-search",
+          "mode": "google_site",
+          "domain": "utopia.de",
+          "enabled": true,
+          "language": "de",
+          "weight": 2.0,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "new",
+          "verification_items": 19,
+          "verification_error": null
+        }
+      ],
+      "topics": [
+        "Duurzaamheid, energie en natuur"
+      ],
+      "register_ids": [
+        "B19"
+      ],
+      "website": "https://utopia.de/",
+      "category": "B",
+      "source_type": "journalism",
+      "geography": "int",
+      "reliability_notes": "Ontdekkingsbron; herleid belangrijke claims tot oorspronkelijk onderzoek, data of besluiten.",
+      "priority": "P2",
+      "check_frequency": "twice_weekly",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://utopia.de/"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "taz",
+      "organization_id": "taz",
+      "name": "taz",
+      "channels": [
+        {
+          "channel_id": "taz-eac48a00",
+          "mode": "rss",
+          "url": "https://taz.de/rss.xml",
+          "enabled": true,
+          "language": "de",
+          "weight": 2.0,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "feed_items": 50,
+          "origin": "new",
+          "verification_items": 50,
+          "verification_error": null
+        }
+      ],
+      "topics": [
+        "Maatschappij, natuur, sociale initiatieven"
+      ],
+      "register_ids": [
+        "B20"
+      ],
+      "website": "https://taz.de/",
+      "category": "B",
+      "source_type": "journalism",
+      "geography": "int",
+      "reliability_notes": "Ontdekkingsbron; herleid belangrijke claims tot oorspronkelijk onderzoek, data of besluiten.",
+      "priority": "P2",
+      "check_frequency": "twice_weekly",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://taz.de/"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "tages-anzeiger",
+      "organization_id": "tages-anzeiger",
+      "name": "Tages-Anzeiger",
+      "channels": [
+        {
+          "channel_id": "tages-anzeiger-search",
+          "mode": "google_site",
+          "domain": "tagesanzeiger.ch",
+          "enabled": true,
+          "language": "de",
+          "weight": 2.0,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "new",
+          "verification_items": 100,
+          "verification_error": null
+        }
+      ],
+      "topics": [
+        "Zwitsers nieuws en maatschappelijke veranderingen"
+      ],
+      "register_ids": [
+        "B21"
+      ],
+      "website": "https://www.tagesanzeiger.ch/",
+      "category": "B",
+      "source_type": "journalism",
+      "geography": "int",
+      "reliability_notes": "Ontdekkingsbron; herleid belangrijke claims tot oorspronkelijk onderzoek, data of besluiten.",
+      "priority": "P2",
+      "check_frequency": "weekly",
+      "limitations": "Technische blokkade: HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nMoved Temporarily; geen bewijs dat bron offline is.",
+      "page_verification": {
+        "error": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nMoved Temporarily"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "euronews",
+      "organization_id": "euronews",
+      "name": "Euronews",
+      "channels": [
+        {
+          "channel_id": "euronews-search",
+          "mode": "google_site",
+          "domain": "euronews.com",
+          "enabled": true,
+          "language": "en",
+          "weight": 2.0,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "new",
+          "verification_items": 100,
+          "verification_error": null
+        }
+      ],
+      "topics": [
+        "Europees nieuws, innovatie en duurzaamheid"
+      ],
+      "register_ids": [
+        "B22"
+      ],
+      "website": "https://www.euronews.com/",
+      "category": "B",
+      "source_type": "journalism",
+      "geography": "int",
+      "reliability_notes": "Ontdekkingsbron; herleid belangrijke claims tot oorspronkelijk onderzoek, data of besluiten.",
+      "priority": "P2",
+      "check_frequency": "twice_weekly",
+      "limitations": "Auteursrecht en mogelijke belangen per bericht controleren; geen automatische publicatie.",
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://www.euronews.com/"
+      },
+      "enabled": true
+    },
+    {
+      "source_id": "brightvibes",
+      "organization_id": "brightvibes",
+      "name": "BrightVibes",
+      "channels": [],
+      "topics": [
+        "Inspirerende menselijke en maatschappelijke verhalen"
+      ],
+      "register_ids": [
+        "B24"
+      ],
+      "website": "https://www.brightvibes.com/",
+      "category": "C",
+      "source_type": "inspiration",
+      "geography": "int",
+      "reliability_notes": "Inspiratie; geen zelfstandige feitelijke onderbouwing zonder aanvullende verificatie.",
+      "priority": "P2",
+      "check_frequency": "weekly",
+      "limitations": "Kan journalistieke verhalen bevatten; per verhaal eventueel B, standaard inspiratie.",
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://www.brightvibes.com/"
+      },
+      "enabled": false
+    },
+    {
+      "source_id": "instagram-goednieuws",
+      "organization_id": "instagram-goednieuws",
+      "name": "Instagram @goednieuws",
+      "channels": [],
+      "topics": [
+        "Inspiratie / signaleren van bijzondere verhalen"
+      ],
+      "register_ids": [
+        "C01"
+      ],
+      "website": "https://www.instagram.com/goednieuws/",
+      "category": "C",
+      "source_type": "inspiration",
+      "geography": "nl",
+      "reliability_notes": "Inspiratie; geen zelfstandige feitelijke onderbouwing zonder aanvullende verificatie.",
+      "priority": "P3",
+      "check_frequency": "manual",
+      "limitations": "HTTP-toegang bevestigt geen leesbare actuele posts/afleveringen; YouTube-URL is zoekresultaat.",
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://www.instagram.com/goednieuws/",
+        "content_limitation": "HTTP-toegang bevestigt geen leesbare actuele posts/afleveringen; YouTube-URL is zoekresultaat."
+      },
+      "enabled": false
+    },
+    {
+      "source_id": "maatschapwij-youtube",
+      "organization_id": "maatschapwij-youtube",
+      "name": "MaatschapWij YouTube",
+      "channels": [],
+      "topics": [
+        "Oudere positieve jaaroverzichten"
+      ],
+      "register_ids": [
+        "C02"
+      ],
+      "website": "https://www.youtube.com/results?search_query=MaatschapWij+positief+nieuws",
+      "category": "C",
+      "source_type": "inspiration",
+      "geography": "nl",
+      "reliability_notes": "Inspiratie; geen zelfstandige feitelijke onderbouwing zonder aanvullende verificatie.",
+      "priority": "P3",
+      "check_frequency": "manual",
+      "limitations": "HTTP-toegang bevestigt geen leesbare actuele posts/afleveringen; YouTube-URL is zoekresultaat. Geleverde URL is een YouTube-zoekpagina, geen vast kanaal; geen automatische monitoring.",
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://www.youtube.com/results?search_query=MaatschapWij+positief+nieuws",
+        "content_limitation": "HTTP-toegang bevestigt geen leesbare actuele posts/afleveringen; YouTube-URL is zoekresultaat."
+      },
+      "enabled": false
+    },
+    {
+      "source_id": "de-goed-nieuws-show",
+      "organization_id": "de-goed-nieuws-show",
+      "name": "De Goed Nieuws Show",
+      "channels": [],
+      "topics": [
+        "Historische podcastafleveringen"
+      ],
+      "register_ids": [
+        "C03"
+      ],
+      "website": "https://open.spotify.com/show/5JwWomGeRr4CLp97wgLNxE",
+      "category": "C",
+      "source_type": "inspiration",
+      "geography": "nl",
+      "reliability_notes": "Inspiratie; geen zelfstandige feitelijke onderbouwing zonder aanvullende verificatie.",
+      "priority": "P3",
+      "check_frequency": "manual",
+      "limitations": "HTTP-toegang bevestigt geen leesbare actuele posts/afleveringen; YouTube-URL is zoekresultaat.",
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://open.spotify.com/show/5JwWomGeRr4CLp97wgLNxE",
+        "content_limitation": "HTTP-toegang bevestigt geen leesbare actuele posts/afleveringen; YouTube-URL is zoekresultaat."
+      },
+      "enabled": false
+    },
+    {
+      "source_id": "good-impact",
+      "organization_id": "good-impact",
+      "name": "Good Impact",
+      "channels": [
+        {
+          "channel_id": "good-impact-search",
+          "mode": "google_site",
+          "domain": "goodimpact.eu",
+          "enabled": true,
+          "language": "de",
+          "weight": 2.0,
+          "verification_status": "verified",
+          "checked_at": "2026-10-13",
+          "origin": "new",
+          "verification_items": 0,
+          "verification_error": null
+        }
+      ],
+      "topics": [
+        "Verdiepende constructieve journalistiek"
+      ],
+      "register_ids": [
+        "C04"
+      ],
+      "website": "https://goodimpact.eu/",
+      "category": "B",
+      "source_type": "journalism",
+      "geography": "int",
+      "reliability_notes": "Ontdekkingsbron; herleid belangrijke claims tot oorspronkelijk onderzoek, data of besluiten.",
+      "priority": "P2",
+      "check_frequency": "weekly",
+      "limitations": "Journalistieke verdieping met lage actualiteitenprioriteit.",
+      "page_verification": {
+        "status": 200,
+        "final_url": "https://goodimpact.eu/"
+      },
+      "enabled": true
+    }
+  ]
+}

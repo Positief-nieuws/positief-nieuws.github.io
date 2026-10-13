@@ -33,12 +33,16 @@ jobs:
         with:
           python-version: '3.13'
 
+      - name: Bron- en redactiecontroles testen
+        run: python -m unittest discover -s tests
+
       - name: Controleren of kandidaten vandaag al zijn gemaakt
         id: freshness
         if: github.event_name == 'schedule'
         shell: python
         run: |
           import json
+          import hashlib
           import os
           from datetime import datetime
           from zoneinfo import ZoneInfo
@@ -56,7 +60,11 @@ jobs:
                           generated_at.replace("Z", "+00:00")
                       ).astimezone(ZoneInfo("Europe/Amsterdam"))
                       today = datetime.now(ZoneInfo("Europe/Amsterdam")).date()
-                      already_fresh = generated.date() == today
+                      already_fresh = (
+                          generated.date() == today
+                          and data.get("meta", {}).get("collection_complete") is True
+                          and data.get("meta", {}).get("registry_sha256") == hashlib.sha256(Path("sources.json").read_bytes()).hexdigest()
+                      )
               except Exception as exc:
                   print(f"Freshness-check kon bestand niet lezen: {exc}")
 
@@ -76,7 +84,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add kandidaten.json
+          git add kandidaten.json source_health.json source_state.json
 
           if git diff --cached --quiet; then
             echo "Geen wijziging in kandidaten.json"
