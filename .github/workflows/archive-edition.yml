@@ -40,9 +40,17 @@ jobs:
         with:
           python-version: "3.13"
 
+      - name: Bron- en redactiecontroles testen
+        if: ${{ !inputs.branding_only && !inputs.articles_only }}
+        run: python -m unittest discover -s tests
+
       - name: Categorieën in nieuws.json valideren
         if: ${{ !inputs.branding_only && !inputs.articles_only }}
         run: python build_editions.py --validate-current
+
+      - name: Redactioneel dossier en goedkeuring controleren
+        if: ${{ !inputs.branding_only && !inputs.articles_only }}
+        run: python editorial_check.py
 
       - name: Editie bewaren
         if: ${{ !inputs.branding_only && !inputs.articles_only }}
