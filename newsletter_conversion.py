@@ -29,7 +29,7 @@ def apply(phase=3):
         # Reuse the current menu, including its existing mobile toggle.
         s=re.sub(r'<a class="header-cta"[^>]*>.*?</a>', '<a class="header-cta" href="/nieuwsbrief/" data-newsletter-cta="nav">Nieuwsbrief</a>',s,flags=re.S)
         if home and 'data-newsletter-cta="nav"' not in s:
-            s=s.replace('<a id="nav-contact"','<a href="/nieuwsbrief/" data-newsletter-cta="nav">Nieuwsbrief</a><a id="nav-contact"',1)
+            s=s.replace('<a id="nav-contact"','<a class="header-cta" href="/nieuwsbrief/" data-newsletter-cta="nav">Nieuwsbrief</a><a id="nav-contact"',1)
         s=re.sub(r'<a\b[^>]*data-newsletter-cta="nav"[^>]*>', lambda m: re.sub(r'href="[^"]*"', 'href="/nieuwsbrief/"', m.group()), s)
         if home:
             m=re.search(r'<section class="homepage-top"[^>]*>.*?</section>',s,re.S)
