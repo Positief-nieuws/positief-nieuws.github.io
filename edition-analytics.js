@@ -44,6 +44,7 @@
     window.sa_event(name, Object.assign({}, context(), extra || {}));
   }
   function placement(form) {
+    if (form.dataset.newsletterPlacement) return form.dataset.newsletterPlacement;
     return form.closest('.article-growth') ? (pageType === 'special' ? 'special_end' : 'article_end') : (pageType === 'homepage' ? 'homepage' : pageType);
   }
   function newsletterForms() {
@@ -104,10 +105,17 @@
     }
     document.addEventListener('submit', function (event) {
       const form = event.target;
-      if (!newsletterForms().includes(form) || event.defaultPrevented) return;
+      if (!newsletterForms().includes(form) || event.defaultPrevented || !form.checkValidity()) return;
       refreshForms();
-      track('newsletter_submit', {placement: placement(form), signup_status: 'submitted'});
+      track('newsletter_form_submit', {placement: placement(form), signup_status: 'submitted_unconfirmed'});
     });
+    document.addEventListener('click', function (event) {
+      const cta = event.target.closest('[data-newsletter-cta], form[action*="buttondown.com"] button[type="submit"], form[action*="buttondown.com"] input[type="submit"]');
+      if (!cta) return;
+      const form = cta.closest('form');
+      track('newsletter_cta_click', {placement: cta.dataset.newsletterCta || placement(form)});
+    });
+    // No confirmed event: a public thank-you URL cannot prove Buttondown activation.
     setInterval(readingTick, 1000);
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start, {once:true}); else start();

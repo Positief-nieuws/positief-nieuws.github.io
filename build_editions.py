@@ -2196,6 +2196,8 @@ def refresh_site_design():
         text = re.sub(r'<link rel="stylesheet" href="/site-theme.css[^"]*">', '', text)
         text = text.replace('</head>', '<link rel="stylesheet" href="/site-theme.css?v=20261010b"></head>', 1)
         path.write_text(text, encoding="utf-8")
+    from newsletter_conversion import apply
+    apply()
     print("Gedeelde vormgeving toegepast op alle inhoudspagina’s.")
 
 def main():
