@@ -17,8 +17,15 @@ on:
     - cron: '7 8 * * 1,4'
       timezone: 'Europe/Amsterdam'
 
+concurrency:
+  group: positief-nieuws-candidates
+  cancel-in-progress: false
+
 permissions:
   contents: write
+
+env:
+  PYTHONDONTWRITEBYTECODE: "1"
 
 jobs:
   publish:
@@ -63,6 +70,8 @@ jobs:
                       already_fresh = (
                           generated.date() == today
                           and data.get("meta", {}).get("collection_complete") is True
+                          and data.get("meta", {}).get("generator") == "Positief nieuws kandidaten 0.5"
+                          and bool(data.get("all_candidates"))
                           and data.get("meta", {}).get("registry_sha256") == hashlib.sha256(Path("sources.json").read_bytes()).hexdigest()
                       )
               except Exception as exc:
