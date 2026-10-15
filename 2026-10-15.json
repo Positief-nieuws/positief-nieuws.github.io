@@ -1,0 +1,650 @@
+{
+  "schema_version": 1,
+  "edition_date": "2026-10-15",
+  "news_sha256": "8c7bffc42a118dfded297af4bb521722ce0617f3f4dfc2dcfc80ee5026bb8930",
+  "approved": true,
+  "approved_by": "Opdrachtgever: expliciet publicatieakkoord in deze chat op 2026-10-15, inclusief definitieve NL-volgorde en Pixabay-beelden.",
+  "variation_exception_reason": "",
+  "articles": {
+    "nl:korendijkse-slikken-meer-weidevogels": {
+      "source_id": "natuurmonumenten",
+      "organization_id": "natuurmonumenten",
+      "article_url": "https://www.natuurmonumenten.nl/natuurgebieden/korendijkse-slikken/nieuws/positieve-cijfers-voor-de-korendijkse-slikken",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-09",
+      "event_date": "2026-10-09",
+      "event_date_basis": "Nieuwe bekendmaking over broedseizoenen 2025–2026; geen verzonnen dag van uitvoering.",
+      "checked_on": "2026-10-15",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "korendijkse-slikken-meer-weidevogels",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.natuurmonumenten.nl/natuurgebieden/korendijkse-slikken/nieuws/positieve-cijfers-voor-de-korendijkse-slikken",
+        "claim": "Meer grutto’s en kieviten na herstel van natte graslanden",
+        "support": "In de Korendijkse Slikken stijgt het aantal vogelterritoria nadat het watersysteem is aangepakt. De grutto gaat van 8 naar 18 territoria, de kievit van 24 naar 68.",
+        "limitations": "Beheerder rapporteert eigen tellingen; lokale ontwikkeling en geen gecontroleerd causaal experiment.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Pixabay foto 4173271, gepubliceerd onder Pixabay Content License; opgehaald via officiële Pixabay API bij publicatie, met fotograaf en bronpagina in fotoregister en zichtbaar onderschrift. Illustratief beeld."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Editiearchief 26 augustus–12 oktober gecontroleerd op URL, titel en onderwerp. Geen eerder bericht over ditzelfde resultaat gevonden; het ongepubliceerde concept van 13 oktober telt niet als publicatie.",
+        "new_fact": ""
+      },
+      "editorial_rank_reason": "Sterkste opener: concreet, nabij en direct positief; aantoonbare terugkeer na beheer.",
+      "positive_result": true,
+      "positive_result_explanation": "Een zichtbaar resultaat van natuurbeheer, met duidelijke tellingen.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "nl:4mijl4you-samen-bewegen-groningen": {
+      "source_id": "golazo-4mijl4you",
+      "organization_id": "golazo",
+      "article_url": "https://4mijl4you.nl/lichtjes-muziek-en-duizenden-glimlachen-tijdens-de-15e-editie-van-de-menzis-4mijl4you/",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-10",
+      "event_date": "2026-10-10",
+      "event_date_basis": "Evenement en verslag op 10 oktober 2026, gecontroleerd naast eventinformatie en verslaggeving na afloop.",
+      "checked_on": "2026-10-15",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "4mijl4you-samen-bewegen-groningen",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://4mijl4you.nl/lichtjes-muziek-en-duizenden-glimlachen-tijdens-de-15e-editie-van-de-menzis-4mijl4you/",
+        "claim": "Duizenden deelnemers maken van de 4Mijl4You een feest voor iedereen",
+        "support": "Wandelend, rollend of op skates: bij de Groningse 4Mijl4You telt meedoen. Duizenden mensen legden de verlichte route af, aangemoedigd door muzikanten en publiek.",
+        "limitations": "Organisator beschrijft eigen evenement; geen gemeten effect op gezondheid of inclusie op lange termijn. Geen exact deelnemersaantal overgenomen uit een vooraankondiging.",
+        "verified": true,
+        "additional_urls": [
+          "https://4mijl4you.nl/event-info/",
+          "https://www.oogtv.nl/2026/10/weekend-4-mijl-geslaagd-verlopen-de-hoogmis-was-met-35-000-deelnemers-een-groot-succes/"
+        ]
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Pixabay foto 4631282, gepubliceerd onder Pixabay Content License; opgehaald via officiële Pixabay API bij publicatie, met fotograaf en bronpagina in fotoregister en zichtbaar onderschrift. Illustratief beeld."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Alle lokale archiefedities 26 augustus–12 oktober doorzocht op canonieke URL en onderwerp (4Mijl/Meindertsma/Berehale/Norfolk/Keswick/weersvoorspelling), plus handmatige titelcontrole. Geen hetzelfde nieuwsfeit gevonden.",
+        "new_fact": ""
+      },
+      "editorial_rank_reason": "Warm, menselijk en daadwerkelijk gebeurd; iedereen kan op eigen wijze deelnemen.",
+      "positive_result": true,
+      "positive_result_explanation": "Een groot beweegevenement geeft mensen met verschillende mogelijkheden samen een plek op hetzelfde parcours.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "nl:industrieproductie-augustus-2026": {
+      "source_id": "cbs",
+      "organization_id": "cbs",
+      "article_url": "https://www.cbs.nl/nl-nl/nieuws/2026/41/productie-industrie-in-augustus-12-procent-hoger-dan-jaar-eerder",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-09",
+      "event_date": "2026-08-31",
+      "event_date_basis": "Einddatum meetmaand augustus 2026.",
+      "checked_on": "2026-10-15",
+      "dates_checked": true,
+      "new_development": "Nieuwe CBS-publicatie van 9 oktober over augustus.",
+      "older_exception_reason": "",
+      "topic_id": "industrieproductie-augustus-2026",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.cbs.nl/nl-nl/nieuws/2026/41/productie-industrie-in-augustus-12-procent-hoger-dan-jaar-eerder",
+        "claim": "Nederlandse industrie produceert 12 procent meer dan een jaar eerder",
+        "support": "De industrieproductie lag in augustus 12 procent boven augustus 2025. Vooral de machine-industrie droeg bij; ook ten opzichte van juli was er groei.",
+        "limitations": "Maandcijfers, kalendercorrectie en jaarbasis; geen algemene claim over welzijn of alle bedrijfstakken.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Pixabay foto 2819136, gepubliceerd onder Pixabay Content License; opgehaald via officiële Pixabay API bij publicatie, met fotograaf en bronpagina in fotoregister en zichtbaar onderschrift. Illustratief beeld."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Editiearchief 26 augustus–12 oktober gecontroleerd op URL, titel en onderwerp. Geen eerder bericht over ditzelfde resultaat gevonden; het ongepubliceerde concept van 13 oktober telt niet als publicatie.",
+        "new_fact": ""
+      },
+      "editorial_rank_reason": "Solide cijfernieuws, maar minder direct voelbaar en ouder dan het nieuws van gisteren.",
+      "positive_result": true,
+      "positive_result_explanation": "De cijfers geven een concreet signaal van industriële activiteit.",
+      "scores": {
+        "positive_value": 1,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "int:berehale-900-gezinnen-water-aan-huis": {
+      "source_id": "unicef",
+      "organization_id": "unicef",
+      "article_url": "https://www.unicef.org/ethiopia/stories/new-rhythm-rawdas-day",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-10-13",
+      "event_date": "2026-10-13",
+      "event_date_basis": "Bekendmaking van het aantal gerealiseerde aansluitingen op 13 oktober; exacte individuele aansluitdatums ontbreken.",
+      "checked_on": "2026-10-15",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "berehale-900-gezinnen-water-aan-huis",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.unicef.org/ethiopia/stories/new-rhythm-rawdas-day",
+        "claim": "900 gezinnen in Ethiopië hebben nu water aan huis",
+        "support": "Een kraan bij huis maakt voor gezinnen in Berehale dagelijks verschil. Nieuwe aansluitingen besparen het lopen met zware watercontainers en geven vrouwen en meisjes tijd terug.",
+        "limitations": "UNICEF is betrokken uitvoerder; 900 aansluitingen zijn gerapporteerd bereik, geen universele dekking of onafhankelijke gezondheidsmeting.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Pixabay foto 8493302, gepubliceerd onder Pixabay Content License; opgehaald via officiële Pixabay API bij publicatie, met fotograaf en bronpagina in fotoregister en zichtbaar onderschrift. Illustratief beeld."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Alle lokale archiefedities 26 augustus–12 oktober doorzocht op canonieke URL en onderwerp (4Mijl/Meindertsma/Berehale/Norfolk/Keswick/weersvoorspelling), plus handmatige titelcontrole. Geen hetzelfde nieuwsfeit gevonden.",
+        "new_fact": ""
+      },
+      "editorial_rank_reason": "Beste wereldopener: een concreet bereikt resultaat dat het dagelijks leven van gezinnen merkbaar verandert.",
+      "positive_result": true,
+      "positive_result_explanation": "Water aan huis neemt een dagelijkse fysieke taak weg en maakt wassen, drinken en koken gemakkelijker.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "int:hongarije-beperkingen-lhbti-informatie": {
+      "source_id": "hatter-tarsasag",
+      "organization_id": "hatter-tarsasag",
+      "article_url": "https://hatter.hu/hirek/megcsinaltuk-visszavonta-az-orszaggyules-a-propagandatorvenyt",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-10-14",
+      "event_date": "2026-10-13",
+      "event_date_basis": "Parlementaire stemming 13 oktober, bevestigd door primaire betrokken organisatie en journalistieke bronnen.",
+      "checked_on": "2026-10-15",
+      "dates_checked": true,
+      "new_development": "Verklaring van 14 oktober bevestigt de parlementaire stemming van 13 oktober.",
+      "older_exception_reason": "",
+      "topic_id": "hongarije-beperkingen-lhbti-informatie",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://hatter.hu/hirek/megcsinaltuk-visszavonta-az-orszaggyules-a-propagandatorvenyt",
+        "claim": "Hongarije stemt voor schrappen van beperkingen op lhbti-informatie",
+        "support": "Het parlement heeft op 13 oktober centrale beperkingen uit de wet van 2021 geschrapt. De betrokken rechtenorganisatie Háttér verwelkomt de stap, maar wijst op resterende discriminatie.",
+        "limitations": "Belanghebbende rechtenorganisatie; stemming ook bevestigd door Tagesschau en AFP. Niet alle discriminerende regels vervallen.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Pixabay foto 4552833, gepubliceerd onder Pixabay Content License; opgehaald via officiële Pixabay API bij publicatie, met fotograaf en bronpagina in fotoregister en zichtbaar onderschrift. Illustratief beeld."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Editiearchief 26 augustus–12 oktober gecontroleerd op URL, titel en onderwerp. Geen eerder bericht over ditzelfde resultaat gevonden; het ongepubliceerde concept van 13 oktober telt niet als publicatie.",
+        "new_fact": ""
+      },
+      "editorial_rank_reason": "Grote maatschappelijke betekenis en zeer actueel; tweede vanwege juridisch resterende beperkingen.",
+      "positive_result": true,
+      "positive_result_explanation": "De verandering vergroot de ruimte om mensen en hun verhalen zichtbaar te maken.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "int:keswick-marsh-natuurherstel": {
+      "source_id": "environment-agency",
+      "organization_id": "environment-agency",
+      "article_url": "https://www.gov.uk/government/news/rare-chalk-stream-created-to-boost-wildlife-in-norfolk",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-10-13",
+      "event_date": "2026-10-13",
+      "event_date_basis": "Nieuwe resultatenbekendmaking 13 oktober; werkzaamheden duurden drie weken, precieze opleverdatum ontbreekt.",
+      "checked_on": "2026-10-15",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "keswick-marsh-natuurherstel",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.gov.uk/government/news/rare-chalk-stream-created-to-boost-wildlife-in-norfolk",
+        "claim": "Vogels en salamanders vinden hun weg naar hersteld Engels moeras",
+        "support": "Bij Norwich is ruim zeven hectare rivieroever en overstromingsvlakte heringericht. Nieuwe poelen en ondiepten geven water en dieren weer ruimte.",
+        "limitations": "Uitvoerdersrapportage; waarnemingen zijn geen bewijs van broedsucces of structurele populatiegroei. Exacte opleverdag niet genoemd.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Pixabay foto 5900178, gepubliceerd onder Pixabay Content License; opgehaald via officiële Pixabay API bij publicatie, met fotograaf en bronpagina in fotoregister en zichtbaar onderschrift. Illustratief beeld."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Alle lokale archiefedities 26 augustus–12 oktober doorzocht op canonieke URL en onderwerp (4Mijl/Meindertsma/Berehale/Norfolk/Keswick/weersvoorspelling), plus handmatige titelcontrole. Geen hetzelfde nieuwsfeit gevonden.",
+        "new_fact": ""
+      },
+      "editorial_rank_reason": "Afgerond natuurwerk met eerste dierenwaarnemingen; zichtbaar resultaat, geen financieringsplan.",
+      "positive_result": true,
+      "positive_result_explanation": "Nieuwe leefplekken zijn gerealiseerd en worden al door dieren gebruikt.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 1,
+        "originality": 2
+      }
+    },
+    "int:weer-twee-zes-weken-beter-voorspeld": {
+      "source_id": "mit-news",
+      "organization_id": "mit-news",
+      "article_url": "https://news.mit.edu/2026/researchers-improve-weather-forecasts-looking-two-six-weeks-out-1014",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-10-14",
+      "event_date": "2025-12-31",
+      "event_date_basis": "2025 is het referentiejaar van de realtimewedstrijd; einde referentiejaar vastgelegd.",
+      "checked_on": "2026-10-15",
+      "dates_checked": true,
+      "new_development": "Nieuwe publicatie 14 oktober bespreekt onderzoek en de realtimewedstrijd van 2025.",
+      "older_exception_reason": "",
+      "topic_id": "weer-twee-zes-weken-beter-voorspeld",
+      "doi": "10.1038/s41586-026-11126-x",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.nature.com/articles/s41586-026-11126-x",
+        "claim": "Nieuwe methode maakt weersverwachtingen voor twee tot zes weken beter",
+        "support": "Een internationaal onderzoeksteam laat een leermodel fouten in bestaande weersystemen corrigeren. In een echte voorspelwedstrijd presteerde de aanpak beter dan de andere deelnemende systemen.",
+        "limitations": "Probabilistische verwachtingen; prestatiewinst binnen onderzochte maatstaven, geen zekerheid over lokaal weer of bewezen maatschappelijke besparingen.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Pixabay foto 3488632, gepubliceerd onder Pixabay Content License; opgehaald via officiële Pixabay API bij publicatie, met fotograaf en bronpagina in fotoregister en zichtbaar onderschrift. Illustratief beeld."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Alle lokale archiefedities 26 augustus–12 oktober doorzocht op canonieke URL en onderwerp (4Mijl/Meindertsma/Berehale/Norfolk/Keswick/weersvoorspelling), plus handmatige titelcontrole. Geen hetzelfde nieuwsfeit gevonden.",
+        "new_fact": ""
+      },
+      "editorial_rank_reason": "Nieuw gepubliceerd, oorspronkelijk onderzoek met gerealiseerde prestaties in een voorspelwedstrijd.",
+      "positive_result": true,
+      "positive_result_explanation": "Betere verwachtingen kunnen landbouw, waterbeheer en energieplanning helpen voorbereiden.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 1,
+        "originality": 2
+      }
+    },
+    "int:nangade-viskweekbakken-overgedragen": {
+      "source_id": "undp",
+      "organization_id": "undp",
+      "article_url": "https://www.undp.org/mozambique/news/nangade-fish-farming-opens-path-economic-recovery",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-10-14",
+      "event_date": "2026-10-01",
+      "event_date_basis": "Overdrachtsdatum 1 oktober expliciet genoemd in de publicatie.",
+      "checked_on": "2026-10-15",
+      "dates_checked": true,
+      "new_development": "Nieuw verslag van 14 oktober over de overdracht op 1 oktober.",
+      "older_exception_reason": "",
+      "topic_id": "nangade-viskweekbakken-overgedragen",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.undp.org/mozambique/news/nangade-fish-farming-opens-path-economic-recovery",
+        "claim": "180 mensen in Mozambique krijgen middelen voor gezamenlijke viskweek",
+        "support": "Achttien lokale verenigingen in Nangade hebben viskweekbakken ontvangen. De overdracht geeft 180 deelnemers middelen om voedsel en inkomsten te produceren.",
+        "limitations": "Uitvoerdersverslag; productiemiddelen geleverd, economische effecten en verwacht groter bereik nog onbewezen.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Pixabay foto 6795464, gepubliceerd onder Pixabay Content License; opgehaald via officiële Pixabay API bij publicatie, met fotograaf en bronpagina in fotoregister en zichtbaar onderschrift. Illustratief beeld."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Editiearchief 26 augustus–12 oktober gecontroleerd op URL, titel en onderwerp. Geen eerder bericht over ditzelfde resultaat gevonden; het ongepubliceerde concept van 13 oktober telt niet als publicatie.",
+        "new_fact": ""
+      },
+      "editorial_rank_reason": "Nieuwe, concrete overdrachtsrapportage; toekomstig inkomen niet als resultaat meegeteld.",
+      "positive_result": true,
+      "positive_result_explanation": "Deelnemers beschikken over concrete productiemiddelen om hun bestaan weer op te bouwen.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 1,
+        "originality": 1
+      }
+    },
+    "int:wereldwijde-natuurgebieden-ruimer-geteld": {
+      "source_id": "nature",
+      "organization_id": "nature",
+      "article_url": "https://www.nature.com/articles/s41586-026-11157-4",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-10-14",
+      "event_date": "2022-12-31",
+      "event_date_basis": "Laatste dag van het onderzochte referentiejaar 2022.",
+      "checked_on": "2026-10-15",
+      "dates_checked": true,
+      "new_development": "Nieuwe studie op 14 oktober analyseert bestaande natuurbeschermingsgebieden in 2022.",
+      "older_exception_reason": "",
+      "topic_id": "wereldwijde-natuurgebieden-ruimer-geteld",
+      "doi": "10.1038/s41586-026-11157-4",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.nature.com/articles/s41586-026-11157-4",
+        "claim": "Wereld telt waarschijnlijk meer natuurgebieden dan de registers laten zien",
+        "support": "Een nieuwe studie schat dat 26,8 procent van het landoppervlak onder een vorm van natuurbehoud valt. Veel gebieden ontbreken in internationale registraties.",
+        "limitations": "Extrapolatie uit steekproef; niet elk mogelijk gebied formeel erkend. Oppervlakte is geen gemeten biodiversiteitsherstel.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Pixabay foto 3325080, gepubliceerd onder Pixabay Content License; opgehaald via officiële Pixabay API bij publicatie, met fotograaf en bronpagina in fotoregister en zichtbaar onderschrift. Illustratief beeld."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Editiearchief 26 augustus–12 oktober gecontroleerd op URL, titel en onderwerp. Geen eerder bericht over ditzelfde resultaat gevonden; het ongepubliceerde concept van 13 oktober telt niet als publicatie.",
+        "new_fact": ""
+      },
+      "editorial_rank_reason": "Zeer actueel oorspronkelijk onderzoek; lager omdat het vooral betere inventarisatie betreft.",
+      "positive_result": true,
+      "positive_result_explanation": "Bestaande inspanningen worden zichtbaarder en kunnen gerichter worden versterkt.",
+      "scores": {
+        "positive_value": 1,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 1,
+        "originality": 2
+      }
+    },
+    "headlines:knmi-lokale-waarschuwingen": {
+      "source_id": "knmi",
+      "organization_id": "knmi",
+      "article_url": "https://www.knmi.nl/over-het-knmi/nieuws/knmi-waarschuwt-vanaf-november-gerichter",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-14",
+      "event_date": "2026-10-14",
+      "event_date_basis": "Datum van de bekendmaking van de beschreven resultaten; de bron geeft geen precieze uitvoeringsperiode.",
+      "checked_on": "2026-10-15",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "knmi-lokale-waarschuwingen",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.knmi.nl/over-het-knmi/nieuws/knmi-waarschuwt-vanaf-november-gerichter",
+        "claim": "KNMI gaat vanaf november plaatselijker waarschuwen",
+        "support": "Weerwaarschuwingen krijgen flexibele gebieden in plaats van provinciegrenzen. Vanaf november moeten meldingen daardoor beter aansluiten op je locatie.",
+        "limitations": "Aangekondigde invoering vanaf november; nog niet als reeds ingevoerd beschreven.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used",
+        "image_evidence": ""
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Editiearchief 26 augustus–12 oktober gecontroleerd op URL, titel en onderwerp. Geen eerder bericht over ditzelfde resultaat gevonden; het ongepubliceerde concept van 13 oktober telt niet als publicatie.",
+        "new_fact": ""
+      },
+      "editorial_rank_reason": "Nieuwste en praktisch meest bruikbare headline."
+    },
+    "headlines:13-wekenecho-afbouw-2028": {
+      "source_id": "rivm",
+      "organization_id": "rivm",
+      "article_url": "https://www.rivm.nl/nieuws/besluit-minister-vws-13-wekenecho-stopt",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-13",
+      "event_date": "2026-10-12",
+      "event_date_basis": "Datum ministeriële Kamerbrief 12 oktober.",
+      "checked_on": "2026-10-15",
+      "dates_checked": true,
+      "new_development": "RIVM-toelichting van 13 oktober op Kamerbrief van 12 oktober.",
+      "older_exception_reason": "",
+      "topic_id": "13-wekenecho-afbouw-2028",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.rivm.nl/nieuws/besluit-minister-vws-13-wekenecho-stopt",
+        "claim": "13 wekenecho wordt geen vast onderdeel van prenatale screening",
+        "support": "De minister heeft besloten de echo niet definitief in te voeren. Het aanbod blijft tot 1 januari 2028 beschikbaar; er is dus geen onmiddellijke stop.",
+        "limitations": "Ministerieel besluit; aanbod blijft tot 1 januari 2028 beschikbaar.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used",
+        "image_evidence": ""
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Editiearchief 26 augustus–12 oktober gecontroleerd op URL, titel en onderwerp. Geen eerder bericht over ditzelfde resultaat gevonden; het ongepubliceerde concept van 13 oktober telt niet als publicatie.",
+        "new_fact": ""
+      },
+      "editorial_rank_reason": "Actueel besluit met directe betekenis voor de doelgroep."
+    },
+    "headlines:inflatie-september-definitief": {
+      "source_id": "cbs",
+      "organization_id": "cbs",
+      "article_url": "https://www.cbs.nl/nl-nl/nieuws/2026/42/inflatie-stijgt-naar-3-4-procent-in-september",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-13",
+      "event_date": "2026-09-30",
+      "event_date_basis": "Einde meetmaand september 2026.",
+      "checked_on": "2026-10-15",
+      "dates_checked": true,
+      "new_development": "Definitieve publicatie 13 oktober bevestigt snelle raming 2 oktober.",
+      "older_exception_reason": "",
+      "topic_id": "inflatie-september-definitief",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.cbs.nl/nl-nl/nieuws/2026/42/inflatie-stijgt-naar-3-4-procent-in-september",
+        "claim": "Inflatie in september bevestigd op 3,4 procent",
+        "support": "Consumentenprijzen lagen in september 3,4 procent hoger dan een jaar eerder, tegen 3,3 procent in augustus. De definitieve cijfers bevestigen de eerdere snelle raming.",
+        "limitations": "Gemiddelde prijsontwikkeling, geen persoonlijke inflatiemeting.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used",
+        "image_evidence": ""
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Editiearchief 26 augustus–12 oktober gecontroleerd op URL, titel en onderwerp. Geen eerder bericht over ditzelfde resultaat gevonden; het ongepubliceerde concept van 13 oktober telt niet als publicatie.",
+        "new_fact": ""
+      },
+      "editorial_rank_reason": "Brede relevantie; bevestigt al eerder geraamde uitkomst."
+    },
+    "nl:vleesverbruik-nederland-daalt-2025": {
+      "source_id": "wakker-dier",
+      "organization_id": "wakker-dier",
+      "article_url": "https://www.wakkerdier.nl/nieuws/nieuw-onderzoek-wur-nederlanders-eten-minder-vlees/",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-14",
+      "event_date": "2025-12-31",
+      "event_date_basis": "Einde meetjaar2025; de bekendmaking van14oktober is apart vastgelegd.",
+      "checked_on": "2026-10-15",
+      "dates_checked": true,
+      "new_development": "Wakker Dier presenteert de cijfers op14oktober. De nota is intern gedateerd september2026; de eerste openbare beschikbaarheidsdag is niet vastgesteld. Actuele nieuwsaanleiding is de gedateerde bekendmaking, niet een verzonnen nieuwe onderzoeksdatum.",
+      "older_exception_reason": "",
+      "topic_id": "vleesverbruik-nederland-daalt-2025",
+      "doi": "10.18174/724260",
+      "report_id": "Wageningen Social & Economic Research Nota 2026-084",
+      "evidence": {
+        "primary_url": "https://wakkerdier.nl/app/uploads/2026/10/12131409/2026-084_Vleesnota.pdf",
+        "claim": "Nederlanders gebruiken opnieuw minder vlees",
+        "support": "WUR-nota2026-084:67,3 kg in2025; herziene2024=68,8 kg; verschil1,5 kg. Rekensom1,5/68,8=2,18%. Methode hoofdstuk2 en correctie hoofdstuk3 gelezen.",
+        "limitations": "Wakker Dier financierde het onderzoek. Voorzieningsbalans benadert verbruik; geen directe bordmeting. Historische correctie niet verwarren met nieuwe gedragsverandering. Geen gemeten klimaat- of gezondheidswinst geclaimd.",
+        "verified": true,
+        "additional_urls": []
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Pixabay foto 3860902, gepubliceerd onder Pixabay Content License; opgehaald via officiële Pixabay API bij publicatie, met fotograaf en bronpagina in fotoregister en zichtbaar onderschrift. Illustratief beeld."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Alle lokale archiefedities 26 augustus–12 oktober gecontroleerd op bron-URL en onderwerpen vleesverbruik/vleesconsumptie, Verhoeff/Lehmer, Dress for Success/kleding zonder kassa. Geen hetzelfde nieuwsfeit gevonden.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Een beweging naar minder vlees wordt zichtbaar in landelijke verbruikscijfers, in plaats van alleen in goede voornemens.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 1
+      },
+      "editorial_rank_reason": "Concrete landelijke trend, actueel gepresenteerd en steviger onderbouwd dan een losse prijs of sportuitslag."
+    },
+    "nl:verhoeff-bewijs-lehmer-vermoeden": {
+      "source_id": "tu-eindhoven",
+      "organization_id": "tu-eindhoven",
+      "article_url": "https://www.tue.nl/nieuws-en-evenementen/nieuwsoverzicht/08-10-2026-deze-wiskundige-werkte-jarenlang-aan-een-probleem-en-zag-ai-uitgroeien-van-assistent-tot-grootmeester",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-08",
+      "event_date": "2026-10-01",
+      "event_date_basis": "Oorspronkelijke arXiv-indiening1oktober2026; nieuwsbericht8oktober2026.",
+      "checked_on": "2026-10-15",
+      "dates_checked": true,
+      "new_development": "TU/e licht op8oktober de nieuwe preprint van1oktober en de AI-ondersteunde verkorting toe.",
+      "older_exception_reason": "",
+      "topic_id": "verhoeff-bewijs-lehmer-vermoeden",
+      "doi": "10.48550/arXiv.2610.01240",
+      "report_id": "arXiv:2610.01240",
+      "evidence": {
+        "primary_url": "https://arxiv.org/abs/2610.01240",
+        "claim": "Eindhovense wiskundige vindt met AI een bewijs voor een raadsel uit 1965",
+        "support": "Origineel manuscript2610.01240, ingestuurd1oktober,29pagina’s; abstract beschrijft bewijs en Lean4. TU/e-publicatie8oktober bevestigt onderzoeker en AI-rol.",
+        "limitations": "Preprint, nog geen peerreview. Auteur claimt formele Lean-uitwerking; de volledige code is in deze redactionele controle niet opnieuw gecompileerd. Geen algemene claim dat AI zelfstandig alle wiskunde oplost.",
+        "verified": true,
+        "additional_urls": []
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Pixabay foto 1547018, gepubliceerd onder Pixabay Content License; opgehaald via officiële Pixabay API bij publicatie, met fotograaf en bronpagina in fotoregister en zichtbaar onderschrift. Illustratief beeld."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Alle lokale archiefedities 26 augustus–12 oktober gecontroleerd op bron-URL en onderwerpen vleesverbruik/vleesconsumptie, Verhoeff/Lehmer, Dress for Success/kleding zonder kassa. Geen hetzelfde nieuwsfeit gevonden.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Een concreet nieuw wiskundig resultaat laat zien hoe onderzoekers en controleerbare software samen verder kunnen komen.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 2
+      },
+      "editorial_rank_reason": "Nieuw inzicht en een tastbaar bereikt onderzoeksresultaat; minder direct dagelijks effect dan de eerste drie verhalen."
+    },
+    "nl:dress-for-success-rotterdam-25-jaar": {
+      "source_id": "rijnmond",
+      "organization_id": "rijnmond",
+      "article_url": "https://www.rijnmond.nl/nieuws/2263829/deze-kledingwinkel-zonder-kassa-zorgt-al-25-jaar-dat-iedereen-weer-goed-voor-de-dag-komt",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-11",
+      "event_date": "2026-10-09",
+      "event_date_basis": "Jubileumbijeenkomst9oktober2026; expliciet genoemd door Rijnmond, bevestigd door organisator.",
+      "checked_on": "2026-10-15",
+      "dates_checked": true,
+      "new_development": "Jubileum op9oktober en nieuwe reportage11oktober over daadwerkelijk geleverde kledinghulp. Niet als nieuw gestarte dienstverlening gebracht.",
+      "older_exception_reason": "",
+      "topic_id": "dress-for-success-rotterdam-25-jaar",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.dressforsuccess.nl/rotterdam/25-jarig-jubileum",
+        "claim": "In deze Rotterdamse kledingwinkel krijgt zelfvertrouwen geen prijskaartje",
+        "support": "Rijnmond-reportage11oktober met eigen winkelbezoek en klanten; noemt jubileum9oktober en duizenden geholpen volgens voorzitter. Organisatorpagina bevestigt jubileum en werkwijze.",
+        "limitations": "Jubileum van bestaand initiatief, geen nieuwe winkelopening. Aantal geholpen mensen is een uitspraak van de organisatie, geen onafhankelijke telling. Ervaringen van klanten bewijzen geen causaal werkgelegenheidseffect.",
+        "verified": true,
+        "additional_urls": []
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Pixabay foto 1850082, gepubliceerd onder Pixabay Content License; opgehaald via officiële Pixabay API bij publicatie, met fotograaf en bronpagina in fotoregister en zichtbaar onderschrift. Illustratief beeld."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Alle lokale archiefedities 26 augustus–12 oktober gecontroleerd op bron-URL en onderwerpen vleesverbruik/vleesconsumptie, Verhoeff/Lehmer, Dress for Success/kleding zonder kassa. Geen hetzelfde nieuwsfeit gevonden.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Een praktische drempel om mee te doen verdwijnt, met aandacht voor wat iemand nodig heeft en graag wil.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      },
+      "editorial_rank_reason": "Warm en concreet menselijk verhaal; actuele aanleiding is een jubileum, daarom lager dan de nieuwe onderzoeksresultaten."
+    }
+  }
+}

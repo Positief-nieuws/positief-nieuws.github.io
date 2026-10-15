@@ -4025,6 +4025,84 @@
         "final_url": "https://goodimpact.eu/"
       },
       "enabled": true
+    },
+    {
+      "source_id": "hatter-tarsasag",
+      "organization_id": "hatter-tarsasag",
+      "name": "Háttér Társaság",
+      "website": "https://hatter.hu/",
+      "category": "A",
+      "topics": [
+        "Mens"
+      ],
+      "geography": "int",
+      "source_type": "civil_society",
+      "reliability_notes": "Betrokken belangenorganisatie; verklaring gecombineerd met Tagesschau en AFP.",
+      "priority": "P2",
+      "check_frequency": "manual",
+      "limitations": "Belanghebbende bron; geen zelfstandige volledige juridische analyse.",
+      "register_ids": [],
+      "channels": [],
+      "enabled": true
+    },
+    {
+      "source_id": "golazo-4mijl4you",
+      "organization_id": "golazo",
+      "name": "Menzis 4Mijl4You / Golazo",
+      "website": "https://4mijl4you.nl/",
+      "category": "A",
+      "topics": [
+        "Mens",
+        "Natuur & klimaat"
+      ],
+      "geography": "nl",
+      "source_type": "original_report",
+      "reliability_notes": "Direct verslag over eigen evenement of gerealiseerde werkzaamheden; belanghebbende bron.",
+      "priority": "P2",
+      "check_frequency": "manual",
+      "limitations": "Geen onafhankelijke impactmeting; handmatige bewijsbron.",
+      "register_ids": [],
+      "channels": [],
+      "enabled": true
+    },
+    {
+      "source_id": "environment-agency",
+      "organization_id": "environment-agency",
+      "name": "Environment Agency",
+      "website": "https://www.gov.uk/government/organisations/environment-agency",
+      "category": "A",
+      "topics": [
+        "Mens",
+        "Natuur & klimaat"
+      ],
+      "geography": "int",
+      "source_type": "original_report",
+      "reliability_notes": "Direct verslag over eigen evenement of gerealiseerde werkzaamheden; belanghebbende bron.",
+      "priority": "P2",
+      "check_frequency": "manual",
+      "limitations": "Geen onafhankelijke impactmeting; handmatige bewijsbron.",
+      "register_ids": [],
+      "channels": [],
+      "enabled": true
+    },
+    {
+      "source_id": "wakker-dier",
+      "organization_id": "wakker-dier",
+      "name": "Wakker Dier / WUR",
+      "website": "https://www.wakkerdier.nl/",
+      "category": "A",
+      "topics": [
+        "Natuur & klimaat"
+      ],
+      "geography": "nl",
+      "source_type": "commissioned_research",
+      "reliability_notes": "Opdrachtgever en financier van WUR-onderzoek. Oorspronkelijke WUR-nota gelezen inclusief methode en correctie.",
+      "priority": "P2",
+      "check_frequency": "manual",
+      "limitations": "Belanghebbende opdrachtgever; meetmethode en correcties expliciet behandelen.",
+      "register_ids": [],
+      "channels": [],
+      "enabled": true
     }
   ]
 }
