@@ -108,7 +108,8 @@ class WorkflowTests(unittest.TestCase):
         active=registry.active_channels(self.register)
         self.assertFalse(any(s['source_category']=='C' for s in active))
         query=news.google_site_feed('example.de','int','de')
-        self.assertIn('ceid=DE:de',query);self.assertIn('Fortschritt',query)
+        self.assertIn('ceid=DE:de',query);self.assertNotIn('Fortschritt',query)
+        self.assertIn('Fortschritt',news.google_site_feed('example.de','int','de','positive'))
 
     def test_cache_and_failed_channel_retry(self):
         now=datetime(2026,10,13,12,tzinfo=timezone.utc)
