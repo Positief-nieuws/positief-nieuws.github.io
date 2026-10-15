@@ -1927,6 +1927,18 @@ def homepage_cards_html(stories, edition_date, section):
     return '<div class="' + ("shorts" if section == "headlines" else "story-grid") + '">' + ''.join(cards) + '</div>'
 
 
+def apply_homepage_brand_heading(markup):
+    """Use the unchanged wordmark as the homepage heading, without a duplicate hero title."""
+    if '<h1 class="brand-heading">' not in markup:
+        markup, count = re.subn(r'<a class="brand"[^>]*>.*?</a>', lambda m: '<h1 class="brand-heading">' + m.group(0) + '</h1>', markup, count=1, flags=re.S)
+        if count != 1:
+            raise ValueError("Homepage-woordmerk ontbreekt.")
+    markup = re.sub(r'(<section class="hero-intro">(?:(?!</section>).)*?)<h1\b[^>]*>.*?</h1>', r'\1', markup, count=1, flags=re.S)
+    style = '<style id="homepage-brand-heading">\n/* Homepage: the existing wordmark is the primary heading. */\n.site-header .brand-heading{display:flex;align-items:center;margin:0;padding:0;line-height:1;flex-shrink:0}\n.site-header .brand-heading .brand{margin:0}\n#today-view .hero-intro{padding-top:30px;padding-bottom:27px}\n#today-view .hero-intro .hero-date{margin:0 0 12px;color:#6c7e74;font-size:.7rem;letter-spacing:.1em;font-weight:700}\n#today-view .hero-intro .leadtext{margin:0 0 12px;max-width:750px}\n@media(max-width:640px){#today-view .hero-intro{padding-top:25px;padding-bottom:23px}}\n</style>'
+    markup = re.sub(r'<style id="homepage-brand-heading">.*?</style>', '', markup, flags=re.S)
+    return markup.replace('</head>', style + '</head>', 1)
+
+
 def update_homepage(data):
     homepage = Path("index.html")
     if not homepage.exists():
@@ -1967,6 +1979,7 @@ def update_homepage(data):
     markup, count = re.subn(r'<!-- homepage-date:start -->.*?<!-- homepage-date:end -->', lambda _: date_html, markup, flags=re.S)
     if count != 1:
         raise ValueError("Homepage-datummarker ontbreekt of is dubbel.")
+    markup = apply_homepage_brand_heading(markup)
     homepage.write_text(markup, encoding="utf-8")
     print(f"Homepage bijgewerkt: editie {edition_date}, {len(story_list)} direct leesbare verhalen.")
 
