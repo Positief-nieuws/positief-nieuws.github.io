@@ -263,7 +263,7 @@
 
 /* special-growth:end */
 </style>
-<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64"><link rel="icon" type="image/png" href="/favicon.png" sizes="96x96"><link rel="apple-touch-icon" href="/sun-apple-touch-icon.png" sizes="180x180"><link rel="manifest" href="/manifest.json?v=5"><meta property="og:site_name" content="Positief nieuws"><meta name="application-name" content="Positief nieuws"><!-- edition-analytics:start --><script src="/edition-analytics.js?v=1" data-page-type="special" data-edition=""></script><!-- edition-analytics:end --><link rel="stylesheet" href="/site-theme.css?v=20261010b"></head>
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64"><link rel="icon" type="image/png" href="/favicon.png" sizes="96x96"><link rel="apple-touch-icon" href="/sun-apple-touch-icon.png" sizes="180x180"><link rel="manifest" href="/manifest.json?v=5"><meta property="og:site_name" content="Positief nieuws"><meta name="application-name" content="Positief nieuws"><!-- edition-analytics:start --><script src="/edition-analytics.js?v=1" data-page-type="special" data-edition=""></script><!-- edition-analytics:end --><link rel="stylesheet" href="/site-theme.css?v=20261010b"><link rel="stylesheet" href="/newsletter-conversion.css?v=1"></head>
 <body>
   <header class="site-header">
   <div class="header-shell header-row">
@@ -288,7 +288,7 @@
         <a class="nav-link" href="/onderwerpen/">Onderwerpen</a>
         <a class="nav-link" href="/over/">Over</a>
         <a href="/contact/" onclick="if(window.sa_event)window.sa_event('contact_click')">Contact</a>
-        <a class="header-cta" href="/#nieuwsbrief"><svg class="header-cta-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 6.5h17a1 1 0 0 1 1 1v9a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2v-9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.7"></path><path d="m4.5 8 7.5 6 7.5-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>In je inbox</span></a>
+        <a class="header-cta" href="/#nieuwsbrief-boven" data-newsletter-cta="nav">Nieuwsbrief</a>
       </div>
     </nav>
   </div>
@@ -346,7 +346,7 @@
 <p>In 2015 bestond de werkzame beroepsbevolking uit ongeveer 8,46 miljoen mensen. Tien jaar later waren dat er 9,83 miljoen.<a class="source-ref" href="#bron-4">[4]</a> Dat zijn bijna 1,4 miljoen extra werkenden. Een deel daarvan komt natuurlijk doordat Nederland meer inwoners heeft. Daarom is het interessanter om ook naar het aandeel werkenden te kijken. De bruto arbeidsparticipatie van 15- tot 75-jarigen steeg van 72,4 procent in 2015 naar 76,2 procent in 2025.<a class="source-ref" href="#bron-5">[5]</a></p>
 <p>Het aantal werklozen laat eveneens een groot verschil zien. In 2015 waren dat er volgens dezelfde CBS-reeks 724.000. In 2025 waren het er 396.000.<a class="source-ref" href="#bron-4">[4]</a> De arbeidsmarkt kent ondertussen een nieuw probleem: personeelstekorten. En niet iedere baan biedt dezelfde zekerheid, hetzelfde inkomen of dezelfde hoeveelheid uren.</p>
 <p>Maar dat verandert niets aan de onderliggende ontwikkeling. Een groter deel van de Nederlandse bevolking doet betaald werk dan tien jaar geleden.</p>
-<h2>5. Vooral oudere Nederlanders zijn veel vaker aan het werk</h2>
+<!-- newsletter:special_inline:start --><p class="pn-newsletter-link">Ook het andere goede nieuws volgen? <a href="#nieuwsbrief" data-newsletter-cta="special_inline">Ontvang elke maandag en donderdag onze gratis nieuwsbrief.</a></p><!-- newsletter:special_inline:end --><h2>5. Vooral oudere Nederlanders zijn veel vaker aan het werk</h2>
 <p>Achter die groei van de arbeidsparticipatie zit een ontwikkeling die nog opvallender is. Neem vrouwen van 55 tot 65 jaar. In 2015 had 52,5 procent van hen betaald werk. In 2025 was dat 69,8 procent.<a class="source-ref" href="#bron-6">[6]</a> Bij mannen van dezelfde leeftijd steeg het aandeel van 70,1 naar 81,9 procent.<a class="source-ref" href="#bron-6">[6]</a> Ook na het 65e levensjaar wordt vaker gewerkt. Bij vrouwen van 65 tot 75 jaar steeg de nettoarbeidsparticipatie tussen 2015 en 2025 van 5,7 naar 15,4 procent. Bij mannen ging die van 13,8 naar 26,4 procent.<a class="source-ref" href="#bron-6">[6]</a></p>
 <p>Dat heeft meerdere oorzaken, waaronder de verhoging van de AOW-leeftijd en veranderingen in de arbeidsmarkt. Je kunt over die oorzaken verschillend denken. Het cijfer zelf is helder: oudere Nederlanders zijn veel vaker economisch actief dan tien jaar geleden.</p>
 <figure class="article-figure">
@@ -599,7 +599,7 @@
     if (window.sa_event) window.sa_event(name, Object.assign({}, metadata, extra || {}));
   }
   form.addEventListener('submit', function () {
-    track('nieuwsbrief_inschrijving');
+    // Newsletter submission is measured by edition-analytics.js.
   });
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(function (entries) {

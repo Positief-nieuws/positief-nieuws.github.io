@@ -89,7 +89,7 @@
 .article-growth :focus-visible{outline:3px solid #d6a13a;outline-offset:4px}.article-newsletter :focus-visible{outline-color:#fff}
 @media(max-width:640px){.article-newsletter{padding:25px 22px}.article-share{padding:23px 22px}.growth-form-row{flex-direction:column}.growth-form-row button{width:100%}.article-share-buttons{gap:8px}.article-share-buttons a,.article-share-buttons button{padding:9px 12px}}
 </style>
-<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64"><link rel="icon" type="image/png" href="/favicon.png" sizes="96x96"><link rel="apple-touch-icon" href="/sun-apple-touch-icon.png" sizes="180x180"><link rel="manifest" href="/manifest.json?v=5"><meta property="og:site_name" content="Positief nieuws"><meta name="application-name" content="Positief nieuws"><!-- edition-analytics:start --><script src="/edition-analytics.js?v=1" data-page-type="article" data-edition="2026-10-08"></script><!-- edition-analytics:end --><link rel="stylesheet" href="/site-theme.css?v=20261010b"></head>
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64"><link rel="icon" type="image/png" href="/favicon.png" sizes="96x96"><link rel="apple-touch-icon" href="/sun-apple-touch-icon.png" sizes="180x180"><link rel="manifest" href="/manifest.json?v=5"><meta property="og:site_name" content="Positief nieuws"><meta name="application-name" content="Positief nieuws"><!-- edition-analytics:start --><script src="/edition-analytics.js?v=1" data-page-type="article" data-edition="2026-10-08"></script><!-- edition-analytics:end --><link rel="stylesheet" href="/site-theme.css?v=20261010b"><link rel="stylesheet" href="/newsletter-conversion.css?v=1"></head>
 <body>
   <header class="site-header">
   <div class="header-shell header-row">
@@ -114,7 +114,7 @@
         <a class="nav-link" href="/onderwerpen/">Onderwerpen</a>
         <a class="nav-link" href="/over/">Over</a>
         <a href="/contact/" onclick="if(window.sa_event)window.sa_event('contact_click')">Contact</a>
-        <a class="header-cta" href="/#nieuwsbrief"><svg class="header-cta-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 6.5h17a1 1 0 0 1 1 1v9a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2v-9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.7"></path><path d="m4.5 8 7.5 6 7.5-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>In je inbox</span></a>
+        <a class="header-cta" href="/#nieuwsbrief-boven" data-newsletter-cta="nav">Nieuwsbrief</a>
       </div>
     </nav>
   </div>
@@ -161,7 +161,7 @@
       <p class="article-kicker">Energie &amp; innovatie</p>
       <h1>Zonnepompen brengen water naar gezinnen in het Amazonewoud<b>.</b></h1>
       <p class="article-deck">In het Braziliaanse Nova Sociedade gebruiken 36 gezinnen een watersysteem op zonne-energie. Het helpt de afhankelijkheid van diesel te verminderen.</p>
-      <div class="article-meta"><span>donderdag 8 oktober 2026</span><span>Bron: Associated Press</span></div>
+      <div class="article-meta"><span>donderdag 8 oktober 2026</span><span>Bron: Associated Press</span></div><!-- newsletter:article_intro:start --><p class="pn-newsletter-link">Meer van dit soort nieuws? <a href="#nieuwsbrief" data-newsletter-cta="article_intro">Ontvang onze gratis nieuwsbrief.</a></p><!-- newsletter:article_intro:end -->
       <figure class="article-figure">
         <img src="/images/artikelen/2026-10-08/zonnepompen-amazone-water.jpg" alt="Illustratief beeld bij Zonnepompen brengen water naar gezinnen in het Amazonewoud" loading="eager" fetchpriority="high">
         <figcaption>Illustratief beeld · Foto: mrganso via <a href="https://pixabay.com/photos/photovoltaic-system-solar-2742302/" target="_blank" rel="noopener noreferrer">Pixabay</a>.</figcaption>
@@ -335,7 +335,7 @@
     if (window.sa_event) window.sa_event(name, Object.assign({}, metadata, extra || {}));
   }
   form.addEventListener('submit', function () {
-    track('nieuwsbrief_inschrijving');
+    // Newsletter submission is measured by edition-analytics.js.
   });
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(function (entries) {
