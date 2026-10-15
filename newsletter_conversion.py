@@ -12,6 +12,11 @@ def apply(phase=3):
         if '.git' in path.parts: continue
         s=path.read_text()
         if 'class="site-header"' not in s: continue
+        # Buttondown may append a second '?' to a redirect containing a query.
+        # Remove the email before any analytics script or page router runs.
+        s=re.sub(r'<script id="newsletter-redirect-cleanup">.*?</script>', '', s, flags=re.S)
+        cleanup = """<script id="newsletter-redirect-cleanup">(function(){var q=location.search.replace('?email_address=','&email_address=');var p=new URLSearchParams(q);if(p.has('email_address')){p.delete('email_address');history.replaceState(null,'',location.pathname+(p.toString()?'?'+p.toString():'')+location.hash);}})();</script>"""
+        s=s.replace('<head>', '<head>'+cleanup, 1)
         home=path==Path('index.html')
         page='homepage' if home else 'article' if path.parts[0]=='artikelen' else 'special' if path.parts[0]=='specials' else 'topic' if 'topic-archive' in s else 'other'
         s=re.sub(r'<!-- newsletter:.*?:start -->.*?<!-- newsletter:.*?:end -->','',s,flags=re.S)
