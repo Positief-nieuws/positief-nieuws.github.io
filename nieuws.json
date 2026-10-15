@@ -1,238 +1,354 @@
 {
   "meta": {
-    "edition_date": "2026-10-12",
-    "email_preheader": "Groei van de goederenexport, honderden vlinderrupsen en de eerste Achterhoek Pride Walk."
+    "edition_date": "2026-10-15",
+    "email_preheader": "Meer grutto’s, groei in de industrie en minder vlees op het Nederlandse bord.",
+    "editorial_order": [
+      {
+        "section": "nl",
+        "article_slug": "korendijkse-slikken-meer-weidevogels",
+        "rank": 1
+      },
+      {
+        "section": "nl",
+        "article_slug": "industrieproductie-augustus-2026",
+        "rank": 2
+      },
+      {
+        "section": "nl",
+        "article_slug": "vleesverbruik-nederland-daalt-2025",
+        "rank": 3
+      },
+      {
+        "section": "nl",
+        "article_slug": "verhoeff-bewijs-lehmer-vermoeden",
+        "rank": 4
+      },
+      {
+        "section": "nl",
+        "article_slug": "4mijl4you-samen-bewegen-groningen",
+        "rank": 5
+      },
+      {
+        "section": "nl",
+        "article_slug": "dress-for-success-rotterdam-25-jaar",
+        "rank": 6
+      },
+      {
+        "section": "int",
+        "article_slug": "berehale-900-gezinnen-water-aan-huis",
+        "rank": 7
+      },
+      {
+        "section": "int",
+        "article_slug": "hongarije-beperkingen-lhbti-informatie",
+        "rank": 8
+      },
+      {
+        "section": "int",
+        "article_slug": "keswick-marsh-natuurherstel",
+        "rank": 9
+      },
+      {
+        "section": "int",
+        "article_slug": "weer-twee-zes-weken-beter-voorspeld",
+        "rank": 10
+      },
+      {
+        "section": "int",
+        "article_slug": "nangade-viskweekbakken-overgedragen",
+        "rank": 11
+      },
+      {
+        "section": "int",
+        "article_slug": "wereldwijde-natuurgebieden-ruimer-geteld",
+        "rank": 12
+      }
+    ],
+    "ordering": "Nederland eerst; volgorde goedgekeurd door opdrachtgever op 15 oktober 2026."
   },
   "nl": [
     {
-      "category": "Economie",
-      "title": "Nederlandse goederenexport groeit in augustus met bijna vijf procent",
-      "teaser": "Nederlandse bedrijven voerden meer goederen uit dan een jaar eerder. Vooral machines en transportmiddelen droegen bij aan de groei, meldt het CBS.",
+      "category": "Natuur & klimaat",
+      "title": "Meer grutto’s en kieviten na herstel van natte graslanden",
+      "teaser": "In de Korendijkse Slikken stijgt het aantal vogelterritoria nadat het watersysteem is aangepakt. De grutto gaat van 8 naar 18 territoria, de kievit van 24 naar 68.",
       "article_body": [
-        "De Nederlandse goederenexport is in augustus met bijna vijf procent gegroeid ten opzichte van dezelfde maand een jaar eerder. Volgens het ANP, op basis van nieuwe CBS-cijfers, werden vooral meer machines en transportmiddelen uitgevoerd.",
-        "Ook in juli was er groei, toen van 2,3 procent. De invoer van goederen steeg in augustus met twee procent, met name door machines en elektrotechnische apparaten.",
-        "Een stijging van de export is een positief signaal voor bedrijvigheid, maar zegt niet dat elk bedrijf of huishouden erop vooruitgaat. Het gaat bovendien om maandcijfers: een bredere economische trend vraagt een langere reeks."
+        "Waar graslanden jarenlang te droog waren, vinden weidevogels weer geschikte plekken. Natuurmonumenten meldt dat het vernieuwde watersysteem het gebied in de broedseizoenen van 2025 en 2026 natter hield.",
+        "Tussen 2024 en 2026 nam het aantal gruttoterritoria toe van 8 naar 18 en het aantal kievitterritoria van 24 naar 68. Dat zijn territoria, geen aantallen individuele vogels. De lokale tellingen zijn hoopgevend; ze bewijzen geen landelijk herstel."
       ],
-      "why_it_matters": "De cijfers laten zien dat er vraag is naar goederen die Nederland uitvoert. Dat biedt perspectief voor bedrijven, zonder dat een algemeen welvaartsoordeel uit één maand volgt.",
-      "source": "ANP / CBS",
-      "url": "https://www.welingelichtekringen.nl/economie/nederlandse-goederenexport-groeit-met-bijna-5-procent-in-augustus",
-      "article_slug": "goederenexport-augustus-groeit",
-      "image_query": "id:6631117",
-      "image_alt": "Containerschip op zee; illustratief beeld",
-      "email_title": "Nederlandse goederenexport groeit in augustus met bijna vijf procent"
+      "why_it_matters": "Een zichtbaar resultaat van natuurbeheer, met duidelijke tellingen.",
+      "source": "Natuurmonumenten",
+      "source_id": "natuurmonumenten",
+      "url": "https://www.natuurmonumenten.nl/natuurgebieden/korendijkse-slikken/nieuws/positieve-cijfers-voor-de-korendijkse-slikken",
+      "article_slug": "korendijkse-slikken-meer-weidevogels",
+      "published": "2026-10-09",
+      "email_title": "Meer grutto’s en kieviten na herstel van natte graslanden",
+      "editorial_rank": 1,
+      "regional_rank": 1,
+      "image_query": "id:4173271",
+      "image_alt": "Een grutto in de natuur; illustratief beeld"
+    },
+    {
+      "category": "Economie",
+      "title": "Nederlandse industrie produceert 12 procent meer dan een jaar eerder",
+      "teaser": "De industrieproductie lag in augustus 12 procent boven augustus 2025. Vooral de machine-industrie droeg bij; ook ten opzichte van juli was er groei.",
+      "article_body": [
+        "De kalendergecorrigeerde Nederlandse industrieproductie was in augustus 12 procent hoger dan een jaar eerder. Dat meldt het CBS op 9 oktober, met de grootste jaarstijging in ruim vier jaar.",
+        "Ten opzichte van juli steeg de productie met 3,3 procent. Het is een positief signaal voor bedrijvigheid, maar één maandcijfer zegt niet dat alle bedrijven groeien of dat huishoudens meer te besteden hebben."
+      ],
+      "why_it_matters": "De cijfers geven een concreet signaal van industriële activiteit.",
+      "source": "CBS",
+      "source_id": "cbs",
+      "url": "https://www.cbs.nl/nl-nl/nieuws/2026/41/productie-industrie-in-augustus-12-procent-hoger-dan-jaar-eerder",
+      "article_slug": "industrieproductie-augustus-2026",
+      "published": "2026-10-09",
+      "email_title": "Nederlandse industrie produceert 12 procent meer dan een jaar eerder",
+      "editorial_rank": 2,
+      "regional_rank": 2,
+      "image_query": "id:2819136",
+      "image_alt": "Metaalbewerking met een industriële machine; illustratief beeld"
     },
     {
       "category": "Natuur & klimaat",
-      "title": "Teruggekeerde vlinder laat zich met honderden rupsen zien langs de Westerschelde",
-      "teaser": "Op een dijktraject van anderhalve kilometer zijn 390 rupsen van het kaasjeskruiddikkopje gevonden. De soort keerde in 2009 terug in Nederland en breidt zich uit.",
+      "title": "Nederlanders gebruiken opnieuw minder vlees",
+      "teaser": "Nieuwe Wageningse cijfers laten een daling van ruim twee procent in 2025 zien. Vooral het verbruik van varkensvlees nam af; kip steeg nog licht.",
       "article_body": [
-        "Het kaasjeskruiddikkopje was sinds 1953 uit Nederland verdwenen. In 2009 werd de vlinder weer in Zuid-Limburg gemeld. Inmiddels is de soort volgens De Vlinderstichting in heel Zeeland aanwezig en zijn er ook meldingen in Zuid-Holland en West-Brabant.",
-        "Een gerichte zoektocht op 2 oktober leverde langs de Westerschelde 390 rupsen op, op een dijkdeel van anderhalve kilometer. De rupsen verstoppen zich in dichtgevouwen blaadjes van kaasjeskruid.",
-        "De telling maakt de terugkeer zichtbaar, maar is geen landelijke populatiemeting. De warmteminnende soort profiteert waarschijnlijk van klimaatopwarming; dat maakt opwarming niet gunstig voor de natuur als geheel."
+        "Het Nederlandse vleesverbruik is in 2025 opnieuw gedaald. In de op 14 oktober gepresenteerde WUR-cijfers komt het uit op 67,3 kilo karkasgewicht per inwoner, tegenover een herziene 68,8 kilo in 2024. Dat is ongeveer 2,2 procent minder.",
+        "Karkasgewicht omvat ook botten en is dus niet wat iemand daadwerkelijk opeet. Bovendien zijn oudere varkensvleescijfers gecorrigeerd. De daling ten opzichte van de herziene reeks blijft overeind: vooral varkensvlees en iets minder rundvlees, terwijl pluimvee licht toeneemt."
       ],
-      "why_it_matters": "Dit is een concreet verhaal over de terugkeer van één soort. De nuance voorkomt dat een lokale meevaller wordt aangezien voor algemeen biodiversiteitsherstel.",
-      "source": "De Vlinderstichting / Nature Today",
-      "url": "https://www.naturetoday.com/intl/nl/nature-reports/message/?msg=35909",
-      "article_slug": "kaasjeskruiddikkopje-rupsen-westerschelde",
-      "image_query": "id:10440681",
-      "image_alt": "Kaasjeskruiddikkopje op een gele bloem; illustratief beeld",
-      "email_title": "Teruggekeerde vlinder laat zich met honderden rupsen zien langs de Westerschelde"
+      "why_it_matters": "Een beweging naar minder vlees wordt zichtbaar in landelijke verbruikscijfers, in plaats van alleen in goede voornemens.",
+      "source": "Wakker Dier / WUR",
+      "source_id": "wakker-dier",
+      "url": "https://www.wakkerdier.nl/nieuws/nieuw-onderzoek-wur-nederlanders-eten-minder-vlees/",
+      "article_slug": "vleesverbruik-nederland-daalt-2025",
+      "published": "2026-10-14",
+      "email_title": "Nederlanders gebruiken opnieuw minder vlees",
+      "editorial_rank": 3,
+      "regional_rank": 3,
+      "image_query": "id:3860902",
+      "image_alt": "Een maaltijd met groenten; illustratief beeld"
+    },
+    {
+      "category": "Wetenschap",
+      "title": "Eindhovense wiskundige vindt met AI een bewijs voor een raadsel uit 1965",
+      "teaser": "Tom Verhoeff heeft een bewijs gepubliceerd voor een lang openstaand probleem over het verwisselen van voorwerpen. AI hielp de redenering terug te brengen tot een veel kortere oplossing.",
+      "article_body": [
+        "Kun je alle verschillende volgordes van een rij voorwerpen doorlopen door steeds twee buren om te wisselen, ook als sommige voorwerpen gelijk zijn? Over een variant van die vraag formuleerde D.H. Lehmer in 1965 een vermoeden.",
+        "TU/e-wiskundige Tom Verhoeff presenteert nu een algemeen bewijs. Met AI ontstond een kortere aanpak; de redenering is ook uitgewerkt voor controle in bewijssoftware Lean. Het manuscript is openbaar op arXiv. Het is een preprint: beoordeling door een wetenschappelijk tijdschrift heeft nog niet plaatsgevonden."
+      ],
+      "why_it_matters": "Een concreet nieuw wiskundig resultaat laat zien hoe onderzoekers en controleerbare software samen verder kunnen komen.",
+      "source": "TU Eindhoven",
+      "source_id": "tu-eindhoven",
+      "url": "https://www.tue.nl/nieuws-en-evenementen/nieuwsoverzicht/08-10-2026-deze-wiskundige-werkte-jarenlang-aan-een-probleem-en-zag-ai-uitgroeien-van-assistent-tot-grootmeester",
+      "article_slug": "verhoeff-bewijs-lehmer-vermoeden",
+      "published": "2026-10-08",
+      "email_title": "Eindhovense wiskundige vindt met AI een bewijs voor een raadsel uit 1965",
+      "editorial_rank": 4,
+      "regional_rank": 4,
+      "image_query": "id:1547018",
+      "image_alt": "Wiskundige formules op een schoolbord; illustratief beeld"
     },
     {
       "category": "Mens",
-      "title": "Eerste Achterhoek Pride Walk brengt 130 mensen samen in Doetinchem",
-      "teaser": "Na uitstel door extreme hitte ging de eerste wandeling op 9 oktober alsnog door. Deelnemers en vrijwilligers maakten ruimte voor zichtbaarheid en ontmoeting.",
+      "title": "Duizenden deelnemers maken van de 4Mijl4You een feest voor iedereen",
+      "teaser": "Wandelend, rollend of op skates: bij de Groningse 4Mijl4You telt meedoen. Duizenden mensen legden de verlichte route af, aangemoedigd door muzikanten en publiek.",
       "article_body": [
-        "In Doetinchem liepen op vrijdag 9 oktober ongeveer 130 mensen mee met de eerste Achterhoek Pride Walk. De organisatie meldt een warme sfeer, ondanks het koude en natte weer.",
-        "De wandeling had in juni moeten plaatsvinden, maar werd vanwege extreme hitte afgelast. Tijdens het Coming Out Weekend kon de COC Stadsgroep Doetinchem het evenement alsnog organiseren.",
-        "De waarde zit in de gezamenlijke zichtbaarheid en het gevoel er niet alleen voor te staan. Het verslag is van de organisator zelf; het bewijst geen meetbare verbetering van de veiligheid van lhbti+’ers in de regio."
+        "Niet de snelste tijd, maar samen de finish halen stond op 10 oktober centraal bij de 4Mijl4You. Deelnemers trokken over het parcours van 6,4 kilometer tussen Haren en Groningen, op een manier die bij hen past.",
+        "Ook mensen die niet kunnen hardlopen, kunnen zo meedoen: bijvoorbeeld met een rolstoel of wandelend. De organisatie beschrijft duizenden deelnemers, lichtgevende outfits, muziek en een feestelijke ontvangst. Het verslag achteraf bevestigt dat het evenement daadwerkelijk plaatsvond."
       ],
-      "why_it_matters": "Ook buiten de grote steden kan een openbare ontmoeting herkenning en steun bieden. Hier is een eerste regionale stap daadwerkelijk gezet.",
-      "source": "Achterhoek Pride",
-      "url": "https://achterhoekpride.nl/eerste-achterhoek-pride-walk-kleurt-doetinchem-met-130-wandelaars/",
-      "article_slug": "eerste-achterhoek-pride-walk",
-      "image_query": "id:4552833",
-      "image_alt": "Regenboogvlag boven een Europese straat; illustratief beeld",
-      "email_title": "Eerste Achterhoek Pride Walk brengt 130 mensen samen in Doetinchem"
+      "why_it_matters": "Een groot beweegevenement geeft mensen met verschillende mogelijkheden samen een plek op hetzelfde parcours.",
+      "source": "Menzis 4Mijl4You / Golazo",
+      "source_id": "golazo-4mijl4you",
+      "url": "https://4mijl4you.nl/lichtjes-muziek-en-duizenden-glimlachen-tijdens-de-15e-editie-van-de-menzis-4mijl4you/",
+      "article_slug": "4mijl4you-samen-bewegen-groningen",
+      "published": "2026-10-10",
+      "email_title": "Duizenden deelnemers maken van de 4Mijl4You een feest voor iedereen",
+      "editorial_rank": 5,
+      "regional_rank": 5,
+      "image_query": "id:4631282",
+      "image_alt": "Een deelnemer aan een sportevenement in een rolstoel; illustratief beeld"
     },
     {
-      "category": "Natuur & klimaat",
-      "title": "Ooievaar en bever laten zien dat natuurherstel werkt",
-      "teaser": "Van vrijwel verdwenen tot weer vertrouwde verschijningen: de terugkeer van ooievaar en bever laat zien wat langdurige bescherming en herintroductie kunnen opleveren.",
+      "category": "Mens",
+      "title": "In deze Rotterdamse kledingwinkel krijgt zelfvertrouwen geen prijskaartje",
+      "teaser": "Bij Dress for Success kiezen mensen met een minimuminkomen gratis een passende outfit, met persoonlijke begeleiding. De winkel vierde deze week haar 25-jarig bestaan.",
       "article_body": [
-        "Villa VdB besteedde op 8 oktober op NPO Radio 1 aandacht aan de comeback van dieren in Nederland. De ooievaar en de bever zijn voorbeelden van soorten die na een sterke achteruitgang of verdwijning weer terugkeerden.",
-        "Rond 1970 waren er in Nederland nog ongeveer tien broedparen ooievaars. Sovon schat de broedpopulatie voor 2025 op 1.900 tot 2.200 paren. Het herstel volgde op een herintroductieprogramma dat in 1969 begon en op maatregelen die de soort hielpen.",
-        "De bever verdween in 1826 uit Nederland. Vanaf 1988 werden dieren teruggebracht, eerst in de Biesbosch en later in andere gebieden. Inmiddels heeft de soort de ruimtes tussen veel uitzetlocaties zelfstandig gekoloniseerd en neemt de verspreiding toe, meldt de Zoogdiervereniging.",
-        "Dit herstel ontstond over tientallen jaren, niet in één week. Het actuele WWF-rapport en het radiogesprek geven aanleiding om die successen te belichten. Ze betekenen niet dat de Nederlandse natuur als geheel herstelt: veel soorten en leefgebieden staan nog steeds onder druk."
+        "In een winkel aan het Rotterdamse Rijnhoutplein hangen nette pakken, blouses en schoenen. Een kassa ontbreekt: mensen met een minimuminkomen krijgen er gratis kleding voor bijvoorbeeld een sollicitatie, stage of belangrijke gelegenheid.",
+        "Dress for Success vierde op 9 oktober haar 25-jarig bestaan. In de nieuwe reportage van Rijnmond vertellen klanten wat de kleding en persoonlijke aandacht voor hen betekenen. De organisatie zegt in die jaren enkele duizenden mensen te hebben geholpen. Dat is geleverd werk; hoeveel mensen er een baan door vonden, is hiermee niet vastgesteld."
       ],
-      "why_it_matters": "Gerichte bescherming kan verdwijnen ombuigen naar terugkeer. Deze voorbeelden maken het resultaat van volgehouden natuurbeleid zichtbaar, zonder de bredere problemen te verbloemen.",
-      "source": "NPO Radio 1 / Sovon / Zoogdiervereniging",
-      "url": "https://www.nporadio1.nl/fragmenten/villa-vdb/01a11b46-55fd-7348-972d-6dcbd8ef7dcc/2026-10-08-de-comeback-van-de-nederlandse-natuur",
-      "article_slug": "ooievaar-bever-natuurherstel",
-      "image_query": "id:9614143",
-      "image_alt": "Ooievaar op een nest; illustratief beeld",
-      "email_title": "Ooievaar en bever laten zien dat natuurherstel werkt"
-    },
-    {
-      "category": "Gezondheid",
-      "title": "Nieuwe standaardbehandeling voor hodgkinlymfoom werkt beter en geeft minder bijwerkingen",
-      "teaser": "Een behandeling voor uitgebreid hodgkinlymfoom is nu opgenomen in de Nederlandse richtlijn. Patiënten krijgen daarmee een combinatie die beter werkt en minder belastend is.",
-      "article_body": [
-        "Voor patiënten tot 60 jaar met uitgebreid hodgkinlymfoom is de medicijncombinatie BrECADD nu de voorkeursbehandeling in de Nederlandse behandelrichtlijn. KWF maakte de wijziging op 9 oktober bekend. De behandeling wordt sinds augustus 2025 vergoed; de opname in de richtlijn verankert haar verder in de Nederlandse zorg.",
-        "De internationale HD21-studie vergeleek BrECADD met de bestaande intensieve behandeling bij 1.500 deelnemers. Na vier jaar was naar schatting 94 procent van de patiënten in de nieuwe behandelgroep in leven zonder dat de ziekte was verergerd, tegenover 91 procent in de vergelijkingsgroep. Behandelingsgerelateerde morbiditeit trad op bij 42 procent, tegenover 59 procent.",
-        "De combinatie vermijdt drie belastende medicijnen en bevat onder meer een middel dat kankercellen gerichter aanpakt. De onderzoekers zagen ook vaker herstel van de functie van eierstokken en zaadballen. De resultaten betekenen niet dat alle patiënten blijvend genezen zijn; de verandering betreft deze specifieke vorm en fase van lymfeklierkanker."
-      ],
-      "why_it_matters": "Onderzoek krijgt hier een concrete toepassing in de spreekkamer: een betere balans tussen het bestrijden van kanker en de belasting van de behandeling.",
-      "source": "KWF / HD21-studie",
-      "url": "https://www.kwf.nl/nieuws/nieuwe-behandeling-hodgkinlymfoom-werkt-beter-en-geeft-minder-schade",
-      "article_slug": "hodgkinlymfoom-betere-standaardbehandeling",
-      "image_query": "id:4099432",
-      "image_alt": "Zorgverlener legt een hand op de hand van een patiënt; illustratief beeld",
-      "email_title": "Nieuwe standaardbehandeling voor hodgkinlymfoom werkt beter en geeft minder bijwerkingen"
-    },
-    {
-      "category": "Natuur & klimaat",
-      "title": "Van de trein zo het bos in: Den Dolder opent nieuwe Buitenpoort",
-      "teaser": "Station Den Dolder helpt bezoekers sinds 7 oktober hun weg naar de Utrechtse Heuvelrug te vinden. Wandelinformatie en bewegwijzering maken de overstap van trein naar natuur eenvoudiger.",
-      "article_body": [
-        "Een uitstapje naar het bos begint in Den Dolder voortaan al op het station. Op 7 oktober werd daar een Buitenpoort geopend: een herkenbare toegang tot de natuur, met wandelinformatie en verwijzingen naar routes.",
-        "Vanaf het station loop je het Willem Arntszbos in. Den Dolder is de vierde Buitenpoort van Nederland, na Bussum Zuid, Baarn en Castricum. Het initiatief verbindt openbaar vervoer met natuurgebieden en stimuleert ook het gebruik van de fiets.",
-        "De provincie, NS, ProRail, gemeenten, terreinbeheerders en het nationaal park werken hiervoor samen. De voorziening is geopend; hoeveel autoritten ermee worden vervangen, is nog niet bekend."
-      ],
-      "why_it_matters": "Een duidelijk beginpunt verlaagt de drempel om zonder auto de natuur in te gaan. De vooruitgang is hier een praktische, al geopende voorziening.",
-      "source": "Provincie Utrecht / Nature Today",
-      "url": "https://www.naturetoday.com/intl/nl/nature-reports/message/?msg=35917",
-      "article_slug": "den-dolder-buitenpoort-natuur",
-      "image_query": "pexels:34076806",
-      "image_alt": "Bospad in Varsseveld; illustratief beeld",
-      "email_title": "Van de trein zo het bos in: Den Dolder opent nieuwe Buitenpoort",
-      "image_page_url": "https://www.pexels.com/photo/34076806/"
+      "why_it_matters": "Een praktische drempel om mee te doen verdwijnt, met aandacht voor wat iemand nodig heeft en graag wil.",
+      "source": "Rijnmond",
+      "source_id": "rijnmond",
+      "url": "https://www.rijnmond.nl/nieuws/2263829/deze-kledingwinkel-zonder-kassa-zorgt-al-25-jaar-dat-iedereen-weer-goed-voor-de-dag-komt",
+      "article_slug": "dress-for-success-rotterdam-25-jaar",
+      "published": "2026-10-11",
+      "email_title": "In deze Rotterdamse kledingwinkel krijgt zelfvertrouwen geen prijskaartje",
+      "editorial_rank": 6,
+      "regional_rank": 6,
+      "image_query": "id:1850082",
+      "image_alt": "Kleding aan hangers in een winkel; illustratief beeld"
     }
   ],
   "int": [
     {
-      "category": "Natuur & klimaat",
-      "title": "Verkeersheffing draagt bij aan schonere lucht in Manhattan",
-      "email_title": "Verkeersheffing draagt bij aan schonere lucht in Manhattan",
-      "article_slug": "manhattan-verkeersheffing-minder-fijnstof",
-      "source": "Columbia Climate School",
-      "url": "https://news.climate.columbia.edu/2026/10/07/study-nyc-congestion-pricing-air-quality/",
-      "image_query": "id:7307565",
-      "image_alt": "Skyline van Lower Manhattan; illustratief beeld",
-      "teaser": "Nieuw onderzoek koppelt het eerste jaar van de verkeersheffing aan ongeveer 13 procent minder fijnstof binnen de zone. De onderzoekers hielden rekening met het weer en regionale ontwikkelingen.",
+      "category": "Gezondheid",
+      "title": "900 gezinnen in Ethiopië hebben nu water aan huis",
+      "teaser": "Een kraan bij huis maakt voor gezinnen in Berehale dagelijks verschil. Nieuwe aansluitingen besparen het lopen met zware watercontainers en geven vrouwen en meisjes tijd terug.",
       "article_body": [
-        "De lucht in het centrum van Manhattan is schoner geworden sinds New York een heffing invoerde voor voertuigen die de drukke binnenstad inrijden. Een op 7 oktober gepubliceerd onderzoek schat dat de maatregel de concentratie fijnstof binnen de zone met ongeveer 13 procent verlaagde.",
-        "De onderzoekers vergeleken metingen uit 2025 met eerdere jaren en met locaties buiten de zone. Ze corrigeerden voor het weer, seizoenen en regionale trends. De geschatte verbetering past bij de afname van het verkeer.",
-        "Het onderzoek meet luchtkwaliteit, niet hoeveel mensen daardoor gezonder zijn geworden. Mogelijke verschuiving van vervuiling naar omliggende wijken vraagt om verdere monitoring."
+        "In Berehale, in het noordoosten van Ethiopië, hebben 900 gezinnen een aansluiting op de waterleiding gekregen. UNICEF beschrijft het bereikte resultaat in een reportage van 13 oktober.",
+        "Er zijn twee reservoirs gebouwd, bestaande boorputten hersteld en leidingen uitgebreid. Zonne-energie helpt het water omhoog te pompen. De reportage laat zien wat de aansluiting voor één gezin betekent; de netwerkuitbreiding loopt nog door. Niet alle inwoners zijn al bereikt."
       ],
-      "why_it_matters": "Een drukke stad laat een meetbare verbetering zien na een concrete verkeersmaatregel. Dat geeft andere steden informatie over wat kan werken."
+      "why_it_matters": "Water aan huis neemt een dagelijkse fysieke taak weg en maakt wassen, drinken en koken gemakkelijker.",
+      "source": "UNICEF",
+      "source_id": "unicef",
+      "url": "https://www.unicef.org/ethiopia/stories/new-rhythm-rawdas-day",
+      "article_slug": "berehale-900-gezinnen-water-aan-huis",
+      "published": "2026-10-13",
+      "email_title": "900 gezinnen in Ethiopië hebben nu water aan huis",
+      "editorial_rank": 7,
+      "regional_rank": 1,
+      "image_query": "id:8493302",
+      "image_alt": "Stromend water uit een kraan; illustratief beeld"
+    },
+    {
+      "category": "Mens",
+      "title": "Hongarije stemt voor schrappen van beperkingen op lhbti-informatie",
+      "teaser": "Het parlement heeft op 13 oktober centrale beperkingen uit de wet van 2021 geschrapt. De betrokken rechtenorganisatie Háttér verwelkomt de stap, maar wijst op resterende discriminatie.",
+      "article_body": [
+        "Informatie over homoseksualiteit en genderdiversiteit krijgt in Hongarije weer meer ruimte. Het parlement stemde op 13 oktober voor het verwijderen van centrale beperkende bepalingen uit de zogenoemde propagandawet.",
+        "De rechtenorganisatie Háttér bevestigt de stemming in haar bericht van 14 oktober. Zij benadrukt dat verdere wetswijzigingen nodig blijven, onder meer rond beperkende uitvoeringsregels voor boeken. Dit is dus een concrete stap richting gelijkheid, geen volledige afschaffing van alle discriminerende regels."
+      ],
+      "why_it_matters": "De verandering vergroot de ruimte om mensen en hun verhalen zichtbaar te maken.",
+      "source": "Háttér Társaság",
+      "source_id": "hatter-tarsasag",
+      "url": "https://hatter.hu/hirek/megcsinaltuk-visszavonta-az-orszaggyules-a-propagandatorvenyt",
+      "article_slug": "hongarije-beperkingen-lhbti-informatie",
+      "published": "2026-10-14",
+      "email_title": "Hongarije stemt voor schrappen van beperkingen op lhbti-informatie",
+      "editorial_rank": 8,
+      "regional_rank": 2,
+      "image_query": "id:4552833",
+      "image_alt": "Een regenboogvlag; illustratief beeld"
     },
     {
       "category": "Natuur & klimaat",
-      "title": "Acht geredde orang-oetans krijgen een nieuwe plek in beschermd bos",
-      "teaser": "Drie moeders met jongen en twee jonge mannetjes zijn in West-Kalimantan teruggebracht naar bos. Hun eerdere leefgebied was door branden onveilig geworden.",
+      "title": "Vogels en salamanders vinden hun weg naar hersteld Engels moeras",
+      "teaser": "Bij Norwich is ruim zeven hectare rivieroever en overstromingsvlakte heringericht. Nieuwe poelen en ondiepten geven water en dieren weer ruimte.",
       "article_body": [
-        "Acht orang-oetans die waren gered uit door branden bedreigde gebieden op Borneo, zijn op 9 oktober vrijgelaten in het beschermde Batu Nyambu-bos. Het gaat om drie moeders met hun jongen en twee jonge mannetjes.",
-        "Indonesische autoriteiten en opvangorganisatie YIARI kozen het gebied vanwege voedsel, water en de verbinding met andere bossen. Het reservaat beslaat ongeveer 23.000 hectare.",
-        "Volgens de autoriteiten werden tussen augustus en 9 oktober 46 orang-oetans uit brandgevaar gered. De vrijlating van deze acht dieren is een concreet resultaat, maar de bedreiging van hun leefgebied blijft groot."
+        "Bij Keswick Marsh langs de River Yare hebben natuurbeheerders ruim zeven hectare oever en overstromingsvlakte heringericht. Nieuwe poelen en aangepaste greppels verbinden de rivier weer met het omliggende terrein.",
+        "Het werk is uitgevoerd, meldt de Environment Agency op 13 oktober. Op het terrein zijn onder meer zilverreigers, salamanders, libellen en een kleine plevier waargenomen. Dat zijn bemoedigende eerste bezoeken; blijvend herstel van populaties vraagt langere monitoring."
       ],
-      "why_it_matters": "Redding krijgt pas vervolg als dieren opnieuw leefruimte vinden. Deze verplaatsing geeft acht dieren die kans, terwijl bescherming van hun oorspronkelijke bossen nodig blijft.",
-      "source": "AFP / Phys.org",
-      "url": "https://phys.org/news/2026-10-indonesia-orangutans-forest.html",
-      "article_slug": "acht-orang-oetans-beschermd-bos",
-      "image_query": "id:9967417",
-      "image_alt": "Orang-oetan op Borneo; illustratief beeld",
-      "email_title": "Acht geredde orang-oetans krijgen een nieuwe plek in beschermd bos",
-      "reading_time_minutes": 2
+      "why_it_matters": "Nieuwe leefplekken zijn gerealiseerd en worden al door dieren gebruikt.",
+      "source": "Environment Agency",
+      "source_id": "environment-agency",
+      "url": "https://www.gov.uk/government/news/rare-chalk-stream-created-to-boost-wildlife-in-norfolk",
+      "article_slug": "keswick-marsh-natuurherstel",
+      "published": "2026-10-13",
+      "email_title": "Vogels en salamanders vinden hun weg naar hersteld Engels moeras",
+      "editorial_rank": 9,
+      "regional_rank": 3,
+      "image_query": "id:5900178",
+      "image_alt": "Water en riet in een moerasgebied; illustratief beeld"
     },
     {
       "category": "Wetenschap",
-      "title": "DNA-logboek laat zien hoe één cel uitgroeit tot een muizenembryo",
-      "teaser": "Onderzoekers hebben de afstamming van cellen gedurende 13,5 dagen vastgelegd. Het nieuwe systeem schrijft opeenvolgende herkenningstekens in het DNA.",
+      "title": "Nieuwe methode maakt weersverwachtingen voor twee tot zes weken beter",
+      "teaser": "Een internationaal onderzoeksteam laat een leermodel fouten in bestaande weersystemen corrigeren. In een echte voorspelwedstrijd presteerde de aanpak beter dan de andere deelnemende systemen.",
       "article_body": [
-        "Een lichaam begint als één bevruchte eicel. Onderzoekers van onder meer de University of Washington hebben nu met een DNA-logboek gevolgd hoe cellen zich delen en verschillende taken krijgen in een muizenembryo.",
-        "Het systeem, DNA Typewriter, schrijft bij celdelingen nieuwe tekens in het erfelijk materiaal. Uit gedeelde tekens konden de onderzoekers celverwantschappen over 13,5 dagen reconstrueren. De studie verscheen in Science.",
-        "De onderzoekers startten met honderd bevruchte eicellen en onderzochten tien embryo’s. De uitgebreidste analyse betrof één embryo met een bijzonder rijke registratie. Dit is fundamenteel muizenonderzoek, geen nieuwe behandeling voor mensen."
+        "Onderzoekers hebben een methode ontwikkeld die leert van eerdere voorspellingsfouten. Als extra laag boven op bestaande weersystemen verbetert die de kansverwachtingen voor twee tot zes weken vooruit.",
+        "De studie verscheen op 14 oktober in Nature. In de ECMWF-voorspelwedstrijd van 2025 was de methode de beste voor de onderzochte weervariabelen en termijnen. Ook extreme gebeurtenissen werden beter voorspeld. Dit betekent geen exacte lokale weersvoorspelling voor iedere dag; het gaat om betere kansen op langere termijn."
       ],
-      "why_it_matters": "Een beter zicht op de vorming van organen helpt onderzoekers begrijpen hoe ontwikkeling verloopt. Mogelijke medische toepassingen vragen nog veel vervolgonderzoek.",
-      "source": "UW Medicine / Phys.org",
-      "url": "https://phys.org/news/2026-10-dna-typewriter-cells-history-mouse.html",
-      "article_slug": "dna-logboek-muizenembryo",
-      "image_query": "id:563423",
-      "image_alt": "Laboratoriummedewerker verwerkt een monster; illustratief beeld",
-      "email_title": "DNA-logboek laat zien hoe één cel uitgroeit tot een muizenembryo",
-      "reading_time_minutes": 5
+      "why_it_matters": "Betere verwachtingen kunnen landbouw, waterbeheer en energieplanning helpen voorbereiden.",
+      "source": "MIT News",
+      "source_id": "mit-news",
+      "url": "https://news.mit.edu/2026/researchers-improve-weather-forecasts-looking-two-six-weeks-out-1014",
+      "article_slug": "weer-twee-zes-weken-beter-voorspeld",
+      "published": "2026-10-14",
+      "email_title": "Nieuwe methode maakt weersverwachtingen voor twee tot zes weken beter",
+      "editorial_rank": 10,
+      "regional_rank": 4,
+      "image_query": "id:3488632",
+      "image_alt": "Wolken aan de hemel; illustratief beeld"
+    },
+    {
+      "category": "Economie",
+      "title": "180 mensen in Mozambique krijgen middelen voor gezamenlijke viskweek",
+      "teaser": "Achttien lokale verenigingen in Nangade hebben viskweekbakken ontvangen. De overdracht geeft 180 deelnemers middelen om voedsel en inkomsten te produceren.",
+      "article_body": [
+        "In Nangade zijn op 1 oktober achttien viskweekbakken overgedragen aan achttien verenigingen. Volgens het nieuwe UNDP-verslag van 14 oktober doen daar 180 vrouwen en mannen aan mee.",
+        "Zij kregen ook jonge vissen, voer en technische ondersteuning. De overdracht is een bereikt resultaat in een door conflict getroffen regio. Hogere inkomens en betere voedselzekerheid zijn beoogde vervolgeffecten, nog geen aangetoonde uitkomsten."
+      ],
+      "why_it_matters": "Deelnemers beschikken over concrete productiemiddelen om hun bestaan weer op te bouwen.",
+      "source": "UNDP",
+      "source_id": "undp",
+      "url": "https://www.undp.org/mozambique/news/nangade-fish-farming-opens-path-economic-recovery",
+      "article_slug": "nangade-viskweekbakken-overgedragen",
+      "published": "2026-10-14",
+      "email_title": "180 mensen in Mozambique krijgen middelen voor gezamenlijke viskweek",
+      "editorial_rank": 11,
+      "regional_rank": 5,
+      "image_query": "id:6795464",
+      "image_alt": "Vissen in een kweekvijver; illustratief beeld"
     },
     {
       "category": "Natuur & klimaat",
-      "title": "Reuzenschildpadden floreren op beschermd Aldabra",
-      "email_title": "Reuzenschildpadden floreren op beschermd Aldabra",
-      "teaser": "Op het beschermde atol in de Seychellen leven naar schatting 180.000 Aldabra-reuzenschildpadden. Een nieuw onderzoek bevestigt een grote, stabiele wilde populatie.",
+      "title": "Wereld telt waarschijnlijk meer natuurgebieden dan de registers laten zien",
+      "teaser": "Een nieuwe studie schat dat 26,8 procent van het landoppervlak onder een vorm van natuurbehoud valt. Veel gebieden ontbreken in internationale registraties.",
       "article_body": [
-        "Op Aldabra, een beschermd atol in de Seychellen, leven naar schatting ongeveer 180.000 reuzenschildpadden. Dat blijkt uit onderzoek van de Seychelles Islands Foundation en de Universiteit van Exeter, waarover de universiteit op 7 oktober berichtte.",
-        "De onderzoekers analyseerden tellingen uit 2018 tot en met 2022. Met een statistisch model hielden ze rekening met dieren die tijdens het veldwerk verborgen bleven in de begroeiing. De populatie was in de goed vergelijkbare onderzoeksjaren relatief stabiel.",
-        "Aldabra wordt al tientallen jaren beschermd. De nieuwe schatting is hoger dan eerdere cijfers, maar betekent niet dat de populatie onlangs plotseling is gegroeid. Het positieve resultaat is dat hier een zeer grote wilde populatie standhoudt."
+        "Onderzoekers brachten in een steekproef van 25 landen en gebieden ook nationaal erkende gebieden en mogelijke andere vormen van natuurbehoud in kaart. Hun studie verscheen op 14 oktober in Nature.",
+        "De schatting voor 2022 komt uit op 26,81 procent van het landoppervlak. Dat is geen plotselinge uitbreiding van beschermde natuur: bestaand beheer blijkt ondergeteld. Bovendien is oppervlakte alleen onvoldoende om biodiversiteitsverlies tegen te gaan; kwaliteit en spreiding blijven nodig."
       ],
-      "why_it_matters": "Langdurige natuurbescherming helpt deze bijzondere soort in stand te houden. De betere schatting geeft beheerders een betrouwbaar uitgangspunt om de populatie te blijven volgen.",
-      "source": "Universiteit van Exeter / Seychelles Islands Foundation",
-      "url": "https://news.exeter.ac.uk/faculty-of-environment-science-and-economy/ecology-and-conservation/new-study-reports-largest-ever-population-estimate-for-seychelles-giant-tortoises/",
-      "article_slug": "aldabra-reuzenschildpadden-stabiele-populatie",
-      "image_query": "id:854045",
-      "image_alt": "Aldabra-reuzenschildpad; illustratief beeld"
-    },
-    {
-      "category": "Cultuur",
-      "title": "Vier eeuwen oude klokkentoren in Moldavië gerestaureerd en heropend",
-      "teaser": "De toren van Vadul Rașcov is na restauratie opnieuw ingewijd met de lokale gemeenschap. Historisch metselwerk is beschermd en het dak met traditionele houten shingles herbouwd.",
-      "article_body": [
-        "In Vadul Rașcov, Moldavië, heeft een klokkentoren uit de zeventiende eeuw weer toekomst. De gemeenschap vierde de voltooiing van de conservering en restauratie, meldt de VN op 10 oktober.",
-        "Het werk richtte zich op het oude stenen metselwerk, dat door weer en ouderdom was aangetast. Er kwam een beschermende constructie en het historische dak werd herbouwd met traditionele houten shingles. De Europese Unie financierde het werk via een UNDP-programma.",
-        "De toren hoort bij een historisch kerkhof en diende ook als toegangspoort. De restauratie is afgerond; verwachte opbrengsten voor toerisme en lokale ontwikkeling zijn nog geen gemeten resultaten."
-      ],
-      "why_it_matters": "Behoud van een vertrouwd monument beschermt lokaal erfgoed en vakmanschap. Hier gaat het om zichtbaar afgerond werk, niet alleen een restauratieplan.",
-      "source": "VN / UNDP Moldavië",
-      "url": "https://moldova.un.org/en/324204-vadul-ra%C8%99cov-bell-tower-restored-european-union-and-undp-support-inaugurated-together",
-      "article_slug": "moldavie-klokkentoren-gerestaureerd",
-      "image_query": "id:5339329",
-      "image_alt": "Detail van een kerkklok; illustratief beeld, niet de gerestaureerde toren",
-      "email_title": "Vier eeuwen oude klokkentoren in Moldavië gerestaureerd en heropend"
-    },
-    {
-      "category": "Natuur & klimaat",
-      "title": "Geredde lippenbeer Odum krijgt ook zeventien jaar later zorg op maat",
-      "teaser": "Een nieuwe terugblik laat zien hoe een beer uit de dansberentraditie verder leeft in opvang. Zijn zorg eindigde niet bij de redding in 2009.",
-      "article_body": [
-        "Lippenbeer Odum werd in 2009 bevrijd uit een leven waarin hij voor toeristen moest optreden. Zeventien jaar later woont hij nog altijd in het Bannerghatta Bear Rescue Centre in India en krijgt hij langdurige verzorging.",
-        "International Animal Rescue deelde voor de Wereldlippenberendag van 12 oktober nieuwe beelden en een update. Volgens de organisatie brengt de inmiddels 26-jarige beer zijn dagen door met eten, baden en rusten in een aangepaste hangmat.",
-        "De redding zelf is oud nieuws. De actuele aanleiding is de terugblik op blijvende opvang. Dit verhaal beschrijft dierenwelzijn in een opvangcentrum, niet een vrijlating of herstel van wilde populaties."
-      ],
-      "why_it_matters": "Een dier redden vraagt ook jaren later aandacht en middelen. Odums verhaal maakt die langdurige verantwoordelijkheid zichtbaar.",
-      "source": "Good News Network / International Animal Rescue",
-      "url": "https://www.goodnewsnetwork.org/sloth-bear-given-a-name-by-julia-roberts-is-flourishing/",
-      "article_slug": "odum-lippenbeer-langdurige-zorg",
-      "image_query": "id:1341164",
-      "image_alt": "Lippenbeer in een dierentuin; illustratief beeld, niet Odum",
-      "email_title": "Geredde lippenbeer Odum krijgt ook zeventien jaar later zorg op maat"
+      "why_it_matters": "Bestaande inspanningen worden zichtbaarder en kunnen gerichter worden versterkt.",
+      "source": "Nature",
+      "source_id": "nature",
+      "url": "https://www.nature.com/articles/s41586-026-11157-4",
+      "article_slug": "wereldwijde-natuurgebieden-ruimer-geteld",
+      "published": "2026-10-14",
+      "email_title": "Wereld telt waarschijnlijk meer natuurgebieden dan de registers laten zien",
+      "editorial_rank": 12,
+      "regional_rank": 6,
+      "image_query": "id:3325080",
+      "image_alt": "Berglandschap bij zonsondergang; illustratief beeld"
     }
   ],
   "headlines": [
     {
-      "title": "Gasprijzen liggen hoger dan een jaar geleden",
-      "teaser": "De NOS meldt dat huishoudens deze herfst met hogere gastarieven te maken krijgen. Prijsvergelijkers zien ook meer belangstelling voor meerjarige vaste contracten.",
-      "source": "NOS",
-      "url": "https://nos.nl/artikel/2634409-huishoudens-gaan-komende-tijd-meer-betalen-voor-gas-toename-in-vaste-energiecontracten"
+      "category": "Natuur & klimaat",
+      "title": "KNMI gaat vanaf november plaatselijker waarschuwen",
+      "teaser": "Weerwaarschuwingen krijgen flexibele gebieden in plaats van provinciegrenzen. Vanaf november moeten meldingen daardoor beter aansluiten op je locatie.",
+      "article_body": [],
+      "why_it_matters": "",
+      "source": "KNMI",
+      "source_id": "knmi",
+      "url": "https://www.knmi.nl/over-het-knmi/nieuws/knmi-waarschuwt-vanaf-november-gerichter",
+      "article_slug": "knmi-lokale-waarschuwingen",
+      "published": "2026-10-14",
+      "email_title": "KNMI gaat vanaf november plaatselijker waarschuwen"
     },
     {
-      "title": "Wereldhandel bereikte 35 biljoen dollar, maar groei is ongelijk verdeeld",
-      "teaser": "UNCTAD meldt een recordwaarde voor 2025. Veel ontwikkelingslanden blijven achter; hogere handelswaarden in 2026 hangen ook samen met gestegen energieprijzen.",
-      "source": "UN News / UNCTAD",
-      "url": "https://news.un.org/en/story/2026/10/1168566"
+      "category": "Gezondheid",
+      "title": "13 wekenecho wordt geen vast onderdeel van prenatale screening",
+      "teaser": "De minister heeft besloten de echo niet definitief in te voeren. Het aanbod blijft tot 1 januari 2028 beschikbaar; er is dus geen onmiddellijke stop.",
+      "article_body": [],
+      "why_it_matters": "",
+      "source": "RIVM",
+      "source_id": "rivm",
+      "url": "https://www.rivm.nl/nieuws/besluit-minister-vws-13-wekenecho-stopt",
+      "article_slug": "13-wekenecho-afbouw-2028",
+      "published": "2026-10-13",
+      "email_title": "13 wekenecho wordt geen vast onderdeel van prenatale screening"
     },
     {
-      "title": "Prijs voor economische wetenschappen wordt op 12 oktober bekendgemaakt",
-      "teaser": "De officiële aankondiging staat vandaag gepland vanaf 11.45 uur Nederlandse tijd. Bij het verschijnen van deze ochtendeditie is de winnaar nog niet bekend.",
-      "source": "NobelPrize.org",
-      "url": "https://www.nobelprize.org/prizes/about/prize-announcement-dates/"
+      "category": "Economie",
+      "title": "Inflatie in september bevestigd op 3,4 procent",
+      "teaser": "Consumentenprijzen lagen in september 3,4 procent hoger dan een jaar eerder, tegen 3,3 procent in augustus. De definitieve cijfers bevestigen de eerdere snelle raming.",
+      "article_body": [],
+      "why_it_matters": "",
+      "source": "CBS",
+      "source_id": "cbs",
+      "url": "https://www.cbs.nl/nl-nl/nieuws/2026/42/inflatie-stijgt-naar-3-4-procent-in-september",
+      "article_slug": "inflatie-september-definitief",
+      "published": "2026-10-13",
+      "email_title": "Inflatie in september bevestigd op 3,4 procent"
     }
   ]
 }
