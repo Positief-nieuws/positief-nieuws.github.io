@@ -111,6 +111,27 @@ class SelectionTests(unittest.TestCase):
             self.assertEqual(prior['discovery_origin'],'prior_recent_metadata')
             self.assertIn('prior_discovery_requires_original_check',prior['date_warnings'])
 
+    def test_buttondown_uses_the_same_review_and_snapshot_gate(self):
+        import os, io
+        from contextlib import redirect_stderr
+        import buttondown_draft as buttondown
+        pool,review=self.fixture()
+        data={'meta':{'edition_date':'2026-10-19'}}
+        before=Path.cwd()
+        with tempfile.TemporaryDirectory() as td:
+            root=Path(td);(root/'redactie').mkdir();(root/'selectie').mkdir()
+            (root/'redactie/2026-10-19.json').write_text('{}')
+            (root/'selectie/2026-10-19.json').write_text(json.dumps(review))
+            (root/'selectie/2026-10-19-kandidaten.json').write_text(json.dumps(pool))
+            try:
+                os.chdir(root)
+                with patch.dict(os.environ,{'BUTTONDOWN_API_KEY':'UNIT TEST ONLY'}),patch.object(buttondown,'load_news',return_value=(data,[],[],[])),patch('editorial_check.check',return_value={'ready':False,'errors':['Test stop: nooit echte e-mail aanmaken']}) as gate,patch.object(buttondown,'create_draft') as create:
+                    with redirect_stderr(io.StringIO()),self.assertRaises(SystemExit):buttondown.main()
+                    self.assertEqual(gate.call_args.kwargs['selection_review'],review)
+                    self.assertEqual(gate.call_args.kwargs['candidate_pool'],pool)
+                    create.assert_not_called()
+            finally:os.chdir(before)
+
     def test_next_edition_requires_selection_gate(self):
         policy=json.loads((selection.ROOT/'editorial_policy.json').read_text())
         result=editorial_check.check({'meta':{'edition_date':'2026-10-19'}},{},policy,[],datetime(2026,10,19).date())
