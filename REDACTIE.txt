@@ -11,7 +11,7 @@ Alle 55 aangeleverde vermeldingen zijn in sources.json terug te vinden via regis
 Lees eerst selection_preferences.json: concrete bereikte vooruitgang en lezerswaarde wegen zwaarder dan positieve trefwoorden. Routinecampagnes, reparaties van eerder onrecht, wapens/rampen als dragend onderwerp en prijzen zonder aantoonbaar resultaat vragen extra inhoudelijke rechtvaardiging. Dit is geen algemeen verbod op onderzoek, hulpverlening, sport of jubileums.
 
 VERPLICHTE INTERNE SELECTIERONDE VÓÓR HET EERSTE CONCEPT
-1. Maak op de editiedag een nieuwe bronrun: python auto_news.py --force. Google-zoekkanalen zoeken standaard breed, zonder verplichte positieve zoekwoorden. Ook een breed zoekkanaal is onvolledig.
+1. Maak op de editiedag een nieuwe bronrun: python auto_news.py --force. Google-zoekkanalen combineren een brede zoekopdracht met de bestaande gerichte zoekopdracht. Recente eerder gevonden metadata blijven bewaard, herkenbaar als prior_recent_metadata; dat is geen nieuwe bronverificatie. Ook een breed zoekkanaal is onvolledig.
 2. Maak een bevroren bronrun en een lege beoordelingschecklist:
    python selection_check.py --pool kandidaten.json --prepare YYYY-MM-DD
    Dit schrijft selectie/YYYY-MM-DD-kandidaten.json en selectie/YYYY-MM-DD.json; niets wordt geaccordeerd of gepubliceerd. Gebruik een nieuwe revisiemap voor heronderzoek, niet een oud akkoord.

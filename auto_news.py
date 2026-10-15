@@ -651,7 +651,7 @@ def collect(now=None, sources=None, history=None, force=False):
     def read_channel(src):
         cid = src["channel_id"]
         previous = state.get(cid, {})
-        use_cache = not force and previous.get("discovery_version") == 2 and not due(src, previous, now)
+        use_cache = not force and previous.get("discovery_version") == 3 and not due(src, previous, now)
         source_error = None
         if use_cache:
             items = [{**x, "published":parse_date(x.get("published")), "updated":parse_date(x.get("updated"))} for x in previous.get("items",[])]
@@ -661,18 +661,39 @@ def collect(now=None, sources=None, history=None, force=False):
                     items = parse_nu_good_news(fetch(src["url"], html=True))
                     enrich_curated_dates(items)
                 else:
-                    raw = fetch(source_url(src))
-                    if lname(ET.fromstring(raw).tag) not in {"rss","feed","rdf"}:
-                        raise ValueError("Respons is geen RSS/Atom-feed")
-                    items = parse_feed(raw)
+                    urls = [source_url(src)]
+                    if src["mode"] == "google_site":
+                        urls.append(google_site_feed(src["domain"], src["region"], src.get("language"), "positive"))
+                    items, discovery_errors = [], []
+                    for url in dict.fromkeys(urls):
+                        try:
+                            raw = fetch(url)
+                            if lname(ET.fromstring(raw).tag) not in {"rss","feed","rdf"}:
+                                raise ValueError("Respons is geen RSS/Atom-feed")
+                            items.extend(parse_feed(raw))
+                        except Exception as exc:
+                            discovery_errors.append(f"{type(exc).__name__}: {exc}")
+                    if discovery_errors:
+                        source_error = "; ".join(discovery_errors)
+                    if len(discovery_errors) == len(set(urls)):
+                        raise ValueError(source_error)
+                # Search result limits must not silently erase a recently found story.
+                fresh_keys = {normurl(x["url"]) for x in items}
+                for x in previous.get("items", []):
+                    pub = parse_date(x.get("published"))
+                    if pub and 0 <= (now-pub).total_seconds()/3600 <= MAX_AGE_HOURS and normurl(x["url"]) not in fresh_keys:
+                        items.append({**x, "published":pub, "updated":parse_date(x.get("updated")),
+                            "discovery_origin":"prior_recent_metadata", "discovered_at":x.get("discovered_at") or previous.get("last_success_at")})
+                        fresh_keys.add(normurl(x["url"]))
                 # Cache only discovery metadata, not copied article text.
                 serialized = [{"title":x["title"],"url":x["url"],"summary":"",
                     "published":x.get("published").isoformat() if x.get("published") else None,
                     "updated":x.get("updated").isoformat() if x.get("updated") else None,
-                    "cached_signal_score":cue_score(x["title"],x.get("summary",""),src["region"]),
-                    "cached_category_hint":category_hint(x["title"],x.get("summary",""),src.get("hint"))}
+                    "cached_signal_score":x.get("cached_signal_score",cue_score(x["title"],x.get("summary",""),src["region"])),
+                    "cached_category_hint":x.get("cached_category_hint") or category_hint(x["title"],x.get("summary",""),src.get("hint")),
+                    "discovery_origin":x.get("discovery_origin", "current_fetch"), "discovered_at":x.get("discovered_at") or now.isoformat()}
                     for x in items]
-                previous = {"last_success_at":now.isoformat(),"last_error":None,"items":serialized,"discovery_version":2}
+                previous = {"last_success_at":now.isoformat(),"last_error":source_error,"items":serialized,"discovery_version":3}
             except Exception as exc:
                 source_error = f"{type(exc).__name__}: {exc}"
                 previous = {**previous,"last_error":source_error}
@@ -698,6 +719,7 @@ def collect(now=None, sources=None, history=None, force=False):
             date_warnings=[]
             if age is not None and age < -1: date_warnings.append("future_publication_date")
             if pub is None: date_warnings.append("publication_date_unknown")
+            if x.get("discovery_origin") == "prior_recent_metadata": date_warnings.append("prior_discovery_requires_original_check")
             if src["mode"] == "google_site": date_warnings.append("search_date_requires_original_check")
             url_key = normurl(x["url"])
             if url_key in seen_urls: continue
@@ -716,6 +738,7 @@ def collect(now=None, sources=None, history=None, force=False):
                 "published":pub.isoformat() if pub else None,
                 "updated":x.get("updated").isoformat() if x.get("updated") else None,
                 "event_date":None,"date_warnings":date_warnings,
+                "discovery_origin":x.get("discovery_origin", "current_fetch"), "discovered_at":x.get("discovered_at") or previous.get("last_success_at"),
                 "hours_old":round(age,1) if age is not None else None,
                 "category_hint":canonical_category(x.get("cached_category_hint") or "") or category_hint(title,summary,src.get("hint")),
                 "priority":src.get("priority","P2"),"language":src.get("language","en"),
@@ -795,7 +818,7 @@ def main():
     data = {
         "meta": {
             "generated_at": now.isoformat(),
-            "generator": "Positief nieuws kandidaten 0.5",
+            "generator": "Positief nieuws kandidaten 0.6",
             "purpose": "Voorselectie voor AI-redactie; dit is NIET de definitieve Goed nieuws-editie.",
             "max_age_hours": MAX_AGE_HOURS,
             "max_per_region": MAX_PER_REGION,
