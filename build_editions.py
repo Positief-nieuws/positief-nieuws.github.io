@@ -1934,7 +1934,7 @@ def apply_homepage_brand_heading(markup):
         if count != 1:
             raise ValueError("Homepage-woordmerk ontbreekt.")
     markup = re.sub(r'(<section class="hero-intro">(?:(?!</section>).)*?)<h1\b[^>]*>.*?</h1>', r'\1', markup, count=1, flags=re.S)
-    style = '<style id="homepage-brand-heading">\n/* Homepage: the existing wordmark is the primary heading. */\n.site-header .brand-heading{display:flex;align-items:center;margin:0;padding:0;line-height:1;flex-shrink:0}\n.site-header .brand-heading .brand{margin:0}\n#today-view .hero-intro{padding-top:30px;padding-bottom:27px}\n#today-view .hero-intro .hero-date{margin:0 0 12px;color:#6c7e74;font-size:.7rem;letter-spacing:.1em;font-weight:700}\n#today-view .hero-intro .leadtext{margin:0 0 12px;max-width:750px}\n@media(max-width:640px){#today-view .hero-intro{padding-top:25px;padding-bottom:23px}}\n</style>'
+    style = '<style id="homepage-brand-heading">\n/* Homepage: the existing wordmark is the primary heading. */\n.site-header .brand-heading{display:flex;align-items:center;margin:0;padding:0;line-height:1;flex-shrink:0}\n.site-header .brand-heading .brand{margin:0}\n#today-view .hero-intro{padding-top:30px;padding-bottom:27px}\n#today-view .hero-intro .hero-date{margin:0 0 14px!important;color:var(--ink);font-size:clamp(1.35rem,3.2vw,1.9rem)!important;line-height:1.2;font-weight:800;letter-spacing:-.035em;text-transform:none}\n#today-view .hero-intro .leadtext{margin:0 0 12px;max-width:750px}\n@media(max-width:640px){#today-view .hero-intro{padding-top:25px;padding-bottom:23px}}\n</style>'
     markup = re.sub(r'<style id="homepage-brand-heading">.*?</style>', '', markup, flags=re.S)
     return markup.replace('</head>', style + '</head>', 1)
 
@@ -1975,7 +1975,7 @@ def update_homepage(data):
     markup, count = re.subn(r'<script id="homepage-schema" type="application/ld\+json">.*?</script>', lambda _: f'<script id="homepage-schema" type="application/ld+json">\n{schema}\n  </script>', markup, flags=re.S)
     if count != 1:
         raise ValueError("Homepage-schema ontbreekt of is dubbel.")
-    date_html = f'<!-- homepage-date:start --><p class="hero-date" id="edition-date"><time datetime="{edition_date}">Editie van {esc(fmt_date(edition_date))}</time></p><!-- homepage-date:end -->'
+    date_html = f'<!-- homepage-date:start --><h2 class="hero-date" id="edition-date"><time datetime="{edition_date}">{esc(fmt_date(edition_date).capitalize())}</time></h2><!-- homepage-date:end -->'
     markup, count = re.subn(r'<!-- homepage-date:start -->.*?<!-- homepage-date:end -->', lambda _: date_html, markup, flags=re.S)
     if count != 1:
         raise ValueError("Homepage-datummarker ontbreekt of is dubbel.")
