@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://positief-nieuws.nl/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/over/</loc>
@@ -15,11 +15,15 @@
   </url>
   <url>
     <loc>https://positief-nieuws.nl/edities/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/onderwerpen/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-15</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/edities/2026-10-15/</loc>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/edities/2026-10-12/</loc>
@@ -95,7 +99,7 @@
   </url>
   <url>
     <loc>https://positief-nieuws.nl/economie/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/energie-en-innovatie/</loc>
@@ -103,23 +107,71 @@
   </url>
   <url>
     <loc>https://positief-nieuws.nl/gezondheid/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/mens/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/natuur-en-klimaat/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/wetenschap/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/sport/</loc>
     <lastmod>2026-10-05</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-10-15/korendijkse-slikken-meer-weidevogels/</loc>
+    <lastmod>2026-10-15</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-10-15/industrieproductie-augustus-2026/</loc>
+    <lastmod>2026-10-15</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-10-15/vleesverbruik-nederland-daalt-2025/</loc>
+    <lastmod>2026-10-15</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-10-15/verhoeff-bewijs-lehmer-vermoeden/</loc>
+    <lastmod>2026-10-15</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-10-15/4mijl4you-samen-bewegen-groningen/</loc>
+    <lastmod>2026-10-15</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-10-15/dress-for-success-rotterdam-25-jaar/</loc>
+    <lastmod>2026-10-15</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-10-15/berehale-900-gezinnen-water-aan-huis/</loc>
+    <lastmod>2026-10-15</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-10-15/hongarije-beperkingen-lhbti-informatie/</loc>
+    <lastmod>2026-10-15</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-10-15/keswick-marsh-natuurherstel/</loc>
+    <lastmod>2026-10-15</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-10-15/weer-twee-zes-weken-beter-voorspeld/</loc>
+    <lastmod>2026-10-15</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-10-15/nangade-viskweekbakken-overgedragen/</loc>
+    <lastmod>2026-10-15</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-10-15/wereldwijde-natuurgebieden-ruimer-geteld/</loc>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/artikelen/2026-10-12/goederenexport-augustus-groeit/</loc>

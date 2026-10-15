@@ -1,0 +1,354 @@
+{
+  "meta": {
+    "edition_date": "2026-10-15",
+    "email_preheader": "Meer grutto’s, groei in de industrie en minder vlees op het Nederlandse bord.",
+    "editorial_order": [
+      {
+        "section": "nl",
+        "article_slug": "korendijkse-slikken-meer-weidevogels",
+        "rank": 1
+      },
+      {
+        "section": "nl",
+        "article_slug": "industrieproductie-augustus-2026",
+        "rank": 2
+      },
+      {
+        "section": "nl",
+        "article_slug": "vleesverbruik-nederland-daalt-2025",
+        "rank": 3
+      },
+      {
+        "section": "nl",
+        "article_slug": "verhoeff-bewijs-lehmer-vermoeden",
+        "rank": 4
+      },
+      {
+        "section": "nl",
+        "article_slug": "4mijl4you-samen-bewegen-groningen",
+        "rank": 5
+      },
+      {
+        "section": "nl",
+        "article_slug": "dress-for-success-rotterdam-25-jaar",
+        "rank": 6
+      },
+      {
+        "section": "int",
+        "article_slug": "berehale-900-gezinnen-water-aan-huis",
+        "rank": 7
+      },
+      {
+        "section": "int",
+        "article_slug": "hongarije-beperkingen-lhbti-informatie",
+        "rank": 8
+      },
+      {
+        "section": "int",
+        "article_slug": "keswick-marsh-natuurherstel",
+        "rank": 9
+      },
+      {
+        "section": "int",
+        "article_slug": "weer-twee-zes-weken-beter-voorspeld",
+        "rank": 10
+      },
+      {
+        "section": "int",
+        "article_slug": "nangade-viskweekbakken-overgedragen",
+        "rank": 11
+      },
+      {
+        "section": "int",
+        "article_slug": "wereldwijde-natuurgebieden-ruimer-geteld",
+        "rank": 12
+      }
+    ],
+    "ordering": "Nederland eerst; volgorde goedgekeurd door opdrachtgever op 15 oktober 2026."
+  },
+  "nl": [
+    {
+      "category": "Natuur & klimaat",
+      "title": "Meer grutto’s en kieviten na herstel van natte graslanden",
+      "teaser": "In de Korendijkse Slikken stijgt het aantal vogelterritoria nadat het watersysteem is aangepakt. De grutto gaat van 8 naar 18 territoria, de kievit van 24 naar 68.",
+      "article_body": [
+        "Waar graslanden jarenlang te droog waren, vinden weidevogels weer geschikte plekken. Natuurmonumenten meldt dat het vernieuwde watersysteem het gebied in de broedseizoenen van 2025 en 2026 natter hield.",
+        "Tussen 2024 en 2026 nam het aantal gruttoterritoria toe van 8 naar 18 en het aantal kievitterritoria van 24 naar 68. Dat zijn territoria, geen aantallen individuele vogels. De lokale tellingen zijn hoopgevend; ze bewijzen geen landelijk herstel."
+      ],
+      "why_it_matters": "Een zichtbaar resultaat van natuurbeheer, met duidelijke tellingen.",
+      "source": "Natuurmonumenten",
+      "source_id": "natuurmonumenten",
+      "url": "https://www.natuurmonumenten.nl/natuurgebieden/korendijkse-slikken/nieuws/positieve-cijfers-voor-de-korendijkse-slikken",
+      "article_slug": "korendijkse-slikken-meer-weidevogels",
+      "published": "2026-10-09",
+      "email_title": "Meer grutto’s en kieviten na herstel van natte graslanden",
+      "editorial_rank": 1,
+      "regional_rank": 1,
+      "image_query": "id:4173271",
+      "image_alt": "Een grutto in de natuur; illustratief beeld"
+    },
+    {
+      "category": "Economie",
+      "title": "Nederlandse industrie produceert 12 procent meer dan een jaar eerder",
+      "teaser": "De industrieproductie lag in augustus 12 procent boven augustus 2025. Vooral de machine-industrie droeg bij; ook ten opzichte van juli was er groei.",
+      "article_body": [
+        "De kalendergecorrigeerde Nederlandse industrieproductie was in augustus 12 procent hoger dan een jaar eerder. Dat meldt het CBS op 9 oktober, met de grootste jaarstijging in ruim vier jaar.",
+        "Ten opzichte van juli steeg de productie met 3,3 procent. Het is een positief signaal voor bedrijvigheid, maar één maandcijfer zegt niet dat alle bedrijven groeien of dat huishoudens meer te besteden hebben."
+      ],
+      "why_it_matters": "De cijfers geven een concreet signaal van industriële activiteit.",
+      "source": "CBS",
+      "source_id": "cbs",
+      "url": "https://www.cbs.nl/nl-nl/nieuws/2026/41/productie-industrie-in-augustus-12-procent-hoger-dan-jaar-eerder",
+      "article_slug": "industrieproductie-augustus-2026",
+      "published": "2026-10-09",
+      "email_title": "Nederlandse industrie produceert 12 procent meer dan een jaar eerder",
+      "editorial_rank": 2,
+      "regional_rank": 2,
+      "image_query": "id:2819136",
+      "image_alt": "Metaalbewerking met een industriële machine; illustratief beeld"
+    },
+    {
+      "category": "Natuur & klimaat",
+      "title": "Nederlanders gebruiken opnieuw minder vlees",
+      "teaser": "Nieuwe Wageningse cijfers laten een daling van ruim twee procent in 2025 zien. Vooral het verbruik van varkensvlees nam af; kip steeg nog licht.",
+      "article_body": [
+        "Het Nederlandse vleesverbruik is in 2025 opnieuw gedaald. In de op 14 oktober gepresenteerde WUR-cijfers komt het uit op 67,3 kilo karkasgewicht per inwoner, tegenover een herziene 68,8 kilo in 2024. Dat is ongeveer 2,2 procent minder.",
+        "Karkasgewicht omvat ook botten en is dus niet wat iemand daadwerkelijk opeet. Bovendien zijn oudere varkensvleescijfers gecorrigeerd. De daling ten opzichte van de herziene reeks blijft overeind: vooral varkensvlees en iets minder rundvlees, terwijl pluimvee licht toeneemt."
+      ],
+      "why_it_matters": "Een beweging naar minder vlees wordt zichtbaar in landelijke verbruikscijfers, in plaats van alleen in goede voornemens.",
+      "source": "Wakker Dier / WUR",
+      "source_id": "wakker-dier",
+      "url": "https://www.wakkerdier.nl/nieuws/nieuw-onderzoek-wur-nederlanders-eten-minder-vlees/",
+      "article_slug": "vleesverbruik-nederland-daalt-2025",
+      "published": "2026-10-14",
+      "email_title": "Nederlanders gebruiken opnieuw minder vlees",
+      "editorial_rank": 3,
+      "regional_rank": 3,
+      "image_query": "id:3860902",
+      "image_alt": "Een maaltijd met groenten; illustratief beeld"
+    },
+    {
+      "category": "Wetenschap",
+      "title": "Eindhovense wiskundige vindt met AI een bewijs voor een raadsel uit 1965",
+      "teaser": "Tom Verhoeff heeft een bewijs gepubliceerd voor een lang openstaand probleem over het verwisselen van voorwerpen. AI hielp de redenering terug te brengen tot een veel kortere oplossing.",
+      "article_body": [
+        "Kun je alle verschillende volgordes van een rij voorwerpen doorlopen door steeds twee buren om te wisselen, ook als sommige voorwerpen gelijk zijn? Over een variant van die vraag formuleerde D.H. Lehmer in 1965 een vermoeden.",
+        "TU/e-wiskundige Tom Verhoeff presenteert nu een algemeen bewijs. Met AI ontstond een kortere aanpak; de redenering is ook uitgewerkt voor controle in bewijssoftware Lean. Het manuscript is openbaar op arXiv. Het is een preprint: beoordeling door een wetenschappelijk tijdschrift heeft nog niet plaatsgevonden."
+      ],
+      "why_it_matters": "Een concreet nieuw wiskundig resultaat laat zien hoe onderzoekers en controleerbare software samen verder kunnen komen.",
+      "source": "TU Eindhoven",
+      "source_id": "tu-eindhoven",
+      "url": "https://www.tue.nl/nieuws-en-evenementen/nieuwsoverzicht/08-10-2026-deze-wiskundige-werkte-jarenlang-aan-een-probleem-en-zag-ai-uitgroeien-van-assistent-tot-grootmeester",
+      "article_slug": "verhoeff-bewijs-lehmer-vermoeden",
+      "published": "2026-10-08",
+      "email_title": "Eindhovense wiskundige vindt met AI een bewijs voor een raadsel uit 1965",
+      "editorial_rank": 4,
+      "regional_rank": 4,
+      "image_query": "id:1547018",
+      "image_alt": "Wiskundige formules op een schoolbord; illustratief beeld"
+    },
+    {
+      "category": "Mens",
+      "title": "Duizenden deelnemers maken van de 4Mijl4You een feest voor iedereen",
+      "teaser": "Wandelend, rollend of op skates: bij de Groningse 4Mijl4You telt meedoen. Duizenden mensen legden de verlichte route af, aangemoedigd door muzikanten en publiek.",
+      "article_body": [
+        "Niet de snelste tijd, maar samen de finish halen stond op 10 oktober centraal bij de 4Mijl4You. Deelnemers trokken over het parcours van 6,4 kilometer tussen Haren en Groningen, op een manier die bij hen past.",
+        "Ook mensen die niet kunnen hardlopen, kunnen zo meedoen: bijvoorbeeld met een rolstoel of wandelend. De organisatie beschrijft duizenden deelnemers, lichtgevende outfits, muziek en een feestelijke ontvangst. Het verslag achteraf bevestigt dat het evenement daadwerkelijk plaatsvond."
+      ],
+      "why_it_matters": "Een groot beweegevenement geeft mensen met verschillende mogelijkheden samen een plek op hetzelfde parcours.",
+      "source": "Menzis 4Mijl4You / Golazo",
+      "source_id": "golazo-4mijl4you",
+      "url": "https://4mijl4you.nl/lichtjes-muziek-en-duizenden-glimlachen-tijdens-de-15e-editie-van-de-menzis-4mijl4you/",
+      "article_slug": "4mijl4you-samen-bewegen-groningen",
+      "published": "2026-10-10",
+      "email_title": "Duizenden deelnemers maken van de 4Mijl4You een feest voor iedereen",
+      "editorial_rank": 5,
+      "regional_rank": 5,
+      "image_query": "id:4631282",
+      "image_alt": "Een deelnemer aan een sportevenement in een rolstoel; illustratief beeld"
+    },
+    {
+      "category": "Mens",
+      "title": "In deze Rotterdamse kledingwinkel krijgt zelfvertrouwen geen prijskaartje",
+      "teaser": "Bij Dress for Success kiezen mensen met een minimuminkomen gratis een passende outfit, met persoonlijke begeleiding. De winkel vierde deze week haar 25-jarig bestaan.",
+      "article_body": [
+        "In een winkel aan het Rotterdamse Rijnhoutplein hangen nette pakken, blouses en schoenen. Een kassa ontbreekt: mensen met een minimuminkomen krijgen er gratis kleding voor bijvoorbeeld een sollicitatie, stage of belangrijke gelegenheid.",
+        "Dress for Success vierde op 9 oktober haar 25-jarig bestaan. In de nieuwe reportage van Rijnmond vertellen klanten wat de kleding en persoonlijke aandacht voor hen betekenen. De organisatie zegt in die jaren enkele duizenden mensen te hebben geholpen. Dat is geleverd werk; hoeveel mensen er een baan door vonden, is hiermee niet vastgesteld."
+      ],
+      "why_it_matters": "Een praktische drempel om mee te doen verdwijnt, met aandacht voor wat iemand nodig heeft en graag wil.",
+      "source": "Rijnmond",
+      "source_id": "rijnmond",
+      "url": "https://www.rijnmond.nl/nieuws/2263829/deze-kledingwinkel-zonder-kassa-zorgt-al-25-jaar-dat-iedereen-weer-goed-voor-de-dag-komt",
+      "article_slug": "dress-for-success-rotterdam-25-jaar",
+      "published": "2026-10-11",
+      "email_title": "In deze Rotterdamse kledingwinkel krijgt zelfvertrouwen geen prijskaartje",
+      "editorial_rank": 6,
+      "regional_rank": 6,
+      "image_query": "id:1850082",
+      "image_alt": "Kleding aan hangers in een winkel; illustratief beeld"
+    }
+  ],
+  "int": [
+    {
+      "category": "Gezondheid",
+      "title": "900 gezinnen in Ethiopië hebben nu water aan huis",
+      "teaser": "Een kraan bij huis maakt voor gezinnen in Berehale dagelijks verschil. Nieuwe aansluitingen besparen het lopen met zware watercontainers en geven vrouwen en meisjes tijd terug.",
+      "article_body": [
+        "In Berehale, in het noordoosten van Ethiopië, hebben 900 gezinnen een aansluiting op de waterleiding gekregen. UNICEF beschrijft het bereikte resultaat in een reportage van 13 oktober.",
+        "Er zijn twee reservoirs gebouwd, bestaande boorputten hersteld en leidingen uitgebreid. Zonne-energie helpt het water omhoog te pompen. De reportage laat zien wat de aansluiting voor één gezin betekent; de netwerkuitbreiding loopt nog door. Niet alle inwoners zijn al bereikt."
+      ],
+      "why_it_matters": "Water aan huis neemt een dagelijkse fysieke taak weg en maakt wassen, drinken en koken gemakkelijker.",
+      "source": "UNICEF",
+      "source_id": "unicef",
+      "url": "https://www.unicef.org/ethiopia/stories/new-rhythm-rawdas-day",
+      "article_slug": "berehale-900-gezinnen-water-aan-huis",
+      "published": "2026-10-13",
+      "email_title": "900 gezinnen in Ethiopië hebben nu water aan huis",
+      "editorial_rank": 7,
+      "regional_rank": 1,
+      "image_query": "id:8493302",
+      "image_alt": "Stromend water uit een kraan; illustratief beeld"
+    },
+    {
+      "category": "Mens",
+      "title": "Hongarije stemt voor schrappen van beperkingen op lhbti-informatie",
+      "teaser": "Het parlement heeft op 13 oktober centrale beperkingen uit de wet van 2021 geschrapt. De betrokken rechtenorganisatie Háttér verwelkomt de stap, maar wijst op resterende discriminatie.",
+      "article_body": [
+        "Informatie over homoseksualiteit en genderdiversiteit krijgt in Hongarije weer meer ruimte. Het parlement stemde op 13 oktober voor het verwijderen van centrale beperkende bepalingen uit de zogenoemde propagandawet.",
+        "De rechtenorganisatie Háttér bevestigt de stemming in haar bericht van 14 oktober. Zij benadrukt dat verdere wetswijzigingen nodig blijven, onder meer rond beperkende uitvoeringsregels voor boeken. Dit is dus een concrete stap richting gelijkheid, geen volledige afschaffing van alle discriminerende regels."
+      ],
+      "why_it_matters": "De verandering vergroot de ruimte om mensen en hun verhalen zichtbaar te maken.",
+      "source": "Háttér Társaság",
+      "source_id": "hatter-tarsasag",
+      "url": "https://hatter.hu/hirek/megcsinaltuk-visszavonta-az-orszaggyules-a-propagandatorvenyt",
+      "article_slug": "hongarije-beperkingen-lhbti-informatie",
+      "published": "2026-10-14",
+      "email_title": "Hongarije stemt voor schrappen van beperkingen op lhbti-informatie",
+      "editorial_rank": 8,
+      "regional_rank": 2,
+      "image_query": "id:4552833",
+      "image_alt": "Een regenboogvlag; illustratief beeld"
+    },
+    {
+      "category": "Natuur & klimaat",
+      "title": "Vogels en salamanders vinden hun weg naar hersteld Engels moeras",
+      "teaser": "Bij Norwich is ruim zeven hectare rivieroever en overstromingsvlakte heringericht. Nieuwe poelen en ondiepten geven water en dieren weer ruimte.",
+      "article_body": [
+        "Bij Keswick Marsh langs de River Yare hebben natuurbeheerders ruim zeven hectare oever en overstromingsvlakte heringericht. Nieuwe poelen en aangepaste greppels verbinden de rivier weer met het omliggende terrein.",
+        "Het werk is uitgevoerd, meldt de Environment Agency op 13 oktober. Op het terrein zijn onder meer zilverreigers, salamanders, libellen en een kleine plevier waargenomen. Dat zijn bemoedigende eerste bezoeken; blijvend herstel van populaties vraagt langere monitoring."
+      ],
+      "why_it_matters": "Nieuwe leefplekken zijn gerealiseerd en worden al door dieren gebruikt.",
+      "source": "Environment Agency",
+      "source_id": "environment-agency",
+      "url": "https://www.gov.uk/government/news/rare-chalk-stream-created-to-boost-wildlife-in-norfolk",
+      "article_slug": "keswick-marsh-natuurherstel",
+      "published": "2026-10-13",
+      "email_title": "Vogels en salamanders vinden hun weg naar hersteld Engels moeras",
+      "editorial_rank": 9,
+      "regional_rank": 3,
+      "image_query": "id:5900178",
+      "image_alt": "Water en riet in een moerasgebied; illustratief beeld"
+    },
+    {
+      "category": "Wetenschap",
+      "title": "Nieuwe methode maakt weersverwachtingen voor twee tot zes weken beter",
+      "teaser": "Een internationaal onderzoeksteam laat een leermodel fouten in bestaande weersystemen corrigeren. In een echte voorspelwedstrijd presteerde de aanpak beter dan de andere deelnemende systemen.",
+      "article_body": [
+        "Onderzoekers hebben een methode ontwikkeld die leert van eerdere voorspellingsfouten. Als extra laag boven op bestaande weersystemen verbetert die de kansverwachtingen voor twee tot zes weken vooruit.",
+        "De studie verscheen op 14 oktober in Nature. In de ECMWF-voorspelwedstrijd van 2025 was de methode de beste voor de onderzochte weervariabelen en termijnen. Ook extreme gebeurtenissen werden beter voorspeld. Dit betekent geen exacte lokale weersvoorspelling voor iedere dag; het gaat om betere kansen op langere termijn."
+      ],
+      "why_it_matters": "Betere verwachtingen kunnen landbouw, waterbeheer en energieplanning helpen voorbereiden.",
+      "source": "MIT News",
+      "source_id": "mit-news",
+      "url": "https://news.mit.edu/2026/researchers-improve-weather-forecasts-looking-two-six-weeks-out-1014",
+      "article_slug": "weer-twee-zes-weken-beter-voorspeld",
+      "published": "2026-10-14",
+      "email_title": "Nieuwe methode maakt weersverwachtingen voor twee tot zes weken beter",
+      "editorial_rank": 10,
+      "regional_rank": 4,
+      "image_query": "id:3488632",
+      "image_alt": "Wolken aan de hemel; illustratief beeld"
+    },
+    {
+      "category": "Economie",
+      "title": "180 mensen in Mozambique krijgen middelen voor gezamenlijke viskweek",
+      "teaser": "Achttien lokale verenigingen in Nangade hebben viskweekbakken ontvangen. De overdracht geeft 180 deelnemers middelen om voedsel en inkomsten te produceren.",
+      "article_body": [
+        "In Nangade zijn op 1 oktober achttien viskweekbakken overgedragen aan achttien verenigingen. Volgens het nieuwe UNDP-verslag van 14 oktober doen daar 180 vrouwen en mannen aan mee.",
+        "Zij kregen ook jonge vissen, voer en technische ondersteuning. De overdracht is een bereikt resultaat in een door conflict getroffen regio. Hogere inkomens en betere voedselzekerheid zijn beoogde vervolgeffecten, nog geen aangetoonde uitkomsten."
+      ],
+      "why_it_matters": "Deelnemers beschikken over concrete productiemiddelen om hun bestaan weer op te bouwen.",
+      "source": "UNDP",
+      "source_id": "undp",
+      "url": "https://www.undp.org/mozambique/news/nangade-fish-farming-opens-path-economic-recovery",
+      "article_slug": "nangade-viskweekbakken-overgedragen",
+      "published": "2026-10-14",
+      "email_title": "180 mensen in Mozambique krijgen middelen voor gezamenlijke viskweek",
+      "editorial_rank": 11,
+      "regional_rank": 5,
+      "image_query": "id:6795464",
+      "image_alt": "Vissen in een kweekvijver; illustratief beeld"
+    },
+    {
+      "category": "Natuur & klimaat",
+      "title": "Wereld telt waarschijnlijk meer natuurgebieden dan de registers laten zien",
+      "teaser": "Een nieuwe studie schat dat 26,8 procent van het landoppervlak onder een vorm van natuurbehoud valt. Veel gebieden ontbreken in internationale registraties.",
+      "article_body": [
+        "Onderzoekers brachten in een steekproef van 25 landen en gebieden ook nationaal erkende gebieden en mogelijke andere vormen van natuurbehoud in kaart. Hun studie verscheen op 14 oktober in Nature.",
+        "De schatting voor 2022 komt uit op 26,81 procent van het landoppervlak. Dat is geen plotselinge uitbreiding van beschermde natuur: bestaand beheer blijkt ondergeteld. Bovendien is oppervlakte alleen onvoldoende om biodiversiteitsverlies tegen te gaan; kwaliteit en spreiding blijven nodig."
+      ],
+      "why_it_matters": "Bestaande inspanningen worden zichtbaarder en kunnen gerichter worden versterkt.",
+      "source": "Nature",
+      "source_id": "nature",
+      "url": "https://www.nature.com/articles/s41586-026-11157-4",
+      "article_slug": "wereldwijde-natuurgebieden-ruimer-geteld",
+      "published": "2026-10-14",
+      "email_title": "Wereld telt waarschijnlijk meer natuurgebieden dan de registers laten zien",
+      "editorial_rank": 12,
+      "regional_rank": 6,
+      "image_query": "id:3325080",
+      "image_alt": "Berglandschap bij zonsondergang; illustratief beeld"
+    }
+  ],
+  "headlines": [
+    {
+      "category": "Natuur & klimaat",
+      "title": "KNMI gaat vanaf november plaatselijker waarschuwen",
+      "teaser": "Weerwaarschuwingen krijgen flexibele gebieden in plaats van provinciegrenzen. Vanaf november moeten meldingen daardoor beter aansluiten op je locatie.",
+      "article_body": [],
+      "why_it_matters": "",
+      "source": "KNMI",
+      "source_id": "knmi",
+      "url": "https://www.knmi.nl/over-het-knmi/nieuws/knmi-waarschuwt-vanaf-november-gerichter",
+      "article_slug": "knmi-lokale-waarschuwingen",
+      "published": "2026-10-14",
+      "email_title": "KNMI gaat vanaf november plaatselijker waarschuwen"
+    },
+    {
+      "category": "Gezondheid",
+      "title": "13 wekenecho wordt geen vast onderdeel van prenatale screening",
+      "teaser": "De minister heeft besloten de echo niet definitief in te voeren. Het aanbod blijft tot 1 januari 2028 beschikbaar; er is dus geen onmiddellijke stop.",
+      "article_body": [],
+      "why_it_matters": "",
+      "source": "RIVM",
+      "source_id": "rivm",
+      "url": "https://www.rivm.nl/nieuws/besluit-minister-vws-13-wekenecho-stopt",
+      "article_slug": "13-wekenecho-afbouw-2028",
+      "published": "2026-10-13",
+      "email_title": "13 wekenecho wordt geen vast onderdeel van prenatale screening"
+    },
+    {
+      "category": "Economie",
+      "title": "Inflatie in september bevestigd op 3,4 procent",
+      "teaser": "Consumentenprijzen lagen in september 3,4 procent hoger dan een jaar eerder, tegen 3,3 procent in augustus. De definitieve cijfers bevestigen de eerdere snelle raming.",
+      "article_body": [],
+      "why_it_matters": "",
+      "source": "CBS",
+      "source_id": "cbs",
+      "url": "https://www.cbs.nl/nl-nl/nieuws/2026/42/inflatie-stijgt-naar-3-4-procent-in-september",
+      "article_slug": "inflatie-september-definitief",
+      "published": "2026-10-13",
+      "email_title": "Inflatie in september bevestigd op 3,4 procent"
+    }
+  ]
+}
