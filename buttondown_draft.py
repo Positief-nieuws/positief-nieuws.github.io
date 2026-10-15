@@ -451,7 +451,11 @@ def main():
         dossier_path = Path("redactie") / f"{edition}.json"
         if not dossier_path.exists():
             raise ValueError("Redactioneel dossier ontbreekt; geen Buttondown-concept gemaakt.")
-        report = check(data, json.loads(dossier_path.read_text(encoding="utf-8")))
+        selection_path = Path("selectie") / f"{edition}.json"
+        pool_path = Path("selectie") / f"{edition}-kandidaten.json"
+        selection = json.loads(selection_path.read_text(encoding="utf-8")) if selection_path.exists() else None
+        pool = json.loads(pool_path.read_text(encoding="utf-8")) if pool_path.exists() else None
+        report = check(data, json.loads(dossier_path.read_text(encoding="utf-8")), selection_review=selection, candidate_pool=pool)
         if not report["ready"]:
             raise ValueError("Redactionele controle: " + "; ".join(report["errors"]))
         subject = build_subject(data)
