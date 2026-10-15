@@ -37,7 +37,7 @@ def valid_url(value):
     p=urlsplit(str(value or ''))
     return p.scheme in {'http','https'} and bool(p.hostname)
 
-def check(news, dossier, policy=None, history=None, as_of=None):
+def check(news, dossier, policy=None, history=None, as_of=None, selection_review=None, candidate_pool=None):
     policy=policy or json.loads((ROOT/'editorial_policy.json').read_text(encoding='utf-8'))
     history=load_history() if history is None else history
     today=as_of or datetime.now(ZoneInfo(policy["timezone"])).date()
@@ -48,6 +48,14 @@ def check(news, dossier, policy=None, history=None, as_of=None):
     except (ValueError,TypeError):edition_day=None;errors.append('Ongeldige editie-datum.')
     if edition_day and edition_day>today:errors.append('Editiedatum ligt in de toekomst; nog niet publicatieklaar.')
     if dossier.get('edition_date')!=edition:errors.append('Dossier hoort niet bij deze editie.')
+    required_from=policy.get('selection_review_required_from')
+    if required_from and edition_day and edition_day.isoformat()>=required_from:
+        if selection_review is None or candidate_pool is None:
+            errors.append('Selectiecontrole vóór eerste concept ontbreekt; volledige bronrun en selectiedossier zijn verplicht.')
+        else:
+            from selection_check import check_selection
+            errors.extend('Selectiecontrole: '+message for message in check_selection(candidate_pool,selection_review,news)['errors'])
+
     if dossier.get('news_sha256')!=news_digest(news):errors.append('Dossier hoort niet bij deze exacte versie van nieuws.json.')
     if dossier.get('approved') is not True or not str(dossier.get('approved_by') or '').strip():
         errors.append('Expliciete redactionele goedkeuring ontbreekt.')
@@ -154,7 +162,11 @@ def main():
     edition=news.get('meta',{}).get('edition_date') or news.get('edition',{}).get('date')
     path=Path(args.dossier) if args.dossier else ROOT/'redactie'/f'{edition}.json'
     if not path.exists():raise SystemExit(f'Geen redactioneel dossier: {path}. Publicatie tegengehouden.')
-    result=check(news,json.loads(path.read_text(encoding='utf-8')))
+    selection_path=ROOT/'selectie'/f'{edition}.json'
+    pool_path=ROOT/'selectie'/f'{edition}-kandidaten.json'
+    selection=json.loads(selection_path.read_text()) if selection_path.exists() else None
+    pool=json.loads(pool_path.read_text()) if pool_path.exists() else None
+    result=check(news,json.loads(path.read_text(encoding='utf-8')),selection_review=selection,candidate_pool=pool)
     rendered=json.dumps(result,ensure_ascii=False,indent=2)+'\n'
     if args.report:Path(args.report).write_text(rendered,encoding='utf-8')
     print(rendered)

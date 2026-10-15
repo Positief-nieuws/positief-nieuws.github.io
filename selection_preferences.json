@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "updated_on": "2026-10-15",
+  "audience": "Nederlandse lezers",
+  "ordering": "Eerst Nederlandse nieuwsfeiten, daarna wereldnieuws; binnen iedere groep van sterk naar minder sterk.",
+  "prefer": ["Tastbare, reeds bereikte verbetering", "Menselijke betekenis en prettig leesbare vooruitgang", "Natuurherstel met resultaten", "Nieuwe inzichten en meetbare vooruitgang zonder opgeblazen claims"],
+  "requires_extra_editorial_justification": ["Routinecampagnes en jaarlijks terugkerende zorg, zoals de griepprik", "Herstel van eerder gemaakte fouten, zoals achterstallige studententoeslagen", "Wapens en rampen als dragend onderwerp", "Hulpverlening zonder aangetoond nieuw resultaat", "Prijzen, onderscheidingen, triviale sportuitslagen en jubileums zonder concreet menselijk resultaat"],
+  "interpretation": "Deze voorkeuren sturen de afweging. Geen algemeen verbod op medisch onderzoek, sport, hulpverlening of jubileums. Een bewijsbaar sterk resultaat kan passen; motiveer dit.",
+  "reference_edition": "2026-10-15",
+  "rubric": {
+    "reader_value": "0: geen positieve lezerswaarde; 1: abstract of weinig aansprekend; 2: concreet en relevant; 3: opvallend sterk, menselijk of betekenisvol",
+    "concrete_result": "0: alleen probleem; 1: plan, routine of erkenning; 2: bereikt resultaat of controleerbaar nieuw inzicht; 3: bijzonder sterk resultaat met duidelijk bereik",
+    "evidence": "0: ongecontroleerd; 1: beperkte claimonderbouwing; 2: oorspronkelijke bron en beperkingen gecontroleerd; 3: sterke gegevens en waar nodig onafhankelijke bevestiging",
+    "recency": "0: geen nieuwe aanleiding; 1: gemotiveerde oudere uitzondering; 2: nieuwe publicatie binnen zeven dagen; 3: verse ontwikkeling binnen 48 uur",
+    "originality": "0: herhaling; 1: voorspelbare routine; 2: onderscheidend verhaal; 3: verrassende of nieuwe ontwikkeling"
+  },
+  "selected_minimum_total": 11,
+  "selected_minimum_axes": {"reader_value": 2, "concrete_result": 2, "evidence": 2},
+  "minimum_reserves_per_region": 3
+}

@@ -172,7 +172,7 @@ def parse_date(value):
     except Exception:
         return None
 
-def google_site_feed(domain, region, language=None):
+def google_site_feed(domain, region, language=None, query_scope="broad"):
     language = language or ("nl" if region == "nl" else "en")
     if language == "nl":
         cues = "doorbraak OR succes OR herstel OR verbetering OR ontdekking OR helpt OR oplossing"
@@ -183,7 +183,8 @@ def google_site_feed(domain, region, language=None):
     else:
         cues = "breakthrough OR success OR recovery OR improvement OR discovery OR solution"
         locale = "&hl=en-US&gl=US&ceid=US:en"
-    query = f"site:{domain} ({cues}) when:7d"
+    # Broad discovery avoids requiring an optimistic keyword before an editor sees a story.
+    query = f"site:{domain} when:7d" if query_scope == "broad" else f"site:{domain} ({cues}) when:7d"
     return "https://news.google.com/rss/search?q=" + urllib.parse.quote_plus(query) + locale
 
 
@@ -273,7 +274,7 @@ def parse_nu_good_news(raw, max_items=30):
 def source_url(src):
     if src["mode"] == "rss":
         return src["url"]
-    return google_site_feed(src["domain"], src["region"], src.get("language"))
+    return google_site_feed(src["domain"], src["region"], src.get("language"), src.get("query_scope", "broad"))
 
 def fetch(url, html=False, timeout=20):
     headers = {
@@ -434,16 +435,20 @@ def parse_feed(raw):
             items.append({"title": title, "url": url, "summary": summary, "published": published, "updated": updated})
     return items
 
+def matched_terms(text, terms):
+    """Match complete terms; 'war' must not match 'award' or 'forward'."""
+    value = clean(text).casefold()
+    return [term for term in terms if re.search(r"(?<!\w)" + re.escape(term.casefold()) + r"(?!\w)", value)]
+
 def contains(text, terms):
-    t = clean(text).lower()
-    return any(term in t for term in terms)
+    return bool(matched_terms(text, terms))
 
 def cue_score(title, summary, region):
     cues = POSITIVE_CUES_NL if region == "nl" else POSITIVE_CUES_INT
     t = clean(title).lower()
     s = clean(summary).lower()
     # Titel weegt zwaarder, maar dit blijft slechts een voorselectiescore.
-    return sum(3 for cue in cues if cue in t) + sum(1 for cue in cues if cue in s)
+    return 3 * len(matched_terms(t, cues)) + len(matched_terms(s, cues))
 
 def category_hint(title, summary, source_hint=None):
     title_text = clean(title).lower()
@@ -646,7 +651,7 @@ def collect(now=None, sources=None, history=None, force=False):
     def read_channel(src):
         cid = src["channel_id"]
         previous = state.get(cid, {})
-        use_cache = not force and not due(src, previous, now)
+        use_cache = not force and previous.get("discovery_version") == 2 and not due(src, previous, now)
         source_error = None
         if use_cache:
             items = [{**x, "published":parse_date(x.get("published")), "updated":parse_date(x.get("updated"))} for x in previous.get("items",[])]
@@ -667,7 +672,7 @@ def collect(now=None, sources=None, history=None, force=False):
                     "cached_signal_score":cue_score(x["title"],x.get("summary",""),src["region"]),
                     "cached_category_hint":category_hint(x["title"],x.get("summary",""),src.get("hint"))}
                     for x in items]
-                previous = {"last_success_at":now.isoformat(),"last_error":None,"items":serialized}
+                previous = {"last_success_at":now.isoformat(),"last_error":None,"items":serialized,"discovery_version":2}
             except Exception as exc:
                 source_error = f"{type(exc).__name__}: {exc}"
                 previous = {**previous,"last_error":source_error}
@@ -686,7 +691,7 @@ def collect(now=None, sources=None, history=None, force=False):
             "next_check_at":(now if source_error else datetime.fromisoformat(previous["last_success_at"])+timedelta(hours={"every_edition":20,"twice_weekly":72,"weekly":168}[src["check_frequency"]])).isoformat()}
         for x in items:
             title, summary = clean(x["title"]), clean(x.get("summary"))
-            if contains(title, JUNK_TERMS): continue
+            # Ambiguous keywords (e.g. weather forecast research) stay available for review.
             pub = x.get("published")
             age = (now-pub).total_seconds()/3600 if pub else None
             if age is not None and age > MAX_AGE_HOURS: continue
@@ -717,7 +722,7 @@ def collect(now=None, sources=None, history=None, force=False):
                 "signal_score":signal,"source_weight":src.get("weight",1),
                 "curation_bonus":curation_bonus,"freshness_penalty":penalty,
                 "curated_source":src.get("curated_source"),"discovery":src["mode"],
-                "editorial_warnings":["negative_keyword_requires_context"] if contains(title,HARD_BLOCK) else [],
+                "editorial_warnings":(["negative_keyword_requires_context"] if contains(title,HARD_BLOCK) else []) + (["possible_non_story_requires_review"] if contains(title,JUNK_TERMS) else []),
                 "history_matches":history_matches(x,history),"source_error":source_error}
             # Title similarity is a warning; follow-up developments remain possible.
             entry["history_matches"] += [{"edition_date":h["edition_date"],"title":h.get("title",""),"kind":"similar_title"}
@@ -745,6 +750,7 @@ def rank(item):
     )
 
 def shortlist(items, region):
+    """Navigation overview only: all candidates are also exported for editorial review."""
     pool = [x for x in items if x["region"] == region]
     pool.sort(key=lambda x:(bool(x.get("date_warnings")),bool(x.get("history_matches")), -rank(x)))
     selected, per_source, per_theme = [], {}, {}
@@ -760,6 +766,21 @@ def shortlist(items, region):
             selected.append(item);per_source[org]=per_source.get(org,0)+1;per_theme[theme]=per_theme.get(theme,0)+1
     return selected
 
+def coverage_report(health, registry):
+    """Make incomplete discovery explicit instead of treating HTTP success as coverage."""
+    tasks = []
+    for cid, channel in sorted(health.items()):
+        reasons = []
+        if channel.get("last_error"): reasons.append("fetch_failed")
+        if channel.get("mode") == "google_site": reasons.append("search_is_not_complete")
+        if not channel.get("items"): reasons.append("empty_channel")
+        if reasons:
+            tasks.append({"id": cid, "source_id": channel["source_id"], "reasons": reasons})
+    for source in registry["sources"]:
+        if source.get("enabled") and source["category"] != "C" and source["check_frequency"] == "manual":
+            tasks.append({"id": "manual:" + source["source_id"], "source_id": source["source_id"], "reasons": ["manual_evidence_source_needs_current_check"]})
+    return {"technical_success_is_not_complete_discovery": True, "tasks": tasks}
+
 def main():
     all_candidates, errors = collect(force="--force" in __import__("sys").argv)
     nl = shortlist(all_candidates, "nl")
@@ -774,7 +795,7 @@ def main():
     data = {
         "meta": {
             "generated_at": now.isoformat(),
-            "generator": "Positief nieuws kandidaten 0.4",
+            "generator": "Positief nieuws kandidaten 0.5",
             "purpose": "Voorselectie voor AI-redactie; dit is NIET de definitieve Goed nieuws-editie.",
             "max_age_hours": MAX_AGE_HOURS,
             "max_per_region": MAX_PER_REGION,
@@ -788,6 +809,8 @@ def main():
             },
             "feed_errors": errors,
             "collection_complete": len(errors) == 0 and len(nl) >= 6 and len(intl) >= 6,
+            "editorial_coverage_complete": False,
+            "collection_complete_meaning": "Technical fetch success only; search feeds do not prove complete source coverage.",
             "source_registry": "sources.json",
             "registry_sha256": hashlib.sha256((ROOT/"sources.json").read_bytes()).hexdigest(),
             "editorial_policy": "editorial_policy.json",
@@ -815,9 +838,16 @@ def main():
                 "Voer editorial_check.py uit voor iedere publicatie en ieder nieuwsbriefconcept.",
                 "Geen vacatures, losse weersverwachtingen, celebrity-fluff of puur triviale uitslagen.",
                 "Eerste verhaal moet direct prettig en positief voelen.",
+                "Beoordeel de volledige all_candidates-lijst per bron; de top40 is geen redactionele grens.",
+                "NL eerst, daarna wereld; volgorde op nieuwsfeit en redactionele kwaliteit, niet op brontaal.",
+                "Gebruik selection_preferences.json en rond de brondekkings- en reservecontrole af vóór het eerste concept.",
                 "Behoud reading_time_minutes bij geselecteerde artikelen als die waarde beschikbaar is.",
             ],
         },
+        "all_candidates": all_candidates,
+        "review_index_by_source": {sid:[x["id"] for x in all_candidates if x["source_id"] == sid] for sid in sorted({x["source_id"] for x in all_candidates})},
+        "coverage": coverage_report(CHANNEL_HEALTH, load_registry()),
+        "review_contract": {"scope": "all_candidates, not only the two shortlists", "required_before_concept": "selection_check.py", "review_file": "selectie/YYYY-MM-DD.json", "shortlist_is_exhaustive": False},
         "nl_candidates": nl,
         "international_candidates": intl,
     }
