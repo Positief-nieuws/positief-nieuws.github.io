@@ -27,8 +27,12 @@ def apply(phase=3):
         if home and 'data-newsletter-cta="nav"' not in s:
             s=s.replace('<a id="nav-contact"','<a href="/#nieuwsbrief-boven" data-newsletter-cta="nav">Nieuwsbrief</a><a id="nav-contact"',1)
         if home:
-            m=re.search(r'<section class="hero-intro".*?</section>',s,re.S)
+            m=re.search(r'<section class="homepage-top"[^>]*>.*?</section>',s,re.S)
             if m:s=s[:m.end()]+'<!-- newsletter:home_hero:start --><div id="nieuwsbrief-boven">'+block('home_hero')+'</div><!-- newsletter:home_hero:end -->'+s[m.end():]
+            # Preserve the same form node while news is refreshed dynamically.
+            if 'const homeNewsletter =' not in s:
+                s=s.replace("      grid.innerHTML = ''; grid.hidden", "      const homeNewsletter = type === 'nl' ? document.getElementById('nieuwsbrief-boven') : null;\n      grid.innerHTML = ''; grid.hidden", 1)
+                s=s.replace('top.appendChild(side); grid.appendChild(top);', 'top.appendChild(side); grid.appendChild(top);\n        if (homeNewsletter) grid.appendChild(homeNewsletter);', 1)
             # Avoid nested markers in repeat runs.
             s=s.replace('<!-- newsletter:home_hero:start --><section','<section').replace('</section><!-- newsletter:home_hero:end --></div>','</section></div>')
         if phase>=2 and page=='article':
