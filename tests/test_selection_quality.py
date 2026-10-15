@@ -94,6 +94,23 @@ class SelectionTests(unittest.TestCase):
             self.assertFalse(output['meta']['editorial_coverage_complete'])
             self.assertNotIn('approved',output)
 
+    def test_broad_and_targeted_search_keep_recent_prior_discoveries(self):
+        src={**collector.SOURCES[0],'mode':'google_site','domain':'example.invalid','language':'nl'}
+        def feed(url):
+            title='Gerichte vondst' if 'doorbraak' in url else 'Brede vondst'
+            slug='targeted' if 'doorbraak' in url else 'broad'
+            return f'<rss><channel><item><title>{title}</title><link>https://example.invalid/{slug}</link><pubDate>Mon, 19 Oct 2026 05:00:00 GMT</pubDate></item></channel></rss>'.encode()
+        with tempfile.TemporaryDirectory() as td:
+            state=Path(td)/'state.json'
+            state.write_text(json.dumps({src['channel_id']:{'last_success_at':'2026-10-18T06:00:00+00:00','items':[{'title':'Eerdere sterke vondst','url':'https://example.invalid/prior','published':'2026-10-18T05:00:00+00:00'}]}}))
+            with patch.object(collector,'STATE_PATH',state),patch.object(collector,'fetch',side_effect=feed) as fetch:
+                items,errors=collector.collect(datetime(2026,10,19,6,tzinfo=timezone.utc),[src],[],True)
+            self.assertEqual(fetch.call_count,2);self.assertFalse(errors)
+            self.assertEqual({x['url'] for x in items},{'https://example.invalid/broad','https://example.invalid/targeted','https://example.invalid/prior'})
+            prior=next(x for x in items if x['url'].endswith('/prior'))
+            self.assertEqual(prior['discovery_origin'],'prior_recent_metadata')
+            self.assertIn('prior_discovery_requires_original_check',prior['date_warnings'])
+
     def test_next_edition_requires_selection_gate(self):
         policy=json.loads((selection.ROOT/'editorial_policy.json').read_text())
         result=editorial_check.check({'meta':{'edition_date':'2026-10-19'}},{},policy,[],datetime(2026,10,19).date())
