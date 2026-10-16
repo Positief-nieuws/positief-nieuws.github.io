@@ -320,11 +320,11 @@ def build_share_block(data):
     return f"""
     <div style="margin:46px 0 0 0;padding:28px 22px;border:1px solid rgba(23,63,49,.18);text-align:center;background:#f0f5ee;border-radius:17px;">
       <p style="margin:0 0 7px 0;font:700 22px Arial,Helvetica,sans-serif;line-height:1.15;color:{INK};">
-        Ken je iemand die dit ook fijn zou vinden?
+        Ken je iemand die ook wel wat positief nieuws kan gebruiken?
       </p>
 
       <p style="margin:0 0 20px 0;font:14px Arial,Helvetica,sans-serif;line-height:1.5;color:{MUTED};">
-        Deel deze editie gerust.
+        Stuur deze nieuwsbrief gerust door.
       </p>
 
       <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center">
@@ -343,6 +343,8 @@ def build_share_block(data):
           </td>
         </tr>
       </table>
+
+      <p style="margin:6px 0 14px;font:14px Arial,Helvetica,sans-serif;line-height:1.5;color:{MUTED};">Zelf ook twee keer per week positief nieuws ontvangen? <a href="https://positief-nieuws.nl/nieuwsbrief/" style="color:{GREEN_DARK} !important;text-decoration:underline;">Meld je gratis aan.</a></p>
 
       <p style="margin:8px 0 0 0;font:12px Arial,Helvetica,sans-serif;color:{MUTED};">
         <a href="{newsletter_online_url}" style="color:{GREEN_DARK} !important;text-decoration:underline;text-underline-offset:2px;">
