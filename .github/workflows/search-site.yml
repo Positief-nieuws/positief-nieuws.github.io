@@ -1,0 +1,60 @@
+name: Zoekindex bijwerken
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "build_search.py"
+      - "zoeken/index.html"
+      - "zoeken/search.js"
+      - "over/**"
+      - "contact/**"
+      - "steun/**"
+      - "nieuwsbrief/**"
+      - "tip/**"
+      - "specials/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: positief-nieuws-build
+  cancel-in-progress: false
+
+jobs:
+  search:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Zoekindex en navigatie maken
+        run: |
+          python -m py_compile build_search.py
+          python build_search.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data = json.loads(Path("zoeken/index.json").read_text(encoding="utf-8"))
+          assert len(data["items"]) >= 12, "Zoekindex mist artikelen"
+          for path in ("/over/", "/contact/", "/nieuwsbrief/", "/steun/"):
+              assert any(item["url"] == path for item in data["items"]), f"Ontbrekende pagina: {path}"
+          assert '/zoeken/' in Path('mens/index.html').read_text(encoding='utf-8'), "Zoeklink ontbreekt op Mens"
+          print("Zoekfunctie: basiscontroles geslaagd")
+          PY
+      - name: Publiceer zoekindex en menu
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Geen wijzigingen"
+            exit 0
+          fi
+          git commit -m "Bouw zoekindex en voeg zoeken toe aan alle pagina's"
+          git pull --rebase origin main
+          git push
