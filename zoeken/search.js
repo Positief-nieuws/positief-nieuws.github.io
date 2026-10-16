@@ -13,6 +13,16 @@
   let index = [], matches = [], visible = 15;
   const normalize = text => String(text || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('nl').replace(/[^a-z0-9]+/g, ' ').trim();
   const clean = value => String(value || '').trim();
+  const validResultUrl = value => {
+    if (typeof value !== 'string' || /[\\\s]/.test(value)) return false;
+    if (/^\/(?!\/)/.test(value)) return true;
+    try {
+      const url = new URL(value);
+      return /^https?:\/\//i.test(value) && ['http:', 'https:'].includes(url.protocol) && Boolean(url.hostname);
+    } catch {
+      return false;
+    }
+  };
   const publicTerms = new Set("natuur klimaat energie gezondheid wetenschap cultuur economie sport mens mensen vrijwilligerswerk onderwijs innovatie duurzaamheid dieren water bos contact nieuwsbrief steun tip redactie over edities special".split(" "));
   let lastTracked = "";
   function track(event, details) {
@@ -134,7 +144,7 @@
     .then(response => {if (!response.ok) throw Error('HTTP ' + response.status); return response.json();})
     .then(data => {
       if (!data || !Array.isArray(data.items)) throw Error('Ongeldige zoekindex');
-      index = data.items.filter(item => item && item.title && item.url && /^\/(?!\/)/.test(item.url));
+      index = data.items.filter(item => item && item.title && validResultUrl(item.url));
       const options = [...new Set(index.map(item => clean(item.category)).filter(Boolean))].sort((a,b) => a.localeCompare(b,'nl'));
       for (const value of options) {const option = document.createElement('option'); option.value = value; option.textContent = value; category.append(option);}
       search();
