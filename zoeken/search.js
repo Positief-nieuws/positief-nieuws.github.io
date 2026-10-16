@@ -13,6 +13,33 @@
   let index = [], matches = [], visible = 15;
   const normalize = text => String(text || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('nl').replace(/[^a-z0-9]+/g, ' ').trim();
   const clean = value => String(value || '').trim();
+  const publicTerms = new Set("natuur klimaat energie gezondheid wetenschap cultuur economie sport mens mensen vrijwilligerswerk onderwijs innovatie duurzaamheid dieren water bos contact nieuwsbrief steun tip redactie over edities special".split(" "));
+  let lastTracked = "";
+  function track(event, details) {
+    if (typeof window.sa_event === "function") window.sa_event(event, details);
+  }
+  function meta() {
+    const words = normalize(input.value).split(" ").filter(Boolean);
+    const safe = words.length > 0 && words.length <= 4 && words.every(w => publicTerms.has(w));
+    return {
+      search_topic: safe ? words.join(" ") : "overig",
+      search_has_term: Boolean(words.length),
+      result_count: matches.length,
+      no_results: matches.length === 0,
+      search_type: kind.value || "alle",
+      search_category: category.value || "alle",
+      search_region: region.value || "alle"
+    };
+  }
+  function recordSearch() {
+    const words = normalize(input.value);
+    if (words.length < 2) return;
+    const signature = [words, kind.value, category.value, region.value].join("|");
+    if (signature === lastTracked) return;
+    lastTracked = signature;
+    track("site_search", meta());
+  }
+
   const element = (tag, css, value) => {
     const el = document.createElement(tag);
     if (css) el.className = css;
@@ -90,6 +117,7 @@
     else next.searchParams.delete('q');
     history.replaceState(null, '', next);
     search();
+    recordSearch();
   });
   let debounce;
   input.addEventListener('input', () => { clearTimeout(debounce); debounce = setTimeout(() => {
@@ -99,7 +127,8 @@
     history.replaceState(null, '', next);
     search();
   }, 180); });
-  [category, kind, region].forEach(node => node.addEventListener('change', search));
+  [category, kind, region].forEach(node => node.addEventListener('change', () => { search(); track('site_search_filter', meta()); recordSearch(); }));
+  results.addEventListener('click', event => { const link = event.target.closest('.result h2 a'); if (!link) return; const rank = Array.from(results.querySelectorAll('.result h2 a')).indexOf(link); const item = matches[rank]; if (item) track('site_search_result_click', {...meta(), result_rank: rank + 1, result_type: item.type, result_url: item.url}); });
   more.addEventListener('click', () => {visible += 15; show();});
   fetch('/zoeken/index.json', {cache:'no-store'})
     .then(response => {if (!response.ok) throw Error('HTTP ' + response.status); return response.json();})
@@ -109,6 +138,7 @@
       const options = [...new Set(index.map(item => clean(item.category)).filter(Boolean))].sort((a,b) => a.localeCompare(b,'nl'));
       for (const value of options) {const option = document.createElement('option'); option.value = value; option.textContent = value; category.append(option);}
       search();
+      recordSearch();
     })
     .catch(error => {status.textContent = 'Zoeken is tijdelijk niet beschikbaar. Probeer het later opnieuw.'; console.error('Zoekindex:', error);});
 })();
