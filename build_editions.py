@@ -2237,6 +2237,8 @@ def main():
             refresh_branding()
         if not args.validate_current:
             refresh_site_design()
+            from build_search import main as refresh_search
+            refresh_search()
     except Exception as exc:
         print(f"FOUT: {exc}", file=sys.stderr)
         sys.exit(1)
