@@ -1,4 +1,4 @@
-const CACHE_NAME = "positief-nieuws-v7";
+const CACHE_NAME = "positief-nieuws-v8";
 
 const CORE_ASSETS = [
   "/",
@@ -67,8 +67,9 @@ self.addEventListener(
 
     // Editorial images may be replaced without changing their URL.
     const isArticleImage = url.pathname.startsWith("/images/artikelen/");
+    const isSharedStylesheet = url.pathname === "/site-theme.css";
 
-    if (isNavigation || isFreshData || isArticleImage) {
+    if (isNavigation || isFreshData || isArticleImage || isSharedStylesheet) {
       event.respondWith(
         fetch(
           request,
