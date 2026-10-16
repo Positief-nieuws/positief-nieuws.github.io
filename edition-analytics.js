@@ -10,6 +10,60 @@
   let homepageReady = pageType !== 'homepage';
   let observeForms = function () {};
   const weekdays = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+
+  // Privacy-friendly first-touch attribution, kept only for this browser tab/session.
+  // No cookies, visitor identifiers, email addresses, or raw referring URLs.
+  function acquisition() {
+    const sources = ['google','bing','duckduckgo','ecosia','facebook','instagram','threads',
+      'linkedin','reddit','whatsapp','pinterest','youtube','buttondown','newsletter'];
+    const channels = ['search','social','email','referral','direct','paid'];
+    function recognized(value) {
+      const text = String(value || '').toLowerCase().trim().replace(/^www\./, '');
+      return sources.find(function (item) { return text === item || text.startsWith(item + '.'); }) || '';
+    }
+    const params = new URLSearchParams(location.search);
+    const medium = String(params.get('utm_medium') || '').toLowerCase();
+    let source = recognized(params.get('utm_source'));
+    let channel = '';
+    if (source) {
+      if (['google','bing','duckduckgo','ecosia'].includes(source)) channel = 'search';
+      else if (source === 'buttondown' || source === 'newsletter') channel = 'email';
+      else channel = 'social';
+    }
+    if (['email','newsletter'].includes(medium)) channel = 'email';
+    else if (['cpc','ppc','paid','paid_social','display'].includes(medium)) channel = 'paid';
+    else if (medium === 'social') channel = 'social';
+    else if (medium === 'organic') channel = channel || 'search';
+    if (!channel) {
+      try {
+        const ref = document.referrer ? new URL(document.referrer) : null;
+        const hostname = ref && ref.origin !== location.origin ? ref.hostname.toLowerCase() : '';
+        if (hostname) {
+          source = recognized(hostname);
+          channel = source
+            ? (['google','bing','duckduckgo','ecosia'].includes(source) ? 'search' :
+              ['buttondown','newsletter'].includes(source) ? 'email' : 'social')
+            : 'referral';
+        } else channel = 'direct';
+      } catch (_) { channel = 'direct'; }
+    }
+    const fresh = {traffic_channel: channel, traffic_source: source || 'other', entry_page: location.pathname || '/'};
+    try {
+      const stored = JSON.parse(sessionStorage.getItem('pn_acquisition_v1') || 'null');
+      if (stored && channels.includes(stored.traffic_channel) &&
+          (sources.includes(stored.traffic_source) || stored.traffic_source === 'other') &&
+          /^\/(?!\/)[\w\/-]*$/.test(stored.entry_page)) return stored;
+      sessionStorage.setItem('pn_acquisition_v1', JSON.stringify(fresh));
+    } catch (_) { /* Session storage unavailable: use current page only. */ }
+    return fresh;
+  }
+  const entry = acquisition();
+  function safeCategory() {
+    const value = String((window.sa_metadata || {}).category || '').trim();
+    return ['Mens','Natuur & klimaat','Gezondheid','Energie & innovatie',
+      'Wetenschap','Cultuur','Economie','Sport'].includes(value) ? value : 'overig';
+  }
+
   function validDate(value) {
     if (!/^\d{4}-\d{2}-\d{2}$/.test(value || '')) return false;
     const date = new Date(value + 'T12:00:00Z');
@@ -22,7 +76,12 @@
       edition: date,
       edition_weekday: date === 'none' ? 'none' : weekdays[new Date(date + 'T12:00:00Z').getUTCDay()],
       page_type: current.page_type || (requested ? 'edition' : pageType),
-      measurement_version: 'edition-v1'
+      measurement_version: 'edition-v1',
+      funnel_version: 'newsletter-v1',
+      traffic_channel: entry.traffic_channel,
+      traffic_source: entry.traffic_source,
+      entry_page: entry.entry_page,
+      current_page: location.pathname
     };
   }
   window.pnAnalyticsMetadata = context;
@@ -52,7 +111,16 @@
   }
   function refreshForms() {
     newsletterForms().forEach(function (form) {
-      const fields = {signup_edition: context().edition, signup_page_type: context().page_type, signup_source: placement(form)};
+      const fields = {
+        signup_edition: context().edition,
+        signup_page_type: context().page_type,
+        signup_source: placement(form),
+        signup_traffic_channel: entry.traffic_channel,
+        signup_traffic_source: entry.traffic_source,
+        signup_entry_page: entry.entry_page,
+        signup_page_path: location.pathname,
+        signup_category: safeCategory()
+      };
       Object.keys(fields).forEach(function (key) {
         const name = 'metadata__' + key;
         let field = form.querySelector('input[name="' + name + '"]');
@@ -89,6 +157,9 @@
   document.addEventListener('visibilitychange', function () { previousTime = performance.now(); });
   function start() {
     refreshForms(); announceView();
+    if (location.pathname.replace(/\/+$/, '') === '/nieuwsbrief') {
+      track('newsletter_landing_view', {landing_type: 'dedicated'});
+    }
     const seen = new WeakMap();
     if ('IntersectionObserver' in window) {
       const observer = new IntersectionObserver(function (entries) {
@@ -107,13 +178,19 @@
       const form = event.target;
       if (!newsletterForms().includes(form) || event.defaultPrevented || !form.checkValidity()) return;
       refreshForms();
-      track('newsletter_form_submit', {placement: placement(form), signup_status: 'submitted_unconfirmed'});
+      track('newsletter_form_submit', {
+        placement: placement(form), signup_status: 'submitted_unconfirmed',
+        content_category: safeCategory()
+      });
     });
     document.addEventListener('click', function (event) {
       const cta = event.target.closest('[data-newsletter-cta], form[action*="buttondown.com"] button[type="submit"], form[action*="buttondown.com"] input[type="submit"]');
       if (!cta) return;
       const form = cta.closest('form');
-      track('newsletter_cta_click', {placement: cta.dataset.newsletterCta || placement(form)});
+      track('newsletter_cta_click', {
+        placement: cta.dataset.newsletterCta || (form ? placement(form) : 'other'),
+        content_category: safeCategory()
+      });
     });
     // No confirmed event: a public thank-you URL cannot prove Buttondown activation.
     setInterval(readingTick, 1000);
