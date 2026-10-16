@@ -2067,7 +2067,7 @@ def refresh_edition_analytics():
             date_match = re.search(r'<time datetime="(\d{4}-\d{2}-\d{2})"', markup)
             date = date_match.group(1) if date_match else ''
         markup = re.sub(r'<!-- edition-analytics:start -->.*?<!-- edition-analytics:end -->\s*', '', markup, flags=re.S)
-        tag = f'<!-- edition-analytics:start --><script src="/edition-analytics.js?v=1" data-page-type="{kind}" data-edition="{date}"></script><!-- edition-analytics:end -->'
+        tag = f'<!-- edition-analytics:start --><script src="/edition-analytics.js?v=2" data-page-type="{kind}" data-edition="{date}"></script><!-- edition-analytics:end -->'
         markup = re.sub(r'</head\s*>', lambda _: tag + '</head>', markup, count=1, flags=re.I)
         markup = re.sub(r'window\.sa_metadata = (\{.*?\});', r'window.sa_metadata = Object.assign({}, window.sa_metadata, \1);', markup, flags=re.S)
         markup = markup.replace('edition: articleLink.dataset.articleEdition || window.sa_metadata?.edition || "onbekend",', 'target_edition: articleLink.dataset.articleEdition || "none",')
