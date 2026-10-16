@@ -1898,10 +1898,7 @@ def homepage_story_html(item, edition_date, section, index):
     attrs = "" if url.startswith(SITE_URL + "/") else 'target="_blank" rel="noopener noreferrer"'
     link = f'<a href="{esc(url)}" {attrs}>{esc(title)}</a>' if url else esc(title)
     teaser = item.get("teaser") or item.get("summary") or item.get("description") or ""
-    category = canonical_category(category_label(item)) or category_label(item)
     meta = category_meta_html(item)
-    region = "Nederland" if section == "nl" else "Wereld"
-    badge = f'<div class="badge">{region} · {esc(category)}</div>'
     image = ""
     slug = str(item.get("article_slug") or "").strip().strip("/")
     cached = _load_pixabay_cache().get(f"{edition_date}/{slug}") or {}
@@ -1914,8 +1911,8 @@ def homepage_story_html(item, edition_date, section, index):
     if section == "nl" and index < 3:
         hero = index == 0
         cls, body, heading = ("hero-card", "hero-body", "h2") if hero else ("side-card", "side-body", "h3")
-        return f'<article class="{cls}">{image}<div class="{body}">{badge}<{heading} class="article-title">{link}</{heading}>' + (f'<p>{esc(teaser)}</p>' if hero else "") + meta + '</div></article>'
-    return f'<article class="list-item">{image}<div>{badge}<h3 class="article-title">{link}</h3><p class="teaser-one-line">{esc(teaser)}</p>{meta}</div></article>'
+        return f'<article class="{cls}">{image}<div class="{body}"><{heading} class="article-title">{link}</{heading}>' + (f'<p>{esc(teaser)}</p>' if hero else "") + meta + '</div></article>'
+    return f'<article class="list-item">{image}<div><h3 class="article-title">{link}</h3><p class="teaser-one-line">{esc(teaser)}</p>{meta}</div></article>'
 
 
 def homepage_cards_html(stories, edition_date, section):
