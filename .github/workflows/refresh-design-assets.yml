@@ -1,0 +1,62 @@
+name: Werk stylesheet-versie bij op bestaande pagina's
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "build_editions.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: positief-nieuws-build
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository ophalen
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Nieuwe stylesheet-versie op bestaande pagina's zetten
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          generator = Path("build_editions.py").read_text(encoding="utf-8")
+          version_match = re.search(r'site-theme\.css\?v=([0-9a-zA-Z_-]+)', generator)
+          if not version_match:
+              raise SystemExit("Geen CSS-versie in sitegenerator gevonden")
+          version = version_match.group(1)
+          pattern = re.compile(r'(/site-theme\.css\?v=)[^"\s]+')
+          count = 0
+          for path in Path(".").rglob("*.html"):
+              original = path.read_text(encoding="utf-8")
+              updated = pattern.sub(lambda m: m.group(1) + version, original)
+              if updated != original:
+                  path.write_text(updated, encoding="utf-8")
+                  count += 1
+          print(f"CSS versie {version} aangebracht op {count} HTML-pagina's")
+          PY
+
+      - name: Gewijzigde pagina's publiceren
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -u
+          if git diff --cached --quiet; then
+            echo "Geen pagina's aangepast"
+            exit 0
+          fi
+          git commit -m "Ververs gedeelde stylesheet op bestaande pagina's"
+          git pull --rebase origin main
+          git push
