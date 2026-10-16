@@ -1,4 +1,4 @@
-/* Edition-level analytics. No visitor identifiers or form values are collected. */
+/* Edition and newsletter conversion analytics. No visitor identifiers or raw referrers are collected. */
 (function () {
   'use strict';
   if (window.pnEditionAnalytics) return;
