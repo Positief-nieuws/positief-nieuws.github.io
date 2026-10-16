@@ -5,6 +5,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 import json
 import re
+from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parent
 DATE = re.compile(r"\d{4}-\d{2}-\d{2}$")
@@ -114,7 +115,14 @@ def build_index():
                 if not title:
                     continue
                 local = bool(SLUG.fullmatch(slug)) and (ROOT / "artikelen" / path.stem / slug / "index.html").exists()
-                url = f"/artikelen/{path.stem}/{slug}/" if local else f"/edities/{path.stem}/"
+                url = f"/artikelen/{path.stem}/{slug}/" if local else str(entry.get("url") or "").strip()
+                if not local:
+                    try:
+                        source_url = urlsplit(url)
+                        if source_url.scheme not in ("http", "https") or not source_url.hostname:
+                            continue
+                    except ValueError:
+                        continue
                 category = str(entry.get("category") or entry.get("categorie") or "").strip()
                 category = ALIASES.get(category, category)
                 imagepath = ROOT / "images" / "artikelen" / path.stem / (slug + ".jpg")
