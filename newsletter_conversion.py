@@ -77,6 +77,8 @@ def apply(phase=3):
         path.write_text(s)
     render_landing()
     apply_contextual()
+    from social_sharing import apply as apply_sharing
+    apply_sharing()
 
 def render_landing():
     """Dedicated public signup destination using existing PN components."""

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#fffcf7"/>
+  <g stroke="#d6a13a" stroke-width="12" stroke-linecap="round" transform="translate(113 150)">
+    <circle r="28" fill="#d6a13a" stroke="none"/>
+    <path d="M0-68v18M0 50v18M-68 0h18M50 0h18M-48-48l13 13M35 35l13 13M-48 48l13-13M35-35l13-13"/>
+  </g>
+  <text x="214" y="171" font-family="Arial,Helvetica,sans-serif" font-size="64" font-weight="700" letter-spacing="-2" fill="#182e35">Positief nieuws</text>
+  <path d="M72 252h1056" stroke="#dfe8e2" stroke-width="2"/>
+  <text x="72" y="369" font-family="Arial,Helvetica,sans-serif" font-size="64" font-weight="700" letter-spacing="-2" fill="#182e35">Dit gebeurt ook.</text>
+  <text x="72" y="437" font-family="Arial,Helvetica,sans-serif" font-size="31" fill="#536c64">Nieuws uit Nederland en de wereld.</text>
+  <text x="72" y="555" font-family="Arial,Helvetica,sans-serif" font-size="25" fill="#176e5c">positief-nieuws.nl</text>
+</svg>
