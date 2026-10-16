@@ -76,6 +76,7 @@ def apply(phase=3):
         s=s.replace("    track('nieuwsbrief_inschrijving');",'    // Newsletter submission is measured by edition-analytics.js.')
         path.write_text(s)
     render_landing()
+    apply_contextual()
 
 def render_landing():
     """Dedicated public signup destination using existing PN components."""
@@ -97,6 +98,69 @@ def render_landing():
     markup=f'''<!DOCTYPE html><html lang="nl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{title}</title><meta name="description" content="{desc}"><link rel="canonical" href="https://positief-nieuws.nl/nieuwsbrief/"><meta property="og:title" content="{title}"><meta property="og:description" content="{desc}"><meta property="og:url" content="https://positief-nieuws.nl/nieuwsbrief/"><meta property="og:type" content="website"><meta property="og:site_name" content="Positief nieuws"><meta name="twitter:card" content="summary"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/site-theme.css?v=20261010b"><link rel="stylesheet" href="/newsletter-conversion.css?v=2"><style>{BASE_CSS}{css}</style><script src="/edition-analytics.js?v=2" data-page-type="newsletter" defer></script></head><body><a class="skip" href="#main">Ga naar inhoud</a>{header}<main class="nl-shell" id="main"><section class="nl-hero"><div><span class="nl-tag">Gratis nieuwsbrief · maandag &amp; donderdag</span><h1>Het goede nieuws.<br><span>Gewoon in je inbox.</span></h1><p class="nl-lead">Er gaat meer goed dan je denkt. Ontvang twee keer per week een rustige selectie nieuws uit Nederland en de wereld. In een paar minuten ben je weer bij.</p><ul class="nl-benefits"><li>12 positieve verhalen + 3 ontwikkelingen om bij te blijven</li><li>Met bronnen, context en ruimte voor nuance</li><li>Gratis en zonder advertenties. Afmelden kan altijd.</li></ul></div><div class="nl-signup">{form}<p class="nl-form-footer">Na het aanmelden ontvang je een bevestigingsmail. Eén klik en je doet mee. <a href="/#privacy">Zo gaan we met je gegevens om.</a></p></div></section><section class="nl-preview" aria-labelledby="preview-title"><div class="nl-preview-intro"><p class="kicker">Even proeven</p><h2 id="preview-title">Dit soort nieuws<br>krijg je in je inbox.</h2><p>Van natuur die herstelt tot ontwikkelingen die het dagelijks leven beter maken. We selecteren concrete vooruitgang, zonder het belangrijke nieuws weg te laten.</p><p>Hier zie je drie verhalen uit een echte editie. De volledige editie bevat zes verhalen uit Nederland, zes uit de wereld en drie korte actualiteiten.</p><a href="/edities/{escape(date)}/">Bekijk de volledige voorbeeldeditie →</a></div><div class="nl-edition"><div class="nl-edition-mast">Positief nieuws<span aria-hidden="true">☀</span></div><p class="nl-edition-date">Uit de editie van {escape(fmt_date(date))}</p><ul>{preview}</ul></div></section><section class="nl-faq" aria-labelledby="faq-title"><p class="kicker">Goed om te weten</p><h2 id="faq-title">Een paar minuten. Daarna weer verder.</h2><div class="nl-faq-grid"><div><h3>Is het echt gratis?</h3><p>Ja. De nieuwsbrief is gratis en zonder advertenties. Je hoeft nergens voor te betalen.</p></div><div><h3>Wanneer krijg ik de nieuwsbrief?</h3><p>Elke maandag en donderdag. Twee overzichtelijke edities per week, zonder eindeloze nieuwsstroom.</p></div><div><h3>Kan ik makkelijk stoppen?</h3><p>Zeker. Onderaan elke nieuwsbrief staat een afmeldlink. Eén klik en je bent weer afgemeld.</p></div></div></section></main><footer class="nl-footer">Positief nieuws · Dit gebeurt ook. · <a href="/over/">Over</a> · <a href="/contact/">Contact</a> · <a href="/#privacy">Privacy</a></footer>{analytics_html({'page_type':'newsletter'})}</body></html>'''
     target=Path('nieuwsbrief/index.html');target.parent.mkdir(exist_ok=True);target.write_text(markup)
 
+# Topic and article invitations use the same general newsletter, never a topic list.
+CONTEXT_COPY = {
+    'Mens': ('Meer verhalen over mensen die het verschil maken?', 'Mensen maken het verschil. En er gebeurt nog veel meer.'),
+    'Natuur & klimaat': ('Meer hoopvolle ontwikkelingen voor natuur en klimaat?', 'Goed nieuws voor natuur en klimaat. En er gebeurt nog veel meer.'),
+    'Gezondheid': ('Meer goed nieuws over gezondheid en medische vooruitgang?', 'Dit is niet de enige hoopvolle ontwikkeling in gezondheid.'),
+    'Wetenschap': ('Benieuwd welke wetenschappelijke doorbraken de wereld verbeteren?', 'De wetenschap gaat vooruit. En er gebeurt nog veel meer.'),
+    'Energie & innovatie': ('Meer goed nieuws over schone energie en slimme oplossingen?', 'Nieuwe oplossingen brengen vooruitgang. En er gebeurt nog veel meer.'),
+    'Cultuur': ('Meer verhalen over cultuur die mensen verbindt?', 'Cultuur brengt mensen samen. En er gebeurt nog veel meer.'),
+    'Economie': ('Meer goed nieuws over werk, kansen en de economie?', 'Goed nieuws over werk en kansen. En er gebeurt nog veel meer.'),
+    'Sport': ('Meer verhalen over wat sport mogelijk maakt?', 'Sport zet mensen in beweging. En er gebeurt nog veel meer.'),
+}
+CONTEXT_INTRO = ('Ontvang onze gratis algemene nieuwsbrief: iedere maandag en donderdag '
+                 'positief nieuws uit Nederland en de wereld, over dit én andere onderwerpen. '
+                 'Plus belangrijke ontwikkelingen om bij te blijven.')
+
+
+def contextual_markup(markup, category, article=False):
+    """Only replace copy in the existing component; retain POST, IDs and metadata."""
+    title = CONTEXT_COPY.get(category, ('Meer goed nieuws volgen?',
+                                        'Er gebeurt nog meer goed nieuws.'))[int(article)]
+    markup = re.sub(r'(<h2\b[^>]*>).*?(</h2>)',
+                    lambda m: m[1] + escape(title) + m[2], markup, count=1, flags=re.S)
+    markup = re.sub(r'(</h2>)<p>.*?</p>',
+                    lambda m: m[1] + '<p>' + escape(CONTEXT_INTRO) + '</p>',
+                    markup, count=1, flags=re.S)
+    return markup
+
+
+def apply_contextual():
+    """Scoped refresh for existing pages and final step of every future build."""
+    import json
+    from build_editions import CATEGORY_ORDER, canonical_category, slugify_category
+    topics = {slugify_category(label): label for label in CATEGORY_ORDER}
+    paths = [Path(slug) / 'index.html' for slug in topics]
+    paths += sorted(Path('artikelen').rglob('index.html'))
+    for path in paths:
+        if not path.exists():
+            continue
+        s = path.read_text()
+        original = s
+        # The service worker caches scripts by URL; refresh only these page types.
+        s = re.sub(r'/edition-analytics\.js\?v=\d+', '/edition-analytics.js?v=3', s)
+        article = path.parts[0] == 'artikelen'
+        if article:
+            match = re.search(r'window.sa_metadata = Object.assign\(\{\}, window.sa_metadata, (\{.*?\})\);', s)
+            metadata = json.loads(match[1]) if match else {}
+            category = canonical_category(metadata.get('category', '')) or ''
+            intro = CONTEXT_COPY.get(category, ('Meer goed nieuws volgen?', ''))[0]
+            s = re.sub(r'(<!-- newsletter:article_intro:start -->).*?(<!-- newsletter:article_intro:end -->)',
+                       lambda m: m[1] + '<p class="pn-newsletter-link">' + escape(intro) +
+                       ' <a href="#nieuwsbrief" data-newsletter-cta="article_intro">Ontvang onze gratis algemene nieuwsbrief.</a></p>' + m[2], s, flags=re.S)
+            s = re.sub(r'<section\b[^>]*class="pn-newsletter article-newsletter"[^>]*>.*?</section>',
+                       lambda m: contextual_markup(m[0], category, article=True), s, flags=re.S)
+        else:
+            category = topics[path.parts[0]]
+            s = re.sub(r'<!-- newsletter:topic_inline:start -->.*?<!-- newsletter:topic_inline:end -->',
+                       lambda m: contextual_markup(m[0], category), s, flags=re.S)
+        if s != original:
+            path.write_text(s)
+
 if __name__=='__main__':
     import argparse
-    p=argparse.ArgumentParser();p.add_argument('--phase',type=int,default=3);apply(p.parse_args().phase)
+    p=argparse.ArgumentParser();p.add_argument('--phase',type=int,default=3);p.add_argument('--contextual-only',action='store_true')
+    args=p.parse_args()
+    if args.contextual_only: apply_contextual()
+    else: apply(args.phase)

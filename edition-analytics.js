@@ -59,7 +59,11 @@
   }
   const entry = acquisition();
   function safeCategory() {
-    const value = String((window.sa_metadata || {}).category || '').trim();
+    const current = window.sa_metadata || {};
+    const topics = {'mens':'Mens','natuur-en-klimaat':'Natuur & klimaat','gezondheid':'Gezondheid',
+      'energie-en-innovatie':'Energie & innovatie','wetenschap':'Wetenschap','cultuur':'Cultuur',
+      'economie':'Economie','sport':'Sport'};
+    const value = String(current.category || (current.page_type === 'topic' ? topics[current.topic] : '') || '').trim();
     return ['Mens','Natuur & klimaat','Gezondheid','Energie & innovatie',
       'Wetenschap','Cultuur','Economie','Sport'].includes(value) ? value : 'overig';
   }
@@ -167,7 +171,9 @@
           const current = context().edition;
           if (homepageReady && entry.isIntersecting && seen.get(entry.target) !== current) {
             seen.set(entry.target, current);
-            track('newsletter_view', {placement: placement(entry.target)});
+            const metadata = {placement: placement(entry.target)};
+            if (['topic', 'article'].includes(context().page_type)) metadata.content_category = safeCategory();
+            track('newsletter_view', metadata);
           }
         });
       }, {threshold: 0.5});
