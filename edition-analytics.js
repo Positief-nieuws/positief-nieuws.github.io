@@ -190,6 +190,18 @@
       });
     });
     document.addEventListener('click', function (event) {
+    const link = event.target.closest('a[data-related-content]');
+    if (link && ['article', 'special'].includes(link.dataset.relatedContent)) {
+    const target = new URL(link.href, location.origin);
+    if (target.origin === location.origin) {
+    track('related_content_click', {
+      placement: 'article_related', origin_path: location.pathname,
+      target_path: target.pathname, target_type: link.dataset.relatedContent,
+      position: Number(link.dataset.relatedPosition)
+    });
+    }
+    }
+
       const cta = event.target.closest('[data-newsletter-cta], form[action*="buttondown.com"] button[type="submit"], form[action*="buttondown.com"] input[type="submit"]');
       if (!cta) return;
       const form = cta.closest('form');

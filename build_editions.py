@@ -525,83 +525,19 @@ def related_article_records(edition_records):
 
 
 def select_related_articles(item, date_value, candidates, limit=3):
-    current_slug = str(item.get("article_slug") or "").strip().strip("/")
-    current_category = canonical_category(category_label(item)) or category_label(item) or ""
-
-    eligible = [
-        record for record in candidates
-        if not (record["date"] == date_value and record["slug"] == current_slug)
-    ]
-
-    same_category = [record for record in eligible if record["category"] == current_category]
-    other_categories = [record for record in eligible if record["category"] != current_category]
-    return (same_category + other_categories)[:limit]
+    from related_content import select
+    origin = f"/artikelen/{date_value}/{str(item.get('article_slug') or '').strip('/')}/"
+    return select(item, origin, candidates, limit)
 
 
 def render_related_articles(records):
     if not records:
         return ""
-
-    cards = []
-    for record in records:
-        item = record["item"]
-        date_value = record["date"]
-        slug = record["slug"]
-        title_raw = str(item.get("title") or item.get("headline") or "").strip()
-        source_raw = str(item.get("source") or "").strip()
-        category_raw = record["category"]
-        teaser_raw = str(item.get("teaser") or item.get("summary") or item.get("description") or "").strip()
-        href = f"/artikelen/{date_value}/{slug}/"
-
-        title = esc(title_raw)
-        source = esc(source_raw)
-        category = esc(category_raw)
-        teaser = esc(teaser_raw)
-        edition = esc(date_value)
-
-        tracking_attrs = (
-            f'data-article-click="true" '
-            f'data-article-title="{title}" '
-            f'data-article-source="{source}" '
-            f'data-article-category="{category}" '
-            f'data-article-section="related" '
-            f'data-article-edition="{edition}"'
-        )
-
-        image_data = resolve_pixabay_image(item, date_value)
-        thumb_html = ""
-        if image_data and image_data.get("image_path"):
-            image_src = esc(image_data.get("image_path"))
-            image_alt = esc(
-                item.get("image_alt")
-                or f"Illustratief beeld bij {title_raw}"
-            )
-            thumb_html = f"""
-              <a class="related-thumb" href="{href}" aria-label="Lees {title}" {tracking_attrs}>
-                <img src="{image_src}" alt="{image_alt}" loading="lazy" decoding="async">
-              </a>"""
-
-        rt = reading_time(item)
-        meta_parts = [x for x in (category, source, esc(rt) if rt else "") if x]
-        meta_html = '<span class="sep">·</span>'.join(
-            f"<span>{part}</span>" for part in meta_parts
-        )
-        cards.append(f"""<article class="related-item">
-          <div class="related-core">
-            <div class="related-main">
-              <h3><a href="{href}" {tracking_attrs}>{title}</a></h3>
-              {f'<p class="related-teaser">{teaser}</p>' if teaser else ''}
-              {f'<div class="related-meta">{meta_html}</div>' if meta_html else ''}
-            </div>
-            {thumb_html}
-          </div>
-        </article>""")
-
-    return f"""<section class="related" aria-labelledby="related-title">
-        <p class="related-kicker">Verder lezen</p>
-        <h2 id="related-title">Misschien ook interessant</h2>
-        <div class="related-list">{''.join(cards)}</div>
-      </section>"""
+    links = []
+    for position, record in enumerate(records, 1):
+        title = esc(record['item'].get('title') or record['item'].get('headline') or '')
+        links.append(f'<li><a href="{esc(record["path"])}" data-related-content="{record["type"]}" data-related-position="{position}">{title}</a></li>')
+    return '<section class="article-related" aria-labelledby="related-title"><h2 id="related-title">Lees ook</h2><ul>' + ''.join(links) + '</ul></section>'
 
 
 def _load_pixabay_cache():
@@ -897,6 +833,7 @@ def render_article_page(item, date_value, related_records=None, image_data=None)
 .support-teaser p{max-width:500px;margin:10px 0 0;color:var(--muted);font-size:.84rem;line-height:1.55}
 .support-button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 19px;border:1px solid var(--green-dark);border-radius:999px;background:var(--green-dark);color:white;font-size:.76rem;font-weight:800;text-decoration:none;white-space:nowrap;transition:transform .15s ease,background .15s ease}
 .support-button:hover{transform:translateY(-1px);background:var(--green)}
+.article-related{max-width:700px;margin:28px 0;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.article-related h2{margin:0 0 10px;font-size:1.2rem}.article-related ul{margin:0;padding-left:20px}.article-related li{padding:5px 0;font-size:.94rem;line-height:1.5;overflow-wrap:anywhere}.article-related a{color:var(--green);text-underline-offset:3px}.article-related a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 .related{max-width:700px;margin-top:48px;padding-top:34px;border-top:1px solid var(--green-dark)}
 .related-kicker{margin:0 0 7px;color:var(--green);font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
 .related h2{margin:0 0 8px;font-size:clamp(1.65rem,4vw,2.25rem);line-height:1.05;letter-spacing:-.035em}
@@ -955,6 +892,7 @@ def render_article_page(item, date_value, related_records=None, image_data=None)
       </div>
       <p class="article-note">Positief nieuws selecteert en vat ontwikkelingen samen in eigen woorden. De oorspronkelijke bron blijft leidend voor de volledige context en details.</p>
 
+      {related_html}
       {growth_html}
 
       <section class="support-teaser" aria-labelledby="article-support-title">
@@ -972,7 +910,6 @@ def render_article_page(item, date_value, related_records=None, image_data=None)
         </div>
       </section>
 
-      {related_html}
       <p class="article-back"><a href="/edities/{esc(date_value)}/">← Terug naar de editie van {esc(date_text)}</a></p>
     </div>
   </main>
@@ -984,14 +921,16 @@ def render_article_page(item, date_value, related_records=None, image_data=None)
 
 
 def write_article_pages(edition_records):
+    from related_content import special_records
     candidates = related_article_records(edition_records)
+    related_candidates = candidates + special_records()
     built = []
 
     for record in candidates:
         date_value = record["date"]
         item = record["item"]
         slug = record["slug"]
-        related = select_related_articles(item, date_value, candidates, limit=3)
+        related = select_related_articles(item, date_value, related_candidates, limit=3)
         image_data = resolve_pixabay_image(item, date_value)
 
         page_dir = ARTICLES_DIR / date_value / slug
