@@ -91,3 +91,10 @@ Rollback via Git-revert van de gerichte code/configuratie-commits. Revert van ni
 Bewaar per editie: aantal bronkanalen, fetchfouten, open/afgeronde dekkingscontroles, aantal volledig getriageerde kandidaten, gelezen kanshebbers/reserves en redenen voor latere vervangingen. Doel: 100% triage en afgeronde dekkingscontroles vóór eerste concept; nul vermijdbare vervangingen door gemiste beschikbare verhalen of al bekende voorkeuren. Feedback op smaak blijft mogelijk. Evalueer dit na de eerstvolgende drie edities, zonder extra automatische taak of verzending aan te maken.
 
 Technische opslaan-fouten zijn geen geslaagde bronrun. De kandidatenworkflow schrijft geen Python-bytecode: eerder meegecommitteerde caches mogen de Git-rebase niet blokkeren. Concurrerende kandidatenruns worden na elkaar uitgevoerd. Alleen de drie kandidaten-/bronstatusbestanden worden door deze workflow gecommit.
+
+
+10. ARTICLE QUALITY AND HEADLINES (17 October 2026)
+Content quality takes priority over a short reading-time promise. Write as much as the story needs for context, evidence, meaning and enjoyment. Aim for 180-260 words for a full article; this is guidance, not a quota. Shorter items need an explicit check that no useful context or nuance is missing.
+For every story, draft a plain factual headline and a more concrete, curiosity-building version. Use the more engaging version when it remains fully supported by the source. Never inflate the result, certainty, scale or causal claim.
+Give the teaser and article different jobs: the teaser introduces the core development, while the article adds explanation, evidence, human detail or limits. Use a concrete opening, explain necessary terms, separate achieved results from expected effects, and include uncertainty when it changes the meaning.
+Keep “Why it matters” only when it adds a specific consequence or insight beyond the headline, teaser and article. Otherwise remove it. Use human detail only when the source supports it. Keep the tone warm, clear and unsentimental.
