@@ -91,3 +91,10 @@ Rollback via Git-revert van de gerichte code/configuratie-commits. Revert van ni
 Bewaar per editie: aantal bronkanalen, fetchfouten, open/afgeronde dekkingscontroles, aantal volledig getriageerde kandidaten, gelezen kanshebbers/reserves en redenen voor latere vervangingen. Doel: 100% triage en afgeronde dekkingscontroles vóór eerste concept; nul vermijdbare vervangingen door gemiste beschikbare verhalen of al bekende voorkeuren. Feedback op smaak blijft mogelijk. Evalueer dit na de eerstvolgende drie edities, zonder extra automatische taak of verzending aan te maken.
 
 Technische opslaan-fouten zijn geen geslaagde bronrun. De kandidatenworkflow schrijft geen Python-bytecode: eerder meegecommitteerde caches mogen de Git-rebase niet blokkeren. Concurrerende kandidatenruns worden na elkaar uitgevoerd. Alleen de drie kandidaten-/bronstatusbestanden worden door deze workflow gecommit.
+
+
+10. ARTIKELKWALITEIT EN KOPPEN (17 oktober 2026)
+Contentkwaliteit gaat vóór een korte leestijdbelofte. Schrijf zo veel als het verhaal nodig heeft voor context, bewijs, betekenis en leesplezier. Richtlengte voor een eigen artikel is 180-260 woorden. Dit is een richtlijn, geen quotum. Is een artikel korter, controleer dan bewust of er relevante context of nuance ontbreekt.
+Maak voor elk verhaal twee koppen: een feitelijke basisversie en een concretere kop die nieuwsgierig maakt. Kies de aantrekkelijkere kop als die even precies door de bron wordt ondersteund. Vergroot nooit het resultaat, de zekerheid, de schaal of het oorzakelijk verband.
+Geef teaser en artikel elk een eigen taak. De teaser introduceert de ontwikkeling; het artikel voegt uitleg, bewijs, menselijk detail of beperkingen toe. Begin concreet, leg noodzakelijke termen uit, onderscheid bereikt resultaat van verwacht effect en vermeld onzekerheid als die de betekenis verandert.
+Behoud “Waarom dit ertoe doet” alleen als het een specifiek gevolg of inzicht toevoegt boven kop, teaser en artikel. Schrap het anders. Gebruik menselijk detail alleen als de bron dit ondersteunt. Schrijf warm, helder en nuchter.
