@@ -2046,24 +2046,7 @@ body{background:#fffcf7;color:#182e35;font-family:Inter,ui-sans-serif,-apple-sys
     </div>
   </section>
 
-  <section id="signup-confirmed-view" class="app-view signup-pending-page" hidden>
-    <div class="content-shell">
-      <p class="section-kicker">Nieuwsbrief</p>
-      <h1 class="page-title">Welkom bij Positief nieuws ☀️</h1>
-
-      <div class="signup-pending-card">
-        <div class="signup-pending-copy">
-          <p>Je e-mailadres is bevestigd.</p>
-          <p><strong>Vanaf nu ontvang je elke maandag en donderdag Positief nieuws in je inbox.</strong></p>
-          <p>Tot de volgende editie. En voor nu: geniet van je dag.</p>
-        </div>
-
-        <div class="signup-pending-actions">
-          <a href="./">Lees de nieuwste editie</a>
-        </div>
-      </div>
-    </div>
-  </section>
+  
 
   <footer class="site-footer">
     <div class="wide-shell">Positief nieuws · Dit gebeurt ook. · <a href="/contact/" onclick="if(window.sa_event)window.sa_event('contact_click')">Contact</a> · <a href="/tip/" onclick="if(window.sa_event)window.sa_event('tip_redactie_click')">Tip de redactie</a> · <a href="/steun/">Steun</a> · <a href="/over/">Over</a> · <a href="#privacy">Privacy</a></div>
@@ -2898,8 +2881,7 @@ body{background:#fffcf7;color:#182e35;font-family:Inter,ui-sans-serif,-apple-sys
       const signupPendingView =
         $("#signup-pending-view");
 
-      const signupConfirmedView =
-        $("#signup-confirmed-view");
+      
 
 
       todayView.hidden =
@@ -2917,8 +2899,7 @@ body{background:#fffcf7;color:#182e35;font-family:Inter,ui-sans-serif,-apple-sys
       signupPendingView.hidden =
         view !== "signup-pending";
 
-      signupConfirmedView.hidden =
-        view !== "signup-confirmed";
+      
 
 
       setActiveNav(
@@ -2958,14 +2939,8 @@ body{background:#fffcf7;color:#182e35;font-family:Inter,ui-sans-serif,-apple-sys
         return;
       }
 
-      if (
-        params.get("inschrijving") ===
-        "bevestigd"
-      ) {
-        showAppView(
-          "signup-confirmed"
-        );
-
+      if (params.get("inschrijving") === "bevestigd") {
+        showAppView("signup-pending");
         return;
       }
 
