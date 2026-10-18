@@ -6,23 +6,11 @@ from pathlib import Path
 import json
 import re
 from urllib.parse import urlsplit
+from categories import CATEGORY_ALIASES
 
 ROOT = Path(__file__).resolve().parent
 DATE = re.compile(r"\d{4}-\d{2}-\d{2}$")
 SLUG = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*$")
-ALIASES = {
-    "Dieren & natuur":"Natuur & klimaat", "Dieren":"Natuur & klimaat",
-    "Natuur & wetenschap":"Natuur & klimaat", "Natuur & landbouw":"Natuur & klimaat",
-    "Natuur & samenleving":"Natuur & klimaat", "Gezondheid & basisvoorzieningen":"Gezondheid",
-    "Voeding & leefstijl":"Gezondheid", "Gewoon leuk":"Mens",
-    "Mens & samenleving":"Mens", "Mens & innovatie":"Mens",
-    "Onderwijs & ontwikkeling":"Mens", "Cultuur & media":"Cultuur",
-    "Cultuur & erfgoed":"Cultuur", "Archeologie & geschiedenis":"Cultuur",
-    "Geschiedenis & mens":"Cultuur", "Economie & geld":"Economie",
-    "Economie & onderwijs":"Economie", "Technologie & innovatie":"Wetenschap",
-    "Wetenschap & innovatie":"Wetenschap", "Wetenschap & duurzaamheid":"Wetenschap",
-    "Wetenschap & ruimtevaart":"Wetenschap",
-}
 INFORMATION_PATHS = {
     "/over/": ("Over ons", "Over"),
     "/contact/": ("Contact", "Contact"),
@@ -41,14 +29,12 @@ class VisibleText(HTMLParser):
         self.ignore = 0
         self.in_main = False
         self.main_depth = 0
-        self.main_seen = False
 
     def handle_starttag(self, tag, attrs):
         if tag in ("script", "style", "noscript", "svg", "form", "footer", "nav", "aside"):
             self.ignore += 1
         if tag == "main":
             self.in_main = True
-            self.main_seen = True
             self.main_depth += 1
 
     def handle_endtag(self, tag):
@@ -124,7 +110,7 @@ def build_index():
                     except ValueError:
                         continue
                 category = str(entry.get("category") or entry.get("categorie") or "").strip()
-                category = ALIASES.get(category, category)
+                category = CATEGORY_ALIASES.get(category, category)
                 imagepath = ROOT / "images" / "artikelen" / path.stem / (slug + ".jpg")
                 results.append({
                     "title": title,

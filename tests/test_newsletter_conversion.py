@@ -8,9 +8,30 @@ from unittest.mock import patch
 
 import build_editions as build
 import newsletter_conversion as newsletter
+from analytics_policy import TAG, protect_markup
 
 
 class ContextualNewsletterTests(unittest.TestCase):
+    def test_newsletter_refresh_finishes_with_analytics_policy(self):
+        with tempfile.TemporaryDirectory() as directory:
+            previous = Path.cwd()
+            try:
+                os.chdir(directory)
+                Path('nieuws.json').write_text('{"meta":{"edition_date":"2026-10-15"}}')
+                Path('index.html').write_text(
+                    '<html><head>' + TAG + '</head><body>'
+                    '<header class="site-header"></header>'
+                    '<script>window.pnLoadAnalytics();</script></body></html>')
+                newsletter.apply()
+                for path in (Path('index.html'), Path('nieuwsbrief/index.html')):
+                    markup = path.read_text()
+                    self.assertIn('<head>' + TAG, markup, str(path))
+                    self.assertEqual(markup.count(TAG), 1)
+                    self.assertEqual(protect_markup(markup), markup)
+                self.assertIn(build.SITE_THEME_HREF, Path('nieuwsbrief/index.html').read_text())
+            finally:
+                os.chdir(previous)
+
     def test_future_generated_pages_keep_context_and_native_post(self):
         with tempfile.TemporaryDirectory() as directory:
             previous = Path.cwd()

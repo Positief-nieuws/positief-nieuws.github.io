@@ -37,7 +37,6 @@ ROOT = Path(__file__).resolve().parent
 OUTPUT = ROOT / "kandidaten.json"
 
 MAX_AGE_HOURS = 168        # maximaal 7 dagen
-PREFERRED_AGE_HOURS = 48   # versheidsbonus
 MAX_PER_SOURCE = 6         # voorkom dat 1 bron de lijst overneemt
 MAX_PER_REGION = 40        # shortlist voor latere AI-selectie
 USER_AGENT = "GoedNieuwsKandidatenBot/0.1"
@@ -46,13 +45,11 @@ USER_AGENT = "GoedNieuwsKandidatenBot/0.1"
 # niet altijd een publicatiedatum. We proberen daarom de artikelpagina zelf uit te lezen.
 CURATED_DATE_FETCH_TIMEOUT = 8
 CURATED_DATE_WORKERS = 6
-CURATED_UNKNOWN_DATE_BONUS = 5
-CURATED_UNKNOWN_DATE_PENALTY = -4
 
 from source_registry import (load_registry, active_channels, canonical_url, load_history,
                              history_matches, due, atomic_json)
 from zoneinfo import ZoneInfo
-from build_editions import canonical_category
+from categories import canonical_category
 
 SOURCES = active_channels()
 HEALTH_PATH = ROOT / "source_health.json"
