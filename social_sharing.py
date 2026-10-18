@@ -103,8 +103,10 @@ def share_block(kind, url, title, home=False):
     name = 'de nieuwsbrief' if kind == 'newsletter' else 'deze editie'
     group = 'home' if home else kind
     whatsapp = 'https://wa.me/?text=' + quote(title + '\n\n' + url, safe='')
+    from mission_copy import SHARE
+    invitation = '<p>' + SHARE + '</p>'
     button_id = ' id="share-edition"' if home else ''
-    return f'''<!-- social-share:{group}:start --><section class="pn-share{' pn-share-home' if home else ''}" data-share-type="{kind}"{' data-share-home="true"' if home else ''} aria-label="Deel {name}"><h2>Deel {name}.</h2><div class="pn-share-buttons"><a href="{escape(whatsapp, quote=True)}" target="_blank" rel="noopener noreferrer" data-share-channel="whatsapp">WhatsApp</a><button type="button" data-share-action="copy">Kopieer link</button><button{button_id} type="button" data-share-action="native" hidden>Meer deelopties</button></div><p class="pn-share-status" role="status" aria-live="polite"></p><div class="pn-share-fallback" hidden><label for="{group}-share-url">Link om te delen</label><input id="{group}-share-url" value="{escape(url, quote=True)}" readonly></div></section><!-- social-share:{group}:end -->'''
+    return f'''<!-- social-share:{group}:start --><section class="pn-share{' pn-share-home' if home else ''}" data-share-type="{kind}"{' data-share-home="true"' if home else ''} aria-label="Deel {name}"><h2>Deel {name}.</h2>{invitation}<div class="pn-share-buttons"><a href="{escape(whatsapp, quote=True)}" target="_blank" rel="noopener noreferrer" data-share-channel="whatsapp">WhatsApp</a><button type="button" data-share-action="copy">Kopieer link</button><button{button_id} type="button" data-share-action="native" hidden>Meer deelopties</button></div><p class="pn-share-status" role="status" aria-live="polite"></p><div class="pn-share-fallback" hidden><label for="{group}-share-url">Link om te delen</label><input id="{group}-share-url" value="{escape(url, quote=True)}" readonly></div></section><!-- social-share:{group}:end -->'''
 
 
 def migrate_article_script(markup):
@@ -128,6 +130,8 @@ def enhance(markup, path):
     kind = ('homepage' if path == Path('index.html') else 'article' if parts[0] == 'artikelen'
             else 'special' if parts[0] == 'specials' else 'newsletter' if parts[0] == 'nieuwsbrief'
             else 'edition' if re.fullmatch(r'edities/\d{4}-\d{2}-\d{2}/index.html', str(path)) else 'other')
+    from mission_copy import enhance as mission_copy
+    markup = mission_copy(markup, path)
     markup = metadata(markup, kind)
     title = Head(markup).meta['og:title']
     if kind in ('article', 'special'):
