@@ -140,7 +140,7 @@
   [category, kind, region].forEach(node => node.addEventListener('change', () => { search(); track('site_search_filter', meta()); recordSearch(); }));
   results.addEventListener('click', event => { const link = event.target.closest('.result h2 a'); if (!link) return; const rank = Array.from(results.querySelectorAll('.result h2 a')).indexOf(link); const item = matches[rank]; if (item) track('site_search_result_click', {...meta(), result_rank: rank + 1, result_type: item.type, result_url: item.url}); });
   more.addEventListener('click', () => {visible += 15; show();});
-  fetch('/zoeken/index.json', {cache:'no-store'})
+  fetch('/zoeken/index.json?v=4', {cache:'no-store'})
     .then(response => {if (!response.ok) throw Error('HTTP ' + response.status); return response.json();})
     .then(data => {
       if (!data || !Array.isArray(data.items)) throw Error('Ongeldige zoekindex');
