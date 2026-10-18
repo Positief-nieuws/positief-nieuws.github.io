@@ -18,12 +18,7 @@ PAPER = "#fffcf7"
 INK = "#182e35"
 GREEN = "#176e5c"
 GREEN_DARK = "#0e5947"
-ACCENT = "#f5cc72"
 MUTED = "#64777a"
-LINE = "rgba(23,63,49,.16)"
-NL_BG = "#f8f3e8"
-WORLD_BG = "#eef3ed"
-BRIEFING_BG = "#f3efe7"
 
 DUTCH_DAYS = [
     "maandag",
@@ -114,15 +109,6 @@ def edition_date_short_text(data):
         )
     except (TypeError, ValueError):
         return str(raw_date)
-
-
-def edition_weekday(data):
-    raw_date = raw_edition_date(data)
-    try:
-        date_obj = datetime.strptime(raw_date, "%Y-%m-%d")
-        return DUTCH_DAYS[date_obj.weekday()]
-    except (TypeError, ValueError):
-        return "nieuwe"
 
 
 def build_preheader(data, nl):

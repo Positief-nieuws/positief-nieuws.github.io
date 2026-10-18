@@ -1,6 +1,6 @@
 """Central source configuration; no publication or external writes."""
 import json
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timedelta
 from pathlib import Path
 from urllib.parse import urlsplit, urlunsplit, parse_qsl, urlencode
 
