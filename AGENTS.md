@@ -9,3 +9,6 @@ Lees vóór iedere editie REDACTIE.txt en selection_preferences.json. De huidige
 - Geen zwak verhaal toevoegen om 6+6 of themaspreiding te vullen. Zoek verder. Kunnen onvoldoende goede verhalen of bronnen worden bevestigd, meld precies wat ontbreekt; nooit volledigheid of kwaliteit veinzen.
 - NL eerst, daarna wereld, per groep van sterk naar minder sterk. Inhoudelijke regio gaat voor taal of bronland.
 - Eerste concept blijft ongepubliceerd; live akkoord en nieuwsbriefverzending zijn afzonderlijke stappen. Geen wijzigingen aan nieuws.json om een procesproef te laten slagen.
+
+## Analytics bij websitewerkzaamheden
+Lees vóór iedere browsercontrole `docs/analytics-testing.md`. Gebruik eerst een lokale preview. Open live pagina’s voor onderhoud uitsluitend met `?pn_internal=1` in de gekozen browser; verifieer de uitsluiting voordat je navigeert. Een nieuwe browser of nieuw profiel moet opnieuw worden uitgesloten. Voer geen echte tracking- of Buttondown-test uit zonder het gecontroleerde protocol.

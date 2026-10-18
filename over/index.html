@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="nl">
-<head><script id="newsletter-redirect-cleanup">(function(){var q=location.search.replace('?email_address=','&email_address=');var p=new URLSearchParams(q);if(p.has('email_address')){p.delete('email_address');history.replaceState(null,'',location.pathname+(p.toString()?'?'+p.toString():'')+location.hash);}})();</script>
+<head><script src="/analytics-loader.js?v=1"></script><script id="newsletter-redirect-cleanup">(function(){var q=location.search.replace('?email_address=','&email_address=');var p=new URLSearchParams(q);if(p.has('email_address')){p.delete('email_address');history.replaceState(null,'',location.pathname+(p.toString()?'?'+p.toString():'')+location.hash);}})();</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Over Positief nieuws | Werkwijze en selectie</title>
@@ -221,22 +221,7 @@ footer{padding:0 0 34px;text-align:center;color:#8b928e;font-size:.72rem}
 <script>
   window.sa_metadata = Object.assign({}, window.sa_metadata, { page_type: "about" });
 
-  (function () {
-    const analyticsScript = document.createElement("script");
-    analyticsScript.async = true;
-      analyticsScript.setAttribute("data-metadata-collector", "pnAnalyticsMetadata");
-    analyticsScript.setAttribute("data-hostname", "positief-nieuws.nl");
-    analyticsScript.src = "https://scripts.simpleanalyticscdn.com/latest.js";
-
-    analyticsScript.addEventListener("load", function () {
-      const autoEventsScript = document.createElement("script");
-      autoEventsScript.async = true;
-      autoEventsScript.src = "https://scripts.simpleanalyticscdn.com/auto-events.js";
-      document.body.appendChild(autoEventsScript);
-    });
-
-    document.body.appendChild(analyticsScript);
-  })();
+  window.pnLoadAnalytics();
 </script>
 
 </body>

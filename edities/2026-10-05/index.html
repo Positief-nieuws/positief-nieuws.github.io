@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="nl"><head><script id="newsletter-redirect-cleanup">(function(){var q=location.search.replace('?email_address=','&email_address=');var p=new URLSearchParams(q);if(p.has('email_address')){p.delete('email_address');history.replaceState(null,'',location.pathname+(p.toString()?'?'+p.toString():'')+location.hash);}})();</script>
+<!DOCTYPE html><html lang="nl"><head><script src="/analytics-loader.js?v=1"></script><script id="newsletter-redirect-cleanup">(function(){var q=location.search.replace('?email_address=','&email_address=');var p=new URLSearchParams(q);if(p.has('email_address')){p.delete('email_address');history.replaceState(null,'',location.pathname+(p.toString()?'?'+p.toString():'')+location.hash);}})();</script>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Positief nieuws · maandag 5 oktober 2026</title><meta name="description" content="Positief nieuws van maandag 5 oktober 2026: Meer mannen kiezen voor het basisonderwijs: één op de vijf nieuwe leraren is man en Bedrijven gebruiken het stroo…"><link rel="canonical" href="https://positief-nieuws.nl/edities/2026-10-05/">
 <meta name="theme-color" content="#17382b"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Positief nieuws · maandag 5 oktober 2026", "description": "Positief nieuws van maandag 5 oktober 2026: Meer mannen kiezen voor het basisonderwijs: één op de vijf nieuwe leraren is man en Bedrijven gebruiken het stroo…", "url": "https://positief-nieuws.nl/edities/2026-10-05/", "datePublished": "2026-10-05", "dateModified": "2026-10-05", "isPartOf": {"@type": "WebSite", "name": "Positief nieuws", "url": "https://positief-nieuws.nl/"}}</script><style>
@@ -260,19 +260,5 @@
     }
   });
 
-  (function () {
-    const analyticsScript = document.createElement("script");
-    analyticsScript.async = true;
-    analyticsScript.setAttribute("data-hostname", "positief-nieuws.nl");
-    analyticsScript.setAttribute("data-metadata-collector", "pnAnalyticsMetadata");
-    analyticsScript.src = "https://scripts.simpleanalyticscdn.com/latest.js";
-    analyticsScript.addEventListener("load", function () {
-      const autoEventsScript = document.createElement("script");
-      autoEventsScript.async = true;
-      autoEventsScript.setAttribute("data-full-urls", "true");
-      autoEventsScript.src = "https://scripts.simpleanalyticscdn.com/auto-events.js";
-      document.body.appendChild(autoEventsScript);
-    });
-    document.body.appendChild(analyticsScript);
-  })();
+  window.pnLoadAnalytics();
 </script></body></html>

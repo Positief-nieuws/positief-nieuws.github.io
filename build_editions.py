@@ -267,7 +267,7 @@ def validate_positive_articles(data, source_name="nieuws.json"):
 
 def analytics_html(metadata):
     metadata_json = json.dumps(metadata, ensure_ascii=False)
-    return f"""<script>
+    return f"""<script src="/analytics-loader.js?v=1"></script><script>
   window.sa_event =
     window.sa_event ||
     function () {{
@@ -310,21 +310,7 @@ def analytics_html(metadata):
     }}
   }});
 
-  (function () {{
-    const analyticsScript = document.createElement("script");
-    analyticsScript.async = true;
-    analyticsScript.setAttribute("data-hostname", "positief-nieuws.nl");
-    analyticsScript.setAttribute("data-metadata-collector", "pnAnalyticsMetadata");
-    analyticsScript.src = "https://scripts.simpleanalyticscdn.com/latest.js";
-    analyticsScript.addEventListener("load", function () {{
-      const autoEventsScript = document.createElement("script");
-      autoEventsScript.async = true;
-      autoEventsScript.setAttribute("data-full-urls", "true");
-      autoEventsScript.src = "https://scripts.simpleanalyticscdn.com/auto-events.js";
-      document.body.appendChild(autoEventsScript);
-    }});
-    document.body.appendChild(analyticsScript);
-  }})();
+  window.pnLoadAnalytics();
 </script>"""
 
 
@@ -2016,6 +2002,8 @@ def refresh_edition_analytics():
             markup = markup.replace('function loadAnalytics(editionDate) {', 'function loadAnalytics(editionDate) {\n      if (window.pnSetEdition) window.pnSetEdition(editionDate);') if 'window.pnSetEdition(editionDate)' not in markup else markup
             markup = markup.replace('edition: editionDate || "onbekend"', 'edition: editionDate || "none"')
         page.write_text(markup, encoding='utf-8')
+    from analytics_policy import refresh
+    refresh()
     print('Editiemeting bijgewerkt op bestaande pagina’s.')
 
 
