@@ -460,7 +460,6 @@ def article_html(item, date_value=None, show_date=False, section="onbekend"):
         <div class="article-copy">
           {date_html}
           <h3><a href="{url}" {link_attrs} {tracking_attrs}>{title}</a></h3>
-          {f'<p class="teaser-one-line">{teaser}</p>' if teaser else ''}
           {category_meta_html(item)}
         </div>
         {thumb_html}
@@ -1007,7 +1006,7 @@ def _headline_html(item, number, date_value=None):
     meta = ""
     if meta_parts:
         meta = '<div class="meta">' + '<span class="sep">·</span>'.join(f"<span>{p}</span>" for p in meta_parts) + "</div>"
-    return f"""<article class="article" style="display:grid;grid-template-columns:34px minmax(0,1fr);gap:10px;padding-right:46px"><div class="num">{number:02d}</div><div><h3><a href="{url}" target="_blank" rel="noopener noreferrer" {tracking_attrs}>{title}</a></h3>{f'<p class="teaser">{teaser}</p>' if teaser else ''}{meta}</div><a class="arrow" href="{url}" target="_blank" rel="noopener noreferrer" aria-label="Lees {title}" {tracking_attrs}>↗</a></article>"""
+    return f"""<article class="article" style="display:grid;grid-template-columns:34px minmax(0,1fr);gap:10px;padding-right:46px"><div class="num">{number:02d}</div><div><h3><a href="{url}" target="_blank" rel="noopener noreferrer" {tracking_attrs}>{title}</a></h3>{meta}</div><a class="arrow" href="{url}" target="_blank" rel="noopener noreferrer" aria-label="Lees {title}" {tracking_attrs}>↗</a></article>"""
 
 
 def render_archive(entries):
@@ -1832,12 +1831,12 @@ def homepage_story_html(item, edition_date, section, index):
         eager = section == "nl" and index == 0
         image = f'<a class="article-thumb" href="{esc(url)}" {attrs} aria-label="Lees {esc(title)}"><img class="story-photo" src="{esc(path)}" alt="{esc(item.get("image_alt") or title)}" loading="{"eager" if eager else "lazy"}" decoding="async"></a>'
     if section == "headlines":
-        return f'<article class="short"><span class="count">{index+1:02d} / 03</span><h3 class="article-title">{link}</h3><p class="teaser">{esc(teaser)}</p>{meta}</article>'
+        return f'<article class="short"><span class="count">{index+1:02d} / 03</span><h3 class="article-title">{link}</h3>{meta}</article>'
     if section == "nl" and index < 3:
         hero = index == 0
         cls, body, heading = ("hero-card", "hero-body", "h2") if hero else ("side-card", "side-body", "h3")
-        return f'<article class="{cls}">{image}<div class="{body}"><{heading} class="article-title">{link}</{heading}>' + (f'<p>{esc(teaser)}</p>' if hero else "") + meta + '</div></article>'
-    return f'<article class="list-item">{image}<div><h3 class="article-title">{link}</h3><p class="teaser-one-line">{esc(teaser)}</p>{meta}</div></article>'
+        return f'<article class="{cls}">{image}<div class="{body}"><{heading} class="article-title">{link}</{heading}>' + meta + '</div></article>'
+    return f'<article class="list-item">{image}<div><h3 class="article-title">{link}</h3>{meta}</div></article>'
 
 
 def homepage_cards_html(stories, edition_date, section):
@@ -2085,6 +2084,10 @@ def refresh_articles():
 
 
 SITE_THEME_CSS = r"""
+/* Overview cards contain headings and metadata; their height follows the content. */
+#today-view .list-item{min-height:0}
+#today-view .short .meta{margin-top:0}
+
 :root{--paper:#fffcf7;--ink:#182e35;--green:#176e5c;--green-dark:#0e5947;--accent:#d6a13a;--muted:#657570;--line: #dfe8e2;--line2:#e4ebe6;--header:1120px}
 body{background:#fffcf7;color:#182e35;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
 body.topics-index h1,body.topics-index h2,body.topics-index h3,body h1,body h2,body h3,body h4,body .archive-title,body .topic-title{font-family:inherit!important;font-weight:800;letter-spacing:-.035em}

@@ -75,8 +75,6 @@
     link.href = item.url;
     heading.append(link);
     main.append(heading);
-    const phrase = clean(item.teaser || item.body).slice(0, 240);
-    if (phrase) main.append(element('p', '', phrase));
     card.append(main);
     return card;
   };

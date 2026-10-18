@@ -30,3 +30,7 @@ body:not(.pn-home) .hero{padding-bottom:16px}
 body:not(.pn-home) .hero + .content{padding-top:16px}
 body:not(.pn-home) .hero + .content .copy > h2:first-child{margin-top:0}
 body:not(.pn-home) .hero + .section{padding-top:16px}
+
+/* Overview cards contain headings and metadata; their height follows the content. */
+#today-view .list-item{min-height:0}
+#today-view .short .meta{margin-top:0}
