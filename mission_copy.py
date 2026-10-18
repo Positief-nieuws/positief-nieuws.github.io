@@ -18,9 +18,9 @@ def enhance(markup, path):
         markup = markup.replace('Bij ieder verhaal vind je bronnen om verder te lezen. Zo zie je wat er goed gaat, met ruimte voor nuance en zonder eindeloze nieuwsstroom.', MISSION + ' Bij ieder verhaal vind je bronnen en nuance. Problemen blijven in beeld; hoopvolle ontwikkelingen krijgen ook de ruimte.')
         markup = markup.replace('Het nieuws bestaat niet alleen uit oorlog, politieke ruzie, ongelukken en crises. Iedere dag gaan er ook dingen vooruit: in wetenschap, gezondheid, natuur, technologie en gewoon tussen mensen. Alleen krijgen die verhalen vaak minder aandacht.', MISSION + ' We ontkennen problemen niet en maken ontwikkelingen niet mooier dan ze zijn.</p><p>' + PERSONAL)
         pending_copy = """<p>Dank je voor je belangstelling voor Positief nieuws.</p>
-          <p><strong>Check nu je inbox en bevestig je e-mailadres via de link in de mail.</strong></p>
+          <p><strong>Nog één stap. Controleer je inbox en bevestig je inschrijving via de link in onze e-mail.</strong></p>
           <p>Daarna ben je helemaal klaar en kun je twee keer per week genieten van oplossingen en vooruitgang in je mail.</p>
-          <p>Krijg je geen mail? Kijk in je spamfolder. Nog steeds niets? <a href="/nieuwsbrief/">Probeer opnieuw met een geldig e-mailadres.</a></p>
+          <p>Krijg je geen mail? Kijk in je spamfolder. Was je al ingeschreven, dan is een nieuwe bevestiging mogelijk niet nodig. Zonder bevestiging is een nieuwe inschrijving nog niet afgerond. Nog steeds geen mail? <a href="mailto:redactie@positief-nieuws.nl">Laat het ons weten</a>.</p>
           <!-- mission:pending --><p>Wil je ons helpen? <a href="/nieuwsbrief/">Deel de inschrijfpagina</a> met iemand die dit nieuws ook waardeert.</p>"""
         markup = re.sub(
             r'(<div class="signup-pending-copy">).*?(<div class="signup-pending-actions">)',

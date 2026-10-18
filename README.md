@@ -62,7 +62,7 @@ Een echte inschrijving/verzending is een aparte handeling.
 `daily-news.yml` verzamelt uitsluitend kandidaten. Een goedgekeurde wijziging
 van `nieuws.json` activeert `Bewaar editie`, daarna `Maak Buttondown concept`.
 Live publicatie en verzending volgen de afzonderlijke akkoordstappen in
-`REDACTIE.txt`. `newsletter-health.yml` doet wekelijkse broncontroles;
+`REDACTIE.txt`. `newsletter-health.yml` doet iedere zes uur en na wijzigingen/publicatie broncontroles voor alle inschrijfpunten;
 `docs/newsletter-tests/` beschrijft de aanvullende maandtest.
 De gerichte workflows voor zoekindex, vormgeving en nieuwsbrief blijven bruikbaar.
 

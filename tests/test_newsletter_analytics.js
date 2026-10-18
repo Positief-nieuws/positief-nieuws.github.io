@@ -51,3 +51,11 @@ assert.equal(landing.events[0].name,'newsletter_landing_view');
 const home=scenario('homepage',undefined,undefined,'/');
 home.view();assert.equal(home.events.filter(e=>e.name==='newsletter_view').length,0);
 console.log('PASS: all 8 topic categories, view deduplication, invalid/valid submits, article click placement, landing event, homepage readiness.');
+
+const duplicate = scenario('article','Gezondheid',undefined,'/artikelen/voorbeeld/');
+let prevented = 0;
+const event = {target:duplicate.form, preventDefault(){prevented++;}};
+duplicate.listeners.submit(event); duplicate.listeners.submit(event);
+assert.equal(prevented, 1);
+assert.equal(duplicate.events.filter(e=>e.name==='newsletter_form_submit').length, 1);
+console.log('PASS: repeated submit produces one native navigation and one submit event.');

@@ -135,6 +135,11 @@
       });
     });
   }
+  // Guard a native POST while navigation is in progress. Never manufacture success.
+  let submitting = new WeakSet();
+  if (window.addEventListener) window.addEventListener('pageshow', function () {
+    submitting = new WeakSet(); // Back/forward cache must allow a deliberate retry.
+  });
   const views = new Set();
   function announceView() {
     const c = context();
@@ -183,6 +188,8 @@
     document.addEventListener('submit', function (event) {
       const form = event.target;
       if (!newsletterForms().includes(form) || event.defaultPrevented || !form.checkValidity()) return;
+      if (submitting.has(form)) { event.preventDefault(); return; }
+      submitting.add(form);
       refreshForms();
       track('newsletter_form_submit', {
         placement: placement(form), signup_status: 'submitted_unconfirmed',

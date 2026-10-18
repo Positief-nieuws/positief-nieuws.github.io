@@ -11,23 +11,24 @@ import urllib.request
 
 BASE = 'https://positief-nieuws.nl'
 ACTION = 'https://buttondown.com/api/emails/embed-subscribe/positiefnieuws'
-EVENTS = ('newsletter_view', 'newsletter_cta_click', 'newsletter_form_submit')
+EVENTS = ('newsletter_view', 'newsletter_cta_click', 'newsletter_form_submit', 'newsletter_landing_view')
 EXPECTED = {'/': {'home_hero', 'home_end'}, '/nieuwsbrief/': {'landing_main'}}
 
 class Page(HTMLParser):
     def __init__(self, text):
         super().__init__()
-        self.forms, self.scripts, self.ids = [], [], set()
+        self.forms, self.scripts, self.ids, self.links = [], [], set(), []
         self.current = None
         self.feed(text)
 
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
         if a.get('id'): self.ids.add(a['id'])
+        if tag == 'a': self.links.append(a)
         if tag == 'form':
             self.current = {'attrs': a, 'inputs': []}
             self.forms.append(self.current)
-        if tag == 'input' and self.current is not None:
+        if tag in ('input', 'button') and self.current is not None:
             self.current['inputs'].append(a)
         if tag == 'script' and a.get('src'): self.scripts.append(a['src'])
 
@@ -35,22 +36,57 @@ class Page(HTMLParser):
         if tag == 'form': self.current = None
 
 
-def form_checks(text, path):
+def form_checks(text, path, expected=None):
     page = Page(text)
     rows = []
-    for placement in sorted(EXPECTED[path]):
+    for placement in sorted(EXPECTED[path] if expected is None else expected):
         forms = [f for f in page.forms if f['attrs'].get('data-newsletter-placement') == placement]
         rows.append((placement, 'formulier aanwezig (exact één)', len(forms) == 1))
         for f in forms:
             a, fields = f['attrs'], f['inputs']
             rows.extend([
                 (placement, 'Buttondown action en POST', a.get('action') == ACTION and a.get('method', '').lower() == 'post'),
-                (placement, 'emailveld', any(i.get('name') == 'email' and i.get('type') == 'email' and 'required' in i and 'disabled' not in i for i in fields)),
+                (placement, 'emailveld', len([i for i in fields if i.get('name') == 'email']) == 1 and any(i.get('name') == 'email' and i.get('type') == 'email' and 'required' in i and 'disabled' not in i for i in fields)),
+                (placement, 'verzendknop', any(i.get('type') == 'submit' and 'disabled' not in i for i in fields)),
+                (placement, 'geen client-side succes of afwijkende redirect', not any(k in a for k in ('onsubmit', 'target')) and not any(i.get('name') in ('redirect', 'redirect_url', 'next', 'type') for i in fields)),
+                (placement, 'bronmetadata', any(i.get('name') == 'metadata__signup_source' and i.get('value') == placement for i in fields)),
                 (placement, 'embed=1', any(i.get('name') == 'embed' and i.get('value') == '1' and i.get('type') == 'hidden' and 'disabled' not in i for i in fields)),
             ])
+    for link in page.links:
+        if link.get('data-newsletter-cta') and link.get('href', '').startswith('#'):
+            rows.append(('link', 'formulieranker bestaat', link['href'][1:] in page.ids))
     rows.append(('alle', 'gedeelde meetcode gekoppeld', any(urllib.parse.urlsplit(s).path == '/edition-analytics.js' for s in page.scripts)))
     return rows
 
+
+
+def inventory(root=Path('.')):
+    """Discover actual forms AND independently required placements, so removal fails."""
+    expected = {k: set(v) for k, v in EXPECTED.items()}
+    for slug in ('mens', 'natuur-en-klimaat', 'gezondheid', 'energie-en-innovatie',
+                 'wetenschap', 'cultuur', 'economie', 'sport'):
+        expected['/' + slug + '/'] = {'topic_inline'}
+    rows = []
+    for file in sorted(root.rglob('*.html')):
+        if '.git' in file.parts: continue
+        relative = file.relative_to(root)
+        path = '/' + (str(relative.parent) + '/' if relative.name == 'index.html' and str(relative.parent) != '.' else '' if relative.name == 'index.html' else str(relative))
+        text = file.read_text()
+        page = Page(text)
+        required = 'article_end' if relative.parts[0] == 'artikelen' else 'special_end' if relative.parts[0] == 'specials' else None
+        if required and relative.name == 'index.html': expected.setdefault(path, set()).add(required)
+        for f in page.forms:
+            a = f['attrs']
+            if 'buttondown' not in a.get('action', '') and not a.get('data-newsletter-placement'): continue
+            placement = a.get('data-newsletter-placement', 'MISSING')
+            expected.setdefault(path, set()).add(placement)
+            rows.append(dict(page=path, kind='form', placement=placement, code=str(relative),
+                             action=a.get('action'), method=a.get('method'), fields=f['inputs']))
+        for a in page.links:
+            if a.get('data-newsletter-cta') or 'nieuwsbrief' in a.get('href', '') or 'buttondown' in a.get('href', '') and 'legal/' not in a.get('href', ''):
+                rows.append(dict(page=path, kind='link', placement=a.get('data-newsletter-cta', ''),
+                                 code=str(relative), target=a.get('href')))
+    return expected, rows
 
 def get(url, headers=None):
     req = urllib.request.Request(url, headers={'User-Agent': 'PositiefNieuws-ReadOnlyMonitor/1.0', **(headers or {})})
@@ -67,21 +103,39 @@ def run(local=False):
     def add(location, point, status, detail=''):
         rows.append(dict(date=now, location=location, checkpoint=point, status=status, detail=detail))
     texts = {}
-    for path in EXPECTED:
+    expected, _ = inventory()
+    from concurrent.futures import ThreadPoolExecutor
+    def read(path):
         try:
-            text = Path('index.html' if path == '/' else 'nieuwsbrief/index.html').read_text() if local else get(BASE + path)
+            file = Path(path.lstrip('/') or '.')
+            if path.endswith('/'): file = file / 'index.html'
+            return path, (file.read_text() if local else get(BASE + path)), None
+        except Exception as error:
+            return path, None, error
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        loaded = list(pool.map(read, expected))
+    for path, text, error in loaded:
+        try:
+            if error: raise error
             texts[path] = text
             add(path, 'pagina laden' if not local else 'bronbestand lezen', 'PASS')
-            for placement, point, ok in form_checks(text, path):
+            for placement, point, ok in form_checks(text, path, expected[path]):
                 add(path + '#' + placement, point, 'PASS' if ok else 'FAIL')
         except Exception as e:
             add(path, 'pagina laden', 'FAIL', type(e).__name__)
     try:
         script = Path('edition-analytics.js').read_text() if local else get(BASE + '/edition-analytics.js')
         for event in EVENTS:
-            add('beide formulieren', 'meetcode ' + event, 'PASS' if "track('" + event + "'" in script else 'FAIL', 'Broncontrole; geen bewijs van ontvangst')
+            add('alle formulieren', 'meetcode ' + event, 'PASS' if "track('" + event + "'" in script else 'FAIL', 'Broncontrole; geen bewijs van ontvangst')
     except Exception as e:
-        add('beide formulieren', 'meetcode ophalen', 'FAIL', type(e).__name__)
+        add('alle formulieren', 'meetcode ophalen', 'FAIL', type(e).__name__)
+    if not local:
+        try:
+            hosted = Page(get(ACTION))
+            ok = any(any(i.get('name') in ('email', 'email_address') for i in f['inputs']) for f in hosted.forms)
+            add('Buttondown endpoint', 'GET bereikt een inschrijfformulier', 'PASS' if ok else 'FAIL', 'Geen POST; geen bewijs van registratie of CAPTCHA')
+        except Exception as error:
+            add('Buttondown endpoint', 'GET bereikbaarheid', 'FAIL', type(error).__name__)
     home = texts.get('/', '')
     for value, view in [('bevestigen', 'signup-pending'), ('bevestigd', 'signup-confirmed')]:
         ok = view + '-view' in Page(home).ids and re.search(r'params.get\("inschrijving"\)\s*===\s*"' + value + r'"\s*\)\s*\{\s*showAppView\(\s*"' + view + '"', home)
@@ -105,7 +159,7 @@ def run(local=False):
                 data = json.loads(get('https://simpleanalytics.com/positief-nieuws.nl.json?' + params, {'Api-Key': key}))
                 if data.get('ok') is False or not isinstance(data.get('events'), list): raise ValueError('Ongeldig API-resultaat')
                 counts = {e['name']: e['total'] for e in data['events']}
-                for event in EVENTS:
+                for event in (EVENTS if path == '/nieuwsbrief/' else EVENTS[:3]):
                     count = counts.get(event, 0)
                     if not isinstance(count, (int, float)) or count < 0: raise ValueError('Ongeldige eventtelling')
                     add(path, 'ontvangen ' + event, 'PASS' if count > 0 else 'WARN', f'{start} t/m {end}: {count}; nul kan ook weinig verkeer betekenen')
@@ -124,6 +178,8 @@ def main():
     rows = run(args.local)
     out = Path(args.output)
     out.mkdir(parents=True, exist_ok=True)
+    _, entries = inventory()
+    (out / 'inventory.json').write_text(json.dumps(entries, ensure_ascii=False, indent=2) + '\n')
     (out / 'results.json').write_text(json.dumps(rows, ensure_ascii=False, indent=2) + '\n')
     lines = ['# Nieuwsbriefcontrole', '', 'Broncontrole is geen end-to-endtest. Formulierinzending ≠ bevestigde abonnee.', '', '| Datum (UTC) | Locatie | Controlepunt | Status | Toelichting |', '| --- | --- | --- | --- | --- |']
     for r in rows:

@@ -29,6 +29,24 @@ class MonitorTests(unittest.TestCase):
     def test_duplicate_form(self):
         self.assertIn('formulier aanwezig (exact één)', self.failures(self.html + self.html))
 
+    def test_removed_article_form_is_not_silently_ignored(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            article = root / 'artikelen/2026-10-18/test/index.html'
+            article.parent.mkdir(parents=True)
+            article.write_text('<html>Removed form</html>')
+            expected, _ = m.inventory(root)
+            self.assertEqual(expected['/artikelen/2026-10-18/test/'], {'article_end'})
+            checks = m.form_checks(article.read_text(), '/artikelen/2026-10-18/test/', {'article_end'})
+            self.assertTrue(any(not ok for _, _, ok in checks))
+
+    def test_unexpected_redirect_or_inline_success_fails(self):
+        broken = self.html.replace('method="post"', 'method="post" onsubmit="return false"')
+        self.assertIn('geen client-side succes of afwijkende redirect', self.failures(broken))
+        broken = self.html.replace('name="embed"', 'name="redirect_url"')
+        self.assertIn('geen client-side succes of afwijkende redirect', self.failures(broken))
+
     def test_network_failure_is_recorded(self):
         with patch.object(m, 'get', side_effect=TimeoutError), patch.dict(m.os.environ, {}, clear=True):
             rows = m.run()
