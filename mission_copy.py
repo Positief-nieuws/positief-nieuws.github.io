@@ -17,11 +17,25 @@ def enhance(markup, path):
         markup = markup.replace('Vandaag weer twaalf positieve verhalen uit Nederland en de wereld, plus drie ontwikkelingen om bij te blijven. Veel leesplezier en daarna weer lekker verder met je dag.', 'Ook oplossingen en vooruitgang verdienen aandacht. Lees twaalf positieve verhalen uit Nederland en de wereld, plus drie ontwikkelingen om bij te blijven. Met bronnen en nuance, in een paar minuten.')
         markup = markup.replace('Bij ieder verhaal vind je bronnen om verder te lezen. Zo zie je wat er goed gaat, met ruimte voor nuance en zonder eindeloze nieuwsstroom.', MISSION + ' Bij ieder verhaal vind je bronnen en nuance. Problemen blijven in beeld; hoopvolle ontwikkelingen krijgen ook de ruimte.')
         markup = markup.replace('Het nieuws bestaat niet alleen uit oorlog, politieke ruzie, ongelukken en crises. Iedere dag gaan er ook dingen vooruit: in wetenschap, gezondheid, natuur, technologie en gewoon tussen mensen. Alleen krijgen die verhalen vaak minder aandacht.', MISSION + ' We ontkennen problemen niet en maken ontwikkelingen niet mooier dan ze zijn.</p><p>' + PERSONAL)
-        markup = markup.replace('<p>Bevestig je e-mailadres om je inschrijving af te ronden.</p>', '<p>Dank je voor je belangstelling voor Positief nieuws. Ook oplossingen en vooruitgang verdienen een plek in je nieuwsbeeld.</p><p>Bevestig je e-mailadres om je inschrijving af te ronden.</p>') if 'Dank je voor je belangstelling' not in markup else markup
-        if '<!-- mission:pending -->' not in markup:
-            markup = markup.replace('<div class="signup-pending-actions">', '<!-- mission:pending --><p>Wil je ondertussen helpen? <a href="/nieuwsbrief/">Deel de inschrijfpagina</a> met iemand die dit nieuws ook waardeert.</p><div class="signup-pending-actions">')
+        pending_copy = """<p>Dank je voor je belangstelling voor Positief nieuws.</p>
+          <p><strong>Check nu je inbox en bevestig je e-mailadres via de link in de mail.</strong></p>
+          <p>Daarna ben je helemaal klaar en kun je twee keer per week genieten van oplossingen en vooruitgang in je mail.</p>
+          <p>Krijg je geen mail? Kijk in je spamfolder. Nog steeds niets? <a href="/nieuwsbrief/">Probeer opnieuw met een geldig e-mailadres.</a></p>
+          <!-- mission:pending --><p>Wil je ons helpen? <a href="/nieuwsbrief/">Deel de inschrijfpagina</a> met iemand die dit nieuws ook waardeert.</p>"""
+        markup = re.sub(
+            r'(<div class="signup-pending-copy">).*?(<div class="signup-pending-actions">)',
+            lambda match: match[1] + '\n          ' + pending_copy + '\n        </div>\n\n        ' + match[2],
+            markup, count=1, flags=re.S,
+        )
         if '<!-- mission:confirmed -->' not in markup:
             markup = markup.replace('<h1 class="page-title">Bedankt voor het bevestigen</h1>', '<h1 class="page-title">Bedankt voor het bevestigen</h1><!-- mission:confirmed --><p>Fijn dat je belangstelling hebt voor een breder nieuwsbeeld. Wil je oplossingen en vooruitgang verder helpen? <a href="/nieuwsbrief/">Deel de inschrijfpagina</a> met iemand die dit ook waardeert.</p>')
+        confirmed_share = '<!-- mission:confirmed-share --><p>Wil je ons helpen? <a href="/nieuwsbrief/">Deel de inschrijfpagina</a> met iemand die dit nieuws ook waardeert.</p>'
+        def add_confirmed_share(match):
+            section = match[0]
+            if '<!-- mission:confirmed-share -->' not in section:
+                section = section.replace('<div class="signup-pending-actions">', confirmed_share + '\n        <div class="signup-pending-actions">', 1)
+            return section
+        markup = re.sub(r'<section id="signup-confirmed-view".*?</section>', add_confirmed_share, markup, count=1, flags=re.S)
     elif path == Path('over/index.html'):
         markup = markup.replace('Positief nieuws laat zien wat er óók gebeurt, zonder het belangrijke nieuws weg te laten. Een compacte selectie om in een paar minuten bij te zijn en daarna weer verder te gaan.', MISSION)
         if '<!-- mission:tom -->' not in markup:
