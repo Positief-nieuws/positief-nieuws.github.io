@@ -1,4 +1,4 @@
-const CACHE_NAME = "positief-nieuws-v8";
+const CACHE_NAME = "positief-nieuws-v9";
 
 const CORE_ASSETS = [
   "/",
@@ -61,6 +61,8 @@ self.addEventListener(
 
     const isFreshData =
       url.pathname.endsWith("/nieuws.json")
+      || url.pathname === "/zoeken/index.json"
+      || url.pathname === "/zoeken/search.js"
       || url.pathname.endsWith("/edities/index.json")
       || url.pathname.endsWith("/data/pixabay-images.json")
       || /\/edities\/\d{4}-\d{2}-\d{2}\.json$/.test(url.pathname);
