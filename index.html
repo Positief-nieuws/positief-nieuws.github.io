@@ -2027,6 +2027,18 @@ body{background:#fffcf7;color:#182e35;font-family:Inter,ui-sans-serif,-apple-sys
     </div>
   </section>
 
+  <section id="signup-confirmed-view" class="app-view signup-pending-page" hidden>
+    <div class="content-shell">
+      <p class="section-kicker">Nieuwsbrief</p>
+      <h1 class="page-title">Bedankt voor het bevestigen</h1>
+      <div class="signup-pending-card">
+        <p>Je bent terug van de bevestigingslink. Als Buttondown je bevestiging heeft verwerkt, ontvang je voortaan Positief nieuws in je inbox.</p>
+        <p>Je ontvangt ook een welkomstmail. Deze pagina zelf controleert je abonnementsstatus niet.</p>
+        <div class="signup-pending-actions"><a href="/">Terug naar Positief nieuws</a></div>
+      </div>
+    </div>
+  </section>
+
   <section id="signup-pending-view" class="app-view signup-pending-page" hidden>
     <div class="content-shell">
       <p class="section-kicker">Nieuwsbrief</p>
@@ -2896,6 +2908,8 @@ body{background:#fffcf7;color:#182e35;font-family:Inter,ui-sans-serif,-apple-sys
       privacyView.hidden =
         view !== "privacy";
 
+      $("#signup-confirmed-view").hidden = view !== "signup-confirmed";
+
       signupPendingView.hidden =
         view !== "signup-pending";
 
@@ -2940,7 +2954,7 @@ body{background:#fffcf7;color:#182e35;font-family:Inter,ui-sans-serif,-apple-sys
       }
 
       if (params.get("inschrijving") === "bevestigd") {
-        showAppView("signup-pending");
+        showAppView("signup-confirmed");
         return;
       }
 

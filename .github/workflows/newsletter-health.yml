@@ -1,0 +1,38 @@
+name: Wekelijkse nieuwsbriefcontrole
+on:
+  schedule:
+    - cron: '17 7 * * 2'
+  workflow_dispatch:
+  push:
+    paths:
+      - scripts/check_newsletter.py
+      - tests/test_newsletter_monitor.py
+      - .github/workflows/newsletter-health.yml
+permissions:
+  contents: read
+concurrency:
+  group: newsletter-health-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Controlelogica testen
+        run: python -m unittest discover -s tests -p 'test_newsletter_monitor.py'
+      - name: Live controle zonder inschrijving
+        env:
+          SIMPLE_ANALYTICS_API_KEY: ${{ secrets.SIMPLE_ANALYTICS_API_KEY }}
+        run: python scripts/check_newsletter.py
+      - name: Bewaar gedateerd rapport (ook bij fouten)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nieuwsbriefcontrole-${{ github.run_id }}
+          path: newsletter-test-results/
+          retention-days: 90
+          if-no-files-found: error
