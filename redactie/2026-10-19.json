@@ -1,0 +1,615 @@
+{
+  "schema_version": 1,
+  "edition_date": "2026-10-19",
+  "news_sha256": "0ffe8167b6e2d4badb507b5aa6880f7875bf1d5395cc2f28d008aa50894400cb",
+  "approved": true,
+  "approved_by": "Codex — volledige redactionele beoordeling van deze exacte revisie; opdrachtgever gaf live akkoord en wijzigingsopdracht in chat op 19 oktober 2026.",
+  "variation_exception_reason": "",
+  "articles": {
+    "nl:gastgezinnen-meer-matches": {
+      "source_id": "nu-nl",
+      "organization_id": "nu-nl",
+      "article_url": "https://www.nu.nl/binnenland/6413281/meer-mensen-nemen-statushouder-in-huis-zag-hoe-moeilijk-situatie-ter-apel-was.html",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-18",
+      "event_date": "2026-10-18",
+      "checked_on": "2026-10-19",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "takecarebnb-matches-2026",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.nu.nl/binnenland/6413281/meer-mensen-nemen-statushouder-in-huis-zag-hoe-moeilijk-situatie-ter-apel-was.html",
+        "claim": "Een logeerkamer, een nieuwe start: meer gastgezinnen doen mee Takecarebnb heeft dit jaar tot nu toe 444 matches gemaakt tussen statushouders en gastgezinnen. Achter die groei zitten mensen die hun huis tijdelijk openstellen — en gasten die hun leven verder kunnen opbouwen.",
+        "support": "NU.nl-reportage volledig via browser gelezen. Takecarebnb meldt 444 matches en 18 procent groei lopend jaar; gastgezinnen vertellen ervaringen. Overheidsbron bevestigt pilotvergoeding vanaf mei.",
+        "limitations": "Organisatietelling, geen effectevaluatie. Tijdelijk verblijf is geen woning; elf vroegtijdige beëindigingen vorig jaar. Groei niet causaal toegeschreven aan vergoeding.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Pixabay 4521073 / Schluesseldienst, https://pixabay.com/photos/house-keys-key-security-door-key-4521073/; https://pixabay.com/service/license-summary/. Bron, licentie en beeld gecontroleerd 19 oktober 2026. Lokaal artikelbeeld /images/artikelen/2026-10-19/gastgezinnen-meer-matches.jpg; illustratie zichtbaar vermeld."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Editiesgeschiedenis gecontroleerd op canonieke URL, onderwerp en DOI. Geen eerder gepubliceerd identiek nieuwsfeit gevonden.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "444 gerealiseerde matches met recente groei en concrete gast-/gastgezindetails. Tijdelijke huisvesting is bereikt; effect vergoeding niet causaal bewezen.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 1,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "nl:hoornraaf-twee-nieuwe-snavels": {
+      "source_id": "universiteit-utrecht",
+      "organization_id": "universiteit-utrecht",
+      "article_url": "https://www.uu.nl/nieuws/zuidelijke-hoornraaf-krijgt-in-universitair-dierenziekenhuis-twee-3d-geprinte-snavels",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-15",
+      "event_date": "2026-10-15",
+      "checked_on": "2026-10-19",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "artis-hoornraaf-snavelprotheses-2026",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.uu.nl/nieuws/zuidelijke-hoornraaf-krijgt-in-universitair-dierenziekenhuis-twee-3d-geprinte-snavels",
+        "claim": "Twee nieuwe snaveldelen — en de hoornraaf pakt zelf weer een muis Een zuidelijke hoornraaf uit ARTIS kon door een beschadigde snavel moeilijk eten. Met op maat gemaakte protheses gebruikt hij zijn snavel weer: de ochtend na de operatie pakte hij zelfstandig een muis.",
+        "support": "Oorspronkelijke UU-publicatie: twee custom protheses, CT-ontwerp, titanium/nylon; zelfstandige muisname ochtend na ingreep en latere verenverzorging.",
+        "limitations": "Eén dier, vroeg herstel, duur en langetermijnwerking nog te volgen.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Pixabay 8201730 / ambquinn, https://pixabay.com/photos/hornbill-southern-ground-hornbill-8201730/; https://pixabay.com/service/license-summary/. Bron, licentie en beeld gecontroleerd 19 oktober 2026. Lokaal artikelbeeld /images/artikelen/2026-10-19/hoornraaf-twee-nieuwe-snavels.png; illustratie zichtbaar vermeld."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Editiesgeschiedenis gecontroleerd op canonieke URL, onderwerp en DOI. Geen eerder gepubliceerd identiek nieuwsfeit gevonden.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Vernieuwende behandeling met direct waarneembaar functioneel resultaat bij één dier. Eten/verenverzorging concreet; lange termijn open.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 1,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "nl:marina-ai-bril-zelfstandigheid": {
+      "source_id": "rijnmond",
+      "organization_id": "rijnmond",
+      "article_url": "https://www.rijnmond.nl/nieuws/2268733/marina-is-blind-maar-dankzij-een-ai-bril-kan-ze-bijna-alles-zelf-mijn-vrienden-vergeten-dat-ik-niks-zie",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-17",
+      "event_date": "2026-10-17",
+      "checked_on": "2026-10-19",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "marina-kovac-ai-bril-2026",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.rijnmond.nl/nieuws/2268733/marina-is-blind-maar-dankzij-een-ai-bril-kan-ze-bijna-alles-zelf-mijn-vrienden-vergeten-dat-ik-niks-zie",
+        "claim": "Verpakking lezen, koken, een bord op het station: Marina doet meer zelf De 21-jarige Marina gebruikt een bril met camera en spraakondersteuning om informatie om haar heen te laten voorlezen. Volgens haar maakt dat dagelijkse handelingen een stuk eenvoudiger.",
+        "support": "Volledige oorspronkelijke Rijnmond-reportage met concrete handelingen, eerdere telefoontoepassingen en eigen ervaringen van Marina.",
+        "limitations": "Persoonlijke ervaring, geen algemene veiligheidstest of herstel van gezichtsvermogen. Soms herstart nodig.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Pixabay 5496153 / Myriams-Fotos, https://pixabay.com/photos/braille-fingers-read-braille-book-5496153/; https://pixabay.com/service/license-summary/. Bron, licentie en beeld gecontroleerd 19 oktober 2026. Lokaal artikelbeeld /images/artikelen/2026-10-19/marina-ai-bril-zelfstandigheid.jpg; illustratie zichtbaar vermeld."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Editiesgeschiedenis gecontroleerd op canonieke URL, onderwerp en DOI. Geen eerder gepubliceerd identiek nieuwsfeit gevonden.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Nieuwe reportage met specifieke, reeds ervaren dagelijkse zelfstandigheid. Eén gebruiker, geen algemene test of medische genezing.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 1,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "nl:van-ewsum-brieven-toegankelijk": {
+      "source_id": "rtv-noord",
+      "organization_id": "rtv-noord",
+      "article_url": "https://www.rtvnoord.nl/cultuur/1444365/familiearchief-van-ewsum-met-ai-ontcijferd-en-herschreven",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-14",
+      "event_date": "2026-10-14",
+      "checked_on": "2026-10-19",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "van-ewsum-transkribus-mensinge-2026",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.rtvnoord.nl/cultuur/1444365/familiearchief-van-ewsum-met-ai-ontcijferd-en-herschreven",
+        "claim": "Eeuwenoude brieven krijgen weer een leesbare stem Kunstmatige intelligentie helpt oude handschriften om te zetten in leesbare tekst. Bij het familiearchief Van Ewsum blijft menselijk controlewerk nodig — maar komen verhalen uit het dagelijks leven dichterbij.",
+        "support": "Volledige RTV Noord-reportage: AI geeft eerste transcriptie; Groninger Archieven controleert. Actuele tentoonstelling over zestiende-eeuws archief tot 13 december.",
+        "limitations": "Project eerder gestart. Niet hele archief voltooid; foutpercentage onder tien procent is streven. Geen foutloze autonome vertaling.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Pixabay 436501 / jarmoluk, https://pixabay.com/photos/old-letters-letters-handwritten-436501/; https://pixabay.com/service/license-summary/. Bron, licentie en beeld gecontroleerd 19 oktober 2026. Lokaal artikelbeeld /images/artikelen/2026-10-19/van-ewsum-brieven-toegankelijk.jpg; illustratie zichtbaar vermeld."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Editiesgeschiedenis gecontroleerd op canonieke URL, onderwerp en DOI. Geen eerder gepubliceerd identiek nieuwsfeit gevonden.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Historisch materiaal wordt leesbaarder en via een actuele tentoonstelling toegankelijk. Menselijke controle en projectduur duidelijk begrensd.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 1,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "nl:stellen-hulp-dichtbij": {
+      "source_id": "eenvandaag",
+      "organization_id": "eenvandaag",
+      "article_url": "https://eenvandaag.avrotros.nl/artikelen/minder-vechtscheidingen-en-gebroken-gezinnen-waarom-steeds-meer-gemeenten-relatietherapie-aanbieden-165106",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-16",
+      "event_date": "2026-10-16",
+      "checked_on": "2026-10-19",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "gouda-houd-me-vast-ervaring-2026",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://eenvandaag.avrotros.nl/artikelen/minder-vechtscheidingen-en-gebroken-gezinnen-waarom-steeds-meer-gemeenten-relatietherapie-aanbieden-165106",
+        "claim": "Niet meer strijden om gelijk: een cursus helpt stellen elkaar weer horen Marieke en Jan uit Gouda houden na een gemeentelijke relatiecursus vaste momenten om samen te praten. Hun ervaring laat zien wat vroegtijdige hulp kan opleveren, ook zonder dat een scheiding dreigt.",
+        "support": "Volledige oorspronkelijke EenVandaag-reportage: Marieke en Jan beschrijven nieuwe communicatie en vaste momenten na acht ochtenden cursus.",
+        "limitations": "Zelfrapportage van één stel. Geen bewezen kostenbesparing of brede voorkoming scheiding. Onvoldoende onderbouwd algemeen 98%-effect niet overgenomen.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Pixabay 2561578 / StockSnap, https://pixabay.com/photos/people-man-woman-couple-dating-2561578/; https://pixabay.com/service/license-summary/. Bron, licentie en beeld gecontroleerd 19 oktober 2026. Lokaal artikelbeeld /images/artikelen/2026-10-19/stellen-hulp-dichtbij.jpg; illustratie zichtbaar vermeld."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Editiesgeschiedenis gecontroleerd op canonieke URL, onderwerp en DOI. Geen eerder gepubliceerd identiek nieuwsfeit gevonden.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Deelnemend stel beschrijft verbeterde communicatie en voortgezette gewoonten; hulp is al aangeboden. Geen bewezen brede daling scheidingen of zorgkosten.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 1,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "int:amazonie-minder-ontbossing": {
+      "source_id": "brazil-mma",
+      "organization_id": "brazil-mma",
+      "article_url": "https://www.gov.br/mma/pt-br/noticias-defeso-eleitoral/brasil-alcanca-menores-taxas-de-desmatamento-da-serie-historica-na-amazonia-e-no-cerrado",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-10-16",
+      "event_date": "2026-07-31",
+      "checked_on": "2026-10-19",
+      "dates_checked": true,
+      "new_development": "Nieuwe gecontroleerde publicatie/rapportage op 2026-10-16 over de beschreven eerdere gebeurtenis of meetperiode.",
+      "older_exception_reason": "",
+      "topic_id": "inpe-prodes-amazonia-cerrado-2026",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.gov.br/mma/pt-br/noticias-defeso-eleitoral/brasil-alcanca-menores-taxas-de-desmatamento-da-serie-historica-na-amazonia-e-no-cerrado",
+        "claim": "Bijna 42 procent minder ontbossing in het Braziliaanse Amazonegebied De nieuwe Braziliaanse satellietcijfers laten een scherpe daling zien. Ook in de Cerrado verdween minder natuurlijke begroeiing. Het blijft natuurverlies, maar op een duidelijk kleinere schaal.",
+        "support": "Officiële MMA/INPE-publicatie 16 oktober: augustus2025–juli2026; Amazone3335 versus5731km² (−41,8%), Cerrado5516,69 versus7235,27km² (−23,8%). FAQ en methode gelezen.",
+        "limitations": "Amazone is voorlopige raming met prioritaire beelden; Cerrado geconsolideerd. Minder ontbossing is geen herstel en sluit brand/degradatie niet uit.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Pixabay 6761846 / hasogr, https://pixabay.com/photos/forest-jungle-tropical-green-6761846/; https://pixabay.com/service/license-summary/. Bron, licentie en beeld gecontroleerd 19 oktober 2026. Lokaal artikelbeeld /images/artikelen/2026-10-19/amazonie-minder-ontbossing.jpg; illustratie zichtbaar vermeld."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Editiesgeschiedenis gecontroleerd op canonieke URL, onderwerp en DOI. Geen eerder gepubliceerd identiek nieuwsfeit gevonden.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Grote meetbare daling in satellietmonitoring. Officiële periode, eerdere jaarwaarde en verschil raming/consolidatie gecontroleerd; minder verlies is geen herstel.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "int:cornwall-oogst-gered": {
+      "source_id": "bbc",
+      "organization_id": "bbc",
+      "article_url": "https://www.bbc.co.uk/news/articles/c6n49w1r2zxjo",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-10-18",
+      "event_date": "2026-10-18",
+      "checked_on": "2026-10-19",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "gleaning-cornwall-million-produce-2026",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.bbc.co.uk/news/articles/c6n49w1r2zxjo",
+        "claim": "Van het veld naar de voedselbank: Cornwall redde al 460 ton oogst Vrijwilligers oogsten wat anders op het land zou achterblijven. In de afgelopen jaren heeft Gleaning Cornwall meer dan 460 ton groenten en fruit verzameld, met een geschatte waarde van een miljoen pond.",
+        "support": "BBC-reportage en oorspronkelijke impactpagina/ingebedde organisatiestatistiek gelezen: BBC >460 ton, organisatie463 ton; mijlpaal1miljoenpond en gratis distributie.",
+        "limitations": "Organisatietelling en geschatte waarde. Bronnen noemen verschillende startjaren (2020/2021): daarom geen exact startjaar of zesjaarsduur in ons artikel. Geen bewezen oplossing voedselarmoede.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Pixabay 1565597 / svklimkin, https://pixabay.com/photos/carrot-growth-vegetables-1565597/; https://pixabay.com/service/license-summary/. Bron, licentie en beeld gecontroleerd 19 oktober 2026. Lokaal artikelbeeld /images/artikelen/2026-10-19/cornwall-oogst-gered.jpg; illustratie zichtbaar vermeld."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Editiesgeschiedenis gecontroleerd op canonieke URL, onderwerp en DOI. Geen eerder gepubliceerd identiek nieuwsfeit gevonden.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Aantoonbare meerjarige voedselstroom bereikt voedselbanken. BBC-interviews en oorspronkelijke impactpagina controleren werkwijze en mijlpaal; organisatietellingen.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 1,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "int:diabetes-glucosesensor-onderzoek": {
+      "source_id": "medical-xpress",
+      "organization_id": "medical-xpress",
+      "article_url": "https://medicalxpress.com/news/2026-10-glucose-diabetes-patients-hours-day.html",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-10-17",
+      "event_date": "2026-10-14",
+      "checked_on": "2026-10-19",
+      "dates_checked": true,
+      "new_development": "Nieuwe gecontroleerde publicatie/rapportage op 2026-10-17 over de beschreven eerdere gebeurtenis of meetperiode.",
+      "older_exception_reason": "",
+      "topic_id": "doi-10.1056-nejmoa2608571",
+      "doi": "10.1056/NEJMoa2608571",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://news.cuanschutz.edu/news-stories/continuous-glucose-monitors-help-type-2-diabetes-patients-spend-five-more-hours-a-day-in-healthy-blood-sugar-range",
+        "claim": "Vijf uur langer per dag binnen de streefwaarden voor bloedsuiker In een gerandomiseerde studie met 283 volwassenen verbeterde continue glucosemeting de bloedsuikercontrole. Het onderzoek betrof mensen met diabetes type 2 die geen insuline gebruikten.",
+        "support": "Oorspronkelijke CU Anschutz-publicatie 14 oktober plus onderzoeksbericht, NEJM-publicatievermelding en DOI gecontroleerd: RCT283volwassenen22praktijken26weken, circa5extrauren targetrange en HbA1c-verschil0,9procentpunt.",
+        "limitations": "Volledige NEJM-tekst afgeschermd; claims beperkt tot volledig gelezen oorspronkelijke universiteitspublicatie. Eerdere congresbevindingen juni; nu tijdschriftpublicatie. Geen genezing of bewezen lange-termijncomplicatiedaling.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Pixabay 5977173 / liberatori, https://pixabay.com/photos/glucometer-technology-device-5977173/; https://pixabay.com/service/license-summary/. Bron, licentie en beeld gecontroleerd 19 oktober 2026. Lokaal artikelbeeld /images/artikelen/2026-10-19/diabetes-glucosesensor-onderzoek.jpg; illustratie zichtbaar vermeld."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Editiesgeschiedenis gecontroleerd op canonieke URL, onderwerp en DOI. Geen eerder gepubliceerd identiek nieuwsfeit gevonden.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Gerandomiseerde studie in eerstelijnszorg met concrete verbetering bij mensen. Nieuwe tijdschriftpublicatie van al eerder gedeelde congresbevindingen; geen genezing.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "int:koraal-herstel-door-contact": {
+      "source_id": "phys-org",
+      "organization_id": "phys-org",
+      "article_url": "https://phys.org/news/2026-10-scientists-reverse-coral.html",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-10-18",
+      "event_date": "2026-10-14",
+      "checked_on": "2026-10-19",
+      "dates_checked": true,
+      "new_development": "Nieuwe gecontroleerde publicatie/rapportage op 2026-10-18 over de beschreven eerdere gebeurtenis of meetperiode.",
+      "older_exception_reason": "",
+      "topic_id": "doi-10.1126-sciadv.aeh1580",
+      "doi": "10.1126/sciadv.aeh1580",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://phys.org/news/2026-10-scientists-reverse-coral.html",
+        "claim": "Een gezonde buur helpt verbleekt koraal in het lab weer op kleur In een kleine laboratoriumproef kregen verbleekte koraalfragmenten hun algen terug na contact met een gezonde kloon. Een opvallend resultaat, met nog een grote stap te gaan naar toepassing op riffen.",
+        "support": "Stanford-onderzoekersbericht op Phys.org gelezen; aanvullende Nature-verslaggeving en DOI. Tien paren, vijf contact/vijf controle; herstel binnen zeven weken met genetisch identieke gezonde partner.",
+        "limitations": "Kleine labproef met klonen, niet veldtoepassing of schaalbaar rifherstel. Onderliggende Science Advances-tekst niet volledig toegankelijk; geen niet-gelezen mechanistische details toegevoegd.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Pixabay 378286 / joakant, https://pixabay.com/photos/fish-underwater-corals-sea-ocean-378286/; https://pixabay.com/service/license-summary/. Bron, licentie en beeld gecontroleerd 19 oktober 2026. Lokaal artikelbeeld /images/artikelen/2026-10-19/koraal-herstel-door-contact.jpg; illustratie zichtbaar vermeld."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Editiesgeschiedenis gecontroleerd op canonieke URL, onderwerp en DOI. Geen eerder gepubliceerd identiek nieuwsfeit gevonden.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Nieuw gecontroleerd inzicht in herstelmechanisme; kleine laboratoriumproef met controlegroep. Geen claim van werkende rifredding buiten het lab.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 1,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "int:rules-erfgoed-beschermd": {
+      "source_id": "national-trust",
+      "organization_id": "national-trust",
+      "article_url": "https://www.nationaltrust.org.uk/services/media/2026/october/landmark-act-of-generosity-secures-home-of-londons-oldest-restaurant-for-the-future",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-10-14",
+      "event_date": "2026-10-14",
+      "checked_on": "2026-10-19",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "national-trust-rules-maiden-lane-gift-2026",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.nationaltrust.org.uk/services/media/2026/october/landmark-act-of-generosity-secures-home-of-londons-oldest-restaurant-for-the-future",
+        "claim": "Een toekomst voor de plek waar Dickens aan tafel zat De eigenaar van het pand waarin restaurant Rules zit, schenkt het gebouw en de historische collectie aan de National Trust. Het restaurant blijft zelfstandig ondernemen, nu als huurder.",
+        "support": "Oorspronkelijke National Trust-bekendmaking volledig gelezen: gebouw34–35MaidenLane en collectie door J-PMayhew geschonken; restaurantbedrijfRickyMcMenemy blijft onafhankelijk huurder.",
+        "limitations": "Bescherming gebouw/collectie geen absolute economische exploitatiegarantie; cadeau betreft niet overname restaurantbedrijf.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Pixabay 5082853 / jamiemusialek, https://pixabay.com/photos/lockdown-london-covent-garden-5082853/; https://pixabay.com/service/license-summary/. Bron, licentie en beeld gecontroleerd 19 oktober 2026. Lokaal artikelbeeld /images/artikelen/2026-10-19/rules-erfgoed-beschermd.jpg; illustratie zichtbaar vermeld."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Editiesgeschiedenis gecontroleerd op canonieke URL, onderwerp en DOI. Geen eerder gepubliceerd identiek nieuwsfeit gevonden.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Daadwerkelijk geschonken gebouw plus collectie beschermt levend erfgoed. Exploitatie blijft zelfstandig; geen absolute garantie voor restaurantbedrijf.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 1,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "int:elektrische-autos-minder-olie": {
+      "source_id": "ember",
+      "organization_id": "ember",
+      "article_url": "https://ember-energy.org/latest-insights/electric-energy-security-how-evs-are-reducing-oil-import-vulnerabilities/",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-10-14",
+      "event_date": "2026-08-31",
+      "checked_on": "2026-10-19",
+      "dates_checked": true,
+      "new_development": "Nieuwe gecontroleerde publicatie/rapportage op 2026-10-14 over de beschreven eerdere gebeurtenis of meetperiode.",
+      "older_exception_reason": "",
+      "topic_id": "ember-ev-oil-security-october-2026",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://ember-energy.org/latest-insights/electric-energy-security-how-evs-are-reducing-oil-import-vulnerabilities/",
+        "claim": "Meer elektrische auto’s, minder afhankelijkheid van olie Volgens een nieuwe analyse van Ember bereikte de verkoop van volledig elektrische auto’s dit jaar in 49 gevolgde landen een recordaandeel. De bestaande wagenparken vervangen bovendien een deel van de vraag naar olie.",
+        "support": "Origineel rapport inclusief methodiek 14oktober gelezen: BEV-aandeel record49/56landen, wereldwijd18%eersteachtmaanden versus16%;20miljard vermeden oliewaarde modelmatig maart–augustus.",
+        "limitations": "Denktank bevordert energietransitie; schatting niet kasbesparing, datasetnietexhaustief en wereldschatting opgeschaald. BEVverkoop niet wagenparkaandeel. Twintigmiljard inclusiefPHEV.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Pixabay 8607713 / JACLOU-DL, https://pixabay.com/photos/car-tesla-model-3-electric-car-8607713/; https://pixabay.com/service/license-summary/. Bron, licentie en beeld gecontroleerd 19 oktober 2026. Lokaal artikelbeeld /images/artikelen/2026-10-19/elektrische-autos-minder-olie.jpg; illustratie zichtbaar vermeld."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Editiesgeschiedenis gecontroleerd op canonieke URL, onderwerp en DOI. Geen eerder gepubliceerd identiek nieuwsfeit gevonden.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Geobserveerde groei van BEV-verkoop met internationaal bereik. Oliebesparing apart als modelraming uitgelegd; oorlog niet dragend positief thema.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 1,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "headlines:0": {
+      "source_id": "nos",
+      "organization_id": "nos",
+      "article_url": "https://nos.nl/l/2635576",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-19",
+      "event_date": "2026-10-19",
+      "checked_on": "2026-10-19",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "streekvervoer-staking-aankondiging-20261019",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://nos.nl/l/2635576",
+        "claim": "Donderdag opnieuw staking in het streekvervoer",
+        "support": "Volledige oorspronkelijke publicatie gelezen; dit actualiteitenblok beschrijft aankondiging/stand van zaken, geen positief bereikt effect.",
+        "limitations": "Aangekondigde inzet of toekomstige gebeurtenis; uitvoering kan wijzigen.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used",
+        "image_evidence": "Geen beeld bij de drie actualiteiten."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Andere actuele aankondiging dan eerdere edities; titel/URL met archief vergeleken.",
+        "new_fact": ""
+      }
+    },
+    "headlines:1": {
+      "source_id": "nos",
+      "organization_id": "nos",
+      "article_url": "https://nos.nl/l/2635587",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-10-19",
+      "event_date": "2026-10-19",
+      "checked_on": "2026-10-19",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "cop17-yerevan-20261019",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://nos.nl/l/2635587",
+        "claim": "Biodiversiteitstop: van natuurafspraken naar uitvoering",
+        "support": "Volledige oorspronkelijke publicatie gelezen; dit actualiteitenblok beschrijft aankondiging/stand van zaken, geen positief bereikt effect.",
+        "limitations": "Aangekondigde inzet of toekomstige gebeurtenis; uitvoering kan wijzigen.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used",
+        "image_evidence": "Geen beeld bij de drie actualiteiten."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Andere actuele aankondiging dan eerdere edities; titel/URL met archief vergeleken.",
+        "new_fact": ""
+      }
+    },
+    "headlines:2": {
+      "source_id": "rijksoverheid",
+      "organization_id": "rijksoverheid",
+      "article_url": "https://www.rijksoverheid.nl/actueel/nieuws/2026/10/16/355-miljoen-voor-bereikbaarheid-bijna-30.000-nieuwe-woningen",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-16",
+      "event_date": "2026-10-16",
+      "checked_on": "2026-10-19",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "woningbouw-ontsluiting-355m-20261016",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.rijksoverheid.nl/actueel/nieuws/2026/10/16/355-miljoen-voor-bereikbaarheid-bijna-30.000-nieuwe-woningen",
+        "claim": "355 miljoen euro voor bereikbaarheid nieuwe woongebieden",
+        "support": "Volledige oorspronkelijke publicatie gelezen; dit actualiteitenblok beschrijft aankondiging/stand van zaken, geen positief bereikt effect.",
+        "limitations": "Aangekondigde inzet of toekomstige gebeurtenis; uitvoering kan wijzigen.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used",
+        "image_evidence": "Geen beeld bij de drie actualiteiten."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Andere actuele aankondiging dan eerdere edities; titel/URL met archief vergeleken.",
+        "new_fact": ""
+      }
+    },
+    "nl:otterfamilie-meijendel-berkheide-dna": {
+      "source_id": "dunea",
+      "organization_id": "dunea",
+      "article_url": "https://www.dunea.nl/algemeen/nieuws/2026/otterfamilie-in-meijendel-en-berkheide-genetisch-bevestigd",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-11",
+      "event_date": "2026-10-11",
+      "checked_on": "2026-10-19",
+      "dates_checked": true,
+      "new_development": "Nieuwe genetische bevestiging van familieband; de camerawaarneming van jongen dateert uit eind 2025.",
+      "older_exception_reason": "Oorspronkelijke onderzoeksbekendmaking acht dagen oud, één dag buiten de standaardweek. Nog actuele eerste genetische bevestiging; sterker concreet vestigingsresultaat dan de afgewezen spitsmuiswaarneming. Gecontroleerd op verzoek om een beter vervangend verhaal.",
+      "topic_id": "otter-meijendel-berkheide-family-dna-2026",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.dunea.nl/algemeen/nieuws/2026/otterfamilie-in-meijendel-en-berkheide-genetisch-bevestigd",
+        "claim": "Geen voorbijgangers meer: otters stichten een gezin in de duinen In Meijendel en Berkheide zijn otters niet alleen op bezoek. DNA-onderzoek bevestigt voor het eerst dat een mannetje en vrouwtje er samen een jong hebben gekregen: een nieuwe generatie in de Zuid-Hollandse duinen.",
+        "support": "Oorspronkelijke Dunea-publicatie volledig gelezen: DNA van vijftien spraints identificeert volwassen vrouwtje, volwassen mannetje en dochter met bevestigde ouders. Camera eind2025 toonde drie jongen; andere twee geen bruikbaar DNA. Noordelijke genetische verwantschap vader, precieze route onbekend.",
+        "limitations": "Geen landelijke populatietrend, exacte herkomst of causaal bewijs voor water-/natuurkwaliteit. Geen bewijs dat alle drie gefilmde jongen nog aanwezig zijn. Draagkracht9–11 is schatting, niet geteld aantal; daarom weggelaten.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Pixabay 7307280 / Wildfaces, https://pixabay.com/photos/otter-water-marten-water-swim-7307280/; https://pixabay.com/service/license-summary/. Bron, licentie en beeld gecontroleerd 19 oktober 2026. Lokaal artikelbeeld /images/artikelen/2026-10-19/otterfamilie-meijendel-berkheide-dna.jpg; illustratie zichtbaar vermeld."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Historische edities gecontroleerd op onderwerp, URL en otterfamilie; geen eerder identiek gepubliceerd feit.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "DNA van vijftien uitwerpselen bevestigt voor het eerst vader, moeder en dochter in dit duingebied. Voortplanting is een concreter positief vestigingsresultaat dan twee waterspitsmuiswaarnemingen.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 2
+      }
+    }
+  },
+  "review_status": "Goedgekeurde publicatierevisie na verwerking feedback.",
+  "live_publication_authorized": true
+}

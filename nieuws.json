@@ -1,366 +1,455 @@
 {
   "meta": {
-    "edition_date": "2026-10-15",
-    "email_preheader": "Meer grutto’s, groei in de industrie en minder vlees op het Nederlandse bord.",
+    "edition_date": "2026-10-19",
+    "email_preheader": "Elkaar weer horen, een hoornraaf die zelf eet en een otterfamilie in de duinen.",
+    "ordering": "Nederlandse volgorde op expliciet verzoek opdrachtgever: relatieondersteuning, hoornraaf, gastgezinnen, archief, Marina, otterfamilie. Wereldvolgorde ongewijzigd.",
+    "status": "approved",
+    "publication_authorized": true,
     "editorial_order": [
       {
         "section": "nl",
-        "article_slug": "korendijkse-slikken-meer-weidevogels",
+        "article_slug": "stellen-hulp-dichtbij",
         "rank": 1
       },
       {
         "section": "nl",
-        "article_slug": "industrieproductie-augustus-2026",
+        "article_slug": "hoornraaf-twee-nieuwe-snavels",
         "rank": 2
       },
       {
         "section": "nl",
-        "article_slug": "vleesverbruik-nederland-daalt-2025",
+        "article_slug": "gastgezinnen-meer-matches",
         "rank": 3
       },
       {
         "section": "nl",
-        "article_slug": "verhoeff-bewijs-lehmer-vermoeden",
+        "article_slug": "van-ewsum-brieven-toegankelijk",
         "rank": 4
       },
       {
         "section": "nl",
-        "article_slug": "4mijl4you-samen-bewegen-groningen",
+        "article_slug": "marina-ai-bril-zelfstandigheid",
         "rank": 5
       },
       {
         "section": "nl",
-        "article_slug": "dress-for-success-rotterdam-25-jaar",
+        "article_slug": "otterfamilie-meijendel-berkheide-dna",
         "rank": 6
       },
       {
         "section": "int",
-        "article_slug": "berehale-900-gezinnen-water-aan-huis",
+        "article_slug": "amazonie-minder-ontbossing",
         "rank": 7
       },
       {
         "section": "int",
-        "article_slug": "hongarije-beperkingen-lhbti-informatie",
+        "article_slug": "cornwall-oogst-gered",
         "rank": 8
       },
       {
         "section": "int",
-        "article_slug": "keswick-marsh-natuurherstel",
+        "article_slug": "diabetes-glucosesensor-onderzoek",
         "rank": 9
       },
       {
         "section": "int",
-        "article_slug": "weer-twee-zes-weken-beter-voorspeld",
+        "article_slug": "koraal-herstel-door-contact",
         "rank": 10
       },
       {
         "section": "int",
-        "article_slug": "nangade-viskweekbakken-overgedragen",
+        "article_slug": "rules-erfgoed-beschermd",
         "rank": 11
       },
       {
         "section": "int",
-        "article_slug": "wereldwijde-natuurgebieden-ruimer-geteld",
+        "article_slug": "elektrische-autos-minder-olie",
         "rank": 12
       }
-    ],
-    "ordering": "Nederland eerst; volgorde goedgekeurd door opdrachtgever op 15 oktober 2026."
+    ]
   },
   "nl": [
     {
-      "category": "Natuur & klimaat",
-      "title": "Nattere graslanden trekken meer grutto’s en kieviten naar de Korendijkse Slikken",
-      "teaser": "Na aanpassing van het watersysteem telt Natuurmonumenten in de Korendijkse Slikken meer territoria van weidevogels. De grutto steeg van 8 in 2024 via 12 in 2025 naar 18 in 2026; de kievit van 24 naar 68.",
-      "article_body": [
-        "Jarenlang waren delen van de Korendijkse Slikken te droog voor weidevogels. Natuurmonumenten paste daarom de waterhuishouding aan. In de broedseizoenen van 2025 en 2026 bleven de graslanden volgens de organisatie voldoende nat.",
-        "De eerste tellingen laten een duidelijke lokale verandering zien. Het aantal gruttoterritoria steeg van 8 in 2024 naar 12 in 2025 en 18 in 2026. Bij de kievit ging het van 24 naar 68 territoria. Ook vogels verspreidden zich over delen van het gebied die eerder te droog waren.",
-        "Het gaat om territoria, niet om het totale aantal individuele vogels. De tellingen zijn bovendien een eerste aanwijzing op één locatie. Ze bewijzen niet dat de Nederlandse weidevogelstand als geheel herstelt. Wel laten ze zien hoe waterbeheer op een specifieke plek snel verschil kan maken voor soorten die natte graslanden nodig hebben. De cijfers zeggen nog niet of het broedsucces ook is toegenomen, of jonge vogels vaker overleven. Daarvoor zijn aanvullende gegevens nodig. Het resultaat is daarom vooral bemoedigend als vroege reactie van territoria op een veranderd landschap. Voor natuurbeheer is dat een bruikbare aanwijzing om te volgen, maar nog geen bewijs dat de aanpak overal hetzelfde effect heeft."
+      "article_slug": "stellen-hulp-dichtbij",
+      "category": "Mens",
+      "title": "Niet meer strijden om gelijk: een cursus helpt stellen elkaar weer horen",
+      "headline_options": [
+        "Gemeenten bieden laagdrempelige relatieondersteuning aan",
+        "Niet meer strijden om gelijk: een cursus helpt stellen elkaar weer horen"
       ],
-      "why_it_matters": "De cijfers geven een vroege, meetbare aanwijzing dat herstel van de waterhuishouding weidevogels op deze plek helpt. Langere monitoring moet uitwijzen of de toename standhoudt.",
-      "source": "Natuurmonumenten",
-      "source_id": "natuurmonumenten",
-      "url": "https://www.natuurmonumenten.nl/natuurgebieden/korendijkse-slikken/nieuws/positieve-cijfers-voor-de-korendijkse-slikken",
-      "article_slug": "korendijkse-slikken-meer-weidevogels",
-      "published": "2026-10-09",
-      "email_title": "Nattere graslanden trekken meer grutto’s en kieviten naar de Korendijkse Slikken",
-      "editorial_rank": 1,
+      "teaser": "Marieke en Jan uit Gouda houden na een gemeentelijke relatiecursus vaste momenten om samen te praten. Hun ervaring laat zien wat vroegtijdige hulp kan opleveren, ook zonder dat een scheiding dreigt.",
+      "article_body": [
+        "Marieke en Jan waren 22 jaar samen en wilden helemaal niet uit elkaar. Wel raakten ze soms verstrikt in ruzies waarin ieder bleef vasthouden aan het eigen gelijk. Via de gemeente Gouda volgden ze de cursus Houd Me Vast. Nu vertellen ze EenVandaag dat ze beter begrijpen wat er achter die ruzies zit.",
+        "De cursus bestaat uit acht gezamenlijke ochtenden. Stellen onderzoeken hoe hun communicatie werkt en welke patronen steeds terugkomen. Voor Marieke en Jan eindigde dat niet bij de laatste bijeenkomst: hun gezamenlijke lunch op vrijdag en het vaste praatmoment op dinsdag bleven bestaan.",
+        "Gouda is een van de gemeenten die relatieondersteuning laagdrempeliger maken. Ook onder meer Amsterdam, Apeldoorn, Almere, Enschede en Zutphen bieden een vorm van hulp. Gemeenten hopen dat mensen eerder ondersteuning zoeken, voordat spanningen verder oplopen.",
+        "Daarbij is bij elkaar blijven niet het enige doel. Als ouders toch uit elkaar gaan, blijft het belangrijk dat zij met elkaar kunnen communiceren en hun kinderen in beeld houden. De gemeente Gouda beslist volgend jaar over voortzetting.",
+        "Of deze aanpak op grote schaal vechtscheidingen voorkomt of jeugdzorgkosten verlaagt, is nog niet aangetoond. De persoonlijke opbrengst in deze reportage is bescheidener en concreet: een stel heeft handvatten gekregen om sneller uit een ruzie te komen, en gebruikt die nog steeds."
+      ],
+      "source": "EenVandaag",
+      "source_id": "eenvandaag",
+      "url": "https://eenvandaag.avrotros.nl/artikelen/minder-vechtscheidingen-en-gebroken-gezinnen-waarom-steeds-meer-gemeenten-relatietherapie-aanbieden-165106",
+      "published": "2026-10-16",
+      "event_date": "2026-10-16",
+      "primary_url": "https://eenvandaag.avrotros.nl/artikelen/minder-vechtscheidingen-en-gebroken-gezinnen-waarom-steeds-meer-gemeenten-relatietherapie-aanbieden-165106",
+      "image_key": "gesprek",
+      "image_alt": "Een man en vrouw in gesprek; illustratief, niet Marieke en Jan.",
+      "email_title": "Niet meer strijden om gelijk: een cursus helpt stellen elkaar weer horen",
       "regional_rank": 1,
-      "image_query": "id:4173271",
-      "image_alt": "Een grutto in de natuur; illustratief beeld"
+      "editorial_rank": 1,
+      "image_query": "id:2561578"
     },
     {
-      "category": "Economie",
-      "title": "Nederlandse industrie groeit het sterkst in ruim vier jaar",
-      "teaser": "De productie lag in augustus 12 procent hoger dan een jaar eerder en 3,3 procent boven juli. Vooral de machine-industrie droeg bij, blijkt uit de nieuwste cijfers van het CBS.",
-      "article_body": [
-        "De Nederlandse industrie produceerde in augustus 12 procent meer dan in augustus 2025. Dat is de grootste jaarstijging in ruim vier jaar, meldt het CBS. Vergeleken met juli steeg de productie met 3,3 procent.",
-        "De groei zat niet overal gelijk. In ruim zes van de tien onderzochte branches nam de productie toe; vooral de machine-industrie droeg bij aan de stijging. Ook waren producenten in september positiever over de verwachte bedrijvigheid dan in augustus.",
-        "Het cijfer is kalendergecorrigeerd en vergelijkt de productie met eerdere perioden. Het is een positief signaal voor industriële activiteit, maar zegt op zichzelf niet dat ieder bedrijf groeit, meer mensen aanneemt of dat huishoudens meer te besteden hebben. Een maandcijfer is bovendien geen volledige trend. De industrieproductie wisselt vaker van maand tot maand, dus de uitkomst van september en de volgende maanden moet worden afgewacht. Het CBS meldt daarnaast dat producenten in september positiever waren over de verwachte bedrijvigheid. Dat is een apart signaal over vertrouwen, niet hetzelfde als gemeten productie."
-      ],
-      "why_it_matters": "De industrie is een belangrijke economische sector. De stijging is breed genoeg om op te merken, maar pas cijfers over meerdere maanden laten zien of de opleving aanhoudt.",
-      "source": "CBS",
-      "source_id": "cbs",
-      "url": "https://www.cbs.nl/nl-nl/nieuws/2026/41/productie-industrie-in-augustus-12-procent-hoger-dan-jaar-eerder",
-      "article_slug": "industrieproductie-augustus-2026",
-      "published": "2026-10-09",
-      "email_title": "Nederlandse industrie groeit het sterkst in ruim vier jaar",
-      "editorial_rank": 2,
-      "regional_rank": 2,
-      "image_query": "id:2819136",
-      "image_alt": "Metaalbewerking met een industriële machine; illustratief beeld"
-    },
-    {
-      "category": "Natuur & klimaat",
-      "title": "Nederlanders aten in 2025 minder vlees, vooral minder varkensvlees",
-      "teaser": "WUR schat het verbruik op 34 kilo vlees per inwoner, twee procent lager dan in 2024. De daling zit vooral bij varkensvlees; kip nam juist licht toe.",
-      "article_body": [
-        "Nederlanders aten in 2025 gemiddeld 34 kilo vlees per persoon, volgens de nieuwste berekening van Wageningen University & Research. Dat is ongeveer twee procent minder dan een jaar eerder en het laagste niveau in twintig jaar. Wakker Dier publiceerde de cijfers op 14 oktober.",
-        "De daling komt vooral door minder varkensvlees. Ook rundvlees nam iets af, terwijl de consumptie van kip licht steeg. De trend naar minder rood vlees en meer wit vlees loopt al langer. De totale hoeveelheid vlees daalt wel verder.",
-        "WUR rekent met karkasgewicht, waarin ook botten zitten. Dat is dus niet hetzelfde als wat mensen daadwerkelijk opeten. De onderzoekers hebben bovendien oudere varkensvleescijfers aangepast omdat de eerdere slachtgegevens minder precies bleken. De nieuwe reeks laat nog steeds een daling zien. Het cijfer beschrijft de hoeveelheid vlees, maar verklaart niet waarom mensen hun eetpatroon veranderen. De lichte stijging bij kip laat bovendien zien dat de daling niet elke vleessoort raakt. Dat onderscheid is relevant voor de gevolgen voor dierenwelzijn en klimaat. De nieuwe cijfers zijn bovendien een raming van de hoeveelheid beschikbaar vlees, geen voedingsdagboek van Nederlandse huishoudens."
-      ],
-      "why_it_matters": "Een landelijke daling laat zien dat minder vlees niet alleen een individuele keuze is. De verschuiving is wel ongelijk: kip neemt nog toe en het cijfer meet karkasgewicht.",
-      "source": "Wakker Dier / WUR",
-      "source_id": "wakker-dier",
-      "url": "https://www.wakkerdier.nl/nieuws/nieuw-onderzoek-wur-nederlanders-eten-minder-vlees/",
-      "article_slug": "vleesverbruik-nederland-daalt-2025",
-      "published": "2026-10-14",
-      "email_title": "Nederlanders aten in 2025 minder vlees, vooral minder varkensvlees",
-      "editorial_rank": 3,
-      "regional_rank": 3,
-      "image_query": "id:3860902",
-      "image_alt": "Een maaltijd met groenten; illustratief beeld"
-    },
-    {
+      "article_slug": "hoornraaf-twee-nieuwe-snavels",
       "category": "Wetenschap",
-      "title": "AI helpt Eindhovense wiskundige een zestig jaar oud vermoeden bewijzen",
-      "teaser": "Tom Verhoeff werkte met AI aan het Lehmer-vermoeden over het ordenen van voorwerpen. Een nieuwer model hielp daarna een kortere oplossing vinden. Het bewijs staat als preprint online en is nog niet door een tijdschrift beoordeeld.",
-      "article_body": [
-        "Stel dat je een rij voorwerpen hebt en telkens twee buren van plek mag laten wisselen. Kun je zo alle mogelijke volgordes doorlopen zonder een volgorde te herhalen, ook als sommige voorwerpen identiek zijn? De Amerikaanse wiskundige D.H. Lehmer vermoedde in 1965 dat dit in het algemeen kan, maar een bewijs bleef uit.",
-        "De gepensioneerde TU/e-wiskundige Tom Verhoeff heeft nu een bewijs voor het algemene geval gepubliceerd. Hij werkte daarbij met AI-modellen. Volgens TU/e hielp een nieuwer model om een veel kortere oplossing te vinden dan de eerdere uitwerking. De redenering is ook formeel vastgelegd in Lean, een programma waarmee wiskundige bewijzen controleerbaar worden gemaakt.",
-        "Het manuscript staat op arXiv als preprint. Dat maakt het publiek controleerbaar, maar betekent ook dat een wetenschappelijk tijdschrift het nog niet heeft beoordeeld. De ontwikkeling is dus een opvallend onderzoeksresultaat, geen afgeronde peer-reviewed publicatie. TU/e beschrijft ook hoe AI in de loop van het project veranderde van hulpmiddel naar een systeem dat zelfstandig een korter bewijs kon vinden. Dat maakt de samenwerking nieuwswaardig, maar de wiskundige controle blijft de kern: de uitkomst moet als bewijs standhouden, ongeacht welk hulpmiddel eraan bijdroeg. Verhoeff werkt al langer aan varianten van het probleem; volgens TU/e had hij in 2017 al een eenvoudiger, binair geval opgelost."
+      "title": "Twee nieuwe snaveldelen — en de hoornraaf pakt zelf weer een muis",
+      "headline_options": [
+        "Zuidelijke hoornraaf krijgt twee 3D-geprinte snavelprotheses",
+        "Twee nieuwe snaveldelen — en de hoornraaf pakt zelf weer een muis"
       ],
-      "why_it_matters": "Dit voorbeeld laat zien hoe AI een onderzoeker kan helpen een bestaand wiskundig probleem op te lossen en een bewijs compacter te maken. Onafhankelijke wetenschappelijke beoordeling moet nog volgen.",
-      "source": "TU Eindhoven",
-      "source_id": "tu-eindhoven",
-      "url": "https://www.tue.nl/nieuws-en-evenementen/nieuwsoverzicht/08-10-2026-deze-wiskundige-werkte-jarenlang-aan-een-probleem-en-zag-ai-uitgroeien-van-assistent-tot-grootmeester",
-      "article_slug": "verhoeff-bewijs-lehmer-vermoeden",
-      "published": "2026-10-08",
-      "email_title": "AI helpt Eindhovense wiskundige een zestig jaar oud vermoeden bewijzen",
-      "editorial_rank": 4,
+      "teaser": "Een zuidelijke hoornraaf uit ARTIS kon door een beschadigde snavel moeilijk eten. Met op maat gemaakte protheses gebruikt hij zijn snavel weer: de ochtend na de operatie pakte hij zelfstandig een muis.",
+      "article_body": [
+        "De ochtend na zijn operatie pakte de zuidelijke hoornraaf uit ARTIS alweer zelf een muis. Voor deze vogel is dat een belangrijk resultaat: zowel zijn boven- als ondersnavel was beschadigd. Een snavel is niet alleen nodig om voedsel vast te pakken, maar ook om het verenpak te verzorgen.",
+        "In het Universitair Dierenziekenhuis kreeg hij twee op maat gemaakte, 3D-geprinte protheses. Een CT-scan hielp het behandelteam de vorm en bevestiging nauwkeurig voor te bereiden. Het ontwerp combineert een stevige titanium basis met een deel van nylon dat gemakkelijker kan worden aangepast.",
+        "De behandeling bracht verschillende vakgebieden samen. Behalve ARTIS en de Utrechtse diergeneeskunde waren ook het UMC Utrecht en het Belgische bedrijf Amnovis betrokken. Kennis over medische beeldvorming en het maken van implantaten werd zo toegepast op een patiënt met veren.",
+        "Al op de dag van de ingreep begon de vogel zijn nieuwe snavel te gebruiken. Enkele dagen later verzorgde hij er ook zijn veren mee. Het zijn tastbare vroege tekenen dat de constructie doet waarvoor ze is gemaakt.",
+        "De ervaring betreft één dier. Hoe de protheses zich op langere termijn houden, moet de verdere begeleiding uitwijzen. Het nieuws is daarom vooral deze geslaagde eerste stap: een vogel die een essentieel stuk gereedschap kwijt was, kan er weer zelfstandig mee aan de slag."
+      ],
+      "source": "Universiteit Utrecht",
+      "source_id": "universiteit-utrecht",
+      "url": "https://www.uu.nl/nieuws/zuidelijke-hoornraaf-krijgt-in-universitair-dierenziekenhuis-twee-3d-geprinte-snavels",
+      "published": "2026-10-15",
+      "event_date": "2026-10-15",
+      "primary_url": "https://www.uu.nl/nieuws/zuidelijke-hoornraaf-krijgt-in-universitair-dierenziekenhuis-twee-3d-geprinte-snavels",
+      "image_key": "hoornraaf",
+      "image_alt": "Zuidelijke hoornraaf; soortbeeld, niet de behandelde ARTIS-vogel.",
+      "email_title": "Twee nieuwe snaveldelen — en de hoornraaf pakt zelf weer een muis",
+      "regional_rank": 2,
+      "editorial_rank": 2,
+      "image_query": "id:8201730"
+    },
+    {
+      "article_slug": "gastgezinnen-meer-matches",
+      "category": "Mens",
+      "title": "Een logeerkamer, een nieuwe start: meer gastgezinnen doen mee",
+      "headline_options": [
+        "Takecarebnb meldt 18 procent meer matches met gastgezinnen",
+        "Een logeerkamer, een nieuwe start: meer gastgezinnen doen mee"
+      ],
+      "teaser": "Takecarebnb heeft dit jaar tot nu toe 444 matches gemaakt tussen statushouders en gastgezinnen. Achter die groei zitten mensen die hun huis tijdelijk openstellen — en gasten die hun leven verder kunnen opbouwen.",
+      "article_body": [
+        "Laura uit Deventer zag hoe moeilijk de situatie in Ter Apel was en besloot haar huis open te stellen. Inmiddels wonen twee statushouders tijdelijk bij haar. Haar verhaal staat voor een grotere beweging: Takecarebnb meldt dit jaar tot de berichtdatum 444 matches, 18 procent meer dan een jaar eerder.",
+        "Het programma brengt mensen met een verblijfsvergunning die wachten op een woning in contact met een gastgezin. Ze logeren in beginsel drie maanden bij iemand thuis. Daardoor bestaat de dag niet alleen uit wachten in een opvanglocatie: er is ook een huishouden om aan mee te doen en een omgeving om te leren kennen. Gast en gastgezin kunnen het verblijf beëindigen of in overleg verlengen.",
+        "NU.nl sprak ook Lisette uit Drenthe. Een eerdere gast van haar werkt inmiddels in de zorg en volgt een werk-leertraject. Dat persoonlijke vervolg maakt duidelijk wat een tijdelijke plek voor iemand kan betekenen, zonder dat ieder verblijf hetzelfde resultaat hoeft te hebben.",
+        "De cijfers komen van Takecarebnb zelf. Een match is geen permanente woning en niet elke combinatie slaagt: vorig jaar eindigden volgens het artikel elf verblijven voortijdig. Ook is niet aangetoond dat de groei door de sinds mei bestaande vergoeding komt. Wat wél vaststaat in de reportage: meer mensen vinden via deze route tijdelijk onderdak in een gewoon huis."
+      ],
+      "source": "NU.nl",
+      "source_id": "nu-nl",
+      "url": "https://www.nu.nl/binnenland/6413281/meer-mensen-nemen-statushouder-in-huis-zag-hoe-moeilijk-situatie-ter-apel-was.html",
+      "published": "2026-10-18",
+      "event_date": "2026-10-18",
+      "primary_url": "https://www.nu.nl/binnenland/6413281/meer-mensen-nemen-statushouder-in-huis-zag-hoe-moeilijk-situatie-ter-apel-was.html",
+      "image_key": "gastvrij",
+      "image_alt": "Een huissleutel als symbool voor tijdelijk onderdak; illustratief.",
+      "email_title": "Een logeerkamer, een nieuwe start: meer gastgezinnen doen mee",
+      "regional_rank": 3,
+      "editorial_rank": 3,
+      "image_query": "id:4521073"
+    },
+    {
+      "article_slug": "van-ewsum-brieven-toegankelijk",
+      "category": "Cultuur",
+      "title": "Eeuwenoude brieven krijgen weer een leesbare stem",
+      "headline_options": [
+        "Groninger familiearchief Van Ewsum wordt met AI ontsloten",
+        "Eeuwenoude brieven krijgen weer een leesbare stem"
+      ],
+      "teaser": "Kunstmatige intelligentie helpt oude handschriften om te zetten in leesbare tekst. Bij het familiearchief Van Ewsum blijft menselijk controlewerk nodig — maar komen verhalen uit het dagelijks leven dichterbij.",
+      "article_body": [
+        "Brieven, rekeningen, recepten en gedichten: het familiearchief Van Ewsum bevat veel meer dan grote historische gebeurtenissen. De stukken vertellen ook hoe mensen hun huishouden regelden, met elkaar omgingen en hun zorgen op papier zetten. Alleen is een handschrift van eeuwen geleden voor een hedendaagse lezer vaak moeilijk te ontcijferen.",
+        "Groninger Archieven gebruikt daarvoor Transkribus, een systeem dat handgeschreven tekst herkent. Het levert een eerste transcriptie op. Medewerkers controleren en verbeteren die vervolgens. De computer neemt het historische leeswerk dus niet volledig over, maar maakt een begin waarmee mensen verder kunnen.",
+        "Het archief bestrijkt de veertiende tot en met de zeventiende eeuw. De documenten lagen ongeveer driehonderd jaar in een houten kist op de zolder van het Groningse stadhuis, waar die in 1893 werd teruggevonden. Dankzij het ontsluiten ervan wordt materiaal dat lang moeilijk toegankelijk was, beter leesbaar.",
+        "Een actuele aanleiding is de tentoonstelling ‘Macht, drama en alledaagse dingen’ in Havezate Mensinge in Roden. Die belicht het zestiende-eeuwse deel van het familieverhaal en loopt tot en met 13 december.",
+        "Het werk aan het archief begon eerder; niet alles is nu ineens ontcijferd. Ook het streven naar minder dan tien procent herkenningsfouten is een doel, geen voltooid resultaat. De winst zit in de combinatie: techniek helpt de letters lezen, historici bewaken wat er werkelijk staat."
+      ],
+      "source": "RTV Noord",
+      "source_id": "rtv-noord",
+      "url": "https://www.rtvnoord.nl/cultuur/1444365/familiearchief-van-ewsum-met-ai-ontcijferd-en-herschreven",
+      "published": "2026-10-14",
+      "event_date": "2026-10-14",
+      "primary_url": "https://www.rtvnoord.nl/cultuur/1444365/familiearchief-van-ewsum-met-ai-ontcijferd-en-herschreven",
+      "image_key": "brieven",
+      "image_alt": "Oude handgeschreven brieven; illustratie bij het archiefverhaal.",
+      "email_title": "Eeuwenoude brieven krijgen weer een leesbare stem",
       "regional_rank": 4,
-      "image_query": "id:1547018",
-      "image_alt": "Wiskundige formules op een schoolbord; illustratief beeld"
+      "editorial_rank": 4,
+      "image_query": "id:436501"
     },
     {
-      "category": "Mens",
-      "title": "In Groningen draait de 4Mijl4You om samen de finish halen",
-      "teaser": "Duizenden deelnemers liepen, rolden of skeelerden op 10 oktober de 6,4 kilometer lange route tussen Haren en Groningen. Lichtjes, muziek en publiek maakten van de tocht een gezamenlijk evenement.",
-      "article_body": [
-        "De 4Mijl4You in Groningen is geen wedstrijd om de snelste tijd. Op 10 oktober legden duizenden deelnemers de route van 6,4 kilometer af op een manier die bij hen paste: wandelend, op skates of in een rolstoel. Het evenement vond voor de vijftiende keer plaats.",
-        "De route liep tussen Haren en Groningen. Deelnemers droegen lichtgevende accessoires en kleurrijke kleding; langs het parcours stonden muzikanten en toeschouwers. De organisatie beschreef de avond als een feestelijke tocht waarbij samen meedoen centraal staat.",
-        "De opzet maakt deelname mogelijk voor mensen die niet hardlopen, maar één evenementverslag vertelt niet hoe toegankelijk de route voor iedereen in de praktijk is. Ook zegt het aantal deelnemers op zichzelf niets over blijvende sportdeelname. Wat deze editie wel laat zien: een groot beweegevenement kan verschillende manieren van bewegen op hetzelfde parcours samenbrengen. De afstand van 6,4 kilometer maakt het een flinke tocht, ook voor wie wandelt of rolt. De bron vermeldt dat deelnemers zelf hun tempo en manier van meedoen kiezen, maar deelt geen cijfers over deelnemers met een beperking of hun ervaringen. Een volgende editie zou met een deelnemer kunnen laten zien wat er nodig is om zo’n tocht toegankelijk te maken, mits die ervaring rechtstreeks wordt opgehaald."
+      "article_slug": "marina-ai-bril-zelfstandigheid",
+      "category": "Energie & innovatie",
+      "title": "Verpakking lezen, koken, een bord op het station: Marina doet meer zelf",
+      "headline_options": [
+        "AI-bril helpt blinde Marina in het dagelijks leven",
+        "Verpakking lezen, koken, een bord op het station: Marina doet meer zelf"
       ],
-      "why_it_matters": "De tocht brengt mensen die wandelen, rollen of skaten samen op hetzelfde parcours. De bron beschrijft de opzet, maar niet hoe deelnemers de toegankelijkheid zelf ervaren.",
-      "source": "Menzis 4Mijl4You / Golazo",
-      "source_id": "golazo-4mijl4you",
-      "url": "https://4mijl4you.nl/lichtjes-muziek-en-duizenden-glimlachen-tijdens-de-15e-editie-van-de-menzis-4mijl4you/",
-      "article_slug": "4mijl4you-samen-bewegen-groningen",
-      "published": "2026-10-10",
-      "email_title": "In Groningen draait de 4Mijl4You om samen de finish halen",
-      "editorial_rank": 5,
-      "regional_rank": 5,
-      "image_query": "id:4631282",
-      "image_alt": "Een deelnemer aan een sportevenement in een rolstoel; illustratief beeld"
-    },
-    {
-      "category": "Mens",
-      "title": "Rotterdamse kledingwinkel geeft sollicitanten gratis kleding én persoonlijke aandacht",
-      "teaser": "Dress for Success biedt mensen met een laag inkomen een outfit voor een sollicitatie, stage of andere belangrijke gelegenheid. De Rotterdamse winkel bestaat 25 jaar en hielp naar eigen zeggen duizenden mensen.",
+      "teaser": "De 21-jarige Marina gebruikt een bril met camera en spraakondersteuning om informatie om haar heen te laten voorlezen. Volgens haar maakt dat dagelijkse handelingen een stuk eenvoudiger.",
       "article_body": [
-        "In de Rotterdamse winkel Dress for Success hangt kleding die bezoekers gratis kunnen uitzoeken. Een kassa is er niet. Mensen met een minimuminkomen krijgen hulp bij het vinden van een outfit voor bijvoorbeeld een sollicitatiegesprek, stage of belangrijke gebeurtenis.",
-        "De winkel aan het Rijnhoutplein vierde op 9 oktober haar 25-jarig bestaan. In een reportage van Rijnmond vertellen klanten hoe de kleding en persoonlijke begeleiding hen helpen zich klaar te voelen voor een afspraak. De organisatie meldt dat zij in een kwart eeuw enkele duizenden mensen heeft geholpen.",
-        "Dat is een concreet bereik, maar het is niet hetzelfde als bewijs dat klanten daardoor vaker werk vinden. Kleding lost financiële onzekerheid of andere drempels naar werk niet op. Wel kan passende kleding de voorbereiding op een sollicitatie makkelijker maken en iemand met aandacht ontvangen. Juist de combinatie van kleding uitzoeken en persoonlijke begeleiding onderscheidt het initiatief van alleen een kledinguitgifte. De reportage laat klanten zelf vertellen wat die aandacht voor hen betekent. Dat geeft het bericht een menselijk perspectief, al blijft het een reportage over enkele klanten en geen onderzoek naar het effect van de winkel op werk of inkomen."
+        "Welke verpakking heb ik vast? Wat geeft de keukenweegschaal aan? Voor Marina Kovac uit Hendrik-Ido-Ambacht zijn dat vragen waarbij een bril met camera en spraakondersteuning helpt. De 21-jarige is blind en vertelt Rijnmond dat zij met het hulpmiddel meer dagelijkse handelingen zelfstandig uitvoert.",
+        "Marina verloor als klein kind haar gezichtsvermogen door oogkanker. Ze gebruikt al langer technologie om informatie toegankelijk te maken. Dat kon bijvoorbeeld met haar telefoon, maar die moest ze dan goed richten en bedienen. De bril maakt sommige stappen sneller: zij stelt hardop een vraag en krijgt gesproken informatie terug.",
+        "In de reportage beschrijft ze toepassingen bij het koken, het herkennen van kleding en het lezen van borden op een station. Juist zulke kleine momenten tellen op. Minder vaak iemand hoeven vragen wat er ergens staat, geeft ruimte om zelf verder te gaan.",
+        "Het apparaat werkt niet altijd vlekkeloos; soms moet het opnieuw worden opgestart. De reportage is bovendien Marina’s persoonlijke ervaring, geen onderzoek dat aantoont dat de bril voor iedere blinde gebruiker even goed of veilig werkt.",
+        "Haar gezichtsvermogen keert er niet door terug. De vooruitgang zit in iets anders: informatie die visueel wordt aangeboden, kan voor haar vaker via gesproken taal beschikbaar komen. Dat maakt de omgeving op concrete momenten beter toegankelijk."
       ],
-      "why_it_matters": "Een sollicitatie vraagt meer dan een goede outfit, maar de winkel haalt één praktische kostenpost weg en biedt bezoekers persoonlijke begeleiding.",
       "source": "Rijnmond",
       "source_id": "rijnmond",
-      "url": "https://www.rijnmond.nl/nieuws/2263829/deze-kledingwinkel-zonder-kassa-zorgt-al-25-jaar-dat-iedereen-weer-goed-voor-de-dag-komt",
-      "article_slug": "dress-for-success-rotterdam-25-jaar",
+      "url": "https://www.rijnmond.nl/nieuws/2268733/marina-is-blind-maar-dankzij-een-ai-bril-kan-ze-bijna-alles-zelf-mijn-vrienden-vergeten-dat-ik-niks-zie",
+      "published": "2026-10-17",
+      "event_date": "2026-10-17",
+      "primary_url": "https://www.rijnmond.nl/nieuws/2268733/marina-is-blind-maar-dankzij-een-ai-bril-kan-ze-bijna-alles-zelf-mijn-vrienden-vergeten-dat-ik-niks-zie",
+      "image_key": "toegankelijk",
+      "image_alt": "Braille als illustratie bij toegankelijkheid voor blinde mensen.",
+      "email_title": "Verpakking lezen, koken, een bord op het station: Marina doet meer zelf",
+      "regional_rank": 5,
+      "editorial_rank": 5,
+      "image_query": "id:5496153"
+    },
+    {
+      "category": "Natuur & klimaat",
+      "title": "Geen voorbijgangers meer: otters stichten een gezin in de duinen",
+      "headline_options": [
+        "DNA bevestigt voortplanting otters in Meijendel en Berkheide",
+        "Geen voorbijgangers meer: otters stichten een gezin in de duinen"
+      ],
+      "teaser": "In Meijendel en Berkheide zijn otters niet alleen op bezoek. DNA-onderzoek bevestigt voor het eerst dat een mannetje en vrouwtje er samen een jong hebben gekregen: een nieuwe generatie in de Zuid-Hollandse duinen.",
+      "article_body": [
+        "Een otter die ergens opduikt, is mooi nieuws. Maar een otterfamilie vertelt meer: dieren hebben er niet alleen een route gevonden, ze brengen er ook een nieuwe generatie groot. In Meijendel en Berkheide is dat nu voor het eerst genetisch bevestigd.",
+        "Onderzoekers haalden DNA uit vijftien verzamelde otteruitwerpselen. Daarmee identificeerden zij een volwassen vrouwtje, een volwassen mannetje en een jong vrouwtje. Het DNA van het jong laat zien dat de twee volwassen dieren haar ouders zijn.",
+        "De uitkomst bevestigt wat wildcamera’s eind 2025 al deden vermoeden, toen een otter met drie jongen werd gefilmd. Van twee jongen leverde het verzamelde materiaal geen bruikbaar DNA op. Hun identiteit blijft daarom onbekend. De eerste otterwaarneming in het gebied was eind 2024.",
+        "Ook de vader leverde een verrassing op. Hij is genetisch verwant aan de noordelijke Nederlandse otterpopulatie, die haar oorsprong heeft in het uitzetgebied Wieden-Weerribben. Zijn precieze herkomst en afgelegde route zijn niet vastgesteld.",
+        "Dunea, Stichting Otterstation Nederland en Wageningen Environmental Research volgen de dieren samen. Het positieve resultaat is concreet: de teruggekeerde otter gebruikt de kustduinen ook om zich voort te planten. Dat bewijst geen landelijke populatiegroei of herstel van alle waternatuur. Wel is het meer dan een losse waarneming: een nieuwe generatie heeft hier aantoonbaar een thuis gevonden."
+      ],
+      "source": "Dunea / Wageningen Environmental Research",
+      "source_id": "dunea",
+      "url": "https://www.dunea.nl/algemeen/nieuws/2026/otterfamilie-in-meijendel-en-berkheide-genetisch-bevestigd",
+      "primary_url": "https://www.dunea.nl/algemeen/nieuws/2026/otterfamilie-in-meijendel-en-berkheide-genetisch-bevestigd",
+      "article_slug": "otterfamilie-meijendel-berkheide-dna",
       "published": "2026-10-11",
-      "email_title": "Rotterdamse kledingwinkel geeft sollicitanten gratis kleding én persoonlijke aandacht",
-      "editorial_rank": 6,
+      "event_date": "2026-10-11",
+      "image_key": "otter",
+      "email_title": "Geen voorbijgangers meer: otters stichten een gezin in de duinen",
       "regional_rank": 6,
-      "image_query": "id:1850082",
-      "image_alt": "Kleding aan hangers in een winkel; illustratief beeld"
+      "editorial_rank": 6,
+      "image_query": "id:7307280",
+      "image_alt": "Europese otter; illustratief soortbeeld, niet de onderzochte familie."
     }
   ],
   "int": [
     {
-      "category": "Gezondheid",
-      "title": "Voor 900 gezinnen in Ethiopië komt water nu tot bij huis",
-      "teaser": "In Berehale zijn reservoirs gebouwd, boorputten hersteld en leidingen uitgebreid. Voor Rawda Kalil betekende de verandering dat er thuis een kraan is en zij niet meer dagelijks jerrycans hoeft te dragen. De uitbreiding loopt nog; niet iedereen is aangesloten.",
-      "article_body": [
-        "In het dorp Berehale, in de Ethiopische regio Afar, kregen ongeveer 900 gezinnen een aansluiting op een verbeterd watersysteem. UNICEF beschrijft hoe dat voor Rawda Kalil verschil maakt. Voorheen droeg zij dagelijks jerrycans water naar huis en moest ze soms opnieuw naar het waterpunt.",
-        "Met steun van UNICEF en het PROSPECTS-project zijn twee reservoirs gebouwd, bestaande boorputten hersteld en leidingen uitgebreid. Zonne-energie helpt het water naar de reservoirs te pompen. De nieuwe aansluitingen brengen water dichter bij huishoudens en geven tijd terug die bewoners eerder aan halen en dragen besteedden.",
-        "De voorziening is nog niet voor iedereen beschikbaar. De uitbreiding van het netwerk gaat door en de reportage beschrijft vooral de situatie van enkele gezinnen. Het project heeft dus een tastbaar resultaat bereikt, maar volledige dekking en betrouwbare levering voor alle inwoners zijn nog niet vastgesteld. De UNICEF-reportage laat zien hoe water thuis ook dagelijkse handelingen verandert, zoals koken, wassen en kinderen verzorgen. Tegelijk blijft dit een verhaal over Berehale en enkele huishoudens, geen effectmeting voor alle dorpen in de regio. De aanpak verbetert zowel de opslag als de leidingen en het oppompen. Daarmee pakt het project meerdere knelpunten aan die bewoners eerder met onbetrouwbare watervoorziening confronteerden."
+      "article_slug": "amazonie-minder-ontbossing",
+      "category": "Natuur & klimaat",
+      "title": "Bijna 42 procent minder ontbossing in het Braziliaanse Amazonegebied",
+      "headline_options": [
+        "INPE meldt laagste jaarlijkse ontbossingsraming voor Amazonië",
+        "Bijna 42 procent minder ontbossing in het Braziliaanse Amazonegebied"
       ],
-      "why_it_matters": "Water dichter bij huis kan vooral vrouwen en meisjes tijd en zware tochten besparen. Het verschil hangt af van betrouwbare levering en uitbreiding naar huishoudens die nog niet zijn aangesloten.",
-      "source": "UNICEF",
-      "source_id": "unicef",
-      "url": "https://www.unicef.org/ethiopia/stories/new-rhythm-rawdas-day",
-      "article_slug": "berehale-900-gezinnen-water-aan-huis",
-      "published": "2026-10-13",
-      "email_title": "Voor 900 gezinnen in Ethiopië komt water nu tot bij huis",
-      "editorial_rank": 7,
+      "teaser": "De nieuwe Braziliaanse satellietcijfers laten een scherpe daling zien. Ook in de Cerrado verdween minder natuurlijke begroeiing. Het blijft natuurverlies, maar op een duidelijk kleinere schaal.",
+      "article_body": [
+        "De jaarlijkse ontbossing in het Braziliaanse Amazonegebied is volgens de nieuwste raming gedaald naar 3.335 vierkante kilometer. Een jaar eerder was dat 5.731 vierkante kilometer. Dat is een afname van 41,8 procent en de laagste waarde sinds het begin van de meetreeks in 1988.",
+        "De cijfers komen van het Braziliaanse ruimteonderzoeksinstituut INPE. Ze horen bij het monitoringsjaar van augustus 2025 tot en met juli 2026 en werden op 16 oktober bekendgemaakt. De Amazonecijfers zijn nog een raming op basis van prioritaire satellietbeelden; de definitieve verwerking volgt later.",
+        "Ook in de Cerrado, de grote savanneregio van Brazilië, nam de ontbossing af. Daar kwam de volledig verwerkte jaarwaarde uit op ongeveer 5.517 vierkante kilometer, 23,8 procent minder dan in de voorgaande periode. Dat is de laagste waarde sinds de Cerrado-reeks in 2001 begon.",
+        "De Braziliaanse overheid wijst op een combinatie van satelliettoezicht, handhaving en samenwerking tussen bestuurslagen. De cijfers alleen kunnen niet precies aanwijzen welk onderdeel hoeveel heeft bijgedragen.",
+        "Minder ontbossing is bovendien niet hetzelfde als volledig herstel. Er verdwijnt nog steeds veel natuur en brand of aantasting kan optreden zonder dat alle getroffen begroeiing als ontbost wordt geteld. Juist met die begrenzing is de daling betekenisvol: in beide gebieden ging aantoonbaar minder natuurlijke vegetatie verloren."
+      ],
+      "source": "Braziliaans ministerie van Milieu / INPE",
+      "source_id": "brazil-mma",
+      "url": "https://www.gov.br/mma/pt-br/noticias-defeso-eleitoral/brasil-alcanca-menores-taxas-de-desmatamento-da-serie-historica-na-amazonia-e-no-cerrado",
+      "published": "2026-10-16",
+      "event_date": "2026-07-31",
+      "primary_url": "https://www.gov.br/mma/pt-br/noticias-defeso-eleitoral/brasil-alcanca-menores-taxas-de-desmatamento-da-serie-historica-na-amazonia-e-no-cerrado",
+      "image_key": "bos",
+      "image_alt": "Tropisch bos; illustratief beeld, geen opname van de gemeten ontbossing.",
+      "email_title": "Bijna 42 procent minder ontbossing in het Braziliaanse Amazonegebied",
       "regional_rank": 1,
-      "image_query": "id:8493302",
-      "image_alt": "Stromend water uit een kraan; illustratief beeld"
+      "editorial_rank": 7,
+      "image_query": "id:6761846"
     },
     {
+      "article_slug": "cornwall-oogst-gered",
       "category": "Mens",
-      "title": "Hongarije schrapt belangrijke beperkingen op lhbti-informatie",
-      "teaser": "Het parlement stemde op 13 oktober voor het schrappen van bepalingen uit de wet van 2021. De rechtenorganisatie Háttér noemt het een eerste stap: andere discriminerende regels, onder meer rond boeken, blijven bestaan.",
-      "article_body": [
-        "Het Hongaarse parlement heeft op 13 oktober gestemd voor het schrappen van belangrijke lhbti-beperkende bepalingen uit de zogenoemde propagandawet van 2021. Die wet beperkte hoe homoseksualiteit en genderdiversiteit aan jongeren konden worden getoond of besproken.",
-        "De rechtenorganisatie Háttér verwelkomde de stemming en zegt dat lhbti-personen en hun verhalen hierdoor weer meer ruimte kunnen krijgen in media en seksuele voorlichting. De wijziging volgt op een uitspraak van het Hof van Justitie van de Europese Unie, dat de bepalingen in strijd met EU-recht noemde.",
-        "De stap maakt de wettelijke beperking kleiner, maar beëindigt discriminatie niet. Háttér wijst op andere bepalingen die nog aangepast moeten worden, waaronder regels rond lhbti-gerelateerde boeken. Ook kan jarenlange zelfcensuur niet vanzelf verdwijnen zodra een wet verandert. De stemming is dus een concrete juridische stap, met vervolgwerk voor overheid en samenleving. Háttér zegt dat lhbti-inclusieve seksuele voorlichting hierdoor weer mogelijk kan worden. Hoe snel scholen en media daarvan gebruikmaken, hangt mede af van de verdere uitvoering en het terugdringen van zelfcensuur. Het besluit is genomen na een oordeel van het Europese Hof van Justitie. Dat maakt het ook een voorbeeld van Europese rechtsbescherming die doorwerkt in nationale wetgeving."
+      "title": "Van het veld naar de voedselbank: Cornwall redde al 460 ton oogst",
+      "headline_options": [
+        "Gleaning Cornwall bereikt mijlpaal met geredde groenten en fruit",
+        "Van het veld naar de voedselbank: Cornwall redde al 460 ton oogst"
       ],
-      "why_it_matters": "De wetswijziging verruimt de formele ruimte om lhbti-personen zichtbaar te maken. De resterende regels en de effecten van eerdere censuur verdwijnen daarmee niet automatisch.",
-      "source": "Háttér Társaság",
-      "source_id": "hatter-tarsasag",
-      "url": "https://hatter.hu/hirek/megcsinaltuk-visszavonta-az-orszaggyules-a-propagandatorvenyt",
-      "article_slug": "hongarije-beperkingen-lhbti-informatie",
-      "published": "2026-10-14",
-      "email_title": "Hongarije schrapt belangrijke beperkingen op lhbti-informatie",
-      "editorial_rank": 8,
+      "teaser": "Vrijwilligers oogsten wat anders op het land zou achterblijven. In de afgelopen jaren heeft Gleaning Cornwall meer dan 460 ton groenten en fruit verzameld, met een geschatte waarde van een miljoen pond.",
+      "article_body": [
+        "Een wortel die na de gewone oogst op het land blijft liggen, kan nog prima op een bord belanden. In Cornwall organiseren vrijwilligers precies die extra stap. Zij gaan met toestemming van boeren de velden op om groenten en fruit te verzamelen die anders niet meer zouden worden geoogst.",
+        "Gleaning Cornwall bereikte volgens een BBC-reportage een mijlpaal: sinds de start is meer dan 460 ton voedsel gered. De organisatie schat de gezamenlijke waarde op een miljoen pond. Dat is een optelsom over meerdere jaren, geen oogst van één seizoen.",
+        "Het eten gaat gratis naar ongeveer 160 voedselbanken, buurtkeukens en andere gemeenschapsvoorzieningen in het zuidwesten van Engeland. Daarmee verbindt het initiatief twee plekken die anders gemakkelijk los van elkaar blijven staan: een overschot op het boerenland en mensen die vers voedsel goed kunnen gebruiken.",
+        "Dat vraagt meer dan bereidwillige plukkers. Er moeten afspraken met boeren worden gemaakt en de opbrengst moet worden vervoerd, opgeslagen en op tijd verdeeld. De organisatie noemt juist die praktische middelen belangrijk om het werk te kunnen voortzetten.",
+        "De aantallen zijn afkomstig van het initiatief zelf en zeggen niet dat voedselarmoede in de regio is opgelost. Ze maken wel zichtbaar wat er daadwerkelijk is verplaatst: honderden tonnen eetbaar voedsel hebben een bestemming gekregen, in plaats van op het veld achter te blijven."
+      ],
+      "source": "BBC",
+      "source_id": "bbc",
+      "url": "https://www.bbc.co.uk/news/articles/c6n49w1r2zxjo",
+      "published": "2026-10-18",
+      "event_date": "2026-10-18",
+      "primary_url": "https://www.bbc.co.uk/news/articles/c6n49w1r2zxjo",
+      "image_key": "oogst",
+      "image_alt": "Wortel op het land; illustratie bij het redden van oogst.",
+      "email_title": "Van het veld naar de voedselbank: Cornwall redde al 460 ton oogst",
       "regional_rank": 2,
-      "image_query": "id:4552833",
-      "image_alt": "Een regenboogvlag; illustratief beeld"
+      "editorial_rank": 8,
+      "supporting_urls": [
+        "https://gleaningcornwall.org.uk/our-impact-2/"
+      ],
+      "image_query": "id:1565597"
     },
     {
-      "category": "Natuur & klimaat",
-      "title": "Hersteld moeras bij Norwich krijgt weer bezoek van vogels en salamanders",
-      "teaser": "In Keswick Marsh is ruim zeven hectare rivieroever en overstromingsvlakte opnieuw ingericht. Nieuwe poelen en greppels verbinden het terrein met de rivier. Dieren zijn al waargenomen, maar duurzaam populatieherstel vraagt langere monitoring.",
-      "article_body": [
-        "Bij Keswick Marsh, langs de River Yare in Norfolk, hebben beheerders ruim zeven hectare rivieroever en overstromingsvlakte opnieuw ingericht. Nieuwe poelen en ondiepe delen bieden waterdieren en vogels meer leefruimte. Greppels zijn aangepast zodat de rivier en het omliggende terrein beter met elkaar verbonden zijn.",
-        "De werkzaamheden zijn afgerond. De Britse Environment Agency meldt dat onder meer zilverreigers, salamanders, libellen en een kleine plevier in het gebied zijn waargenomen. Dat zijn bemoedigende vroege signalen dat dieren de nieuwe plekken gebruiken.",
-        "Een waarneming kort na herstel is nog geen bewijs dat populaties blijvend groeien. Daarvoor is monitoring over meerdere jaren nodig. Wel is de fysieke inrichting veranderd: er zijn poelen, ondiepten en een natuurlijker verbinding met de rivier aangelegd. Zo ontstaat ruimte voor natuur én voor water dat bij hoog peil kan uitwijken. De inrichting van een overstromingsvlakte kan ook helpen om water tijdelijk meer ruimte te geven, maar de bron presenteert dit project in de eerste plaats als natuurherstel. De effecten op waterveiligheid zijn hier niet gekwantificeerd. De eerste waarnemingen van dieren zijn waardevol als teken van gebruik, maar beheerder en onderzoekers zullen moeten blijven volgen welke soorten zich vestigen en of de leefomgeving zich ontwikkelt."
+      "article_slug": "diabetes-glucosesensor-onderzoek",
+      "category": "Gezondheid",
+      "title": "Vijf uur langer per dag binnen de streefwaarden voor bloedsuiker",
+      "headline_options": [
+        "Glucosesensor verbetert bloedsuikercontrole bij diabetes type 2 zonder insuline",
+        "Vijf uur langer per dag binnen de streefwaarden voor bloedsuiker"
       ],
-      "why_it_matters": "Het project herstelt niet alleen leefruimte, maar ook de verbinding tussen rivier en overstromingsvlakte. Of soorten daar structureel van profiteren, moet uit vervolgmetingen blijken.",
-      "source": "Environment Agency",
-      "source_id": "environment-agency",
-      "url": "https://www.gov.uk/government/news/rare-chalk-stream-created-to-boost-wildlife-in-norfolk",
-      "article_slug": "keswick-marsh-natuurherstel",
-      "published": "2026-10-13",
-      "email_title": "Hersteld moeras bij Norwich krijgt weer bezoek van vogels en salamanders",
-      "editorial_rank": 9,
+      "teaser": "In een gerandomiseerde studie met 283 volwassenen verbeterde continue glucosemeting de bloedsuikercontrole. Het onderzoek betrof mensen met diabetes type 2 die geen insuline gebruikten.",
+      "article_body": [
+        "Een meting laat zien hoe hoog de bloedsuiker op dat moment is. Een sensor die voortdurend meet, laat ook zien wat er gedurende de dag verandert. In een Amerikaanse studie hielp die extra informatie volwassenen met diabetes type 2 hun bloedsuiker beter binnen de afgesproken streefwaarden te houden.",
+        "Het onderzoek volgde 283 volwassenen bij 22 eerstelijnspraktijken gedurende 26 weken. Zij gebruikten geen insuline. De deelnemers werden willekeurig ingedeeld voor continue glucosemeting of gebruikelijke zorg. De sensorgroep bracht gemiddeld ongeveer vijf uur per dag méér binnen het streefbereik door dan de vergelijkingsgroep.",
+        "Ook het HbA1c, een maat voor de gemiddelde bloedsuiker over een langere periode, verbeterde sterker. Het verschil tussen de groepen was 0,9 procentpunt. De resultaten verschenen op 14 oktober in het New England Journal of Medicine; eerder dit jaar waren al congresresultaten gedeeld.",
+        "De praktische betekenis zit in de terugkoppeling: gebruikers kunnen zien hoe eten, beweging en andere dagelijkse gewoonten samenhangen met hun glucosewaarden. Dat geeft informatie waarmee zij samen met hun zorgverlener keuzes kunnen bespreken.",
+        "De studie bewijst geen genezing en stelde niet vast dat deelnemers later minder hart-, nier- of oogproblemen kregen. Ook betaalbaarheid en vergoeding zijn afzonderlijke vragen. Het bereikte resultaat is betere bloedsuikercontrole gedurende de onderzochte periode, bij een duidelijk omschreven groep patiënten."
+      ],
+      "source": "University of Colorado Anschutz / Medical Xpress",
+      "source_id": "medical-xpress",
+      "url": "https://medicalxpress.com/news/2026-10-glucose-diabetes-patients-hours-day.html",
+      "published": "2026-10-17",
+      "event_date": "2026-10-14",
+      "primary_url": "https://medicalxpress.com/news/2026-10-glucose-diabetes-patients-hours-day.html",
+      "image_key": "diabetes",
+      "image_alt": "Een glucosemeter als illustratie bij bloedsuikercontrole; niet de onderzochte continue sensor.",
+      "email_title": "Vijf uur langer per dag binnen de streefwaarden voor bloedsuiker",
       "regional_rank": 3,
-      "image_query": "id:5900178",
-      "image_alt": "Water en riet in een moerasgebied; illustratief beeld"
+      "editorial_rank": 9,
+      "supporting_urls": [
+        "https://news.cuanschutz.edu/news-stories/continuous-glucose-monitors-help-type-2-diabetes-patients-spend-five-more-hours-a-day-in-healthy-blood-sugar-range",
+        "https://www.nejm.org/doi/10.1056/NEJMoa2608571"
+      ],
+      "image_query": "id:5977173"
     },
     {
+      "article_slug": "koraal-herstel-door-contact",
       "category": "Wetenschap",
-      "title": "AI-model verdubbelt nauwkeurigheid van weersverwachtingen tot zes weken vooruit",
-      "teaser": "In een internationale voorspelwedstrijd verbeterde een machine-learningmethode de nauwkeurigheid voor onderzochte weervariabelen en termijnen. Het gaat om kansen op langere termijn, niet om een precieze lokale verwachting voor een bepaalde dag.",
-      "article_body": [
-        "Weersverwachtingen worden snel minder betrouwbaar naarmate ze verder vooruitkijken. Onderzoekers ontwikkelden daarom een extra model dat leert van fouten in bestaande weersystemen en hun verwachtingen bijstuurt. De methode richt zich op de periode van twee tot zes weken vooruit.",
-        "In een internationale voorspelwedstrijd van het Europese ECMWF kwam de aanpak als beste uit de bus voor de onderzochte weervariabelen en termijnen. MIT News meldt dat de methode de voorspellingsnauwkeurigheid in dat kader verdubbelde ten opzichte van het bestaande model. De resultaten verschenen op 14 oktober in het tijdschrift Nature.",
-        "Dit is geen weersvoorspelling die nu al zegt welk dorp op een bepaalde dinsdag regen krijgt. Het model verbetert kansverwachtingen op langere termijn. Zulke informatie kan energiebedrijven, boeren en hulpdiensten helpen plannen, maar de praktische waarde hangt af van verdere tests en toepassing in operationele systemen. Het onderzoek beschrijft een verbetering in de wedstrijd en analyseert historische voorspellingen. Het bewijst nog niet dat iedere gebruiker in de praktijk dezelfde winst zal zien. Zo blijft het verschil tussen een sterke onderzoeksuitkomst en een dagelijks beschikbare dienst helder."
+      "title": "Een gezonde buur helpt verbleekt koraal in het lab weer op kleur",
+      "headline_options": [
+        "Gebleekt koraal herstelt na contact met genetisch identiek gezond fragment",
+        "Een gezonde buur helpt verbleekt koraal in het lab weer op kleur"
       ],
-      "why_it_matters": "Extra weken voorbereiding kunnen van belang zijn voor energie, landbouw en noodplanning. De winst geldt voor de geteste variabelen en periode, niet voor elke plaatselijke dagverwachting.",
-      "source": "MIT News",
-      "source_id": "mit-news",
-      "url": "https://news.mit.edu/2026/researchers-improve-weather-forecasts-looking-two-six-weeks-out-1014",
-      "article_slug": "weer-twee-zes-weken-beter-voorspeld",
-      "published": "2026-10-14",
-      "email_title": "AI-model verdubbelt nauwkeurigheid van weersverwachtingen tot zes weken vooruit",
-      "editorial_rank": 10,
+      "teaser": "In een kleine laboratoriumproef kregen verbleekte koraalfragmenten hun algen terug na contact met een gezonde kloon. Een opvallend resultaat, met nog een grote stap te gaan naar toepassing op riffen.",
+      "article_body": [
+        "Twee stukken koraal die elkaar toevallig raakten, zetten onderzoekers op een spoor. Zou een gezond fragment een verbleekte soortgenoot kunnen helpen? In het laboratorium bleek dat inderdaad mogelijk, zolang het om genetisch identieke fragmenten ging.",
+        "Koraal leeft samen met kleine algen die het van voedingsstoffen voorzien en kleur geven. Onder stress kan het die algen verliezen. Het dier wordt dan bleek en dreigt uiteindelijk te verhongeren. Onderzoekers van Stanford brachten verbleekte fragmenten in contact met gezonde klonen, waardoor weefsel kon samensmelten en algen konden overgaan.",
+        "In de proef werden tien paren gevolgd. Bij vijf paren raakten de fragmenten elkaar; bij de andere vijf bleef er een kleine afstand tussen. De verbleekte fragmenten met contact herstelden binnen zeven weken. De controlegroep overleefde niet. Al na enkele dagen werd overdracht van algen zichtbaar.",
+        "Het onderzoek verscheen in Science Advances. Het laat zien dat herstel onder deze gecontroleerde omstandigheden mogelijk is, zelfs bij ernstig verbleekt koraal.",
+        "Daarmee is nog geen methode beschikbaar om hele riffen te redden. De proef was klein, gebeurde in het lab en vereiste een gezond, genetisch identiek fragment. Of de aanpak buiten kan werken en praktisch op te schalen is, moet nog worden onderzocht. De hoopvolle ontdekking is voorlopig het mechanisme zelf: levend koraal kan via contact hulp krijgen bij het terugwinnen van zijn algen."
+      ],
+      "source": "Stanford Doerr / Phys.org",
+      "source_id": "phys-org",
+      "url": "https://phys.org/news/2026-10-scientists-reverse-coral.html",
+      "published": "2026-10-18",
+      "event_date": "2026-10-14",
+      "primary_url": "https://phys.org/news/2026-10-scientists-reverse-coral.html",
+      "image_key": "koraal",
+      "image_alt": "Koraalrif; illustratie, niet de fragmenten uit het experiment.",
+      "email_title": "Een gezonde buur helpt verbleekt koraal in het lab weer op kleur",
       "regional_rank": 4,
-      "image_query": "id:3488632",
-      "image_alt": "Wolken aan de hemel; illustratief beeld"
+      "editorial_rank": 10,
+      "image_query": "id:378286"
     },
     {
-      "category": "Economie",
-      "title": "In Mozambique starten 180 bewoners met gezamenlijke viskweek",
-      "teaser": "Achttien verenigingen in Nangade kregen viskweekbakken, jonge vissen, voer en technische steun. Het project wil voedsel en inkomsten ondersteunen; die effecten zijn nog niet gemeten.",
-      "article_body": [
-        "In Nangade, in het noorden van Mozambique, kregen achttien lokale verenigingen op 1 oktober middelen om vis te kweken. Volgens het UNDP-verslag van 14 oktober doen 180 vrouwen en mannen mee. De groepen ontvingen viskweekbakken, jonge vissen, voer en technische ondersteuning.",
-        "De overdracht vond plaats in een regio die door conflict is getroffen. Het project wil deelnemers helpen om voedsel te produceren en inkomsten op te bouwen. De spullen en begeleiding zijn geleverd; hogere opbrengsten of een betere voedselzekerheid zijn nog beoogde uitkomsten, geen aangetoond resultaat.",
-        "Gezamenlijke viskweek vraagt ook onderhoud, voer en toegang tot afzet. De bron meldt de start en de ondersteuning, maar geeft nog geen resultaten over productie, verkoop of verdeling van inkomsten. Het nieuws zit daarom in de concrete startmogelijkheid voor lokale groepen en in wat er de komende tijd zal moeten blijken. De aanpak geeft verenigingen gezamenlijk materiaal en ondersteuning, maar het artikel meldt nog niet hoe de groepen de opbrengsten verdelen of welke kosten deelnemers zelf moeten dragen. Dat zijn belangrijke punten om bij een vervolgbericht op terug te komen. Ook zal blijken of deelnemers voldoende voer en technische hulp kunnen blijven krijgen. Zonder die voorwaarden zegt de startuitrusting nog niet hoe lang de activiteit kan doorgaan."
+      "article_slug": "rules-erfgoed-beschermd",
+      "category": "Cultuur",
+      "title": "Een toekomst voor de plek waar Dickens aan tafel zat",
+      "headline_options": [
+        "Gebouw van Londens oudste restaurant geschonken aan National Trust",
+        "Een toekomst voor de plek waar Dickens aan tafel zat"
       ],
-      "why_it_matters": "De deelnemers hebben productiemiddelen en technische begeleiding gekregen. Of dit hun inkomen of voedselzekerheid verbetert, moet later met resultaten worden onderbouwd.",
-      "source": "UNDP",
-      "source_id": "undp",
-      "url": "https://www.undp.org/mozambique/news/nangade-fish-farming-opens-path-economic-recovery",
-      "article_slug": "nangade-viskweekbakken-overgedragen",
+      "teaser": "De eigenaar van het pand waarin restaurant Rules zit, schenkt het gebouw en de historische collectie aan de National Trust. Het restaurant blijft zelfstandig ondernemen, nu als huurder.",
+      "article_body": [
+        "Aan Maiden Lane in Covent Garden wordt sinds 1798 gegeten. Rules begon als oesterhuis en groeide uit tot een restaurant waar onder anderen Charles Dickens en Charlie Chaplin kwamen. Nu krijgt het historische onderkomen een nieuwe hoeder: eigenaar J-P Mayhew heeft het gebouw en de bijbehorende collectie geschonken aan de National Trust.",
+        "De schenking omvat meer dan muren. Bezoekersboeken, menukaarten, karikaturen, foto’s, glas-in-lood en andere voorwerpen bewaren de geschiedenis van de plek. Ze vertellen wie er aanschoof en welke gewoonten het restaurant door de eeuwen heen behield.",
+        "Het restaurantbedrijf zelf blijft in handen van Ricky McMenemy en gaat zelfstandig verder. Hij wordt commercieel huurder van de erfgoedorganisatie. De huurinkomsten dragen bij aan het beschermingswerk van de National Trust.",
+        "Dat onderscheid maakt het nieuws bijzonder. Het gebouw wordt geen stilgelegd restaurantdecor: de historische functie blijft bestaan terwijl het pand en de collectie onder erfgoedbeheer komen. De National Trust beheert al historische pubs, maar dit is haar eerste gebouw met een nog werkend historisch restaurant.",
+        "Erfgoedbeheer is geen garantie dat een onderneming nooit economische problemen zal krijgen. Het is wel een concrete stap om een kwetsbare combinatie te bewaren: een bijzonder interieur, een lange geschiedenis en een plek die nog dagelijks wordt gebruikt. De schenking beschermt daarmee niet alleen een adres, maar ook de verhalen die er zijn verzameld."
+      ],
+      "source": "National Trust",
+      "source_id": "national-trust",
+      "url": "https://www.nationaltrust.org.uk/services/media/2026/october/landmark-act-of-generosity-secures-home-of-londons-oldest-restaurant-for-the-future",
       "published": "2026-10-14",
-      "email_title": "In Mozambique starten 180 bewoners met gezamenlijke viskweek",
-      "editorial_rank": 11,
+      "event_date": "2026-10-14",
+      "primary_url": "https://www.nationaltrust.org.uk/services/media/2026/october/landmark-act-of-generosity-secures-home-of-londons-oldest-restaurant-for-the-future",
+      "image_key": "londen",
+      "image_alt": "Covent Garden / Seven Dials in Londen, gefotografeerd in 2020; sfeerbeeld bij de wijk waar Rules staat.",
+      "email_title": "Een toekomst voor de plek waar Dickens aan tafel zat",
       "regional_rank": 5,
-      "image_query": "id:6795464",
-      "image_alt": "Vissen in een kweekvijver; illustratief beeld"
+      "editorial_rank": 11,
+      "image_query": "id:5082853"
     },
     {
-      "category": "Natuur & klimaat",
-      "title": "Nieuwe studie telt meer natuurbehoud dan internationale registers laten zien",
-      "teaser": "Onderzoekers schatten dat in 2022 26,8 procent van het landoppervlak onder een vorm van natuurbehoud viel. Dat betekent vooral dat bestaand beheer ondergeteld was, niet dat natuurgebieden plotseling zijn uitgebreid.",
-      "article_body": [
-        "Internationale registers geven mogelijk een onvolledig beeld van hoeveel land onder natuurbeheer valt. Een studie in Nature vergeleek gegevens uit 25 landen en gebieden met internationale registraties en nam ook nationaal erkende gebieden en andere beheervormen mee.",
-        "De onderzoekers schatten dat in 2022 26,81 procent van het landoppervlak onder een vorm van natuurbehoud viel. Dat is meer dan veel internationale overzichten lieten zien. De extra oppervlakte is niet recent nieuw beschermd: een deel van het bestaande beheer was simpelweg niet in de registers opgenomen.",
-        "De uitkomst verandert dus vooral de meting, niet direct de situatie ter plaatse. Bovendien beschermt oppervlakte alleen biodiversiteit niet vanzelf. Ook de kwaliteit, ligging en onderlinge verbinding van gebieden tellen mee. De studie kan overheden helpen hun beschermingsinspanningen vollediger in beeld te brengen, maar het percentage zegt niet hoeveel soorten daardoor zijn hersteld. De gegevens beslaan 25 landen en gebieden en werden gebruikt om de wereldwijde schatting voor 2022 te verbeteren. De onderzoekers benadrukken dat formele erkenning en feitelijke bescherming niet overal hetzelfde betekenen; daarom is ook inzicht in beheer op de grond nodig."
+      "article_slug": "elektrische-autos-minder-olie",
+      "category": "Energie & innovatie",
+      "title": "Meer elektrische auto’s, minder afhankelijkheid van olie",
+      "headline_options": [
+        "Elektrische auto’s winnen marktaandeel in 49 van 56 gevolgde landen",
+        "Meer elektrische auto’s, minder afhankelijkheid van olie"
       ],
-      "why_it_matters": "Betere registratie maakt zichtbaar waar bescherming al plaatsvindt en waar hiaten zitten. Een groter gemeten oppervlak is op zichzelf nog geen bewijs van betere biodiversiteit.",
-      "source": "Nature",
-      "source_id": "nature",
-      "url": "https://www.nature.com/articles/s41586-026-11157-4",
-      "article_slug": "wereldwijde-natuurgebieden-ruimer-geteld",
+      "teaser": "Volgens een nieuwe analyse van Ember bereikte de verkoop van volledig elektrische auto’s dit jaar in 49 gevolgde landen een recordaandeel. De bestaande wagenparken vervangen bovendien een deel van de vraag naar olie.",
+      "article_body": [
+        "De groei van elektrisch rijden beperkt zich allang niet meer tot een paar voorlopers. In 49 van de 56 landen die energiedenktank Ember volgt, bereikte het aandeel volledig elektrische auto’s in de nieuwverkoop dit jaar een record. De nieuwe analyse kijkt naar de eerste acht maanden van 2026.",
+        "Wereldwijd kwam dat aandeel volgens de berekeningen uit op 18 procent, tegenover 16 procent in dezelfde periode van 2025. Naast bekende koplopers als Noorwegen en Denemarken noemt het rapport ook de ontwikkeling in onder meer Vietnam en Uruguay. Het gaat om nieuwe verkopen, niet om het aandeel van alle auto’s dat al elektrisch rijdt.",
+        "Ember onderzocht daarnaast hoeveel olie de bestaande elektrische wagenparken naar schatting vervangen. Voor olie-importerende landen berekent de organisatie over maart tot en met augustus een waarde van ongeveer twintig miljard dollar aan vermeden ruwe olie. Daarin zijn zowel volledig elektrische auto’s als plug-inhybrides meegenomen.",
+        "Die twintig miljard is een modelberekening: geschatte vervanging van olieverbruik vermenigvuldigd met de gemiddelde maandprijzen. Het is geen rechtstreeks opgetelde besparing uit gecontroleerde nationale kasboeken. De wereldschattingen zijn bovendien opgeschaald uit beschikbare landeninformatie.",
+        "De onderliggende verandering is wel concreet: meer verkochte elektrische auto’s betekenen een groter wagenpark dat tijdens het rijden minder vloeibare brandstof nodig heeft. Hoe sterk de klimaatwinst uitvalt, hangt ook af van de elektriciteit en de productie. Het rapport belicht hier vooral de afnemende afhankelijkheid van olie."
+      ],
+      "source": "Ember",
+      "source_id": "ember",
+      "url": "https://ember-energy.org/latest-insights/electric-energy-security-how-evs-are-reducing-oil-import-vulnerabilities/",
       "published": "2026-10-14",
-      "email_title": "Nieuwe studie telt meer natuurbehoud dan internationale registers laten zien",
-      "editorial_rank": 12,
+      "event_date": "2026-08-31",
+      "primary_url": "https://ember-energy.org/latest-insights/electric-energy-security-how-evs-are-reducing-oil-import-vulnerabilities/",
+      "image_key": "elektrisch",
+      "image_alt": "Een elektrische auto; illustratie bij de ontwikkeling van de wereldwijde verkoop.",
+      "email_title": "Meer elektrische auto’s, minder afhankelijkheid van olie",
       "regional_rank": 6,
-      "image_query": "id:3325080",
-      "image_alt": "Berglandschap bij zonsondergang; illustratief beeld"
+      "editorial_rank": 12,
+      "image_query": "id:8607713"
     }
   ],
   "headlines": [
     {
-      "category": "Natuur & klimaat",
-      "title": "KNMI gaat vanaf november plaatselijker waarschuwen",
-      "teaser": "Weerwaarschuwingen krijgen flexibele gebieden in plaats van provinciegrenzen. Vanaf november moeten meldingen daardoor beter aansluiten op je locatie.",
-      "article_body": [],
-      "why_it_matters": "",
-      "source": "KNMI",
-      "source_id": "knmi",
-      "url": "https://www.knmi.nl/over-het-knmi/nieuws/knmi-waarschuwt-vanaf-november-gerichter",
-      "article_slug": "knmi-lokale-waarschuwingen",
-      "published": "2026-10-14",
-      "email_title": "KNMI gaat vanaf november plaatselijker waarschuwen"
+      "title": "Donderdag opnieuw staking in het streekvervoer",
+      "source": "NOS",
+      "source_id": "nos",
+      "url": "https://nos.nl/l/2635576",
+      "published": "2026-10-19",
+      "teaser": "Donderdag 22 oktober rijdt op verschillende plekken minder streekvervoer. Controleer kort voor vertrek de reisplanner."
     },
     {
-      "category": "Gezondheid",
-      "title": "13 wekenecho wordt geen vast onderdeel van prenatale screening",
-      "teaser": "De minister heeft besloten de echo niet definitief in te voeren. Het aanbod blijft tot 1 januari 2028 beschikbaar; er is dus geen onmiddellijke stop.",
-      "article_body": [],
-      "why_it_matters": "",
-      "source": "RIVM",
-      "source_id": "rivm",
-      "url": "https://www.rivm.nl/nieuws/besluit-minister-vws-13-wekenecho-stopt",
-      "article_slug": "13-wekenecho-afbouw-2028",
-      "published": "2026-10-13",
-      "email_title": "13 wekenecho wordt geen vast onderdeel van prenatale screening"
+      "title": "Biodiversiteitstop: van natuurafspraken naar uitvoering",
+      "source": "NOS",
+      "source_id": "nos",
+      "url": "https://nos.nl/l/2635587",
+      "published": "2026-10-19",
+      "teaser": "Landen bespreken hun natuurbeleid. De uitvoering van eerder gemaakte beschermingsafspraken blijft achter."
     },
     {
-      "category": "Economie",
-      "title": "Inflatie in september bevestigd op 3,4 procent",
-      "teaser": "Consumentenprijzen lagen in september 3,4 procent hoger dan een jaar eerder, tegen 3,3 procent in augustus. De definitieve cijfers bevestigen de eerdere snelle raming.",
-      "article_body": [],
-      "why_it_matters": "",
-      "source": "CBS",
-      "source_id": "cbs",
-      "url": "https://www.cbs.nl/nl-nl/nieuws/2026/42/inflatie-stijgt-naar-3-4-procent-in-september",
-      "article_slug": "inflatie-september-definitief",
-      "published": "2026-10-13",
-      "email_title": "Inflatie in september bevestigd op 3,4 procent"
+      "title": "355 miljoen euro voor bereikbaarheid nieuwe woongebieden",
+      "source": "Rijksoverheid",
+      "source_id": "rijksoverheid",
+      "url": "https://www.rijksoverheid.nl/actueel/nieuws/2026/10/16/355-miljoen-voor-bereikbaarheid-bijna-30.000-nieuwe-woningen",
+      "published": "2026-10-16",
+      "teaser": "Het geld is bestemd voor wegen, fietspaden en openbaar vervoer bij vier grote woningbouwgebieden. De woningen zijn daarmee nog niet gebouwd."
     }
   ]
 }

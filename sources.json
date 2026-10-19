@@ -4103,6 +4103,63 @@
       "register_ids": [],
       "channels": [],
       "enabled": true
+    },
+    {
+      "source_id": "brazil-mma",
+      "organization_id": "brazil-mma",
+      "name": "Braziliaans ministerie van Milieu / INPE",
+      "website": "https://www.gov.br/mma/",
+      "category": "A",
+      "topics": [
+        "Natuur & klimaat"
+      ],
+      "geography": "int",
+      "source_type": "government",
+      "reliability_notes": "Oorspronkelijke openbare bekendmaking van het geselecteerde nieuwsfeit.",
+      "priority": "P2",
+      "check_frequency": "manual",
+      "limitations": "Overheidsbron; jaarreeks en meetmethode onderscheiden van politieke effectclaim.",
+      "register_ids": [],
+      "channels": [],
+      "enabled": true
+    },
+    {
+      "source_id": "national-trust",
+      "organization_id": "national-trust",
+      "name": "National Trust",
+      "website": "https://www.nationaltrust.org.uk/",
+      "category": "A",
+      "topics": [
+        "Cultuur"
+      ],
+      "geography": "int",
+      "source_type": "charity",
+      "reliability_notes": "Oorspronkelijke openbare bekendmaking van het geselecteerde nieuwsfeit.",
+      "priority": "P2",
+      "check_frequency": "manual",
+      "limitations": "Belanghebbende eigenaar/beheerder; schenking onderscheiden van toekomstige bedrijfszekerheid.",
+      "register_ids": [],
+      "channels": [],
+      "enabled": true
+    },
+    {
+      "source_id": "dunea",
+      "organization_id": "dunea",
+      "name": "Dunea",
+      "website": "https://www.dunea.nl/",
+      "category": "A",
+      "topics": [
+        "Natuur & klimaat"
+      ],
+      "geography": "nl",
+      "source_type": "nature_manager",
+      "reliability_notes": "Beheerder van het onderzoeksgebied; directe onderzoeksbevindingen met WENR en Stichting Otterstation Nederland.",
+      "priority": "P2",
+      "check_frequency": "manual",
+      "limitations": "Betrokken terreinbeheerder; DNA toont specifieke familieband, geen kwantitatieve landelijke trend of volledig waterkwaliteitsoordeel.",
+      "register_ids": [],
+      "channels": [],
+      "enabled": true
     }
   ]
 }
