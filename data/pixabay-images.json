@@ -801,18 +801,6 @@
     "license_url": "https://pixabay.com/service/license-summary/",
     "checked_on": "2026-10-19"
   },
-  "2026-10-19/marina-ai-bril-zelfstandigheid": {
-    "query": "id:5496153",
-    "pixabay_id": 5496153,
-    "image_path": "/images/artikelen/2026-10-19/marina-ai-bril-zelfstandigheid.jpg",
-    "page_url": "https://pixabay.com/photos/braille-fingers-read-braille-book-5496153/",
-    "photographer": "Myriams-Fotos",
-    "source": "Pixabay",
-    "caption": "Braille als illustratie bij toegankelijkheid voor blinde mensen.",
-    "license": "Pixabay Content License",
-    "license_url": "https://pixabay.com/service/license-summary/",
-    "checked_on": "2026-10-19"
-  },
   "2026-10-19/otterfamilie-meijendel-berkheide-dna": {
     "query": "id:7307280",
     "pixabay_id": 7307280,
@@ -896,5 +884,21 @@
     "license": "Pixabay Content License",
     "license_url": "https://pixabay.com/service/license-summary/",
     "checked_on": "2026-10-19"
+  },
+  "2026-10-19/355-miljoen-bereikbaarheid-nieuwe-woningen": {
+    "pixabay_id": 7053639,
+    "photographer": "OfotoRay",
+    "page_url": "https://pixabay.com/photos/amsterdam-houses-city-architecture-7053639/",
+    "download_url": "https://cdn.pixabay.com/photo/2022/03/07/13/19/amsterdam-7053639_1280.jpg",
+    "path": "images/wonen.jpg",
+    "caption": "Woningen in Amsterdam; illustratief kleurenbeeld, niet een van de vier woningbouwgebieden.",
+    "license": "Pixabay Content License",
+    "license_url": "https://pixabay.com/service/license-summary/",
+    "checked_on": "2026-10-19",
+    "license_checked": true,
+    "visually_checked": true,
+    "query": "id:7053639",
+    "image_path": "/images/artikelen/2026-10-19/355-miljoen-bereikbaarheid-nieuwe-woningen.jpg",
+    "source": "Pixabay"
   }
 }

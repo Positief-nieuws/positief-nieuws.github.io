@@ -2,7 +2,7 @@
   "meta": {
     "edition_date": "2026-10-19",
     "email_preheader": "Elkaar weer horen, een hoornraaf die zelf eet en een otterfamilie in de duinen.",
-    "ordering": "Nederlandse volgorde op expliciet verzoek opdrachtgever: relatieondersteuning, hoornraaf, gastgezinnen, archief, Marina, otterfamilie. Wereldvolgorde ongewijzigd.",
+    "ordering": "Nederlandse volgorde volgens eigenaar; woonbereikbaarheidsbesluit vervangt Marina op plek vijf. Financieringsbesluit als expliciet gewenste redactionele uitzondering; geen gerealiseerd woningbouweffect.",
     "status": "approved",
     "publication_authorized": true,
     "editorial_order": [
@@ -28,7 +28,7 @@
       },
       {
         "section": "nl",
-        "article_slug": "marina-ai-bril-zelfstandigheid",
+        "article_slug": "355-miljoen-bereikbaarheid-nieuwe-woningen",
         "rank": 5
       },
       {
@@ -185,33 +185,28 @@
       "image_query": "id:436501"
     },
     {
-      "article_slug": "marina-ai-bril-zelfstandigheid",
-      "category": "Energie & innovatie",
-      "title": "Verpakking lezen, koken, een bord op het station: Marina doet meer zelf",
-      "headline_options": [
-        "AI-bril helpt blinde Marina in het dagelijks leven",
-        "Verpakking lezen, koken, een bord op het station: Marina doet meer zelf"
-      ],
-      "teaser": "De 21-jarige Marina gebruikt een bril met camera en spraakondersteuning om informatie om haar heen te laten voorlezen. Volgens haar maakt dat dagelijkse handelingen een stuk eenvoudiger.",
+      "article_slug": "355-miljoen-bereikbaarheid-nieuwe-woningen",
+      "category": "Mens",
+      "title": "355 miljoen euro om nieuwe woonwijken bereikbaar te maken",
+      "teaser": "Voor wegen, fietspaden en openbaar vervoer bij bijna 30.000 geplande woningen komt 355 miljoen euro beschikbaar. Het gaat om vier grote woningbouwgebieden: een concrete financiële stap, terwijl de bouw zelf nog moet volgen.",
       "article_body": [
-        "Welke verpakking heb ik vast? Wat geeft de keukenweegschaal aan? Voor Marina Kovac uit Hendrik-Ido-Ambacht zijn dat vragen waarbij een bril met camera en spraakondersteuning helpt. De 21-jarige is blind en vertelt Rijnmond dat zij met het hulpmiddel meer dagelijkse handelingen zelfstandig uitvoert.",
-        "Marina verloor als klein kind haar gezichtsvermogen door oogkanker. Ze gebruikt al langer technologie om informatie toegankelijk te maken. Dat kon bijvoorbeeld met haar telefoon, maar die moest ze dan goed richten en bedienen. De bril maakt sommige stappen sneller: zij stelt hardop een vraag en krijgt gesproken informatie terug.",
-        "In de reportage beschrijft ze toepassingen bij het koken, het herkennen van kleding en het lezen van borden op een station. Juist zulke kleine momenten tellen op. Minder vaak iemand hoeven vragen wat er ergens staat, geeft ruimte om zelf verder te gaan.",
-        "Het apparaat werkt niet altijd vlekkeloos; soms moet het opnieuw worden opgestart. De reportage is bovendien Marina’s persoonlijke ervaring, geen onderzoek dat aantoont dat de bril voor iedere blinde gebruiker even goed of veilig werkt.",
-        "Haar gezichtsvermogen keert er niet door terug. De vooruitgang zit in iets anders: informatie die visueel wordt aangeboden, kan voor haar vaker via gesproken taal beschikbaar komen. Dat maakt de omgeving op concrete momenten beter toegankelijk."
+        "Nieuwe woningen hebben ook verbindingen nodig: bewoners moeten naar hun werk, school en voorzieningen kunnen. Voor de bereikbaarheid van vier grote woningbouwgebieden stelt het kabinet nu 355 miljoen euro beschikbaar.",
+        "Het geld is bedoeld voor Alkmaar, Apeldoorn, Helmond en Hengelo/Enschede. In deze gebieden zijn samen bijna 30.000 woningen gepland. Gemeenten kunnen de bijdrage gebruiken voor wegen, fietspaden of openbaar vervoer.",
+        "Het positieve nieuws is de beschikbaar gestelde financiering voor die verbindingen. Dat is een stap in de voorbereiding van nieuwe woonwijken, geen oplevering van woningen. Het bericht zegt nog niet wanneer de woningen klaar zijn of welke afzonderlijke verbindingen worden aangelegd.",
+        "De bijdrage maakt deel uit van bredere mobiliteitskeuzes. Daarbij worden ook projecten gepauzeerd door geldgebrek of omdat ze nu niet uitvoerbaar zijn. Het besluit voor deze vier gebieden betekent dus vooruitgang op een afgebakend onderdeel van de woningbouwopgave."
       ],
-      "source": "Rijnmond",
-      "source_id": "rijnmond",
-      "url": "https://www.rijnmond.nl/nieuws/2268733/marina-is-blind-maar-dankzij-een-ai-bril-kan-ze-bijna-alles-zelf-mijn-vrienden-vergeten-dat-ik-niks-zie",
-      "published": "2026-10-17",
-      "event_date": "2026-10-17",
-      "primary_url": "https://www.rijnmond.nl/nieuws/2268733/marina-is-blind-maar-dankzij-een-ai-bril-kan-ze-bijna-alles-zelf-mijn-vrienden-vergeten-dat-ik-niks-zie",
-      "image_key": "toegankelijk",
-      "image_alt": "Braille als illustratie bij toegankelijkheid voor blinde mensen.",
-      "email_title": "Verpakking lezen, koken, een bord op het station: Marina doet meer zelf",
+      "source": "Rijksoverheid",
+      "source_id": "rijksoverheid",
+      "url": "https://www.rijksoverheid.nl/actueel/nieuws/2026/10/16/355-miljoen-voor-bereikbaarheid-bijna-30.000-nieuwe-woningen",
+      "primary_url": "https://www.rijksoverheid.nl/actueel/nieuws/2026/10/16/355-miljoen-voor-bereikbaarheid-bijna-30.000-nieuwe-woningen",
+      "published": "2026-10-16",
+      "event_date": "2026-10-16",
+      "image_key": "wonen",
+      "image_query": "id:7053639",
+      "image_alt": "Woningen in Amsterdam; illustratief kleurenbeeld, niet een van de vier woningbouwgebieden.",
+      "email_title": "355 miljoen euro voor bereikbaarheid nieuwe woonwijken",
       "regional_rank": 5,
-      "editorial_rank": 5,
-      "image_query": "id:5496153"
+      "editorial_rank": 5
     },
     {
       "category": "Natuur & klimaat",
@@ -444,12 +439,12 @@
       "teaser": "Landen bespreken hun natuurbeleid. De uitvoering van eerder gemaakte beschermingsafspraken blijft achter."
     },
     {
-      "title": "355 miljoen euro voor bereikbaarheid nieuwe woongebieden",
-      "source": "Rijksoverheid",
-      "source_id": "rijksoverheid",
-      "url": "https://www.rijksoverheid.nl/actueel/nieuws/2026/10/16/355-miljoen-voor-bereikbaarheid-bijna-30.000-nieuwe-woningen",
-      "published": "2026-10-16",
-      "teaser": "Het geld is bestemd voor wegen, fietspaden en openbaar vervoer bij vier grote woningbouwgebieden. De woningen zijn daarmee nog niet gebouwd."
+      "title": "Pas op voor WhatsApp-oplichting via een nepstemverzoek",
+      "source": "NOS",
+      "source_id": "nos",
+      "url": "https://nos.nl/artikel/2635579-stem-op-de-dochter-van-mijn-vriendin-criminelen-kapen-je-whatsapp-met-nieuwe-truc",
+      "published": "2026-10-19",
+      "teaser": "Een stemverzoek van een bekende kan leiden naar een nepsite die toegang tot je WhatsApp vraagt. Controleer verdachte verzoeken rechtstreeks bij de afzender."
     }
   ]
 }

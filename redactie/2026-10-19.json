@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "edition_date": "2026-10-19",
-  "news_sha256": "0ffe8167b6e2d4badb507b5aa6880f7875bf1d5395cc2f28d008aa50894400cb",
+  "news_sha256": "d3b41540d7c8787c305e6a52a4989d1c39995c7643f8a7c43c70b7be0e7a3a54",
   "approved": true,
-  "approved_by": "Codex — volledige redactionele beoordeling van deze exacte revisie; opdrachtgever gaf live akkoord en wijzigingsopdracht in chat op 19 oktober 2026.",
+  "approved_by": "Codex — redactionele beoordeling exacte revisie met kleurenfoto; eigenaar gaf expliciet live akkoord in chat op 19 oktober 2026.",
   "variation_exception_reason": "",
   "articles": {
     "nl:gastgezinnen-meer-matches": {
@@ -82,48 +82,6 @@
       },
       "positive_result": true,
       "positive_result_explanation": "Vernieuwende behandeling met direct waarneembaar functioneel resultaat bij één dier. Eten/verenverzorging concreet; lange termijn open.",
-      "scores": {
-        "positive_value": 2,
-        "evidence": 1,
-        "recency": 2,
-        "relevance": 2,
-        "originality": 2
-      }
-    },
-    "nl:marina-ai-bril-zelfstandigheid": {
-      "source_id": "rijnmond",
-      "organization_id": "rijnmond",
-      "article_url": "https://www.rijnmond.nl/nieuws/2268733/marina-is-blind-maar-dankzij-een-ai-bril-kan-ze-bijna-alles-zelf-mijn-vrienden-vergeten-dat-ik-niks-zie",
-      "region": "nl",
-      "region_checked": true,
-      "publication_date": "2026-10-17",
-      "event_date": "2026-10-17",
-      "checked_on": "2026-10-19",
-      "dates_checked": true,
-      "new_development": "",
-      "older_exception_reason": "",
-      "topic_id": "marina-kovac-ai-bril-2026",
-      "doi": "",
-      "report_id": "",
-      "evidence": {
-        "primary_url": "https://www.rijnmond.nl/nieuws/2268733/marina-is-blind-maar-dankzij-een-ai-bril-kan-ze-bijna-alles-zelf-mijn-vrienden-vergeten-dat-ik-niks-zie",
-        "claim": "Verpakking lezen, koken, een bord op het station: Marina doet meer zelf De 21-jarige Marina gebruikt een bril met camera en spraakondersteuning om informatie om haar heen te laten voorlezen. Volgens haar maakt dat dagelijkse handelingen een stuk eenvoudiger.",
-        "support": "Volledige oorspronkelijke Rijnmond-reportage met concrete handelingen, eerdere telefoontoepassingen en eigen ervaringen van Marina.",
-        "limitations": "Persoonlijke ervaring, geen algemene veiligheidstest of herstel van gezichtsvermogen. Soms herstart nodig.",
-        "verified": true
-      },
-      "rights": {
-        "text": "original_summary",
-        "image": "licensed",
-        "image_evidence": "Pixabay 5496153 / Myriams-Fotos, https://pixabay.com/photos/braille-fingers-read-braille-book-5496153/; https://pixabay.com/service/license-summary/. Bron, licentie en beeld gecontroleerd 19 oktober 2026. Lokaal artikelbeeld /images/artikelen/2026-10-19/marina-ai-bril-zelfstandigheid.jpg; illustratie zichtbaar vermeld."
-      },
-      "duplicate_review": {
-        "checked": true,
-        "reason": "Editiesgeschiedenis gecontroleerd op canonieke URL, onderwerp en DOI. Geen eerder gepubliceerd identiek nieuwsfeit gevonden.",
-        "new_fact": ""
-      },
-      "positive_result": true,
-      "positive_result_explanation": "Nieuwe reportage met specifieke, reeds ervaren dagelijkse zelfstandigheid. Eén gebruiker, geen algemene test of medische genezing.",
       "scores": {
         "positive_value": 2,
         "evidence": 1,
@@ -535,25 +493,25 @@
       }
     },
     "headlines:2": {
-      "source_id": "rijksoverheid",
-      "organization_id": "rijksoverheid",
-      "article_url": "https://www.rijksoverheid.nl/actueel/nieuws/2026/10/16/355-miljoen-voor-bereikbaarheid-bijna-30.000-nieuwe-woningen",
+      "source_id": "nos",
+      "organization_id": "nos",
+      "article_url": "https://nos.nl/artikel/2635579-stem-op-de-dochter-van-mijn-vriendin-criminelen-kapen-je-whatsapp-met-nieuwe-truc",
       "region": "nl",
       "region_checked": true,
-      "publication_date": "2026-10-16",
-      "event_date": "2026-10-16",
+      "publication_date": "2026-10-19",
+      "event_date": "2026-10-19",
       "checked_on": "2026-10-19",
       "dates_checked": true,
       "new_development": "",
       "older_exception_reason": "",
-      "topic_id": "woningbouw-ontsluiting-355m-20261016",
+      "topic_id": "whatsapp-ghostpairing-stemverzoek-20261019",
       "doi": "",
       "report_id": "",
       "evidence": {
-        "primary_url": "https://www.rijksoverheid.nl/actueel/nieuws/2026/10/16/355-miljoen-voor-bereikbaarheid-bijna-30.000-nieuwe-woningen",
-        "claim": "355 miljoen euro voor bereikbaarheid nieuwe woongebieden",
-        "support": "Volledige oorspronkelijke publicatie gelezen; dit actualiteitenblok beschrijft aankondiging/stand van zaken, geen positief bereikt effect.",
-        "limitations": "Aangekondigde inzet of toekomstige gebeurtenis; uitvoering kan wijzigen.",
+        "primary_url": "https://nos.nl/artikel/2635579-stem-op-de-dochter-van-mijn-vriendin-criminelen-kapen-je-whatsapp-met-nieuwe-truc",
+        "claim": "Pas op voor WhatsApp-oplichting via een nepstemverzoek",
+        "support": "NOS-publicatie 19 oktober 12:44, bijgewerkt 13:13 volledig gelezen; beschrijft nepstemverzoek, telefoonnummer en apparaatkoppelcode en tientallen meldingen bij Fraudehelpdesk.",
+        "limitations": "Geen kwantitatieve uitspraak over totale schade of alle slachtoffers. Alleen klikken koppelt nog geen apparaat.",
         "verified": true
       },
       "rights": {
@@ -563,7 +521,7 @@
       },
       "duplicate_review": {
         "checked": true,
-        "reason": "Andere actuele aankondiging dan eerdere edities; titel/URL met archief vergeleken.",
+        "reason": "Nieuwe actuele waarschuwing op 19 oktober; geen identiek nieuwsfeit gevonden in eerdere edities.",
         "new_fact": ""
       }
     },
@@ -607,6 +565,48 @@
         "recency": 1,
         "relevance": 2,
         "originality": 2
+      }
+    },
+    "nl:355-miljoen-bereikbaarheid-nieuwe-woningen": {
+      "source_id": "rijksoverheid",
+      "organization_id": "rijksoverheid",
+      "article_url": "https://www.rijksoverheid.nl/actueel/nieuws/2026/10/16/355-miljoen-voor-bereikbaarheid-bijna-30.000-nieuwe-woningen",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-16",
+      "event_date": "2026-10-16",
+      "checked_on": "2026-10-19",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "woningbouw-ontsluiting-355m-20261016",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.rijksoverheid.nl/actueel/nieuws/2026/10/16/355-miljoen-voor-bereikbaarheid-bijna-30.000-nieuwe-woningen",
+        "claim": "355 miljoen euro om nieuwe woonwijken bereikbaar te maken",
+        "support": "Officiële publicatie 16 oktober volledig gelezen: 355 miljoen beschikbaar voor bereikbaarheid vier gebieden, bijna 30.000 geplande woningen. Gemeenten kunnen wegen, fietspaden of ov financieren.",
+        "limitations": "Financieringsbesluit; geen bewezen bouwversnelling, gerealiseerde infrastructuur, startdatum of oplevering. Breder pakket kent ook gepauzeerde projecten.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Pixabay 7053639 / OfotoRay; https://pixabay.com/photos/amsterdam-houses-city-architecture-7053639/; https://pixabay.com/service/license-summary/. Bron/licentie en kleurenbeeld visueel gecontroleerd 19 oktober 2026. Illustratief Amsterdams woningbeeld, geen projectfoto."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Besluit stond eerder in dezelfde editie als korte actualiteit en wordt nu verplaatst, niet dubbel opgenomen. Eerdere edities op URL/onderwerp gecontroleerd.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Op uitdrukkelijk verzoek eigenaar opgenomen als positief financieringsbesluit. Het bereikte resultaat is beschikbaar gestelde financiering, niet opgeleverde woningen of infrastructuur.",
+      "scores": {
+        "positive_value": 1,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 1
       }
     }
   },

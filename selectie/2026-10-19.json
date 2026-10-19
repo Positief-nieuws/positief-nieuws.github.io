@@ -5267,9 +5267,9 @@
     },
     {
       "id": "4d600c3eea9b",
-      "decision": "reject",
-      "reason": "Metadata: € 355 miljoen voor bereikbaarheid bijna 30.000 nieuwe woningen - Rijksoverheid.nl — Brongewijze metadata-afweging: Actueel overzicht en bericht 16/10 over 355 miljoen voor bereikbaarheid gelezen. Investeringsbesluit opgenomen bij actualiteiten, niet als reeds opgeleverde woningen. Deze kandidaat kreeg na vergelijking geen plaats boven de inhoudelijk gelezen selectie en reserves; alleen titel-/bronmetadata zijn beoordeeld.",
-      "basis": "title_source_metadata"
+      "decision": "contender",
+      "reason": "Expliciete inhoudskeuze eigenaar: concreet financieringsbesluit van maatschappelijk belang. Score resultaat betreft uitsluitend beschikbaar gestelde financiering; er is nog geen maatschappelijk effect aangetoond. Redactionele uitzondering op voorkeur voor gerealiseerde effecten.",
+      "basis": "full_source_read"
     },
     {
       "id": "642b5d44cb5b",
@@ -50102,8 +50102,7 @@
     {
       "id": "a75187b976b5",
       "region": "nl",
-      "decision": "select",
-      "rank": 5,
+      "decision": "reserve",
       "scores": {
         "reader_value": 3,
         "concrete_result": 2,
@@ -50114,8 +50113,7 @@
       "primary_url": "https://www.rijnmond.nl/nieuws/2268733/marina-is-blind-maar-dankzij-een-ai-bril-kan-ze-bijna-alles-zelf-mijn-vrienden-vergeten-dat-ik-niks-zie",
       "article_url": "https://www.rijnmond.nl/nieuws/2268733/marina-is-blind-maar-dankzij-een-ai-bril-kan-ze-bijna-alles-zelf-mijn-vrienden-vergeten-dat-ik-niks-zie",
       "source_read": true,
-      "reason": "Nieuwe reportage met specifieke, reeds ervaren dagelijkse zelfstandigheid. Eén gebruiker, geen algemene test of medische genezing.",
-      "stronger_than_reserves": "Bereikte, persoonlijk beschreven zelfstandigheid is voor lezers tastbaarder dan een technisch prototype of voornemen tot ondersteuning."
+      "reason": "Opdrachtgever kiest het woonbereikbaarheidsbesluit voor deze plek."
     },
     {
       "id": "0c054f560fd0",
@@ -50384,6 +50382,24 @@
       "source_read": true,
       "reason": "DNA van vijftien uitwerpselen bevestigt voor het eerst vader, moeder en dochter in dit duingebied. Voortplanting is een concreter positief vestigingsresultaat dan twee waterspitsmuiswaarnemingen.",
       "stronger_than_reserves": "Bevestigde nieuwe generatie op een opnieuw bereikt leefgebied is concreter dan losse aanwezigheid, een sensoropzet zonder prestatiecijfers of geschatte vermeden vogelsterfte. Oorspronkelijke bron is acht dagen oud; gemotiveerde oudere uitzondering."
+    },
+    {
+      "id": "4d600c3eea9b",
+      "region": "nl",
+      "decision": "select",
+      "rank": 5,
+      "scores": {
+        "reader_value": 3,
+        "concrete_result": 2,
+        "evidence": 2,
+        "recency": 2,
+        "originality": 2
+      },
+      "primary_url": "https://www.rijksoverheid.nl/actueel/nieuws/2026/10/16/355-miljoen-voor-bereikbaarheid-bijna-30.000-nieuwe-woningen",
+      "article_url": "https://www.rijksoverheid.nl/actueel/nieuws/2026/10/16/355-miljoen-voor-bereikbaarheid-bijna-30.000-nieuwe-woningen",
+      "source_read": true,
+      "reason": "Expliciete inhoudskeuze eigenaar: concreet financieringsbesluit van maatschappelijk belang. Score resultaat betreft uitsluitend beschikbaar gestelde financiering; er is nog geen maatschappelijk effect aangetoond. Redactionele uitzondering op voorkeur voor gerealiseerde effecten.",
+      "stronger_than_reserves": "Eigenaar verkiest concrete financiële stap bij bijna 30.000 geplande woningen boven Marina. Dit is een gemotiveerde smaak-/stadiumkeuze; geen claim dat gerealiseerd effect sterker is."
     }
   ],
   "coverage_limitations": [
@@ -50408,5 +50424,10 @@
     "authorization": "Opdrachtgever: Prima editie! Zet maar live. Volgorde NL expliciet gewijzigd, foto man/vrouw gevraagd, waterspitsmuis herschrijven of vervangen.",
     "chosen_change": "Otterfamilie met genetisch bevestigde voortplanting vervangt waterspitsmuizen.",
     "ordering_override": "Rangschikking NL op opdracht van eigenaar; scores blijven afzonderlijke inhoudelijke afweging."
+  },
+  "owner_revision_housing": {
+    "date": "2026-10-19",
+    "request": "Woonbereikbaarheidsbesluit naar positieve selectie; Marina eruit; ander bericht bij actualiteiten.",
+    "stage_exception": "Alleen financieringsbesluit, geen bewezen effect. Bewust expliciet in kop/tekst begrensd."
   }
 }
