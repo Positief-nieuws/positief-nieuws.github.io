@@ -7,7 +7,7 @@ import re
 
 MISSION = 'Positief nieuws wil het nieuwslandschap meer in balans brengen door ook oplossingen, vooruitgang en hoopvolle ontwikkelingen zichtbaar te maken.'
 PERSONAL = 'Ik ben Tom, de initiatiefnemer van Positief nieuws. Met deze site wil ik meer ruimte geven aan wat er óók goed gaat, naast het nieuws over problemen en crises.'
-INVITE = 'Ken je iemand die dit ook wil lezen? Deel dit verhaal via WhatsApp, e-mail of de link hieronder. Zo help je oplossingen en vooruitgang meer mensen in Nederland te bereiken.'
+INVITE = 'We willen het nieuwslandschap meer in balans brengen door ook oplossingen, vooruitgang en hoopvolle ontwikkelingen zichtbaar te maken. Deel dit verhaal via WhatsApp, e-mail of de link hieronder.'
 SHARE = 'Deel Positief nieuws met iemand die een breder nieuwsbeeld waardeert. Zo help je oplossingen, vooruitgang en hoopvolle ontwikkelingen meer mensen in Nederland te bereiken.'
 
 
@@ -46,7 +46,7 @@ def enhance(markup, path):
     elif path == Path('nieuwsbrief/index.html'):
         markup = markup.replace('Er gaat meer goed dan je denkt. Ontvang twee keer per week een rustige selectie nieuws uit Nederland en de wereld. In een paar minuten ben je weer bij.', 'Geef ook oplossingen en vooruitgang een plek in je nieuwsbeeld. Ontvang twee keer per week een rustige selectie uit Nederland en de wereld. Met bronnen en nuance, zonder problemen uit het oog te verliezen.')
     if path.parts[0] == 'artikelen':
-        markup = markup.replace('Ken je iemand die dit ook wil lezen? Deel dit verhaal.', INVITE)
+        markup = markup.replace('<p>Ken je iemand die dit ook wil lezen? Deel dit verhaal.</p>', '<p>' + INVITE + '</p>')
     if path == Path('index.html') and '<!-- mission:about-share -->' not in markup:
         markup = markup.replace('<p><a href="#nieuwsbrief" id="about-newsletter-link">', '<!-- mission:about-share --><p>' + SHARE + ' Een nieuwstip? <a href="/tip/">Laat het weten</a>.</p><p><a href="#nieuwsbrief" id="about-newsletter-link">')
     return markup
