@@ -137,11 +137,11 @@
     .special-at-a-glance p{margin:0;line-height:1.6}
     .special-toc{margin:0 0 38px;padding:24px 26px;border:1px solid var(--line-soft);border-radius:16px;background:rgba(255,255,255,.5)}
     .special-toc-title{margin:0 0 14px!important;color:var(--green-dark)!important;font-size:.9rem;font-weight:800}
-    .special-toc ol{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:26px;row-gap:9px;margin:0;padding-left:20px}
+    .special-toc ol{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(6,auto);grid-auto-flow:column;column-gap:26px;row-gap:9px;margin:0;padding-left:20px}
     .special-toc li{padding-left:2px;font-size:.88rem;line-height:1.4}
     .special-toc a{color:var(--green-dark);text-decoration:underline;text-decoration-color:rgba(23,63,49,.23);text-underline-offset:3px}
     .special-toc a:hover,.special-toc a:focus-visible{text-decoration-color:currentColor}
-    @media(max-width:560px){.special-toc{padding:20px}.special-toc ol{grid-template-columns:1fr}}
+    @media(max-width:560px){.special-toc{padding:20px}.special-toc ol{grid-template-columns:1fr;grid-template-rows:none;grid-auto-flow:row}}
 
 
 .source-number{color:var(--green);font-weight:800}
