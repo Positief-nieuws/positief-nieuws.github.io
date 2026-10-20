@@ -1,4 +1,4 @@
-const CACHE_NAME = "positief-nieuws-v11";
+const CACHE_NAME = "positief-nieuws-v12";
 
 const CORE_ASSETS = [
   "/",
