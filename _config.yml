@@ -1,0 +1,3 @@
+# Herstelmateriaal hoort nooit in de gepubliceerde GitHub Pages-site.
+exclude:
+  - _offline

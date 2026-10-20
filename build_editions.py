@@ -2040,6 +2040,8 @@ def refresh_site_design():
         path.write_text(text, encoding="utf-8")
     from newsletter_conversion import apply
     apply()
+    from support_visibility import apply as apply_support_visibility
+    apply_support_visibility()
     print("Gedeelde vormgeving toegepast op alle inhoudspagina’s.")
 
 def main():

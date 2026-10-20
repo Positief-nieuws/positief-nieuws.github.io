@@ -7,6 +7,7 @@ import json
 import re
 from urllib.parse import urlsplit
 from categories import CATEGORY_ALIASES
+from support_visibility import enabled as support_enabled
 
 ROOT = Path(__file__).resolve().parent
 DATE = re.compile(r"\d{4}-\d{2}-\d{2}$")
@@ -124,6 +125,8 @@ def build_index():
                 })
 
     for url, (title, category) in INFORMATION_PATHS.items():
+        if url == "/steun/" and not support_enabled():
+            continue
         record = info_record(url, title, category)
         if record:
             results.append(record)
