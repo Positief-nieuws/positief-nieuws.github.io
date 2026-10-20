@@ -1828,7 +1828,7 @@ def update_homepage(data):
     markup, count = re.subn(r'<script id="homepage-schema" type="application/ld\+json">.*?</script>', lambda _: f'<script id="homepage-schema" type="application/ld+json">\n{schema}\n  </script>', markup, flags=re.S)
     if count != 1:
         raise ValueError("Homepage-schema ontbreekt of is dubbel.")
-    date_html = f'<!-- homepage-date:start --><h2 class="hero-date" id="edition-date"><time datetime="{edition_date}">{esc(fmt_date(edition_date).capitalize())}</time></h2><!-- homepage-date:end -->'
+    date_html = f'<!-- homepage-date:start --><h2 class="hero-date" id="edition-date">Editie: <time datetime="{edition_date}">{esc(fmt_date_short(edition_date))}</time></h2><!-- homepage-date:end -->'
     markup, count = re.subn(r'<!-- homepage-date:start -->.*?<!-- homepage-date:end -->', lambda _: date_html, markup, flags=re.S)
     if count != 1:
         raise ValueError("Homepage-datummarker ontbreekt of is dubbel.")
