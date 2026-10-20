@@ -5,6 +5,9 @@ on:
       - main
     paths:
       - "build_search.py"
+      - "support-settings.json"
+      - "support_visibility.py"
+      - ".github/workflows/search-site.yml"
       - "zoeken/index.html"
       - "zoeken/search.js"
       - "over/**"
@@ -39,10 +42,12 @@ jobs:
           python - <<'PY'
           import json
           from pathlib import Path
+          from support_visibility import enabled as support_enabled
           data = json.loads(Path("zoeken/index.json").read_text(encoding="utf-8"))
           assert len(data["items"]) >= 12, "Zoekindex mist artikelen"
-          for path in ("/over/", "/contact/", "/nieuwsbrief/", "/steun/"):
+          for path in ("/over/", "/contact/", "/nieuwsbrief/"):
               assert any(item["url"] == path for item in data["items"]), f"Ontbrekende pagina: {path}"
+          assert any(item["url"] == "/steun/" for item in data["items"]) == support_enabled(), "Steunvermelding past niet bij publicatiestand"
           assert '/zoeken/' in Path('mens/index.html').read_text(encoding='utf-8'), "Zoeklink ontbreekt op Mens"
           print("Zoekfunctie: basiscontroles geslaagd")
           PY
