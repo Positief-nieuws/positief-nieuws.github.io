@@ -1887,6 +1887,14 @@ def build_site():
         sitemap_urls.append((f"{SITE_URL}/{topic['slug']}/", topic["latest"]))
     for article_page in article_pages:
         sitemap_urls.append((article_page["url"], article_page["date"]))
+    # Keep evergreen specials in the sitemap when new editions are generated.
+    for special_path in sorted(Path("specials").glob("*/index.html")):
+        special_markup = special_path.read_text(encoding="utf-8")
+        if re.search(r'<meta\s+name=["\']robots["\'][^>]*noindex', special_markup, re.I):
+            continue
+        modified_match = re.search(r'<meta\s+property=["\']article:modified_time["\']\s+content=["\'](\d{4}-\d{2}-\d{2})["\']', special_markup)
+        special_lastmod = modified_match.group(1) if modified_match else None
+        sitemap_urls.append((f"{SITE_URL}/{special_path.parent.as_posix()}/", special_lastmod))
 
     sitemap_parts = []
     for loc, lastmod in sitemap_urls:
