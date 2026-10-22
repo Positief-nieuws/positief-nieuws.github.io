@@ -1,269 +1,269 @@
 {
-  "generated_at": "2026-10-19T12:14:05.581487+02:00",
+  "generated_at": "2026-10-22T09:18:23.997208+02:00",
   "channels": {
     "nos-9b10ea3d": {
       "source_id": "nos",
       "organization_id": "nos",
       "mode": "rss",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 40,
+      "items": 57,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "nos-5349ac21": {
       "source_id": "nos",
       "organization_id": "nos",
       "mode": "rss",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 23,
+      "items": 30,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "nos-521b82d5": {
       "source_id": "nos",
       "organization_id": "nos",
       "mode": "rss",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
       "items": 20,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "nos-2822a4e2": {
       "source_id": "nos",
       "organization_id": "nos",
       "mode": "rss",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
       "items": 20,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "nos-afda4f58": {
       "source_id": "nos",
       "organization_id": "nos",
       "mode": "rss",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
       "items": 20,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "nos-4416167e": {
       "source_id": "nos",
       "organization_id": "nos",
       "mode": "rss",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 41,
+      "items": 44,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "pbl-14c50a0c": {
       "source_id": "pbl",
       "organization_id": "pbl",
       "mode": "rss",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
       "items": 25,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "pbl-7dfee1f5": {
       "source_id": "pbl",
       "organization_id": "pbl",
       "mode": "rss",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
       "items": 25,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "pbl-de68b5a4": {
       "source_id": "pbl",
       "organization_id": "pbl",
       "mode": "rss",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
       "items": 25,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "pbl-22809111": {
       "source_id": "pbl",
       "organization_id": "pbl",
       "mode": "rss",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
       "items": 25,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "pbl-e1f4b3c9": {
       "source_id": "pbl",
       "organization_id": "pbl",
       "mode": "rss",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
       "items": 25,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "pbl-57bbffb9": {
       "source_id": "pbl",
       "organization_id": "pbl",
       "mode": "rss",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
       "items": 25,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "knmi-dd2d2bf6": {
       "source_id": "knmi",
       "organization_id": "knmi",
       "mode": "rss",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
       "items": 5,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "knmi-5fdfcbc6": {
       "source_id": "knmi",
       "organization_id": "knmi",
       "mode": "rss",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
       "items": 5,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "rivm-23acca8d": {
       "source_id": "rivm",
       "organization_id": "rivm",
       "mode": "rss",
       "last_success_at": "2026-10-19T10:12:57.562925+00:00",
-      "last_error": null,
-      "cached": false,
+      "last_error": "ValueError: URLError: <urlopen error [Errno 101] Network is unreachable>",
+      "cached": true,
       "items": 20,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-22T07:17:27.923379+00:00"
     },
     "scientias-17a36549": {
       "source_id": "scientias",
       "organization_id": "scientias",
       "mode": "rss",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 16,
+      "items": 19,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "nature-today-cc381c99": {
       "source_id": "nature-today",
       "organization_id": "nature-today",
       "mode": "rss",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
       "items": 200,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "cbs-e28714dd": {
       "source_id": "cbs",
       "organization_id": "cbs",
       "mode": "rss",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
       "items": 50,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "wageningen-university-research-777ab304": {
       "source_id": "wageningen-university-research",
       "organization_id": "wageningen-university-research",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 136,
+      "items": 129,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "universiteit-twente-0f56b6b6": {
       "source_id": "universiteit-twente",
       "organization_id": "universiteit-twente",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 109,
+      "items": 118,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "tu-delft-06e6cb05": {
       "source_id": "tu-delft",
       "organization_id": "tu-delft",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 138,
+      "items": 131,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "universiteit-utrecht-16935716": {
       "source_id": "universiteit-utrecht",
       "organization_id": "universiteit-utrecht",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 150,
+      "items": 138,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "radboud-universiteit-e702a8c5": {
       "source_id": "radboud-universiteit",
@@ -271,10 +271,10 @@
       "mode": "rss",
       "last_success_at": "2026-10-19T10:12:57.562925+00:00",
       "last_error": null,
-      "cached": false,
+      "cached": true,
       "items": 10,
       "check_frequency": "twice_weekly",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
       "next_check_at": "2026-10-22T10:12:57.562925+00:00"
     },
     "tno-eacb70bb": {
@@ -283,443 +283,443 @@
       "mode": "google_site",
       "last_success_at": "2026-10-19T10:12:57.562925+00:00",
       "last_error": null,
-      "cached": false,
+      "cached": true,
       "items": 60,
       "check_frequency": "twice_weekly",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
       "next_check_at": "2026-10-22T10:12:57.562925+00:00"
     },
     "nemo-kennislink-113c1670": {
       "source_id": "nemo-kennislink",
       "organization_id": "nemo-kennislink",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 12,
+      "items": 8,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "rvo-8c8a63c0": {
       "source_id": "rvo",
       "organization_id": "rvo",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 58,
+      "items": 46,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "rijksoverheid-2cfdc353": {
       "source_id": "rijksoverheid",
       "organization_id": "rijksoverheid",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 62,
+      "items": 47,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "voedingscentrum-bac466ba": {
       "source_id": "voedingscentrum",
       "organization_id": "voedingscentrum",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 5,
+      "items": 6,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "milieu-centraal-5208feea": {
       "source_id": "milieu-centraal",
       "organization_id": "milieu-centraal",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 22,
+      "items": 19,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "staatsbosbeheer-dd798e1e": {
       "source_id": "staatsbosbeheer",
       "organization_id": "staatsbosbeheer",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 22,
+      "items": 9,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "oranje-fonds-7d66d421": {
       "source_id": "oranje-fonds",
       "organization_id": "oranje-fonds",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 4,
+      "items": 5,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "humanitas-a100b00e": {
       "source_id": "humanitas",
       "organization_id": "humanitas",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 25,
+      "items": 15,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "eenvandaag-26ff017a": {
       "source_id": "eenvandaag",
       "organization_id": "eenvandaag",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 80,
+      "items": 89,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "de-ondernemer-2a684ccd": {
       "source_id": "de-ondernemer",
       "organization_id": "de-ondernemer",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 66,
+      "items": 68,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "nu-nl-d197f525": {
       "source_id": "nu-nl",
       "organization_id": "nu-nl",
       "mode": "curated_html",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
       "items": 30,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "nu-nl-2373bd9c": {
       "source_id": "nu-nl",
       "organization_id": "nu-nl",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 245,
+      "items": 250,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "rtl-nieuws-fc9ec594": {
       "source_id": "rtl-nieuws",
       "organization_id": "rtl-nieuws",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 230,
+      "items": 221,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "rtv-oost-62a06086": {
       "source_id": "rtv-oost",
       "organization_id": "rtv-oost",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 5,
+      "items": 3,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "omroep-brabant-4cee1621": {
       "source_id": "omroep-brabant",
       "organization_id": "omroep-brabant",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 292,
+      "items": 318,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "omroep-gelderland-9e494aa9": {
       "source_id": "omroep-gelderland",
       "organization_id": "omroep-gelderland",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 172,
+      "items": 184,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "rijnmond-7317aa70": {
       "source_id": "rijnmond",
       "organization_id": "rijnmond",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 290,
+      "items": 261,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "nh-nieuws-c3e1d13b": {
       "source_id": "nh-nieuws",
       "organization_id": "nh-nieuws",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 173,
+      "items": 160,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "rtv-noord-aeb9f7dc": {
       "source_id": "rtv-noord",
       "organization_id": "rtv-noord",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 161,
+      "items": 156,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "omrop-frysl-n-9cd100a5": {
       "source_id": "omrop-frysl-n",
       "organization_id": "omrop-frysl-n",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
       "items": 200,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "at5-b0fab1ac": {
       "source_id": "at5",
       "organization_id": "at5",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 118,
+      "items": 126,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "1limburg-a9b5043d": {
       "source_id": "1limburg",
       "organization_id": "1limburg",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
       "items": 0,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "hart-van-nederland-c0c9d7d8": {
       "source_id": "hart-van-nederland",
       "organization_id": "hart-van-nederland",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 257,
+      "items": 255,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "mit-news-39996f70": {
       "source_id": "mit-news",
       "organization_id": "mit-news",
       "mode": "rss",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
       "items": 50,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "nasa-1b2f08c5": {
       "source_id": "nasa",
       "organization_id": "nasa",
       "mode": "rss",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
       "items": 20,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "bbc-96afa9fb": {
       "source_id": "bbc",
       "organization_id": "bbc",
       "mode": "rss",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 57,
+      "items": 63,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "bbc-2e6b8155": {
       "source_id": "bbc",
       "organization_id": "bbc",
       "mode": "rss",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 65,
+      "items": 78,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "bbc-ae22e62c": {
       "source_id": "bbc",
       "organization_id": "bbc",
       "mode": "rss",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 66,
+      "items": 73,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "bbc-e5e8c2fe": {
       "source_id": "bbc",
       "organization_id": "bbc",
       "mode": "rss",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 25,
+      "items": 32,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "the-guardian-b6e1677e": {
       "source_id": "the-guardian",
       "organization_id": "the-guardian",
       "mode": "rss",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 42,
+      "items": 46,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "the-guardian-c62796ff": {
       "source_id": "the-guardian",
       "organization_id": "the-guardian",
       "mode": "rss",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 32,
+      "items": 39,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "the-guardian-edb32b1a": {
       "source_id": "the-guardian",
       "organization_id": "the-guardian",
       "mode": "rss",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
       "items": 45,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "un-news-search-fallback": {
       "source_id": "un-news",
       "organization_id": "un-news",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 222,
+      "items": 79,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "phys-org-6079fc21": {
       "source_id": "phys-org",
       "organization_id": "phys-org",
       "mode": "rss",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 64,
+      "items": 78,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "medical-xpress-d6b3e066": {
       "source_id": "medical-xpress",
       "organization_id": "medical-xpress",
       "mode": "rss",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 64,
+      "items": 75,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "esa-9206f230": {
       "source_id": "esa",
       "organization_id": "esa",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 210,
+      "items": 209,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "who-78dba94b": {
       "source_id": "who",
@@ -727,71 +727,71 @@
       "mode": "google_site",
       "last_success_at": "2026-10-19T10:12:57.562925+00:00",
       "last_error": null,
-      "cached": false,
+      "cached": true,
       "items": 221,
       "check_frequency": "twice_weekly",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
       "next_check_at": "2026-10-22T10:12:57.562925+00:00"
     },
     "unicef-cc5d3b14": {
       "source_id": "unicef",
       "organization_id": "unicef",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 212,
+      "items": 209,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "oecd-fc730df4": {
       "source_id": "oecd",
       "organization_id": "oecd",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 215,
+      "items": 205,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "unep-14ddb591": {
       "source_id": "unep",
       "organization_id": "unep",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 228,
+      "items": 179,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "smithsonian-magazine-4e660515": {
       "source_id": "smithsonian-magazine",
       "organization_id": "smithsonian-magazine",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 80,
+      "items": 82,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "sciencedaily-a60768e4": {
       "source_id": "sciencedaily",
       "organization_id": "sciencedaily",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 199,
+      "items": 206,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "positive-news-04ec3372": {
       "source_id": "positive-news",
@@ -799,107 +799,107 @@
       "mode": "rss",
       "last_success_at": "2026-10-19T10:12:57.562925+00:00",
       "last_error": null,
-      "cached": false,
+      "cached": true,
       "items": 10,
       "check_frequency": "twice_weekly",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
       "next_check_at": "2026-10-22T10:12:57.562925+00:00"
     },
     "mongabay-dddc0e95": {
       "source_id": "mongabay",
       "organization_id": "mongabay",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 155,
+      "items": 133,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "yale-environment-360-40316dc3": {
       "source_id": "yale-environment-360",
       "organization_id": "yale-environment-360",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 20,
+      "items": 114,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "good-news-network-8f68fb57": {
       "source_id": "good-news-network",
       "organization_id": "good-news-network",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 72,
+      "items": 84,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "undp-6bef6935": {
       "source_id": "undp",
       "organization_id": "undp",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 201,
+      "items": 185,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "fao-bc4a6458": {
       "source_id": "fao",
       "organization_id": "fao",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 238,
+      "items": 210,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "natuurmonumenten-fcaad45a": {
       "source_id": "natuurmonumenten",
       "organization_id": "natuurmonumenten",
       "mode": "rss",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
       "items": 30,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "wwf-nederland-search": {
       "source_id": "wwf-nederland",
       "organization_id": "wwf-nederland",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 55,
+      "items": 28,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "rijksuniversiteit-groningen-search": {
       "source_id": "rijksuniversiteit-groningen",
       "organization_id": "rijksuniversiteit-groningen",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 126,
+      "items": 141,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "tu-eindhoven-search": {
       "source_id": "tu-eindhoven",
@@ -907,10 +907,10 @@
       "mode": "google_site",
       "last_success_at": "2026-10-19T10:12:57.562925+00:00",
       "last_error": null,
-      "cached": false,
+      "cached": true,
       "items": 111,
       "check_frequency": "twice_weekly",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
       "next_check_at": "2026-10-22T10:12:57.562925+00:00"
     },
     "rijkswaterstaat-search": {
@@ -919,10 +919,10 @@
       "mode": "google_site",
       "last_success_at": "2026-10-19T10:12:57.562925+00:00",
       "last_error": null,
-      "cached": false,
+      "cached": true,
       "items": 76,
       "check_frequency": "twice_weekly",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
       "next_check_at": "2026-10-22T10:12:57.562925+00:00"
     },
     "nwo-search": {
@@ -931,10 +931,10 @@
       "mode": "google_site",
       "last_success_at": "2026-10-19T10:12:57.562925+00:00",
       "last_error": null,
-      "cached": false,
+      "cached": true,
       "items": 104,
       "check_frequency": "twice_weekly",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
       "next_check_at": "2026-10-22T10:12:57.562925+00:00"
     },
     "de-vlinderstichting-search": {
@@ -946,7 +946,7 @@
       "cached": true,
       "items": 6,
       "check_frequency": "weekly",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
       "next_check_at": "2026-10-22T14:38:14.127623+00:00"
     },
     "sovon-search": {
@@ -958,7 +958,7 @@
       "cached": true,
       "items": 5,
       "check_frequency": "weekly",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
       "next_check_at": "2026-10-22T14:38:14.127623+00:00"
     },
     "dokters-van-de-wereld-search": {
@@ -970,56 +970,56 @@
       "cached": true,
       "items": 0,
       "check_frequency": "weekly",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
       "next_check_at": "2026-10-22T14:38:14.127623+00:00"
     },
     "amnesty-international-nederland-search": {
       "source_id": "amnesty-international-nederland",
       "organization_id": "amnesty-international-nederland",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 48,
+      "items": 21,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "inter-press-service-ips-search": {
       "source_id": "inter-press-service-ips",
       "organization_id": "inter-press-service-ips",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 25,
+      "items": 17,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "ember-search": {
       "source_id": "ember",
       "organization_id": "ember",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 20,
+      "items": 6,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "eurostat-search": {
       "source_id": "eurostat",
       "organization_id": "eurostat",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 222,
+      "items": 239,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "plan-international-search": {
       "source_id": "plan-international",
@@ -1030,7 +1030,7 @@
       "cached": true,
       "items": 7,
       "check_frequency": "weekly",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
       "next_check_at": "2026-10-22T14:38:14.127623+00:00"
     },
     "world-economic-forum-search": {
@@ -1042,7 +1042,7 @@
       "cached": true,
       "items": 174,
       "check_frequency": "weekly",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
       "next_check_at": "2026-10-22T14:38:14.127623+00:00"
     },
     "nature-2457669d": {
@@ -1051,10 +1051,10 @@
       "mode": "rss",
       "last_success_at": "2026-10-19T10:12:57.562925+00:00",
       "last_error": null,
-      "cached": false,
+      "cached": true,
       "items": 84,
       "check_frequency": "twice_weekly",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
       "next_check_at": "2026-10-22T10:12:57.562925+00:00"
     },
     "frontiers-e155eddc": {
@@ -1066,7 +1066,7 @@
       "cached": true,
       "items": 21,
       "check_frequency": "weekly",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
       "next_check_at": "2026-10-22T14:38:14.127623+00:00"
     },
     "iucn-search": {
@@ -1078,7 +1078,7 @@
       "cached": true,
       "items": 108,
       "check_frequency": "weekly",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
       "next_check_at": "2026-10-22T14:38:14.127623+00:00"
     },
     "windeurope-search": {
@@ -1090,32 +1090,32 @@
       "cached": true,
       "items": 1,
       "check_frequency": "weekly",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
       "next_check_at": "2026-10-22T14:38:14.127623+00:00"
     },
     "goed-nieuws-c55312c6": {
       "source_id": "goed-nieuws",
       "organization_id": "goed-nieuws",
       "mode": "rss",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
       "items": 30,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "goodnews-eu-7f4cd12a": {
       "source_id": "goodnews-eu",
       "organization_id": "goodnews-eu",
       "mode": "rss",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
       "items": 14,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "maatschapwij-search": {
       "source_id": "maatschapwij",
@@ -1123,10 +1123,10 @@
       "mode": "google_site",
       "last_success_at": "2026-10-19T10:12:57.562925+00:00",
       "last_error": null,
-      "cached": false,
+      "cached": true,
       "items": 5,
       "check_frequency": "twice_weekly",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
       "next_check_at": "2026-10-22T10:12:57.562925+00:00"
     },
     "omroep-west-search": {
@@ -1135,10 +1135,10 @@
       "mode": "google_site",
       "last_success_at": "2026-10-19T10:12:57.562925+00:00",
       "last_error": null,
-      "cached": false,
+      "cached": true,
       "items": 140,
       "check_frequency": "twice_weekly",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
       "next_check_at": "2026-10-22T10:12:57.562925+00:00"
     },
     "omroep-flevoland-search": {
@@ -1147,10 +1147,10 @@
       "mode": "google_site",
       "last_success_at": "2026-10-19T10:12:57.562925+00:00",
       "last_error": null,
-      "cached": false,
+      "cached": true,
       "items": 225,
       "check_frequency": "twice_weekly",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
       "next_check_at": "2026-10-22T10:12:57.562925+00:00"
     },
     "duic-search": {
@@ -1162,68 +1162,68 @@
       "cached": true,
       "items": 67,
       "check_frequency": "weekly",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
       "next_check_at": "2026-10-22T14:38:14.127623+00:00"
     },
     "deutsche-welle-search": {
       "source_id": "deutsche-welle",
       "organization_id": "deutsche-welle",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 286,
+      "items": 290,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "tagesschau-d2a5d35b": {
       "source_id": "tagesschau",
       "organization_id": "tagesschau",
       "mode": "rss",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 126,
+      "items": 158,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "srf-search": {
       "source_id": "srf",
       "organization_id": "srf",
       "mode": "google_site",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 246,
+      "items": 276,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "mdr-dcaa6e33": {
       "source_id": "mdr",
       "organization_id": "mdr",
       "mode": "rss",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 86,
+      "items": 105,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "der-spiegel-7e6cdbaf": {
       "source_id": "der-spiegel",
       "organization_id": "der-spiegel",
       "mode": "rss",
-      "last_success_at": "2026-10-19T10:12:57.562925+00:00",
+      "last_success_at": "2026-10-22T07:17:27.923379+00:00",
       "last_error": null,
       "cached": false,
-      "items": 68,
+      "items": 98,
       "check_frequency": "every_edition",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
-      "next_check_at": "2026-10-20T06:12:57.562925+00:00"
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
+      "next_check_at": "2026-10-23T03:17:27.923379+00:00"
     },
     "zdfheute-60d39da3": {
       "source_id": "zdfheute",
@@ -1231,10 +1231,10 @@
       "mode": "rss",
       "last_success_at": "2026-10-19T10:12:57.562925+00:00",
       "last_error": null,
-      "cached": false,
+      "cached": true,
       "items": 243,
       "check_frequency": "twice_weekly",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
       "next_check_at": "2026-10-22T10:12:57.562925+00:00"
     },
     "deutschlandfunk-nova-a57f952d": {
@@ -1243,10 +1243,10 @@
       "mode": "rss",
       "last_success_at": "2026-10-19T10:12:57.562925+00:00",
       "last_error": null,
-      "cached": false,
+      "cached": true,
       "items": 100,
       "check_frequency": "twice_weekly",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
       "next_check_at": "2026-10-22T10:12:57.562925+00:00"
     },
     "fluter-search": {
@@ -1258,7 +1258,7 @@
       "cached": true,
       "items": 6,
       "check_frequency": "weekly",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
       "next_check_at": "2026-10-22T14:38:14.127623+00:00"
     },
     "reset-search": {
@@ -1267,10 +1267,10 @@
       "mode": "google_site",
       "last_success_at": "2026-10-19T10:12:57.562925+00:00",
       "last_error": null,
-      "cached": false,
+      "cached": true,
       "items": 4,
       "check_frequency": "twice_weekly",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
       "next_check_at": "2026-10-22T10:12:57.562925+00:00"
     },
     "utopia-search": {
@@ -1279,10 +1279,10 @@
       "mode": "google_site",
       "last_success_at": "2026-10-19T10:12:57.562925+00:00",
       "last_error": null,
-      "cached": false,
+      "cached": true,
       "items": 145,
       "check_frequency": "twice_weekly",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
       "next_check_at": "2026-10-22T10:12:57.562925+00:00"
     },
     "taz-eac48a00": {
@@ -1291,10 +1291,10 @@
       "mode": "rss",
       "last_success_at": "2026-10-19T10:12:57.562925+00:00",
       "last_error": null,
-      "cached": false,
+      "cached": true,
       "items": 103,
       "check_frequency": "twice_weekly",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
       "next_check_at": "2026-10-22T10:12:57.562925+00:00"
     },
     "tages-anzeiger-search": {
@@ -1306,7 +1306,7 @@
       "cached": true,
       "items": 204,
       "check_frequency": "weekly",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
       "next_check_at": "2026-10-22T14:38:14.127623+00:00"
     },
     "euronews-search": {
@@ -1315,10 +1315,10 @@
       "mode": "google_site",
       "last_success_at": "2026-10-19T10:12:57.562925+00:00",
       "last_error": null,
-      "cached": false,
+      "cached": true,
       "items": 298,
       "check_frequency": "twice_weekly",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
       "next_check_at": "2026-10-22T10:12:57.562925+00:00"
     },
     "good-impact-search": {
@@ -1330,7 +1330,7 @@
       "cached": true,
       "items": 1,
       "check_frequency": "weekly",
-      "checked_at": "2026-10-19T10:12:57.562925+00:00",
+      "checked_at": "2026-10-22T07:17:27.923379+00:00",
       "next_check_at": "2026-10-22T14:38:14.127623+00:00"
     }
   }
