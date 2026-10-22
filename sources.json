@@ -4160,6 +4160,63 @@
       "register_ids": [],
       "channels": [],
       "enabled": true
+    },
+    {
+      "source_id": "nioz",
+      "organization_id": "nioz",
+      "name": "Koninklijk Nederlands Instituut voor Zeeonderzoek (NIOZ)",
+      "website": "https://www.nioz.nl/",
+      "category": "A",
+      "topics": [
+        "Wetenschap"
+      ],
+      "geography": "nl",
+      "source_type": "research",
+      "reliability_notes": "Oorspronkelijke onderzoekspublicatie; betrokken onderzoeksinstelling. Methode en beperkingen per studie controleren.",
+      "priority": "P2",
+      "check_frequency": "manual",
+      "limitations": "Alleen als bewijsbron geregistreerd; geen automatisch ophaalkanaal geverifieerd of ingeschakeld.",
+      "register_ids": [],
+      "channels": [],
+      "enabled": false
+    },
+    {
+      "source_id": "postnl",
+      "organization_id": "postnl",
+      "name": "PostNL",
+      "website": "https://www.postnl.nl/",
+      "category": "A",
+      "topics": [
+        "Mens"
+      ],
+      "geography": "nl",
+      "source_type": "corporate",
+      "reliability_notes": "Bedrijfsbron met direct belang; gemelde signalen zijn geen bewijs van geslaagde hulpverlening.",
+      "priority": "P2",
+      "check_frequency": "manual",
+      "limitations": "Alleen als bewijsbron geregistreerd; geen automatisch ophaalkanaal geverifieerd of ingeschakeld.",
+      "register_ids": [],
+      "channels": [],
+      "enabled": false
+    },
+    {
+      "source_id": "eth-zurich",
+      "organization_id": "eth-zurich",
+      "name": "ETH Zürich",
+      "website": "https://ethz.ch/",
+      "category": "A",
+      "topics": [
+        "Wetenschap"
+      ],
+      "geography": "int",
+      "source_type": "research",
+      "reliability_notes": "Oorspronkelijke onderzoeksinstelling; laboratoriumresultaat onderscheiden van industriële toepassing.",
+      "priority": "P2",
+      "check_frequency": "manual",
+      "limitations": "Alleen als bewijsbron geregistreerd; geen automatisch ophaalkanaal geverifieerd of ingeschakeld.",
+      "register_ids": [],
+      "channels": [],
+      "enabled": false
     }
   ]
 }

@@ -1,0 +1,618 @@
+{
+  "schema_version": 1,
+  "edition_date": "2026-10-22",
+  "news_sha256": "c3b69b593ebe4964420aee47f36e7d3bb02ea593cf766e484a5bbb78ec56226b",
+  "approved": true,
+  "approved_by": "Codex-redacteur: oorspronkelijke bronnen, feiten, datums, doublures en beelden beoordeeld; selectie en websitepublicatie uitdrukkelijk geautoriseerd door uitgever/opdrachtgever op 22 oktober 2026.",
+  "variation_exception_reason": "",
+  "articles": {
+    "nl:kwelders-beschermen-kust": {
+      "source_id": "nioz",
+      "organization_id": "nioz",
+      "article_url": "https://www.nioz.nl/nl/nieuws-en-blogs/nieuws/kwelders-blijken-krachtige-bondgenoten-voor-een-klimaatbestendige-kust",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-21",
+      "event_date": "2026-10-21",
+      "checked_on": "2026-10-22",
+      "dates_checked": true,
+      "new_development": "Publicatie van het nieuwe Nature-onderzoek op 21 oktober, onderscheiden van het vegetatieartikel van 8 oktober.",
+      "older_exception_reason": "",
+      "topic_id": "pn:kwelders-beschermen-kust",
+      "doi": "10.1038/s41586-026-11145-8",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.nature.com/articles/s41586-026-11145-8",
+        "claim": "306 m² kwelder bleef bij stormproeven vrijwel intact.",
+        "support": "Nature-artikel van 21 oktober: 32 meetpunten; na 21 uur met vegetatie gemiddeld 7 mm bodemdaling, golven tot 2 m. NIOZ bevestigt herkomst Peazemerlannen en toepassing bij dijken.",
+        "limitations": "Golfgootproef, geen garantie voor iedere kust. Vegetatie beschadigt en extra demping neemt bij hogere golven af. Onderzoeksinstellingen zijn betrokken partijen.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/salt-marsh-damp-wetland-coastal-5549537/ | Pixabay Content License https://pixabay.com/service/license-summary/ | Emphyrio | cache /images/artikelen/2026-10-22/kwelders-beschermen-kust.jpg | SHA256 8d0f2cc52f778079f185f0f80bf1bbc6db8e22240a36ffba802f2b24e505094b | 22-10-2026 gedownload en visueel gecontroleerd. Een begroeide kwelder aan de kust, illustratief beeld van een zoutmoeras. Publiek CDN-bestand, lokaal gecachet; geen API-sleutel gebruikt."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "225 historische records gecontroleerd op canonieke URLs/identifiers en alle titels inhoudelijk vergeleken; geen hetzelfde nieuwsfeit. ",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "306 m² kwelder bleef bij stormproeven vrijwel intact. Golfgootproef, geen garantie voor iedere kust. Vegetatie beschadigt en extra demping neemt bij hogere golven af. Onderzoeksinstellingen zijn betrokken partijen.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "nl:bezorgers-kijken-om-naar-buurt": {
+      "source_id": "postnl",
+      "organization_id": "postnl",
+      "article_url": "https://newsroom.postnl.nl/nl-NL/273265-tweeduizendste-sociale-melding-door-post-en-pakketbezorgers/",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-21",
+      "event_date": "2026-10-21",
+      "checked_on": "2026-10-22",
+      "dates_checked": true,
+      "new_development": "Mijlpaal en huidige landelijke dekking gemeld op 21 oktober; geen nieuwe start van het programma.",
+      "older_exception_reason": "",
+      "topic_id": "pn:bezorgers-kijken-om-naar-buurt",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://newsroom.postnl.nl/nl-NL/273265-tweeduizendste-sociale-melding-door-post-en-pakketbezorgers/",
+        "claim": "PostNL meldt tweeduizend signalen sinds april 2024.",
+        "support": "PostNL-persbericht van 21 oktober noemt de mijlpaal en vrijwel landelijke dekking; meldingen gaan vrijwillig en anoniem naar lokale welzijnsorganisaties.",
+        "limitations": "Bedrijfscijfers zonder onafhankelijke audit. Geen bewezen aantal geholpen mensen of effect op welzijn; de tekst benoemt die beperking.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/bicycle-messenger-delivery-service-7355135/ | Pixabay Content License https://pixabay.com/service/license-summary/ | Bilderwelt68 | cache /images/artikelen/2026-10-22/bezorgers-kijken-om-naar-buurt.jpg | SHA256 94f33b8537b9a39f761030856a440d4aa8ee78275e034857ace731560ee9eb5c | 22-10-2026 gedownload en visueel gecontroleerd. Fietskoerier op straat, illustratief beeld; geen medewerker van PostNL. Publiek CDN-bestand, lokaal gecachet; geen API-sleutel gebruikt."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "225 historische records gecontroleerd op canonieke URLs/identifiers en alle titels inhoudelijk vergeleken; geen hetzelfde nieuwsfeit. ",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "PostNL meldt tweeduizend signalen sinds april 2024. Bedrijfscijfers zonder onafhankelijke audit. Geen bewezen aantal geholpen mensen of effect op welzijn; de tekst benoemt die beperking.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 1,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "nl:studentenidee-wordt-hulpmiddel": {
+      "source_id": "omroep-brabant",
+      "organization_id": "omroep-brabant",
+      "article_url": "https://www.omroepbrabant.nl/nieuws/6031662/begonnen-als-studentenproject-nu-zijn-deze-vijf-uitvindingen-te-koop",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-20",
+      "event_date": "2026-10-20",
+      "checked_on": "2026-10-22",
+      "dates_checked": true,
+      "new_development": "Actuele presentatie tijdens DDW; de voorbeelden en apparaten zijn niet allemaal deze week uitgevonden.",
+      "older_exception_reason": "",
+      "topic_id": "pn:studentenidee-wordt-hulpmiddel",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.omroepbrabant.nl/nieuws/6031662/begonnen-als-studentenproject-nu-zijn-deze-vijf-uitvindingen-te-koop",
+        "claim": "Voormalige studentenprojecten worden daadwerkelijk gebruikt.",
+        "support": "Omroep Brabant 20 oktober: Hable duizenden gebruikers; Bambibelt in MMC, andere ziekenhuizen testen; SmartGoals ruim 2000 clubs; Usono ruim 25 landen. Dementiekompas pas 2027.",
+        "limitations": "Omroepreportage met makers en universiteit; gebruikscijfers niet onafhankelijk geaudit. Geen claim op klinische gezondheidswinst. Het TU/e-bericht van 2 september ging over analyse van 251 babygegevens, een ander nieuwsfeit.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/braille-hands-keys-read-5498805/ | Pixabay Content License https://pixabay.com/service/license-summary/ | Myriams-Fotos | cache /images/artikelen/2026-10-22/studentenidee-wordt-hulpmiddel.jpg | SHA256 1676b8ed9ab2fc1f918bad92a4457796f59be482b4d9627ceb84369a875dff1c | 22-10-2026 gedownload en visueel gecontroleerd. Handen lezen brailleschrift, illustratief beeld; niet een van de genoemde uitvindingen. Publiek CDN-bestand, lokaal gecachet; geen API-sleutel gebruikt."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "225 historische records gecontroleerd op canonieke URLs/identifiers en alle titels inhoudelijk vergeleken; geen hetzelfde nieuwsfeit. TU/e-babyonderzoek 2 september betreft data-analyse, niet de toepassingen in deze reportage.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Voormalige studentenprojecten worden daadwerkelijk gebruikt. Omroepreportage met makers en universiteit; gebruikscijfers niet onafhankelijk geaudit. Geen claim op klinische gezondheidswinst. Het TU/e-bericht van 2 september ging over analyse van 251 babygegevens, een ander nieuwsfeit.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 1,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "nl:erasmusboek-terug-in-rotterdam": {
+      "source_id": "nos",
+      "organization_id": "nos",
+      "article_url": "https://nos.nl/artikel/2636065-verloren-gewaand-boek-van-erasmus-met-opvoedtips-uit-1609-terug-in-rotterdam",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-21",
+      "event_date": "2026-10-21",
+      "checked_on": "2026-10-22",
+      "dates_checked": true,
+      "new_development": "Berichtgeving over de nieuwe bibliotheekaanwinst en aanstaande tentoonstelling.",
+      "older_exception_reason": "",
+      "topic_id": "pn:erasmusboek-terug-in-rotterdam",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://nos.nl/artikel/2636065-verloren-gewaand-boek-van-erasmus-met-opvoedtips-uit-1609-terug-in-rotterdam",
+        "claim": "Erasmusdruk uit 1609 teruggevonden en naar Rotterdam.",
+        "support": "NOS 21 oktober, in samenwerking met Rijnmond: Amerikaanse antiquair bood het boek aan; conservator noemt enige bekende exemplaar; publieksvertoning vanaf komend weekend.",
+        "limitations": "Het betreft een druk na Erasmus overlijden, geen nieuw handschrift. Oorspronkelijke oplage van circa duizend is een schatting. Exacte vinddatum niet genoemd; datumveld betreft berichtgeving over de aanwinst.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/old-book-incunabula-library-1179262/ | Pixabay Content License https://pixabay.com/service/license-summary/ | josemdelaa | cache /images/artikelen/2026-10-22/erasmusboek-terug-in-rotterdam.jpg | SHA256 c17b97d8fe99bab29c82a185155687ab25696113adcaf5675622840ec3850617 | 22-10-2026 gedownload en visueel gecontroleerd. Een oud boek, illustratief beeld; niet de teruggevonden Erasmus-uitgave. Publiek CDN-bestand, lokaal gecachet; geen API-sleutel gebruikt."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "225 historische records gecontroleerd op canonieke URLs/identifiers en alle titels inhoudelijk vergeleken; geen hetzelfde nieuwsfeit. ",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Erasmusdruk uit 1609 teruggevonden en naar Rotterdam. Het betreft een druk na Erasmus overlijden, geen nieuw handschrift. Oorspronkelijke oplage van circa duizend is een schatting. Exacte vinddatum niet genoemd; datumveld betreft berichtgeving over de aanwinst.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 1,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "nl:gieren-praten-meer-dan-gedacht": {
+      "source_id": "universiteit-utrecht",
+      "organization_id": "universiteit-utrecht",
+      "article_url": "https://www.uu.nl/nieuws/stille-gieren-blijken-toch-uitgebreid-te-communiceren-met-geluiden",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-21",
+      "event_date": "2026-10-21",
+      "checked_on": "2026-10-22",
+      "dates_checked": true,
+      "new_development": "Nieuwe wetenschappelijke publicatie op 21 oktober; opnames eerder gemaakt.",
+      "older_exception_reason": "",
+      "topic_id": "pn:gieren-praten-meer-dan-gedacht",
+      "doi": "10.1371/journal.pone.0360246",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0360246",
+        "claim": "Rüppellsgieren hebben een complex geluidenrepertoire.",
+        "support": "PLOS One van 21 oktober: 2500 roepen uit twee gehouden groepen, 35 vogels. UU noemt 150 opnameuren, zestien roepen en embryo-geluiden kort voor uitkomst.",
+        "limitations": "Gevangenschap en twee groepen; geen bewijs voor betere voortplanting door geluiden afspelen. Sociale complexiteit is een onderzochte verklaring, geen bewezen universele oorzaak.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/vulture-animal-bird-griffon-beak-9483838/ | Pixabay Content License https://pixabay.com/service/license-summary/ | justGoron | cache /images/artikelen/2026-10-22/gieren-praten-meer-dan-gedacht.jpg | SHA256 64d119fa7afb5aea3376c2a39d418a4e147714e6e66ffc4d667dbc23af2b52c5 | 22-10-2026 gedownload en visueel gecontroleerd. Een vale gier, illustratief soortverwant beeld; dit is niet de onderzochte Rüppellsgier. Publiek CDN-bestand, lokaal gecachet; geen API-sleutel gebruikt."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "225 historische records gecontroleerd op canonieke URLs/identifiers en alle titels inhoudelijk vergeleken; geen hetzelfde nieuwsfeit. ",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Rüppellsgieren hebben een complex geluidenrepertoire. Gevangenschap en twee groepen; geen bewijs voor betere voortplanting door geluiden afspelen. Sociale complexiteit is een onderzochte verklaring, geen bewezen universele oorzaak.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "nl:warmte-uit-amsterdamse-gracht": {
+      "source_id": "at5",
+      "organization_id": "at5",
+      "article_url": "https://www.at5.nl/artikelen/240480/grachtenwater-als-duurzame-energiebron-hoe-een-woning-springt-van-label-g-naar-a",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-20",
+      "event_date": "2026-10-20",
+      "checked_on": "2026-10-22",
+      "dates_checked": true,
+      "new_development": "Nieuwe installatie/renovatiereportage; niet de uitvinding van aquathermie.",
+      "older_exception_reason": "",
+      "topic_id": "pn:warmte-uit-amsterdamse-gracht",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.at5.nl/artikelen/240480/grachtenwater-als-duurzame-energiebron-hoe-een-woning-springt-van-label-g-naar-a",
+        "claim": "Aquathermie-installatie bij historische kantoorvilla wordt aangelegd.",
+        "support": "AT5-reportage 20 oktober toont installatie bij Weteringschans; één wisselaar al geplaatst, een tweede gaat te water; isolatie en zonnepanelen, streeflabel A++.",
+        "limitations": "Label A++ is verwachting, geen vastgesteld resultaat. De tekst claimt geen gemeten energiebesparing; adviesbureau is belanghebbend. Datum betreft actuele reportage over aanleg.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/amsterdam-channels-houses-9936659/ | Pixabay Content License https://pixabay.com/service/license-summary/ | Rianne_SchillerMclean | cache /images/artikelen/2026-10-22/warmte-uit-amsterdamse-gracht.jpg | SHA256 1e492fb6f86fc78260e56159f2b047b9f63628771542a4806d6894539f46ece3 | 22-10-2026 gedownload en visueel gecontroleerd. Historische Amsterdamse grachtenpanden, illustratief beeld; niet het pand uit het bericht. Publiek CDN-bestand, lokaal gecachet; geen API-sleutel gebruikt."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "225 historische records gecontroleerd op canonieke URLs/identifiers en alle titels inhoudelijk vergeleken; geen hetzelfde nieuwsfeit. ",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Aquathermie-installatie bij historische kantoorvilla wordt aangelegd. Label A++ is verwachting, geen vastgesteld resultaat. De tekst claimt geen gemeten energiebesparing; adviesbureau is belanghebbend. Datum betreft actuele reportage over aanleg.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 1,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "int:zonnestroom-houdt-zorgpost-open": {
+      "source_id": "unicef",
+      "organization_id": "unicef",
+      "article_url": "https://www.unicef.org/timorleste/stories/how-reliable-energy-transforming-daily-life-vila-maumeta-atauro",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-10-20",
+      "event_date": "2026-07-14",
+      "checked_on": "2026-10-22",
+      "dates_checked": true,
+      "new_development": "Follow-up van 20 oktober beschrijft gebruik en ervaren voordelen na de overdracht op 14 juli.",
+      "older_exception_reason": "",
+      "topic_id": "pn:zonnestroom-houdt-zorgpost-open",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.unicef.org/timorleste/stories/how-reliable-energy-transforming-daily-life-vila-maumeta-atauro",
+        "claim": "Zonnestroom ondersteunt drie voorzieningen op Atauro.",
+        "support": "UNICEF 20 oktober beschrijft ervaringen van zorg, school en gemeenschapscentrum; 516 huishoudens. Aanvullend overdrachtsbericht bevestigt 14 juli 2026, dus niet 1 juli.",
+        "limitations": "Uitvoerder rapporteert eigen project, zonder onafhankelijke effectmeting. Lokaal resultaat, geen landelijke oplossing.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/solar-roof-solar-energy-2666770/ | Pixabay Content License https://pixabay.com/service/license-summary/ | RoyBuri | cache /images/artikelen/2026-10-22/zonnestroom-houdt-zorgpost-open.jpg | SHA256 5b28973ddcc8406d12e0768328d67ac5f5340a9bc5c5007bb9677ff29dce46c0 | 22-10-2026 gedownload en visueel gecontroleerd. Zonnepanelen op het dak van een huis, illustratief beeld; niet de voorzieningen op Atauro. Publiek CDN-bestand, lokaal gecachet; geen API-sleutel gebruikt."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "225 historische records gecontroleerd op canonieke URLs/identifiers en alle titels inhoudelijk vergeleken; geen hetzelfde nieuwsfeit. ",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Zonnestroom ondersteunt drie voorzieningen op Atauro. Uitvoerder rapporteert eigen project, zonder onafhankelijke effectmeting. Lokaal resultaat, geen landelijke oplossing.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 1,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "int:zes-dolfijnenkalfjes-mekong": {
+      "source_id": "mongabay",
+      "organization_id": "mongabay",
+      "article_url": "https://news.mongabay.com/short-article/2026/10/six-new-calves-offer-hope-amid-ongoing-threats-to-cambodias-irrawaddy-dolphins/",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-10-20",
+      "event_date": "2026-10-20",
+      "checked_on": "2026-10-22",
+      "dates_checked": true,
+      "new_development": "Nieuwe verslaggeving over zes in 2026 bevestigde kalfjes en actuele schatting.",
+      "older_exception_reason": "",
+      "topic_id": "pn:zes-dolfijnenkalfjes-mekong",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://news.mongabay.com/short-article/2026/10/six-new-calves-offer-hope-amid-ongoing-threats-to-cambodias-irrawaddy-dolphins/",
+        "claim": "Zes kalfjes bevestigd in Cambodjaanse Mekongpopulatie.",
+        "support": "Mongabay 20 oktober meldt zes geboorten in 2026 over 120 km in Kratie/Stung Treng en schatting van 118 dieren. De via webtool gelezen pagina noemt visnetten, habitatdruk en dammen.",
+        "limitations": "Populatieschatting en meldingen van beschermers; zes geboorten bewijzen geen duurzaam populatieherstel. Rechtstreekse download 403; oorspronkelijke pagina via webtool inhoudelijk geraadpleegd. Datum is verslag van jaarstand, geen zes geboorten op één dag.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/mekong-river-river-phnom-penh-4679305/ | Pixabay Content License https://pixabay.com/service/license-summary/ | AdamHillTravel | cache /images/artikelen/2026-10-22/zes-dolfijnenkalfjes-mekong.jpg | SHA256 fe02c10fd97412e7d911f9e5b9030c272783fab6a9d3059ea3633da43cbda2d1 | 22-10-2026 gedownload en visueel gecontroleerd. De Mekong bij Phnom Penh, illustratief landschapsbeeld; hier zijn geen rivierdolfijnen zichtbaar. Publiek CDN-bestand, lokaal gecachet; geen API-sleutel gebruikt."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "225 historische records gecontroleerd op canonieke URLs/identifiers en alle titels inhoudelijk vergeleken; geen hetzelfde nieuwsfeit. ",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Zes kalfjes bevestigd in Cambodjaanse Mekongpopulatie. Populatieschatting en meldingen van beschermers; zes geboorten bewijzen geen duurzaam populatieherstel. Rechtstreekse download 403; oorspronkelijke pagina via webtool inhoudelijk geraadpleegd. Datum is verslag van jaarstand, geen zes geboorten op één dag.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 1,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "int:japanse-sonde-naar-phobos": {
+      "source_id": "esa",
+      "organization_id": "esa",
+      "article_url": "https://www.esa.int/ESA_Multimedia/Images/2026/10/MMX_lifts_off_to_Mars_s_moon_Phobos",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-10-20",
+      "event_date": "2026-10-20",
+      "checked_on": "2026-10-22",
+      "dates_checked": true,
+      "new_development": "Geslaagde lancering; eerste af te ronden mijlpaal van de missie.",
+      "older_exception_reason": "",
+      "topic_id": "pn:japanse-sonde-naar-phobos",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.esa.int/ESA_Multimedia/Images/2026/10/MMX_lifts_off_to_Mars_s_moon_Phobos",
+        "claim": "MMX is op weg na geslaagde lancering.",
+        "support": "ESA 20 oktober: H3 vanaf Tanegashima, 04:41 JST op 20 oktober, dus 21:41 CEST op 19 oktober. ESA noemt internationale partners en plannen voor onderzoek en monsterterugkeer.",
+        "limitations": "Alleen lancering gerealiseerd; aankomst, monstername en terugkeer zijn toekomstplannen. Datum volgt expliciet Japanse tijd in de tekst.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/mars-red-planet-planet-space-11012/ | Pixabay Content License https://pixabay.com/service/license-summary/ | WikiImages | cache /images/artikelen/2026-10-22/japanse-sonde-naar-phobos.jpg | SHA256 1e90c9fac021c14965523265a86d9053a7d7a00b46447913d300d772092d346e | 22-10-2026 gedownload en visueel gecontroleerd. Mars, gezien vanuit de ruimte; illustratief beeld van de bestemming, niet van de MMX-lancering. Publiek CDN-bestand, lokaal gecachet; geen API-sleutel gebruikt."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "225 historische records gecontroleerd op canonieke URLs/identifiers en alle titels inhoudelijk vergeleken; geen hetzelfde nieuwsfeit. ",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "MMX is op weg na geslaagde lancering. Alleen lancering gerealiseerd; aankomst, monstername en terugkeer zijn toekomstplannen. Datum volgt expliciet Japanse tijd in de tekst.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "int:mangroven-keren-terug-madagaskar": {
+      "source_id": "fao",
+      "organization_id": "fao",
+      "article_url": "https://www.fao.org/in-action/afr100/news/detail/water-returns-to-boeny/en",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-10-21",
+      "event_date": "2026-10-21",
+      "checked_on": "2026-10-22",
+      "dates_checked": true,
+      "new_development": "Nieuwe FAO-rapportage over plaatselijk zichtbaar herstel; geen claim dat de ingreep op 21 oktober plaatsvond.",
+      "older_exception_reason": "",
+      "topic_id": "pn:mangroven-keren-terug-madagaskar",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.fao.org/in-action/afr100/news/detail/water-returns-to-boeny/en",
+        "claim": "Na blokkeren van een geul ontstaan mangrovescheuten in Boeny.",
+        "support": "FAO 21 oktober: lokale COBA-groepen blokkeerden afwateringsgeul; water blijft staan en natuurlijke regeneratie zichtbaar. Bijna 30000 zaailingen betreft het bredere programma.",
+        "limitations": "Zelfrapportage door projectorganisatie; vroege scheuten, geen volledig bosherstel of causale controlegroep. Exacte interventiedatum niet gegeven; datum is rapportage over de waargenomen toestand.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/mangrove-forest-swamp-aerial-roots-249830/ | Pixabay Content License https://pixabay.com/service/license-summary/ | sarangib | cache /images/artikelen/2026-10-22/mangroven-keren-terug-madagaskar.jpg | SHA256 a1a11b9d4fbd91679c4b8ea74495a4da5bc9272313f98d25a9492a8985c4041b | 22-10-2026 gedownload en visueel gecontroleerd. Mangrovebomen met blootliggende wortels in kustwater, illustratief beeld; niet Madagaskar. Publiek CDN-bestand, lokaal gecachet; geen API-sleutel gebruikt."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "225 historische records gecontroleerd op canonieke URLs/identifiers en alle titels inhoudelijk vergeleken; geen hetzelfde nieuwsfeit. ",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Na blokkeren van een geul ontstaan mangrovescheuten in Boeny. Zelfrapportage door projectorganisatie; vroege scheuten, geen volledig bosherstel of causale controlegroep. Exacte interventiedatum niet gegeven; datum is rapportage over de waargenomen toestand.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 1,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "int:plexiglas-bijna-geheel-hergebruiken": {
+      "source_id": "eth-zurich",
+      "organization_id": "eth-zurich",
+      "article_url": "https://ethz.ch/en/news-and-events/eth-news/news/2026/10/new-method-makes-acrylic-glass-recycling-economically-viable.html",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-10-19",
+      "event_date": "2026-09-02",
+      "checked_on": "2026-10-22",
+      "dates_checked": true,
+      "new_development": "Institutionele toelichting van 19 oktober op studie van 2 september, inclusief patent/licentiestatus. Studie is dus geen ontdekking van deze week.",
+      "older_exception_reason": "Oudere studie expliciet gedateerd; actuele institutionele toelichting geeft toepassingscontext, geen nieuwe proefresultaten.",
+      "topic_id": "pn:plexiglas-bijna-geheel-hergebruiken",
+      "doi": "10.1038/s41557-026-02232-4",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.nature.com/articles/s41557-026-02232-4",
+        "claim": "Acrylglas kan met een reagens zonder oplosmiddel terug naar monomeren.",
+        "support": "Nature Chemistry, gepubliceerd 2 september: bulkdepolymerisatie van commerciële polymethacrylaten met N-hydroxyimiden, lagere temperaturen; abstract onderscheidt circa 90% geïsoleerd monomeer. ETH-bericht 19 oktober noemt patent en zoekt licentienemers.",
+        "limitations": "Laboratoriumresultaat; opschaling en milieuwinst niet aangetoond. Alleen acrylglas/polymethacrylaten. Persbericht noemt tot 98%; teruggewonnen zuivere opbrengst in onze tekst gecorrigeerd naar circa 90% uit studie.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/es/photos/plexigl%C3%A1s-suelas-de-sonda-391454/ | Pixabay Content License https://pixabay.com/service/license-summary/ | sipa | cache /images/artikelen/2026-10-22/plexiglas-bijna-geheel-hergebruiken.jpg | SHA256 89f0bf98756584c8083c15d12cd467e725b87b733c4a69a3426ebb18c5279f0c | 22-10-2026 gedownload en visueel gecontroleerd. Detail van doorzichtige blauwe acrylglasplaten, illustratief beeld; niet het materiaal uit de ETH-studie. Publiek CDN-bestand, lokaal gecachet; geen API-sleutel gebruikt."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "225 historische records gecontroleerd op canonieke URLs/identifiers en alle titels inhoudelijk vergeleken; geen hetzelfde nieuwsfeit. ",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Acrylglas kan met een reagens zonder oplosmiddel terug naar monomeren. Laboratoriumresultaat; opschaling en milieuwinst niet aangetoond. Alleen acrylglas/polymethacrylaten. Persbericht noemt tot 98%; teruggewonnen zuivere opbrengst in onze tekst gecorrigeerd naar circa 90% uit studie.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "int:boer-ontdekt-ramsesbeelden": {
+      "source_id": "nos",
+      "organization_id": "nos",
+      "article_url": "https://nos.nl/artikel/2635879-tip-egyptische-boer-leidt-tot-vondst-metershoge-standbeelden-ramses-ii",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-10-19",
+      "event_date": "2026-10-19",
+      "checked_on": "2026-10-22",
+      "dates_checked": true,
+      "new_development": "Recente berichtgeving over ministeriële bekendmaking; geen claim dat de vondst op 19 oktober plaatsvond.",
+      "older_exception_reason": "",
+      "topic_id": "pn:boer-ontdekt-ramsesbeelden",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://nos.nl/artikel/2635879-tip-egyptische-boer-leidt-tot-vondst-metershoge-standbeelden-ramses-ii",
+        "claim": "Resten van twee Ramsesbeelden gevonden na tip van boer.",
+        "support": "NOS 19 oktober: Behbeit El Hagar, granieten vondst; hoofd circa 1,5 m, eerste beeld geschat 8,5 m; tweede fragment circa 2,5 m. De tekst onderscheidt resten en oorspronkelijke omvang.",
+        "limitations": "NOS verwijst naar ministeriepublicatie van de voorafgaande week; geen onafhankelijke archeologische studie. Precieze opgravingsdatum niet vastgesteld. Datumveld betreft nieuwe NOS-berichtgeving, niet de toevallige vondst zelf.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/abu-simbel-temple-egypt-pharaohs-3389/ | Pixabay Content License https://pixabay.com/service/license-summary/ | PDPhotos | cache /images/artikelen/2026-10-22/boer-ontdekt-ramsesbeelden.jpg | SHA256 6a8ce5f464c77ef213def2c7672dba8aaf310dabd3428ddcd5583079bbe5b173 | 22-10-2026 gedownload en visueel gecontroleerd. Bestaande Ramsesbeelden bij Abu Simbel, illustratief beeld; niet de nieuwe vondst. Publiek CDN-bestand, lokaal gecachet; geen API-sleutel gebruikt."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "225 historische records gecontroleerd op canonieke URLs/identifiers en alle titels inhoudelijk vergeleken; geen hetzelfde nieuwsfeit. ",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Resten van twee Ramsesbeelden gevonden na tip van boer. NOS verwijst naar ministeriepublicatie van de voorafgaande week; geen onafhankelijke archeologische studie. Precieze opgravingsdatum niet vastgesteld. Datumveld betreft nieuwe NOS-berichtgeving, niet de toevallige vondst zelf.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 1,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "headlines:0": {
+      "source_id": "nos",
+      "organization_id": "nos",
+      "article_url": "https://nos.nl/artikel/2635910-inwoners-alberta-stemmen-tegen-afscheiding-van-canada",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-10-20",
+      "event_date": "2026-10-20",
+      "checked_on": "2026-10-22",
+      "dates_checked": true,
+      "new_development": "Actuele voorlopige uitslag; geen definitief bindend onafhankelijkheidsbesluit.",
+      "older_exception_reason": "",
+      "topic_id": "pn:alberta-referendum-2026",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://nos.nl/artikel/2635910-inwoners-alberta-stemmen-tegen-afscheiding-van-canada",
+        "claim": "Ruim driekwart van voorlopige Alberta-stemmen tegen afscheiding.",
+        "support": "NOS, datePublished 20 oktober 08:33:29 +02:00: nog niet alle stemmen geteld, ruim driekwart voor blijven; raadpleging niet bindend.",
+        "limitations": "Voorlopige uitslagen via CBC in NOS-verslag; opkomst nog onbekend. Conceptdatum 21 oktober gecorrigeerd naar 20 oktober.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used",
+        "image_evidence": "Geen beeld ingesteld voor deze actualiteit."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "225 historische records gecontroleerd op canonieke URLs/identifiers en alle titels inhoudelijk vergeleken; geen hetzelfde nieuwsfeit. ",
+        "new_fact": ""
+      }
+    },
+    "headlines:1": {
+      "source_id": "nos",
+      "organization_id": "nos",
+      "article_url": "https://nos.nl/artikel/2635911-postnl-vraagt-opnieuw-om-extra-geld-voor-postbezorging",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-20",
+      "event_date": "2026-10-20",
+      "checked_on": "2026-10-22",
+      "dates_checked": true,
+      "new_development": "Nieuwe vergoedingsvraag; geen besluit over toekenning.",
+      "older_exception_reason": "",
+      "topic_id": "pn:postnl-vergoedingsverzoek-2027",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://nos.nl/artikel/2635911-postnl-vraagt-opnieuw-om-extra-geld-voor-postbezorging",
+        "claim": "PostNL vraagt 80 miljoen voor brievenpost.",
+        "support": "NOS, datePublished 20 oktober 08:36:10 +02:00: verzoek extra vergoeding voor komend jaar; eerdere verzoeken afgewezen en procedures lopen.",
+        "limitations": "Het is een verzoek, geen toegekende subsidie. Kostenonderbouwing van het bedrijf, niet onafhankelijk bevestigd.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used",
+        "image_evidence": "Geen beeld ingesteld voor deze actualiteit."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "225 historische records gecontroleerd op canonieke URLs/identifiers en alle titels inhoudelijk vergeleken; geen hetzelfde nieuwsfeit. ",
+        "new_fact": ""
+      }
+    },
+    "headlines:2": {
+      "source_id": "nos",
+      "organization_id": "nos",
+      "article_url": "https://nos.nl/artikel/2635852-moederbedrijf-albert-heijn-doet-na-ruim-een-week-aangifte-van-cyberaanval",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-19",
+      "event_date": "2026-10-18",
+      "checked_on": "2026-10-22",
+      "dates_checked": true,
+      "new_development": "Aangifte op 18 oktober, publicatie op 19 oktober.",
+      "older_exception_reason": "",
+      "topic_id": "pn:ahold-aangifte-cyberaanval-2026",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://nos.nl/artikel/2635852-moederbedrijf-albert-heijn-doet-na-ruim-een-week-aangifte-van-cyberaanval",
+        "claim": "Ahold Delhaize deed aangifte van cyberaanval.",
+        "support": "NOS 19 oktober 17:26:59 +02:00 meldt aangifte gisteren; gebeurtenisdatum dus 18 oktober. Site/app weer bereikbaar, bezorging nog niet volledig hervat; onderzoek loopt.",
+        "limitations": "Geen aanwijzingen is geen bewijs dat geen gegevens zijn gestolen. Bezorgverwachting nog geen herstelde dienst.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used",
+        "image_evidence": "Geen beeld ingesteld voor deze actualiteit."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "225 historische records gecontroleerd op canonieke URLs/identifiers en alle titels inhoudelijk vergeleken; geen hetzelfde nieuwsfeit. ",
+        "new_fact": ""
+      }
+    }
+  },
+  "publication_authorization": {
+    "authorized_on": "2026-10-22",
+    "scope": "Websitepublicatie van deze vastgestelde editie; geen nieuwsbriefverzending.",
+    "selection_basis": "Vastgestelde keuze uitgever; verdere herselectie expliciet niet gevraagd. Zie publisher_selection_authorization in selectiedossier."
+  }
+}
