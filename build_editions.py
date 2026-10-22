@@ -12,6 +12,7 @@ import urllib.request
 from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
+from simple_analytics_badge import badge_html
 from categories import (CATEGORY_ORDER, CATEGORY_ALIASES, canonical_category,
                         category_label, slugify_category)
 
@@ -830,7 +831,7 @@ def render_article_page(item, date_value, related_records=None, image_data=None)
       <p class="article-back"><a href="/edities/{esc(date_value)}/">← Terug naar de editie van {esc(date_text)}</a></p>
     </div>
   </main>
-  <footer>Positief nieuws · Dit gebeurt ook. · <a href="/contact/" onclick="if(window.sa_event)window.sa_event('contact_click')">Contact</a> · <a href="/tip/" onclick="if(window.sa_event)window.sa_event('tip_redactie_click')">Tip de redactie</a></footer>
+  <footer>Positief nieuws · Dit gebeurt ook. · <a href="/contact/" onclick="if(window.sa_event)window.sa_event('contact_click')">Contact</a> · <a href="/tip/" onclick="if(window.sa_event)window.sa_event('tip_redactie_click')">Tip de redactie</a>{badge_html()}</footer>
   {analytics_html({'page_type':'article','edition':date_value,'article_title':title_raw,'source':source_raw,'category':category_raw})}
   {ARTICLE_GROWTH_JS}
 </body>
@@ -909,7 +910,7 @@ def render_edition(data, date_value):
 <section class="section"><div class="shell"><div class="heading"><p class="kicker">Goed nieuws uit de wereld</p><span class="count">6 verhalen</span></div><p class="note">Zes positieve ontwikkelingen van buiten Nederland. Lees de samenvattingen en volledige artikelen in het Nederlands.</p>{int_html}</div></section>
 <section class="section alt"><div class="shell"><div class="heading"><p class="kicker">Wat je verder moet weten</p><span class="count">3 verhalen</span></div><p class="note">Niet per se positief, wel belangrijk.</p>{head_html}</div></section>
 <section class="end"><div class="shell"><h2>Dit was het voor deze editie.<br>Je bent weer bij.</h2><p>Geniet van je dag.</p><a class="back" href="/">Lees de nieuwste editie</a></div></section>
-</main><footer>Positief nieuws · Dit gebeurt ook. · <a href="/contact/" onclick="if(window.sa_event)window.sa_event('contact_click')">Contact</a> · <a href="/tip/" onclick="if(window.sa_event)window.sa_event('tip_redactie_click')">Tip de redactie</a></footer>{analytics_html({'page_type':'edition','edition':date_value})}</body></html>"""
+</main><footer>Positief nieuws · Dit gebeurt ook. · <a href="/contact/" onclick="if(window.sa_event)window.sa_event('contact_click')">Contact</a> · <a href="/tip/" onclick="if(window.sa_event)window.sa_event('tip_redactie_click')">Tip de redactie</a>{badge_html()}</footer>{analytics_html({'page_type':'edition','edition':date_value})}</body></html>"""
 
 
 def _headline_html(item, number, date_value=None):
@@ -950,7 +951,7 @@ def render_archive(entries):
         rows.append(f'<a class="archive-item" href="/edities/{date_value}/"><span class="archive-date">{esc(short_date)}</span><span class="archive-title">Positief nieuws · {esc(date_text)}</span><span class="archive-arrow">→</span></a>')
     desc = "Bekijk alle eerdere edities van Positief nieuws: 12 positieve nieuwsverhalen uit Nederland en de wereld, plus 3 belangrijke onderwerpen."
     schema = json.dumps({"@context":"https://schema.org","@type":"CollectionPage","name":"Archief van Positief nieuws","url":f"{SITE_URL}/edities/","description":desc,"isPartOf":{"@type":"WebSite","name":"Positief nieuws","url":SITE_URL+"/"}}, ensure_ascii=False)
-    return f"""<!DOCTYPE html><html lang="nl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Archief | Eerdere edities van Positief nieuws</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{SITE_URL}/edities/"><meta property="og:title" content="Archief · Positief nieuws"><meta property="og:description" content="{esc(desc)}"><meta property="og:type" content="website"><meta property="og:url" content="{SITE_URL}/edities/"><meta name="twitter:card" content="summary"><meta name="theme-color" content="#17382b"><script type="application/ld+json">{schema}</script><style>{BASE_CSS}</style></head><body>{header_html('archive')}<main><section class="hero"><div class="shell"><p class="kicker">Eerdere edities</p><h1>Archief<b>.</b></h1><p class="lead">Lees eerdere edities van Positief nieuws terug.</p><div class="rule"></div></div></section><section class="section"><div class="shell"><div class="archive-list">{''.join(rows)}</div><p class="small">Bekijk ook het overzicht van <a href="/onderwerpen/">onderwerpen</a>.</p></div></section></main><footer>Positief nieuws · Dit gebeurt ook. · <a href="/contact/" onclick="if(window.sa_event)window.sa_event('contact_click')">Contact</a> · <a href="/tip/" onclick="if(window.sa_event)window.sa_event('tip_redactie_click')">Tip de redactie</a></footer>{analytics_html({'page_type':'archive'})}</body></html>"""
+    return f"""<!DOCTYPE html><html lang="nl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Archief | Eerdere edities van Positief nieuws</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{SITE_URL}/edities/"><meta property="og:title" content="Archief · Positief nieuws"><meta property="og:description" content="{esc(desc)}"><meta property="og:type" content="website"><meta property="og:url" content="{SITE_URL}/edities/"><meta name="twitter:card" content="summary"><meta name="theme-color" content="#17382b"><script type="application/ld+json">{schema}</script><style>{BASE_CSS}</style></head><body>{header_html('archive')}<main><section class="hero"><div class="shell"><p class="kicker">Eerdere edities</p><h1>Archief<b>.</b></h1><p class="lead">Lees eerdere edities van Positief nieuws terug.</p><div class="rule"></div></div></section><section class="section"><div class="shell"><div class="archive-list">{''.join(rows)}</div><p class="small">Bekijk ook het overzicht van <a href="/onderwerpen/">onderwerpen</a>.</p></div></section></main><footer>Positief nieuws · Dit gebeurt ook. · <a href="/contact/" onclick="if(window.sa_event)window.sa_event('contact_click')">Contact</a> · <a href="/tip/" onclick="if(window.sa_event)window.sa_event('tip_redactie_click')">Tip de redactie</a>{badge_html()}</footer>{analytics_html({'page_type':'archive'})}</body></html>"""
 
 
 def collect_topics(edition_records):
@@ -1026,7 +1027,7 @@ def render_topics_index(topics, latest):
         cards.append(f'<a class="topic-card" href="/{esc(topic["slug"])}/"><div><span class="topic-card-count">{story_count(total)}</span><h2>{esc(topic["label"])}</h2><p>{esc(description)}</p><span class="topic-card-link">Bekijk de verhalen <span aria-hidden="true">→</span></span></div><svg class="topic-art" viewBox="0 0 78 78" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{illustration}</svg></a>')
     desc = "Bekijk positief nieuws per onderwerp. Eerst Nederlandse verhalen, daarna Engelstalige artikelen, steeds met de nieuwste verhalen bovenaan."
     schema = json.dumps({"@context":"https://schema.org","@type":"CollectionPage","name":"Onderwerpen · Positief nieuws","description":desc,"url":f"{SITE_URL}/onderwerpen/","isPartOf":{"@type":"WebSite","name":"Positief nieuws","url":SITE_URL+"/"}}, ensure_ascii=False)
-    return f"""<!DOCTYPE html><html lang="nl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Onderwerpen | Positief nieuws per thema</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{SITE_URL}/onderwerpen/"><meta property="og:title" content="Onderwerpen · Positief nieuws"><meta property="og:description" content="{esc(desc)}"><meta property="og:type" content="website"><meta property="og:url" content="{SITE_URL}/onderwerpen/"><meta name="twitter:card" content="summary"><meta name="theme-color" content="#17382b"><script type="application/ld+json">{schema}</script><style>{BASE_CSS}{TOPIC_INDEX_CSS}</style></head><body class="topics-index">{header_html('topics')}<main><section class="topics-intro"><div class="topics-shell"><div class="topics-intro-inner"><div><p class="kicker">Positief nieuws per thema</p><h1>Onderwerpen<b>.</b></h1><p class="lead">De wereld gaat op allerlei manieren vooruit. Ontdek de verhalen achter die vooruitgang, van een gezondere samenleving tot natuur die zich herstelt.</p></div></div><div class="topics-divider"><span>{len(topics)} thema’s om te ontdekken</span><span>Nieuwsgierig blijven.</span></div></div></section><section class="topics-grid-section" aria-label="Alle onderwerpen"><div class="topics-shell"><div class="topics-grid">{''.join(cards) if cards else '<p class="empty">Nog geen onderwerpen beschikbaar.</p>'}</div><p class="topics-note">Nederlandse en internationale verhalen. In elk onderwerp staat het nieuwste nieuws bovenaan.</p></div></section></main><footer>Positief nieuws · Dit gebeurt ook. · <a href="/contact/" onclick="if(window.sa_event)window.sa_event('contact_click')">Contact</a> · <a href="/tip/" onclick="if(window.sa_event)window.sa_event('tip_redactie_click')">Tip de redactie</a></footer>{analytics_html({'page_type':'topics'})}</body></html>"""
+    return f"""<!DOCTYPE html><html lang="nl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Onderwerpen | Positief nieuws per thema</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{SITE_URL}/onderwerpen/"><meta property="og:title" content="Onderwerpen · Positief nieuws"><meta property="og:description" content="{esc(desc)}"><meta property="og:type" content="website"><meta property="og:url" content="{SITE_URL}/onderwerpen/"><meta name="twitter:card" content="summary"><meta name="theme-color" content="#17382b"><script type="application/ld+json">{schema}</script><style>{BASE_CSS}{TOPIC_INDEX_CSS}</style></head><body class="topics-index">{header_html('topics')}<main><section class="topics-intro"><div class="topics-shell"><div class="topics-intro-inner"><div><p class="kicker">Positief nieuws per thema</p><h1>Onderwerpen<b>.</b></h1><p class="lead">De wereld gaat op allerlei manieren vooruit. Ontdek de verhalen achter die vooruitgang, van een gezondere samenleving tot natuur die zich herstelt.</p></div></div><div class="topics-divider"><span>{len(topics)} thema’s om te ontdekken</span><span>Nieuwsgierig blijven.</span></div></div></section><section class="topics-grid-section" aria-label="Alle onderwerpen"><div class="topics-shell"><div class="topics-grid">{''.join(cards) if cards else '<p class="empty">Nog geen onderwerpen beschikbaar.</p>'}</div><p class="topics-note">Nederlandse en internationale verhalen. In elk onderwerp staat het nieuwste nieuws bovenaan.</p></div></section></main><footer>Positief nieuws · Dit gebeurt ook. · <a href="/contact/" onclick="if(window.sa_event)window.sa_event('contact_click')">Contact</a> · <a href="/tip/" onclick="if(window.sa_event)window.sa_event('tip_redactie_click')">Tip de redactie</a>{badge_html()}</footer>{analytics_html({'page_type':'topics'})}</body></html>"""
 
 
 TOPIC_DOSSIER_CSS = r"""
@@ -1648,7 +1649,7 @@ def render_topic_page(topic):
     {context_html}
     {render_topic_why(label)}
   </main>
-  <footer>Positief nieuws · Dit gebeurt ook. · <a href="/contact/" onclick="if(window.sa_event)window.sa_event('contact_click')">Contact</a> · <a href="/tip/" onclick="if(window.sa_event)window.sa_event('tip_redactie_click')">Tip de redactie</a></footer>
+  <footer>Positief nieuws · Dit gebeurt ook. · <a href="/contact/" onclick="if(window.sa_event)window.sa_event('contact_click')">Contact</a> · <a href="/tip/" onclick="if(window.sa_event)window.sa_event('tip_redactie_click')">Tip de redactie</a>{badge_html()}</footer>
   {analytics_html({'page_type':'topic','topic':slug,'category':label})}
 </body>
 </html>"""
@@ -2050,6 +2051,8 @@ def refresh_site_design():
     apply()
     from support_visibility import apply as apply_support_visibility
     apply_support_visibility()
+    from simple_analytics_badge import apply as apply_footer_badge
+    apply_footer_badge()
     print("Gedeelde vormgeving toegepast op alle inhoudspagina’s.")
 
 def main():
