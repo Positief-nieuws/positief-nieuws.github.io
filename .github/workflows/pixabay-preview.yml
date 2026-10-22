@@ -1,0 +1,74 @@
+name: Beelden voor lokale redactie
+
+on:
+  workflow_dispatch:
+    inputs:
+      request:
+        description: 'JSON met edition_date en articles (article_slug, image_query)'
+        required: true
+        type: string
+
+# Only produces a downloadable artifact. No commits, build, Pages or newsletter.
+permissions:
+  contents: read
+
+jobs:
+  images:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Zoek Pixabay-beelden met de bestaande integratie
+        env:
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          REQUEST_JSON: ${{ inputs.request }}
+        run: |
+          python - <<'PY'
+          import datetime, hashlib, json, os, re, shutil
+          from pathlib import Path
+          import build_editions
+
+          if not os.environ.get('PIXABAY_API_KEY'):
+              raise SystemExit('PIXABAY_API_KEY ontbreekt in repository Secrets.')
+          raw = os.environ['REQUEST_JSON']
+          if len(raw) > 12000:
+              raise SystemExit('Aanvraag te groot.')
+          request = json.loads(raw)
+          date = datetime.date.fromisoformat(request['edition_date']).isoformat()
+          articles = request['articles']
+          if not isinstance(articles, list) or not 1 <= len(articles) <= 12:
+              raise SystemExit('Geef 1 tot 12 beeldvragen op.')
+          output = Path('local-image-export'); output.mkdir()
+          result = []
+          for item in articles:
+              slug = item['article_slug']; query = item['image_query']
+              if not re.fullmatch(r'[a-z0-9][a-z0-9-]{0,100}', slug):
+                  raise SystemExit('Ongeldige artikelcode.')
+              if not isinstance(query, str) or not 1 <= len(query) <= 100 or ':' in query:
+                  raise SystemExit('Alleen een gewone Pixabay-zoekvraag toegestaan.')
+              pick = item.get('image_pick', 0)
+              if type(pick) is not int or not 0 <= pick < 20:
+                  raise SystemExit('Ongeldig beeldnummer.')
+              # Isolated cache key avoids reusing an earlier unsuitable preview photo.
+              ask = dict(item, article_slug='local-' + slug, title=slug, image_pick=pick)
+              image = build_editions.resolve_pixabay_image(ask, date)
+              if not image:
+                  result.append({'slug': slug, 'error': 'Geen beeld gevonden'}); continue
+              source = Path(image['image_path'].lstrip('/'))
+              if not source.resolve().is_relative_to(Path('images/artikelen').resolve()):
+                  raise SystemExit('Onverwacht beeldpad.')
+              destination = output / source; destination.parent.mkdir(parents=True, exist_ok=True)
+              shutil.copyfile(source, destination)
+              result.append({'slug': slug, 'image': image, 'sha256': hashlib.sha256(source.read_bytes()).hexdigest()})
+          (output / 'manifest.json').write_text(json.dumps({'edition_date': date, 'images': result}, ensure_ascii=False, indent=2))
+          print(f'{sum("image" in x for x in result)} beelden opgehaald; niets gepubliceerd.')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: lokale-redactie-beelden
+          path: local-image-export/
+          if-no-files-found: error
+          retention-days: 7
