@@ -3959,8 +3959,8 @@
     "discovery_version": 3
   },
   "rivm-23acca8d": {
-    "last_success_at": "2026-10-19T10:12:57.562925+00:00",
-    "last_error": "ValueError: URLError: <urlopen error [Errno 101] Network is unreachable>",
+    "last_success_at": "2026-10-22T09:34:55.433913+00:00",
+    "last_error": null,
     "items": [
       {
         "title": "Steeds grotere bedreiging nationale veiligheid maakt strategische keuzes noodzakelijk",
@@ -3971,7 +3971,7 @@
         "cached_signal_score": 0,
         "cached_category_hint": "Gezondheid",
         "discovery_origin": "current_fetch",
-        "discovered_at": "2026-10-19T10:12:57.562925+00:00"
+        "discovered_at": "2026-10-22T09:34:55.433913+00:00"
       },
       {
         "title": "Besluit minister VWS: 13 wekenecho stopt",
@@ -3982,7 +3982,7 @@
         "cached_signal_score": 0,
         "cached_category_hint": "Gezondheid",
         "discovery_origin": "current_fetch",
-        "discovered_at": "2026-10-19T10:12:57.562925+00:00"
+        "discovered_at": "2026-10-22T09:34:55.433913+00:00"
       },
       {
         "title": "Griepprik gaat weer van start",
@@ -3993,7 +3993,7 @@
         "cached_signal_score": 0,
         "cached_category_hint": "Cultuur",
         "discovery_origin": "current_fetch",
-        "discovered_at": "2026-10-19T10:12:57.562925+00:00"
+        "discovered_at": "2026-10-22T09:34:55.433913+00:00"
       },
       {
         "title": "Meer aandacht voor gezonde start kinderen, impact op gezondheid blijft achter",
@@ -4004,7 +4004,7 @@
         "cached_signal_score": 0,
         "cached_category_hint": "Gezondheid",
         "discovery_origin": "current_fetch",
-        "discovered_at": "2026-10-19T10:12:57.562925+00:00"
+        "discovered_at": "2026-10-22T09:34:55.433913+00:00"
       },
       {
         "title": "Staat van Zoönosen 2025: een overzicht van de belangrijkste zoönosen in Nederland",
@@ -4015,7 +4015,7 @@
         "cached_signal_score": 0,
         "cached_category_hint": "Natuur & klimaat",
         "discovery_origin": "current_fetch",
-        "discovered_at": "2026-10-19T10:12:57.562925+00:00"
+        "discovered_at": "2026-10-22T09:34:55.433913+00:00"
       },
       {
         "title": "Opvoedprogramma positief voor gezondheid en bespaart zorgkosten",
@@ -4026,7 +4026,7 @@
         "cached_signal_score": 0,
         "cached_category_hint": "Gezondheid",
         "discovery_origin": "current_fetch",
-        "discovered_at": "2026-10-19T10:12:57.562925+00:00"
+        "discovered_at": "2026-10-22T09:34:55.433913+00:00"
       },
       {
         "title": "Suikerbelasting kan gelden voor ruim 40% van de suikers die mensen binnenkrijgen",
@@ -4037,7 +4037,7 @@
         "cached_signal_score": 0,
         "cached_category_hint": "Wetenschap",
         "discovery_origin": "current_fetch",
-        "discovered_at": "2026-10-19T10:12:57.562925+00:00"
+        "discovered_at": "2026-10-22T09:34:55.433913+00:00"
       },
       {
         "title": "Dalende trend stikstofdepositie op Natura 2000-gebieden",
@@ -4048,7 +4048,7 @@
         "cached_signal_score": 0,
         "cached_category_hint": "Gezondheid",
         "discovery_origin": "current_fetch",
-        "discovered_at": "2026-10-19T10:12:57.562925+00:00"
+        "discovered_at": "2026-10-22T09:34:55.433913+00:00"
       },
       {
         "title": "Minder kleding produceren en kopen is belangrijkste stap richting een circulaire sector",
@@ -4059,7 +4059,7 @@
         "cached_signal_score": 0,
         "cached_category_hint": "Wetenschap",
         "discovery_origin": "current_fetch",
-        "discovered_at": "2026-10-19T10:12:57.562925+00:00"
+        "discovered_at": "2026-10-22T09:34:55.433913+00:00"
       },
       {
         "title": "Nationaal Hepatitisplan: meer nodig om hepatitis B en C te voorkomen en verminderen",
@@ -4070,7 +4070,7 @@
         "cached_signal_score": 0,
         "cached_category_hint": "Gezondheid",
         "discovery_origin": "current_fetch",
-        "discovered_at": "2026-10-19T10:12:57.562925+00:00"
+        "discovered_at": "2026-10-22T09:34:55.433913+00:00"
       },
       {
         "title": "Europese voedselsystemen onder druk door klimaatveranderingen en geopolitieke onrust",
@@ -4081,7 +4081,7 @@
         "cached_signal_score": 0,
         "cached_category_hint": "Natuur & klimaat",
         "discovery_origin": "current_fetch",
-        "discovered_at": "2026-10-19T10:12:57.562925+00:00"
+        "discovered_at": "2026-10-22T09:34:55.433913+00:00"
       },
       {
         "title": "Start seizoen luchtweginfecties: RIVM houdt verspreiding nog scherper in de gaten",
@@ -4092,7 +4092,7 @@
         "cached_signal_score": 0,
         "cached_category_hint": "Cultuur",
         "discovery_origin": "current_fetch",
-        "discovered_at": "2026-10-19T10:12:57.562925+00:00"
+        "discovered_at": "2026-10-22T09:34:55.433913+00:00"
       },
       {
         "title": "Nieuwe metingen PFAS in bloed",
@@ -4103,7 +4103,7 @@
         "cached_signal_score": 0,
         "cached_category_hint": "Gezondheid",
         "discovery_origin": "current_fetch",
-        "discovered_at": "2026-10-19T10:12:57.562925+00:00"
+        "discovered_at": "2026-10-22T09:34:55.433913+00:00"
       },
       {
         "title": "Preventieve taken onderbelicht in het werk van bedrijfsartsen",
@@ -4114,7 +4114,7 @@
         "cached_signal_score": 0,
         "cached_category_hint": "Economie",
         "discovery_origin": "current_fetch",
-        "discovered_at": "2026-10-19T10:12:57.562925+00:00"
+        "discovered_at": "2026-10-22T09:34:55.433913+00:00"
       },
       {
         "title": "Microplastics in oppervlaktewater: meer aandacht nodig voor kwaliteit meetgegevens",
@@ -4125,7 +4125,7 @@
         "cached_signal_score": 0,
         "cached_category_hint": "Wetenschap",
         "discovery_origin": "current_fetch",
-        "discovered_at": "2026-10-19T10:12:57.562925+00:00"
+        "discovered_at": "2026-10-22T09:34:55.433913+00:00"
       },
       {
         "title": "Klimaat en energieverkenning 2026: grote kloof tussen ambitie en beleid richting 2040",
@@ -4136,7 +4136,7 @@
         "cached_signal_score": 0,
         "cached_category_hint": "Natuur & klimaat",
         "discovery_origin": "current_fetch",
-        "discovered_at": "2026-10-19T10:12:57.562925+00:00"
+        "discovered_at": "2026-10-22T09:34:55.433913+00:00"
       },
       {
         "title": "RIVM geeft ministeries handvatten voor nieuw beleid en maatregelen op het gebied van sport en bewegen",
@@ -4147,7 +4147,7 @@
         "cached_signal_score": 0,
         "cached_category_hint": "Sport",
         "discovery_origin": "current_fetch",
-        "discovered_at": "2026-10-19T10:12:57.562925+00:00"
+        "discovered_at": "2026-10-22T09:34:55.433913+00:00"
       },
       {
         "title": "Prik tegen het RS-virus weer van start",
@@ -4158,7 +4158,7 @@
         "cached_signal_score": 1,
         "cached_category_hint": "Cultuur",
         "discovery_origin": "current_fetch",
-        "discovered_at": "2026-10-19T10:12:57.562925+00:00"
+        "discovered_at": "2026-10-22T09:34:55.433913+00:00"
       },
       {
         "title": "Nog steeds veel PAK en metalen in stof IJmond",
@@ -4169,7 +4169,7 @@
         "cached_signal_score": 0,
         "cached_category_hint": "Gezondheid",
         "discovery_origin": "current_fetch",
-        "discovered_at": "2026-10-19T10:12:57.562925+00:00"
+        "discovered_at": "2026-10-22T09:34:55.433913+00:00"
       },
       {
         "title": "Eenduidige informatie belangrijk voor het vertrouwen van zwangeren en net bevallen vrouwen",
@@ -4180,7 +4180,7 @@
         "cached_signal_score": 0,
         "cached_category_hint": "Wetenschap",
         "discovery_origin": "current_fetch",
-        "discovered_at": "2026-10-19T10:12:57.562925+00:00"
+        "discovered_at": "2026-10-22T09:34:55.433913+00:00"
       }
     ],
     "discovery_version": 3
