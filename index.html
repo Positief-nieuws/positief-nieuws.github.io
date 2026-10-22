@@ -1826,6 +1826,46 @@ body{background:#fffcf7;color:#182e35;font-family:Inter,ui-sans-serif,-apple-sys
 #today-view .hero-intro .hero-date{margin:0 0 14px!important;color:var(--ink);font-size:clamp(1.35rem,3.2vw,1.9rem)!important;line-height:1.2;font-weight:800;letter-spacing:-.035em;text-transform:none}
 #today-view .hero-intro .leadtext{margin:0;max-width:750px}
 @media(max-width:640px){#today-view .hero-intro{padding-top:25px;padding-bottom:23px}}
+
+    /* Lezersreactie: uitsluitend op de homepage. */
+    #reader-voices {
+      margin: 0 0 28px;
+      padding: clamp(22px, 4vw, 36px);
+      border: 1px solid var(--line-soft);
+      border-left: 3px solid var(--accent);
+      border-radius: 12px;
+      background: rgba(255,255,255,.32);
+      color: var(--ink);
+    }
+    #reader-voices h2 {
+      margin: 0 0 16px;
+      color: var(--green);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    #reader-voices blockquote { margin: 0; }
+    #reader-voices .reader-highlight {
+      margin: 0 0 14px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.35rem, 3vw, 1.8rem);
+      line-height: 1.3;
+    }
+    #reader-voices .reader-quote {
+      max-width: 760px;
+      margin: 0;
+      color: #4c5850;
+      font-size: .94rem;
+      font-style: italic;
+      line-height: 1.65;
+    }
+    #reader-voices .reader-credit {
+      margin: 16px 0 0;
+      color: var(--green);
+      font-size: .8rem;
+    }
 </style><link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64"><link rel="icon" type="image/png" href="/favicon.png" sizes="96x96"><link rel="apple-touch-icon" href="/sun-apple-touch-icon.png" sizes="180x180"><link rel="manifest" href="/manifest.json?v=5"><meta name="application-name" content="Positief nieuws"><!-- edition-analytics:start --><script src="/edition-analytics.js?v=2" data-page-type="homepage" data-edition="2026-10-22"></script><!-- edition-analytics:end --><link rel="stylesheet" href="/site-theme.css?v=20261016a"><link rel="stylesheet" href="/newsletter-conversion.css?v=2"><!-- social-meta:start --><meta property="og:title" content="Positief nieuws vandaag | Nederland en de wereld"><meta property="og:description" content="Het belangrijkste positieve nieuws van vandaag uit Nederland en de wereld. In een paar minuten bijgepraat, zonder eindeloos scrollen."><meta property="og:url" content="https://positief-nieuws.nl/"><meta property="og:type" content="website"><meta property="og:site_name" content="Positief nieuws"><meta property="og:locale" content="nl_NL"><meta property="og:image" content="https://positief-nieuws.nl/images/social/positief-nieuws-v1.png"><meta property="og:image:secure_url" content="https://positief-nieuws.nl/images/social/positief-nieuws-v1.png"><meta property="og:image:alt" content="Positief nieuws. Dit gebeurt ook. Nieuws uit Nederland en de wereld."><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Positief nieuws vandaag | Nederland en de wereld"><meta name="twitter:description" content="Het belangrijkste positieve nieuws van vandaag uit Nederland en de wereld. In een paar minuten bijgepraat, zonder eindeloos scrollen."><meta name="twitter:image" content="https://positief-nieuws.nl/images/social/positief-nieuws-v1.png"><meta name="twitter:image:alt" content="Positief nieuws. Dit gebeurt ook. Nieuws uit Nederland en de wereld."><!-- social-meta:end --><!-- social-assets:start --><link rel="stylesheet" href="/social-sharing.css?v=1"><script src="/social-sharing.js?v=1" defer></script><!-- social-assets:end --></head>
 <body class="pn-home"><a class="skip" href="#main">Ga naar inhoud</a>
 
@@ -1948,7 +1988,14 @@ body{background:#fffcf7;color:#182e35;font-family:Inter,ui-sans-serif,-apple-sys
             </div>
           </div>
         </div>
-      </section><section id="nieuwsbrief" class="pn-newsletter" aria-labelledby="home_end-title"><div><h2 id="home_end-title">De volgende editie gewoon in je inbox.</h2><p>Elke maandag en donderdag ook oplossingen en vooruitgang in je inbox. Met bronnen en nuance. Gratis en in een paar minuten gelezen.</p></div><form action="https://buttondown.com/api/emails/embed-subscribe/positiefnieuws" method="post" data-newsletter-placement="home_end"><label for="home_end-email">E-mailadres</label><div class="pn-newsletter-row"><input id="home_end-email" type="email" name="email" autocomplete="email" placeholder="jij@voorbeeld.nl" required><button type="submit">Gratis aanmelden</button></div><input type="hidden" name="embed" value="1"><input type="hidden" name="metadata__signup_source" value="home_end"><p class="pn-newsletter-note">Afmelden kan altijd. Je bevestigt je inschrijving per e-mail.</p></form></section><section class="block"><div class="blocktitle"><div><h2>Eerdere edities</h2><div class="accent"></div></div><p>Rustig teruglezen</p></div><div id="home-archive-state" class="state">Eerdere edities laden…</div><div id="home-archive-list" class="home-archive-list" hidden></div><p style="margin-top:18px"><a class="btn subtle" href="/edities/">Bekijk alle edities →</a></p></section><!-- support-offline:6cf339f2685c755d63284a3e8370bbf2d348dc05c60e7e019115d0c24460899a --><section class="block index-box"><div class="index-intro"><span class="index-sun" aria-hidden="true">☀</span><div class="eyebrow">Dit gebeurt ook.</div><h2>Een paar minuten.<br>Een ander perspectief.</h2><p>Elke maandag en donderdag: twaalf positieve verhalen uit Nederland en de wereld, plus drie ontwikkelingen om bij te blijven.</p></div><div class="index-details"><p>Positief nieuws wil het nieuwslandschap meer in balans brengen door ook oplossingen, vooruitgang en hoopvolle ontwikkelingen zichtbaar te maken. Bij ieder verhaal vind je bronnen en nuance. Problemen blijven in beeld; hoopvolle ontwikkelingen krijgen ook de ruimte.</p><div class="index-topics"><a href="/natuur-en-klimaat/">Natuur &amp; klimaat ↗</a><a href="/gezondheid/">Gezondheid ↗</a><a href="/wetenschap/">Wetenschap ↗</a><a href="/onderwerpen/">Alle onderwerpen ↗</a></div><div class="index-links"><a href="/edities/">Lees eerdere edities →</a><a href="/over/">Over Positief nieuws →</a></div></div></section></main></div>
+      </section><section id="reader-voices" aria-labelledby="reader-voices-title">
+<h2 id="reader-voices-title">Wat onze lezers zeggen</h2>
+<blockquote>
+<p class="reader-highlight">“Deze site helpt om daarin te blijven geloven.”</p>
+<p class="reader-quote">“Het journaal kijken is voor mij (80) stressvol en ontmoedigend. Toch ben ik er zeker van dat de macht van het goede even groot is als die van het kwaad.”</p>
+</blockquote>
+<p class="reader-credit">Claire, 80 jaar</p>
+</section><section id="nieuwsbrief" class="pn-newsletter" aria-labelledby="home_end-title"><div><h2 id="home_end-title">De volgende editie gewoon in je inbox.</h2><p>Elke maandag en donderdag ook oplossingen en vooruitgang in je inbox. Met bronnen en nuance. Gratis en in een paar minuten gelezen.</p></div><form action="https://buttondown.com/api/emails/embed-subscribe/positiefnieuws" method="post" data-newsletter-placement="home_end"><label for="home_end-email">E-mailadres</label><div class="pn-newsletter-row"><input id="home_end-email" type="email" name="email" autocomplete="email" placeholder="jij@voorbeeld.nl" required><button type="submit">Gratis aanmelden</button></div><input type="hidden" name="embed" value="1"><input type="hidden" name="metadata__signup_source" value="home_end"><p class="pn-newsletter-note">Afmelden kan altijd. Je bevestigt je inschrijving per e-mail.</p></form></section><section class="block"><div class="blocktitle"><div><h2>Eerdere edities</h2><div class="accent"></div></div><p>Rustig teruglezen</p></div><div id="home-archive-state" class="state">Eerdere edities laden…</div><div id="home-archive-list" class="home-archive-list" hidden></div><p style="margin-top:18px"><a class="btn subtle" href="/edities/">Bekijk alle edities →</a></p></section><!-- support-offline:6cf339f2685c755d63284a3e8370bbf2d348dc05c60e7e019115d0c24460899a --><section class="block index-box"><div class="index-intro"><span class="index-sun" aria-hidden="true">☀</span><div class="eyebrow">Dit gebeurt ook.</div><h2>Een paar minuten.<br>Een ander perspectief.</h2><p>Elke maandag en donderdag: twaalf positieve verhalen uit Nederland en de wereld, plus drie ontwikkelingen om bij te blijven.</p></div><div class="index-details"><p>Positief nieuws wil het nieuwslandschap meer in balans brengen door ook oplossingen, vooruitgang en hoopvolle ontwikkelingen zichtbaar te maken. Bij ieder verhaal vind je bronnen en nuance. Problemen blijven in beeld; hoopvolle ontwikkelingen krijgen ook de ruimte.</p><div class="index-topics"><a href="/natuur-en-klimaat/">Natuur &amp; klimaat ↗</a><a href="/gezondheid/">Gezondheid ↗</a><a href="/wetenschap/">Wetenschap ↗</a><a href="/onderwerpen/">Alle onderwerpen ↗</a></div><div class="index-links"><a href="/edities/">Lees eerdere edities →</a><a href="/over/">Over Positief nieuws →</a></div></div></section></main></div>
   <section id="archive-view" class="app-view archive-page" hidden>
     <div class="content-shell">
       <p class="section-kicker">Alle edities</p>
