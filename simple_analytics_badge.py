@@ -5,9 +5,8 @@ import re
 START = '<!-- simple-analytics-badge:start -->'
 END = '<!-- simple-analytics-badge:end -->'
 
-
 def badge_html():
-    # Official Simple Analytics badges#builder embed; both modes retain the requested brand colors.
+    # Official Simple Analytics badge builder embed; both modes retain the requested brand colors.
     query = 'counter=false&amp;radius=4&amp;background=%23F0F5EE&amp;text=%23182E35&amp;logo=%23176E5C'
     return f'''{START}
 <div class="simple-analytics-badge" style="display:block;text-align:center;margin-top:16px">
@@ -20,12 +19,10 @@ def badge_html():
 </div>
 {END}'''
 
-
 def add_badge(markup):
     """Preserve all existing footer content and keep repeat builds idempotent."""
     markup = re.sub(re.escape(START) + r'.*?' + re.escape(END), '', markup, flags=re.S)
     return re.sub(r'</footer\s*>', lambda _: badge_html() + '</footer>', markup, flags=re.I)
-
 
 def apply(root=Path('.')):
     changed = 0
@@ -39,6 +36,6 @@ def apply(root=Path('.')):
             changed += 1
     return changed
 
-
 if __name__ == '__main__':
     print(f'Footerbadge bijgewerkt op {apply()} pagina’s.')
+
