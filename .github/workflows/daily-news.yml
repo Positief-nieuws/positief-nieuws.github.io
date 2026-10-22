@@ -86,7 +86,7 @@ jobs:
 
       - name: Kandidaten verzamelen
         if: github.event_name == 'workflow_dispatch' || steps.freshness.outputs.already_fresh != 'true'
-        run: python auto_news.py
+        run: python auto_news.py --force
 
       - name: Publiceer kandidaten.json indien gewijzigd
         if: github.event_name == 'workflow_dispatch' || steps.freshness.outputs.already_fresh != 'true'
