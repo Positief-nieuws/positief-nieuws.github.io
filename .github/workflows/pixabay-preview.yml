@@ -48,8 +48,8 @@ jobs:
               slug = item['article_slug']; query = item['image_query']
               if not re.fullmatch(r'[a-z0-9][a-z0-9-]{0,100}', slug):
                   raise SystemExit('Ongeldige artikelcode.')
-              if not isinstance(query, str) or not 1 <= len(query) <= 100 or ':' in query:
-                  raise SystemExit('Alleen een gewone Pixabay-zoekvraag toegestaan.')
+              if not isinstance(query, str) or not 1 <= len(query) <= 100 or (':' in query and not re.fullmatch(r'id:[0-9]{1,10}', query)):
+                  raise SystemExit('Alleen Pixabay-zoekwoorden of een numeriek Pixabay-ID toegestaan.')
               pick = item.get('image_pick', 0)
               if type(pick) is not int or not 0 <= pick < 20:
                   raise SystemExit('Ongeldig beeldnummer.')
