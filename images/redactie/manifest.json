@@ -1,0 +1,22 @@
+{
+  "portraits": [
+    {
+      "path": "images/redactie/tom-kleur.png",
+      "original_filename": "image(20261023-175242).png",
+      "style": "kleurrijke tekening",
+      "sha256": "11775cafa2356d5476c29c4cc0909a12b8c0428856e3a02225e4378797a7db79",
+      "provenance": "Door Tom aangeleverd in referentiechat; originele PNG toegankelijk en ongewijzigd gekopieerd op 2026-10-23",
+      "use": "Door Tom gevraagd voor zijn persoonlijke noot; per editie precies één kiezen",
+      "alt": "Portretillustratie van Tom"
+    },
+    {
+      "path": "images/redactie/tom-schets.png",
+      "original_filename": "image(20261023-175255).png",
+      "style": "bijna zwart-witte schets",
+      "sha256": "2761895d46a0dba156009e47993f30044ab4290b74389caed4259799c3800eb9",
+      "provenance": "Door Tom aangeleverd in referentiechat; originele PNG toegankelijk en ongewijzigd gekopieerd op 2026-10-23",
+      "use": "Door Tom gevraagd voor zijn persoonlijke noot; per editie precies één kiezen",
+      "alt": "Portretillustratie van Tom"
+    }
+  ]
+}
