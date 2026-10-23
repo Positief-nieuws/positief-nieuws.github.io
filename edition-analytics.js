@@ -222,3 +222,12 @@
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start, {once:true}); else start();
 })();
+
+// Feedback is independent of analytics consent/exclusion. Uses this shared page asset
+// so new editions and articles receive the same integration without duplicated markup.
+(function () {
+  if (document.querySelector('script[data-pn-feedback]')) return;
+  const script = document.createElement('script');
+  script.src = '/feedback.js?v=1'; script.dataset.pnFeedback = '1';
+  script.defer = true; document.head.appendChild(script);
+})();
