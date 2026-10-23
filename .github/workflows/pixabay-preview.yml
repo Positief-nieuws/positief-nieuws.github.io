@@ -1,4 +1,5 @@
 name: Beelden voor lokale redactie
+run-name: "Lokale beelden · ${{ fromJSON(inputs.request).request_id || 'handmatige proef' }}"
 
 on:
   workflow_dispatch:
@@ -63,7 +64,7 @@ jobs:
               destination = output / source; destination.parent.mkdir(parents=True, exist_ok=True)
               shutil.copyfile(source, destination)
               result.append({'slug': slug, 'image': image, 'sha256': hashlib.sha256(source.read_bytes()).hexdigest()})
-          (output / 'manifest.json').write_text(json.dumps({'edition_date': date, 'images': result}, ensure_ascii=False, indent=2))
+          (output / 'manifest.json').write_text(json.dumps({'edition_date': date, 'request_id': request.get('request_id'), 'images': result}, ensure_ascii=False, indent=2))
           print(f'{sum("image" in x for x in result)} beelden opgehaald; niets gepubliceerd.')
           PY
       - uses: actions/upload-artifact@v4
