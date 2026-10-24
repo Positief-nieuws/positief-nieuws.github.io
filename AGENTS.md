@@ -12,3 +12,12 @@ Lees vóór iedere editie REDACTIE.txt en selection_preferences.json. De huidige
 
 ## Analytics bij websitewerkzaamheden
 Lees vóór iedere browsercontrole `docs/analytics-testing.md`. Gebruik eerst een lokale preview. Open live pagina’s voor onderhoud uitsluitend met `?pn_internal=1` in de gekozen browser; verifieer de uitsluiting voordat je navigeert. Een nieuwe browser of nieuw profiel moet opnieuw worden uitgesloten. Voer geen echte tracking- of Buttondown-test uit zonder het gecontroleerde protocol.
+
+## Commando pn go
+Wanneer Tom `pn go` in deze repositorychat geeft, lees en volg volledig
+`redactie/PN_WORKFLOW.md` en `redactie/weeknotities.md`, naast bovenstaande
+instructies. Voer eerst `python3 scripts/pn.py go --dry-run` uit en ga daarna
+als AI-redacteur verder met de volledige ongepubliceerde proefeditie.
+`pn go --dry-run` vraagt uitsluitend de installatiecontrole, geen nieuwsproductie.
+De lokale launcher `./pn go` toont de opdracht en controleert vindbaarheid;
+hij voert zelf geen autonoom brononderzoek uit. Geen impliciete publicatie.
