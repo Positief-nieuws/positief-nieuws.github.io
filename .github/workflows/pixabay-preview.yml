@@ -1,4 +1,5 @@
 name: Beelden voor lokale redactie
+run-name: "Lokale beelden · ${{ fromJSON(inputs.request).request_id || 'handmatige proef' }}"
 
 on:
   workflow_dispatch:
@@ -47,8 +48,8 @@ jobs:
               slug = item['article_slug']; query = item['image_query']
               if not re.fullmatch(r'[a-z0-9][a-z0-9-]{0,100}', slug):
                   raise SystemExit('Ongeldige artikelcode.')
-              if not isinstance(query, str) or not 1 <= len(query) <= 100 or ':' in query:
-                  raise SystemExit('Alleen een gewone Pixabay-zoekvraag toegestaan.')
+              if not isinstance(query, str) or not 1 <= len(query) <= 100 or (':' in query and not re.fullmatch(r'id:[0-9]{1,10}', query)):
+                  raise SystemExit('Alleen Pixabay-zoekwoorden of een numeriek Pixabay-ID toegestaan.')
               pick = item.get('image_pick', 0)
               if type(pick) is not int or not 0 <= pick < 20:
                   raise SystemExit('Ongeldig beeldnummer.')
@@ -63,7 +64,7 @@ jobs:
               destination = output / source; destination.parent.mkdir(parents=True, exist_ok=True)
               shutil.copyfile(source, destination)
               result.append({'slug': slug, 'image': image, 'sha256': hashlib.sha256(source.read_bytes()).hexdigest()})
-          (output / 'manifest.json').write_text(json.dumps({'edition_date': date, 'images': result}, ensure_ascii=False, indent=2))
+          (output / 'manifest.json').write_text(json.dumps({'edition_date': date, 'request_id': request.get('request_id'), 'images': result}, ensure_ascii=False, indent=2))
           print(f'{sum("image" in x for x in result)} beelden opgehaald; niets gepubliceerd.')
           PY
       - uses: actions/upload-artifact@v4

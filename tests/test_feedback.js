@@ -17,7 +17,7 @@ function run(allowed = true, enabled = true) {
   const main=new Element('main'); main.querySelector=()=>null;
   const document={readyState:'complete',createElement:t=>new Element(t),head:new Element('head'),body:new Element('body'),documentElement:new Element('html'),querySelector:s=>s==='main'?main:{}};
   const window={pnAnalyticsPolicy:{allowed},sa_event:(name,meta)=>events.push({name,meta}),addEventListener:(k,f)=>listeners[k]=f};
-  vm.runInNewContext(enabled?source.replace("const formId = '';","const formId = 'TESTFORM';"):source,{window,document,location:{pathname:'/artikelen/test/',search:'?email=private@example.com',hash:'#private'},URL,URLSearchParams});
+  vm.runInNewContext(source.replace(/const formId = '[^']*';/, enabled ? "const formId = 'TESTFORM';" : "const formId = '';"),{window,document,location:{pathname:'/artikelen/test/',search:'?email=private@example.com',hash:'#private'},URL,URLSearchParams});
   return {nodes,events,listeners,window};
 }
 assert.equal(run(true,false).window.pnFeedback,undefined,'disabled until configured');

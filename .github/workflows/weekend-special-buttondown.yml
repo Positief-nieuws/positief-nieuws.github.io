@@ -1,0 +1,29 @@
+name: Maak Weekend Special concept in Buttondown
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/buttondown-drafts/2026-10-23-weekend-special.html'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: buttondown-weekend-special-2026-10-23
+  cancel-in-progress: false
+
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository ophalen
+        uses: actions/checkout@v4
+      - name: Python instellen
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Maak alleen een concept in Buttondown
+        env:
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+        run: python scripts/create_weekend_special_draft.py

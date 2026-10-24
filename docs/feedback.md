@@ -1,8 +1,9 @@
 # Feedback en nieuwstips
 
-Status: voorbereid, NIET geactiveerd of live getest. In feedback.js is formId leeg.
-Geen externe Tally-verzoeken of knoppen zolang dat zo is. Deze branch pas mergen
-na accountkoppeling, formulierinrichting en onderstaande controles.
+Status 24 oktober 2026: gekoppeld aan het door Tom gepubliceerde formulier
+https://tally.so/r/rDj4EL. Publieke form-ID: rDj4EL. De browserlogin van Tom is
+niet beschikbaar voor beheer vanuit deze werksessie. Ontvangst in Submissions,
+e-mailmelding en verwijderen van testinzendingen moeten door Tom worden bevestigd.
 
 ## Keuze
 
@@ -94,8 +95,13 @@ node tests/test_newsletter_analytics.js
 node tests/test_social_sharing.js
 python3 -m unittest discover -s tests -p 'test_analytics_policy.py'
 
-Alle geslaagd. Unit-tests simuleren het Tally-bericht, geen bewijs van ontvangst.
-Geen productiepageviews, echte Tally-inzendingen of analytics-events aangemaakt.
+Alle automatische controles geslaagd. Ook gecontroleerd: alle 135 pagina’s met
+siteheader laden het gedeelde script. Het publieke formulier toont vier categorieën,
+verplicht bericht en optioneel e-mailveld. Een lege verzendpoging geeft twee
+validatiefouten en geen bedanktekst. Alle vier categorieën zijn aanklikbaar.
+Unit-tests simuleren het Tally-bericht, geen bewijs van ontvangst in beheer.
+De lokale HTTP-preview is vanuit de cloudbrowser niet bereikbaar (andere host).
+Visuele controles vinden daarom direct na publicatie plaats met analyticsuitsluiting.
 
 ## Nog uit te voeren voor publicatie
 
@@ -108,3 +114,14 @@ Geen productiepageviews, echte Tally-inzendingen of analytics-events aangemaakt.
 - Live controle uitsluitend volgens docs/analytics-testing.md.
 - Echte analyticsontvangst apart verifiëren met vooraf vastgelegde testbijdrage.
 - GitHub Pages deploy controleren en live UI verifiëren na merge.
+
+## Beheerlinks
+
+Formulier: https://tally.so/r/rDj4EL
+Editor: https://tally.so/forms/rDj4EL/edit
+Open vanuit het eigen Tally-dashboard het formulier en kies Submissions.
+
+De eigenaar heeft e-mailmeldingen via Ask Tally laten voorbereiden; daadwerkelijke
+bezorging moet met de testmelding worden bevestigd. De notificatiemailbox is niet
+vanuit deze sessie ingezien. Geen automatische bewaartermijn op Free: handmatig
+opschonen blijft nodig.

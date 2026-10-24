@@ -228,6 +228,6 @@
 (function () {
   if (document.querySelector('script[data-pn-feedback]')) return;
   const script = document.createElement('script');
-  script.src = '/feedback.js?v=1'; script.dataset.pnFeedback = '1';
+  script.src = '/feedback.js?v=2'; script.dataset.pnFeedback = '1';
   script.defer = true; document.head.appendChild(script);
 })();
