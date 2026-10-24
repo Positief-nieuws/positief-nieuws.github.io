@@ -1,3 +1,7 @@
+## Snel een ongepubliceerd concept
+
+`./pn go` — zie [FAST CONCEPT](docs/fast-concept.md). Gebruikt bestaande kandidaten en een lokaal model; geen publicatie of nieuwsbriefverzending.
+
 # Positief nieuws
 
 Statische GitHub Pages-site op positief-nieuws.nl. Python bouwt HTML en zoekdata;
