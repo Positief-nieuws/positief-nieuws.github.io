@@ -50,7 +50,9 @@ hergebruikt. Voor het concept blijft beeld een lokale merkplaceholder; er is
 geen Pixabay-zoekopdracht of beeldbeoordeling op het kritieke pad. De bestaande
 Pixabay-verwerking blijft ongewijzigd beschikbaar voor de definitieve editie.
 
-Standaard is het tijdbudget 300 seconden. Bij een model-/bronfout, onvoldoende
+Standaard is het tijdbudget 300 seconden. De deadline telt zowel wandkloktijd
+als de monotone looptijd; na systeemonderbreking stopt de route bij de
+eerstvolgende controle. De computer moet wakker blijven om werk te doen. Bij een model-/bronfout, onvoldoende
 goede verhalen of overschrijding wordt geen compleet HTML-CONCEPT geclaimd.
 De run bewaart zijn tussenresultaat en de reden. Een bewuste langere proef kan
 met `./pn go --budget 900`; dat is geen resultaat binnen vijf minuten.
@@ -71,3 +73,5 @@ voor publicatie. Pas na een afzonderlijk menselijk live akkoord mag exact de
 gecontroleerde editie naar main. Een nieuwsbrief verzenden blijft een aparte
 beslissing. Kopieer een concept of een AI-goedkeuringsvlag nooit rechtstreeks
 naar live om een publicatiegate te omzeilen.
+
+De gemeten beperkingen staan in [het proefrapport](fast-concept-proef.md).

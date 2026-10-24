@@ -1,0 +1,326 @@
+{
+  "measured_on": "2026-10-24",
+  "repository_base": "340c21aa5cbedc2c630ff72481df9b6211666142",
+  "runs": [
+    {
+      "run": "20261024-162944-182870",
+      "started_at": "2026-10-24T16:29:44.182870+02:00",
+      "finished_at_from_file_mtime": "2026-10-24T16:29:44.248131+02:00",
+      "wall_seconds": 0.065261,
+      "monotonic_seconds": 0.065,
+      "complete": false,
+      "counts": {
+        "nl": 0,
+        "int": 0,
+        "headlines": 0
+      },
+      "timing": {
+        "complete": false,
+        "publication_ready": false,
+        "model": "qwen3.5:4b",
+        "error": "'list' object has no attribute 'get'",
+        "seconds": 0.065,
+        "stages": [],
+        "live_news_unchanged": true
+      }
+    },
+    {
+      "run": "20261024-162955-665478",
+      "started_at": "2026-10-24T16:29:55.665478+02:00",
+      "finished_at_from_file_mtime": "2026-10-24T16:32:35.634356+02:00",
+      "wall_seconds": 159.968878,
+      "monotonic_seconds": 159.97,
+      "complete": false,
+      "counts": {
+        "nl": 0,
+        "int": 0,
+        "headlines": 0
+      },
+      "timing": {
+        "complete": false,
+        "publication_ready": false,
+        "model": "qwen3.5:4b",
+        "error": "Ongeldig of dubbel shortlist-id",
+        "seconds": 159.97,
+        "stages": [
+          {
+            "stage": "shortlist",
+            "seconds": 159.806,
+            "tokens": 316
+          }
+        ],
+        "live_news_unchanged": true
+      }
+    },
+    {
+      "run": "20261024-163245-404929",
+      "started_at": "2026-10-24T16:32:45.404929+02:00",
+      "finished_at_from_file_mtime": "2026-10-24T16:33:53.081634+02:00",
+      "wall_seconds": 67.676705,
+      "monotonic_seconds": 67.677,
+      "complete": false,
+      "counts": {
+        "nl": 0,
+        "int": 0,
+        "headlines": 0
+      },
+      "timing": {
+        "complete": false,
+        "publication_ready": false,
+        "model": "qwen3.5:4b",
+        "code_sha256": "ff34232360642379a6ecf34a6937c61ddd77d6deeb8a26a5cba19033149b025b",
+        "pool_sha256": "c75a224379d4705400046c0f9bbacc3bbe3dfae059926bf0af750476ddbf2924",
+        "error": "Ongeldig of dubbel shortlist-id",
+        "seconds": 67.677,
+        "stages": [
+          {
+            "stage": "shortlist",
+            "seconds": 67.499,
+            "tokens": 309
+          }
+        ],
+        "live_news_unchanged": true
+      }
+    },
+    {
+      "run": "20261024-163403-452181",
+      "started_at": "2026-10-24T16:34:03.452181+02:00",
+      "finished_at_from_file_mtime": "2026-10-24T16:37:51.488016+02:00",
+      "wall_seconds": 228.035835,
+      "monotonic_seconds": 228.038,
+      "complete": false,
+      "counts": {
+        "nl": 1,
+        "int": 0,
+        "headlines": 0
+      },
+      "timing": {
+        "complete": false,
+        "publication_ready": false,
+        "model": "qwen3.5:4b",
+        "code_sha256": "27d89eafaa50629a598824437bf240186b7b9579ece47b2d2ae3180876978045",
+        "pool_sha256": "c75a224379d4705400046c0f9bbacc3bbe3dfae059926bf0af750476ddbf2924",
+        "error": "Onvoldoende bevestigde verhalen voor nl",
+        "seconds": 228.038,
+        "stages": [
+          {
+            "stage": "shortlist",
+            "seconds": 62.799,
+            "tokens": 249
+          },
+          {
+            "stage": "article-4f9ae4883a03",
+            "seconds": 16.33,
+            "tokens": 127
+          },
+          {
+            "stage": "article-3000a45becca",
+            "seconds": 20.322,
+            "tokens": 174
+          },
+          {
+            "stage": "article-68e9376f6a41",
+            "seconds": 13.202,
+            "tokens": 94
+          },
+          {
+            "stage": "article-4558adb601f4",
+            "seconds": 32.348,
+            "tokens": 427
+          },
+          {
+            "stage": "article-b51f11a21c49",
+            "seconds": 17.108,
+            "tokens": 130
+          },
+          {
+            "stage": "article-027774c7edf7",
+            "seconds": 17.044,
+            "tokens": 105
+          },
+          {
+            "stage": "article-441e649adfbc",
+            "seconds": 44.668,
+            "tokens": 575
+          }
+        ],
+        "live_news_unchanged": true
+      }
+    },
+    {
+      "run": "20261024-163824-664178",
+      "started_at": "2026-10-24T16:38:24.664178+02:00",
+      "finished_at_from_file_mtime": "2026-10-24T16:41:20.740324+02:00",
+      "wall_seconds": 176.076146,
+      "monotonic_seconds": 176.077,
+      "complete": false,
+      "counts": {
+        "nl": 0,
+        "int": 0,
+        "headlines": 0
+      },
+      "timing": {
+        "complete": false,
+        "publication_ready": false,
+        "model": "qwen3.5:4b",
+        "code_sha256": "7c95866e20d5f183916c65e1b3439f3abdacf2f62fb04939153deea761af29d2",
+        "pool_sha256": "c75a224379d4705400046c0f9bbacc3bbe3dfae059926bf0af750476ddbf2924",
+        "error": "Onvoldoende bevestigde verhalen voor nl",
+        "seconds": 176.077,
+        "stages": [
+          {
+            "stage": "shortlist",
+            "seconds": 61.936,
+            "tokens": 196
+          },
+          {
+            "stage": "article-8bce2d6a823c",
+            "seconds": 14.969,
+            "tokens": 133
+          },
+          {
+            "stage": "article-3388e414cd61",
+            "seconds": 11.381,
+            "tokens": 78
+          },
+          {
+            "stage": "article-68685c946c13",
+            "seconds": 37.861,
+            "tokens": 117
+          },
+          {
+            "stage": "article-4f9ae4883a03",
+            "seconds": 7.308,
+            "tokens": 116
+          },
+          {
+            "stage": "article-b1ec00ef380d",
+            "seconds": 18.471,
+            "tokens": 130
+          },
+          {
+            "stage": "article-df79414bb8cc",
+            "seconds": 21.809,
+            "tokens": 124
+          }
+        ],
+        "live_news_unchanged": true
+      }
+    },
+    {
+      "run": "20261024-164147-514525",
+      "started_at": "2026-10-24T16:41:47.514525+02:00",
+      "finished_at_from_file_mtime": "2026-10-24T16:45:23.749342+02:00",
+      "wall_seconds": 216.234817,
+      "monotonic_seconds": 216.236,
+      "complete": false,
+      "counts": {
+        "nl": 1,
+        "int": 0,
+        "headlines": 0
+      },
+      "timing": {
+        "complete": false,
+        "publication_ready": false,
+        "model": "qwen3.5:4b",
+        "code_sha256": "ffb0aa2b885adb7eef37f929dfa85db15aae3877a0c40c00fe22470ace5084a0",
+        "pool_sha256": "c75a224379d4705400046c0f9bbacc3bbe3dfae059926bf0af750476ddbf2924",
+        "error": "Onvoldoende bevestigde verhalen voor nl",
+        "seconds": 216.236,
+        "stages": [
+          {
+            "stage": "shortlist",
+            "seconds": 62.728,
+            "tokens": 195
+          },
+          {
+            "stage": "article-8bce2d6a823c",
+            "seconds": 18.438,
+            "tokens": 164
+          },
+          {
+            "stage": "article-43f6933a9e36",
+            "seconds": 13.564,
+            "tokens": 80
+          },
+          {
+            "stage": "article-68685c946c13",
+            "seconds": 38.838,
+            "tokens": 131
+          },
+          {
+            "stage": "article-3388e414cd61",
+            "seconds": 15.947,
+            "tokens": 154
+          },
+          {
+            "stage": "article-b1ec00ef380d",
+            "seconds": 46.565,
+            "tokens": 580
+          },
+          {
+            "stage": "article-56f1ce69bfc1",
+            "seconds": 17.642,
+            "tokens": 202
+          }
+        ],
+        "live_news_unchanged": true
+      }
+    },
+    {
+      "run": "20261024-164558-968284",
+      "started_at": "2026-10-24T16:45:58.968284+02:00",
+      "finished_at_from_file_mtime": "2026-10-24T17:20:53.565468+02:00",
+      "wall_seconds": 2094.597184,
+      "monotonic_seconds": 300.003,
+      "complete": false,
+      "counts": {
+        "nl": 1,
+        "int": 0,
+        "headlines": 0
+      },
+      "timing": {
+        "complete": false,
+        "publication_ready": false,
+        "model": "qwen3.5:4b",
+        "code_sha256": "90ade63140b7574a7794a8e50a7e5877b07ec500c73999b12f5928ee2042a9d4",
+        "pool_sha256": "c75a224379d4705400046c0f9bbacc3bbe3dfae059926bf0af750476ddbf2924",
+        "error": "timed out",
+        "seconds": 300.003,
+        "stages": [
+          {
+            "stage": "shortlist",
+            "seconds": 72.205,
+            "tokens": 257
+          },
+          {
+            "stage": "article-8dfea73cf643",
+            "seconds": 54.678,
+            "tokens": 651
+          },
+          {
+            "stage": "article-b1ec00ef380d",
+            "seconds": 60.292,
+            "tokens": 782
+          },
+          {
+            "stage": "article-2bb3a7ea0f20",
+            "seconds": 60.435,
+            "tokens": 759
+          },
+          {
+            "stage": "article-68685c946c13",
+            "seconds": 37.043,
+            "tokens": 86
+          }
+        ],
+        "live_news_unchanged": true
+      }
+    }
+  ],
+  "final_code_sha256_after_wall_clock_fix": "dade50b9c41eebe8c41b1379755390748aedc5e5c6c6f3f45fd7d8d267304f05",
+  "tests": {
+    "passed": 67
+  },
+  "note": "Latest end-to-end measured code precedes the wall-clock instrumentation fix. That fix has a simulated pause regression test, no additional end-to-end speed claim."
+}

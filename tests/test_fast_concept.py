@@ -33,6 +33,18 @@ class FastConceptTests(unittest.TestCase):
 
 if __name__ == '__main__': unittest.main()
 
+class WallClockTests(unittest.TestCase):
+    def test_wall_clock_deadline_includes_machine_pause(self):
+        from tempfile import TemporaryDirectory
+        from pathlib import Path
+        from types import SimpleNamespace
+        with TemporaryDirectory() as tmp, patch.object(fast, 'ROOT', Path(tmp)):
+            runner = fast.Runner(SimpleNamespace(budget=300, model='test'))
+            runner.wall_start -= 600
+            with patch('urllib.request.urlopen') as request:
+                with self.assertRaises(TimeoutError): runner.ask('test', '', {}, 10)
+                request.assert_not_called()
+
 class RenderSafetyTests(unittest.TestCase):
     def test_preview_has_twelve_own_pages_external_headlines_and_no_scripts(self):
         from pathlib import Path
