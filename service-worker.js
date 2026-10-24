@@ -71,7 +71,9 @@ self.addEventListener(
     const isArticleImage = url.pathname.startsWith("/images/artikelen/");
     const isSharedStylesheet = url.pathname === "/site-theme.css"
       || url.pathname === "/analytics-loader.js"
-      || url.pathname === "/edition-analytics.js";
+      || url.pathname === "/edition-analytics.js"
+      || url.pathname === "/feedback.js"
+      || url.pathname === "/feedback.css";
 
     if (isNavigation || isFreshData || isArticleImage || isSharedStylesheet) {
       event.respondWith(

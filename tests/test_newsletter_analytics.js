@@ -13,8 +13,9 @@ function scenario(pageType, category, topic, pathname) {
   };
   const window = {sa_metadata: {page_type:pageType,category,topic},sa_event:(name,metadata)=>events.push({name,metadata})};
   const document = {currentScript:{dataset:{pageType}},readyState:'complete',referrer:'',
+    querySelector:()=>null, head:{appendChild(){}},
     querySelectorAll:()=>pageType === 'newsletter' ? [] : [form],
-    addEventListener:(name,callback)=>{listeners[name]=callback;},createElement:()=>({})};
+    addEventListener:(name,callback)=>{listeners[name]=callback;},createElement:()=>({dataset:{}})};
   let observer;
   const context = {window,document,location:{search:'',pathname,origin:'https://positief-nieuws.nl'},
     URL,URLSearchParams,sessionStorage:{getItem:()=>null,setItem:()=>{}},performance:{now:()=>0},setInterval:()=>{},
