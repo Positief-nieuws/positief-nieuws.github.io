@@ -1,127 +1,90 @@
 # Feedback en nieuwstips
 
-Status 24 oktober 2026: gekoppeld aan het door Tom gepubliceerde formulier
-https://tally.so/r/rDj4EL. Publieke form-ID: rDj4EL. De browserlogin van Tom is
-niet beschikbaar voor beheer vanuit deze werksessie. Ontvangst in Submissions,
-e-mailmelding en verwijderen van testinzendingen moeten door Tom worden bevestigd.
+Live sinds 24 oktober 2026. Formulier: https://tally.so/r/rDj4EL
+Integratie gepubliceerd via PR #14. Form-ID rDj4EL is openbaar, geen credential.
 
-## Keuze
+## Beheer
 
-Tally Free: onbeperkte inzendingen onder fair use, embeds, verborgen velden,
-CSV-export en standaard e-mailmelding. EU-opslag. Geen nieuwe backend of secrets.
-Tally-branding blijft zichtbaar. Custom CSS en automatisch verwijderen vereisen
-betaald abonnement, dus gebruik gratis kleuren/fonts en handmatig opschonen.
-Bestaande mailadressen blijven behouden. Geen wijziging aan Buttondown.
+Open het formulier in je Tally-dashboard en kies Submissions. Daar staan categorie,
+bericht, optioneel e-mailadres en originPage. Je kunt inzendingen naar CSV exporteren.
+Publiceer berichten of persoonsgegevens alleen met expliciete toestemming.
 
-Bronnen gecontroleerd op 23 oktober 2026:
+Schakel onder Settings de gratis Self email notifications in. De standaardmelding
+bevat de ingevulde antwoorden en gaat naar het ingestelde accountadres. De eigenaar
+moet de daadwerkelijke ontvangst bevestigen: de beheer- en mailboxsessie zijn niet
+beschikbaar voor deze werksessie. Er is geen extra koppeling met Buttondown.
+
+Verwijder iedere maand inzendingen, notificatiemails en niet meer benodigde exports
+ouder dan twaalf maanden. Tally Free verwijdert niet automatisch op die termijn.
+Verwijderde gegevens kunnen volgens Tally nog maximaal 90 dagen in back-ups blijven.
+Verwijderverzoeken: privacy@positief-nieuws.nl. Ook anonieme inzenders kunnen met
+voldoende inhoud/datum hun bericht laten terugvinden. De homepageprivacyverklaring
+beschrijft doel, gegevens, dienst, bewaartermijn, grondslag en rechten.
+
+## Werking
+
+De kleine knop Feedback of tip? opent een native dialog. Onder artikelen en specials
+staat ook Deel je reactie. Contact en Tip hebben een ingang naar hetzelfde formulier;
+bestaande mailmogelijkheden blijven beschikbaar. De Tally-iframe laadt alleen na klik.
+Geen extern embedscript nodig. Tally-branding blijft staan op het gratis abonnement.
+De introductie staat uitsluitend in Tally om dubbele tekst in de pop-up te vermijden.
+
+De herkomst bevat alleen location.pathname, geen queryparameters, fragment of titel.
+originPage wordt als hidden field door Tally opgeslagen. Geen persoonsgegevens naar
+analytics. Het formulier zelf bevat verplichte categorie en bericht, optionele e-mail.
+Geen nieuwsbriefinschrijving, account of registratie voor de inzender.
+
+## Analytics
+
+- feedback_open: eenmaal per daadwerkelijk geopende dialoog.
+- feedback_submit: alleen Tally.FormSubmitted van de actieve iframe, origin
+  https://tally.so, juiste form-ID en met dubbele-ontvangstbeveiliging.
+- feedback_type_select: niet beschikbaar. Er is geen gedocumenteerd Tally-event
+  voor veldwijzigingen. Cross-origin formuliervelden zijn niet uitleesbaar.
+
+Metadata: feedback_page en feedback_placement. Antwoorden, e-mailadressen,
+respondent-ID en inzendings-ID worden nooit doorgestuurd. Bestaande analyticsuitsluiting
+blijft gelden; feedback werkt ook als analytics wordt geblokkeerd.
+
+Simple Analytics > Events: vergelijk feedback_open en feedback_submit, eventueel per
+feedback_page/feedback_placement. Submit/open is een eventratio, geen unieke-personen-
+conversie. Opnieuw openen telt opnieuw. Ontvangst in het Simple Analytics-dashboard
+is nog niet geverifieerd; de beheersessie ontbreekt. Geen onbevestigde ontvangstclaim.
+
+## Verificatie op 24 oktober 2026
+
+Geslaagd:
+- Syntax en unit-tests feedback: deduplicatie, origin/source/form-ID checks,
+  focusherstel, uitsluiting en geen persoonsgegevens in analyticsmetadata.
+- Analyticsbeleid, nieuwsbriefanalytics, social sharing en Python analyticsbeleid.
+- Alle 135 inhoudspagina’s laden het gedeelde script; toekomstige pagina’s gebruiken
+  hetzelfde laadpunt. Buttondown-formulieren op vijf representatieve pagina’s zijn
+  bytegelijk aan de voorafgaande versie.
+- GitHub build/regressiecontrole, nieuwsbriefcontrole en Pages deployment geslaagd.
+- Publiek Tally-formulier: alle vier categorieën selecteerbaar; lege inzending geeft
+  twee validatiefouten en geen bedanktekst. Slechts één categorie tegelijk geselecteerd.
+- Live homepage: pop-up opent; Escape sluit; focus keert terug naar de knop.
+- Eén echte inzending zonder e-mailadres: Tally toont Formulier verzonden en de
+  opgegeven bedanktekst. Bericht begint met TEST PN 24 oktober 2026. Herkomst /.
+- Contact, Tip, artikel kwelders-beschermen-kust en special waarom-nieuws-zo-negatief-lijkt:
+  juiste knop/uitnodiging, één uitnodiging, juiste herkomst in iframe-URL.
+- Werkbrowser overal data-pn-analytics=internal; geen Simple Analytics CDN-script.
+  Geen productie-feedbackevents bewust aangemaakt tijdens deze controles.
+- Desktop pop-up visueel gecontroleerd. Tally past de iframe aan een smalle breedte aan.
+
+Nog te bevestigen:
+- Tom: testbericht in Submissions, herkomst /, e-mailmelding en testbericht verwijderen.
+- Full-page mobiele viewport en echte schermlezertest zijn niet uitgevoerd.
+- Spaminstellingen en accountvoorwaarden/DPA zijn niet in het account gecontroleerd.
+- Echte ontvangst van analytics-events in Simple Analytics. Volg hiervoor
+  docs/analytics-testing.md; niet blind herhaaldelijk productie-events versturen.
+
+De lokale HTTP-preview is vanuit de cloudbrowser niet bereikbaar (andere host).
+Daarom zijn de visuele/bedieningstests na publicatie uitgevoerd met analyticsuitsluiting.
+
+Bronnen voor de gekozen Tally-functionaliteit:
 - https://tally.so/help/features
 - https://tally.so/help/self-email-notifications
 - https://tally.so/help/embed-your-form
 - https://developers.tally.so/widgets/events
 - https://tally.so/help/gdpr
-
-## Formulier in account van eigenaar inrichten
-
-Titel: Laat van je horen
-Intro: Een tip, idee of foutje? Ik hoor het graag.
-
-1. Multiple choice, single answer, verplicht. Vraag: Wat wil je delen?
-   - Ik wil feedback geven.
-   - Ik heb een positieve nieuwstip.
-   - Ik heb een idee of suggestie.
-   - Ik heb een foutje gevonden.
-2. Long answer, verplicht. Vraag: Je bericht.
-   Hint: Bij een nieuwstip helpt een link naar de bron.
-   Maximaal 10.000 tekens, minimaal 1. Controleer ook alleen-spaties.
-3. Email, optioneel. Vraag: Je e-mailadres (alleen als je een reactie wilt).
-4. Hidden field: originPage. Uitsluitend het pad, geen query/fragment.
-5. Privacytekst: We gebruiken je bericht alleen om je bijdrage te behandelen
-   en eventueel te antwoorden. Je e-mailadres is niet verplicht. Deel geen
-   gevoelige persoonsgegevens. We publiceren niets zonder toestemming.
-   We verwijderen je bijdrage uiterlijk na twaalf maanden.
-   Link: https://positief-nieuws.nl/#privacy
-6. Submit-knop: Verstuur je bericht
-7. Thank you page: Dank je wel! Met jouw bijdrage maken we Positief Nieuws
-   iedere dag een beetje beter.
-
-Kleuren: achtergrond #f7f5ec, tekst #151a17, knop #173f31, accent #d6a13a.
-Arial of beschikbare gelijkende sans serif; geen betaalde fonts/CSS nodig.
-Geen redirects, partial submissions, advertentiepixels of andere analytics.
-Controleer Tally's ingebouwde anti-spammaatregelen. Geen reCAPTCHA toevoegen
-zonder noodzaak. De daadwerkelijke spamconfiguratie is nog niet geverifieerd.
-
-Settings: Self email notifications inschakelen. Controleer het ontvangstadres
-met de eigenaar en een echte testmelding; geen aanname dat de inbox werkt.
-DPA/verwerkersvoorwaarden en subverwerkers in account controleren vóór activatie.
-
-Publiceer formulier, vul alleen publieke form-ID in feedback.js in en verhoog
-feedback.js-versie in edition-analytics.js. Geen API-token in repository.
-
-## Beheer
-
-Tally dashboard > formulier > Submissions is het centrale overzicht.
-Bekijk type, bericht, email en originPage, filter en exporteer naar CSV.
-Standaard meldingen bevatten de ingevulde antwoorden. Behandel de notificatie-
-inbox ook als persoonsgegevensopslag. Verwijder maandelijks inzendingen en mails
-ouder dan twaalf maanden, ook exports die niet meer nodig zijn. Bewaar geen
-publieke exports. Een opslagbeleid in tekst is geen automatische verwijdering.
-
-## Techniek en meting
-
-edition-analytics.js laadt de eigen feedback.js op bestaande en nieuwe pagina's.
-Feedback werkt ook bij analyticsuitsluiting. Geen extra externe widgetscripts:
-alleen de Tally iframe wordt op verzoek geladen. Native dialog verzorgt modality,
-Escape, focus containment en terugkeer naar de opener. CSS reserveert onderaan
-ruimte voor de kleine zwevende knop. Mail blijft als terugval beschikbaar.
-
-feedback_open: één per daadwerkelijk geopende dialoog.
-feedback_submit: alleen Tally.FormSubmitted van de actieve iframe, origin
-https://tally.so, juiste form-ID, met dubbelingsbeveiliging. Het paginapad wordt
-bij openen vastgelegd, ook als de homepage ondertussen een andere hash krijgt.
-Payload/antwoorden/IDs worden nooit als analyticsmetadata doorgegeven.
-feedback_type_select: niet geïmplementeerd. Tally biedt geen gedocumenteerd
-veldwijzigingsevent; cross-origin velden zijn niet uitleesbaar. Geen schijnmeting.
-
-Simple Analytics > Events: feedback_open en feedback_submit; vergelijk per
-feedback_page / feedback_placement. Ratio submits/opens is een eventratio,
-geen unieke-personenconversie. Sluiten en opnieuw openen telt als nieuwe opening.
-
-## Uitgevoerde controles
-
-node --check feedback.js
-node tests/test_feedback.js
-node tests/test_analytics_policy.js
-node tests/test_newsletter_analytics.js
-node tests/test_social_sharing.js
-python3 -m unittest discover -s tests -p 'test_analytics_policy.py'
-
-Alle automatische controles geslaagd. Ook gecontroleerd: alle 135 pagina’s met
-siteheader laden het gedeelde script. Het publieke formulier toont vier categorieën,
-verplicht bericht en optioneel e-mailveld. Een lege verzendpoging geeft twee
-validatiefouten en geen bedanktekst. Alle vier categorieën zijn aanklikbaar.
-Unit-tests simuleren het Tally-bericht, geen bewijs van ontvangst in beheer.
-De lokale HTTP-preview is vanuit de cloudbrowser niet bereikbaar (andere host).
-Visuele controles vinden daarom direct na publicatie plaats met analyticsuitsluiting.
-
-## Nog uit te voeren voor publicatie
-
-- Lokale visuele controle desktop/mobiel: homepage, artikel, special, contact, tip.
-- Formulierconfiguratie, alle categorieën, validatie, zonder e-mail insturen.
-- Herkomstpad, daadwerkelijke ontvangst en notificatie, bedanktekst bij succes.
-- Netwerkfout mag geen succesvolle bevestiging of submit-event geven.
-- Toetsenbord en schermlezer: focus, Escape, iframe navigatie en terugkeer.
-- Testinzending verwijderen via normale herstelbare verwijderfunctie.
-- Live controle uitsluitend volgens docs/analytics-testing.md.
-- Echte analyticsontvangst apart verifiëren met vooraf vastgelegde testbijdrage.
-- GitHub Pages deploy controleren en live UI verifiëren na merge.
-
-## Beheerlinks
-
-Formulier: https://tally.so/r/rDj4EL
-Editor: https://tally.so/forms/rDj4EL/edit
-Open vanuit het eigen Tally-dashboard het formulier en kies Submissions.
-
-De eigenaar heeft e-mailmeldingen via Ask Tally laten voorbereiden; daadwerkelijke
-bezorging moet met de testmelding worden bevestigd. De notificatiemailbox is niet
-vanuit deze sessie ingezien. Geen automatische bewaartermijn op Free: handmatig
-opschonen blijft nodig.

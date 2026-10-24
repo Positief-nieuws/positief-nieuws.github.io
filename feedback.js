@@ -11,7 +11,7 @@
     css.rel = 'stylesheet'; css.href = '/feedback.css?v=1'; document.head.append(css);
     const dialog = document.createElement('dialog');
     dialog.className = 'pn-feedback-dialog'; dialog.setAttribute('aria-labelledby', 'pn-feedback-title');
-    dialog.innerHTML = '<div class="pn-feedback-heading"><h2 id="pn-feedback-title">Laat van je horen</h2><button type="button" class="pn-feedback-close" aria-label="Formulier sluiten">Sluiten ×</button></div><p class="pn-feedback-intro">Een tip, idee of foutje? Ik hoor het graag.</p><div class="pn-feedback-frame"></div><p class="pn-feedback-fallback">Lukt het formulier niet? <a href="mailto:redactie@positief-nieuws.nl">Mail de redactie</a>.</p>';
+    dialog.innerHTML = '<div class="pn-feedback-heading"><h2 id="pn-feedback-title">Laat van je horen</h2><button type="button" class="pn-feedback-close" aria-label="Formulier sluiten">Sluiten ×</button></div><div class="pn-feedback-frame"></div><p class="pn-feedback-fallback">Lukt het formulier niet? <a href="mailto:redactie@positief-nieuws.nl">Mail de redactie</a>.</p>';
     document.body.append(dialog);
     const holder = dialog.querySelector('.pn-feedback-frame');
     let frame, opener, context, submitted = false;
