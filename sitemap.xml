@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://positief-nieuws.nl/</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-26</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/over/</loc>
@@ -15,11 +15,15 @@
   </url>
   <url>
     <loc>https://positief-nieuws.nl/edities/</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-26</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/onderwerpen/</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/edities/2026-10-26/</loc>
+    <lastmod>2026-10-26</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/edities/2026-10-22/</loc>
@@ -95,19 +99,19 @@
   </url>
   <url>
     <loc>https://positief-nieuws.nl/energie-en-innovatie/</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-26</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/gezondheid/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-26</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/mens/</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-26</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/natuur-en-klimaat/</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-26</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/wetenschap/</loc>
@@ -116,6 +120,54 @@
   <url>
     <loc>https://positief-nieuws.nl/sport/</loc>
     <lastmod>2026-10-05</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-10-26/minder-moord-en-doodslag-in-nederland/</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-10-26/harlingen-biogas-uit-fabriekslucht/</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-10-26/pruimen-voedselbank-herveld/</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-10-26/groningen-waterstof-materialen/</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-10-26/maud-carla-redding-koedijk/</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-10-26/windparken-ruimte-voor-vogeltrek/</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-10-26/persoonlijk-melanomavaccin-proef/</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-10-26/basisinkomen-peru-natuur-beschermen/</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-10-26/sociale-activiteiten-hersengezondheid/</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-10-26/nepal-sneeuwluipaarden-vee/</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-10-26/kopenhagen-luiers-recyclen/</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-10-26/mette-marit-herstel-na-transplantatie/</loc>
+    <lastmod>2026-10-26</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/artikelen/2026-10-22/kwelders-beschermen-kust/</loc>
@@ -507,6 +559,5 @@
   </url>
   <url>
     <loc>https://positief-nieuws.nl/specials/waarom-nieuws-zo-negatief-lijkt/</loc>
-    <lastmod>2026-10-23</lastmod>
   </url>
 </urlset>

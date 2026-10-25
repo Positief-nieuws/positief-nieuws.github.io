@@ -1,0 +1,458 @@
+{
+  "meta": {
+    "edition_date": "2026-10-26",
+    "email_preheader": "Minder dodelijk geweld, energie uit fabriekslucht en 25.000 kilo pruimen voor de Voedselbank.",
+    "status": "approved",
+    "publication_authorized": true,
+    "ordering": "6 Nederlandse feiten, 6 wereldverhalen; brononderzoek en beperkingen in controleverslag.",
+    "personal_note": {
+      "title": "Wat niet in de krant komt",
+      "text": "Ik was net een kwartier thuis toen de deurbel ging. Voor de deur stonden twee vrouwen, vermoedelijk moeder en dochter, met een hond aan de lijn. Het waaide hard en het regende een beetje. 'Uw sleutels zitten nog aan de buitenkant van de deur,' zeiden ze. Ze belden even aan om te voorkomen dat er iets mis zou gaan. Als iemand de sleutels had meegenomen, was het misschien nieuws geworden. Maar twee mensen die gewoon even op een buurtgenoot letten? Dat haalt de krant zelden. Daarom hoort het hier.",
+      "portrait_choice": "zwart-wit/cartoon schets, indien beschikbaar in repo",
+      "editorial_status": "concept; door gebruiker eerder aangeleverde anekdote",
+      "portrait_url": "/images/redactie/tom-portret-weergave.svg"
+    },
+    "editorial_order": [
+      {
+        "section": "nl",
+        "article_slug": "minder-moord-en-doodslag-in-nederland",
+        "rank": 1
+      },
+      {
+        "section": "nl",
+        "article_slug": "harlingen-biogas-uit-fabriekslucht",
+        "rank": 2
+      },
+      {
+        "section": "nl",
+        "article_slug": "pruimen-voedselbank-herveld",
+        "rank": 3
+      },
+      {
+        "section": "nl",
+        "article_slug": "groningen-waterstof-materialen",
+        "rank": 4
+      },
+      {
+        "section": "nl",
+        "article_slug": "maud-carla-redding-koedijk",
+        "rank": 5
+      },
+      {
+        "section": "nl",
+        "article_slug": "windparken-ruimte-voor-vogeltrek",
+        "rank": 6
+      },
+      {
+        "section": "int",
+        "article_slug": "persoonlijk-melanomavaccin-proef",
+        "rank": 1
+      },
+      {
+        "section": "int",
+        "article_slug": "basisinkomen-peru-natuur-beschermen",
+        "rank": 2
+      },
+      {
+        "section": "int",
+        "article_slug": "sociale-activiteiten-hersengezondheid",
+        "rank": 3
+      },
+      {
+        "section": "int",
+        "article_slug": "nepal-sneeuwluipaarden-vee",
+        "rank": 4
+      },
+      {
+        "section": "int",
+        "article_slug": "kopenhagen-luiers-recyclen",
+        "rank": 5
+      },
+      {
+        "section": "int",
+        "article_slug": "mette-marit-herstel-na-transplantatie",
+        "rank": 6
+      }
+    ],
+    "selection_revision": "2026-10-25-avond",
+    "candidate_generated_at": "2026-10-25T17:39:34.446222+01:00",
+    "review_status": "Tom de Haas heeft op zondag 25 oktober expliciet ingestemd met een eenmalige publicatie-uitzondering: de huidige nagekeken selectie publiceren, volledige triage van 9.199 kandidaten en bronoverzichten eerlijk als onafgerond vastleggen. Vervroegde maandag-editie; nieuwsbrief alleen als concept."
+  },
+  "nl": [
+    {
+      "article_slug": "minder-moord-en-doodslag-in-nederland",
+      "category": "Mens",
+      "title": "Nederland telt veel minder slachtoffers van moord en doodslag dan dertig jaar geleden",
+      "teaser": "CBS-cijfers laten zien dat het aantal slachtoffers op lange termijn sterk is gedaald. Bij vrouwelijke slachtoffers blijft partnergeweld een ernstig aandachtspunt.",
+      "article_body": [
+        "In Nederland vielen in 2025 voorlopig 103 slachtoffers van moord en doodslag. In 1996 waren dat er 240. Dat is een daling van ongeveer 57 procent in absolute aantallen. Ook als rekening wordt gehouden met de bevolkingsgroei is de afname duidelijk: van 15,5 naar 5,7 slachtoffers per miljoen inwoners, volgens de CBS-tabel die op 21 oktober is bijgewerkt.",
+        "De verbetering is zichtbaar bij mannen en vrouwen, maar niet even sterk. In 2025 werden 65 mannen en 38 vrouwen slachtoffer. Dertig jaar eerder waren dat respectievelijk 171 en 69. Het aantal mannelijke slachtoffers is daarmee sterker gedaald dan het aantal vrouwelijke slachtoffers.",
+        "Die langjarige vooruitgang neemt een hardnekkig probleem niet weg. Volgens de CBS-publicatie over 2021 tot en met 2025 was bij ongeveer de helft van de vrouwelijke slachtoffers de partner of ex-partner de vermoedelijke dader. Dat aandeel is in vijftien jaar nauwelijks veranderd.",
+        "De statistiek laat een daling zien, maar bewijst niet welke oorzaken daarvoor verantwoordelijk zijn. En de cijfers over 2025 zijn voorlopig. Toch geeft de lange reeks een breder beeld dan afzonderlijke misdaadberichten: dodelijk geweld komt aanzienlijk minder vaak voor dan dertig jaar geleden."
+      ],
+      "source": "Centraal Bureau voor de Statistiek",
+      "source_id": "cbs",
+      "url": "https://www.cbs.nl/item?sc_itemid=caff1eb0-064d-4a18-bd95-3a1c861360f8&sc_lang=nl-nl",
+      "published": "2026-08-27",
+      "event_date": "2026-08-27",
+      "primary_url": "https://www.cbs.nl/nl-nl/cijfers/detail/84726NED",
+      "image_alt": "Nederlandse politieagenten met politiemotoren. Illustratief archiefbeeld; geen opname bij een misdrijf en geen verklaring voor de daling.",
+      "headline_options": [
+        "Nederland telt veel minder slachtoffers van moord en doodslag dan dertig jaar geleden",
+        "Nederland telt veel minder slachtoffers van moord en doodslag dan dertig jaar geleden"
+      ],
+      "email_title": "Nederland telt veel minder slachtoffers van moord en doodslag dan dertig jaar geleden",
+      "regional_rank": 1,
+      "editorial_rank": 1,
+      "image_query": "id:111240",
+      "image_key": "minder-moord-en-doodslag-in-nederland",
+      "article_chart": {
+        "src": "/images/artikelen/2026-10-26/minder-moord-en-doodslag-in-nederland.svg",
+        "alt": "240 slachtoffers in 1996 tegenover voorlopig 103 in 2025. Bron: CBS.",
+        "caption": "Aantal slachtoffers van moord en doodslag in Nederland. Bron: CBS; 2025 is voorlopig.",
+        "source_url": "https://www.cbs.nl/nl-nl/cijfers/detail/84726NED"
+      }
+    },
+    {
+      "article_slug": "harlingen-biogas-uit-fabriekslucht",
+      "category": "Energie & innovatie",
+      "title": "Een fabriek in Harlingen maakt energie van zijn eigen afvallucht",
+      "email_title": "Een fabriek in Harlingen maakt energie van zijn eigen afvallucht",
+      "teaser": "Een geopende installatie zet oplosmiddelen uit het drukproces om in biogas. De opbrengst op langere termijn moet nog blijken.",
+      "article_body": [
+        "Wat een fabriek als vervuilde lucht verlaat, kan ook een grondstof zijn. Bij verpakkingsproducent Trioworld in Harlingen is op 23 oktober een installatie geopend die oplosmiddelen uit het drukproces kan omzetten in hernieuwbaar biogas. Dat gas kan fossiele brandstoffen vervangen.",
+        "De gemeente Harlingen beschrijft de voorziening als de eerste grootschalige BONCUS-installatie voor flexodruk ter wereld. Bij flexodruk worden onder meer verpakkingen bedrukt. Trioworld werkte jarenlang met ontwikkelaar Pure Infinity aan de techniek. De installatie staat er nu daadwerkelijk; het gaat dus verder dan een aangekondigd project.",
+        "Hoeveel fossiele energie de fabriek op jaarbasis bespaart, vermeldt het gemeentelijke bericht niet. Daarom verbinden we geen besparingspercentage aan de opening. Ook de claim van een wereldprimeur schrijven we toe aan de betrokken gemeente en bedrijven.",
+        "De interessante stap is het hergebruik van een reststroom binnen dezelfde productieomgeving. Afvallucht hoeft daarmee niet alleen iets te zijn dat een bedrijf behandelt en afvoert. De installatie maakt er een mogelijke energiebron van. Praktijkgegevens moeten laten zien hoe groot die bijdrage uiteindelijk wordt."
+      ],
+      "source": "Gemeente Harlingen",
+      "source_id": "gemeente-harlingen",
+      "url": "https://www.harlingen.nl/wereldprimeur-bij-trioworld-in-harlingen",
+      "primary_url": "https://www.harlingen.nl/wereldprimeur-bij-trioworld-in-harlingen",
+      "published": "2026-10-23",
+      "event_date": "2026-10-23",
+      "image_alt": "Industriële installatie; illustratief beeld, niet de fabriek in Harlingen.",
+      "image_query": "id:1140760",
+      "image_key": "harlingen-biogas-uit-fabriekslucht",
+      "headline_options": [
+        "Een fabriek in Harlingen maakt energie van zijn eigen afvallucht",
+        "Een fabriek in Harlingen maakt energie van zijn eigen afvallucht"
+      ],
+      "candidate_id": "46feee39838f",
+      "regional_rank": 2,
+      "editorial_rank": 2
+    },
+    {
+      "article_slug": "pruimen-voedselbank-herveld",
+      "category": "Mens",
+      "title": "25.000 kilo pruimen gered voor de Voedselbank",
+      "email_title": "25.000 kilo pruimen gered voor de Voedselbank",
+      "teaser": "Een overschot in de Betuwe krijgt alsnog een bestemming op tafel bij gezinnen die het goed kunnen gebruiken.",
+      "article_body": [
+        "Een recordoogst dreigde voor fruittelers Frederik en Marinus uit Herveld uit te lopen op voedselverspilling. Maar via een inzamelactie van No Waste Army is inmiddels 25.000 kilo pruimen aan de Voedselbank gedoneerd. De organisatie meldt op haar bijgewerkte actiepagina dat de donatieronde is afgelopen. Het gaat daarmee om een bereikt resultaat, niet alleen om een oproep om te helpen.",
+        "Bij familiebedrijf B&B Fruit groeide meer fruit dan de vaste afnemers hadden besteld. Zij namen de afgesproken hoeveelheden af, maar voor een overschot van 100.000 kilo was nog geen bestemming. De vruchten waren eetbaar, alleen door de hete zomer minder lang houdbaar. Zonder andere afnemers dreigden ze in de biovergister te belanden.",
+        "Met donaties kon No Waste Army pruimen inkopen voor de voedselbanken. Zo krijgen gezinnen vers fruit en ontvangt de teler een vergoeding. Het resultaat van deze ronde is een kwart van het genoemde overschot; daarmee is niet aangetoond dat alle 100.000 kilo inmiddels is gered.",
+        "Ook wordt een deel ingevroren of verwerkt tot houdbare producten. Dat vervolg is nog in ontwikkeling. De concrete winst van nu: duizenden kilo’s eetbaar fruit behouden hun bestemming als voedsel."
+      ],
+      "source": "No Waste Army",
+      "source_id": "no-waste-army",
+      "url": "https://nowastearmy.nl/acties/pruimen/",
+      "primary_url": "https://nowastearmy.nl/acties/pruimen/",
+      "published": "2026-10-25",
+      "event_date": "2026-10-25",
+      "image_alt": "Blauwe pruimen; illustratief beeld, niet de oogst van B&B Fruit.",
+      "image_query": "id:9977023",
+      "image_key": "pruimen-voedselbank-herveld",
+      "headline_options": [
+        "25.000 kilo pruimen gered voor de Voedselbank",
+        "25.000 kilo pruimen gered voor de Voedselbank"
+      ],
+      "regional_rank": 3,
+      "editorial_rank": 3
+    },
+    {
+      "article_slug": "groningen-waterstof-materialen",
+      "category": "Energie & innovatie",
+      "title": "Groningse onderzoekers verdubbelen waterstofproductie in een proefcel",
+      "email_title": "Groningse onderzoekers verdubbelen waterstofproductie in een proefcel",
+      "teaser": "Een betere combinatie van materialen levert meer waterstof bij hetzelfde energieverbruik. De proefcel bleef minstens vijfhonderd uur stabiel werken.",
+      "article_body": [
+        "Twee keer zoveel waterstof maken zonder meer energie te gebruiken: dat bereikten onderzoekers van de Rijksuniversiteit Groningen met een zorgvuldig afgestemde combinatie van materialen. Het resultaat betreft een proefcel, geen fabriek die al op industriële schaal draait.",
+        "De cel splitst waterdamp in waterstof en zuurstof. Een keramisch membraan laat geladen waterstofdeeltjes door en houdt andere deeltjes tegen. Aan de waterdampzijde helpt een speciaal ontwikkeld materiaal om de reactie op gang te brengen. Juist de wisselwerking tussen dat materiaal en het membraan bleek belangrijk.",
+        "Volgens de universiteit verdubbelde de productie ten opzichte van eerdere cellen van hetzelfde type. Het team liet ook zien dat de cel minstens vijfhonderd uur stabiel kon functioneren. De resultaten verschenen op 14 oktober in Energy & Environmental Science; de universiteit lichtte ze op 22 oktober toe.",
+        "Dat is een concrete stap in onderzoek naar waterstof uit water. Voor grootschalige toepassing zijn verdere ontwikkeling en toetsing nodig. Bovendien bepaalt de herkomst van de gebruikte elektriciteit hoe duurzaam de geproduceerde waterstof werkelijk is. Een betere proefcel maakt waterstof dus niet vanzelf klimaatneutraal."
+      ],
+      "source": "Rijksuniversiteit Groningen",
+      "source_id": "rijksuniversiteit-groningen",
+      "url": "https://www.rug.nl/fse/news/highlighted-papers/2026/doubling-hydrogen-production-through-a-synergy-of-materials",
+      "primary_url": "https://www.rug.nl/fse/news/highlighted-papers/2026/doubling-hydrogen-production-through-a-synergy-of-materials",
+      "published": "2026-10-22",
+      "event_date": "2026-10-22",
+      "image_alt": "Reageerbuisjes in een laboratorium; illustratief beeld, niet de Groningse proefcel.",
+      "image_query": "id:904546",
+      "image_key": "groningen-waterstof-materialen",
+      "headline_options": [
+        "Groningse onderzoekers verdubbelen waterstofproductie in een proefcel",
+        "Groningse onderzoekers verdubbelen waterstofproductie in een proefcel"
+      ],
+      "candidate_id": "b035064499df",
+      "regional_rank": 4,
+      "editorial_rank": 4
+    },
+    {
+      "article_slug": "maud-carla-redding-koedijk",
+      "category": "Mens",
+      "title": "Maud en haar moeder helpen twee mensen uit het kanaal",
+      "email_title": "Maud en haar moeder helpen twee mensen uit het kanaal",
+      "teaser": "Hun snelle hulp in Koedijk brengt twee inzittenden van een zinkende auto veilig op de kant.",
+      "article_body": [
+        "Maud de Groot en haar moeder Carla zagen op vrijdagochtend 23 oktober bij Koedijk een auto in het Noordhollandsch Kanaal liggen. Twee inzittenden hielden zich vast aan het voertuig. Moeder en dochter stopten en schoten te hulp.",
+        "De twintigjarige Maud belde 112 en gaf haar telefoon aan haar moeder, die met de meldkamer bleef praten. Zelf ging ze naar de waterkant. De man en vrouw durfden de auto aanvankelijk niet los te laten. Toen ze naar haar toe zwommen, hielp Maud hen vanaf de betonnen oever uit het water.",
+        "De twintigjarige Maud vertelde NH Nieuws en Streekstad Centraal dat het veel kracht kostte om de twee omhoog te trekken. De hulpdiensten namen de zorg over. De auto werd later met hulp van duikers en sonar teruggevonden en geborgen.",
+        "De hulp had een goede afloop: de twee inzittenden konden na controle en behandeling in de ambulance naar hun verblijf worden gebracht. Voor Maud en Carla waren het ook daarna nog spannende uren. Op haar werk kreeg Maud de rest van de dag vrij om bij te komen."
+      ],
+      "source": "NH Nieuws / Streekstad Centraal",
+      "source_id": "nh-nieuws",
+      "url": "https://www.nhnieuws.nl/nieuws/364739/maud-20-schiet-twee-inzittenden-van-te-water-geraakte-auto-in-kanaal-te-hulp",
+      "primary_url": "https://www.nhnieuws.nl/nieuws/364739/maud-20-schiet-twee-inzittenden-van-te-water-geraakte-auto-in-kanaal-te-hulp",
+      "published": "2026-10-24",
+      "event_date": "2026-10-24",
+      "image_alt": "Reddingsboei bij water; illustratief beeld, niet de redding in Koedijk. Er is geen boei bij deze redding beschreven.",
+      "image_query": "id:1021102",
+      "image_key": "maud-carla-redding-koedijk",
+      "headline_options": [
+        "Maud en haar moeder helpen twee mensen uit het kanaal",
+        "Maud en haar moeder helpen twee mensen uit het kanaal"
+      ],
+      "regional_rank": 5,
+      "editorial_rank": 5
+    },
+    {
+      "article_slug": "windparken-ruimte-voor-vogeltrek",
+      "category": "Natuur & klimaat",
+      "title": "Windparken maken ruimte voor de nachtelijke vogeltrek",
+      "email_title": "Windparken maken ruimte voor de nachtelijke vogeltrek",
+      "teaser": "Op de Noordzee worden wieken tijdens voorspelde trekpieken afgeremd. De bescherming is dit jaar verplicht geworden.",
+      "article_body": [
+        "Bij voorspelde pieken in de vogeltrek worden de wieken van Nederlandse windparken op zee vrijwel stilgezet. Volgens Vogelbescherming gebeurde dat op 4 oktober. Vanaf dit jaar is de maatregel verplicht; eerder was die vrijwillig.",
+        "Dat is een concrete beschermingsmaatregel voor de grote aantallen vogels die in voor- en najaar over de Noordzee vliegen. De wieken mogen tijdens zo’n ingreep nog maximaal twee omwentelingen per minuut maken. Normaal kan dat tot ongeveer vijftien zijn. De bedoeling is de kans op botsingen tijdens drukke treknachten te verkleinen.",
+        "Modellen van de Universiteit van Amsterdam en een beoordeling door vogeldeskundigen bepalen het stopadvies. TenneT controleert de leveringszekerheid. Het besluit wordt twee dagen vooraf genomen. Daardoor kan een voorspelling ook naast het drukste trekmoment zitten.",
+        "Hoeveel vogels hierdoor daadwerkelijk worden gered, is nog niet betrouwbaar gemeten. Het systeem verlaagt het risico op botsingen, maar kent beperkingen. Vogelbescherming pleit onder meer voor snellere besluitvorming en meer ruimte binnen het maximum van zestig stopuren per jaar, zodat de bescherming beter op de drukste treknachten kan aansluiten."
+      ],
+      "source": "Vogelbescherming Nederland",
+      "source_id": "vogelbescherming-nederland",
+      "url": "https://www.vogelbescherming.nl/actueel/bericht/windmolens-stilgezet-tijdens-piek-in-de-vogeltrek",
+      "primary_url": "https://www.vogelbescherming.nl/actueel/bericht/windmolens-stilgezet-tijdens-piek-in-de-vogeltrek",
+      "published": "2026-10-16",
+      "event_date": "2026-10-16",
+      "image_alt": "Windturbines op zee; illustratief beeld, niet een registratie van de genoemde stopmomenten.",
+      "image_query": "id:9762992",
+      "image_key": "windparken-ruimte-voor-vogeltrek",
+      "headline_options": [
+        "Windparken maken ruimte voor de nachtelijke vogeltrek",
+        "Windparken maken ruimte voor de nachtelijke vogeltrek"
+      ],
+      "regional_rank": 6,
+      "editorial_rank": 6
+    }
+  ],
+  "int": [
+    {
+      "article_slug": "persoonlijk-melanomavaccin-proef",
+      "category": "Gezondheid",
+      "title": "Persoonlijk vaccin verlaagt terugkeerrisico van melanoom in grote proef",
+      "email_title": "Persoonlijk vaccin verlaagt terugkeerrisico van melanoom in grote proef",
+      "teaser": "Een fase 3-studie onder 1.137 patiënten laat een lager risico op terugkeer of overlijden zien. Toelating moet nog volgen.",
+      "article_body": [
+        "Een vaccin dat wordt afgestemd op de eigen tumor heeft in een grote internationale studie hoopvolle resultaten opgeleverd. Bij patiënten met een hoog risico op terugkeer van melanoom verminderde de combinatie met bestaande immunotherapie het risico op terugkeer of overlijden met 42 procent ten opzichte van alleen die immunotherapie.",
+        "De Universiteit van Sydney beschrijft de resultaten van INTerpath-001, een fase 3-studie met 1.137 patiënten. Hun melanoom was operatief verwijderd. Het persoonlijke mRNA-vaccin intismeran is bedoeld om het afweersysteem kenmerken van eventueel achtergebleven tumorcellen te leren herkennen.",
+        "Het genoemde percentage is een relatieve risicodaling, geen daling van 42 procentpunten en geen genezingspercentage. De universiteit meldde tijdelijke bijwerkingen zoals pijn op de injectieplaats, hoofdpijn en rillingen. Merck en Moderna financierden het onderzoek.",
+        "De uitkomsten worden op een oncologiecongres gepresenteerd en moeten door toezichthouders worden beoordeeld. De behandeling is daarmee nog geen regulier beschikbare optie. De betekenis ligt in een concreet klinisch resultaat: een op de patiënt afgestemde behandeling kan na een operatie extra bescherming bieden, naast de bestaande immunotherapie."
+      ],
+      "source": "University of Sydney / Melanoma Institute Australia",
+      "source_id": "university-sydney",
+      "url": "https://www.sydney.edu.au/news-opinion/news/2026/10/23/world-first-personalised-therapeutic-cancer-vaccine-cuts-risk-of.html",
+      "primary_url": "https://www.sydney.edu.au/news-opinion/news/2026/10/23/world-first-personalised-therapeutic-cancer-vaccine-cuts-risk-of.html",
+      "published": "2026-10-23",
+      "event_date": "2026-10-23",
+      "image_alt": "Microscoop in een laboratorium; illustratief beeld, niet het onderzochte vaccin.",
+      "image_query": "id:2030265",
+      "image_key": "persoonlijk-melanomavaccin-proef",
+      "headline_options": [
+        "Persoonlijk vaccin verlaagt terugkeerrisico van melanoom in grote proef",
+        "Persoonlijk vaccin verlaagt terugkeerrisico van melanoom in grote proef"
+      ],
+      "candidate_id": "8ea3f281cb80",
+      "regional_rank": 1,
+      "editorial_rank": 7
+    },
+    {
+      "article_slug": "basisinkomen-peru-natuur-beschermen",
+      "category": "Mens",
+      "title": "Vaster inkomen geeft gezinnen in de Amazone meer ruimte",
+      "email_title": "Vaster inkomen geeft gezinnen in de Amazone meer ruimte",
+      "teaser": "Een kleine proef in Peru laat minder voedselonzekerheid zien. Omdat een controlegroep ontbrak, blijft de oorzaak van alle veranderingen onzeker.",
+      "article_body": [
+        "Niet iedere dag hoeven uitzoeken hoe er genoeg eten op tafel komt: die zekerheid kan ruimte geven voor andere keuzes. In drie inheemse gemeenschappen in de Peruaanse Amazone ontvingen 211 deelnemers twee jaar lang een onvoorwaardelijk basisinkomen, gecombineerd met lokale scholing.",
+        "Een analyse van de Universiteit van Bath meldt duidelijke verbeteringen. Het aandeel huishoudens dat geen voedzaam eten kon betalen daalde van 73 naar 26 procent. Deelnemers konden vaker sparen en hoefden minder vaak elders werk te zoeken. Velen meldden ook natuurvriendelijker landbouw en deelname aan herstel van bos en waterbronnen.",
+        "De proef werd uitgevoerd door Cool Earth, samen met inheemse vrouwenorganisaties. Behalve geld omvatte het programma onder meer financiële kennis en ondersteuning bij gemeenschapsorganisatie. De resultaten kunnen dus niet uitsluitend aan de betaling worden toegeschreven.",
+        "Ook ontbrak een controlegroep. De studie bewijst daardoor niet hoeveel van de veranderingen zonder het programma zouden zijn opgetreden. Het blijft een kleine, veelbelovende praktijkproef. Ze laat zien waarom inkomenszekerheid en de zeggenschap van lokale bewoners aandacht verdienen in het gesprek over bosbescherming."
+      ],
+      "source": "University of Bath",
+      "source_id": "university-bath",
+      "url": "https://www.bath.ac.uk/announcements/world-first-basic-income-trial-boosts-indigenous-livelihoods-and-amazon-rainforest-protection/",
+      "primary_url": "https://www.bath.ac.uk/announcements/world-first-basic-income-trial-boosts-indigenous-livelihoods-and-amazon-rainforest-protection/",
+      "published": "2026-10-20",
+      "event_date": "2026-10-20",
+      "image_alt": "Rivier en bebouwing in het Amazonegebied; illustratief beeld, niet de deelnemers aan de proef.",
+      "image_query": "id:7292034",
+      "image_key": "basisinkomen-peru-natuur-beschermen",
+      "headline_options": [
+        "Vaster inkomen geeft gezinnen in de Amazone meer ruimte",
+        "Vaster inkomen geeft gezinnen in de Amazone meer ruimte"
+      ],
+      "candidate_id": "36f8b6b5cd7e",
+      "reading_time_minutes": 8,
+      "regional_rank": 2,
+      "editorial_rank": 8
+    },
+    {
+      "article_slug": "sociale-activiteiten-hersengezondheid",
+      "category": "Gezondheid",
+      "title": "Sociaal actief blijven hangt samen met een scherper geheugen",
+      "teaser": "Een onderzoek onder bijna 58.000 ouderen ziet gunstige verbanden bij onder meer vrijwilligerswerk en sportclubs.",
+      "article_body": [
+        "Ouderen die deelnemen aan sociale activiteiten scoren gemiddeld beter op tests van geheugen en denkvaardigheden dan leeftijdgenoten die niet sociaal actief zijn. Dat blijkt uit een analyse van vijf langlopende bevolkingsonderzoeken met samen 57.793 deelnemers uit 24 landen. BMJ lichtte het onderzoek op 21 oktober toe.",
+        "De onderzoekers volgden de deelnemers doorgaans zes jaar. Zij vergeleken zelfgerapporteerde sociale bezigheden met herhaalde cognitieve tests. Deelname aan meerdere soorten activiteiten hing samen met gunstiger scores. Vooral vrijwilligerswerk en lidmaatschap van een sportclub lieten in de verschillende onderzochte groepen een consistent positief verband zien.",
+        "Dat geeft steun aan het idee dat samen actief blijven betekenis kan hebben voor gezond ouder worden. De studie bewijst echter geen oorzaak en gevolg. Mensen die geestelijk fitter zijn, kunnen bijvoorbeeld ook gemakkelijker blijven deelnemen. Verschillen in gezondheid, opleiding en leefomstandigheden zijn niet volledig uit te sluiten.",
+        "Ook zijn niet alle activiteiten gelijk onderzocht en zegt het aantal bezigheden weinig over de kwaliteit van contacten. Drie activiteiten zijn dus geen medisch voorschrift en geen garantie tegen dementie. De bevinding is hoopvol: sociale deelname blijkt in meerdere landen samen te gaan met beter behouden denkvaardigheden."
+      ],
+      "source": "Journal of Epidemiology & Community Health / BMJ",
+      "source_id": "bmj",
+      "url": "https://jech.bmj.com/content/early/2026/10/08/jech-2025-225670",
+      "published": "2026-10-08",
+      "event_date": "2026-10-08",
+      "primary_url": "https://jech.bmj.com/lookup/doi/10.1136/jech-2025-225670",
+      "image_alt": "Deelnemers aan een gezamenlijke bijeenkomst; illustratief beeld, niet de onderzochte deelnemers.",
+      "headline_options": [
+        "Sociaal actief blijven hangt samen met een scherper geheugen",
+        "Sociaal actief blijven hangt samen met een scherper geheugen"
+      ],
+      "email_title": "Sociaal actief blijven hangt samen met een scherper geheugen",
+      "regional_rank": 3,
+      "editorial_rank": 9,
+      "image_query": "id:2247391",
+      "image_key": "sociale-activiteiten-hersengezondheid"
+    },
+    {
+      "article_slug": "nepal-sneeuwluipaarden-vee",
+      "category": "Natuur & klimaat",
+      "title": "Beschermde veekralen helpen aanvallen door sneeuwluipaarden voorkomen",
+      "email_title": "Beschermde veekralen helpen aanvallen door sneeuwluipaarden voorkomen",
+      "teaser": "Bewoners delen waarnemingen via een app en krijgen sneller schadevergoeding. De aanpak vermindert de aanleiding voor vergelding tegen roofdieren.",
+      "article_body": [
+        "In de Nepalese Nar-Phu-vallei moeten herders en sneeuwluipaarden hetzelfde berglandschap delen. Als een roofdier vee doodt, kan dat een gezin hard raken en leiden tot vergelding. Een project van Wageningse onderzoekers en lokale bewoners probeert die keten te doorbreken.",
+        "Bewoners melden sporen van sneeuwluipaarden via mobiele apps. Met die gegevens en kaarten van veekralen brengen onderzoekers risicoplekken in beeld. Daar zijn inmiddels zes roofdierbestendige omheiningen gebouwd. Sinds de start zijn volgens het project geen incidenten meer gemeld waarbij grote aantallen vee zijn gedood.",
+        "Daarnaast helpen plaatselijke comités om schade snel vast te leggen en te vergoeden. Een herder hoeft daarvoor niet eerst dagen te reizen en veel papierwerk te verzamelen. De bescherming van het vee en de snellere afhandeling verminderen zo de druk op gezinnen.",
+        "Dit is geen gecontroleerde proef die alle effecten los van elkaar bewijst. Het gaat om praktijkervaring in één afgelegen vallei. Juist de combinatie maakt de aanpak interessant: natuurbescherming wordt gekoppeld aan de bestaanszekerheid van mensen die dagelijks tussen de roofdieren leven."
+      ],
+      "source": "Wageningen University & Research",
+      "source_id": "wageningen-university-research",
+      "url": "https://www.wur.nl/nl/nieuws/sneeuwluipaarden-nepal-beschermen-daar-een-app-voor",
+      "primary_url": "https://www.wur.nl/nl/nieuws/sneeuwluipaarden-nepal-beschermen-daar-een-app-voor",
+      "published": "2026-10-21",
+      "event_date": "2026-10-21",
+      "image_alt": "Een sneeuwluipaard in een dierentuin; illustratief beeld, niet uit de Nar-Phu-vallei.",
+      "image_query": "id:1985510",
+      "image_key": "nepal-sneeuwluipaarden-vee",
+      "headline_options": [
+        "Beschermde veekralen helpen aanvallen door sneeuwluipaarden voorkomen",
+        "Beschermde veekralen helpen aanvallen door sneeuwluipaarden voorkomen"
+      ],
+      "candidate_id": "additional-primary-source",
+      "regional_rank": 4,
+      "editorial_rank": 10
+    },
+    {
+      "article_slug": "kopenhagen-luiers-recyclen",
+      "category": "Energie & innovatie",
+      "title": "Kopenhagen begint gebruikte luiers apart in te zamelen",
+      "teaser": "De eerste containers worden geplaatst. Verwerking tot nieuwe materialen en biogas moet vanaf februari 2027 volgen.",
+      "article_body": [
+        "Kopenhagen is op 19 oktober begonnen met het plaatsen van aparte containers voor gebruikte luiers. Daarmee zet de stad een praktisch systeem op voor afval dat tot nu toe doorgaans werd verbrand. De uitrol langs tien stadsdelen duurt zes weken en richt zich eerst op kinderdagverblijven en grotere woongebouwen met jonge kinderen.",
+        "Volgens de gemeente worden jaarlijks ongeveer vijftig miljoen luiers weggegooid. Dat is de omvang van de afvalstroom, geen telling van wat al wordt gerecycled. Het behandelingsbedrijf moet volgens de gepubliceerde planning pas in februari 2027 in bedrijf gaan.",
+        "Daar moeten materialen worden gescheiden en opnieuw gebruikt. Plastic kan een grondstof voor nieuwe producten worden; cellulose en de inhoud kunnen via vergisting biogas en meststof opleveren. Ook wordt hergebruik van het absorberende materiaal voorzien.",
+        "De gemeente mikt vanaf 2029 op jaarlijks 5.000 ton ingezamelde luiers. Ook dat is een doel, geen gerealiseerde besparing. Het goede nieuws van nu is de gestarte inzameling met een concrete verwerkingsroute in voorbereiding. Hoeveel afval en uitstoot dat uiteindelijk bespaart, moet de praktijk uitwijzen."
+      ],
+      "source": "Gemeente Kopenhagen",
+      "source_id": "gemeente-kopenhagen",
+      "url": "https://affald.kk.dk/nyheder/brugte-bleer-skal-nu-i-bleaffald-ikke-i-restaffald",
+      "published": "2026-10-19",
+      "event_date": "2026-10-19",
+      "primary_url": "https://affald.kk.dk/nyheder/brugte-bleer-skal-nu-i-bleaffald-ikke-i-restaffald",
+      "image_alt": "Afvalbakken voor gescheiden inzameling; illustratief beeld, niet de inzamelproef in Kopenhagen.",
+      "headline_options": [
+        "Kopenhagen begint gebruikte luiers apart in te zamelen",
+        "Kopenhagen begint gebruikte luiers apart in te zamelen"
+      ],
+      "email_title": "Kopenhagen begint gebruikte luiers apart in te zamelen",
+      "regional_rank": 5,
+      "editorial_rank": 11,
+      "image_query": "id:7290247",
+      "image_key": "kopenhagen-luiers-recyclen"
+    },
+    {
+      "article_slug": "mette-marit-herstel-na-transplantatie",
+      "category": "Gezondheid",
+      "title": "Voorzichtig goed nieuws over het herstel van Mette-Marit",
+      "teaser": "Na een ingrijpende longtransplantatie gaat het herstel van Mette-Marit volgens haar echtgenoot de goede kant op. Het blijft wel een kwetsbare periode.",
+      "article_body": [
+        "Het herstel van Mette-Marit na haar longtransplantatie gaat vooruit. Dat vertelde haar echtgenoot Haakon op 22 oktober tijdens het diner voor het Noorse parlement. Volgens VG benadrukte hij tegelijk hoe kwetsbaar het eerste jaar na zo’n grote operatie is.",
+        "Mette-Marit onderging de transplantatie in juni en was niet bij het diner. Haakon zei dat zij nog tijd nodig heeft om op krachten te komen. Zijn verklaring biedt daarmee voorzichtig positief nieuws over haar persoonlijke herstel, zonder dat alle zorgen voorbij zijn.",
+        "Er is geen nieuwe medische beoordeling gepubliceerd waaruit een volledig herstel of een hervattingsdatum voor haar werkzaamheden blijkt. De vooruitgang is de mededeling van haar echtgenoot, zoals gerapporteerd door VG. Dat is reden voor opluchting, maar geen basis voor een verdergaande medische prognose."
+      ],
+      "source": "VG / Shownieuws",
+      "source_id": "vg",
+      "url": "https://www.vg.no/rampelys/i/2Vxn4x/kong-haakon-snakket-om-mette-marit-under-middagen-paa-slottet",
+      "published": "2026-10-22",
+      "event_date": "2026-10-22",
+      "primary_url": "https://www.vg.no/rampelys/i/2Vxn4x/kong-haakon-snakket-om-mette-marit-under-middagen-paa-slottet",
+      "image_alt": "Herfstbloemen; symbolisch beeld bij herstel, geen afbeelding van Mette-Marit.",
+      "headline_options": [
+        "Voorzichtig goed nieuws over het herstel van Mette-Marit",
+        "Voorzichtig goed nieuws over het herstel van Mette-Marit"
+      ],
+      "email_title": "Voorzichtig goed nieuws over het herstel van Mette-Marit",
+      "regional_rank": 6,
+      "editorial_rank": 12,
+      "image_query": "id:8306687",
+      "image_key": "mette-marit-herstel-na-transplantatie"
+    }
+  ],
+  "headlines": [
+    {
+      "title": "Harde wind zorgt voor geannuleerde vluchten op Schiphol",
+      "source": "NOS",
+      "url": "https://nos.nl/l/2636568",
+      "published": "2026-10-25",
+      "candidate_id": "8e363f0deba8",
+      "source_id": "nos"
+    },
+    {
+      "title": "Brazilië: achtergrond bij de beslissende presidentsverkiezingen",
+      "source": "NOS",
+      "url": "https://nos.nl/l/2636574",
+      "published": "2026-10-25",
+      "candidate_id": "34e67cf534c5",
+      "source_id": "nos"
+    },
+    {
+      "title": "PHP-lek: wat betekent het voor slimme apparaten?",
+      "source": "NOS",
+      "url": "https://nos.nl/l/2636368",
+      "published": "2026-10-23",
+      "candidate_id": "30070151dcd3",
+      "source_id": "nos"
+    }
+  ]
+}
