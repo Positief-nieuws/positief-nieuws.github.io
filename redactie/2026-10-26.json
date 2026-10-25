@@ -1,0 +1,627 @@
+{
+  "schema_version": 1,
+  "edition_date": "2026-10-26",
+  "news_sha256": "2cccc014a152372baafb42ad5d6086e6fb15dd31b666688a0a6727e51aacefd3",
+  "approved": true,
+  "approved_by": "Tom de Haas",
+  "variation_exception_reason": "De eigenaar kiest deze inhoudelijke selectie inclusief eerder aangeleverde tips; concrete vooruitgang en menselijk belang wegen deze editie zwaarder dan een vijfde hoofdcategorie.",
+  "articles": {
+    "nl:minder-moord-en-doodslag-in-nederland": {
+      "source_id": "cbs",
+      "organization_id": "cbs",
+      "article_url": "https://www.cbs.nl/item?sc_itemid=caff1eb0-064d-4a18-bd95-3a1c861360f8&sc_lang=nl-nl",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-08-27",
+      "event_date": "2026-08-27",
+      "checked_on": "2026-10-25",
+      "dates_checked": true,
+      "new_development": "De bronpublicatie geeft de beschreven nieuwe bevinding of actuele toelichting; onderzoeksperiode en beperkingen zijn expliciet in de eigen tekst verwerkt.",
+      "older_exception_reason": "Bewust opgenomen in de door Tom goedgekeurde selectie: CBS-gegevens over 2025 zijn voorlopig. Langjarige daling toont geen oorzaak; aandeel partnergeweld onder vrouwelijke slachtoffers blijft aandachtspunt.",
+      "topic_id": "minder-moord-en-doodslag-in-nederland",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.cbs.nl/nl-nl/cijfers/detail/84726NED",
+        "claim": "Nederland telt veel minder slachtoffers van moord en doodslag dan dertig jaar geleden",
+        "support": "In Nederland vielen in 2025 voorlopig 103 slachtoffers van moord en doodslag. In 1996 waren dat er 240. Dat is een daling van ongeveer 57 procent in absolute aantallen. Ook als rekening wordt gehouden met de bevolkingsgroei is de afname duidelijk: van 15,5 naar 5,7 slachtoffers per miljoen inwoners, volgens de CBS-tabel die op 21 oktober is bijgewerkt. De verbetering is zichtbaar bij mannen en vrouwen, maar niet even sterk. In 2025 werden 65 mannen en 38 vrouwen slachtoffer. Dertig jaar eerder waren dat respectievelijk 171 en 69. Het aantal mannelijke slachtoffers is daarmee sterker gedaald dan het aantal vrouwelijke slachtoffers.",
+        "limitations": "CBS-gegevens over 2025 zijn voorlopig. Langjarige daling toont geen oorzaak; aandeel partnergeweld onder vrouwelijke slachtoffers blijft aandachtspunt.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/netherlands-police-motorcycles-111240/ · Pixabay Content License: https://pixabay.com/service/license-summary/ · fotograaf 12019 · exact beeld lokaal visueel gecontroleerd; illustratief karakter vermeld."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Vergeleken met de eerdere edities op artikel-URL, primaire URL, titel en onderwerp; geen eerder gepubliceerd identiek feit aangetroffen.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "CBS-cijfers laten zien dat het aantal slachtoffers op lange termijn sterk is gedaald. Bij vrouwelijke slachtoffers blijft partnergeweld een ernstig aandachtspunt.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "nl:harlingen-biogas-uit-fabriekslucht": {
+      "source_id": "gemeente-harlingen",
+      "organization_id": "gemeente-harlingen",
+      "article_url": "https://www.harlingen.nl/wereldprimeur-bij-trioworld-in-harlingen",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-23",
+      "event_date": "2026-10-23",
+      "checked_on": "2026-10-25",
+      "dates_checked": true,
+      "new_development": "De bronpublicatie geeft de beschreven nieuwe bevinding of actuele toelichting; onderzoeksperiode en beperkingen zijn expliciet in de eigen tekst verwerkt.",
+      "older_exception_reason": "",
+      "topic_id": "harlingen-biogas-uit-fabriekslucht",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.harlingen.nl/wereldprimeur-bij-trioworld-in-harlingen",
+        "claim": "Een fabriek in Harlingen maakt energie van zijn eigen afvallucht",
+        "support": "Wat een fabriek als vervuilde lucht verlaat, kan ook een grondstof zijn. Bij verpakkingsproducent Trioworld in Harlingen is op 23 oktober een installatie geopend die oplosmiddelen uit het drukproces kan omzetten in hernieuwbaar biogas. Dat gas kan fossiele brandstoffen vervangen. De gemeente Harlingen beschrijft de voorziening als de eerste grootschalige BONCUS-installatie voor flexodruk ter wereld. Bij flexodruk worden onder meer verpakkingen bedrukt. Trioworld werkte jarenlang met ontwikkelaar Pure Infinity aan de techniek. De installatie staat er nu daadwerkelijk; het gaat dus verder dan een aangekondigd project.",
+        "limitations": "Werkende installatie volgens de gemeente; dit bewijst geen generieke toepassing in iedere fabriek.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/factory-building-industry-1140760/ · Pixabay Content License: https://pixabay.com/service/license-summary/ · fotograaf 652234 · exact beeld lokaal visueel gecontroleerd; illustratief karakter vermeld."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Vergeleken met de eerdere edities op artikel-URL, primaire URL, titel en onderwerp; geen eerder gepubliceerd identiek feit aangetroffen.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Een geopende installatie zet oplosmiddelen uit het drukproces om in biogas. De opbrengst op langere termijn moet nog blijken.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "nl:pruimen-voedselbank-herveld": {
+      "source_id": "no-waste-army",
+      "organization_id": "no-waste-army",
+      "article_url": "https://nowastearmy.nl/acties/pruimen/",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-25",
+      "event_date": "2026-10-25",
+      "checked_on": "2026-10-25",
+      "dates_checked": true,
+      "new_development": "De bronpublicatie geeft de beschreven nieuwe bevinding of actuele toelichting; onderzoeksperiode en beperkingen zijn expliciet in de eigen tekst verwerkt.",
+      "older_exception_reason": "",
+      "topic_id": "pruimen-voedselbank-herveld",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://nowastearmy.nl/acties/pruimen/",
+        "claim": "25.000 kilo pruimen gered voor de Voedselbank",
+        "support": "Een recordoogst dreigde voor fruittelers Frederik en Marinus uit Herveld uit te lopen op voedselverspilling. Maar via een inzamelactie van No Waste Army is inmiddels 25.000 kilo pruimen aan de Voedselbank gedoneerd. De organisatie meldt op haar bijgewerkte actiepagina dat de donatieronde is afgelopen. Het gaat daarmee om een bereikt resultaat, niet alleen om een oproep om te helpen. Bij familiebedrijf B&B Fruit groeide meer fruit dan de vaste afnemers hadden besteld. Zij namen de afgesproken hoeveelheden af, maar voor een overschot van 100.000 kilo was nog geen bestemming. De vruchten waren eetbaar, alleen door de hete zomer minder lang houdbaar. Zonder andere afnemers dreigden ze in de biovergister te belanden.",
+        "limitations": "25.000 kilo is de hoeveelheid die volgens de actuele actiepagina aan Voedselbanken is gedoneerd; niet het gehele overschot.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/plums-fruit-food-harvest-fresh-9977023/ · Pixabay Content License: https://pixabay.com/service/license-summary/ · fotograaf fotoblend · exact beeld lokaal visueel gecontroleerd; illustratief karakter vermeld."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Vergeleken met de eerdere edities op artikel-URL, primaire URL, titel en onderwerp; geen eerder gepubliceerd identiek feit aangetroffen.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Een overschot in de Betuwe krijgt alsnog een bestemming op tafel bij gezinnen die het goed kunnen gebruiken.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "nl:groningen-waterstof-materialen": {
+      "source_id": "rijksuniversiteit-groningen",
+      "organization_id": "rijksuniversiteit-groningen",
+      "article_url": "https://www.rug.nl/fse/news/highlighted-papers/2026/doubling-hydrogen-production-through-a-synergy-of-materials",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-22",
+      "event_date": "2026-10-22",
+      "checked_on": "2026-10-25",
+      "dates_checked": true,
+      "new_development": "De bronpublicatie geeft de beschreven nieuwe bevinding of actuele toelichting; onderzoeksperiode en beperkingen zijn expliciet in de eigen tekst verwerkt.",
+      "older_exception_reason": "",
+      "topic_id": "groningen-waterstof-materialen",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.rug.nl/fse/news/highlighted-papers/2026/doubling-hydrogen-production-through-a-synergy-of-materials",
+        "claim": "Groningse onderzoekers verdubbelen waterstofproductie in een proefcel",
+        "support": "Twee keer zoveel waterstof maken zonder meer energie te gebruiken: dat bereikten onderzoekers van de Rijksuniversiteit Groningen met een zorgvuldig afgestemde combinatie van materialen. Het resultaat betreft een proefcel, geen fabriek die al op industriële schaal draait. De cel splitst waterdamp in waterstof en zuurstof. Een keramisch membraan laat geladen waterstofdeeltjes door en houdt andere deeltjes tegen. Aan de waterdampzijde helpt een speciaal ontwikkeld materiaal om de reactie op gang te brengen. Juist de wisselwerking tussen dat materiaal en het membraan bleek belangrijk.",
+        "limitations": "Laboratoriumresultaat; geen reeds gerealiseerde industriële productie of brede kostenbesparing.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/test-tubes-chemistry-glass-red-904546/ · Pixabay Content License: https://pixabay.com/service/license-summary/ · fotograaf crsssteve · exact beeld lokaal visueel gecontroleerd; illustratief karakter vermeld."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Vergeleken met de eerdere edities op artikel-URL, primaire URL, titel en onderwerp; geen eerder gepubliceerd identiek feit aangetroffen.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Een betere combinatie van materialen levert meer waterstof bij hetzelfde energieverbruik. De proefcel bleef minstens vijfhonderd uur stabiel werken.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "nl:maud-carla-redding-koedijk": {
+      "source_id": "nh-nieuws",
+      "organization_id": "nh-nieuws",
+      "article_url": "https://www.nhnieuws.nl/nieuws/364739/maud-20-schiet-twee-inzittenden-van-te-water-geraakte-auto-in-kanaal-te-hulp",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-24",
+      "event_date": "2026-10-24",
+      "checked_on": "2026-10-25",
+      "dates_checked": true,
+      "new_development": "De bronpublicatie geeft de beschreven nieuwe bevinding of actuele toelichting; onderzoeksperiode en beperkingen zijn expliciet in de eigen tekst verwerkt.",
+      "older_exception_reason": "",
+      "topic_id": "maud-carla-redding-koedijk",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.nhnieuws.nl/nieuws/364739/maud-20-schiet-twee-inzittenden-van-te-water-geraakte-auto-in-kanaal-te-hulp",
+        "claim": "Maud en haar moeder helpen twee mensen uit het kanaal",
+        "support": "Maud de Groot en haar moeder Carla zagen op vrijdagochtend 23 oktober bij Koedijk een auto in het Noordhollandsch Kanaal liggen. Twee inzittenden hielden zich vast aan het voertuig. Moeder en dochter stopten en schoten te hulp. De twintigjarige Maud belde 112 en gaf haar telefoon aan haar moeder, die met de meldkamer bleef praten. Zelf ging ze naar de waterkant. De man en vrouw durfden de auto aanvankelijk niet los te laten. Toen ze naar haar toe zwommen, hielp Maud hen vanaf de betonnen oever uit het water.",
+        "limitations": "Geslaagde hulp aan twee mensen; het ongeval zelf is niet de positieve ontwikkeling.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/lifebuoy-rescue-help-safety-buoy-1021102/ · Pixabay Content License: https://pixabay.com/service/license-summary/ · fotograaf InspiredImages · exact beeld lokaal visueel gecontroleerd; illustratief karakter vermeld."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Vergeleken met de eerdere edities op artikel-URL, primaire URL, titel en onderwerp; geen eerder gepubliceerd identiek feit aangetroffen.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Hun snelle hulp in Koedijk brengt twee inzittenden van een zinkende auto veilig op de kant.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "nl:windparken-ruimte-voor-vogeltrek": {
+      "source_id": "vogelbescherming-nederland",
+      "organization_id": "vogelbescherming-nederland",
+      "article_url": "https://www.vogelbescherming.nl/actueel/bericht/windmolens-stilgezet-tijdens-piek-in-de-vogeltrek",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-16",
+      "event_date": "2026-10-16",
+      "checked_on": "2026-10-25",
+      "dates_checked": true,
+      "new_development": "De bronpublicatie geeft de beschreven nieuwe bevinding of actuele toelichting; onderzoeksperiode en beperkingen zijn expliciet in de eigen tekst verwerkt.",
+      "older_exception_reason": "Bewust opgenomen in de door Tom goedgekeurde selectie: Afremmen/stoppen heeft plaatsgevonden, maar het aantal vermeden vogeldoden is niet gemeten. Oudere bron bewust behouden.",
+      "topic_id": "windparken-ruimte-voor-vogeltrek",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.vogelbescherming.nl/actueel/bericht/windmolens-stilgezet-tijdens-piek-in-de-vogeltrek",
+        "claim": "Windparken maken ruimte voor de nachtelijke vogeltrek",
+        "support": "Bij voorspelde pieken in de vogeltrek worden de wieken van Nederlandse windparken op zee vrijwel stilgezet. Volgens Vogelbescherming gebeurde dat op 4 oktober. Vanaf dit jaar is de maatregel verplicht; eerder was die vrijwillig. Dat is een concrete beschermingsmaatregel voor de grote aantallen vogels die in voor- en najaar over de Noordzee vliegen. De wieken mogen tijdens zo’n ingreep nog maximaal twee omwentelingen per minuut maken. Normaal kan dat tot ongeveer vijftien zijn. De bedoeling is de kans op botsingen tijdens drukke treknachten te verkleinen.",
+        "limitations": "Afremmen/stoppen heeft plaatsgevonden, maar het aantal vermeden vogeldoden is niet gemeten. Oudere bron bewust behouden.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/wind-energy-offshore-wind-farm-9762992/ · Pixabay Content License: https://pixabay.com/service/license-summary/ · fotograaf Sinousxl · exact beeld lokaal visueel gecontroleerd; illustratief karakter vermeld."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Vergeleken met de eerdere edities op artikel-URL, primaire URL, titel en onderwerp; geen eerder gepubliceerd identiek feit aangetroffen.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Op de Noordzee worden wieken tijdens voorspelde trekpieken afgeremd. De bescherming is dit jaar verplicht geworden.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "int:persoonlijk-melanomavaccin-proef": {
+      "source_id": "university-sydney",
+      "organization_id": "university-sydney",
+      "article_url": "https://www.sydney.edu.au/news-opinion/news/2026/10/23/world-first-personalised-therapeutic-cancer-vaccine-cuts-risk-of.html",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-10-23",
+      "event_date": "2026-10-23",
+      "checked_on": "2026-10-25",
+      "dates_checked": true,
+      "new_development": "De bronpublicatie geeft de beschreven nieuwe bevinding of actuele toelichting; onderzoeksperiode en beperkingen zijn expliciet in de eigen tekst verwerkt.",
+      "older_exception_reason": "",
+      "topic_id": "persoonlijk-melanomavaccin-proef",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.sydney.edu.au/news-opinion/news/2026/10/23/world-first-personalised-therapeutic-cancer-vaccine-cuts-risk-of.html",
+        "claim": "Persoonlijk vaccin verlaagt terugkeerrisico van melanoom in grote proef",
+        "support": "Een vaccin dat wordt afgestemd op de eigen tumor heeft in een grote internationale studie hoopvolle resultaten opgeleverd. Bij patiënten met een hoog risico op terugkeer van melanoom verminderde de combinatie met bestaande immunotherapie het risico op terugkeer of overlijden met 42 procent ten opzichte van alleen die immunotherapie. De Universiteit van Sydney beschrijft de resultaten van INTerpath-001, een fase 3-studie met 1.137 patiënten. Hun melanoom was operatief verwijderd. Het persoonlijke mRNA-vaccin intismeran is bedoeld om het afweersysteem kenmerken van eventueel achtergebleven tumorcellen te leren herkennen.",
+        "limitations": "Klinische proef: relatieve risicoreductie van terugkeer of overlijden; geen beschikbare genezing voor iedere patiënt.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/analysis-biochemistry-biologist-2030265/ · Pixabay Content License: https://pixabay.com/service/license-summary/ · fotograaf Kost9n4 · exact beeld lokaal visueel gecontroleerd; illustratief karakter vermeld."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Vergeleken met de eerdere edities op artikel-URL, primaire URL, titel en onderwerp; geen eerder gepubliceerd identiek feit aangetroffen.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Een fase 3-studie onder 1.137 patiënten laat een lager risico op terugkeer of overlijden zien. Toelating moet nog volgen.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "int:basisinkomen-peru-natuur-beschermen": {
+      "source_id": "university-bath",
+      "organization_id": "university-bath",
+      "article_url": "https://www.bath.ac.uk/announcements/world-first-basic-income-trial-boosts-indigenous-livelihoods-and-amazon-rainforest-protection/",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-10-20",
+      "event_date": "2026-10-20",
+      "checked_on": "2026-10-25",
+      "dates_checked": true,
+      "new_development": "De bronpublicatie geeft de beschreven nieuwe bevinding of actuele toelichting; onderzoeksperiode en beperkingen zijn expliciet in de eigen tekst verwerkt.",
+      "older_exception_reason": "",
+      "topic_id": "basisinkomen-peru-natuur-beschermen",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.bath.ac.uk/announcements/world-first-basic-income-trial-boosts-indigenous-livelihoods-and-amazon-rainforest-protection/",
+        "claim": "Vaster inkomen geeft gezinnen in de Amazone meer ruimte",
+        "support": "Niet iedere dag hoeven uitzoeken hoe er genoeg eten op tafel komt: die zekerheid kan ruimte geven voor andere keuzes. In drie inheemse gemeenschappen in de Peruaanse Amazone ontvingen 211 deelnemers twee jaar lang een onvoorwaardelijk basisinkomen, gecombineerd met lokale scholing. Een analyse van de Universiteit van Bath meldt duidelijke verbeteringen. Het aandeel huishoudens dat geen voedzaam eten kon betalen daalde van 73 naar 26 procent. Deelnemers konden vaker sparen en hoefden minder vaak elders werk te zoeken. Velen meldden ook natuurvriendelijker landbouw en deelname aan herstel van bos en waterbronnen.",
+        "limitations": "Cash Plus combineert geld en begeleiding; geen geïsoleerd causaal bewijs voor geld of ontbossingseffect.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/canoe-river-nature-amazon-house-7292034/ · Pixabay Content License: https://pixabay.com/service/license-summary/ · fotograaf jeanebarfrei · exact beeld lokaal visueel gecontroleerd; illustratief karakter vermeld."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Vergeleken met de eerdere edities op artikel-URL, primaire URL, titel en onderwerp; geen eerder gepubliceerd identiek feit aangetroffen.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Een kleine proef in Peru laat minder voedselonzekerheid zien. Omdat een controlegroep ontbrak, blijft de oorzaak van alle veranderingen onzeker.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "int:sociale-activiteiten-hersengezondheid": {
+      "source_id": "bmj",
+      "organization_id": "bmj",
+      "article_url": "https://jech.bmj.com/content/early/2026/10/08/jech-2025-225670",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-10-08",
+      "event_date": "2026-10-08",
+      "checked_on": "2026-10-25",
+      "dates_checked": true,
+      "new_development": "De bronpublicatie geeft de beschreven nieuwe bevinding of actuele toelichting; onderzoeksperiode en beperkingen zijn expliciet in de eigen tekst verwerkt.",
+      "older_exception_reason": "Bewust opgenomen in de door Tom goedgekeurde selectie: Observationeel onderzoek: samenhang met cognitieve uitkomsten, geen bewezen preventie van dementie.",
+      "topic_id": "sociale-activiteiten-hersengezondheid",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://jech.bmj.com/lookup/doi/10.1136/jech-2025-225670",
+        "claim": "Sociaal actief blijven hangt samen met een scherper geheugen",
+        "support": "Ouderen die deelnemen aan sociale activiteiten scoren gemiddeld beter op tests van geheugen en denkvaardigheden dan leeftijdgenoten die niet sociaal actief zijn. Dat blijkt uit een analyse van vijf langlopende bevolkingsonderzoeken met samen 57.793 deelnemers uit 24 landen. BMJ lichtte het onderzoek op 21 oktober toe. De onderzoekers volgden de deelnemers doorgaans zes jaar. Zij vergeleken zelfgerapporteerde sociale bezigheden met herhaalde cognitieve tests. Deelname aan meerdere soorten activiteiten hing samen met gunstiger scores. Vooral vrijwilligerswerk en lidmaatschap van een sportclub lieten in de verschillende onderzochte groepen een consistent positief verband zien.",
+        "limitations": "Observationeel onderzoek: samenhang met cognitieve uitkomsten, geen bewezen preventie van dementie.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/training-volunteers-learning-2247391/ · Pixabay Content License: https://pixabay.com/service/license-summary/ · fotograaf MamaShaw · exact beeld lokaal visueel gecontroleerd; illustratief karakter vermeld."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Vergeleken met de eerdere edities op artikel-URL, primaire URL, titel en onderwerp; geen eerder gepubliceerd identiek feit aangetroffen.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Een onderzoek onder bijna 58.000 ouderen ziet gunstige verbanden bij onder meer vrijwilligerswerk en sportclubs.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "int:nepal-sneeuwluipaarden-vee": {
+      "source_id": "wageningen-university-research",
+      "organization_id": "wageningen-university-research",
+      "article_url": "https://www.wur.nl/nl/nieuws/sneeuwluipaarden-nepal-beschermen-daar-een-app-voor",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-10-21",
+      "event_date": "2026-10-21",
+      "checked_on": "2026-10-25",
+      "dates_checked": true,
+      "new_development": "De bronpublicatie geeft de beschreven nieuwe bevinding of actuele toelichting; onderzoeksperiode en beperkingen zijn expliciet in de eigen tekst verwerkt.",
+      "older_exception_reason": "",
+      "topic_id": "nepal-sneeuwluipaarden-vee",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.wur.nl/nl/nieuws/sneeuwluipaarden-nepal-beschermen-daar-een-app-voor",
+        "claim": "Beschermde veekralen helpen aanvallen door sneeuwluipaarden voorkomen",
+        "support": "In de Nepalese Nar-Phu-vallei moeten herders en sneeuwluipaarden hetzelfde berglandschap delen. Als een roofdier vee doodt, kan dat een gezin hard raken en leiden tot vergelding. Een project van Wageningse onderzoekers en lokale bewoners probeert die keten te doorbreken. Bewoners melden sporen van sneeuwluipaarden via mobiele apps. Met die gegevens en kaarten van veekralen brengen onderzoekers risicoplekken in beeld. Daar zijn inmiddels zes roofdierbestendige omheiningen gebouwd. Sinds de start zijn volgens het project geen incidenten meer gemeld waarbij grote aantallen vee zijn gedood.",
+        "limitations": "Projectwaarneming van beschermde veekralen, geen gecontroleerd experiment; stockfoto is niet uit de Nar-Phu-vallei.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/snow-leopard-leopard-big-cat-snow-1985510/ · Pixabay Content License: https://pixabay.com/service/license-summary/ · fotograaf strichpunkt · exact beeld lokaal visueel gecontroleerd; illustratief karakter vermeld."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Vergeleken met de eerdere edities op artikel-URL, primaire URL, titel en onderwerp; geen eerder gepubliceerd identiek feit aangetroffen.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Bewoners delen waarnemingen via een app en krijgen sneller schadevergoeding. De aanpak vermindert de aanleiding voor vergelding tegen roofdieren.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "int:kopenhagen-luiers-recyclen": {
+      "source_id": "gemeente-kopenhagen",
+      "organization_id": "gemeente-kopenhagen",
+      "article_url": "https://affald.kk.dk/nyheder/brugte-bleer-skal-nu-i-bleaffald-ikke-i-restaffald",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-10-19",
+      "event_date": "2026-10-19",
+      "checked_on": "2026-10-25",
+      "dates_checked": true,
+      "new_development": "De bronpublicatie geeft de beschreven nieuwe bevinding of actuele toelichting; onderzoeksperiode en beperkingen zijn expliciet in de eigen tekst verwerkt.",
+      "older_exception_reason": "",
+      "topic_id": "kopenhagen-luiers-recyclen",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://affald.kk.dk/nyheder/brugte-bleer-skal-nu-i-bleaffald-ikke-i-restaffald",
+        "claim": "Kopenhagen begint gebruikte luiers apart in te zamelen",
+        "support": "Kopenhagen is op 19 oktober begonnen met het plaatsen van aparte containers voor gebruikte luiers. Daarmee zet de stad een praktisch systeem op voor afval dat tot nu toe doorgaans werd verbrand. De uitrol langs tien stadsdelen duurt zes weken en richt zich eerst op kinderdagverblijven en grotere woongebouwen met jonge kinderen. Volgens de gemeente worden jaarlijks ongeveer vijftig miljoen luiers weggegooid. Dat is de omvang van de afvalstroom, geen telling van wat al wordt gerecycled. Het behandelingsbedrijf moet volgens de gepubliceerde planning pas in februari 2027 in bedrijf gaan.",
+        "limitations": "Inzameling is gestart; verwerking volgens planning februari 2027. Geen reeds gerealiseerde besparing geclaimd.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/garbage-cans-waste-disposal-7290247/ · Pixabay Content License: https://pixabay.com/service/license-summary/ · fotograaf manfredrichter · exact beeld lokaal visueel gecontroleerd; illustratief karakter vermeld."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Vergeleken met de eerdere edities op artikel-URL, primaire URL, titel en onderwerp; geen eerder gepubliceerd identiek feit aangetroffen.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "De eerste containers worden geplaatst. Verwerking tot nieuwe materialen en biogas moet vanaf februari 2027 volgen.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "int:mette-marit-herstel-na-transplantatie": {
+      "source_id": "vg",
+      "organization_id": "vg",
+      "article_url": "https://www.vg.no/rampelys/i/2Vxn4x/kong-haakon-snakket-om-mette-marit-under-middagen-paa-slottet",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-10-22",
+      "event_date": "2026-10-22",
+      "checked_on": "2026-10-25",
+      "dates_checked": true,
+      "new_development": "De bronpublicatie geeft de beschreven nieuwe bevinding of actuele toelichting; onderzoeksperiode en beperkingen zijn expliciet in de eigen tekst verwerkt.",
+      "older_exception_reason": "",
+      "topic_id": "mette-marit-herstel-na-transplantatie",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.vg.no/rampelys/i/2Vxn4x/kong-haakon-snakket-om-mette-marit-under-middagen-paa-slottet",
+        "claim": "Voorzichtig goed nieuws over het herstel van Mette-Marit",
+        "support": "Het herstel van Mette-Marit na haar longtransplantatie gaat vooruit. Dat vertelde haar echtgenoot Haakon op 22 oktober tijdens het diner voor het Noorse parlement. Volgens VG benadrukte hij tegelijk hoe kwetsbaar het eerste jaar na zo’n grote operatie is. Mette-Marit onderging de transplantatie in juni en was niet bij het diner. Haakon zei dat zij nog tijd nodig heeft om op krachten te komen. Zijn verklaring biedt daarmee voorzichtig positief nieuws over haar persoonlijke herstel, zonder dat alle zorgen voorbij zijn.",
+        "limitations": "Vooruitgang is de verklaring van haar echtgenoot via VG, geen onafhankelijke medische prognose.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/aster-white-aster-flowers-autumn-8306687/ · Pixabay Content License: https://pixabay.com/service/license-summary/ · fotograaf jhenning · exact beeld lokaal visueel gecontroleerd; illustratief karakter vermeld."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Vergeleken met de eerdere edities op artikel-URL, primaire URL, titel en onderwerp; geen eerder gepubliceerd identiek feit aangetroffen.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Na een ingrijpende longtransplantatie gaat het herstel van Mette-Marit volgens haar echtgenoot de goede kant op. Het blijft wel een kwetsbare periode.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "headlines:0": {
+      "source_id": "nos",
+      "organization_id": "nos",
+      "article_url": "https://nos.nl/l/2636568",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-25",
+      "event_date": "2026-10-25",
+      "checked_on": "2026-10-25",
+      "dates_checked": true,
+      "new_development": "De bronpublicatie geeft de beschreven nieuwe bevinding of actuele toelichting; onderzoeksperiode en beperkingen zijn expliciet in de eigen tekst verwerkt.",
+      "older_exception_reason": "",
+      "topic_id": "nos-2636568",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://nos.nl/l/2636568",
+        "claim": "Harde wind zorgt voor geannuleerde vluchten op Schiphol",
+        "support": "Direct gecontroleerde externe actualiteitenlink; uitsluitend een eigen korte titel, de lezer gaat naar de oorspronkelijke bron.",
+        "limitations": "Actualiteitenlink met peildatum zondag 25 oktober; geen garantie over vluchtstatus maandag.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used",
+        "image_evidence": ""
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Vergeleken met de eerdere edities op artikel-URL, primaire URL, titel en onderwerp; geen eerder gepubliceerd identiek feit aangetroffen.",
+        "new_fact": ""
+      }
+    },
+    "headlines:1": {
+      "source_id": "nos",
+      "organization_id": "nos",
+      "article_url": "https://nos.nl/l/2636574",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-10-25",
+      "event_date": "2026-10-25",
+      "checked_on": "2026-10-25",
+      "dates_checked": true,
+      "new_development": "De bronpublicatie geeft de beschreven nieuwe bevinding of actuele toelichting; onderzoeksperiode en beperkingen zijn expliciet in de eigen tekst verwerkt.",
+      "older_exception_reason": "",
+      "topic_id": "nos-2636574",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://nos.nl/l/2636574",
+        "claim": "Brazilië: achtergrond bij de beslissende presidentsverkiezingen",
+        "support": "Direct gecontroleerde externe actualiteitenlink; uitsluitend een eigen korte titel, de lezer gaat naar de oorspronkelijke bron.",
+        "limitations": "Achtergrond over de verkiezingsronde; geen verkiezingsuitslag vooruitgelopen.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used",
+        "image_evidence": ""
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Vergeleken met de eerdere edities op artikel-URL, primaire URL, titel en onderwerp; geen eerder gepubliceerd identiek feit aangetroffen.",
+        "new_fact": ""
+      }
+    },
+    "headlines:2": {
+      "source_id": "nos",
+      "organization_id": "nos",
+      "article_url": "https://nos.nl/l/2636368",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-23",
+      "event_date": "2026-10-23",
+      "checked_on": "2026-10-25",
+      "dates_checked": true,
+      "new_development": "De bronpublicatie geeft de beschreven nieuwe bevinding of actuele toelichting; onderzoeksperiode en beperkingen zijn expliciet in de eigen tekst verwerkt.",
+      "older_exception_reason": "",
+      "topic_id": "nos-2636368",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://nos.nl/l/2636368",
+        "claim": "PHP-lek: wat betekent het voor slimme apparaten?",
+        "support": "Direct gecontroleerde externe actualiteitenlink; uitsluitend een eigen korte titel, de lezer gaat naar de oorspronkelijke bron.",
+        "limitations": "Uitlegartikel over digitale veiligheid; actualiteitenlink van vrijdag 23 oktober.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used",
+        "image_evidence": ""
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Vergeleken met de eerdere edities op artikel-URL, primaire URL, titel en onderwerp; geen eerder gepubliceerd identiek feit aangetroffen.",
+        "new_fact": ""
+      }
+    }
+  },
+  "owner_exception": {
+    "authorized_by": "Tom de Haas",
+    "authorized_on": "2026-10-25",
+    "edition_date": "2026-10-26",
+    "scope": [
+      "incomplete_candidate_triage_and_coverage",
+      "early_release_on_sunday",
+      "three_older_sources_from_approved_selection"
+    ],
+    "reason": "Tom de Haas heeft op zondag 25 oktober expliciet ingestemd met een eenmalige publicatie-uitzondering: de huidige nagekeken selectie publiceren, volledige triage van 9.199 kandidaten en bronoverzichten eerlijk als onafgerond vastleggen. Vervroegde maandag-editie; nieuwsbrief alleen als concept.",
+    "candidate_triage_complete": false,
+    "source_coverage_complete": false,
+    "newsletter_action": "create_draft_only"
+  }
+}
