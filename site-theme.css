@@ -34,3 +34,49 @@ body:not(.pn-home) .hero + .section{padding-top:16px}
 /* Overview cards contain headings and metadata; their height follows the content. */
 #today-view .list-item{min-height:0}
 #today-view .short .meta{margin-top:0}
+
+/* Reader testimonial: align heading, quote and attribution on every screen. */
+body.pn-home #today-view #reader-voices {
+  margin: 0 0 28px;
+  padding: 28px 0 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+body.pn-home #today-view #reader-voices h2 {
+  margin: 0 0 18px;
+  font-family: inherit;
+  font-size: 24px;
+  line-height: 1.3;
+  color: var(--ink);
+  letter-spacing: -.035em;
+  text-transform: none;
+}
+body.pn-home #today-view #reader-voices blockquote {
+  max-width: 780px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+body.pn-home #today-view #reader-voices .reader-quote {
+  max-width: none;
+  margin: 0;
+  color: var(--ink);
+  font-size: 16px;
+  font-style: normal;
+  line-height: 1.7;
+}
+body.pn-home #today-view #reader-voices .reader-quote + .reader-quote {
+  margin-top: 14px;
+}
+body.pn-home #today-view #reader-voices .reader-credit {
+  margin: 16px 0 0;
+  color: var(--green);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+@media (max-width: 640px) {
+  body.pn-home #today-view #reader-voices { padding-top: 24px; }
+  body.pn-home #today-view #reader-voices h2 { font-size: 21px; margin-bottom: 16px; }
+}
