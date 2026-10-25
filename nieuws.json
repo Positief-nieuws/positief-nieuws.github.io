@@ -1,450 +1,458 @@
 {
   "meta": {
-    "edition_date": "2026-10-22",
-    "email_preheader": "Kwelders als kustverdediging, betrokken bezorgers en verrassend spraakzame gieren.",
-    "ordering": "Twaalf verhalen en drie actualiteiten door de uitgever vastgesteld; volgorde behouden. Oorspronkelijke bronnen en beelden gecontroleerd; feitelijke datum-/opbrengstcorrecties vastgelegd in het bewijsdossier.",
+    "edition_date": "2026-10-26",
+    "email_preheader": "Minder dodelijk geweld, energie uit fabriekslucht en 25.000 kilo pruimen voor de Voedselbank.",
     "status": "approved",
     "publication_authorized": true,
+    "ordering": "6 Nederlandse feiten, 6 wereldverhalen; brononderzoek en beperkingen in controleverslag.",
+    "personal_note": {
+      "title": "Wat niet in de krant komt",
+      "text": "Ik was net een kwartier thuis toen de deurbel ging. Voor de deur stonden twee vrouwen, vermoedelijk moeder en dochter, met een hond aan de lijn. Het waaide hard en het regende een beetje. 'Uw sleutels zitten nog aan de buitenkant van de deur,' zeiden ze. Ze belden even aan om te voorkomen dat er iets mis zou gaan. Als iemand de sleutels had meegenomen, was het misschien nieuws geworden. Maar twee mensen die gewoon even op een buurtgenoot letten? Dat haalt de krant zelden. Daarom hoort het hier.",
+      "portrait_choice": "zwart-wit/cartoon schets, indien beschikbaar in repo",
+      "editorial_status": "concept; door gebruiker eerder aangeleverde anekdote",
+      "portrait_url": "/images/redactie/tom-portret-weergave.svg"
+    },
     "editorial_order": [
       {
         "section": "nl",
-        "article_slug": "kwelders-beschermen-kust",
+        "article_slug": "minder-moord-en-doodslag-in-nederland",
         "rank": 1
       },
       {
         "section": "nl",
-        "article_slug": "bezorgers-kijken-om-naar-buurt",
+        "article_slug": "harlingen-biogas-uit-fabriekslucht",
         "rank": 2
       },
       {
         "section": "nl",
-        "article_slug": "studentenidee-wordt-hulpmiddel",
+        "article_slug": "pruimen-voedselbank-herveld",
         "rank": 3
       },
       {
         "section": "nl",
-        "article_slug": "erasmusboek-terug-in-rotterdam",
+        "article_slug": "groningen-waterstof-materialen",
         "rank": 4
       },
       {
         "section": "nl",
-        "article_slug": "gieren-praten-meer-dan-gedacht",
+        "article_slug": "maud-carla-redding-koedijk",
         "rank": 5
       },
       {
         "section": "nl",
-        "article_slug": "warmte-uit-amsterdamse-gracht",
+        "article_slug": "windparken-ruimte-voor-vogeltrek",
         "rank": 6
       },
       {
         "section": "int",
-        "article_slug": "zonnestroom-houdt-zorgpost-open",
-        "rank": 7
+        "article_slug": "persoonlijk-melanomavaccin-proef",
+        "rank": 1
       },
       {
         "section": "int",
-        "article_slug": "zes-dolfijnenkalfjes-mekong",
-        "rank": 8
+        "article_slug": "basisinkomen-peru-natuur-beschermen",
+        "rank": 2
       },
       {
         "section": "int",
-        "article_slug": "japanse-sonde-naar-phobos",
-        "rank": 9
+        "article_slug": "sociale-activiteiten-hersengezondheid",
+        "rank": 3
       },
       {
         "section": "int",
-        "article_slug": "mangroven-keren-terug-madagaskar",
-        "rank": 10
+        "article_slug": "nepal-sneeuwluipaarden-vee",
+        "rank": 4
       },
       {
         "section": "int",
-        "article_slug": "plexiglas-bijna-geheel-hergebruiken",
-        "rank": 11
+        "article_slug": "kopenhagen-luiers-recyclen",
+        "rank": 5
       },
       {
         "section": "int",
-        "article_slug": "boer-ontdekt-ramsesbeelden",
-        "rank": 12
+        "article_slug": "mette-marit-herstel-na-transplantatie",
+        "rank": 6
       }
-    ]
+    ],
+    "selection_revision": "2026-10-25-avond",
+    "candidate_generated_at": "2026-10-25T17:39:34.446222+01:00",
+    "review_status": "Tom de Haas heeft op zondag 25 oktober expliciet ingestemd met een eenmalige publicatie-uitzondering: de huidige nagekeken selectie publiceren, volledige triage van 9.199 kandidaten en bronoverzichten eerlijk als onafgerond vastleggen. Vervroegde maandag-editie; nieuwsbrief alleen als concept."
   },
   "nl": [
     {
-      "article_slug": "kwelders-beschermen-kust",
-      "category": "Natuur & klimaat",
-      "title": "De natuur blijkt onze dijken beter te beschermen dan gedacht",
-      "teaser": "Groene stukken kustland langs de Waddenzee doorstonden in een enorme golfbak verrassend zware stormgolven. Dat kan helpen om dijken veiliger en slimmer te ontwerpen.",
+      "article_slug": "minder-moord-en-doodslag-in-nederland",
+      "category": "Mens",
+      "title": "Nederland telt veel minder slachtoffers van moord en doodslag dan dertig jaar geleden",
+      "teaser": "CBS-cijfers laten zien dat het aantal slachtoffers op lange termijn sterk is gedaald. Bij vrouwelijke slachtoffers blijft partnergeweld een ernstig aandachtspunt.",
       "article_body": [
-        "Een kwelder is een begroeide vlakte langs de zee die bij hoogwater kan overstromen. Denk aan het groene buitendijkse land aan de Waddenkust. Onderzoekers hebben nu gemeten hoe stevig zo’n natuurlijk voorland blijft wanneer er een zware storm overheen raast. Het antwoord was opmerkelijk: de bodem gaf nauwelijks mee.",
-        "Voor de proef haalden wetenschappers complete stukken kwelder uit de Friese Peazemerlannen. Ze bouwden daarmee een landschap van ruim 300 vierkante meter na in de Deltagoot van Deltares, waar golven tot ongeveer twee meter hoog overheen rolden. Na 21 uur golfbelasting was het bodemoppervlak gemiddeld maar zeven millimeter lager geworden.",
-        "Ook planten hielpen golven afremmen, al werd hun bijdrage bij de hoogste golven kleiner. Dat onderscheid is belangrijk: een kwelder is geen vervanger van een dijk. De hoger gelegen bodem en de begroeiing kunnen samen wel een deel van de klappen opvangen vóór het water de dijk bereikt.",
-        "Volgens de betrokken onderzoekers en Wetterskip Fryslân kan dat verschil maken bij de aanleg en versterking van dijken. Het onderzoek helpt ook verklaren waarom het beschermen en herstellen van kwelders niet alleen goed is voor vogels en planten, maar mogelijk eveneens voor de veiligheid van bewoners achter de kust."
+        "In Nederland vielen in 2025 voorlopig 103 slachtoffers van moord en doodslag. In 1996 waren dat er 240. Dat is een daling van ongeveer 57 procent in absolute aantallen. Ook als rekening wordt gehouden met de bevolkingsgroei is de afname duidelijk: van 15,5 naar 5,7 slachtoffers per miljoen inwoners, volgens de CBS-tabel die op 21 oktober is bijgewerkt.",
+        "De verbetering is zichtbaar bij mannen en vrouwen, maar niet even sterk. In 2025 werden 65 mannen en 38 vrouwen slachtoffer. Dertig jaar eerder waren dat respectievelijk 171 en 69. Het aantal mannelijke slachtoffers is daarmee sterker gedaald dan het aantal vrouwelijke slachtoffers.",
+        "Die langjarige vooruitgang neemt een hardnekkig probleem niet weg. Volgens de CBS-publicatie over 2021 tot en met 2025 was bij ongeveer de helft van de vrouwelijke slachtoffers de partner of ex-partner de vermoedelijke dader. Dat aandeel is in vijftien jaar nauwelijks veranderd.",
+        "De statistiek laat een daling zien, maar bewijst niet welke oorzaken daarvoor verantwoordelijk zijn. En de cijfers over 2025 zijn voorlopig. Toch geeft de lange reeks een breder beeld dan afzonderlijke misdaadberichten: dodelijk geweld komt aanzienlijk minder vaak voor dan dertig jaar geleden."
       ],
-      "source": "NIOZ / WUR / Deltares",
-      "source_id": "nioz",
-      "url": "https://www.nioz.nl/nl/nieuws-en-blogs/nieuws/kwelders-blijken-krachtige-bondgenoten-voor-een-klimaatbestendige-kust",
-      "published": "2026-10-21",
-      "event_date": "2026-10-21",
-      "primary_url": "https://www.nature.com/articles/s41586-026-11145-8",
-      "image_alt": "Een begroeide kwelder aan de kust, illustratief beeld van een zoutmoeras.",
+      "source": "Centraal Bureau voor de Statistiek",
+      "source_id": "cbs",
+      "url": "https://www.cbs.nl/item?sc_itemid=caff1eb0-064d-4a18-bd95-3a1c861360f8&sc_lang=nl-nl",
+      "published": "2026-08-27",
+      "event_date": "2026-08-27",
+      "primary_url": "https://www.cbs.nl/nl-nl/cijfers/detail/84726NED",
+      "image_alt": "Nederlandse politieagenten met politiemotoren. Illustratief archiefbeeld; geen opname bij een misdrijf en geen verklaring voor de daling.",
       "headline_options": [
-        "De natuur blijkt onze dijken beter te beschermen dan gedacht",
-        "De natuur blijkt onze dijken beter te beschermen dan gedacht"
+        "Nederland telt veel minder slachtoffers van moord en doodslag dan dertig jaar geleden",
+        "Nederland telt veel minder slachtoffers van moord en doodslag dan dertig jaar geleden"
       ],
-      "email_title": "De natuur blijkt onze dijken beter te beschermen dan gedacht",
+      "email_title": "Nederland telt veel minder slachtoffers van moord en doodslag dan dertig jaar geleden",
       "regional_rank": 1,
       "editorial_rank": 1,
-      "image_query": "id:5549537",
-      "image_page_url": "https://pixabay.com/photos/salt-marsh-damp-wetland-coastal-5549537/",
-      "image_key": "kwelders-beschermen-kust"
+      "image_query": "id:111240",
+      "image_key": "minder-moord-en-doodslag-in-nederland",
+      "article_chart": {
+        "src": "/images/artikelen/2026-10-26/minder-moord-en-doodslag-in-nederland.svg",
+        "alt": "240 slachtoffers in 1996 tegenover voorlopig 103 in 2025. Bron: CBS.",
+        "caption": "Aantal slachtoffers van moord en doodslag in Nederland. Bron: CBS; 2025 is voorlopig.",
+        "source_url": "https://www.cbs.nl/nl-nl/cijfers/detail/84726NED"
+      }
     },
     {
-      "article_slug": "bezorgers-kijken-om-naar-buurt",
-      "category": "Mens",
-      "title": "De postbezorger ziet soms wat anderen niet zien, en kan hulp inschakelen",
-      "teaser": "Post- en pakketbezorgers hebben sinds april 2024 tweeduizend keer zorgen over een buurtbewoner doorgegeven. Niet als toezichthouders, maar omdat een klein signaal soms de eerste stap naar hulp is.",
-      "article_body": [
-        "Een brievenbus die steeds voller raakt. Een tuin die plotseling sterk verwildert. Of iemand die gewoonlijk regelmatig buiten kwam, maar al een tijd niet meer wordt gezien. Voor een post- of pakketbezorger kunnen zulke veranderingen aanleiding zijn om zich zorgen te maken over een buurtbewoner.",
-        "Sinds april 2024 kunnen bezorgers via een samenwerking tussen PostNL en Sociaal Werk Nederland vrijwillig en anoniem een signaal doorgeven aan een lokale welzijnsorganisatie. Op 21 oktober werd de tweeduizendste melding geregistreerd. Inmiddels is deze mogelijkheid in vrijwel alle Nederlandse gemeenten beschikbaar.",
-        "Het is nadrukkelijk niet de bedoeling dat bezorgers zelf een diagnose stellen of mensen gaan controleren. Professionals bekijken of een signaal iets vraagt. Soms is iemand al bekend bij een welzijnsorganisatie, soms kan een gesprek of bezoek een opening bieden naar ondersteuning of een buurtactiviteit.",
-        "De tweeduizend meldingen zijn cijfers van PostNL. Ze vertellen niet hoeveel buurtbewoners daadwerkelijk geholpen zijn of hoeveel signalen loos alarm bleken. Het positieve zit in de gedachte achter de aanpak: mensen die iedere dag door dezelfde straten lopen, kunnen een extra paar oplettende ogen zijn voor wie anders misschien uit beeld raakt."
-      ],
-      "source": "PostNL Newsroom",
-      "source_id": "postnl",
-      "url": "https://newsroom.postnl.nl/nl-NL/273265-tweeduizendste-sociale-melding-door-post-en-pakketbezorgers/",
-      "published": "2026-10-21",
-      "event_date": "2026-10-21",
-      "primary_url": "https://newsroom.postnl.nl/nl-NL/273265-tweeduizendste-sociale-melding-door-post-en-pakketbezorgers/",
-      "image_alt": "Fietskoerier op straat, illustratief beeld; geen medewerker van PostNL.",
-      "headline_options": [
-        "De postbezorger ziet soms wat anderen niet zien, en kan hulp inschakelen",
-        "De postbezorger ziet soms wat anderen niet zien, en kan hulp inschakelen"
-      ],
-      "email_title": "De postbezorger ziet soms wat anderen niet zien, en kan hulp inschakelen",
-      "regional_rank": 2,
-      "editorial_rank": 2,
-      "image_query": "id:7355135",
-      "image_page_url": "https://pixabay.com/photos/bicycle-messenger-delivery-service-7355135/",
-      "image_key": "bezorgers-kijken-om-naar-buurt"
-    },
-    {
-      "article_slug": "studentenidee-wordt-hulpmiddel",
-      "category": "Wetenschap",
-      "title": "Van brailletoetsenbord tot babybewaking: studentenideeën maken het verschil",
-      "teaser": "Een idee voor een studieopdracht kan uitgroeien tot iets waar mensen echt wat aan hebben. In Eindhoven laten uitvinders zien wat er al op de markt en in ziekenhuizen terechtgekomen is.",
-      "article_body": [
-        "Een smartphone bedienen zonder het scherm te zien: voor veel blinde gebruikers is dat een dagelijkse uitdaging. De Hable One, ontstaan uit een studentenidee, maakt het mogelijk om een telefoon of tablet met tastbare knoppen en braillecommando’s te bedienen. Volgens Omroep Brabant wordt het apparaat inmiddels door duizenden mensen gebruikt.",
-        "In het Máxima Medisch Centrum in Veldhoven wordt de Bambibelt gebruikt, een zachte band die bij pasgeboren baby’s hartactiviteit en ademhaling meet. Doordat er minder losse elektroden en kabels nodig zijn, kan het huidcontact met ouders makkelijker behouden blijven. Andere ziekenhuizen testen de techniek nog.",
-        "Ook op het sportveld zijn zulke projecten zichtbaar. SmartGoals, lichtgevende poortjes die de reactiesnelheid en techniek van spelers uitdagen, zijn volgens de makers verkocht aan meer dan tweeduizend clubs. En het bedrijf Usono, dat echo-onderzoek tijdens beweging mogelijk maakt, is actief in meer dan 25 landen.",
-        "De voorbeelden staan deze week in de belangstelling rond de Dutch Design Week en het jubileum van de Technische Universiteit Eindhoven. Niet ieder studentenproject slaagt en niet alles is al verkrijgbaar: een speciaal kompas voor mensen met dementie moet bijvoorbeeld pas in 2027 verschijnen. Juist de toepassingen die al gebruikt worden laten zien dat een goed idee niet bij een afstudeerpresentatie hoeft te blijven."
-      ],
-      "source": "Omroep Brabant",
-      "source_id": "omroep-brabant",
-      "url": "https://www.omroepbrabant.nl/nieuws/6031662/begonnen-als-studentenproject-nu-zijn-deze-vijf-uitvindingen-te-koop",
-      "published": "2026-10-20",
-      "event_date": "2026-10-20",
-      "primary_url": "https://www.omroepbrabant.nl/nieuws/6031662/begonnen-als-studentenproject-nu-zijn-deze-vijf-uitvindingen-te-koop",
-      "image_alt": "Handen lezen brailleschrift, illustratief beeld; niet een van de genoemde uitvindingen.",
-      "headline_options": [
-        "Van brailletoetsenbord tot babybewaking: studentenideeën maken het verschil",
-        "Van brailletoetsenbord tot babybewaking: studentenideeën maken het verschil"
-      ],
-      "email_title": "Van brailletoetsenbord tot babybewaking: studentenideeën maken het verschil",
-      "regional_rank": 3,
-      "editorial_rank": 3,
-      "image_query": "id:5498805",
-      "image_page_url": "https://pixabay.com/photos/braille-hands-keys-read-5498805/",
-      "image_key": "studentenidee-wordt-hulpmiddel"
-    },
-    {
-      "article_slug": "erasmusboek-terug-in-rotterdam",
-      "category": "Cultuur",
-      "title": "Vier eeuwen zoek: verloren gewaand Erasmusboek duikt weer op",
-      "teaser": "Een klein boekje met opvoedadviezen uit 1609 is vanuit de Verenigde Staten teruggekeerd naar Rotterdam. Van juist deze druk leek geen exemplaar meer te bestaan.",
-      "article_body": [
-        "Een kind dat aan tafel gaat, moet eerst zijn handen wassen. En wie een ander hoort niezen, kan diegene gezondheid wensen. Het zijn adviezen die vandaag nog verrassend vertrouwd klinken, maar ze komen uit een boek van de Rotterdamse denker Erasmus dat eeuwenlang uit beeld was.",
-        "Het gaat om een uitgave uit 1609 van La civilité puerile, een werk over omgangsvormen en opvoeding. Erasmus zelf overleed al in 1536. Het gevonden exemplaar is dus geen nieuw geschreven tekst van zijn hand, maar een bijzondere oude druk die als verloren werd beschouwd.",
-        "Een Amerikaanse antiquair die de Erasmuscollectie van Bibliotheek Rotterdam kende, bleek het boekje te bezitten en bood het aan. Volgens de bibliotheek is dit het enige bekende overgebleven exemplaar van een oplage die ooit misschien wel duizend stuks telde. Juist zulke alledaagse gebruiksboekjes werden vroeger niet altijd bewaard.",
-        "Rotterdam bezit een internationaal belangrijke Erasmuscollectie. De aanwinst voegt daar een ontbrekend stukje drukgeschiedenis aan toe. Vanaf het komende weekend wordt het boekje in de bibliotheek getoond. Het mooie is niet alleen dat er iets ouds is teruggevonden, maar dat we opnieuw kunnen zien welke ideeën eeuwen geleden in gewone huishoudens circuleerden."
-      ],
-      "source": "NOS / Rijnmond",
-      "source_id": "nos",
-      "url": "https://nos.nl/artikel/2636065-verloren-gewaand-boek-van-erasmus-met-opvoedtips-uit-1609-terug-in-rotterdam",
-      "published": "2026-10-21",
-      "event_date": "2026-10-21",
-      "primary_url": "https://nos.nl/artikel/2636065-verloren-gewaand-boek-van-erasmus-met-opvoedtips-uit-1609-terug-in-rotterdam",
-      "image_alt": "Een oud boek, illustratief beeld; niet de teruggevonden Erasmus-uitgave.",
-      "headline_options": [
-        "Vier eeuwen zoek: verloren gewaand Erasmusboek duikt weer op",
-        "Vier eeuwen zoek: verloren gewaand Erasmusboek duikt weer op"
-      ],
-      "email_title": "Vier eeuwen zoek: verloren gewaand Erasmusboek duikt weer op",
-      "regional_rank": 4,
-      "editorial_rank": 4,
-      "image_query": "id:1179262",
-      "image_page_url": "https://pixabay.com/photos/old-book-incunabula-library-1179262/",
-      "image_key": "erasmusboek-terug-in-rotterdam"
-    },
-    {
-      "article_slug": "gieren-praten-meer-dan-gedacht",
-      "category": "Wetenschap",
-      "title": "Gieren blijken verrassend veel te vertellen te hebben",
-      "teaser": "Rüppells gieren golden lang als tamelijk stille vogels. Onderzoekers analyseerden 2.500 geluiden en ontdekten zestien verschillende roepen, soms met subtiele variaties.",
-      "article_body": [
-        "Bij een gier denk je misschien aan een vogel die zwijgend boven het landschap zweeft. Maar Rüppells gieren leven in grote, sociale groepen. Daar moeten ze elkaar herkennen, reageren op rangorde en omgaan met soortgenoten die allemaal op hetzelfde voedsel afkomen. Het blijkt dat ze daarbij een verrassend rijke verzameling geluiden gebruiken.",
-        "Voor zijn onderzoek maakte Connor Proudfoot van de Universiteit Utrecht ongeveer 150 uur opnames bij groepen gieren in Diergaarde Blijdorp en Avifauna. Dat leverde circa 2.500 afzonderlijke vogelgeluiden op. Bij het analyseren van onder meer toonhoogte en opbouw onderscheidden de onderzoekers zestien verschillende roepen.",
-        "Sommige klanken waren duidelijk gescheiden, andere liepen geleidelijk in elkaar over. Dat kan betekenen dat de vogels niet alleen een bepaalde stemming laten horen, maar ook hoe sterk die is. Zelfs kuikens blijken al in het ei geluid te maken, ongeveer twee dagen voordat ze uitkomen.",
-        "De studie in PLOS One levert nieuwe kennis op over diercommunicatie. De ernstig bedreigde gier zou er op termijn ook baat bij kunnen hebben: mogelijk helpt kennis van roepen bij de voortplanting in dierentuinen. Dat is nog een onderzoeksvraag, geen bewezen succes. De ontdekking zelf staat wel: deze vogels zijn een stuk minder stil dan we dachten."
-      ],
-      "source": "Universiteit Utrecht / PLOS One",
-      "source_id": "universiteit-utrecht",
-      "url": "https://www.uu.nl/nieuws/stille-gieren-blijken-toch-uitgebreid-te-communiceren-met-geluiden",
-      "published": "2026-10-21",
-      "event_date": "2026-10-21",
-      "primary_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0360246",
-      "image_alt": "Een vale gier, illustratief soortverwant beeld; dit is niet de onderzochte Rüppellsgier.",
-      "headline_options": [
-        "Gieren blijken verrassend veel te vertellen te hebben",
-        "Gieren blijken verrassend veel te vertellen te hebben"
-      ],
-      "email_title": "Gieren blijken verrassend veel te vertellen te hebben",
-      "regional_rank": 5,
-      "editorial_rank": 5,
-      "image_query": "id:9483838",
-      "image_page_url": "https://pixabay.com/photos/vulture-animal-bird-griffon-beak-9483838/",
-      "image_key": "gieren-praten-meer-dan-gedacht"
-    },
-    {
-      "article_slug": "warmte-uit-amsterdamse-gracht",
+      "article_slug": "harlingen-biogas-uit-fabriekslucht",
       "category": "Energie & innovatie",
-      "title": "Een eeuwenoud Amsterdams pand krijgt straks warmte uit de gracht",
-      "teaser": "Bij een monumentale kantoorvilla vlak bij het Rijksmuseum worden warmtewisselaars in de gracht geplaatst. Zo kan het historische gebouw straks worden verwarmd en gekoeld.",
+      "title": "Een fabriek in Harlingen maakt energie van zijn eigen afvallucht",
+      "email_title": "Een fabriek in Harlingen maakt energie van zijn eigen afvallucht",
+      "teaser": "Een geopende installatie zet oplosmiddelen uit het drukproces om in biogas. De opbrengst op langere termijn moet nog blijken.",
       "article_body": [
-        "Wie langs de Weteringschans in Amsterdam loopt, ziet een statige oude kantoorvilla bij het Rijksmuseum. Aan de gracht gebeurt iets opvallends: een grote warmtewisselaar wordt het water in gebracht. Niet om de gevel op te knappen, maar om het pand op een andere manier van warmte en koeling te voorzien.",
-        "De techniek heet aquathermie. Een warmtewisselaar haalt energie uit het grachtenwater en geeft die via een systeem af aan een warmtepomp in het gebouw. Zo wordt water uit de directe omgeving een bruikbare warmtebron. Eén warmtewisselaar was al onder water geplaatst, een tweede werd tijdens de reportage aangebracht.",
-        "Het monument wordt tegelijk gerenoveerd. Er komt isolatie waar dat met respect voor het gebouw kan, en op het dak liggen zonnepanelen die vanaf de straat nauwelijks zichtbaar zijn. De bedoeling is dat het energielabel uiteindelijk van G naar A++ verbetert.",
-        "Dat nieuwe label is nog een verwachting, geen vastgesteld eindresultaat. De aanleg is wel tastbaar begonnen. Het interessante is vooral dat ook historische gebouwen kunnen overstappen op moderne energiesystemen zonder hun karakter te verliezen. Volgens betrokkenen kan grachtenwater op meer plekken in de Amsterdamse binnenstad een rol spelen, al zal dat per pand onderzocht moeten worden."
+        "Wat een fabriek als vervuilde lucht verlaat, kan ook een grondstof zijn. Bij verpakkingsproducent Trioworld in Harlingen is op 23 oktober een installatie geopend die oplosmiddelen uit het drukproces kan omzetten in hernieuwbaar biogas. Dat gas kan fossiele brandstoffen vervangen.",
+        "De gemeente Harlingen beschrijft de voorziening als de eerste grootschalige BONCUS-installatie voor flexodruk ter wereld. Bij flexodruk worden onder meer verpakkingen bedrukt. Trioworld werkte jarenlang met ontwikkelaar Pure Infinity aan de techniek. De installatie staat er nu daadwerkelijk; het gaat dus verder dan een aangekondigd project.",
+        "Hoeveel fossiele energie de fabriek op jaarbasis bespaart, vermeldt het gemeentelijke bericht niet. Daarom verbinden we geen besparingspercentage aan de opening. Ook de claim van een wereldprimeur schrijven we toe aan de betrokken gemeente en bedrijven.",
+        "De interessante stap is het hergebruik van een reststroom binnen dezelfde productieomgeving. Afvallucht hoeft daarmee niet alleen iets te zijn dat een bedrijf behandelt en afvoert. De installatie maakt er een mogelijke energiebron van. Praktijkgegevens moeten laten zien hoe groot die bijdrage uiteindelijk wordt."
       ],
-      "source": "AT5",
-      "source_id": "at5",
-      "url": "https://www.at5.nl/artikelen/240480/grachtenwater-als-duurzame-energiebron-hoe-een-woning-springt-van-label-g-naar-a",
-      "published": "2026-10-20",
-      "event_date": "2026-10-20",
-      "primary_url": "https://www.at5.nl/artikelen/240480/grachtenwater-als-duurzame-energiebron-hoe-een-woning-springt-van-label-g-naar-a",
-      "image_alt": "Historische Amsterdamse grachtenpanden, illustratief beeld; niet het pand uit het bericht.",
+      "source": "Gemeente Harlingen",
+      "source_id": "gemeente-harlingen",
+      "url": "https://www.harlingen.nl/wereldprimeur-bij-trioworld-in-harlingen",
+      "primary_url": "https://www.harlingen.nl/wereldprimeur-bij-trioworld-in-harlingen",
+      "published": "2026-10-23",
+      "event_date": "2026-10-23",
+      "image_alt": "Industriële installatie; illustratief beeld, niet de fabriek in Harlingen.",
+      "image_query": "id:1140760",
+      "image_key": "harlingen-biogas-uit-fabriekslucht",
       "headline_options": [
-        "Een eeuwenoud Amsterdams pand krijgt straks warmte uit de gracht",
-        "Een eeuwenoud Amsterdams pand krijgt straks warmte uit de gracht"
+        "Een fabriek in Harlingen maakt energie van zijn eigen afvallucht",
+        "Een fabriek in Harlingen maakt energie van zijn eigen afvallucht"
       ],
-      "email_title": "Een eeuwenoud Amsterdams pand krijgt straks warmte uit de gracht",
+      "candidate_id": "46feee39838f",
+      "regional_rank": 2,
+      "editorial_rank": 2
+    },
+    {
+      "article_slug": "pruimen-voedselbank-herveld",
+      "category": "Mens",
+      "title": "25.000 kilo pruimen gered voor de Voedselbank",
+      "email_title": "25.000 kilo pruimen gered voor de Voedselbank",
+      "teaser": "Een overschot in de Betuwe krijgt alsnog een bestemming op tafel bij gezinnen die het goed kunnen gebruiken.",
+      "article_body": [
+        "Een recordoogst dreigde voor fruittelers Frederik en Marinus uit Herveld uit te lopen op voedselverspilling. Maar via een inzamelactie van No Waste Army is inmiddels 25.000 kilo pruimen aan de Voedselbank gedoneerd. De organisatie meldt op haar bijgewerkte actiepagina dat de donatieronde is afgelopen. Het gaat daarmee om een bereikt resultaat, niet alleen om een oproep om te helpen.",
+        "Bij familiebedrijf B&B Fruit groeide meer fruit dan de vaste afnemers hadden besteld. Zij namen de afgesproken hoeveelheden af, maar voor een overschot van 100.000 kilo was nog geen bestemming. De vruchten waren eetbaar, alleen door de hete zomer minder lang houdbaar. Zonder andere afnemers dreigden ze in de biovergister te belanden.",
+        "Met donaties kon No Waste Army pruimen inkopen voor de voedselbanken. Zo krijgen gezinnen vers fruit en ontvangt de teler een vergoeding. Het resultaat van deze ronde is een kwart van het genoemde overschot; daarmee is niet aangetoond dat alle 100.000 kilo inmiddels is gered.",
+        "Ook wordt een deel ingevroren of verwerkt tot houdbare producten. Dat vervolg is nog in ontwikkeling. De concrete winst van nu: duizenden kilo’s eetbaar fruit behouden hun bestemming als voedsel."
+      ],
+      "source": "No Waste Army",
+      "source_id": "no-waste-army",
+      "url": "https://nowastearmy.nl/acties/pruimen/",
+      "primary_url": "https://nowastearmy.nl/acties/pruimen/",
+      "published": "2026-10-25",
+      "event_date": "2026-10-25",
+      "image_alt": "Blauwe pruimen; illustratief beeld, niet de oogst van B&B Fruit.",
+      "image_query": "id:9977023",
+      "image_key": "pruimen-voedselbank-herveld",
+      "headline_options": [
+        "25.000 kilo pruimen gered voor de Voedselbank",
+        "25.000 kilo pruimen gered voor de Voedselbank"
+      ],
+      "regional_rank": 3,
+      "editorial_rank": 3
+    },
+    {
+      "article_slug": "groningen-waterstof-materialen",
+      "category": "Energie & innovatie",
+      "title": "Groningse onderzoekers verdubbelen waterstofproductie in een proefcel",
+      "email_title": "Groningse onderzoekers verdubbelen waterstofproductie in een proefcel",
+      "teaser": "Een betere combinatie van materialen levert meer waterstof bij hetzelfde energieverbruik. De proefcel bleef minstens vijfhonderd uur stabiel werken.",
+      "article_body": [
+        "Twee keer zoveel waterstof maken zonder meer energie te gebruiken: dat bereikten onderzoekers van de Rijksuniversiteit Groningen met een zorgvuldig afgestemde combinatie van materialen. Het resultaat betreft een proefcel, geen fabriek die al op industriële schaal draait.",
+        "De cel splitst waterdamp in waterstof en zuurstof. Een keramisch membraan laat geladen waterstofdeeltjes door en houdt andere deeltjes tegen. Aan de waterdampzijde helpt een speciaal ontwikkeld materiaal om de reactie op gang te brengen. Juist de wisselwerking tussen dat materiaal en het membraan bleek belangrijk.",
+        "Volgens de universiteit verdubbelde de productie ten opzichte van eerdere cellen van hetzelfde type. Het team liet ook zien dat de cel minstens vijfhonderd uur stabiel kon functioneren. De resultaten verschenen op 14 oktober in Energy & Environmental Science; de universiteit lichtte ze op 22 oktober toe.",
+        "Dat is een concrete stap in onderzoek naar waterstof uit water. Voor grootschalige toepassing zijn verdere ontwikkeling en toetsing nodig. Bovendien bepaalt de herkomst van de gebruikte elektriciteit hoe duurzaam de geproduceerde waterstof werkelijk is. Een betere proefcel maakt waterstof dus niet vanzelf klimaatneutraal."
+      ],
+      "source": "Rijksuniversiteit Groningen",
+      "source_id": "rijksuniversiteit-groningen",
+      "url": "https://www.rug.nl/fse/news/highlighted-papers/2026/doubling-hydrogen-production-through-a-synergy-of-materials",
+      "primary_url": "https://www.rug.nl/fse/news/highlighted-papers/2026/doubling-hydrogen-production-through-a-synergy-of-materials",
+      "published": "2026-10-22",
+      "event_date": "2026-10-22",
+      "image_alt": "Reageerbuisjes in een laboratorium; illustratief beeld, niet de Groningse proefcel.",
+      "image_query": "id:904546",
+      "image_key": "groningen-waterstof-materialen",
+      "headline_options": [
+        "Groningse onderzoekers verdubbelen waterstofproductie in een proefcel",
+        "Groningse onderzoekers verdubbelen waterstofproductie in een proefcel"
+      ],
+      "candidate_id": "b035064499df",
+      "regional_rank": 4,
+      "editorial_rank": 4
+    },
+    {
+      "article_slug": "maud-carla-redding-koedijk",
+      "category": "Mens",
+      "title": "Maud en haar moeder helpen twee mensen uit het kanaal",
+      "email_title": "Maud en haar moeder helpen twee mensen uit het kanaal",
+      "teaser": "Hun snelle hulp in Koedijk brengt twee inzittenden van een zinkende auto veilig op de kant.",
+      "article_body": [
+        "Maud de Groot en haar moeder Carla zagen op vrijdagochtend 23 oktober bij Koedijk een auto in het Noordhollandsch Kanaal liggen. Twee inzittenden hielden zich vast aan het voertuig. Moeder en dochter stopten en schoten te hulp.",
+        "De twintigjarige Maud belde 112 en gaf haar telefoon aan haar moeder, die met de meldkamer bleef praten. Zelf ging ze naar de waterkant. De man en vrouw durfden de auto aanvankelijk niet los te laten. Toen ze naar haar toe zwommen, hielp Maud hen vanaf de betonnen oever uit het water.",
+        "De twintigjarige Maud vertelde NH Nieuws en Streekstad Centraal dat het veel kracht kostte om de twee omhoog te trekken. De hulpdiensten namen de zorg over. De auto werd later met hulp van duikers en sonar teruggevonden en geborgen.",
+        "De hulp had een goede afloop: de twee inzittenden konden na controle en behandeling in de ambulance naar hun verblijf worden gebracht. Voor Maud en Carla waren het ook daarna nog spannende uren. Op haar werk kreeg Maud de rest van de dag vrij om bij te komen."
+      ],
+      "source": "NH Nieuws / Streekstad Centraal",
+      "source_id": "nh-nieuws",
+      "url": "https://www.nhnieuws.nl/nieuws/364739/maud-20-schiet-twee-inzittenden-van-te-water-geraakte-auto-in-kanaal-te-hulp",
+      "primary_url": "https://www.nhnieuws.nl/nieuws/364739/maud-20-schiet-twee-inzittenden-van-te-water-geraakte-auto-in-kanaal-te-hulp",
+      "published": "2026-10-24",
+      "event_date": "2026-10-24",
+      "image_alt": "Reddingsboei bij water; illustratief beeld, niet de redding in Koedijk. Er is geen boei bij deze redding beschreven.",
+      "image_query": "id:1021102",
+      "image_key": "maud-carla-redding-koedijk",
+      "headline_options": [
+        "Maud en haar moeder helpen twee mensen uit het kanaal",
+        "Maud en haar moeder helpen twee mensen uit het kanaal"
+      ],
+      "regional_rank": 5,
+      "editorial_rank": 5
+    },
+    {
+      "article_slug": "windparken-ruimte-voor-vogeltrek",
+      "category": "Natuur & klimaat",
+      "title": "Windparken maken ruimte voor de nachtelijke vogeltrek",
+      "email_title": "Windparken maken ruimte voor de nachtelijke vogeltrek",
+      "teaser": "Op de Noordzee worden wieken tijdens voorspelde trekpieken afgeremd. De bescherming is dit jaar verplicht geworden.",
+      "article_body": [
+        "Bij voorspelde pieken in de vogeltrek worden de wieken van Nederlandse windparken op zee vrijwel stilgezet. Volgens Vogelbescherming gebeurde dat op 4 oktober. Vanaf dit jaar is de maatregel verplicht; eerder was die vrijwillig.",
+        "Dat is een concrete beschermingsmaatregel voor de grote aantallen vogels die in voor- en najaar over de Noordzee vliegen. De wieken mogen tijdens zo’n ingreep nog maximaal twee omwentelingen per minuut maken. Normaal kan dat tot ongeveer vijftien zijn. De bedoeling is de kans op botsingen tijdens drukke treknachten te verkleinen.",
+        "Modellen van de Universiteit van Amsterdam en een beoordeling door vogeldeskundigen bepalen het stopadvies. TenneT controleert de leveringszekerheid. Het besluit wordt twee dagen vooraf genomen. Daardoor kan een voorspelling ook naast het drukste trekmoment zitten.",
+        "Hoeveel vogels hierdoor daadwerkelijk worden gered, is nog niet betrouwbaar gemeten. Het systeem verlaagt het risico op botsingen, maar kent beperkingen. Vogelbescherming pleit onder meer voor snellere besluitvorming en meer ruimte binnen het maximum van zestig stopuren per jaar, zodat de bescherming beter op de drukste treknachten kan aansluiten."
+      ],
+      "source": "Vogelbescherming Nederland",
+      "source_id": "vogelbescherming-nederland",
+      "url": "https://www.vogelbescherming.nl/actueel/bericht/windmolens-stilgezet-tijdens-piek-in-de-vogeltrek",
+      "primary_url": "https://www.vogelbescherming.nl/actueel/bericht/windmolens-stilgezet-tijdens-piek-in-de-vogeltrek",
+      "published": "2026-10-16",
+      "event_date": "2026-10-16",
+      "image_alt": "Windturbines op zee; illustratief beeld, niet een registratie van de genoemde stopmomenten.",
+      "image_query": "id:9762992",
+      "image_key": "windparken-ruimte-voor-vogeltrek",
+      "headline_options": [
+        "Windparken maken ruimte voor de nachtelijke vogeltrek",
+        "Windparken maken ruimte voor de nachtelijke vogeltrek"
+      ],
       "regional_rank": 6,
-      "editorial_rank": 6,
-      "image_query": "id:9936659",
-      "image_page_url": "https://pixabay.com/photos/amsterdam-channels-houses-9936659/",
-      "image_key": "warmte-uit-amsterdamse-gracht"
+      "editorial_rank": 6
     }
   ],
   "int": [
     {
-      "article_slug": "zonnestroom-houdt-zorgpost-open",
-      "category": "Energie & innovatie",
-      "title": "Zonnestroom houdt de zorgpost en school op een afgelegen eiland draaiende",
-      "teaser": "Op het Oost-Timorese eiland Atauro hebben een gezondheidscentrum, basisschool en buurthuis nu zonne-energie als betrouwbare stroombron. Vooral voor het bewaren van vaccins is dat een grote stap.",
+      "article_slug": "persoonlijk-melanomavaccin-proef",
+      "category": "Gezondheid",
+      "title": "Persoonlijk vaccin verlaagt terugkeerrisico van melanoom in grote proef",
+      "email_title": "Persoonlijk vaccin verlaagt terugkeerrisico van melanoom in grote proef",
+      "teaser": "Een fase 3-studie onder 1.137 patiënten laat een lager risico op terugkeer of overlijden zien. Toelating moet nog volgen.",
       "article_body": [
-        "Een koelkast met vaccins moet blijven werken, ook wanneer de stroom uitvalt. In Vila Maumeta, een gemeenschap op het eiland Atauro in Oost-Timor, was dat jarenlang onzeker. Het elektriciteitsnet viel regelmatig weg en een goede reserve ontbrak. Zorgverleners moesten dan improviseren om medicijnen en vaccins veilig te bewaren.",
-        "In juli werd met steun van UNICEF en de Zuid-Koreaanse ontwikkelingsorganisatie KOICA een zonnestroomsysteem overgedragen. Twee maanden later merken bewoners volgens UNICEF de voordelen al bij drie voorzieningen: de zorgpost, de basisschool en het gemeenschapscentrum.",
-        "Voor het gezondheidscentrum betekent de nieuwe stroomvoorziening dat de koeling van vaccins betrouwbaarder werkt en medewerkers ook ’s nachts beter op noodgevallen kunnen reageren. De school kan lessen minder afhankelijk maken van stroomstoringen. Medewerkers kregen bovendien training om de installatie te onderhouden.",
-        "Vila Maumeta telt 516 huishoudens en is vooral per boot bereikbaar vanuit de hoofdstad Dili. Het gaat dus niet om een oplossing voor heel Oost-Timor. De winst is juist lokaal en concreet: plekken waar kinderen leren en inwoners zorg krijgen, kunnen hun werk voortzetten wanneer het gewone net hapert."
+        "Een vaccin dat wordt afgestemd op de eigen tumor heeft in een grote internationale studie hoopvolle resultaten opgeleverd. Bij patiënten met een hoog risico op terugkeer van melanoom verminderde de combinatie met bestaande immunotherapie het risico op terugkeer of overlijden met 42 procent ten opzichte van alleen die immunotherapie.",
+        "De Universiteit van Sydney beschrijft de resultaten van INTerpath-001, een fase 3-studie met 1.137 patiënten. Hun melanoom was operatief verwijderd. Het persoonlijke mRNA-vaccin intismeran is bedoeld om het afweersysteem kenmerken van eventueel achtergebleven tumorcellen te leren herkennen.",
+        "Het genoemde percentage is een relatieve risicodaling, geen daling van 42 procentpunten en geen genezingspercentage. De universiteit meldde tijdelijke bijwerkingen zoals pijn op de injectieplaats, hoofdpijn en rillingen. Merck en Moderna financierden het onderzoek.",
+        "De uitkomsten worden op een oncologiecongres gepresenteerd en moeten door toezichthouders worden beoordeeld. De behandeling is daarmee nog geen regulier beschikbare optie. De betekenis ligt in een concreet klinisch resultaat: een op de patiënt afgestemde behandeling kan na een operatie extra bescherming bieden, naast de bestaande immunotherapie."
       ],
-      "source": "UNICEF Timor-Leste",
-      "source_id": "unicef",
-      "url": "https://www.unicef.org/timorleste/stories/how-reliable-energy-transforming-daily-life-vila-maumeta-atauro",
-      "published": "2026-10-20",
-      "event_date": "2026-07-14",
-      "primary_url": "https://www.unicef.org/timorleste/stories/how-reliable-energy-transforming-daily-life-vila-maumeta-atauro",
-      "image_alt": "Zonnepanelen op het dak van een huis, illustratief beeld; niet de voorzieningen op Atauro.",
+      "source": "University of Sydney / Melanoma Institute Australia",
+      "source_id": "university-sydney",
+      "url": "https://www.sydney.edu.au/news-opinion/news/2026/10/23/world-first-personalised-therapeutic-cancer-vaccine-cuts-risk-of.html",
+      "primary_url": "https://www.sydney.edu.au/news-opinion/news/2026/10/23/world-first-personalised-therapeutic-cancer-vaccine-cuts-risk-of.html",
+      "published": "2026-10-23",
+      "event_date": "2026-10-23",
+      "image_alt": "Microscoop in een laboratorium; illustratief beeld, niet het onderzochte vaccin.",
+      "image_query": "id:2030265",
+      "image_key": "persoonlijk-melanomavaccin-proef",
       "headline_options": [
-        "Zonnestroom houdt de zorgpost en school op een afgelegen eiland draaiende",
-        "Zonnestroom houdt de zorgpost en school op een afgelegen eiland draaiende"
+        "Persoonlijk vaccin verlaagt terugkeerrisico van melanoom in grote proef",
+        "Persoonlijk vaccin verlaagt terugkeerrisico van melanoom in grote proef"
       ],
-      "email_title": "Zonnestroom houdt de zorgpost en school op een afgelegen eiland draaiende",
+      "candidate_id": "8ea3f281cb80",
       "regional_rank": 1,
-      "editorial_rank": 7,
-      "image_query": "id:2666770",
-      "image_page_url": "https://pixabay.com/photos/solar-roof-solar-energy-2666770/",
-      "image_key": "zonnestroom-houdt-zorgpost-open"
+      "editorial_rank": 7
     },
     {
-      "article_slug": "zes-dolfijnenkalfjes-mekong",
-      "category": "Natuur & klimaat",
-      "title": "Zes jonge rivierdolfijnen geven een bedreigde populatie nieuwe hoop",
-      "teaser": "Langs een deel van de Mekong in Cambodja zijn dit jaar zes kalfjes van de zeldzame Irrawaddydolfijn geboren. Dat is bemoedigend nieuws voor een populatie die nog altijd kwetsbaar is.",
+      "article_slug": "basisinkomen-peru-natuur-beschermen",
+      "category": "Mens",
+      "title": "Vaster inkomen geeft gezinnen in de Amazone meer ruimte",
+      "email_title": "Vaster inkomen geeft gezinnen in de Amazone meer ruimte",
+      "teaser": "Een kleine proef in Peru laat minder voedselonzekerheid zien. Omdat een controlegroep ontbrak, blijft de oorzaak van alle veranderingen onzeker.",
       "article_body": [
-        "In de Mekongrivier in Cambodja leven nog maar weinig Irrawaddydolfijnen. De dieren hebben een ronde kop en een opvallend korte snuit. Hun aanwezigheid is van belang voor de natuur én voor dorpen waar bezoekers komen om de zeldzame dolfijnen op afstand te zien zwemmen.",
-        "Dit jaar zijn volgens natuurbeschermers zes nieuwe kalfjes bevestigd langs een traject van ongeveer 120 kilometer rivier, in de provincies Kratie en Stung Treng. De totale populatie wordt nu geschat op 118 dieren. Dat maakt iedere geboorte betekenisvol, al is zes jongen in één jaar nog geen bewijs dat de soort veilig is.",
-        "De bedreigingen blijven groot. De dolfijnen kunnen verstrikt raken in visnetten en krijgen te maken met verstoring van hun leefgebied. Ook veranderingen in het rivierwater en de beschikbaarheid van vis spelen mee. Lokale beschermers bewaken belangrijke plekken, soms onder moeilijke omstandigheden.",
-        "Er is dus geen reden om de vlag van definitief herstel uit te hangen. Maar de geboorte van meerdere jongen is wel een concreet teken dat de populatie zich nog voortplant. In een gebied waar jarenlang zorgen over achteruitgang overheersen, biedt dat aanleiding om de bescherming vol te houden."
+        "Niet iedere dag hoeven uitzoeken hoe er genoeg eten op tafel komt: die zekerheid kan ruimte geven voor andere keuzes. In drie inheemse gemeenschappen in de Peruaanse Amazone ontvingen 211 deelnemers twee jaar lang een onvoorwaardelijk basisinkomen, gecombineerd met lokale scholing.",
+        "Een analyse van de Universiteit van Bath meldt duidelijke verbeteringen. Het aandeel huishoudens dat geen voedzaam eten kon betalen daalde van 73 naar 26 procent. Deelnemers konden vaker sparen en hoefden minder vaak elders werk te zoeken. Velen meldden ook natuurvriendelijker landbouw en deelname aan herstel van bos en waterbronnen.",
+        "De proef werd uitgevoerd door Cool Earth, samen met inheemse vrouwenorganisaties. Behalve geld omvatte het programma onder meer financiële kennis en ondersteuning bij gemeenschapsorganisatie. De resultaten kunnen dus niet uitsluitend aan de betaling worden toegeschreven.",
+        "Ook ontbrak een controlegroep. De studie bewijst daardoor niet hoeveel van de veranderingen zonder het programma zouden zijn opgetreden. Het blijft een kleine, veelbelovende praktijkproef. Ze laat zien waarom inkomenszekerheid en de zeggenschap van lokale bewoners aandacht verdienen in het gesprek over bosbescherming."
       ],
-      "source": "Mongabay",
-      "source_id": "mongabay",
-      "url": "https://news.mongabay.com/short-article/2026/10/six-new-calves-offer-hope-amid-ongoing-threats-to-cambodias-irrawaddy-dolphins/",
+      "source": "University of Bath",
+      "source_id": "university-bath",
+      "url": "https://www.bath.ac.uk/announcements/world-first-basic-income-trial-boosts-indigenous-livelihoods-and-amazon-rainforest-protection/",
+      "primary_url": "https://www.bath.ac.uk/announcements/world-first-basic-income-trial-boosts-indigenous-livelihoods-and-amazon-rainforest-protection/",
       "published": "2026-10-20",
       "event_date": "2026-10-20",
-      "primary_url": "https://news.mongabay.com/short-article/2026/10/six-new-calves-offer-hope-amid-ongoing-threats-to-cambodias-irrawaddy-dolphins/",
-      "image_alt": "De Mekong bij Phnom Penh, illustratief landschapsbeeld; hier zijn geen rivierdolfijnen zichtbaar.",
+      "image_alt": "Rivier en bebouwing in het Amazonegebied; illustratief beeld, niet de deelnemers aan de proef.",
+      "image_query": "id:7292034",
+      "image_key": "basisinkomen-peru-natuur-beschermen",
       "headline_options": [
-        "Zes jonge rivierdolfijnen geven een bedreigde populatie nieuwe hoop",
-        "Zes jonge rivierdolfijnen geven een bedreigde populatie nieuwe hoop"
+        "Vaster inkomen geeft gezinnen in de Amazone meer ruimte",
+        "Vaster inkomen geeft gezinnen in de Amazone meer ruimte"
       ],
-      "email_title": "Zes jonge rivierdolfijnen geven een bedreigde populatie nieuwe hoop",
+      "candidate_id": "36f8b6b5cd7e",
+      "reading_time_minutes": 8,
       "regional_rank": 2,
-      "editorial_rank": 8,
-      "image_query": "id:4679305",
-      "image_page_url": "https://pixabay.com/photos/mekong-river-river-phnom-penh-4679305/",
-      "image_key": "zes-dolfijnenkalfjes-mekong"
+      "editorial_rank": 8
     },
     {
-      "article_slug": "japanse-sonde-naar-phobos",
-      "category": "Wetenschap",
-      "title": "Japanse ruimtesonde vertrekt naar een maan van Mars",
-      "teaser": "De Japanse missie MMX is succesvol gelanceerd. De sonde gaat de manen van Mars onderzoeken en moet uiteindelijk een stukje van Phobos mee terugnemen naar de aarde.",
+      "article_slug": "sociale-activiteiten-hersengezondheid",
+      "category": "Gezondheid",
+      "title": "Sociaal actief blijven hangt samen met een scherper geheugen",
+      "teaser": "Een onderzoek onder bijna 58.000 ouderen ziet gunstige verbanden bij onder meer vrijwilligerswerk en sportclubs.",
       "article_body": [
-        "Mars heeft twee kleine manen: Phobos en Deimos. Ze zijn moeilijk vanaf de aarde te bestuderen en wetenschappers willen al langer begrijpen hoe ze zijn ontstaan. Een Japanse sonde is nu begonnen aan een reis die nieuwe antwoorden dichterbij moet brengen.",
-        "Op 20 oktober Japanse tijd vertrok de missie Martian Moons eXploration, afgekort MMX, met een H3-raket vanaf de ruimtebasis Tanegashima. De Europese ruimtevaartorganisatie ESA bevestigde de geslaagde lancering. Ook organisaties uit onder meer de Verenigde Staten, Frankrijk en Duitsland werken mee.",
-        "Het plan is ambitieus. De sonde moet Phobos van dichtbij bestuderen, er materiaal van het oppervlak verzamelen en dat in een latere fase naar de aarde brengen. Onderzoekers kunnen die korrels dan met laboratoriumtechnieken bekijken die onmogelijk mee de ruimte in kunnen.",
-        "Voorlopig is alleen de start geslaagd. De aankomst bij Mars, het onderzoek, de bemonstering en de terugreis liggen nog voor ons. Maar zonder een geslaagde lancering komt geen van die stappen in beeld. De missie opent een nieuw hoofdstuk in het onderzoek naar de omgeving van onze buurplaneet."
+        "Ouderen die deelnemen aan sociale activiteiten scoren gemiddeld beter op tests van geheugen en denkvaardigheden dan leeftijdgenoten die niet sociaal actief zijn. Dat blijkt uit een analyse van vijf langlopende bevolkingsonderzoeken met samen 57.793 deelnemers uit 24 landen. BMJ lichtte het onderzoek op 21 oktober toe.",
+        "De onderzoekers volgden de deelnemers doorgaans zes jaar. Zij vergeleken zelfgerapporteerde sociale bezigheden met herhaalde cognitieve tests. Deelname aan meerdere soorten activiteiten hing samen met gunstiger scores. Vooral vrijwilligerswerk en lidmaatschap van een sportclub lieten in de verschillende onderzochte groepen een consistent positief verband zien.",
+        "Dat geeft steun aan het idee dat samen actief blijven betekenis kan hebben voor gezond ouder worden. De studie bewijst echter geen oorzaak en gevolg. Mensen die geestelijk fitter zijn, kunnen bijvoorbeeld ook gemakkelijker blijven deelnemen. Verschillen in gezondheid, opleiding en leefomstandigheden zijn niet volledig uit te sluiten.",
+        "Ook zijn niet alle activiteiten gelijk onderzocht en zegt het aantal bezigheden weinig over de kwaliteit van contacten. Drie activiteiten zijn dus geen medisch voorschrift en geen garantie tegen dementie. De bevinding is hoopvol: sociale deelname blijkt in meerdere landen samen te gaan met beter behouden denkvaardigheden."
       ],
-      "source": "ESA / JAXA",
-      "source_id": "esa",
-      "url": "https://www.esa.int/ESA_Multimedia/Images/2026/10/MMX_lifts_off_to_Mars_s_moon_Phobos",
-      "published": "2026-10-20",
-      "event_date": "2026-10-20",
-      "primary_url": "https://www.esa.int/ESA_Multimedia/Images/2026/10/MMX_lifts_off_to_Mars_s_moon_Phobos",
-      "image_alt": "Mars, gezien vanuit de ruimte; illustratief beeld van de bestemming, niet van de MMX-lancering.",
+      "source": "Journal of Epidemiology & Community Health / BMJ",
+      "source_id": "bmj",
+      "url": "https://jech.bmj.com/content/early/2026/10/08/jech-2025-225670",
+      "published": "2026-10-08",
+      "event_date": "2026-10-08",
+      "primary_url": "https://jech.bmj.com/lookup/doi/10.1136/jech-2025-225670",
+      "image_alt": "Deelnemers aan een gezamenlijke bijeenkomst; illustratief beeld, niet de onderzochte deelnemers.",
       "headline_options": [
-        "Japanse ruimtesonde vertrekt naar een maan van Mars",
-        "Japanse ruimtesonde vertrekt naar een maan van Mars"
+        "Sociaal actief blijven hangt samen met een scherper geheugen",
+        "Sociaal actief blijven hangt samen met een scherper geheugen"
       ],
-      "email_title": "Japanse ruimtesonde vertrekt naar een maan van Mars",
+      "email_title": "Sociaal actief blijven hangt samen met een scherper geheugen",
       "regional_rank": 3,
       "editorial_rank": 9,
-      "image_query": "id:11012",
-      "image_page_url": "https://pixabay.com/photos/mars-red-planet-planet-space-11012/",
-      "image_key": "japanse-sonde-naar-phobos"
+      "image_query": "id:2247391",
+      "image_key": "sociale-activiteiten-hersengezondheid"
     },
     {
-      "article_slug": "mangroven-keren-terug-madagaskar",
+      "article_slug": "nepal-sneeuwluipaarden-vee",
       "category": "Natuur & klimaat",
-      "title": "Een dichtgemaakte geul helpt mangrovebos op Madagaskar terug te groeien",
-      "teaser": "Jarenlang lukte nieuwe aanplant niet. Toen bewoners ontdekten waarom het water verdween en een oude geul afsloten, begonnen mangrovezaailingen vanzelf terug te komen.",
+      "title": "Beschermde veekralen helpen aanvallen door sneeuwluipaarden voorkomen",
+      "email_title": "Beschermde veekralen helpen aanvallen door sneeuwluipaarden voorkomen",
+      "teaser": "Bewoners delen waarnemingen via een app en krijgen sneller schadevergoeding. De aanpak vermindert de aanleiding voor vergelding tegen roofdieren.",
       "article_body": [
-        "Soms hoeft natuurherstel niet te beginnen met duizenden nieuwe bomen. In de regio Boeny, in het noordwesten van Madagaskar, bleek eerst een veel eenvoudiger probleem opgelost te moeten worden: een oude geul liet water weglopen uit een aangetast mangrovegebied.",
-        "Door dat verlies aan water konden de bomen zich moeilijk herstellen. Pogingen om opnieuw mangroven te planten leverden weinig op. Met hulp van een natuurherstelprogramma van de FAO onderzochten lokale gemeenschappen wat er misging. Zij blokkeerden de geul, zodat het water langer in het gebied bleef staan.",
-        "Volgens de betrokken projectorganisaties was het verschil snel zichtbaar. De bodem werd weer natter en jonge mangrovescheuten kwamen op uit het sediment. Het is een vroeg herstelteken, geen bewijs dat het hele bos inmiddels terug is.",
-        "De bredere aanpak omvat ook trainingen in natuurherstel en het opkweken van jonge bomen. De FAO meldt dat bijna 30.000 zaailingen zijn geproduceerd. Het verhaal laat zien hoe belangrijk lokale kennis kan zijn: voordat je een landschap herstelt, moet je begrijpen waarom het ooit achteruitging. In Boeny begon het antwoord bij de route van het water."
+        "In de Nepalese Nar-Phu-vallei moeten herders en sneeuwluipaarden hetzelfde berglandschap delen. Als een roofdier vee doodt, kan dat een gezin hard raken en leiden tot vergelding. Een project van Wageningse onderzoekers en lokale bewoners probeert die keten te doorbreken.",
+        "Bewoners melden sporen van sneeuwluipaarden via mobiele apps. Met die gegevens en kaarten van veekralen brengen onderzoekers risicoplekken in beeld. Daar zijn inmiddels zes roofdierbestendige omheiningen gebouwd. Sinds de start zijn volgens het project geen incidenten meer gemeld waarbij grote aantallen vee zijn gedood.",
+        "Daarnaast helpen plaatselijke comités om schade snel vast te leggen en te vergoeden. Een herder hoeft daarvoor niet eerst dagen te reizen en veel papierwerk te verzamelen. De bescherming van het vee en de snellere afhandeling verminderen zo de druk op gezinnen.",
+        "Dit is geen gecontroleerde proef die alle effecten los van elkaar bewijst. Het gaat om praktijkervaring in één afgelegen vallei. Juist de combinatie maakt de aanpak interessant: natuurbescherming wordt gekoppeld aan de bestaanszekerheid van mensen die dagelijks tussen de roofdieren leven."
       ],
-      "source": "FAO",
-      "source_id": "fao",
-      "url": "https://www.fao.org/in-action/afr100/news/detail/water-returns-to-boeny/en",
+      "source": "Wageningen University & Research",
+      "source_id": "wageningen-university-research",
+      "url": "https://www.wur.nl/nl/nieuws/sneeuwluipaarden-nepal-beschermen-daar-een-app-voor",
+      "primary_url": "https://www.wur.nl/nl/nieuws/sneeuwluipaarden-nepal-beschermen-daar-een-app-voor",
       "published": "2026-10-21",
       "event_date": "2026-10-21",
-      "primary_url": "https://www.fao.org/in-action/afr100/news/detail/water-returns-to-boeny/en",
-      "image_alt": "Mangrovebomen met blootliggende wortels in kustwater, illustratief beeld; niet Madagaskar.",
+      "image_alt": "Een sneeuwluipaard in een dierentuin; illustratief beeld, niet uit de Nar-Phu-vallei.",
+      "image_query": "id:1985510",
+      "image_key": "nepal-sneeuwluipaarden-vee",
       "headline_options": [
-        "Een dichtgemaakte geul helpt mangrovebos op Madagaskar terug te groeien",
-        "Een dichtgemaakte geul helpt mangrovebos op Madagaskar terug te groeien"
+        "Beschermde veekralen helpen aanvallen door sneeuwluipaarden voorkomen",
+        "Beschermde veekralen helpen aanvallen door sneeuwluipaarden voorkomen"
       ],
-      "email_title": "Een dichtgemaakte geul helpt mangrovebos op Madagaskar terug te groeien",
+      "candidate_id": "additional-primary-source",
       "regional_rank": 4,
-      "editorial_rank": 10,
-      "image_query": "id:249830",
-      "image_page_url": "https://pixabay.com/photos/mangrove-forest-swamp-aerial-roots-249830/",
-      "image_key": "mangroven-keren-terug-madagaskar"
+      "editorial_rank": 10
     },
     {
-      "article_slug": "plexiglas-bijna-geheel-hergebruiken",
-      "category": "Wetenschap",
-      "title": "Oud plexiglas blijkt met nieuwe methode bijna helemaal opnieuw te gebruiken",
-      "teaser": "Onderzoekers uit Zürich kunnen in laboratoriumproeven tot 98 procent van de chemische bouwstenen uit acrylglas terugwinnen. Dat maakt hoogwaardig hergebruik een stuk aantrekkelijker.",
+      "article_slug": "kopenhagen-luiers-recyclen",
+      "category": "Energie & innovatie",
+      "title": "Kopenhagen begint gebruikte luiers apart in te zamelen",
+      "teaser": "De eerste containers worden geplaatst. Verwerking tot nieuwe materialen en biogas moet vanaf februari 2027 volgen.",
       "article_body": [
-        "Plexiglas zit in allerlei producten: van reclamepanelen en meubels tot achterlichten van auto’s. Maar als het materiaal afgedankt wordt, verdwijnen waardevolle grondstoffen vaak uit de kringloop. Chemisch terugwinnen kan, alleen was dat tot nu toe vaak duur of omslachtig.",
-        "Onderzoekers van de ETH Zürich ontwikkelden een methode waarbij het kunststof weer uiteenvalt in kleine chemische bouwstenen, zogenoemde monomeren. In de studie konden zij ongeveer 90 procent daarvan als zuivere grondstof terugwinnen. De methode werkt ook met commercieel acrylglas. De studie verscheen op 2 september; de ETH lichtte de aanpak op 19 oktober toe.",
-        "Het proces werkt bij ruim 200 graden Celsius. Dat is flink lager dan de ongeveer 400 graden die bij bepaalde andere methoden nodig zijn. Bovendien zijn geen oplosmiddelen nodig. Een relatief eenvoudig chemisch hulpmiddel zet het afbraakproces in gang.",
-        "De onderzoekers hebben patent aangevraagd en zoeken partijen die de methode willen toepassen. Grootschalige productie, kosten in de praktijk en de werkelijke milieuwinst moeten nog blijken. De bereikte stap is concreet: een materiaal dat vaak afval wordt, kan in het lab opvallend efficiënt worden teruggebracht tot bruikbare grondstof."
+        "Kopenhagen is op 19 oktober begonnen met het plaatsen van aparte containers voor gebruikte luiers. Daarmee zet de stad een praktisch systeem op voor afval dat tot nu toe doorgaans werd verbrand. De uitrol langs tien stadsdelen duurt zes weken en richt zich eerst op kinderdagverblijven en grotere woongebouwen met jonge kinderen.",
+        "Volgens de gemeente worden jaarlijks ongeveer vijftig miljoen luiers weggegooid. Dat is de omvang van de afvalstroom, geen telling van wat al wordt gerecycled. Het behandelingsbedrijf moet volgens de gepubliceerde planning pas in februari 2027 in bedrijf gaan.",
+        "Daar moeten materialen worden gescheiden en opnieuw gebruikt. Plastic kan een grondstof voor nieuwe producten worden; cellulose en de inhoud kunnen via vergisting biogas en meststof opleveren. Ook wordt hergebruik van het absorberende materiaal voorzien.",
+        "De gemeente mikt vanaf 2029 op jaarlijks 5.000 ton ingezamelde luiers. Ook dat is een doel, geen gerealiseerde besparing. Het goede nieuws van nu is de gestarte inzameling met een concrete verwerkingsroute in voorbereiding. Hoeveel afval en uitstoot dat uiteindelijk bespaart, moet de praktijk uitwijzen."
       ],
-      "source": "ETH Zürich / Nature Chemistry",
-      "source_id": "eth-zurich",
-      "url": "https://ethz.ch/en/news-and-events/eth-news/news/2026/10/new-method-makes-acrylic-glass-recycling-economically-viable.html",
-      "published": "2026-10-19",
-      "event_date": "2026-09-02",
-      "primary_url": "https://www.nature.com/articles/s41557-026-02232-4",
-      "image_alt": "Detail van doorzichtige blauwe acrylglasplaten, illustratief beeld; niet het materiaal uit de ETH-studie.",
-      "headline_options": [
-        "Oud plexiglas blijkt met nieuwe methode bijna helemaal opnieuw te gebruiken",
-        "Oud plexiglas blijkt met nieuwe methode bijna helemaal opnieuw te gebruiken"
-      ],
-      "email_title": "Oud plexiglas blijkt met nieuwe methode bijna helemaal opnieuw te gebruiken",
-      "regional_rank": 5,
-      "editorial_rank": 11,
-      "image_query": "id:391454",
-      "image_page_url": "https://pixabay.com/es/photos/plexigl%C3%A1s-suelas-de-sonda-391454/",
-      "image_key": "plexiglas-bijna-geheel-hergebruiken"
-    },
-    {
-      "article_slug": "boer-ontdekt-ramsesbeelden",
-      "category": "Cultuur",
-      "title": "Een Egyptische boer stuit op sporen van twee reusachtige faraobeelden",
-      "teaser": "Bij het bewerken van zijn land zag Khaled el-Shahat graniet met hiërogliefen. Zijn melding leidde archeologen naar resten van twee beelden van Ramses II.",
-      "article_body": [
-        "Terwijl Khaled el-Shahat zijn land bewerkte in de Egyptische Nijldelta, stuitte hij op iets hards. Een stuk roze graniet bleek tekens te dragen die niet op een gewone steen thuishoren: hiërogliefen. Hij groef niet zelf verder, maar waarschuwde de autoriteiten.",
-        "Bij het archeologische onderzoek dat volgde werden in Behbeit El Hagar, ongeveer 110 kilometer ten noorden van Caïro, resten van twee beelden van farao Ramses II gevonden. Het ging niet om twee volledig intacte standbeelden. Van een van de beelden kwam onder meer een hoofd van ongeveer anderhalve meter met dubbele kroon tevoorschijn.",
-        "Onderzoekers vermoeden dat dit eerste beeld ooit ongeveer 8,5 meter hoog is geweest. Een tweede beeld, waarvan een deel van circa 2,5 meter werd aangetroffen, laat Ramses zien met een gestreepte hoofddoek. Opschriften op de stenen helpen bij de identificatie.",
-        "Ramses II regeerde in de dertiende eeuw voor Christus en liet veel monumenten bouwen. De vondst voegt weer een stukje kennis toe over zijn aanwezigheid in de Nijldelta. En het begint allemaal bij iemand die op tijd besefte dat een bijzondere steen beter aan archeologen kon worden overgelaten."
-      ],
-      "source": "NOS / Egyptische autoriteiten",
-      "source_id": "nos",
-      "url": "https://nos.nl/artikel/2635879-tip-egyptische-boer-leidt-tot-vondst-metershoge-standbeelden-ramses-ii",
+      "source": "Gemeente Kopenhagen",
+      "source_id": "gemeente-kopenhagen",
+      "url": "https://affald.kk.dk/nyheder/brugte-bleer-skal-nu-i-bleaffald-ikke-i-restaffald",
       "published": "2026-10-19",
       "event_date": "2026-10-19",
-      "primary_url": "https://nos.nl/artikel/2635879-tip-egyptische-boer-leidt-tot-vondst-metershoge-standbeelden-ramses-ii",
-      "image_alt": "Bestaande Ramsesbeelden bij Abu Simbel, illustratief beeld; niet de nieuwe vondst.",
+      "primary_url": "https://affald.kk.dk/nyheder/brugte-bleer-skal-nu-i-bleaffald-ikke-i-restaffald",
+      "image_alt": "Afvalbakken voor gescheiden inzameling; illustratief beeld, niet de inzamelproef in Kopenhagen.",
       "headline_options": [
-        "Een Egyptische boer stuit op sporen van twee reusachtige faraobeelden",
-        "Een Egyptische boer stuit op sporen van twee reusachtige faraobeelden"
+        "Kopenhagen begint gebruikte luiers apart in te zamelen",
+        "Kopenhagen begint gebruikte luiers apart in te zamelen"
       ],
-      "email_title": "Een Egyptische boer stuit op sporen van twee reusachtige faraobeelden",
+      "email_title": "Kopenhagen begint gebruikte luiers apart in te zamelen",
+      "regional_rank": 5,
+      "editorial_rank": 11,
+      "image_query": "id:7290247",
+      "image_key": "kopenhagen-luiers-recyclen"
+    },
+    {
+      "article_slug": "mette-marit-herstel-na-transplantatie",
+      "category": "Gezondheid",
+      "title": "Voorzichtig goed nieuws over het herstel van Mette-Marit",
+      "teaser": "Na een ingrijpende longtransplantatie gaat het herstel van Mette-Marit volgens haar echtgenoot de goede kant op. Het blijft wel een kwetsbare periode.",
+      "article_body": [
+        "Het herstel van Mette-Marit na haar longtransplantatie gaat vooruit. Dat vertelde haar echtgenoot Haakon op 22 oktober tijdens het diner voor het Noorse parlement. Volgens VG benadrukte hij tegelijk hoe kwetsbaar het eerste jaar na zo’n grote operatie is.",
+        "Mette-Marit onderging de transplantatie in juni en was niet bij het diner. Haakon zei dat zij nog tijd nodig heeft om op krachten te komen. Zijn verklaring biedt daarmee voorzichtig positief nieuws over haar persoonlijke herstel, zonder dat alle zorgen voorbij zijn.",
+        "Er is geen nieuwe medische beoordeling gepubliceerd waaruit een volledig herstel of een hervattingsdatum voor haar werkzaamheden blijkt. De vooruitgang is de mededeling van haar echtgenoot, zoals gerapporteerd door VG. Dat is reden voor opluchting, maar geen basis voor een verdergaande medische prognose."
+      ],
+      "source": "VG / Shownieuws",
+      "source_id": "vg",
+      "url": "https://www.vg.no/rampelys/i/2Vxn4x/kong-haakon-snakket-om-mette-marit-under-middagen-paa-slottet",
+      "published": "2026-10-22",
+      "event_date": "2026-10-22",
+      "primary_url": "https://www.vg.no/rampelys/i/2Vxn4x/kong-haakon-snakket-om-mette-marit-under-middagen-paa-slottet",
+      "image_alt": "Herfstbloemen; symbolisch beeld bij herstel, geen afbeelding van Mette-Marit.",
+      "headline_options": [
+        "Voorzichtig goed nieuws over het herstel van Mette-Marit",
+        "Voorzichtig goed nieuws over het herstel van Mette-Marit"
+      ],
+      "email_title": "Voorzichtig goed nieuws over het herstel van Mette-Marit",
       "regional_rank": 6,
       "editorial_rank": 12,
-      "image_query": "id:3389",
-      "image_page_url": "https://pixabay.com/photos/abu-simbel-temple-egypt-pharaohs-3389/",
-      "image_key": "boer-ontdekt-ramsesbeelden"
+      "image_query": "id:8306687",
+      "image_key": "mette-marit-herstel-na-transplantatie"
     }
   ],
   "headlines": [
     {
-      "title": "In Alberta stemt ruime meerderheid tegen afsplitsing van Canada",
+      "title": "Harde wind zorgt voor geannuleerde vluchten op Schiphol",
       "source": "NOS",
-      "source_id": "nos",
-      "url": "https://nos.nl/artikel/2635910-inwoners-alberta-stemmen-tegen-afscheiding-van-canada",
-      "published": "2026-10-20",
-      "teaser": "Volgens voorlopige uitslagen kiest meer dan driekwart voor behoud van de band met Canada. Het referendum is niet bindend."
+      "url": "https://nos.nl/l/2636568",
+      "published": "2026-10-25",
+      "candidate_id": "8e363f0deba8",
+      "source_id": "nos"
     },
     {
-      "title": "PostNL vraagt kabinet om 80 miljoen euro voor de brievenpost",
+      "title": "Brazilië: achtergrond bij de beslissende presidentsverkiezingen",
       "source": "NOS",
-      "source_id": "nos",
-      "url": "https://nos.nl/artikel/2635911-postnl-vraagt-opnieuw-om-extra-geld-voor-postbezorging",
-      "published": "2026-10-20",
-      "teaser": "Het postbedrijf zegt dat de wettelijke bezorgplicht door dalende postvolumes steeds moeilijker te financieren is. Over het verzoek is nog niet beslist."
+      "url": "https://nos.nl/l/2636574",
+      "published": "2026-10-25",
+      "candidate_id": "34e67cf534c5",
+      "source_id": "nos"
     },
     {
-      "title": "Moederbedrijf Albert Heijn doet aangifte van cyberaanval",
+      "title": "PHP-lek: wat betekent het voor slimme apparaten?",
       "source": "NOS",
-      "source_id": "nos",
-      "url": "https://nos.nl/artikel/2635852-moederbedrijf-albert-heijn-doet-na-ruim-een-week-aangifte-van-cyberaanval",
-      "published": "2026-10-19",
-      "teaser": "Ahold Delhaize heeft na ruim een week aangifte gedaan. Het onderzoek loopt; de dienstverlening is nog niet volledig hersteld.",
-      "event_date": "2026-10-18"
+      "url": "https://nos.nl/l/2636368",
+      "published": "2026-10-23",
+      "candidate_id": "30070151dcd3",
+      "source_id": "nos"
     }
   ]
 }
