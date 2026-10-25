@@ -693,6 +693,14 @@ def render_article_page(item, date_value, related_records=None, image_data=None)
     source_url = esc(source_url_raw)
     teaser = esc(teaser_raw)
     body_html = "".join(f"<p>{esc(paragraph)}</p>" for paragraph in paragraphs)
+    chart = item.get("article_chart")
+    if isinstance(chart, dict) and str(chart.get("src", "")).startswith("/images/artikelen/"):
+        figure = (f'<figure class="article-inline-chart" style="margin:28px 0">'
+                  f'<img src="{esc(chart["src"])}" alt="{esc(chart.get("alt", ""))}" style="display:block;width:100%;height:auto;border-radius:12px" loading="lazy">'
+                  f'<figcaption style="font-size:14px;line-height:1.5">{esc(chart.get("caption", ""))}</figcaption></figure>')
+        first_end = body_html.find("</p>") + 4
+        body_html = body_html[:first_end] + figure + body_html[first_end:]
+
     why_html = f'<aside class="why"><p class="why-label">Waarom dit ertoe doet</p><p>{esc(why_raw)}</p></aside>' if why_raw else ""
     growth_html = render_growth_block(canonical, title_raw)
     related_html = render_related_articles(related_records or [])
@@ -1833,6 +1841,25 @@ def update_homepage(data):
     markup, count = re.subn(r'<!-- homepage-date:start -->.*?<!-- homepage-date:end -->', lambda _: date_html, markup, flags=re.S)
     if count != 1:
         raise ValueError("Homepage-datummarker ontbreekt of is dubbel.")
+    day = ["Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag", "Zondag"][datetime.strptime(edition_date, "%Y-%m-%d").weekday()]
+    edition_bar = f'<!-- edition-bar:start --><div class="pn-edition-bar" aria-label="Editiegegevens"><div class="pn-edition-inner"><div class="pn-edition-name"><strong>{day}editie</strong><time datetime="{edition_date}">{esc(fmt_date_short(edition_date))}</time></div><div class="pn-edition-count">12 verhalen · 3 leestips</div></div></div><!-- edition-bar:end -->'
+    if '<!-- edition-bar:start -->' in markup:
+        markup = re.sub(r'<!-- edition-bar:start -->.*?<!-- edition-bar:end -->', lambda _:edition_bar, markup, flags=re.S)
+    else:
+        markup = re.sub(r'(<body\b[^>]*>)', lambda m:m[0]+edition_bar, markup, count=1)
+    note = (data.get('meta') or {}).get('personal_note') or {}
+    note_html = ''
+    if note.get('text'):
+        portrait = note.get('portrait_url', '')
+        portrait_html = f'<img src="{esc(portrait)}" alt="Portretillustratie van Tom">' if portrait.startswith('/images/redactie/') else ''
+        note_html = f'<section class="pn-personal-note" aria-labelledby="personal-note-title">{portrait_html}<div><h2 id="personal-note-title">{esc(note.get("title", ""))}</h2><p>{esc(note["text"])}</p><p><strong>Tom</strong></p></div></section>'
+    note_html = '<!-- personal-note:start -->'+note_html+'<!-- personal-note:end -->'
+    if '<!-- personal-note:start -->' in markup:
+        markup = re.sub(r'<!-- personal-note:start -->.*?<!-- personal-note:end -->', lambda _:note_html, markup, flags=re.S)
+    else:
+        markup = markup.replace('<!-- homepage-nl:start -->', note_html+'<!-- homepage-nl:start -->',1)
+    if '/edition-layout.css' not in markup:
+        markup = markup.replace('</head>', '<link rel="stylesheet" href="/edition-layout.css?v=20261026"></head>', 1)
     markup = apply_homepage_brand_heading(markup)
     homepage.write_text(markup, encoding="utf-8")
     print(f"Homepage bijgewerkt: editie {edition_date}, {len(story_list)} direct leesbare verhalen.")

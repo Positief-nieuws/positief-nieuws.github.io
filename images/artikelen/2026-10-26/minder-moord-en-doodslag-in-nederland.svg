@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+<title id="title">Minder slachtoffers van moord en doodslag in Nederland</title>
+<desc id="desc">Twee staven vanaf nul: 240 slachtoffers in 1996 en voorlopig 103 in 2025. Daling van 57 procent in absolute aantallen. Bron CBS.</desc>
+<rect width="1200" height="720" fill="#eef4ef"/>
+<g font-family="Arial,Helvetica,sans-serif" text-anchor="middle" fill="#182e35">
+<text x="600" y="140" font-size="36" font-weight="700">Slachtoffers van moord en doodslag</text>
+<text x="600" y="188" font-size="27" fill="#526b61">Nederland · aantallen per jaar</text>
+<line x1="300" x2="900" y1="530" y2="530" stroke="#83998d" stroke-width="2"/>
+<rect x="365" y="270" width="160" height="260" rx="5" fill="#a3b9ac"/>
+<rect x="675" y="418.4167" width="160" height="111.5833" rx="5" fill="#176e5c"/>
+<text x="445" y="251" font-size="47" font-weight="700">240</text>
+<text x="755" y="399" font-size="47" font-weight="700" fill="#176e5c">103*</text>
+<text x="445" y="575" font-size="32" font-weight="700">1996</text>
+<text x="755" y="575" font-size="32" font-weight="700">2025</text>
+<text x="600" y="629" font-size="24" fill="#526b61">Bron: CBS · *2025: voorlopige cijfers</text>
+</g></svg>

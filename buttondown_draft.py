@@ -362,6 +362,10 @@ def build_body(data, nl, international, headlines):
     nl_html += '<div style="height:16px"></div>' + ''.join(article_html(item, data, True) for item in nl[3:])
     world = ''.join(email_pair(international[i:i+2], data) for i in range(0, len(international), 2))
     briefing = ''.join(article_html(item, data) for item in headlines)
+    note = (data.get('meta') or {}).get('personal_note') or {}
+    personal_note = ''
+    if note.get('text'):
+        personal_note = f'<div style="margin:0 0 28px;padding:20px;background:#f0f5ee;border:1px solid #e1e9e5;border-radius:14px"><h2 style="margin:0 0 12px;font:700 22px Arial,Helvetica,sans-serif">{esc(note.get("title", ""))}</h2><p style="margin:0;font:15px/1.65 Arial,Helvetica,sans-serif">{esc(note["text"])}</p><p style="margin:12px 0 0;font:700 14px Arial,Helvetica,sans-serif">Tom</p></div>'
     preheader = esc(build_preheader(data, nl))
     return f"""<!-- buttondown-editor-mode: fancy -->
 <style>@media(max-width:760px){{.story-intro{{display:none!important}}.email-column{{display:block!important;width:100%!important;padding:0!important}}.email-shell{{padding:20px 16px!important}}.email-title{{font-size:38px!important}}}}</style>
@@ -376,6 +380,7 @@ def build_body(data, nl, international, headlines):
     <p style="margin:0;font:15px Arial,Helvetica,sans-serif;line-height:1.65;color:{MUTED};">Twaalf positieve verhalen uit Nederland en de wereld. Plus drie ontwikkelingen om bij te blijven. Geen eindeloze nieuwsstroom.</p>
     <p style="margin:15px 0 0;font:12px Arial,Helvetica,sans-serif;color:{MUTED};">Elke maandag en donderdag · 6 uit Nederland · 6 uit de wereld · 3 korte actualiteiten</p>
   </div>
+  {personal_note}
   {nl_html}
   <div style="margin-top:36px;">{section_header("Goed nieuws uit de wereld", "6 verhalen")}<div style="height:16px"></div>{world}</div>
   <div style="margin-top:30px;">{section_header("Wat je verder moet weten", "3 korte actualiteiten")}<div style="height:16px"></div>{briefing}</div>
