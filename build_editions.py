@@ -1858,6 +1858,8 @@ def update_homepage(data):
         markup = re.sub(r'<!-- personal-note:start -->.*?<!-- personal-note:end -->', lambda _:note_html, markup, flags=re.S)
     else:
         markup = markup.replace('<!-- homepage-nl:start -->', note_html+'<!-- homepage-nl:start -->',1)
+    if '/edition-layout.css' not in markup:
+        markup = markup.replace('</head>', '<link rel="stylesheet" href="/edition-layout.css?v=20261026"></head>', 1)
     markup = apply_homepage_brand_heading(markup)
     homepage.write_text(markup, encoding="utf-8")
     print(f"Homepage bijgewerkt: editie {edition_date}, {len(story_list)} direct leesbare verhalen.")
