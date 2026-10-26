@@ -407,15 +407,21 @@ def build_body(data, nl, international, headlines):
     personal_note = personal_note_html(data)
     preheader = esc(build_preheader(data, nl))
     return f"""<!-- buttondown-editor-mode: fancy -->
-<style>@media(max-width:760px){{.story-intro{{display:none!important}}.email-column{{display:block!important;width:100%!important;padding:0!important}}.email-shell{{padding:20px 16px!important}}.email-title{{font-size:28px!important}}}}</style>
+<style>@media(max-width:760px){{.story-intro{{display:none!important}}.email-column{{display:block!important;width:100%!important;padding:0!important}}.email-shell{{padding:20px 16px!important}}.pn-edition-date{{display:block!important;width:100%!important;padding:0 0 4px!important}}.pn-edition-count{{display:block!important;width:100%!important;text-align:left!important;padding:0!important}}}}</style>
 <div style="display:none;max-height:0;overflow:hidden;opacity:0;color:transparent;font-size:1px;line-height:1px;mso-hide:all;">{preheader}</div>
 <div class="email-shell" style="width:100%;max-width:740px;margin:0 auto;box-sizing:border-box;background:{PAPER};padding:28px 28px;color:{INK};font-family:Arial,Helvetica,sans-serif;">
   <div style="padding:0 0 19px;border-bottom:1px solid #e1e9e5;">
     <a href="{esc(buttondown_edition_url(data))}" style="font:800 25px Arial,Helvetica,sans-serif;letter-spacing:-1px;color:{INK} !important;text-decoration:none;"><img src="{SITE_URL}sun-icon-512.png" width="32" height="32" alt="" style="display:inline-block;width:32px;height:32px;vertical-align:middle;margin-right:8px;">Positief nieuws</a>
   </div>
-  <div style="padding:27px 0 24px;">
-    <p style="margin:0 0 10px;font:800 11px Arial,Helvetica,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:{GREEN};">12 verhalen · 3 leestips</p>
-    <h1 class="email-title" style="margin:0 0 13px;font:800 34px/1.12 Arial,Helvetica,sans-serif;letter-spacing:-.04em;color:{INK};">Editie: {esc(edition_date_short_text(data))} {esc(raw_edition_date(data)[:4])}</h1>
+  <div class="pn-edition-bar" style="background:#d6a13a;border-bottom:1px solid #d6a13a;color:{INK};padding:12px 16px;">
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;width:100%;">
+      <tr>
+        <td class="pn-edition-date" valign="top" style="font:800 14px/1.4 Arial,Helvetica,sans-serif;color:{INK};padding-right:12px;">Editie · {esc(edition_date_text(data))}</td>
+        <td class="pn-edition-count" align="right" valign="top" style="font:700 12px/1.6 Arial,Helvetica,sans-serif;color:{INK};white-space:nowrap;">12 verhalen · 3 actualiteiten</td>
+      </tr>
+    </table>
+  </div>
+  <div style="padding:21px 0 24px;">
     <p style="margin:0;font:16px Arial,Helvetica,sans-serif;line-height:1.6;color:{MUTED};">Ook oplossingen en vooruitgang verdienen aandacht. Twee keer per week positieve verhalen uit Nederland en de wereld.</p>
   </div>
   {personal_note}
