@@ -1,0 +1,21 @@
+name: Test nieuwsbriefontwerp in Buttondown (alleen concept)
+on:
+  push:
+    branches: [newsletter-homepage-design-2026-10-26]
+    paths:
+      - '.github/workflows/test-buttondown-layout-2026-10-26.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  draft-only-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Maak of actualiseer uitsluitend een testconcept
+        env:
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+        run: python scripts/test_buttondown_layout_2026_10_26.py
