@@ -3,3 +3,20 @@
 
 /* Mobile note: portrait and title together, body uses the full card width. */
 @media(max-width:640px){.pn-personal-note{grid-template-columns:48px minmax(0,1fr);gap:12px;padding:18px;margin-bottom:24px}.pn-personal-note>div{display:contents}.pn-personal-note img{grid-column:1;grid-row:1;width:48px;height:48px}.pn-personal-note h2{grid-column:2;grid-row:1;align-self:center;font-size:20px;line-height:1.25;margin:0}.pn-personal-note p{grid-column:1/-1;margin:0;font-size:14px;line-height:1.7}}
+
+/* Keep edition metadata on one line, including narrow mobile screens. */
+@media(max-width:640px){
+ .pn-edition-bar,.pn-concept-banner{padding:8px 12px}
+ .pn-edition-inner{flex-wrap:nowrap;gap:8px;align-items:center}
+ .pn-edition-name{width:auto;flex-wrap:nowrap;gap:8px;white-space:nowrap;min-width:0}
+ .pn-edition-name strong{font-size:12px}
+ .pn-edition-name time,.pn-edition-count{font-size:11px;white-space:nowrap}
+ .pn-edition-count{flex:none;margin-left:auto}
+ .pn-concept-banner .pn-edition-status{position:fixed;left:12px;bottom:12px;z-index:80;margin:0;padding:6px 8px;gap:6px;background:#182e35;color:#fff;border-radius:6px}
+}
+@media(max-width:359px){
+ .pn-edition-bar,.pn-concept-banner{padding-right:10px;padding-left:10px}
+ .pn-edition-inner,.pn-edition-name{gap:6px}
+ .pn-edition-name strong{font-size:11px}
+ .pn-edition-name time,.pn-edition-count{font-size:10px}
+}
