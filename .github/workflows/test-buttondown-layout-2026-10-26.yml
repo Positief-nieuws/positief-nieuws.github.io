@@ -19,3 +19,4 @@ jobs:
         env:
           BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
         run: python scripts/test_buttondown_layout_2026_10_26.py
+# Herhaal uitsluitend draft-update na verwijderen twee tekstregels.
