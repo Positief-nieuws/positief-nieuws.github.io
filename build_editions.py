@@ -1842,7 +1842,7 @@ def update_homepage(data):
     if count != 1:
         raise ValueError("Homepage-datummarker ontbreekt of is dubbel.")
     day = ["Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag", "Zondag"][datetime.strptime(edition_date, "%Y-%m-%d").weekday()]
-    edition_bar = f'<!-- edition-bar:start --><div class="pn-edition-bar" aria-label="Editiegegevens"><div class="pn-edition-inner"><div class="pn-edition-name"><strong>{day}editie</strong><time datetime="{edition_date}">{esc(fmt_date_short(edition_date))}</time></div><div class="pn-edition-count">12 verhalen · 3 leestips · Gratis</div></div></div><!-- edition-bar:end -->'
+    edition_bar = f'<!-- edition-bar:start --><div class="pn-edition-bar" aria-label="Editiegegevens"><div class="pn-edition-inner"><div class="pn-edition-name"><strong>{day}editie</strong><time datetime="{edition_date}">{esc(fmt_date_short(edition_date))}</time></div><div class="pn-edition-count">12 verhalen · 3 leestips</div></div></div><!-- edition-bar:end -->'
     if '<!-- edition-bar:start -->' in markup:
         markup = re.sub(r'<!-- edition-bar:start -->.*?<!-- edition-bar:end -->', lambda _:edition_bar, markup, flags=re.S)
     else:
