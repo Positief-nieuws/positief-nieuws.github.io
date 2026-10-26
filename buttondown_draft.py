@@ -14,11 +14,13 @@ NEWS_FILE = Path("nieuws.json")
 BUTTONDOWN_URL = "https://api.buttondown.com/v1/emails"
 SITE_URL = "https://positief-nieuws.nl/"
 
-PAPER = "#fffcf7"
+PAPER = "#fffcf7"  # Gelijk aan site-theme.css
 INK = "#182e35"
 GREEN = "#176e5c"
 GREEN_DARK = "#0e5947"
 MUTED = "#64777a"
+LINE = "#e1e9e5"
+SOFT = "#f4f8f4"
 
 DUTCH_DAYS = [
     "maandag",
@@ -246,11 +248,11 @@ def article_html(article, data=None, prefer_own_page=False, featured=False):
     meta = " &nbsp;·&nbsp; ".join(esc(part) for part in (article.get("category"), article.get("source"), reading_time_label(article)) if part)
     image_html = ""
     if image_url:
-        image_html = f'<a href="{url}" style="text-decoration:none"><img src="{esc(image_url)}" width="660" alt="{esc(article.get("image_alt") or article.get("title"))}" style="display:block;width:100%;height:auto;max-height:{340 if featured else 190}px;object-fit:cover;border:0;border-radius:16px 16px 0 0;"></a>'
-    return f"""<div class="story-card" style="margin:0 0 16px;border:1px solid #e1e9e5;border-radius:17px;overflow:hidden;background:#fff;">
+        image_html = f'<a href="{url}" style="text-decoration:none"><img src="{esc(image_url)}" width="660" alt="{esc(article.get("image_alt") or article.get("title"))}" style="display:block;width:100%;height:auto;max-height:{340 if featured else 190}px;object-fit:cover;border:0;border-radius:15px 15px 0 0;"></a>'
+    return f"""<div class="story-card" style="margin:0 0 16px;border:1px solid #e1e9e5;border-radius:16px;overflow:hidden;background:#fff;">
       {image_html}<div style="padding:{'24px 26px 28px' if featured else '18px 20px'};">
       <p style="margin:0 0 10px;font:800 10px Arial,Helvetica,sans-serif;text-transform:uppercase;letter-spacing:.08em;color:{GREEN};">{esc(article.get('category') or ('Uitgelicht' if featured else 'Actualiteit'))}</p>
-      <h2 style="margin:0 0 12px;font:800 {'34' if featured else '20'}px Arial,Helvetica,sans-serif;line-height:1.18;letter-spacing:-.035em;color:{INK};"><a href="{url}" style="color:{INK} !important;text-decoration:none;">{title}</a></h2>
+      <h2 style="margin:0 0 12px;font:800 {'30' if featured else '21'}px Arial,Helvetica,sans-serif;line-height:1.18;letter-spacing:-.035em;color:{INK};"><a href="{url}" style="color:{INK} !important;text-decoration:none;">{title}</a></h2>
       {f'<p class="story-intro" style="margin:0 0 12px;font:14px Arial,Helvetica,sans-serif;line-height:1.6;color:{MUTED};">{teaser}</p>' if teaser else ''}
       <p style="margin:0;font:700 11px Arial,Helvetica,sans-serif;line-height:1.5;color:{GREEN};">{meta}</p></div></div>"""
 
@@ -266,9 +268,9 @@ def section_header(label, count, note=""):
 
     return f"""
       <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
-             style="width:100%;border-collapse:collapse;border-bottom:1px solid {GREEN_DARK};">
+             style="width:100%;border-collapse:collapse;border-bottom:2px solid #dfe8e2;">
         <tr>
-          <td style="padding:0 0 10px 0;font:800 12px Arial,Helvetica,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:{GREEN};">
+          <td style="padding:0 0 10px 0;font:800 24px Arial,Helvetica,sans-serif;line-height:1.2;letter-spacing:-.035em;color:{INK};">
             {esc(label)}
           </td>
           <td align="right" style="padding:0 0 10px 12px;font:12px Arial,Helvetica,sans-serif;color:{INK};white-space:nowrap;">
@@ -304,13 +306,13 @@ def build_share_block(data):
     )
 
     return f"""
-    <div style="margin:46px 0 0 0;padding:28px 22px;border:1px solid rgba(23,63,49,.18);text-align:center;background:#f0f5ee;border-radius:17px;">
+    <div style="margin:46px 0 0 0;padding:28px 22px;border:1px solid rgba(23,63,49,.18);text-align:center;background:#f4f8f4;border-radius:17px;">
       <p style="margin:0 0 7px 0;font:700 22px Arial,Helvetica,sans-serif;line-height:1.15;color:{INK};">
-        Ken je iemand die ook wel wat positief nieuws kan gebruiken?
+        Deel deze editie.
       </p>
 
       <p style="margin:0 0 20px 0;font:14px Arial,Helvetica,sans-serif;line-height:1.5;color:{MUTED};">
-        Stuur deze nieuwsbrief gerust door.
+        Deel Positief nieuws met iemand die een breder nieuwsbeeld waardeert. Zo geef je oplossingen en vooruitgang meer ruimte.
       </p>
 
       <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center">
@@ -355,6 +357,46 @@ def email_pair(stories, data, own_pages=True):
     return f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;table-layout:fixed;border-collapse:collapse;"><tr>{cells}</tr></table>'
 
 
+def personal_note_html(data):
+    """Same portrait, title and restrained note styling as the homepage.
+
+    The site currently provides the portrait as SVG. That is sufficient for
+    the browser preview. For reliable delivery to all email clients a PNG
+    version of that *same* portrait should be deployed at the same location.
+    """
+    note = (data.get("meta") or {}).get("personal_note") or {}
+    title = esc(note.get("title") or "Wat niet in de krant komt")
+    note_text = str(note.get("text") or "").strip()
+    text_html = esc(note_text) if note_text else "Redactioneel concept: persoonlijke noot nog toevoegen."
+
+    portrait_path = str(note.get("portrait_email_url") or note.get("portrait_url") or "").strip()
+    if portrait_path.startswith("/") and not portrait_path.startswith("//"):
+        portrait_url = SITE_URL.rstrip("/") + portrait_path
+    elif portrait_path.startswith(SITE_URL):
+        portrait_url = portrait_path
+    else:
+        portrait_url = ""
+    portrait_html = (
+        f'<img src="{esc(portrait_url)}" width="76" height="76" '
+        'alt="Portretillustratie van Tom" '
+        'style="display:block;width:76px;height:76px;border-radius:50%;object-fit:cover;border:0;">'
+        if portrait_url else ""
+    )
+    return f"""<div class="pn-personal-note" style="margin:0 0 28px;padding:22px;background:{SOFT};border:1px solid {LINE};border-radius:16px;">
+      <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;margin:0 0 12px;">
+        <tr>
+          {f'<td width="91" valign="middle" style="width:91px;padding-right:15px;">{portrait_html}</td>' if portrait_html else ''}
+          <td valign="middle">
+            <p style="margin:0 0 7px;font:800 10px Arial,Helvetica,sans-serif;letter-spacing:.075em;text-transform:uppercase;color:{GREEN};">Persoonlijke noot</p>
+            <h2 style="margin:0;font:800 23px/1.2 Arial,Helvetica,sans-serif;letter-spacing:-.035em;color:{INK};">{title}</h2>
+          </td>
+        </tr>
+      </table>
+      <p style="margin:0;color:{INK};font:14px/1.7 Arial,Helvetica,sans-serif;">{text_html}</p>
+      <p style="margin:11px 0 0;color:{GREEN_DARK};font:800 13px Arial,Helvetica,sans-serif;">Tom</p>
+    </div>"""
+
+
 def build_body(data, nl, international, headlines):
     nl = homepage_email_order(data, nl)
     nl_html = article_html(nl[0], data, True, featured=True) + email_pair(nl[1:3], data)
@@ -362,23 +404,19 @@ def build_body(data, nl, international, headlines):
     nl_html += '<div style="height:16px"></div>' + ''.join(article_html(item, data, True) for item in nl[3:])
     world = ''.join(email_pair(international[i:i+2], data) for i in range(0, len(international), 2))
     briefing = ''.join(article_html(item, data) for item in headlines)
-    note = (data.get('meta') or {}).get('personal_note') or {}
-    personal_note = ''
-    if note.get('text'):
-        personal_note = f'<div style="margin:0 0 28px;padding:20px;background:#f0f5ee;border:1px solid #e1e9e5;border-radius:14px"><h2 style="margin:0 0 12px;font:700 22px Arial,Helvetica,sans-serif">{esc(note.get("title", ""))}</h2><p style="margin:0;font:15px/1.65 Arial,Helvetica,sans-serif">{esc(note["text"])}</p><p style="margin:12px 0 0;font:700 14px Arial,Helvetica,sans-serif">Tom</p></div>'
+    personal_note = personal_note_html(data)
     preheader = esc(build_preheader(data, nl))
     return f"""<!-- buttondown-editor-mode: fancy -->
-<style>@media(max-width:760px){{.story-intro{{display:none!important}}.email-column{{display:block!important;width:100%!important;padding:0!important}}.email-shell{{padding:20px 16px!important}}.email-title{{font-size:38px!important}}}}</style>
+<style>@media(max-width:760px){{.story-intro{{display:none!important}}.email-column{{display:block!important;width:100%!important;padding:0!important}}.email-shell{{padding:20px 16px!important}}.email-title{{font-size:28px!important}}}}</style>
 <div style="display:none;max-height:0;overflow:hidden;opacity:0;color:transparent;font-size:1px;line-height:1px;mso-hide:all;">{preheader}</div>
 <div class="email-shell" style="width:100%;max-width:740px;margin:0 auto;box-sizing:border-box;background:{PAPER};padding:28px 28px;color:{INK};font-family:Arial,Helvetica,sans-serif;">
-  <div style="padding:0 0 22px;border-bottom:1px solid #e1e9e5;">
+  <div style="padding:0 0 19px;border-bottom:1px solid #e1e9e5;">
     <a href="{esc(buttondown_edition_url(data))}" style="font:800 25px Arial,Helvetica,sans-serif;letter-spacing:-1px;color:{INK} !important;text-decoration:none;"><img src="{SITE_URL}sun-icon-512.png" width="32" height="32" alt="" style="display:inline-block;width:32px;height:32px;vertical-align:middle;margin-right:8px;">Positief nieuws</a>
   </div>
-  <div style="padding:30px 0 26px;">
-    <p style="margin:0 0 14px;font:700 12px Arial,Helvetica,sans-serif;color:{GREEN};">Editie van {esc(edition_date_text(data))}</p>
-    <h1 class="email-title" style="margin:0 0 16px;font:900 52px Arial,Helvetica,sans-serif;line-height:1.04;letter-spacing:-.055em;color:{INK};">Positief <span style="color:#168268;">nieuws</span></h1>
-    <p style="margin:0;font:15px Arial,Helvetica,sans-serif;line-height:1.65;color:{MUTED};">Twaalf positieve verhalen uit Nederland en de wereld. Plus drie ontwikkelingen om bij te blijven. Geen eindeloze nieuwsstroom.</p>
-    <p style="margin:15px 0 0;font:12px Arial,Helvetica,sans-serif;color:{MUTED};">Elke maandag en donderdag · 6 uit Nederland · 6 uit de wereld · 3 korte actualiteiten</p>
+  <div style="padding:27px 0 24px;">
+    <p style="margin:0 0 10px;font:800 11px Arial,Helvetica,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:{GREEN};">12 verhalen · 3 leestips</p>
+    <h1 class="email-title" style="margin:0 0 13px;font:800 34px/1.12 Arial,Helvetica,sans-serif;letter-spacing:-.04em;color:{INK};">Editie: {esc(edition_date_short_text(data))} {esc(raw_edition_date(data)[:4])}</h1>
+    <p style="margin:0;font:16px Arial,Helvetica,sans-serif;line-height:1.6;color:{MUTED};">Ook oplossingen en vooruitgang verdienen aandacht. Twee keer per week positieve verhalen uit Nederland en de wereld.</p>
   </div>
   {personal_note}
   {nl_html}
