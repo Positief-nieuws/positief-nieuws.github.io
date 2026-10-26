@@ -1337,60 +1337,29 @@ TOPIC_DOSSIERS = {'Gezondheid': {'signals_title': 'Dit zien we de afgelopen weke
                        'icon': '<svg viewBox="0 0 32 32" fill="none"><path d="M16 27C7 21 5 16 5 11c0-4 3-7 7-7 2 0 4 1 5 3 1-2 3-3 5-3 4 '
                                '0 7 3 7 7 0 5-4 10-13 16Z" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"/></svg>',
                        'links': [('Herstelzorg Bladel', '/artikelen/2026-10-01/bladel-subsidie-laagdrempelige-herstelzorg/', False)]}]},
- 'Natuur & klimaat': {'signals_title': 'Dit zien we de afgelopen weken gebeuren',
-                      'signals_intro': 'Vier lijnen waarin bescherming, herstel en slimmer samenleven met natuur terugkomen.',
-                      'why_title': 'Zo zie je dat natuurherstel meestal tijd, bescherming én slimme keuzes vraagt',
-                      'why_text': 'Een losse natuurfoto zegt weinig over structurele vooruitgang. Door herstelprojecten, '
-                                  'soortenbescherming en nieuwe meetmethoden samen te volgen, wordt duidelijker welke aanpakken echt '
-                                  'resultaat beginnen te geven.',
-                      'signals': [{'title': 'Bescherming kan ecosystemen jaren later zichtbaar veranderen',
-                                   'text': 'Na tien jaar bescherming tegen zware bodemberoering herstelde de zeebodem rond de Schotse '
-                                           'Summer Isles zichtbaar. Ook langdurig herstel van oesterriffen liet positieve resultaten zien.',
-                                   'icon': '<svg viewBox="0 0 32 32" fill="none"><path d="M5 25C8 10 17 5 27 5c0 11-6 20-19 22" '
-                                           'stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/><path '
-                                           'd="M8 25c6-7 11-11 18-17" stroke="currentColor" stroke-width="2.1" '
-                                           'stroke-linecap="round"/></svg>',
-                                   'links': [('Schotse zeebodem', '/artikelen/2026-10-01/summer-isles-zeeherstel-na-baggerverbod/', False),
-                                             ('Oesterriffen', 'https://phys.org/news/2026-09-term-oyster-reef-success-murky.html', True)]},
-                                  {'title': 'Technologie kan natuur en menselijke activiteit beter naast elkaar laten bestaan',
-                                   'text': 'Slimme radar bij windturbines volgt vleermuizen in real time, terwijl geschilderde ogen op vee '
-                                           'roofdieren lijken af te schrikken. Twee heel verschillende voorbeelden van gerichter ingrijpen '
-                                           'in plaats van grofweg alles stilleggen of bestrijden.',
-                                   'icon': '<svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="3" stroke="currentColor" '
-                                           'stroke-width="2"/><path d="M16 5a11 11 0 0 1 11 11M16 9a7 7 0 0 1 7 7M16 16l8-8M5 27h22" '
-                                           'stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
-                                   'links': [('Vleermuisradar',
-                                              'https://www.tno.nl/nl/newsroom/insights/2026/09/slimme-radar-beschermt-vleermuizen/',
-                                              True),
-                                             ('Geschilderde ogen op vee',
-                                              '/artikelen/2026-10-01/geschilderde-ogen-vee-roofdieren-zimbabwe/',
-                                              False)]},
-                                  {'title': 'Bedreigde soorten kunnen weer terrein winnen',
-                                   'text': 'Nieuw-Zeeland telde een recordaantal kākāpō-kuikens. In Schotland brachten nieuwe '
-                                           'luchtmetingen miljoenen jonge bomen in kaart. Zulke verhalen verschillen sterk, maar hebben '
-                                           'gemeen dat herstel meetbaar wordt.',
-                                   'icon': '<svg viewBox="0 0 32 32" fill="none"><path d="M5 20c6 1 9-2 11-6 3 4 7 5 11 4-3 7-9 9-15 '
-                                           '7-3-1-5-3-7-5Z" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"/><path d="m20 '
-                                           '12 3-4 1 5" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"/></svg>',
-                                   'links': [('Kākāpō',
-                                              'https://www.smithsonianmag.com/smart-news/new-zealand-welcomes-a-record-90-kakapo-chicks-helping-the-worlds-chunkiest-parrot-species-rebound-from-the-brink-of-extinction-180989511/',
-                                              True),
-                                             ('Bosherstel Schotland',
-                                              'https://phys.org/news/2026-09-aerial-reveal-successful-woodland-expansion.html',
-                                              True)]},
-                                  {'title': 'We worden beter in zien waar natuur veerkrachtig is',
-                                   'text': 'Een wereldwijde analyse bracht in kaart waar grondwater na droogte relatief goed herstelt. '
-                                           'Groene daken laten ondertussen zien dat ook steden extra leefruimte voor soorten kunnen '
-                                           'bieden.',
-                                   'icon': '<svg viewBox="0 0 32 32" fill="none"><path d="M16 4C11 11 8 15 8 20a8 8 0 0 0 16 '
-                                           '0c0-5-3-9-8-16Z" stroke="currentColor" stroke-width="2.1"/><path d="M12 21c1 2 2 3 4 3" '
-                                           'stroke="currentColor" stroke-width="2.1" stroke-linecap="round"/></svg>',
-                                   'links': [('Grondwater na droogte',
-                                              '/artikelen/2026-10-01/wereldwijde-analyse-herstel-grondwater-na-droogte/',
-                                              False),
-                                             ('Groene daken',
-                                              'https://www.wur.nl/en/activity/biodivercity-succession-green-roof-ecosystems',
-                                              True)]}]},
+ 'Natuur & klimaat': {
+                'signals_title': "Dit zien we de afgelopen weken gebeuren",
+                'signals_intro': "Vier lijnen uit recente natuurverhalen: herstel door waterbeheer, slimmer samenleven met dieren, nieuwe generaties bij kwetsbare soorten en natuurlijke kustbescherming.",
+                'why_title': "Zo zie je dat natuurherstel meestal tijd, bescherming én slimme keuzes vraagt",
+                'why_text': "Een losse natuurfoto zegt weinig over structurele vooruitgang. Door herstelprojecten, soortenbescherming en nieuwe meetmethoden samen te volgen, wordt duidelijker welke aanpakken echt resultaat beginnen te geven.",
+                'signals': [
+                    {'title': "Waterbeheer brengt beschadigde natuur weer op gang",
+                     'text': "In de Korendijkse Slikken worden na aanpassing van de waterhuishouding meer grutto- en kievitterritoria geteld. Op Madagaskar kwamen jonge mangroven op nadat bewoners een afwaterende geul afsloten. Het zijn veelbelovende lokale resultaten, nog geen bewijs van blijvend herstel.",
+                     'icon': "<svg viewBox=\"0 0 32 32\" fill=\"none\"><path d=\"M5 25C8 10 17 5 27 5c0 11-6 20-19 22\" stroke=\"currentColor\" stroke-width=\"2.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M8 25c6-7 11-11 18-17\" stroke=\"currentColor\" stroke-width=\"2.1\" stroke-linecap=\"round\"/></svg>",
+                     'links': [("Weidevogels Korendijkse Slikken", "/artikelen/2026-10-15/korendijkse-slikken-meer-weidevogels/", False), ("Mangroven Madagaskar", "/artikelen/2026-10-22/mangroven-keren-terug-madagaskar/", False)]},
+                    {'title': "Slimme ingrepen helpen mens en dier samenleven",
+                     'text': "Bij pieken in de vogeltrek worden windturbines op de Noordzee afgeremd. In Nepal helpen beschermde veekralen en snellere schadevergoeding herders en sneeuwluipaarden naast elkaar te leven. Beide maatregelen zijn gericht op minder conflicten, maar hun precieze effect vraagt verdere meting.",
+                     'icon': "<svg viewBox=\"0 0 32 32\" fill=\"none\"><circle cx=\"16\" cy=\"16\" r=\"3\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M16 5a11 11 0 0 1 11 11M16 9a7 7 0 0 1 7 7M16 16l8-8M5 27h22\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+                     'links': [("Windparken en vogeltrek", "/artikelen/2026-10-26/windparken-ruimte-voor-vogeltrek/", False), ("Sneeuwluipaarden en veekralen", "/artikelen/2026-10-26/nepal-sneeuwluipaarden-vee/", False)]},
+                    {'title': "Nieuwe generaties geven hoop, maar geen garantie",
+                     'text': "DNA-onderzoek bevestigt een otterfamilie met een jong in de Zuid-Hollandse duinen. In de Mekong zijn zes jonge, bedreigde Irrawaddydolfijnen geteld. Zulke geboorten zijn hoopvol, maar betekenen nog niet dat een soort of populatie duurzaam is hersteld.",
+                     'icon': "<svg viewBox=\"0 0 32 32\" fill=\"none\"><path d=\"M5 20c6 1 9-2 11-6 3 4 7 5 11 4-3 7-9 9-15 7-3-1-5-3-7-5Z\" stroke=\"currentColor\" stroke-width=\"2.1\" stroke-linejoin=\"round\"/><path d=\"m20 12 3-4 1 5\" stroke=\"currentColor\" stroke-width=\"2.1\" stroke-linecap=\"round\"/></svg>",
+                     'links': [("Otterfamilie in de duinen", "/artikelen/2026-10-19/otterfamilie-meijendel-berkheide-dna/", False), ("Jonge rivierdolfijnen", "/artikelen/2026-10-22/zes-dolfijnenkalfjes-mekong/", False)]},
+                    {'title': "Natuurlijke kusten helpen ook mensen beschermen",
+                     'text': "In een grote golfproef hield een Nederlandse kwelder goed stand en hielp de begroeiing golven afremmen. Een nieuw model helpt berekenen hoeveel stormgolven mangrovebossen kunnen afzwakken. Natuur vervangt geen dijk, maar kan kustverdediging wel aanvullen.",
+                     'icon': "<svg viewBox=\"0 0 32 32\" fill=\"none\"><path d=\"M16 4C11 11 8 15 8 20a8 8 0 0 0 16 0c0-5-3-9-8-16Z\" stroke=\"currentColor\" stroke-width=\"2.1\"/><path d=\"M12 21c1 2 2 3 4 3\" stroke=\"currentColor\" stroke-width=\"2.1\" stroke-linecap=\"round\"/></svg>",
+                     'links': [("Kwelders en dijken", "/artikelen/2026-10-22/kwelders-beschermen-kust/", False), ("Mangroven en golven", "/artikelen/2026-10-05/model-voorspelt-golfremming-mangroves/", False)]}
+                ]},
  'Wetenschap': {'signals_title': 'Dit zien we de afgelopen weken gebeuren',
                 'signals_intro': 'Vier lijnen waarin nieuwe meetmethoden, AI en ruimteonderzoek het zicht op complexe systemen vergroten.',
                 'why_title': 'Zo zie je hoe wetenschap stap voor stap meer zichtbaar en meetbaar maakt',
