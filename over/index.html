@@ -46,6 +46,14 @@ h1,h2,h3{font-family:Georgia,"Times New Roman",serif}h1{margin:0;font-size:clamp
 .lead{max-width:650px;margin:20px 0 0;color:#313934;font-size:1rem}.rule{margin-top:30px;border-top:1px solid var(--line)}
 .content{padding:24px 0 76px}.copy{max-width:650px}.copy h2{margin:42px 0 10px;font-size:1.55rem;line-height:1.15;letter-spacing:-.03em}.copy p{margin:0 0 18px;color:#333b36}
 .copy ul{margin:10px 0 22px;padding-left:20px;color:#333b36}.copy li{margin:8px 0}.copy strong{color:var(--ink)}
+
+    .pn-about-author { display: flex; align-items: center; gap: 20px; margin: 20px 0 24px; }
+    .pn-about-author-photo { display: block; flex: 0 0 128px; width: 128px; height: 128px; object-fit: contain; border-radius: 16px; background: rgba(31,91,69,.04); }
+    .pn-about-author p { flex: 1; margin: 0; }
+    @media (max-width: 480px) {
+      .pn-about-author { align-items: flex-start; gap: 14px; }
+      .pn-about-author-photo { flex-basis: 96px; width: 96px; height: 96px; border-radius: 12px; }
+    }
 .callout{margin:32px 0;padding:22px 24px;border:1px solid var(--line);background:#f8f3e8}.callout p:last-child{margin-bottom:0}
 .support-teaser{margin:38px 0 8px;padding:28px 30px;border:1px solid rgba(214,161,58,.32);border-radius:18px;background:radial-gradient(circle at 92% 18%,rgba(214,161,58,.11),transparent 29%),rgba(255,255,255,.42)}
 .support-teaser-grid{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:28px}
@@ -129,7 +137,7 @@ footer{padding:0 0 34px;text-align:center;color:#8b928e;font-size:.72rem}
   </div></section>
 
   <section class="content"><div class="shell"><div class="copy">
-    <!-- mission:tom --><h2>Waarom ik Positief nieuws maak</h2><p>Ik ben Tom, de initiatiefnemer van Positief nieuws. Met deze site wil ik meer ruimte geven aan wat er óók goed gaat, naast het nieuws over problemen en crises.</p>
+    <!-- mission:tom --><h2>Waarom ik Positief nieuws maak</h2><div class="pn-about-author"><img class="pn-about-author-photo" src="/images/redactie/tom-portret-weergave.svg" alt="Portretillustratie van Tom, initiatiefnemer van Positief nieuws" width="128" height="128" loading="lazy" decoding="async"><p>Ik ben Tom, de initiatiefnemer van Positief nieuws. Met deze site wil ik meer ruimte geven aan wat er óók goed gaat, naast het nieuws over problemen en crises.</p></div>
     <p>Het nieuws bestaat niet alleen uit oorlog, politieke ruzie, ongelukken en crises. Iedere dag gaan er ook dingen vooruit: in wetenschap, gezondheid, natuur, technologie, cultuur en gewoon tussen mensen. Zulke ontwikkelingen verdienen ook een plek in je nieuwsbeeld.</p>
     <p>Daarom bevat iedere editie twaalf positieve nieuwsverhalen: zes uit Nederland en zes uit de rest van de wereld. Daarnaast staan er drie belangrijke onderwerpen bij die niet per se positief zijn, maar die je wel moet kennen om bij te blijven.</p>
     <p>Nieuwe edities verschijnen op maandag en donderdag.</p>
