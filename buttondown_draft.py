@@ -387,7 +387,6 @@ def personal_note_html(data):
         <tr>
           {f'<td width="91" valign="middle" style="width:91px;padding-right:15px;">{portrait_html}</td>' if portrait_html else ''}
           <td valign="middle">
-            <p style="margin:0 0 7px;font:800 10px Arial,Helvetica,sans-serif;letter-spacing:.075em;text-transform:uppercase;color:{GREEN};">Persoonlijke noot</p>
             <h2 style="margin:0;font:800 23px/1.2 Arial,Helvetica,sans-serif;letter-spacing:-.035em;color:{INK};">{title}</h2>
           </td>
         </tr>
@@ -420,9 +419,6 @@ def build_body(data, nl, international, headlines):
         <td class="pn-edition-count" align="right" valign="top" style="font:700 12px/1.6 Arial,Helvetica,sans-serif;color:{INK};white-space:nowrap;">12 verhalen · 3 actualiteiten</td>
       </tr>
     </table>
-  </div>
-  <div style="padding:21px 0 24px;">
-    <p style="margin:0;font:16px Arial,Helvetica,sans-serif;line-height:1.6;color:{MUTED};">Ook oplossingen en vooruitgang verdienen aandacht. Twee keer per week positieve verhalen uit Nederland en de wereld.</p>
   </div>
   {personal_note}
   {nl_html}
