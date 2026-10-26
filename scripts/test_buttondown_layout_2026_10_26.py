@@ -6,6 +6,10 @@ import sys
 import urllib.error
 import urllib.parse
 import urllib.request
+from pathlib import Path
+
+# GitHub Actions runs this file from scripts/, while the generator sits at the repo root.
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from buttondown_draft import (
     BUTTONDOWN_URL, build_body, build_preheader, edition_url, load_news, raw_edition_date,
@@ -59,7 +63,6 @@ def main():
         "template": "naked",
         "canonical_url": edition_url(data),
         "description": build_preheader(data, nl),
-        "metadata": {"pn_test_marker": MARKER},
     }
 
     params = urllib.parse.urlencode({
