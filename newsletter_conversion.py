@@ -5,8 +5,14 @@ import re
 from html import escape
 
 def block(placement, title='Het goede nieuws, gewoon in je inbox.', topic=False):
-    intro = 'Ontvang elke maandag en donderdag ook oplossingen en vooruitgang, met bronnen en nuance.' if topic else 'Elke maandag en donderdag ook oplossingen en vooruitgang in je inbox. Met bronnen en nuance. Gratis en in een paar minuten gelezen.'
-    return f'''<!-- newsletter:{placement}:start --><section class="pn-newsletter" aria-labelledby="{placement}-title"><div><h2 id="{placement}-title">{escape(title)}</h2><p>{intro}</p></div><form action="https://buttondown.com/api/emails/embed-subscribe/positiefnieuws" method="post" data-newsletter-placement="{placement}"><label for="{placement}-email">E-mailadres</label><div class="pn-newsletter-row"><input id="{placement}-email" type="email" name="email" autocomplete="email" placeholder="jij@voorbeeld.nl" required><button type="submit">Gratis aanmelden</button></div><input type="hidden" name="embed" value="1"><input type="hidden" name="metadata__signup_source" value="{placement}"><p class="pn-newsletter-note">Afmelden kan altijd. Je bevestigt je inschrijving per e-mail.</p></form></section><!-- newsletter:{placement}:end -->'''
+    if placement == 'home_hero':
+        title = 'Er gebeurt meer goeds dan je denkt.'
+        intro = 'Twee keer per week de positieve verhalen, oplossingen en vooruitgang die je anders mist. Gratis in je inbox.'
+        button = 'Ja, stuur mij positief nieuws'
+    else:
+        intro = 'Ontvang elke maandag en donderdag ook oplossingen en vooruitgang, met bronnen en nuance.' if topic else 'Elke maandag en donderdag ook oplossingen en vooruitgang in je inbox. Met bronnen en nuance. Gratis en in een paar minuten gelezen.'
+        button = 'Gratis aanmelden'
+    return f'''<!-- newsletter:{placement}:start --><section class="pn-newsletter" aria-labelledby="{placement}-title"><div><h2 id="{placement}-title">{escape(title)}</h2><p>{intro}</p></div><form action="https://buttondown.com/api/emails/embed-subscribe/positiefnieuws" method="post" data-newsletter-placement="{placement}"><label for="{placement}-email">E-mailadres</label><div class="pn-newsletter-row"><input id="{placement}-email" type="email" name="email" autocomplete="email" placeholder="jij@voorbeeld.nl" required><button type="submit">{escape(button)}</button></div><input type="hidden" name="embed" value="1"><input type="hidden" name="metadata__signup_source" value="{placement}"><p class="pn-newsletter-note">Afmelden kan altijd. Je bevestigt je inschrijving per e-mail.</p></form></section><!-- newsletter:{placement}:end -->'''
 
 def apply(phase=3):
     for path in Path('.').rglob('index.html'):
