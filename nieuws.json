@@ -2,8 +2,8 @@
   "meta": {
     "edition_date": "2026-10-26",
     "email_preheader": "Minder dodelijk geweld, energie uit fabriekslucht en 25.000 kilo pruimen voor de Voedselbank.",
-    "status": "approved",
-    "publication_authorized": true,
+    "status": "preview",
+    "publication_authorized": false,
     "ordering": "6 Nederlandse feiten, 6 wereldverhalen; brononderzoek en beperkingen in controleverslag.",
     "personal_note": {
       "title": "Wat niet in de krant komt",
@@ -30,7 +30,7 @@
       },
       {
         "section": "nl",
-        "article_slug": "groningen-waterstof-materialen",
+        "article_slug": "koning-bezoekt-azc-leersum",
         "rank": 4
       },
       {
@@ -76,7 +76,7 @@
     ],
     "selection_revision": "2026-10-25-avond",
     "candidate_generated_at": "2026-10-25T17:39:34.446222+01:00",
-    "review_status": "Tom de Haas heeft op zondag 25 oktober expliciet ingestemd met een eenmalige publicatie-uitzondering: de huidige nagekeken selectie publiceren, volledige triage van 9.199 kandidaten en bronoverzichten eerlijk als onafgerond vastleggen. Vervroegde maandag-editie; nieuwsbrief alleen als concept."
+    "review_status": "Conceptwijziging voor preview: Leersum vervangt Gronings waterstofonderzoek. Geen live-publicatie geautoriseerd."
   },
   "nl": [
     {
@@ -171,31 +171,27 @@
       "editorial_rank": 3
     },
     {
-      "article_slug": "groningen-waterstof-materialen",
-      "category": "Energie & innovatie",
-      "title": "Groningse onderzoekers verdubbelen waterstofproductie in een proefcel",
-      "email_title": "Groningse onderzoekers verdubbelen waterstofproductie in een proefcel",
-      "teaser": "Een betere combinatie van materialen levert meer waterstof bij hetzelfde energieverbruik. De proefcel bleef minstens vijfhonderd uur stabiel werken.",
+      "article_slug": "koning-bezoekt-azc-leersum",
+      "category": "Mens",
+      "title": "Koning bezoekt azc Leersum: opvang kan ook goed gaan",
+      "email_title": "Koning bezoekt azc Leersum: opvang kan ook goed gaan",
+      "teaser": "In Leersum werken bewoners, vrijwilligers en dorpsgenoten al jaren samen. Het bezoek van Willem-Alexander zet dat voorbeeld in de schijnwerpers.",
       "article_body": [
-        "Twee keer zoveel waterstof maken zonder meer energie te gebruiken: dat bereikten onderzoekers van de Rijksuniversiteit Groningen met een zorgvuldig afgestemde combinatie van materialen. Het resultaat betreft een proefcel, geen fabriek die al op industriële schaal draait.",
-        "De cel splitst waterdamp in waterstof en zuurstof. Een keramisch membraan laat geladen waterstofdeeltjes door en houdt andere deeltjes tegen. Aan de waterdampzijde helpt een speciaal ontwikkeld materiaal om de reactie op gang te brengen. Juist de wisselwerking tussen dat materiaal en het membraan bleek belangrijk.",
-        "Volgens de universiteit verdubbelde de productie ten opzichte van eerdere cellen van hetzelfde type. Het team liet ook zien dat de cel minstens vijfhonderd uur stabiel kon functioneren. De resultaten verschenen op 14 oktober in Energy & Environmental Science; de universiteit lichtte ze op 22 oktober toe.",
-        "Dat is een concrete stap in onderzoek naar waterstof uit water. Voor grootschalige toepassing zijn verdere ontwikkeling en toetsing nodig. Bovendien bepaalt de herkomst van de gebruikte elektriciteit hoe duurzaam de geproduceerde waterstof werkelijk is. Een betere proefcel maakt waterstof dus niet vanzelf klimaatneutraal."
+        "Koning Willem-Alexander bezocht op 27 oktober het asielzoekerscentrum in Leersum. Daar sprak hij met bewoners en betrokkenen over het dagelijks leven in de opvang en de samenwerking met het dorp. Zijn boodschap na afloop: naast problemen verdient ook aandacht wat er goed gaat.",
+        "Het azc bestaat sinds 1989. Bewoners en mensen uit de omgeving ontmoeten elkaar onder meer via een buddyproject, een fietsenwerkplaats en activiteiten die deelname aan de samenleving stimuleren. Zulke initiatieven maken contact concreet: niet alleen praten over opvang, maar samen iets doen.",
+        "Tijdens het bezoek was er ook ruimte voor de moeilijke kanten van het bestaan als asielzoeker. Kinderen vertelden over onzekerheid en het missen van familie. De koning nam brieven van hen in ontvangst. Het positieve verhaal betekent dus niet dat alle problemen zijn opgelost.",
+        "Leersum is één plaats, geen blauwdruk voor iedere opvanglocatie. Maar het laat zien wat mogelijk is wanneer bewoners, vrijwilligers, gemeente en omwonenden elkaar langdurig weten te vinden. Dat verdient óók een plek in het nieuws."
       ],
-      "source": "Rijksuniversiteit Groningen",
-      "source_id": "rijksuniversiteit-groningen",
-      "url": "https://www.rug.nl/fse/news/highlighted-papers/2026/doubling-hydrogen-production-through-a-synergy-of-materials",
-      "primary_url": "https://www.rug.nl/fse/news/highlighted-papers/2026/doubling-hydrogen-production-through-a-synergy-of-materials",
-      "published": "2026-10-22",
-      "event_date": "2026-10-22",
-      "image_alt": "Reageerbuisjes in een laboratorium; illustratief beeld, niet de Groningse proefcel.",
-      "image_query": "id:904546",
-      "image_key": "groningen-waterstof-materialen",
+      "source": "Koninklijk Huis",
+      "source_id": "koninklijk-huis",
+      "url": "https://www.koninklijkhuis.nl/actueel/nieuws/2026/10/01/koning-bezoekt-asielzoekerscentrum-leersum",
+      "primary_url": "https://www.koninklijkhuis.nl/actueel/nieuws/2026/10/01/koning-bezoekt-asielzoekerscentrum-leersum",
+      "published": "2026-10-27",
+      "event_date": "2026-10-27",
+      "image_alt": "Asielzoekerscentrum in Nederland; illustratief beeld, niet het koninklijke bezoek.",
       "headline_options": [
-        "Groningse onderzoekers verdubbelen waterstofproductie in een proefcel",
-        "Groningse onderzoekers verdubbelen waterstofproductie in een proefcel"
+        "Koning bezoekt azc Leersum: opvang kan ook goed gaan"
       ],
-      "candidate_id": "b035064499df",
       "regional_rank": 4,
       "editorial_rank": 4
     },
