@@ -5,32 +5,25 @@
     "status": "preview",
     "publication_authorized": false,
     "ordering": "6 Nederlandse feiten, 6 wereldverhalen; brononderzoek en beperkingen in controleverslag.",
-    "personal_note": {
-      "title": "Wat niet in de krant komt",
-      "text": "Ik was net een kwartier thuis toen de deurbel ging. Voor de deur stonden twee vrouwen, vermoedelijk moeder en dochter, met een hond aan de lijn. Het waaide hard en het regende een beetje. 'Uw sleutels zitten nog aan de buitenkant van de deur,' zeiden ze. Ze belden even aan om te voorkomen dat er iets mis zou gaan. Als iemand de sleutels had meegenomen, was het misschien nieuws geworden. Maar twee mensen die gewoon even op een buurtgenoot letten? Dat haalt de krant zelden. Daarom hoort het hier.",
-      "portrait_choice": "zwart-wit/cartoon schets, indien beschikbaar in repo",
-      "editorial_status": "concept; door gebruiker eerder aangeleverde anekdote",
-      "portrait_url": "/images/redactie/tom-portret-weergave.svg"
-    },
     "editorial_order": [
       {
         "section": "nl",
-        "article_slug": "minder-moord-en-doodslag-in-nederland",
+        "article_slug": "koning-bezoekt-azc-leersum",
         "rank": 1
       },
       {
         "section": "nl",
-        "article_slug": "harlingen-biogas-uit-fabriekslucht",
+        "article_slug": "minder-moord-en-doodslag-in-nederland",
         "rank": 2
       },
       {
         "section": "nl",
-        "article_slug": "pruimen-voedselbank-herveld",
+        "article_slug": "harlingen-biogas-uit-fabriekslucht",
         "rank": 3
       },
       {
         "section": "nl",
-        "article_slug": "koning-bezoekt-azc-leersum",
+        "article_slug": "pruimen-voedselbank-herveld",
         "rank": 4
       },
       {
@@ -80,6 +73,32 @@
   },
   "nl": [
     {
+      "article_slug": "koning-bezoekt-azc-leersum",
+      "category": "Mens",
+      "title": "Koning bezoekt azc Leersum: opvang kan ook goed gaan",
+      "email_title": "Koning bezoekt azc Leersum: opvang kan ook goed gaan",
+      "teaser": "In Leersum werken bewoners, vrijwilligers en dorpsgenoten al jaren samen. Het bezoek van Willem-Alexander zet dat voorbeeld in de schijnwerpers.",
+      "article_body": [
+        "Koning Willem-Alexander bezocht op 27 oktober het asielzoekerscentrum in Leersum. Daar sprak hij met bewoners en betrokkenen over het dagelijks leven in de opvang en de samenwerking met het dorp. Zijn boodschap na afloop: naast problemen verdient ook aandacht wat er goed gaat.",
+        "Het azc bestaat sinds 1989. Bewoners en mensen uit de omgeving ontmoeten elkaar onder meer via een buddyproject, een fietsenwerkplaats en activiteiten die deelname aan de samenleving stimuleren. Zulke initiatieven maken contact concreet: niet alleen praten over opvang, maar samen iets doen.",
+        "Tijdens het bezoek was er ook ruimte voor de moeilijke kanten van het bestaan als asielzoeker. Kinderen vertelden over onzekerheid en het missen van familie. De koning nam brieven van hen in ontvangst. Het positieve verhaal betekent dus niet dat alle problemen zijn opgelost.",
+        "Leersum is één plaats, geen blauwdruk voor iedere opvanglocatie. Maar het laat zien wat mogelijk is wanneer bewoners, vrijwilligers, gemeente en omwonenden elkaar langdurig weten te vinden. Dat verdient óók een plek in het nieuws."
+      ],
+      "source": "Koninklijk Huis",
+      "source_id": "koninklijk-huis",
+      "url": "https://www.koninklijkhuis.nl/actueel/nieuws/2026/10/01/koning-bezoekt-asielzoekerscentrum-leersum",
+      "primary_url": "https://www.koninklijkhuis.nl/actueel/nieuws/2026/10/01/koning-bezoekt-asielzoekerscentrum-leersum",
+      "published": "2026-10-27",
+      "event_date": "2026-10-27",
+      "image_alt": "Een fietsenwerkplaats; illustratief beeld bij samenwerking, niet de werkplaats in Leersum of het koninklijke bezoek.",
+      "headline_options": [
+        "Koning bezoekt azc Leersum: opvang kan ook goed gaan"
+      ],
+      "regional_rank": 1,
+      "editorial_rank": 1,
+      "image_query": "id:3563680"
+    },
+    {
       "article_slug": "minder-moord-en-doodslag-in-nederland",
       "category": "Mens",
       "title": "Nederland telt veel minder slachtoffers van moord en doodslag dan dertig jaar geleden",
@@ -102,8 +121,8 @@
         "Nederland telt veel minder slachtoffers van moord en doodslag dan dertig jaar geleden"
       ],
       "email_title": "Nederland telt veel minder slachtoffers van moord en doodslag dan dertig jaar geleden",
-      "regional_rank": 1,
-      "editorial_rank": 1,
+      "regional_rank": 2,
+      "editorial_rank": 2,
       "image_query": "id:111240",
       "image_key": "minder-moord-en-doodslag-in-nederland",
       "article_chart": {
@@ -139,8 +158,8 @@
         "Een fabriek in Harlingen maakt energie van zijn eigen afvallucht"
       ],
       "candidate_id": "46feee39838f",
-      "regional_rank": 2,
-      "editorial_rank": 2
+      "regional_rank": 3,
+      "editorial_rank": 3
     },
     {
       "article_slug": "pruimen-voedselbank-herveld",
@@ -166,31 +185,6 @@
       "headline_options": [
         "25.000 kilo pruimen gered voor de Voedselbank",
         "25.000 kilo pruimen gered voor de Voedselbank"
-      ],
-      "regional_rank": 3,
-      "editorial_rank": 3
-    },
-    {
-      "article_slug": "koning-bezoekt-azc-leersum",
-      "category": "Mens",
-      "title": "Koning bezoekt azc Leersum: opvang kan ook goed gaan",
-      "email_title": "Koning bezoekt azc Leersum: opvang kan ook goed gaan",
-      "teaser": "In Leersum werken bewoners, vrijwilligers en dorpsgenoten al jaren samen. Het bezoek van Willem-Alexander zet dat voorbeeld in de schijnwerpers.",
-      "article_body": [
-        "Koning Willem-Alexander bezocht op 27 oktober het asielzoekerscentrum in Leersum. Daar sprak hij met bewoners en betrokkenen over het dagelijks leven in de opvang en de samenwerking met het dorp. Zijn boodschap na afloop: naast problemen verdient ook aandacht wat er goed gaat.",
-        "Het azc bestaat sinds 1989. Bewoners en mensen uit de omgeving ontmoeten elkaar onder meer via een buddyproject, een fietsenwerkplaats en activiteiten die deelname aan de samenleving stimuleren. Zulke initiatieven maken contact concreet: niet alleen praten over opvang, maar samen iets doen.",
-        "Tijdens het bezoek was er ook ruimte voor de moeilijke kanten van het bestaan als asielzoeker. Kinderen vertelden over onzekerheid en het missen van familie. De koning nam brieven van hen in ontvangst. Het positieve verhaal betekent dus niet dat alle problemen zijn opgelost.",
-        "Leersum is één plaats, geen blauwdruk voor iedere opvanglocatie. Maar het laat zien wat mogelijk is wanneer bewoners, vrijwilligers, gemeente en omwonenden elkaar langdurig weten te vinden. Dat verdient óók een plek in het nieuws."
-      ],
-      "source": "Koninklijk Huis",
-      "source_id": "koninklijk-huis",
-      "url": "https://www.koninklijkhuis.nl/actueel/nieuws/2026/10/01/koning-bezoekt-asielzoekerscentrum-leersum",
-      "primary_url": "https://www.koninklijkhuis.nl/actueel/nieuws/2026/10/01/koning-bezoekt-asielzoekerscentrum-leersum",
-      "published": "2026-10-27",
-      "event_date": "2026-10-27",
-      "image_alt": "Asielzoekerscentrum in Nederland; illustratief beeld, niet het koninklijke bezoek.",
-      "headline_options": [
-        "Koning bezoekt azc Leersum: opvang kan ook goed gaan"
       ],
       "regional_rank": 4,
       "editorial_rank": 4
