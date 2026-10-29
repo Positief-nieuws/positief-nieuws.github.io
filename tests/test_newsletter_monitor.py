@@ -41,15 +41,16 @@ class MonitorTests(unittest.TestCase):
             checks = m.form_checks(article.read_text(), '/artikelen/2026-10-18/test/', {'article_end'})
             self.assertTrue(any(not ok for _, _, ok in checks))
 
-    def test_explicit_end_only_home_keeps_end_form_required(self):
+    def test_end_only_flag_cannot_silently_remove_upper_form(self):
         import tempfile
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             markup = '<html><body data-home-newsletter="end-only"></body></html>'
             (root / 'index.html').write_text(markup)
             expected, _ = m.inventory(root)
-            self.assertEqual(expected['/'], {'home_end'})
-            self.assertTrue(any(not ok for _, _, ok in m.form_checks(markup, '/', expected['/'])))
+            self.assertEqual(expected['/'], {'home_hero', 'home_end'})
+            checks = m.form_checks(markup, '/', expected['/'])
+            self.assertTrue(any(not ok for placement, _, ok in checks if placement == 'home_hero'))
 
     def test_home_without_explicit_layout_flag_requires_both_forms(self):
         import tempfile
