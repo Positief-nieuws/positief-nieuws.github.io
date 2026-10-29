@@ -467,6 +467,7 @@ def select_related_articles(item, date_value, candidates, limit=3):
         tier = 2 if same_category else (1 if shared >= 2 or title_shared else 0)
         fallback.append((tier, title_shared * 3 + shared, record.get("date", ""), path, record))
 
+    # Deterministic ordering keeps related reading stable across rebuilds.
     fallback.sort(key=lambda entry: (entry[0], entry[1], entry[2], entry[3]), reverse=True)
     for _, _, _, path, record in fallback:
         selected.append(dict(record, path=path, type="article"))
