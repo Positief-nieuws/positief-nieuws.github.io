@@ -13,7 +13,7 @@ def block(placement, title='Het goede nieuws, gewoon in je inbox.', topic=False)
     elif placement == 'home_end':
         title = 'Dit soort nieuws vaker lezen?'
         intro = 'Ontvang elke maandag en donderdag een nieuwe selectie positieve verhalen uit Nederland en de wereld. Gratis, met bronnen en ruimte voor nuance.'
-        button = 'Stuur mij de volgende editie'
+        button = 'Ja, ik wil de volgende editie'
         note = 'Gratis · Twee keer per week · Afmelden kan altijd. Je bevestigt je inschrijving per e-mail.'
     else:
         intro = 'Ontvang elke maandag en donderdag ook oplossingen en vooruitgang, met bronnen en nuance.' if topic else 'Elke maandag en donderdag ook oplossingen en vooruitgang in je inbox. Met bronnen en nuance. Gratis en in een paar minuten gelezen.'
