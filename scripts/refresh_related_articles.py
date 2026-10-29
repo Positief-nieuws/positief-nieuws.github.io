@@ -49,15 +49,18 @@ def main():
             path.write_text(updated, encoding="utf-8")
             changed += 1
         if recommendations:
+            components = [
+                (match.group(1).split(), match.start())
+                for match in re.finditer(
+                    r'<(?:section|div)\b[^>]*class="([^"]+)"[^>]*>', updated
+                )
+            ]
             pos = []
             for name in ("article-share", "article-newsletter", "article-related"):
-                matches = list(re.finditer(
-                    r'<(?:section|div)\b[^>]*class="[^"]*\b' + re.escape(name) +
-                    r'\b[^"]*"[^>]*>', updated
-                ))
+                matches = [position for classes, position in components if name in classes]
                 if len(matches) != 1:
                     raise ValueError(f"Expected one {name} block on {path}")
-                pos.append(matches[0].start())
+                pos.append(matches[0])
             if not pos[0] < pos[1] < pos[2]:
                 raise ValueError(f"Incorrect article action order on {path}")
     print(f"Checked {len(candidates)} articles; updated {changed}.")
