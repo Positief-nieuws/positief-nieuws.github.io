@@ -821,21 +821,6 @@ def render_article_page(item, date_value, related_records=None, image_data=None)
       {related_html}
       {growth_html}
 
-      <section class="support-teaser" aria-labelledby="article-support-title">
-        <div class="support-teaser-grid">
-          <div>
-            <p class="support-kicker">Steun Positief nieuws</p>
-            <h2 id="article-support-title">Help Positief nieuws door te gaan.</h2>
-            <p>Positief nieuws is gratis en zonder advertenties. Met een kleine vrijwillige bijdrage help je de site en nieuwsbrief draaiend te houden. Je kiest zelf het bedrag.</p>
-          </div>
-          <a
-            class="support-button"
-            href="/steun/"
-            onclick="if (window.sa_event) {{ sa_event('steun_teaser_click'); }}"
-          >Steun Positief nieuws</a>
-        </div>
-      </section>
-
       <p class="article-back"><a href="/edities/{esc(date_value)}/">← Terug naar de editie van {esc(date_text)}</a></p>
     </div>
   </main>
