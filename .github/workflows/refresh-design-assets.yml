@@ -24,6 +24,13 @@ jobs:
         with:
           fetch-depth: 0
 
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Tests voor gerelateerde artikelen
+        run: python -m unittest discover -s tests -p 'test_related_content.py'
+      - name: Herstel Lees ook op bestaande artikelpagina's
+        run: python -m scripts.refresh_related_articles
       - name: Nieuwe stylesheet-versie op bestaande pagina's zetten
         shell: bash
         run: |

@@ -443,10 +443,36 @@ def related_article_records(edition_records):
 
 
 def select_related_articles(item, date_value, candidates, limit=3):
-    from related_content import select
+    """Prefer true subject matches; fill empty slots with same-topic reading."""
+    from related_content import select, features
     origin = f"/artikelen/{date_value}/{str(item.get('article_slug') or '').strip('/')}/"
-    return select(item, origin, candidates, limit)
+    selected = select(item, origin, candidates, limit)
+    if len(selected) >= limit:
+        return selected
 
+    category = canonical_category(category_label(item)) or category_label(item) or ""
+    title_terms, all_terms = features(item)
+    seen = {origin} | {record["path"] for record in selected}
+    fallback = []
+    for record in candidates:
+        if record.get("type", "article") != "article":
+            continue  # Specials only appear when their actual subject matches.
+        path = record.get("path") or f"/artikelen/{record['date']}/{record['slug']}/"
+        if path in seen:
+            continue
+        other_title, other_terms = features(record["item"])
+        shared = len(all_terms & other_terms)
+        title_shared = len(title_terms & other_title)
+        same_category = bool(category and record.get("category") == category)
+        tier = 2 if same_category else (1 if shared >= 2 or title_shared else 0)
+        fallback.append((tier, title_shared * 3 + shared, record.get("date", ""), path, record))
+
+    fallback.sort(key=lambda entry: (entry[0], entry[1], entry[2], entry[3]), reverse=True)
+    for _, _, _, path, record in fallback:
+        selected.append(dict(record, path=path, type="article"))
+        if len(selected) >= limit:
+            break
+    return selected
 
 def render_related_articles(records):
     if not records:
@@ -818,8 +844,8 @@ def render_article_page(item, date_value, related_records=None, image_data=None)
       </div>
       <p class="article-note">Positief nieuws selecteert en vat ontwikkelingen samen in eigen woorden. De oorspronkelijke bron blijft leidend voor de volledige context en details.</p>
 
-      {related_html}
       {growth_html}
+      {related_html}
 
       <p class="article-back"><a href="/edities/{esc(date_value)}/">← Terug naar de editie van {esc(date_text)}</a></p>
     </div>

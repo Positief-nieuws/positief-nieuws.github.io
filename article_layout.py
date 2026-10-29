@@ -37,12 +37,11 @@ def order_article_actions(markup):
     if not all(name in blocks for name in ('article-share', 'article-newsletter', 'article-growth')):
         return re.sub(r'(?m)^[ \t]+$', '', markup)
     share, newsletter, growth = (blocks[name] for name in ('article-share', 'article-newsletter', 'article-growth'))
-    related = blocks.get('article-related')
-    if share[0] < newsletter[0] and (not related or share[0] < related[0] < newsletter[0]):
+    # Move sharing only. Recommendations belong after the entire growth block.
+    if share[0] < newsletter[0]:
         return re.sub(r'(?m)^[ \t]+$', '', markup)
-    moved = [share] + ([related] if related else [])
-    replacement = '\n'.join(markup[start:end] for start, end in moved) + '\n        '
-    edits = [(start, end, '') for start, end in moved] + [(newsletter[0], newsletter[0], replacement)]
+    replacement = markup[share[0]:share[1]] + '\n        '
+    edits = [(share[0], share[1], ''), (newsletter[0], newsletter[0], replacement)]
     for start, end, text in sorted(edits, reverse=True):
         markup = markup[:start] + text + markup[end:]
     return re.sub(r'(?m)^[ \t]+$', '', markup)
