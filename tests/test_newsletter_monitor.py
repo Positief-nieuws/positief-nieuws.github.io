@@ -41,6 +41,24 @@ class MonitorTests(unittest.TestCase):
             checks = m.form_checks(article.read_text(), '/artikelen/2026-10-18/test/', {'article_end'})
             self.assertTrue(any(not ok for _, _, ok in checks))
 
+    def test_explicit_end_only_home_keeps_end_form_required(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            markup = '<html><body data-home-newsletter="end-only"></body></html>'
+            (root / 'index.html').write_text(markup)
+            expected, _ = m.inventory(root)
+            self.assertEqual(expected['/'], {'home_end'})
+            self.assertTrue(any(not ok for _, _, ok in m.form_checks(markup, '/', expected['/'])))
+
+    def test_home_without_explicit_layout_flag_requires_both_forms(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / 'index.html').write_text('<html></html>')
+            expected, _ = m.inventory(root)
+            self.assertEqual(expected['/'], {'home_hero', 'home_end'})
+
     def test_unexpected_redirect_or_inline_success_fails(self):
         broken = self.html.replace('method="post"', 'method="post" onsubmit="return false"')
         self.assertIn('geen client-side succes of afwijkende redirect', self.failures(broken))

@@ -63,6 +63,9 @@ def form_checks(text, path, expected=None):
 def inventory(root=Path('.')):
     """Discover actual forms AND independently required placements, so removal fails."""
     expected = {k: set(v) for k, v in EXPECTED.items()}
+    home = root / "index.html"
+    if home.exists() and 'data-home-newsletter="end-only"' in home.read_text():
+        expected["/"] = {"home_end"}
     for slug in ('mens', 'natuur-en-klimaat', 'gezondheid', 'energie-en-innovatie',
                  'wetenschap', 'cultuur', 'economie', 'sport'):
         expected['/' + slug + '/'] = {'topic_inline'}
