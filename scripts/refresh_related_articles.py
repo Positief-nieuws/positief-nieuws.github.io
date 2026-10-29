@@ -52,8 +52,8 @@ def main():
             pos = []
             for name in ("article-share", "article-newsletter", "article-related"):
                 matches = list(re.finditer(
-                    r'<(?:section|div)\\b[^>]*class="[^"]*\\b' + re.escape(name) +
-                    r'\\b[^"]*"[^>]*>', updated
+                    r'<(?:section|div)\b[^>]*class="[^"]*\b' + re.escape(name) +
+                    r'\b[^"]*"[^>]*>', updated
                 ))
                 if len(matches) != 1:
                     raise ValueError(f"Expected one {name} block on {path}")
