@@ -368,16 +368,15 @@ def build_body(data, nl, international, headlines):
         personal_note = f'<div style="margin:0 0 28px;padding:20px;background:#f0f5ee;border:1px solid #e1e9e5;border-radius:14px"><h2 style="margin:0 0 12px;font:700 22px Arial,Helvetica,sans-serif">{esc(note.get("title", ""))}</h2><p style="margin:0;font:15px/1.65 Arial,Helvetica,sans-serif">{esc(note["text"])}</p><p style="margin:12px 0 0;font:700 14px Arial,Helvetica,sans-serif">Tom</p></div>'
     preheader = esc(build_preheader(data, nl))
     return f"""<!-- buttondown-editor-mode: fancy -->
-<style>@media(max-width:760px){{.story-intro{{display:none!important}}.email-column{{display:block!important;width:100%!important;padding:0!important}}.email-shell{{padding:20px 16px!important}}.email-title{{font-size:38px!important}}}}</style>
-<div style="display:none;max-height:0;overflow:hidden;opacity:0;color:transparent;font-size:1px;line-height:1px;mso-hide:all;">{preheader}</div>
+<style>@media(max-width:760px){{.story-intro{{display:none!important}}.email-column{{display:block!important;width:100%!important;padding:0!important}}.email-shell{{padding:20px 16px!important}}}}</style>
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;color:transparent;font-size:1px;line-height:1px;mso-hide:all;">{preheader}{"&#8204;&nbsp;" * 100}</div>
 <div class="email-shell" style="width:100%;max-width:740px;margin:0 auto;box-sizing:border-box;background:{PAPER};padding:28px 28px;color:{INK};font-family:Arial,Helvetica,sans-serif;">
   <div style="padding:0 0 22px;border-bottom:1px solid #e1e9e5;">
-    <a href="{esc(buttondown_edition_url(data))}" style="font:800 25px Arial,Helvetica,sans-serif;letter-spacing:-1px;color:{INK} !important;text-decoration:none;"><img src="{SITE_URL}sun-icon-512.png" width="32" height="32" alt="" style="display:inline-block;width:32px;height:32px;vertical-align:middle;margin-right:8px;">Positief nieuws</a>
+    <a href="{esc(buttondown_edition_url(data))}" style="font:800 25px Arial,Helvetica,sans-serif;letter-spacing:-1px;color:{INK} !important;text-decoration:none;"><img src="{SITE_URL}sun-orange.png" width="32" height="32" alt="" style="display:inline-block;width:32px;height:32px;vertical-align:middle;margin-right:8px;">Positief nieuws</a>
   </div>
   <div style="padding:30px 0 26px;">
     <p style="margin:0 0 14px;font:700 12px Arial,Helvetica,sans-serif;color:{GREEN};">Editie van {esc(edition_date_text(data))}</p>
-    <h1 class="email-title" style="margin:0 0 16px;font:900 52px Arial,Helvetica,sans-serif;line-height:1.04;letter-spacing:-.055em;color:{INK};">Positief <span style="color:#168268;">nieuws</span></h1>
-    <p style="margin:0;font:15px Arial,Helvetica,sans-serif;line-height:1.65;color:{MUTED};">Twaalf positieve verhalen uit Nederland en de wereld. Plus drie ontwikkelingen om bij te blijven. Geen eindeloze nieuwsstroom.</p>
+    <p style="margin:0;font:15px Arial,Helvetica,sans-serif;line-height:1.65;color:{MUTED};">{preheader}</p>
     <p style="margin:15px 0 0;font:12px Arial,Helvetica,sans-serif;color:{MUTED};">Elke maandag en donderdag · 6 uit Nederland · 6 uit de wereld · 3 korte actualiteiten</p>
   </div>
   {personal_note}
