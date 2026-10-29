@@ -1140,5 +1140,133 @@
     "tags": "aster, white aster, flowers, autumn, fall, botany, bloom, blossom, petals",
     "width": 5168,
     "height": 3448
+  },
+  "2026-10-29/leersum": {
+    "query": "commons:koningsdag-2024-emmen",
+    "source": "Wikimedia Commons",
+    "image_path": "/images/artikelen/2026-10-29/koning-archief.jpg",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Koningsdag_2024_Emmen.jpg",
+    "photographer": "Erikt",
+    "license": "CC0 1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "tags": "Willem-Alexander; archiefbeeld Koningsdag 2024 Emmen",
+    "width": 1800,
+    "height": 1200
+  },
+  "2026-10-29/jos-ai-bril": {
+    "query": "id:1052010",
+    "pixabay_id": 1052010,
+    "image_path": "/images/artikelen/2026-10-29/local-jos-ai-bril.jpg",
+    "page_url": "https://pixabay.com/photos/glasses-book-education-eyeglasses-1052010/",
+    "photographer": "DariuszSankowski",
+    "tags": "glasses, book, education, eyeglasses, research, knowledge, text, textbook, information, literature, study, read, open, old, vintage, antique, retro, page, literary",
+    "width": 4548,
+    "height": 3411
+  },
+  "2026-10-29/matrassen": {
+    "query": "mattress",
+    "pixabay_id": 2489615,
+    "image_path": "/images/artikelen/2026-10-29/local-matrassen.jpg",
+    "page_url": "https://pixabay.com/photos/mattress-bed-pillow-sleep-relax-2489615/",
+    "photographer": "congerdesign",
+    "tags": "mattress, bed, pillow, sleep, relax, relaxation, rest, place to sleep, bedding, lie, teddy, bedroom, teddy bear, stuffed animal, toy, cute, mattress, mattress, mattress, mattress, mattress, bed, bed, bed, bed, sleep, sleep, bedroom",
+    "width": 6000,
+    "height": 4000
+  },
+  "2026-10-29/plastic": {
+    "query": "plastic recycling",
+    "pixabay_id": 7595561,
+    "image_path": "/images/artikelen/2026-10-29/local-plastic.jpg",
+    "page_url": "https://pixabay.com/photos/bottle-cap-plastic-blue-array-7595561/",
+    "photographer": "sadeghshafiee91",
+    "tags": "bottle, cap, plastic, blue, array, garbage, recycling, recycle, drink, enviroment, earth, planet, plastic, plastic, plastic, plastic, plastic, recycling, recycling, recycle",
+    "width": 6000,
+    "height": 4000
+  },
+  "2026-10-29/buurtmoestuin-schiebroek": {
+    "query": "vegetable garden",
+    "pixabay_id": 7300875,
+    "image_path": "/images/artikelen/2026-10-29/local-buurtmoestuin-schiebroek.jpg",
+    "page_url": "https://pixabay.com/photos/garden-radish-vegetables-food-7300875/",
+    "photographer": "Mirko_Fabian",
+    "tags": "garden radish, vegetables, food, root crop, harvest, fresh, healthy, nutrition, organic, produce, agriculture, cultivated, vegetables, food, agriculture, agriculture, agriculture, agriculture, agriculture",
+    "width": 6000,
+    "height": 4000
+  },
+  "2026-10-29/moswand": {
+    "query": "moss wall",
+    "pixabay_id": 5026256,
+    "image_path": "/images/artikelen/2026-10-29/local-moswand.jpg",
+    "page_url": "https://pixabay.com/photos/moss-wall-rotating-tooth-moss-5026256/",
+    "photographer": "Nennieinszweidrei",
+    "tags": "moss, wall-rotating-tooth moss, tortula muralis, mossy, growth, nature, vegetation, plants",
+    "width": 6000,
+    "height": 4000
+  },
+  "2026-10-29/wereldwijd-natuurherstel-vn": {
+    "query": "id:2058977",
+    "pixabay_id": 2058977,
+    "image_path": "/images/artikelen/2026-10-29/wereldwijd-natuurherstel-vn.jpg",
+    "page_url": "https://pixabay.com/photos/regeneration-forest-peak-regrowth-2058977/",
+    "photographer": "MemoryCatcher",
+    "tags": "regeneration, forest, regrowth",
+    "license": "Pixabay Content License",
+    "license_url": "https://pixabay.com/service/license-summary/",
+    "checked_on": "2026-10-29",
+    "width": 853,
+    "height": 1280
+  },
+  "2026-10-29/zeevogels": {
+    "query": "razorbill",
+    "pixabay_id": 9837988,
+    "image_path": "/images/artikelen/2026-10-29/local-zeevogels.jpg",
+    "page_url": "https://pixabay.com/photos/nature-wildlife-plumage-ornithology-9837988/",
+    "photographer": "Drosera74",
+    "tags": "nature, wildlife, plumage, ornithology, feathers, avian, birdwatching, flight, flying, wings, beak, sea, coast, seabirds, razorbill, seabird, bird, uk",
+    "width": 3217,
+    "height": 2837
+  },
+  "2026-10-29/vietnam": {
+    "query": "id:6795464",
+    "pixabay_id": 6795464,
+    "image_path": "/images/artikelen/2026-10-15/nangade-viskweekbakken-overgedragen.jpg",
+    "page_url": "https://pixabay.com/photos/fish-fish-farming-aquaculture-6795464/",
+    "photographer": "Mariakray",
+    "tags": "fish, fish farming, aquaculture, fish culture, fish pond, nature, freshwater fish",
+    "width": 5250,
+    "height": 3500
+  },
+  "2026-10-29/magneten-spierbeweging-prothese": {
+    "query": "id:4672316",
+    "pixabay_id": 4672316,
+    "image_path": "/images/artikelen/2026-10-29/magneten-spierbeweging-prothese.jpg",
+    "page_url": "https://pixabay.com/photos/engineer-orthotics-health-medicine-4672316/",
+    "photographer": "This_is_Engineering",
+    "tags": "engineer, orthotics, prosthetics, workshop",
+    "license": "Pixabay Content License",
+    "license_url": "https://pixabay.com/service/license-summary/",
+    "checked_on": "2026-10-29",
+    "width": 854,
+    "height": 1280
+  },
+  "2026-10-29/appels": {
+    "query": "apple orchard",
+    "pixabay_id": 2788651,
+    "image_path": "/images/artikelen/2026-10-29/local-appels.jpg",
+    "page_url": "https://pixabay.com/photos/apples-apple-tree-fruits-orchard-2788651/",
+    "photographer": "pixel2013",
+    "tags": "apples, apple tree, fruits, orchard, ripe, apples, apples, apples, apples, apples, apple tree, apple tree, apple tree, apple tree, fruits",
+    "width": 6000,
+    "height": 3103
+  },
+  "2026-10-29/walrus": {
+    "query": "walrus",
+    "pixabay_id": 8065100,
+    "image_path": "/images/artikelen/2026-10-29/local-walrus.jpg",
+    "page_url": "https://pixabay.com/photos/huddle-of-walrus-walrus-mammal-8065100/",
+    "photographer": "MonicaMaxWest",
+    "tags": "huddle of walrus, walrus, mammal, animal, tusks, marine animal, mother, wildlife, nature, walrus, walrus, walrus, walrus, walrus, animal",
+    "width": 4744,
+    "height": 2936
   }
 }

@@ -44,7 +44,7 @@ def apply(phase=3):
         s=re.sub(r'<a\b[^>]*data-newsletter-cta="nav"[^>]*>', lambda m: re.sub(r'href="[^"]*"', 'href="/nieuwsbrief/"', m.group()), s)
         if home:
             m=re.search(r'<section class="homepage-top"[^>]*>.*?</section>',s,re.S)
-            if m:s=s[:m.end()]+'<!-- newsletter:home_hero:start --><div id="nieuwsbrief-boven">'+block('home_hero')+'</div><!-- newsletter:home_hero:end -->'+s[m.end():]
+            if m and 'data-home-newsletter="end-only"' not in s:s=s[:m.end()]+'<!-- newsletter:home_hero:start --><div id="nieuwsbrief-boven">'+block('home_hero')+'</div><!-- newsletter:home_hero:end -->'+s[m.end():]
             # Preserve the same form node while news is refreshed dynamically.
             if 'const homeNewsletter =' not in s:
                 s=s.replace("      grid.innerHTML = ''; grid.hidden", "      const homeNewsletter = type === 'nl' ? document.getElementById('nieuwsbrief-boven') : null;\n      grid.innerHTML = ''; grid.hidden", 1)

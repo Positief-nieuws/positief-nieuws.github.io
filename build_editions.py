@@ -1815,6 +1815,7 @@ def update_homepage(data):
     if '/edition-layout.css' not in markup:
         markup = markup.replace('</head>', '<link rel="stylesheet" href="/edition-layout.css?v=20261026-singleline"></head>', 1)
     markup = apply_homepage_brand_heading(markup)
+    markup = markup.replace('/sun-icon-512.png', '/sun-orange.svg')
     homepage.write_text(markup, encoding="utf-8")
     print(f"Homepage bijgewerkt: editie {edition_date}, {len(story_list)} direct leesbare verhalen.")
 

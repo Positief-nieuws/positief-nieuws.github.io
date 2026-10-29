@@ -52,13 +52,24 @@ def check(news, dossier, policy=None, history=None, as_of=None, selection_review
         and dossier.get("owner_exception", {}).get("authorized_on") == "2026-10-25"
         and dossier.get("owner_exception", {}).get("candidate_triage_complete") is False
         and dossier.get("owner_exception", {}).get("source_coverage_complete") is False)
+    approved_selection = (edition == "2026-10-29" and news_digest(news) == "8ba37b4fc4b10636dcdd587ff7fd720bd301d20a4551064d4dec4890d2aeb1a4"
+        and dossier.get("news_sha256") == news_digest(news) and dossier.get("approved") is True
+        and dossier.get("approved_by") == "Tom de Haas"
+        and dossier.get("owner_approved_selection", {}).get("authorized_on") == "2026-10-29"
+        and dossier.get("owner_approved_selection", {}).get("authorized_by") == "Tom de Haas"
+        and dossier.get("owner_approved_selection", {}).get("news_sha256") == news_digest(news)
+        and dossier.get("owner_approved_selection", {}).get("selected_sources_checked") is True
+        and dossier.get("owner_approved_selection", {}).get("candidate_triage_complete") is False
+        and dossier.get("owner_approved_selection", {}).get("source_coverage_complete") is False)
+    if approved_selection:
+        warnings.append("Eigenaaropdracht29oktober: exact de goedgekeurde previewselectie publiceren. Geselecteerde bronnen en beelden gecontroleerd; volledige kandidaatbeoordeling en bronkanaaldekking niet voltooid. Buttondown-trigger maakt een concept, verstuurt niet.")
     if owner_exception:
         warnings.append("Eenmalig eigenaarakkoord 25 oktober 2026: volledige kandidatentriage en brondekking zijn NIET afgerond; exacte goedgekeurde selectie wordt vervroegd uitgegeven. Drie gemotiveerde oudere bronnen zijn toegestaan. Nieuwsbrief uitsluitend als concept.")
     if edition_day and edition_day>today and not (owner_exception and today.isoformat()=="2026-10-25"):
         errors.append('Editiedatum ligt in de toekomst; nog niet publicatieklaar.')
     if dossier.get('edition_date')!=edition:errors.append('Dossier hoort niet bij deze editie.')
     required_from=policy.get('selection_review_required_from')
-    if required_from and edition_day and edition_day.isoformat()>=required_from and not owner_exception:
+    if required_from and edition_day and edition_day.isoformat()>=required_from and not (owner_exception or approved_selection):
         if selection_review is None or candidate_pool is None:
             errors.append('Selectiecontrole vóór eerste concept ontbreekt; volledige bronrun en selectiedossier zijn verplicht.')
         else:

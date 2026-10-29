@@ -1,0 +1,602 @@
+{
+  "schema_version": 1,
+  "edition_date": "2026-10-29",
+  "approved": true,
+  "approved_by": "Tom de Haas",
+  "approved_on": "2026-10-29",
+  "articles": {
+    "nl:leersum": {
+      "source_id": "koninklijk-huis",
+      "organization_id": "koninklijk-huis",
+      "article_url": "https://nieuws.nl/koningshuis/koning-azc-leersum-laat-zien-dat-het-goed-kan-gaan",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-27",
+      "event_date": "2026-10-27",
+      "checked_on": "2026-10-29",
+      "dates_checked": true,
+      "new_development": "Nieuw bericht binnen de editieweek; bereikte fase en beperkingen staan in eigen tekst.",
+      "older_exception_reason": "",
+      "topic_id": "pn-20261029-leersum",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.koninklijkhuis.nl/actueel/nieuws/2026/10/01/koning-bezoekt-asielzoekerscentrum-leersum",
+        "claim": "In dit azc ziet de koning wat er zo vaak wél goed gaat",
+        "support": "Opvang die al jaren deel uitmaakt van een dorp: dat wilde koning Willem-Alexander dinsdag 27 oktober zichtbaar maken tijdens zijn bezoek aan het asielzoekerscentrum in Leersum. Hij sprak met bewoners, vrijwilligers en omwonenden en bezocht onder meer de school en de fietsenwerkplaats. Na afloop benadrukte hij dat ook voorbeelden die goed gaan aandacht verdienen.",
+        "limitations": "Geen landelijke effectmeting; werkbezoek bevestigd in verslag 27 oktober, details buddy/fietsenproject bij Koninklijk Huis.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "{\"query\": \"commons:koningsdag-2024-emmen\", \"source\": \"Wikimedia Commons\", \"image_path\": \"/images/artikelen/2026-10-29/koning-archief.jpg\", \"page_url\": \"https://commons.wikimedia.org/wiki/File:Koningsdag_2024_Emmen.jpg\", \"photographer\": \"Erikt\", \"license\": \"CC0 1.0\", \"license_url\": \"https://creativecommons.org/publicdomain/zero/1.0/\", \"tags\": \"Willem-Alexander; archiefbeeld Koningsdag 2024 Emmen\", \"width\": 1800, \"height\": 1200}"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Exacte URLs, onderwerp en indien aanwezig DOI tegen gepubliceerde editiehistorie tot26oktober gecontroleerd. Kwelderproef wegens herhaling22oktober uitgesloten. Deze29oktoberversie is een conceptrevisie.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Een buddy, een opgeknapte fiets en contact met het dorp: het bezoek van Willem-Alexander brengt een langlopend voorbeeld in beeld.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "nl:jos-ai-bril": {
+      "source_id": "omroep-brabant",
+      "organization_id": "omroep-brabant",
+      "article_url": "https://www.omroepbrabant.nl/nieuws/6032048/wat-voor-de-een-een-gluurbril-is-betekent-voor-jos-meer-vrijheid",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-23",
+      "event_date": "2026-10-23",
+      "checked_on": "2026-10-29",
+      "dates_checked": true,
+      "new_development": "Nieuw bericht binnen de editieweek; bereikte fase en beperkingen staan in eigen tekst.",
+      "older_exception_reason": "",
+      "topic_id": "pn-20261029-jos-ai-bril",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.omroepbrabant.nl/nieuws/6032048/wat-voor-de-een-een-gluurbril-is-betekent-voor-jos-meer-vrijheid",
+        "claim": "Jos ziet bijna niets. Zijn AI-bril geeft hem zelfstandigheid terug",
+        "support": "Welke gerechten staan er op de kaart? Waar staat mijn koffie? Voor Jos Lavrijsen uit Reusel zijn dat geen kleine vragen. Hij ziet nog maar één procent. Een bril met camera, microfoon en spraakbesturing helpt hem om zulke dagelijkse dingen zelfstandiger te doen, vertelt hij aan Omroep Brabant.",
+        "limitations": "Persoonlijke gebruikerservaring, geen effectiviteitsonderzoek; AI-fouten en privacy expliciet genoemd.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "{\"query\": \"id:1052010\", \"pixabay_id\": 1052010, \"image_path\": \"/images/artikelen/2026-10-29/local-jos-ai-bril.jpg\", \"page_url\": \"https://pixabay.com/photos/glasses-book-education-eyeglasses-1052010/\", \"photographer\": \"DariuszSankowski\", \"tags\": \"glasses, book, education, eyeglasses, research, knowledge, text, textbook, information, literature, study, read, open, old, vintage, antique, retro, page, literary\", \"width\": 4548, \"height\": 3411}"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Exacte URLs, onderwerp en indien aanwezig DOI tegen gepubliceerde editiehistorie tot26oktober gecontroleerd. Kwelderproef wegens herhaling22oktober uitgesloten. Deze29oktoberversie is een conceptrevisie.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Een menukaart lezen of zijn kop koffie vinden: voor Jos Lavrijsen uit Reusel maakt een slimme bril dagelijkse dingen weer makkelijker.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "nl:matrassen": {
+      "source_id": "rijksoverheid",
+      "organization_id": "rijksoverheid",
+      "article_url": "https://www.rijksoverheid.nl/actueel/nieuws/2026/10/26/nieuwe-afspraken-voor-meer-recycling-van-oude-matrassen",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-26",
+      "event_date": "2026-10-26",
+      "checked_on": "2026-10-29",
+      "dates_checked": true,
+      "new_development": "Nieuw bericht binnen de editieweek; bereikte fase en beperkingen staan in eigen tekst.",
+      "older_exception_reason": "",
+      "topic_id": "pn-20261029-matrassen",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.rijksoverheid.nl/actueel/nieuws/2026/10/26/nieuwe-afspraken-voor-meer-recycling-van-oude-matrassen",
+        "claim": "63% van oude matrassen ingezameld voor een nieuw leven",
+        "support": "Een oud matras hoeft niet volledig verloren te gaan. Staal, schuim en textiel kunnen na gescheiden inzameling uit elkaar worden gehaald en opnieuw worden gebruikt. Volgens de Rijksoverheid werd in 2025 al 63 procent van de afgedankte matrassen ingezameld voor recycling.",
+        "limitations": "63% betreft inzameling, niet percentage materiaal dat al hergebruikt is; nieuwe doelen zijn toekomstig.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "{\"query\": \"mattress\", \"pixabay_id\": 2489615, \"image_path\": \"/images/artikelen/2026-10-29/local-matrassen.jpg\", \"page_url\": \"https://pixabay.com/photos/mattress-bed-pillow-sleep-relax-2489615/\", \"photographer\": \"congerdesign\", \"tags\": \"mattress, bed, pillow, sleep, relax, relaxation, rest, place to sleep, bedding, lie, teddy, bedroom, teddy bear, stuffed animal, toy, cute, mattress, mattress, mattress, mattress, mattress, bed, bed, bed, bed, sleep, sleep, bedroom\", \"width\": 6000, \"height\": 4000}"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Exacte URLs, onderwerp en indien aanwezig DOI tegen gepubliceerde editiehistorie tot26oktober gecontroleerd. Kwelderproef wegens herhaling22oktober uitgesloten. Deze29oktoberversie is een conceptrevisie.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Staal, schuim en textiel uit oude matrassen kunnen opnieuw worden gebruikt. Nieuwe afspraken breiden de inzameling uit naar hotels en ziekenhuizen.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "nl:plastic": {
+      "source_id": "rtv-noord",
+      "organization_id": "rtv-noord",
+      "article_url": "https://www.rtvnoord.nl/economie/1447848/made-in-grunn-biobtx-geeft-oud-plastic-een-tweede-leven",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-24",
+      "event_date": "2026-10-24",
+      "checked_on": "2026-10-29",
+      "dates_checked": true,
+      "new_development": "Nieuw bericht binnen de editieweek; bereikte fase en beperkingen staan in eigen tekst.",
+      "older_exception_reason": "",
+      "topic_id": "pn-20261029-plastic",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.rtvnoord.nl/economie/1447848/made-in-grunn-biobtx-geeft-oud-plastic-een-tweede-leven",
+        "claim": "Van afgedankt plastic naar nieuwe bouwstenen",
+        "support": "Plastic dat nauwelijks nog mechanisch te recyclen is, kan toch een nieuwe bestemming krijgen. In een proefinstallatie op het Groningse Zernikecomplex maakt BioBTX er grondstoffen voor de chemische industrie van. De installatie produceert volgens RTV Noord ongeveer tien kilo per uur.",
+        "limitations": "Werkende pilot van ongeveer tien kilo per uur; commerciële fabriek is nog niet gebouwd. Vergunningsbezwaar benoemd.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "{\"query\": \"plastic recycling\", \"pixabay_id\": 7595561, \"image_path\": \"/images/artikelen/2026-10-29/local-plastic.jpg\", \"page_url\": \"https://pixabay.com/photos/bottle-cap-plastic-blue-array-7595561/\", \"photographer\": \"sadeghshafiee91\", \"tags\": \"bottle, cap, plastic, blue, array, garbage, recycling, recycle, drink, enviroment, earth, planet, plastic, plastic, plastic, plastic, plastic, recycling, recycling, recycle\", \"width\": 6000, \"height\": 4000}"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Exacte URLs, onderwerp en indien aanwezig DOI tegen gepubliceerde editiehistorie tot26oktober gecontroleerd. Kwelderproef wegens herhaling22oktober uitgesloten. Deze29oktoberversie is een conceptrevisie.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "BioBTX wint chemische bouwstenen terug uit moeilijk herbruikbaar plastic. De techniek draait al op kleine schaal; een grotere fabriek moet nog worden gebouwd.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "nl:buurtmoestuin-schiebroek": {
+      "source_id": "rijnmond",
+      "organization_id": "rijnmond",
+      "article_url": "https://www.rijnmond.nl/nieuws/2263681/bewoners-koken-maaltijden-uit-eigen-moestuin-ik-proef-zoveel-verschillende-dingen",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-25",
+      "event_date": "2026-10-25",
+      "checked_on": "2026-10-29",
+      "dates_checked": true,
+      "new_development": "Nieuw bericht binnen de editieweek; bereikte fase en beperkingen staan in eigen tekst.",
+      "older_exception_reason": "",
+      "topic_id": "pn-20261029-buurtmoestuin-schiebroek",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.rijnmond.nl/nieuws/2263681/bewoners-koken-maaltijden-uit-eigen-moestuin-ik-proef-zoveel-verschillende-dingen",
+        "claim": "Van eigen moestuin naar samen aan tafel in Schiebroek",
+        "support": "In de Rotterdamse wijk Schiebroek groeit meer dan groente. Tientallen bewoners onderhouden er samen een moestuin en koken met de oogst maaltijden voor de buurt. Aan tafel komen recepten uit onder meer Iran, Eritrea, Turkije en Afghanistan samen.",
+        "limitations": "Kwalitatieve reportage; geen gemeten effect op eenzaamheid of sociale cohesie.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "{\"query\": \"vegetable garden\", \"pixabay_id\": 7300875, \"image_path\": \"/images/artikelen/2026-10-29/local-buurtmoestuin-schiebroek.jpg\", \"page_url\": \"https://pixabay.com/photos/garden-radish-vegetables-food-7300875/\", \"photographer\": \"Mirko_Fabian\", \"tags\": \"garden radish, vegetables, food, root crop, harvest, fresh, healthy, nutrition, organic, produce, agriculture, cultivated, vegetables, food, agriculture, agriculture, agriculture, agriculture, agriculture\", \"width\": 6000, \"height\": 4000}"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Exacte URLs, onderwerp en indien aanwezig DOI tegen gepubliceerde editiehistorie tot26oktober gecontroleerd. Kwelderproef wegens herhaling22oktober uitgesloten. Deze29oktoberversie is een conceptrevisie.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Tientallen Rotterdamse buurtbewoners tuinieren, koken en eten samen. Zo leren ze niet alleen nieuwe smaken kennen, maar ook elkaar.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "nl:moswand": {
+      "source_id": "duic",
+      "organization_id": "duic",
+      "article_url": "https://www.duic.nl/algemeen/algemeen/61314/betonnen-muur-in-daals-kwartier-verandert-in-groene-moswand",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-23",
+      "event_date": "2026-10-23",
+      "checked_on": "2026-10-29",
+      "dates_checked": true,
+      "new_development": "Nieuw bericht binnen de editieweek; bereikte fase en beperkingen staan in eigen tekst.",
+      "older_exception_reason": "",
+      "topic_id": "pn-20261029-moswand",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.duic.nl/algemeen/algemeen/61314/betonnen-muur-in-daals-kwartier-verandert-in-groene-moswand",
+        "claim": "Deze Utrechtse betonmuur krijgt een groene huid",
+        "support": "Een betonnen muur in het Utrechtse Daals Kwartier ziet er voortaan heel anders uit. Op de bestaande gevel is een speciale laag aangebracht waarop mos groeit. Ondernemers en organisaties uit de buurt financierden de aanleg samen via het Ondernemersfonds Utrecht.",
+        "limitations": "Gevel is aangelegd; temperatuur- en luchtkwaliteitseffecten zijn niet lokaal gemeten.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "{\"query\": \"moss wall\", \"pixabay_id\": 5026256, \"image_path\": \"/images/artikelen/2026-10-29/local-moswand.jpg\", \"page_url\": \"https://pixabay.com/photos/moss-wall-rotating-tooth-moss-5026256/\", \"photographer\": \"Nennieinszweidrei\", \"tags\": \"moss, wall-rotating-tooth moss, tortula muralis, mossy, growth, nature, vegetation, plants\", \"width\": 6000, \"height\": 4000}"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Exacte URLs, onderwerp en indien aanwezig DOI tegen gepubliceerde editiehistorie tot26oktober gecontroleerd. Kwelderproef wegens herhaling22oktober uitgesloten. Deze29oktoberversie is een conceptrevisie.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "In het Daals Kwartier groeit mos op een bestaande gevel. Zo krijgt een plek met weinig ruimte voor bomen toch een groene laag.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 1,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "int:wereldwijd-natuurherstel-vn": {
+      "source_id": "unep",
+      "organization_id": "unep",
+      "article_url": "https://www.unep.org/en/news-and-stories/press-release/nature-making-comeback-world-must-move-faster-meet-restoration",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-10-29",
+      "event_date": "2026-10-29",
+      "checked_on": "2026-10-29",
+      "dates_checked": true,
+      "topic_id": "pn-20261029-wereldwijd-natuurherstel-vn",
+      "evidence": {
+        "primary_url": "https://www.unep.org/en/news-and-stories/press-release/nature-making-comeback-world-must-move-faster-meet-restoration",
+        "claim": "In 149 landen wordt natuur hersteld: 252 miljoen hectare in beweging",
+        "support": "Nieuwe bossen, herstelde rivieren en terugkerende wetlands: wereldwijd wordt aan het herstel van 252 miljoen hectare natuur gewerkt. Die oppervlakte, verspreid over 149 landen, staat in een nieuw rapport dat de Verenigde Naties op 29 oktober presenteerden. De inventarisatie bundelt gegevens die overheden en herstelinitiatieven zelf aanleverden. Daarmee is het een breed overzicht van werk dat daadwerkelijk is begonnen. Het cijfer zegt niet dat al deze gebieden hun oorspronkelijke rijkdom aan planten en dieren hebben teruggekregen. Ecologisch herstel duurt vaak jaren en vraagt blijvend beheer.",
+        "limitations": "Gerapporteerde oppervlakte is onder herstel, niet al volledig hersteld. Nationale en projectrapportage, wisselende meetcapaciteit. Tempo onvoldoende voor2030.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "{\"query\": \"id:2058977\", \"pixabay_id\": 2058977, \"image_path\": \"/images/artikelen/2026-10-29/wereldwijd-natuurherstel-vn.jpg\", \"page_url\": \"https://pixabay.com/photos/regeneration-forest-peak-regrowth-2058977/\", \"photographer\": \"MemoryCatcher\", \"tags\": \"regeneration, forest, regrowth\", \"license\": \"Pixabay Content License\", \"license_url\": \"https://pixabay.com/service/license-summary/\", \"checked_on\": \"2026-10-29\", \"width\": 853, \"height\": 1280}"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Exacte URLs, onderwerp en indien aanwezig DOI tegen gepubliceerde editiehistorie tot26oktober gecontroleerd. Kwelderproef wegens herhaling22oktober uitgesloten. Deze29oktoberversie is een conceptrevisie.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Een nieuw VN-rapport brengt de grootste gedocumenteerde herstelinspanning tot nu toe in beeld. Onder herstel is iets anders dan al volledig hersteld.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "int:zeevogels": {
+      "source_id": "mongabay",
+      "organization_id": "mongabay",
+      "article_url": "https://news.mongabay.com/2026/10/googly-eyed-buoys-and-kites-help-keep-seabirds-out-of-fishing-nets-study-finds/",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-10-23",
+      "event_date": "2026-10-23",
+      "checked_on": "2026-10-29",
+      "dates_checked": true,
+      "new_development": "Nieuw bericht binnen de editieweek; bereikte fase en beperkingen staan in eigen tekst.",
+      "older_exception_reason": "",
+      "topic_id": "pn-20261029-zeevogels",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://doi.org/10.1111/con4.70082",
+        "claim": "Een vlieger boven het visnet kan zeevogels sparen",
+        "support": "Een roofvogelvormige vlieger boven een visnet kan het verschil maken voor een duikende zeevogel. In een onderzoek voor de kust van Cornwall hadden netten met zulke vliegers een kleinere kans om alken en zeekoeten te vangen. Ook boeien met grote draaiende ogen lieten een gunstig effect zien.",
+        "limitations": "Oddsverlaging, geen absoluut aantal geredde vogels; weersinvloed en fabrikantbelang vermeld.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "{\"query\": \"razorbill\", \"pixabay_id\": 9837988, \"image_path\": \"/images/artikelen/2026-10-29/local-zeevogels.jpg\", \"page_url\": \"https://pixabay.com/photos/nature-wildlife-plumage-ornithology-9837988/\", \"photographer\": \"Drosera74\", \"tags\": \"nature, wildlife, plumage, ornithology, feathers, avian, birdwatching, flight, flying, wings, beak, sea, coast, seabirds, razorbill, seabird, bird, uk\", \"width\": 3217, \"height\": 2837}"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Exacte URLs, onderwerp en indien aanwezig DOI tegen gepubliceerde editiehistorie tot26oktober gecontroleerd. Kwelderproef wegens herhaling22oktober uitgesloten. Deze29oktoberversie is een conceptrevisie.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Een praktijkproef voor de kust van Cornwall vond minder bijvangst van alken en zeekoeten bij netten met vogelverschrikking. De hulpmiddelen hebben ook beperkingen.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "int:vietnam": {
+      "source_id": "iucn",
+      "organization_id": "iucn",
+      "article_url": "https://iucn.org/story/202610/recirculating-aquaculture-system-sustainable-future-aquaculture-mekong-delta",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-10-26",
+      "event_date": "2026-09-10",
+      "checked_on": "2026-10-29",
+      "dates_checked": true,
+      "new_development": "Oorspronkelijke IUCN-publicatie26oktober presenteert operationele systemen en eerste bedrijfsresultaten van het project.",
+      "older_exception_reason": "",
+      "topic_id": "pn-20261029-vietnam",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://iucn.org/story/202610/recirculating-aquaculture-system-sustainable-future-aquaculture-mekong-delta",
+        "claim": "Vietnamese kwekers oogsten met steeds hetzelfde water",
+        "support": "Garnalen kweken met water dat steeds opnieuw wordt gebruikt: in de Vietnamese Mekongdelta gebeurt dat inmiddels op tientallen proeflocaties. Volgens natuurorganisatie IUCN waren in september 38 van de 45 geplande kringloopsystemen operationeel. Het project combineert technische ondersteuning met aandacht voor mangroven en bestaande bedrijfsinrichting.",
+        "limitations": "Projectorganisatie rapporteert resultaten; kleine aantallen en lange termijn onzeker.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "{\"query\": \"id:6795464\", \"pixabay_id\": 6795464, \"image_path\": \"/images/artikelen/2026-10-15/nangade-viskweekbakken-overgedragen.jpg\", \"page_url\": \"https://pixabay.com/photos/fish-fish-farming-aquaculture-6795464/\", \"photographer\": \"Mariakray\", \"tags\": \"fish, fish farming, aquaculture, fish culture, fish pond, nature, freshwater fish\", \"width\": 5250, \"height\": 3500}"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Exacte URLs, onderwerp en indien aanwezig DOI tegen gepubliceerde editiehistorie tot26oktober gecontroleerd. Kwelderproef wegens herhaling22oktober uitgesloten. Deze29oktoberversie is een conceptrevisie.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "In de Mekongdelta draaien 38 proefsystemen die kweekwater behandelen en hergebruiken. De eerste bedrijfsresultaten zijn veelbelovend, meldt IUCN.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 1,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "int:magneten-spierbeweging-prothese": {
+      "source_id": "mit-news",
+      "organization_id": "mit-news",
+      "article_url": "https://news.mit.edu/2026/magnetic-sensors-track-muscle-movement-better-prosthetic-limb-control-1029",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-10-29",
+      "event_date": "2026-10-29",
+      "checked_on": "2026-10-29",
+      "dates_checked": true,
+      "topic_id": "pn-20261029-magneten-spierbeweging-prothese",
+      "evidence": {
+        "primary_url": "https://news.mit.edu/2026/magnetic-sensors-track-muscle-movement-better-prosthetic-limb-control-1029",
+        "claim": "Piepkleine magneten maken spierbewegingen beter meetbaar",
+        "support": "Een prothese moet begrijpen wat de drager wil doen. Onderzoekers van MIT hebben daarvoor een nieuwe manier getest om bewegingen in overgebleven spieren te volgen: twee kleine magnetische bolletjes in een spier, met een sensor buiten het lichaam. Als de spier rekt of samentrekt, verandert de afstand tussen de magneten. De sensor meet dat door de huid heen. Zo krijgen onderzoekers informatie over de lengte en bewegingssnelheid van de spier. Metingen via elektroden op de huid zijn gevoeliger voor onder meer zweet en signalen van andere spieren.",
+        "limitations": "Slechts drie deelnemers met AMI-amputatie. Cursorbesturing zonder prothese; beter lopen in dagelijks leven niet aangetoond. Operatie vereist.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "{\"query\": \"id:4672316\", \"pixabay_id\": 4672316, \"image_path\": \"/images/artikelen/2026-10-29/magneten-spierbeweging-prothese.jpg\", \"page_url\": \"https://pixabay.com/photos/engineer-orthotics-health-medicine-4672316/\", \"photographer\": \"This_is_Engineering\", \"tags\": \"engineer, orthotics, prosthetics, workshop\", \"license\": \"Pixabay Content License\", \"license_url\": \"https://pixabay.com/service/license-summary/\", \"checked_on\": \"2026-10-29\", \"width\": 854, \"height\": 1280}"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Exacte URLs, onderwerp en indien aanwezig DOI tegen gepubliceerde editiehistorie tot26oktober gecontroleerd. Kwelderproef wegens herhaling22oktober uitgesloten. Deze29oktoberversie is een conceptrevisie.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Drie mensen met een onderbeenamputatie bestuurden een cursor met signalen uit hun spieren. De techniek kan een stap zijn naar beter bestuurbare protheses.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "int:appels": {
+      "source_id": "good-news-network",
+      "organization_id": "good-news-network",
+      "article_url": "https://www.goodnewsnetwork.org/major-supermarket-begins-wide-scale-tests-to-bring-heritage-apple-varieties-to-market/",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-10-22",
+      "event_date": "2026-10-22",
+      "checked_on": "2026-10-29",
+      "dates_checked": true,
+      "new_development": "Nieuw bericht binnen de editieweek; bereikte fase en beperkingen staan in eigen tekst.",
+      "older_exception_reason": "",
+      "topic_id": "pn-20261029-appels",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.goodnewsnetwork.org/major-supermarket-begins-wide-scale-tests-to-bring-heritage-apple-varieties-to-market/",
+        "claim": "Vergeten appelrassen krijgen weer een plek in de boomgaard",
+        "support": "Ilzer Rose en Falchs Gulderling zijn geen nieuwe merknamen, maar oude appelrassen uit het Alpengebied. In een proef van supermarktketen Spar en fruithandelaar Frutura krijgen ze opnieuw ruimte. In een boomgaard in de Oostenrijkse deelstaat Stiermarken staan inmiddels 2.150 bomen; de eerste vruchten zijn deze maand geplukt.",
+        "limitations": "Eerste oogst en marktproef, geen bewezen grootschalige uitrol of lagere bestrijdingsmiddeleninzet.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "{\"query\": \"apple orchard\", \"pixabay_id\": 2788651, \"image_path\": \"/images/artikelen/2026-10-29/local-appels.jpg\", \"page_url\": \"https://pixabay.com/photos/apples-apple-tree-fruits-orchard-2788651/\", \"photographer\": \"pixel2013\", \"tags\": \"apples, apple tree, fruits, orchard, ripe, apples, apples, apples, apples, apples, apple tree, apple tree, apple tree, apple tree, fruits\", \"width\": 6000, \"height\": 3103}"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Exacte URLs, onderwerp en indien aanwezig DOI tegen gepubliceerde editiehistorie tot26oktober gecontroleerd. Kwelderproef wegens herhaling22oktober uitgesloten. Deze29oktoberversie is een conceptrevisie.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Een proefboomgaard met ruim tweeduizend bomen levert de eerste appels voor marktproeven. Daarmee wordt onderzocht of oude rassen ook nu een toekomst hebben.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 1,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "int:walrus": {
+      "source_id": "good-news-network",
+      "organization_id": "good-news-network",
+      "article_url": "https://www.goodnewsnetwork.org/rescuers-ensure-orphaned-baby-walrus-gets-a-second-chance-look/",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-10-23",
+      "event_date": "2026-10-23",
+      "checked_on": "2026-10-29",
+      "dates_checked": true,
+      "new_development": "Nieuw bericht binnen de editieweek; bereikte fase en beperkingen staan in eigen tekst.",
+      "older_exception_reason": "",
+      "topic_id": "pn-20261029-walrus",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.goodnewsnetwork.org/rescuers-ensure-orphaned-baby-walrus-gets-a-second-chance-look/",
+        "claim": "Alleen op een strand gevonden: walrusjong Annautaq krijgt een nieuwe kans",
+        "support": "Een jonge walrus die alleen achterbleef op een afgelegen strand in Alaska heeft de eerste opvang overleefd en een nieuwe verblijfplaats gekregen. Het mannetje Annautaq wordt nu verzorgd in SeaWorld Orlando. Daar krijgt hij flesvoeding, diergeneeskundige zorg en voortdurende begeleiding.",
+        "limitations": "Permanente opvang, geen vrijlating; bericht mede gebaseerd op betrokken opvangorganisaties.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "{\"query\": \"walrus\", \"pixabay_id\": 8065100, \"image_path\": \"/images/artikelen/2026-10-29/local-walrus.jpg\", \"page_url\": \"https://pixabay.com/photos/huddle-of-walrus-walrus-mammal-8065100/\", \"photographer\": \"MonicaMaxWest\", \"tags\": \"huddle of walrus, walrus, mammal, animal, tusks, marine animal, mother, wildlife, nature, walrus, walrus, walrus, walrus, walrus, animal\", \"width\": 4744, \"height\": 2936}"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Exacte URLs, onderwerp en indien aanwezig DOI tegen gepubliceerde editiehistorie tot26oktober gecontroleerd. Kwelderproef wegens herhaling22oktober uitgesloten. Deze29oktoberversie is een conceptrevisie.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Na zijn redding op een afgelegen strand in Alaska is het jonge dier ondergebracht bij gespecialiseerde verzorgers. Terugkeer naar zee is voor hem geen optie.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 1,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "headlines:0": {
+      "source_id": "nos",
+      "organization_id": "nos",
+      "article_url": "https://nos.nl/artikel/2637103-mogelijk-flinke-pensioenverhoging-bij-abp-en-pme-door-gestegen-dekkingsgraad",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-28",
+      "event_date": "2026-10-28",
+      "checked_on": "2026-10-29",
+      "dates_checked": true,
+      "topic_id": "pn-20261029-headline-0",
+      "evidence": {
+        "primary_url": "https://nos.nl/artikel/2637103-mogelijk-flinke-pensioenverhoging-bij-abp-en-pme-door-gestegen-dekkingsgraad",
+        "claim": "Mogelijk flinke pensioenverhoging bij ABP en PME door gestegen dekkingsgraad",
+        "support": "Volledige oorspronkelijke NOS-publicatie29oktober gelezen; bij pensioenen datum28oktober en de voorwaardelijke formulering behouden.",
+        "limitations": "Externe nieuwskop; verdere context bij de oorspronkelijke NOS-publicatie.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used",
+        "image_evidence": ""
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Exacte URLs, onderwerp en indien aanwezig DOI tegen gepubliceerde editiehistorie tot26oktober gecontroleerd. Kwelderproef wegens herhaling22oktober uitgesloten. Deze29oktoberversie is een conceptrevisie.",
+        "new_fact": ""
+      }
+    },
+    "headlines:1": {
+      "source_id": "nos",
+      "organization_id": "nos",
+      "article_url": "https://nos.nl/artikel/2637136-ecb-president-lagarde-stopt-al-in-februari-in-plaats-van-eind-oktober-2027",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-29",
+      "event_date": "2026-10-29",
+      "checked_on": "2026-10-29",
+      "dates_checked": true,
+      "topic_id": "pn-20261029-headline-1",
+      "evidence": {
+        "primary_url": "https://nos.nl/artikel/2637136-ecb-president-lagarde-stopt-al-in-februari-in-plaats-van-eind-oktober-2027",
+        "claim": "ECB-president Lagarde stopt al in februari in plaats van eind oktober 2027",
+        "support": "Volledige oorspronkelijke NOS-publicatie29oktober gelezen; bij pensioenen datum28oktober en de voorwaardelijke formulering behouden.",
+        "limitations": "Externe nieuwskop; verdere context bij de oorspronkelijke NOS-publicatie.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used",
+        "image_evidence": ""
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Exacte URLs, onderwerp en indien aanwezig DOI tegen gepubliceerde editiehistorie tot26oktober gecontroleerd. Kwelderproef wegens herhaling22oktober uitgesloten. Deze29oktoberversie is een conceptrevisie.",
+        "new_fact": ""
+      }
+    },
+    "headlines:2": {
+      "source_id": "nos",
+      "organization_id": "nos",
+      "article_url": "https://nos.nl/artikel/2637113-ja21-bbb-en-sgp-stellen-samen-eisen-en-zetten-kabinet-nog-meer-onder-druk",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-29",
+      "event_date": "2026-10-29",
+      "checked_on": "2026-10-29",
+      "dates_checked": true,
+      "topic_id": "pn-20261029-headline-2",
+      "evidence": {
+        "primary_url": "https://nos.nl/artikel/2637113-ja21-bbb-en-sgp-stellen-samen-eisen-en-zetten-kabinet-nog-meer-onder-druk",
+        "claim": "JA21, BBB en SGP stellen samen eisen en zetten kabinet nog meer onder druk",
+        "support": "Volledige oorspronkelijke NOS-publicatie29oktober gelezen; bij pensioenen datum28oktober en de voorwaardelijke formulering behouden.",
+        "limitations": "Externe nieuwskop; verdere context bij de oorspronkelijke NOS-publicatie.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used",
+        "image_evidence": ""
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Exacte URLs, onderwerp en indien aanwezig DOI tegen gepubliceerde editiehistorie tot26oktober gecontroleerd. Kwelderproef wegens herhaling22oktober uitgesloten. Deze29oktoberversie is een conceptrevisie.",
+        "new_fact": ""
+      }
+    }
+  },
+  "news_sha256": "8ba37b4fc4b10636dcdd587ff7fd720bd301d20a4551064d4dec4890d2aeb1a4",
+  "owner_approved_selection": {
+    "authorized_on": "2026-10-29",
+    "authorized_by": "Tom de Haas",
+    "news_sha256": "8ba37b4fc4b10636dcdd587ff7fd720bd301d20a4551064d4dec4890d2aeb1a4",
+    "scope": "Exacte door eigenaar goedgekeurde preview publiceren en bestaande Buttondown-concepttrigger uitvoeren.",
+    "candidate_triage_complete": false,
+    "source_coverage_complete": false,
+    "selected_sources_checked": true
+  }
+}

@@ -4345,6 +4345,24 @@
       "limitations": "Controle per bericht vereist.",
       "register_ids": [],
       "channels": []
+    },
+    {
+      "source_id": "koninklijk-huis",
+      "organization_id": "koninklijk-huis",
+      "name": "Koninklijk Huis",
+      "website": "https://www.koninklijkhuis.nl/",
+      "category": "A",
+      "topics": [
+        "Mens"
+      ],
+      "geography": "nl",
+      "source_type": "government",
+      "reliability_notes": "Primaire bron voor eigen agenda en werkbezoeken; geen onafhankelijke effectmeting.",
+      "priority": "P2",
+      "check_frequency": "manual",
+      "limitations": "Officiële communicatie over eigen activiteiten.",
+      "register_ids": [],
+      "channels": []
     }
   ]
 }

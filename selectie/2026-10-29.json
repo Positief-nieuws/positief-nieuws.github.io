@@ -1,0 +1,80 @@
+{
+  "status": "CONCEPT",
+  "revision": "2026-10-29-middag",
+  "preview_authorized": true,
+  "live_publication_authorized": false,
+  "candidate_file": "kandidaten (14).json",
+  "candidate_sha256": "97935b12fdecb322d0976c20cdf67870941c5798bccaeda02c169e4497b51702",
+  "candidate_count": 8522,
+  "review_scope": "Bestaande selectie en nieuwe recente kanshebbers vergeleken; geen volledige triage van 8522 kandidaten of alle bronkanalen geclaimd.",
+  "preserved": [
+    "leersum",
+    "jos-ai-bril",
+    "matrassen",
+    "plastic",
+    "buurtmoestuin-schiebroek",
+    "zeevogels",
+    "vietnam",
+    "appels",
+    "walrus",
+    "moswand"
+  ],
+  "replacements": [
+    {
+      "old": "zanzibar",
+      "new": "wereldwijd-natuurherstel-vn",
+      "reason": "Nieuw mondiaal overzicht met gedocumenteerde herstelactiviteiten, tegenover oprichting van vertegenwoordiging zonder bewezen inkomenseffect."
+    },
+    {
+      "old": "handschoen",
+      "new": "magneten-spierbeweging-prothese",
+      "reason": "Verse proef bij mensen met een amputatie; menselijke betekenis concreter dan algemene geprinte gebruiksvoorwerpen, beperkt tot virtuele besturing."
+    }
+  ],
+  "reserves": [
+    {
+      "slug": "kwelders-golfproef",
+      "url": "https://www.naturetoday.com/intl/nl/nature-reports/message/?msg=35979",
+      "reason": "Afgewezen na archiefcontrole: hetzelfde experiment stond op22oktober als kwelders-beschermen-kust. Nieuwe herpublicatie is geen nieuw nieuwsfeit."
+    },
+    {
+      "slug": "zwarte-sachembij",
+      "url": "https://www.naturetoday.com/intl/nl/nature-reports/message/?msg=35990",
+      "reason": "Gelezen. Nieuw bericht maar deel resultaten uit 2024; kwelderproef sterker en actueler."
+    },
+    {
+      "slug": "ravon-ready",
+      "url": "https://www.naturetoday.com/intl/nl/nature-reports/message/?msg=35970",
+      "reason": "Gelezen. Vijftien deelnemers en vervolgvrijwilligerswerk concreet, bestaande buurtmoestuin menselijk minstens zo sterk."
+    },
+    {
+      "slug": "lampenbroek",
+      "url": "https://www.natuurmonumenten.nl/natuurgebieden/loenense-hooilanden/nieuws/lampenbroek-klaar-voor-de-toekomst",
+      "reason": "Gelezen. Feitelijke brondatum 30 september ondanks recente feed; niet actueel genoeg."
+    },
+    {
+      "slug": "lion-rangers",
+      "url": "https://www.positive.news/society/smartphones-ancient-tracking-skills-and-a-future-for-desert-lions/",
+      "reason": "Gelezen. Mooie reportage maar conflictdaling uit 2023 inmiddels deels omgekeerd; geen nieuwe herstelwinst verondersteld."
+    },
+    {
+      "slug": "huisartszoeker",
+      "url": "https://www.goednieuwssite.org/2026/10/26/huisartszoeker-huisarts-vinden/",
+      "reason": "Gelezen. Secundair bericht; 10.000 geholpen bij zoektocht is niet bewezen 10.000 nieuwe vaste huisartsen. Niet boven selectie geplaatst."
+    }
+  ],
+  "checks": {
+    "sources_checked_on": "2026-10-29",
+    "unep": "Twee oorspronkelijke UNEP-publicaties via web gelezen. Onder herstel niet gelijkgesteld aan hersteld; verschillende rapportagecapaciteit genoemd.",
+    "mit": "Oorspronkelijke MIT-publicatie volledig gelezen. Drie deelnemers, AMI-operatie, cursorproef zonder prothese; echte prothesestudie loopt nog.",
+    "kwelders": "Gelezen maar niet geplaatst: herhaling van22oktober.",
+    "birds": "Mongabay-bron via zoekindex volledig leesbaar; DOI in artikel behouden. Geen risicoreductie als absoluut aantal geredde vogels gepresenteerd.",
+    "existing": "Leersum, Jos, matrassen, plastic, buurtmoestuin, Vietnam, appels en walrus oorspronkelijke bronpagina opnieuw gelezen.",
+    "headlines": "Volledige NOS-artikelen opnieuw gelezen; pensioen blijft mogelijkheid, geen gegarandeerde verhoging.",
+    "duplicates": "Exacte bron-URLs, slugs en onderwerpen tegen alle editiegegevens tot26oktober gecontroleerd. Kwelderonderzoek22oktober herkend en uit selectie gehaald. Overige voorgestelde nieuwsfeiten niet eerder gevonden; revisie29blijft concept.",
+    "moswand": "Bestaande gecontroleerde tekst en bron behouden; huidige fetch403, eerdere bronkopie beschikbaar."
+  },
+  "publication_authorized": true,
+  "authorized_by": "Tom de Haas",
+  "authorization": "Publiceer exact deze previewversie; trigger bestaande Buttondown-conceptroute."
+}
