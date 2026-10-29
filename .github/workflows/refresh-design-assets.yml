@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - "build_editions.py"
+      - "scripts/refresh_related_articles.py"
   workflow_dispatch:
 
 permissions:
