@@ -254,7 +254,7 @@ def header_html(active=""):
     return f"""<header class="site-header">
   <div class="header-shell header-row">
     <a class="brand" href="/" aria-label="Positief nieuws homepage">
-      <img class="brand-sun" src="/sun-icon-512.png" width="32" height="32" alt="" aria-hidden="true">
+      <img class="brand-sun" src="/sun-orange.svg" width="32" height="32" alt="" aria-hidden="true">
       <span>Positief nieuws</span>
     </a>
 
@@ -1969,7 +1969,8 @@ def refresh_branding():
         if any(part.startswith('.') for part in page.parts):
             continue
         markup = page.read_text(encoding='utf-8')
-        markup = re.sub(r'<svg class="brand-sun".*?</svg>', lambda _: '<img class="brand-sun" src="/sun-icon-512.png" width="32" height="32" alt="" aria-hidden="true">', markup, flags=re.S)
+        markup = re.sub(r'<svg class="brand-sun".*?</svg>', lambda _: '<img class="brand-sun" src="/sun-orange.svg" width="32" height="32" alt="" aria-hidden="true">', markup, flags=re.S)
+        markup = re.sub(r'(<img class="brand-sun" src=")[^"]+(")', r'\g<1>/sun-orange.svg\2', markup)
         if not re.search(r'</head\s*>', markup, re.I):
             continue
         markup = re.sub(r'<link\b(?=[^>]*\brel\s*=\s*[\'"](?:icon|shortcut icon|apple-touch-icon|manifest)[\'"])[^>]*>\s*', '', markup, flags=re.I)
