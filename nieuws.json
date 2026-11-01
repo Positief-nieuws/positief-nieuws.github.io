@@ -1,10 +1,10 @@
 {
   "meta": {
     "edition_date": "2026-11-02",
-    "status": "approved",
-    "publication_authorized": true,
-    "approved_by": "Tom de Haas",
-    "approved_on": "2026-11-02",
+    "status": "preview",
+    "publication_authorized": false,
+    "approved_by": null,
+    "approved_on": null,
     "preview_revision": "2026-11-02-redactionele-preview-1",
     "email_preheader": "Darmkankeronderzoek met hoopgevende resultaten, massale steun voor zeehonden en grote gezondheidswinst in Egypte.",
     "editorial_order": [
@@ -69,7 +69,7 @@
         "rank": 6
       }
     ],
-    "approval_scope": "Eigenaar vroeg om bron- en beeldcontrole, daarna rechtstreeks live publiceren zonder previewstap. Geen nieuwsbrief versturen."
+    "approval_scope": "De eigenaar heeft rechtstreeks live publiceren gevraagd, maar de selectie- en dossiertoetsen zijn nog niet geslaagd. Dit is geen redactioneel bewijsakkoord."
   },
   "nl": [
     {
@@ -366,21 +366,21 @@
   "headlines": [
     {
       "title": "Amerikanen stemmen dinsdag over het Congres, zorgen over eerlijk verloop",
-      "url": "https://nos.nl/artikel/2637659-eerlijke-verkiezingen-amerikaanse-kiezers-vrezen-vooral-wat-erna-komt",
+      "url": "https://nos.nl/artikel/2637659",
       "source": "NOS",
       "source_id": "nos",
       "published": "2026-11-01"
     },
     {
       "title": "Nieuwe Israëlische aanvallen in Gaza ondanks staakt-het-vuren",
-      "url": "https://nos.nl/artikel/2637590-israelische-aanvallen-kosten-zeker-acht-palestijnen-in-gaza-het-leven",
+      "url": "https://nos.nl/artikel/2637590",
       "source": "NOS",
       "source_id": "nos",
       "published": "2026-11-01"
     },
     {
       "title": "Politieke onrust in Brazilië na de verkiezingen",
-      "url": "https://nos.nl/artikel/2637669-na-de-verkiezingen-en-een-verbijsterende-week-in-brazilie-hoe-nu-verder",
+      "url": "https://nos.nl/artikel/2637669",
       "source": "NOS",
       "source_id": "nos",
       "published": "2026-11-01"
