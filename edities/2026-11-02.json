@@ -68,7 +68,8 @@
         "article_slug": "britse-moedergroepen-subsidies",
         "rank": 6
       }
-    ]
+    ],
+    "approval_scope": "De eigenaar heeft rechtstreeks live publiceren gevraagd, maar de selectie- en dossiertoetsen zijn nog niet geslaagd. Dit is geen redactioneel bewijsakkoord."
   },
   "nl": [
     {
@@ -187,8 +188,8 @@
       "published": "2026-11-01",
       "region": "nl",
       "regional_rank": 5,
-      "image_query": "id:3325080",
-      "image_alt": "Illustratieve Pixabay-foto van een groen heuvellandschap; niet de Utrechtse Heuvelrug.",
+      "image_query": "netherlands forest heathland",
+      "image_alt": "Illustratieve Pixabay-foto van Nederlands bos en heide, niet van de nieuwe natuurverbinding bij Maarsbergen.",
       "editorial_rank": 5
     },
     {
@@ -207,7 +208,7 @@
       "url": "https://www.radboudumc.nl/nieuws/2026/nieuwe-aanpak-bij-erfelijk-risico-op-eierstokkanker-geeft-minder-klachten",
       "primary_url": "https://www.radboudumc.nl/nieuws/2026/nieuwe-aanpak-bij-erfelijk-risico-op-eierstokkanker-geeft-minder-klachten",
       "source": "Radboudumc",
-      "source_id": "radboud-universiteit",
+      "source_id": "radboudumc",
       "published": "2026-10-27",
       "region": "nl",
       "regional_rank": 6,
@@ -233,7 +234,7 @@
       "url": "https://english.ahram.org.eg/NewsContentP/1/581401/Egypt/Egypt%3Bs-hepatitis-C-prevalence-falls-to-%2C-deaths-d.aspx",
       "primary_url": "https://english.ahram.org.eg/NewsContentP/1/581401/Egypt/Egypt%3Bs-hepatitis-C-prevalence-falls-to-%2C-deaths-d.aspx",
       "source": "Ahram Online / WHO",
-      "source_id": "who",
+      "source_id": "ahram-online",
       "published": "2026-11-01",
       "region": "int",
       "regional_rank": 1,
@@ -305,7 +306,7 @@
       "url": "https://today.rtl.lu/news/world/new-home-for-orangutans-rescued-from-indonesias-burning-forests-278014660",
       "primary_url": "https://today.rtl.lu/news/world/new-home-for-orangutans-rescued-from-indonesias-burning-forests-278014660",
       "source": "AFP / RTL Today",
-      "source_id": "bbc",
+      "source_id": "rtl-today",
       "published": "2026-10-30",
       "region": "int",
       "regional_rank": 4,
@@ -365,21 +366,21 @@
   "headlines": [
     {
       "title": "Amerikanen stemmen dinsdag over het Congres, zorgen over eerlijk verloop",
-      "url": "https://nos.nl/l/2637659",
+      "url": "https://nos.nl/artikel/2637659",
       "source": "NOS",
       "source_id": "nos",
       "published": "2026-11-01"
     },
     {
       "title": "Nieuwe Israëlische aanvallen in Gaza ondanks staakt-het-vuren",
-      "url": "https://nos.nl/l/2637590",
+      "url": "https://nos.nl/artikel/2637590",
       "source": "NOS",
       "source_id": "nos",
       "published": "2026-11-01"
     },
     {
       "title": "Politieke onrust in Brazilië na de verkiezingen",
-      "url": "https://nos.nl/l/2637669",
+      "url": "https://nos.nl/artikel/2637669",
       "source": "NOS",
       "source_id": "nos",
       "published": "2026-11-01"
