@@ -115,8 +115,8 @@
       "published": "2026-10-30",
       "region": "nl",
       "regional_rank": 2,
-      "image_query": "id:5578028",
-      "image_alt": "Illustratieve Pixabay-foto van een zeehondenpup op een strand; niet gemaakt bij het centrum.",
+      "image_query": "harbor seal pup beach",
+      "image_alt": "Illustratieve Pixabay-foto bij dit onderwerp; geen beeld van de specifieke gebeurtenis of deelnemers.",
       "editorial_rank": 2
     },
     {
@@ -139,8 +139,8 @@
       "published": "2026-10-27",
       "region": "nl",
       "regional_rank": 3,
-      "image_query": "id:7948361",
-      "image_alt": "Illustratieve Pixabay-foto van een waterzuiveringsinstallatie; niet de installatie in Winterswijk.",
+      "image_query": "wastewater treatment plant",
+      "image_alt": "Illustratieve Pixabay-foto bij dit onderwerp; geen beeld van de specifieke gebeurtenis of deelnemers.",
       "editorial_rank": 3
     },
     {
@@ -149,7 +149,7 @@
       "title": "Twaalf extra Meedoenbalies moeten nieuwkomers op weg helpen",
       "email_title": "Twaalf extra Meedoenbalies moeten nieuwkomers op weg helpen",
       "teaser": "Het kabinet breidt het aantal balies in opvanglocaties uit tot vijftig, voor ondersteuning bij werk en activiteiten.",
-      "category": "Mens",
+      "category": "Economie",
       "article_body": [
         "In nog eens twaalf opvanglocaties komt een Meedoenbalie. Daarmee wil het kabinet het aantal balies dit jaar naar vijftig uitbreiden. Ze bieden asielzoekers en andere nieuwkomers een laagdrempelige plek om mogelijkheden voor werk, vrijwilligerswerk en taalactiviteiten te ontdekken.",
         "De gedachte is praktisch: wie kan meedoen, leert sneller mensen en de omgeving kennen en kan bestaande kennis of vaardigheden benutten. Een balie kan helpen om de eerste stap te zetten of een geschikte activiteit te vinden.",
@@ -211,8 +211,8 @@
       "published": "2026-10-27",
       "region": "nl",
       "regional_rank": 6,
-      "image_query": "id:5722327",
-      "image_alt": "Illustratieve Pixabay-foto van medisch onderzoek in een laboratorium; niet het Radboudumc-onderzoek.",
+      "image_query": "woman consultation doctor hospital",
+      "image_alt": "Illustratieve Pixabay-foto bij dit onderwerp; geen beeld van de specifieke gebeurtenis of deelnemers.",
       "editorial_rank": 6
     }
   ],
@@ -261,8 +261,8 @@
       "published": "2026-10-29",
       "region": "int",
       "regional_rank": 2,
-      "image_query": "id:8874351",
-      "image_alt": "Illustratieve Pixabay-foto van een koala in een eucalyptusboom; niet uit het geplande park.",
+      "image_query": "koala eucalyptus",
+      "image_alt": "Illustratieve Pixabay-foto bij dit onderwerp; geen beeld van de specifieke gebeurtenis of deelnemers.",
       "editorial_rank": 8
     },
     {
@@ -305,7 +305,7 @@
       "url": "https://today.rtl.lu/news/world/new-home-for-orangutans-rescued-from-indonesias-burning-forests-278014660",
       "primary_url": "https://today.rtl.lu/news/world/new-home-for-orangutans-rescued-from-indonesias-burning-forests-278014660",
       "source": "AFP / RTL Today",
-      "source_id": "phys-org",
+      "source_id": "bbc",
       "published": "2026-10-30",
       "region": "int",
       "regional_rank": 4,
@@ -333,8 +333,8 @@
       "published": "2026-10-30",
       "region": "int",
       "regional_rank": 5,
-      "image_query": "id:10491830",
-      "image_alt": "Illustratieve Pixabay-foto van een Afrikaans savannelandschap met vee; geen opname van de betrokken gemeenschappen.",
+      "image_query": "botswana kalahari landscape",
+      "image_alt": "Illustratieve Pixabay-foto bij dit onderwerp; geen beeld van de specifieke gebeurtenis of deelnemers.",
       "editorial_rank": 11
     },
     {
@@ -357,8 +357,8 @@
       "published": "2026-11-01",
       "region": "int",
       "regional_rank": 6,
-      "image_query": "id:1866621",
-      "image_alt": "Illustratieve Pixabay-foto van een moeder met baby; geen deelnemers aan de Britse groepen.",
+      "image_query": "mother baby support group",
+      "image_alt": "Illustratieve Pixabay-foto bij dit onderwerp; geen beeld van de specifieke gebeurtenis of deelnemers.",
       "editorial_rank": 12
     }
   ],
