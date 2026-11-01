@@ -33,7 +33,7 @@ jobs:
           data=json.loads(news)
           assert data['meta']['edition_date']=='2026-11-02'
           target=Path('edities/2026-11-02.json')
-          assert not target.exists(), 'Deze editie is al gearchiveerd'
+          # Opnieuw bouwen na redactionele revisies moet veilig en herhaalbaar zijn.
           target.write_text(news,encoding='utf-8')
           PY
       - name: Site en Pixabay-afbeeldingen bouwen
