@@ -1,0 +1,71 @@
+name: Vergelijk bestaande Buttondown layouts zonder wijzigingen
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/audit-buttondown-layout-2026-11-02.yml
+permissions:
+  contents: read
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Lees alleen twee bestaande emails via Buttondown
+        env:
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+        run: |
+          python - <<'PY'
+          import os, json, urllib.request, urllib.parse, re, html.parser, difflib
+          auth={"Authorization":"Token "+os.environ["BUTTONDOWN_API_KEY"],"Accept":"application/json"}
+          def get(url):
+              p=urllib.parse.urlparse(url)
+              if p.scheme!="https" or p.netloc!="api.buttondown.com":raise RuntimeError("Unexpected URL")
+              with urllib.request.urlopen(urllib.request.Request(url,headers=auth),timeout=30) as f:return json.load(f)
+          curr=get("https://api.buttondown.com/v1/emails/em_133mn0zd0z8bz82974kh2weme7")
+          url="https://api.buttondown.com/v1/emails"
+          previous=None
+          for i in range(15):
+              d=get(url)
+              found=[x for x in d.get("results",[]) if "29 oktober" in (x.get("subject") or "").lower()]
+              if found:
+                  previous=get("https://api.buttondown.com/v1/emails/"+found[0]["id"])
+                  break
+              if not d.get("next"):break
+              url=d["next"]
+          if previous is None:
+              print("Vorig exemplaar van 29 oktober niet gevonden")
+              raise SystemExit(1)
+          def features(d):
+              b=d.get("body") or ""
+              return {
+                  "status":d.get("status"),"template":d.get("template"),
+                  "editor":"fancy" if "buttondown-editor-mode: fancy" in b else "other",
+                  "characters":len(b),"cards":b.count('class="story-card"'),
+                  "columns":b.count('class="email-column"'),
+                  "images":len(re.findall(r'<img\b',b)),
+                  "has_personal_note":'padding:20px;background:#f0f5ee' in b,
+                  "mobile_css":".story-intro{display:none!important}" in b,
+                  "shell_width":re.findall(r'class="email-shell"[^>]*max-width:([^;]+);',b)[:1],
+                  "logo":"sun-orange.png" if "sun-orange.png" in b else "other"
+              }
+          class Shape(html.parser.HTMLParser):
+              def __init__(self):super().__init__();self.parts=[]
+              def handle_starttag(self,t,a):
+                  d=dict(a)
+                  self.parts.append((t,d.get("class",""),d.get("style","")))
+              def handle_endtag(self,t):self.parts.append(("/"+t,"",""))
+          a=Shape();a.feed(previous.get("body") or "")
+          b=Shape();b.feed(curr.get("body") or "")
+          sm=difflib.SequenceMatcher(None,a.parts,b.parts,autojunk=False)
+          diff=[(tag,i1,i2,j1,j2) for tag,i1,i2,j1,j2 in sm.get_opcodes() if tag!="equal"]
+          print("29 OKTOBER",json.dumps(features(previous),ensure_ascii=False))
+          print("2 NOVEMBER",json.dumps(features(curr),ensure_ascii=False))
+          print("STRUCTURE",json.dumps({"identical":a.parts==b.parts,"ratio":round(sm.ratio(),5),"diff_blocks":len(diff)},ensure_ascii=False))
+          for tag,i1,i2,j1,j2 in diff[:7]:
+              print("DIFFERENCE",json.dumps({"change":tag,"old":a.parts[i1:min(i2,i1+2)],"new":b.parts[j1:min(j2,j1+2)]},ensure_ascii=False))
+          print("READ ONLY: nothing modified")
+          PY
