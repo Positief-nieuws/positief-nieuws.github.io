@@ -1,10 +1,10 @@
 {
   "meta": {
     "edition_date": "2026-11-02",
-    "status": "preview",
-    "publication_authorized": false,
-    "approved_by": null,
-    "approved_on": null,
+    "status": "approved",
+    "publication_authorized": true,
+    "approved_by": "Tom de Haas",
+    "approved_on": "2026-11-02",
     "preview_revision": "2026-11-02-redactionele-preview-1",
     "email_preheader": "Darmkankeronderzoek met hoopgevende resultaten, massale steun voor zeehonden en grote gezondheidswinst in Egypte.",
     "editorial_order": [
@@ -69,7 +69,7 @@
         "rank": 6
       }
     ],
-    "approval_scope": "De eigenaar heeft rechtstreeks live publiceren gevraagd, maar de selectie- en dossiertoetsen zijn nog niet geslaagd. Dit is geen redactioneel bewijsakkoord."
+    "approval_scope": "Eigenaar geeft expliciet akkoord voor directe live publicatie 2 november 2026. De volledige selectietriage en dekking zijn niet geverifieerd. Geen nieuwsbriefverzending."
   },
   "nl": [
     {
