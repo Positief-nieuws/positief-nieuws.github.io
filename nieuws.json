@@ -1,430 +1,389 @@
 {
   "meta": {
-    "edition_date": "2026-10-29",
+    "edition_date": "2026-11-02",
     "status": "approved",
     "publication_authorized": true,
-    "candidate_generated_at": "2026-10-29T12:43:26.932615+01:00",
-    "email_preheader": "Wat wél goed gaat in Leersum, zelfstandigheid voor Jos en natuurherstel in 149 landen.",
-    "preview_revision": "2026-10-29-middag",
+    "approved_by": "Tom de Haas",
+    "approved_on": "2026-11-02",
+    "preview_revision": "2026-11-02-redactionele-preview-1",
+    "email_preheader": "Darmkankeronderzoek met hoopgevende resultaten, massale steun voor zeehonden en grote gezondheidswinst in Egypte.",
     "editorial_order": [
       {
         "section": "nl",
-        "article_slug": "leersum",
+        "article_slug": "darmkanker-immuuntherapie-vijf-jaar",
         "rank": 1
       },
       {
         "section": "nl",
-        "article_slug": "jos-ai-bril",
+        "article_slug": "zeehondencentrum-pieterburen-lauwersoog-steun",
         "rank": 2
       },
       {
         "section": "nl",
-        "article_slug": "matrassen",
+        "article_slug": "winterswijk-contrastvloeistof-water",
         "rank": 3
       },
       {
         "section": "nl",
-        "article_slug": "plastic",
+        "article_slug": "twaalf-nieuwe-meedoenbalies-azc",
         "rank": 4
       },
       {
         "section": "nl",
-        "article_slug": "buurtmoestuin-schiebroek",
+        "article_slug": "utrechtse-heuvelrug-35-hectare-natuur",
         "rank": 5
       },
       {
         "section": "nl",
-        "article_slug": "moswand",
+        "article_slug": "erfelijk-eierstokkanker-risico-minder-overgangsklachten",
         "rank": 6
       },
       {
         "section": "int",
-        "article_slug": "wereldwijd-natuurherstel-vn",
+        "article_slug": "egypte-hepatitis-c-teruggedrongen",
         "rank": 1
       },
       {
         "section": "int",
-        "article_slug": "zeevogels",
+        "article_slug": "australie-nationaal-koalapark",
         "rank": 2
       },
       {
         "section": "int",
-        "article_slug": "vietnam",
+        "article_slug": "irak-boeren-zonnepompen",
         "rank": 3
       },
       {
         "section": "int",
-        "article_slug": "magneten-spierbeweging-prothese",
+        "article_slug": "orang-oetans-terug-borneo-bos",
         "rank": 4
       },
       {
         "section": "int",
-        "article_slug": "appels",
+        "article_slug": "botswana-san-landrechten-routekaart",
         "rank": 5
       },
       {
         "section": "int",
-        "article_slug": "walrus",
+        "article_slug": "britse-moedergroepen-subsidies",
         "rank": 6
       }
     ],
-    "approved_by": "Tom de Haas",
-    "approved_on": "2026-10-29",
-    "approval_scope": "Exacte previewversie met witte editiebalk; opdracht: Knal deze versie live op positief-nieuws.nl en trigger de Buttondown nieuwsbrief."
+    "approval_scope": "Eigenaar geeft expliciet akkoord voor directe live publicatie 2 november 2026. De volledige selectietriage en dekking zijn niet geverifieerd. Geen nieuwsbriefverzending."
   },
   "nl": [
     {
-      "article_slug": "leersum",
-      "candidate_id": "leersum",
-      "title": "In dit azc ziet de koning wat er zo vaak wél goed gaat",
-      "teaser": "Een buddy, een opgeknapte fiets en contact met het dorp: het bezoek van Willem-Alexander brengt een langlopend voorbeeld in beeld.",
-      "category": "Mens",
+      "article_slug": "darmkanker-immuuntherapie-vijf-jaar",
+      "candidate_id": "avl-2026-10-22",
+      "title": "Vijf jaar later nog altijd kankervrij: hoopgevende resultaten bij 111 patiënten",
+      "email_title": "Vijf jaar later nog altijd kankervrij: hoopgevende resultaten bij 111 patiënten",
+      "teaser": "Bij alle 111 patiënten in een Nederlands onderzoek bleef terugkeer van hun specifieke type darmkanker na gemiddeld vijf jaar uit.",
+      "category": "Gezondheid",
       "article_body": [
-        "Opvang die al jaren deel uitmaakt van een dorp: dat wilde koning Willem-Alexander dinsdag 27 oktober zichtbaar maken tijdens zijn bezoek aan het asielzoekerscentrum in Leersum. Hij sprak met bewoners, vrijwilligers en omwonenden en bezocht onder meer de school en de fietsenwerkplaats. Na afloop benadrukte hij dat ook voorbeelden die goed gaan aandacht verdienen.",
-        "Het centrum bestaat al ruim 35 jaar. De samenwerking krijgt er een praktische vorm. In het buddyproject worden nieuwkomers gekoppeld aan dorpsgenoten met gedeelde interesses. Ze leren elkaar kennen op basis van gelijkwaardigheid, met ruimte voor elkaars leven en cultuur.",
-        "In de fietsenwerkplaats knappen vrijwilligers en bewoners gedoneerde fietsen op. Bewoners kunnen er ook fietsles krijgen. Dat heeft dagelijks nut: het centrum ligt in de bossen buiten de dorpskern en de fiets helpt mensen om zelfstandig op pad te gaan.",
-        "Het bezoek was geen verklaring dat er geen problemen zijn. De koning benoemde juist dat die bespreekbaar moeten blijven. Leersum is bovendien één locatie en zegt niet alles over opvang elders. Wel laat het zien wat langdurige samenwerking concreet kan opleveren: contacten die verder gaan dan het terrein van een azc en mensen die samen iets doen."
+        "Vijf jaar na hun behandeling was bij 111 patiënten met een specifieke vorm van darmkanker geen terugkeer van de ziekte vastgesteld. Dat melden onderzoekers van het Antoni van Leeuwenhoek. De patiënten kregen een korte behandeling met immuuntherapie vóór hun geplande operatie. Daarna werden ze gemiddeld vijf jaar gevolgd.",
+        "Het gaat om darmkanker met de kenmerken dMMR of MSI. Deze eigenschappen komen bij een deel van de patiënten met niet-uitgezaaide darmkanker voor en maken de tumor gevoelig voor bepaalde immuuntherapie. Bij 68 procent van de deelnemers waren tijdens de operatie geen levende kankercellen meer te vinden.",
+        "De resultaten zijn veelbelovend, maar niet zomaar te vertalen naar alle vormen van darmkanker. Ook betekent het onderzoek niet dat patiënten de operatie kunnen overslaan: de deelnemers kregen immuuntherapie én werden geopereerd. Verder onderzoek moet uitwijzen voor welke groepen en onder welke omstandigheden de behandeling het beste werkt.",
+        "De winst zit in wat nu daadwerkelijk is gemeten: een opvallend langdurig goed resultaat bij een duidelijk omschreven patiëntengroep. Dat geeft artsen en patiënten nieuwe aanknopingspunten voor gerichtere behandeling."
       ],
-      "url": "https://nieuws.nl/koningshuis/koning-azc-leersum-laat-zien-dat-het-goed-kan-gaan",
-      "source": "ANP / Koninklijk Huis",
-      "published": "2026-10-27",
+      "url": "https://www.avl.nl/nieuwsberichten/2026/vijf-jaar-na-immuuntherapie-nog-geen-terugkeer-van-darmkanker/",
+      "primary_url": "https://www.avl.nl/nieuwsberichten/2026/vijf-jaar-na-immuuntherapie-nog-geen-terugkeer-van-darmkanker/",
+      "source": "Antoni van Leeuwenhoek",
+      "source_id": "antoni-van-leeuwenhoek",
+      "published": "2026-10-22",
       "region": "nl",
       "regional_rank": 1,
-      "headline_options": [
-        "In Leersum laat opvang zien wat er wél goed gaat",
-        "In dit azc ziet de koning wat er wél goed gaat"
-      ],
-      "primary_url": "https://www.koninklijkhuis.nl/actueel/nieuws/2026/10/01/koning-bezoekt-asielzoekerscentrum-leersum",
-      "image_alt": "Archiefbeeld van Willem-Alexander tijdens Koningsdag 2024 in Emmen, niet het bezoek aan Leersum.",
-      "editorial_rank": 1,
-      "image_query": "commons:koningsdag-2024-emmen",
-      "email_title": "In dit azc ziet de koning wat er zo vaak wél goed gaat",
-      "source_id": "koninklijk-huis"
+      "image_query": "id:4099432",
+      "image_alt": "Illustratieve Pixabay-foto van steun aan een patiënt; geen deelnemer aan dit onderzoek.",
+      "editorial_rank": 1
     },
     {
-      "candidate_id": "4229db7390da",
-      "article_slug": "jos-ai-bril",
-      "title": "Jos ziet bijna niets. Zijn AI-bril geeft hem zelfstandigheid terug",
-      "email_title": "Jos ziet bijna niets. Zijn AI-bril geeft hem zelfstandigheid terug",
-      "teaser": "Een menukaart lezen of zijn kop koffie vinden: voor Jos Lavrijsen uit Reusel maakt een slimme bril dagelijkse dingen weer makkelijker.",
-      "category": "Energie & innovatie",
-      "article_body": [
-        "Welke gerechten staan er op de kaart? Waar staat mijn koffie? Voor Jos Lavrijsen uit Reusel zijn dat geen kleine vragen. Hij ziet nog maar één procent. Een bril met camera, microfoon en spraakbesturing helpt hem om zulke dagelijkse dingen zelfstandiger te doen, vertelt hij aan Omroep Brabant.",
-        "In een restaurant kan hij de bril vragen welke kipgerechten er zijn en wat ze kosten. Thuis gebruikt hij geluidssignalen om zijn kopje terug te vinden. Ook laat hij brieven voorlezen en vraagt hij naar de kleur van kleding. Zijn zicht herstelt daarmee niet; hij krijgt informatie op een andere manier aangeboden.",
-        "De 59-jarige Jos deelde zijn ervaringen tijdens een bijeenkomst voor blinden en slechtzienden in Reusel. Voor hem past het hulpmiddel bij een actief leven, waarin hij ook sport en danst. De bruikbaarheid blijkt hier uit zijn persoonlijke ervaringen, niet uit een onderzoek dat vaststelt hoe goed de bril voor iedereen werkt.",
-        "Er zijn ook grenzen. Camera’s kunnen de privacy van omstanders raken en AI kan zich vergissen. De bril is daarom niet zonder meer een vervanging voor een stok of geleidehond. Maar voor Jos heeft de techniek nu al praktische betekenis: zelf informatie kunnen opvragen, op een moment dat hij die nodig heeft."
-      ],
-      "source": "Omroep Brabant",
-      "url": "https://www.omroepbrabant.nl/nieuws/6032048/wat-voor-de-een-een-gluurbril-is-betekent-voor-jos-meer-vrijheid",
-      "published": "2026-10-23T14:30:00+00:00",
-      "region": "nl",
-      "image_query": "id:1052010",
-      "headline_options": [
-        "Jos is bijna blind, maar zijn AI-bril geeft hem extra ogen - Omroep Brabant",
-        "Jos ziet bijna niets. Zijn AI-bril geeft hem zelfstandigheid terug"
-      ],
-      "regional_rank": 2,
-      "editorial_rank": 2,
-      "image_alt": "Een bril; illustratief beeld, niet Jos of zijn AI-bril.",
-      "source_id": "omroep-brabant"
-    },
-    {
-      "article_slug": "matrassen",
-      "title": "63% van oude matrassen ingezameld voor een nieuw leven",
-      "teaser": "Staal, schuim en textiel uit oude matrassen kunnen opnieuw worden gebruikt. Nieuwe afspraken breiden de inzameling uit naar hotels en ziekenhuizen.",
-      "category": "Economie",
-      "article_body": [
-        "Een oud matras hoeft niet volledig verloren te gaan. Staal, schuim en textiel kunnen na gescheiden inzameling uit elkaar worden gehaald en opnieuw worden gebruikt. Volgens de Rijksoverheid werd in 2025 al 63 procent van de afgedankte matrassen ingezameld voor recycling.",
-        "Nieuwe brancheafspraken moeten die inzameling verder brengen. De minister heeft de gezamenlijke financiering opnieuw verplicht gesteld voor bedrijven die matrassen op de Nederlandse markt brengen. De regeling loopt door tot eind oktober 2031. Daarmee blijft de rekening voor inzameling en verwerking over de producenten verdeeld.",
-        "Vanaf november vallen ook zakelijke matrassen onder de afspraken, bijvoorbeeld uit hotels, ziekenhuizen en vakantieparken. Daarnaast wil de branche meer inzamelpunten openen. Het doel is minstens 75 procent inzameling in 2028; voor 2030 wordt gestreefd naar 80 procent.",
-        "Die toekomstige percentages zijn doelen, geen al behaalde resultaten. Ook is een ingezameld matras niet hetzelfde als volledig teruggewonnen materiaal. Daarom zijn er afzonderlijke afspraken over de bruikbaarheid van de materialen na verwerking. De concrete vooruitgang van nu bestaat uit de al gegroeide inzameling en de voortgezette gezamenlijke aanpak. De uitbreiding moet het vervolgens voor meer gebruikers mogelijk maken hun oude matrassen apart te laten verwerken."
-      ],
-      "url": "https://www.rijksoverheid.nl/actueel/nieuws/2026/10/26/nieuwe-afspraken-voor-meer-recycling-van-oude-matrassen",
-      "source": "Rijksoverheid",
-      "source_id": "rijksoverheid",
-      "published": "2026-10-26T10:05:00+00:00",
-      "image_query": "mattress",
-      "headline_options": [
-        "Oude matrassen krijgen vaker een tweede leven als grondstof",
-        "Je oude matras is nog lang niet waardeloos"
-      ],
-      "region": "nl",
-      "regional_rank": 3,
-      "candidate_id": "8246b40151b4",
-      "image_alt": "Matras op een bed; illustratief beeld, niet het recyclingproces.",
-      "editorial_rank": 3,
-      "email_title": "63% van oude matrassen ingezameld voor een nieuw leven"
-    },
-    {
-      "article_slug": "plastic",
-      "candidate_id": "89c7d1414605",
-      "title": "Van afgedankt plastic naar nieuwe bouwstenen",
-      "teaser": "BioBTX wint chemische bouwstenen terug uit moeilijk herbruikbaar plastic. De techniek draait al op kleine schaal; een grotere fabriek moet nog worden gebouwd.",
-      "category": "Energie & innovatie",
-      "article_body": [
-        "Plastic dat nauwelijks nog mechanisch te recyclen is, kan toch een nieuwe bestemming krijgen. In een proefinstallatie op het Groningse Zernikecomplex maakt BioBTX er grondstoffen voor de chemische industrie van. De installatie produceert volgens RTV Noord ongeveer tien kilo per uur.",
-        "Het gaat om benzeen, tolueen en xyleen: bouwstenen voor onder meer kunststoffen en coatings. Gewoonlijk worden ze uit aardolie gemaakt. BioBTX verhit gebruikt plastic zonder zuurstof. De lange molecuulketens vallen uiteen, waarna een katalysator de vrijkomende gassen omzet in een vloeibaar mengsel.",
-        "Aan het proces gingen jaren onderzoek en honderden experimenten met verschillende soorten plastic vooraf. De werkende proefinstallatie is het tastbare resultaat. Daarmee is nog niet bewezen dat dezelfde aanpak op industriële schaal financieel en technisch even goed uitpakt.",
-        "Voor die volgende stap heeft het bedrijf financiering verzameld voor een fabriek in Delfzijl. De bouw is voorzien voor 2027. Omwonenden maken zich zorgen over de aangevoerde plastics en veiligheidsrisico’s; hun bezwaar tegen de milieuvergunning ligt bij de rechter. Het is dus geen afgerond succesverhaal over een draaiende grote fabriek. Wel toont de proef een mogelijke route om koolstof uit afval opnieuw te gebruiken in plaats van die uitsluitend te verbranden."
-      ],
-      "url": "https://www.rtvnoord.nl/economie/1447848/made-in-grunn-biobtx-geeft-oud-plastic-een-tweede-leven",
-      "source": "RTV Noord",
-      "published": "2026-10-24T05:05:10+00:00",
-      "region": "nl",
-      "regional_rank": 4,
-      "headline_options": [
-        "Groningse proefinstallatie maakt nieuwe grondstof van oud plastic",
-        "Van afgedankt plastic naar nieuwe bouwstenen"
-      ],
-      "image_alt": "Plastic doppen; illustratief beeld, niet de installatie van BioBTX.",
-      "editorial_rank": 4,
-      "image_query": "plastic recycling",
-      "email_title": "Van afgedankt plastic naar nieuwe bouwstenen",
-      "source_id": "rtv-noord"
-    },
-    {
-      "candidate_id": "1e553f4e12aa",
-      "article_slug": "buurtmoestuin-schiebroek",
-      "title": "Van eigen moestuin naar samen aan tafel in Schiebroek",
-      "email_title": "Van eigen moestuin naar samen aan tafel in Schiebroek",
-      "teaser": "Tientallen Rotterdamse buurtbewoners tuinieren, koken en eten samen. Zo leren ze niet alleen nieuwe smaken kennen, maar ook elkaar.",
-      "category": "Mens",
-      "article_body": [
-        "In de Rotterdamse wijk Schiebroek groeit meer dan groente. Tientallen bewoners onderhouden er samen een moestuin en koken met de oogst maaltijden voor de buurt. Aan tafel komen recepten uit onder meer Iran, Eritrea, Turkije en Afghanistan samen.",
-        "Initiatiefneemster Mandy Los begon anderhalf jaar geleden een buurthuis in een voormalig schoolgebouw. De moestuin lag er al: ooit aangelegd door de conciërge en de schoolkinderen. Samen met stadsboerin Marlen Arkersteijn en andere betrokkenen bouwde zij voort op die bestaande plek.",
-        "Het idee van Thuis bij de Buurvrouw is eenvoudig. Een buurtbewoner die graag kookt, neemt het voortouw en anderen kunnen aanschuiven. Elke week worden drie maaltijden bereid. Wie zelf groenten heeft helpen groeien, ziet ze terug in gerechten die hij misschien nog nooit heeft gegeten.",
-        "Volgens Mandy groeit het aantal deelnemers doordat mensen elkaar ontmoeten en hun ervaringen doorvertellen. Dat is een praktijkverhaal, geen meting die bewijst hoeveel eenzaamheid het initiatief vermindert. Het tastbare resultaat is er wel: mensen onderhouden samen een tuin en ontmoeten elkaar aan tafel. Niet alleen om over de buurt te praten, maar om met elkaar te werken, te koken en te eten."
-      ],
-      "source": "Rijnmond",
-      "url": "https://www.rijnmond.nl/nieuws/2263681/bewoners-koken-maaltijden-uit-eigen-moestuin-ik-proef-zoveel-verschillende-dingen",
-      "published": "2026-10-25T20:41:00+00:00",
-      "region": "nl",
-      "image_query": "vegetable garden",
-      "headline_options": [
-        "Bewoners koken maaltijden uit eigen moestuin: 'Ik proef zoveel verschillende dingen' - Rijnmond",
-        "Van eigen moestuin naar samen aan tafel in Schiebroek"
-      ],
-      "regional_rank": 5,
-      "editorial_rank": 5,
-      "image_alt": "Vers geoogste radijsjes; illustratief beeld, niet de oogst in Schiebroek.",
-      "source_id": "rijnmond"
-    },
-    {
-      "article_slug": "moswand",
-      "candidate_id": "9ffe542256e0",
-      "title": "Deze Utrechtse betonmuur krijgt een groene huid",
-      "teaser": "In het Daals Kwartier groeit mos op een bestaande gevel. Zo krijgt een plek met weinig ruimte voor bomen toch een groene laag.",
+      "article_slug": "zeehondencentrum-pieterburen-lauwersoog-steun",
+      "candidate_id": "3640ee0ecffc",
+      "title": "1,3 miljoen euro aan steun geeft zeehondencentrum nieuwe hoop",
+      "email_title": "1,3 miljoen euro aan steun geeft zeehondencentrum nieuwe hoop",
+      "teaser": "Massale steun van particulieren geeft het voormalige Zeehondencentrum Pieterburen, tegenwoordig in Lauwersoog, ademruimte.",
       "category": "Natuur & klimaat",
       "article_body": [
-        "Een betonnen muur in het Utrechtse Daals Kwartier ziet er voortaan heel anders uit. Op de bestaande gevel is een speciale laag aangebracht waarop mos groeit. Ondernemers en organisaties uit de buurt financierden de aanleg samen via het Ondernemersfonds Utrecht.",
-        "De wand is gemaakt door Respyre, een bedrijf dat voortkomt uit de TU Delft. Eerst werd de muur gezandstraald en gestuct. Daarna volgde het materiaal dat de mossen houvast geeft. Een irrigatiesysteem ondersteunt hun groei. Het gaat dus om een aangelegd en onderhouden systeem, niet om groen dat vanzelf een kale gevel overneemt.",
-        "Voor een versteende buurt is vooral de beschikbare ruimte van belang. Niet overal past een boom of een brede groenstrook. Een bestaande muur biedt dan een ander oppervlak waarop planten een plek kunnen krijgen, zonder dat de straat opnieuw hoeft te worden ingericht.",
-        "Het bedrijf noemt mogelijke voordelen zoals verkoeling, opvang van fijnstof en geluidsdemping. Hoe groot die effecten bij deze Utrechtse muur precies zijn, is in het bericht niet gemeten. Een temperatuurclaim van de leverancier is daarom geen lokaal bewezen resultaat. De zichtbare winst staat er al wel: een grijze wand heeft een levende, groene bekleding gekregen."
+        "Een dreigend faillissement van het voormalige Zeehondencentrum Pieterburen maakte de afgelopen weken veel los. Inmiddels is er ongeveer 1,3 miljoen euro aan financiële steun binnengekomen. Daardoor kan het centrum voorlopig doorgaan met de opvang en verzorging van zeehonden.",
+        "De organisatie is tegenwoordig gevestigd in Lauwersoog, in het WEC, maar veel mensen kennen haar nog onder de naam Pieterburen. Juist die lange geschiedenis maakt de steun bijzonder: Nederlanders kwamen in korte tijd massaal in actie met donaties en steunbetuigingen.",
+        "De opluchting is reëel, maar de problemen zijn nog niet definitief opgelost. Voor een duurzame toekomst is meer nodig dan één succesvolle inzamelingsactie. Het bedrag geeft vooral tijd om een structurele financiële oplossing te vinden.",
+        "Voor nu betekent de steun dat het werk met dieren kan doorgaan. Het nieuws laat zien hoe een breed gedragen initiatief in korte tijd tastbare hulp kan opleveren, zelfs als de vervolgstappen nog onzeker zijn."
       ],
-      "url": "https://www.duic.nl/algemeen/algemeen/61314/betonnen-muur-in-daals-kwartier-verandert-in-groene-moswand",
-      "source": "DUIC",
-      "published": "2026-10-23T14:05:00+00:00",
+      "url": "https://www.hartvannederland.nl/milieu-gezondheid/dieren/artikelen/zeehondencentrum-lauwersoog-voorlopig-gered-van-faillissement-na-steun",
+      "primary_url": "https://www.hartvannederland.nl/milieu-gezondheid/dieren/artikelen/zeehondencentrum-lauwersoog-voorlopig-gered-van-faillissement-na-steun",
+      "source": "Hart van Nederland",
+      "source_id": "hart-van-nederland",
+      "published": "2026-10-30",
+      "region": "nl",
+      "regional_rank": 2,
+      "image_query": "harbor seal pup beach",
+      "image_alt": "Illustratieve Pixabay-foto bij dit onderwerp; geen beeld van de specifieke gebeurtenis of deelnemers.",
+      "editorial_rank": 2
+    },
+    {
+      "article_slug": "winterswijk-contrastvloeistof-water",
+      "candidate_id": "884da953e19a",
+      "title": "83 procent minder contrastvloeistof in water rond Winterswijk",
+      "email_title": "83 procent minder contrastvloeistof in water rond Winterswijk",
+      "teaser": "Speciale opvangzakken en extra zuivering verminderen samen de vervuiling van lokaal oppervlaktewater.",
+      "category": "Natuur & klimaat",
+      "article_body": [
+        "Rond Winterswijk wordt veel minder contrastvloeistof in het oppervlaktewater gemeten. Een combinatie van maatregelen bij het streekziekenhuis en de waterzuivering heeft volgens de berichtgeving geleid tot een daling van 83 procent.",
+        "Contrastvloeistof helpt artsen om organen en bloedvaten op medische scans zichtbaar te maken. Na een onderzoek verlaat een deel van die stof het lichaam via de urine. Zo kan het in het riool belanden, terwijl gewone zuivering niet altijd alle resten verwijdert.",
+        "Daarom zijn op meerdere plekken maatregelen genomen. Patiënten kunnen speciale opvangzakken gebruiken, en ook de zuivering van het afvalwater is verbeterd. Het gaat dus niet om één wondermiddel, maar om een gezamenlijke aanpak.",
+        "Het resultaat is concreet: minder resten van medische middelen in beken en sloten. Andere ziekenhuizen en waterbeheerders kunnen kijken welke onderdelen van deze werkwijze ook bij hen passen."
+      ],
+      "url": "https://1achterhoek.nl/fors-minder-contrastvloeistof-in-water-bij-ziekenhuis-winterswijk/",
+      "primary_url": "https://1achterhoek.nl/fors-minder-contrastvloeistof-in-water-bij-ziekenhuis-winterswijk/",
+      "source": "1Achterhoek / Omroep Gelderland",
+      "source_id": "omroep-gelderland",
+      "published": "2026-10-27",
+      "region": "nl",
+      "regional_rank": 3,
+      "image_query": "wastewater treatment plant",
+      "image_alt": "Illustratieve Pixabay-foto bij dit onderwerp; geen beeld van de specifieke gebeurtenis of deelnemers.",
+      "editorial_rank": 3
+    },
+    {
+      "article_slug": "twaalf-nieuwe-meedoenbalies-azc",
+      "candidate_id": "bd1fd6edae68",
+      "title": "Twaalf extra Meedoenbalies moeten nieuwkomers op weg helpen",
+      "email_title": "Twaalf extra Meedoenbalies moeten nieuwkomers op weg helpen",
+      "teaser": "Het kabinet breidt het aantal balies in opvanglocaties uit tot vijftig, voor ondersteuning bij werk en activiteiten.",
+      "category": "Economie",
+      "article_body": [
+        "In nog eens twaalf opvanglocaties komt een Meedoenbalie. Daarmee wil het kabinet het aantal balies dit jaar naar vijftig uitbreiden. Ze bieden asielzoekers en andere nieuwkomers een laagdrempelige plek om mogelijkheden voor werk, vrijwilligerswerk en taalactiviteiten te ontdekken.",
+        "De gedachte is praktisch: wie kan meedoen, leert sneller mensen en de omgeving kennen en kan bestaande kennis of vaardigheden benutten. Een balie kan helpen om de eerste stap te zetten of een geschikte activiteit te vinden.",
+        "De uitbreiding is een besluit en nog geen bewijs dat daardoor meer mensen werk hebben gevonden. Daarvoor zijn resultaten van de nieuwe locaties nodig. Wel staat vast dat de ondersteuning voor meer bewoners bereikbaar wordt gemaakt.",
+        "Het nieuws past bij een bredere ontwikkeling in de opvang: niet alleen wachten op procedures, maar waar mogelijk ruimte maken voor zinvolle activiteiten en verbinding met de samenleving."
+      ],
+      "url": "https://www.rijksoverheid.nl/actueel/nieuws/2026/10/28/kabinet-meer-meedoenbalies-in-azcs-om-nieuwkomers-aan-werk-te-helpen",
+      "primary_url": "https://www.rijksoverheid.nl/actueel/nieuws/2026/10/28/kabinet-meer-meedoenbalies-in-azcs-om-nieuwkomers-aan-werk-te-helpen",
+      "source": "Rijksoverheid",
+      "source_id": "rijksoverheid",
+      "published": "2026-10-28",
+      "region": "nl",
+      "regional_rank": 4,
+      "image_query": "id:2247391",
+      "image_alt": "Illustratieve Pixabay-foto van een groep mensen bij een gezamenlijke activiteit; geen foto van een Meedoenbalie.",
+      "editorial_rank": 4
+    },
+    {
+      "article_slug": "utrechtse-heuvelrug-35-hectare-natuur",
+      "candidate_id": "c6e36a69c0b8",
+      "title": "35 hectare nieuwe natuur verbindt de Utrechtse Heuvelrug",
+      "email_title": "35 hectare nieuwe natuur verbindt de Utrechtse Heuvelrug",
+      "teaser": "Nieuwe en verbindende natuur helpt planten en dieren zich tussen bestaande gebieden te verplaatsen.",
+      "category": "Natuur & klimaat",
+      "article_body": [
+        "Bij Maarsbergen is 35 hectare natuur aangelegd of ingericht om natuurgebieden op de Utrechtse Heuvelrug beter met elkaar te verbinden. Het gaat om 25 hectare nieuwe natuur binnen het Natuurnetwerk Nederland en nog eens tien hectare verbindende natuur.",
+        "Zo'n verbinding is belangrijk omdat dieren zich niet aan de grenzen van een natuurgebied houden. Ze hebben ruimte nodig om voedsel te zoeken, soortgenoten te vinden en zich voort te planten. Ook planten profiteren wanneer soorten zich gemakkelijker kunnen verspreiden.",
+        "De nieuwe inrichting sluit aan op bestaande leefgebieden en versterkt de functie van een ecoduct in de buurt. Daarmee ontstaat niet alleen meer natuur op papier, maar ook een logischere route tussen plekken die eerder sterker van elkaar gescheiden waren.",
+        "Of de verbinding op lange termijn door veel soorten wordt benut, moet monitoring laten zien. De concrete vooruitgang is dat de benodigde ruimte en inrichting nu aanwezig zijn."
+      ],
+      "url": "https://www.naturetoday.com/intl/nl/nature-reports/message/?msg=36004",
+      "primary_url": "https://www.naturetoday.com/intl/nl/nature-reports/message/?msg=36004",
+      "source": "Nature Today",
+      "source_id": "nature-today",
+      "published": "2026-11-01",
+      "region": "nl",
+      "regional_rank": 5,
+      "image_query": "netherlands forest heathland",
+      "image_alt": "Illustratieve Pixabay-foto van Nederlands bos en heide, niet van de nieuwe natuurverbinding bij Maarsbergen.",
+      "editorial_rank": 5
+    },
+    {
+      "article_slug": "erfelijk-eierstokkanker-risico-minder-overgangsklachten",
+      "candidate_id": "c3e2f54fce9c",
+      "title": "Nieuwe aanpak vermindert overgangsklachten bij erfelijk kankerrisico",
+      "email_title": "Nieuwe aanpak vermindert overgangsklachten bij erfelijk kankerrisico",
+      "teaser": "Onderzoek bij 570 vrouwen wijst op een betere kwaliteit van leven wanneer een ingreep in twee stappen wordt uitgevoerd.",
+      "category": "Gezondheid",
+      "article_body": [
+        "Vrouwen met een erfelijk verhoogd risico op eierstokkanker staan soms al jong voor een ingrijpende keuze. Een preventieve operatie kan het risico op kanker verkleinen, maar het vroeg verwijderen van de eierstokken veroorzaakt ook een vervroegde overgang.",
+        "Onderzoekers onderzochten daarom een andere aanpak: eerst de eileiders verwijderen en de eierstokken pas enkele jaren later. In een studie onder 570 vrouwen werd na vijf jaar gekeken naar hun ervaringen. De vrouwen met de aanpak in twee stappen rapporteerden minder overgangsklachten.",
+        "Dat is belangrijk voor de kwaliteit van leven. De ingreep biedt mogelijk meer jaren zonder de lichamelijke gevolgen van een vroege overgang. Er is wel een wezenlijke onzekerheid: of deze aanpak net zo goed beschermt tegen eierstokkanker als de huidige behandeling, is nog niet aangetoond.",
+        "Een grotere internationale vervolgstudie onderzoekt de veiligheid. De uitkomst is dus een aantoonbaar voordeel bij klachten, geen bewezen vervanging van de bestaande preventieve standaard."
+      ],
+      "url": "https://www.radboudumc.nl/nieuws/2026/nieuwe-aanpak-bij-erfelijk-risico-op-eierstokkanker-geeft-minder-klachten",
+      "primary_url": "https://www.radboudumc.nl/nieuws/2026/nieuwe-aanpak-bij-erfelijk-risico-op-eierstokkanker-geeft-minder-klachten",
+      "source": "Radboudumc",
+      "source_id": "radboudumc",
+      "published": "2026-10-27",
       "region": "nl",
       "regional_rank": 6,
-      "headline_options": [
-        "Van kale betonmuur naar een groene moswand in Utrecht",
-        "Deze Utrechtse betonmuur krijgt een groene huid"
-      ],
-      "image_alt": "Close-up van mos; illustratief beeld, niet de Utrechtse gevel.",
-      "editorial_rank": 6,
-      "image_query": "moss wall",
-      "email_title": "Deze Utrechtse betonmuur krijgt een groene huid",
-      "source_id": "duic"
+      "image_query": "woman consultation doctor hospital",
+      "image_alt": "Illustratieve Pixabay-foto bij dit onderwerp; geen beeld van de specifieke gebeurtenis of deelnemers.",
+      "editorial_rank": 6
     }
   ],
   "int": [
     {
-      "article_slug": "wereldwijd-natuurherstel-vn",
-      "candidate_id": "e9341b12d3f6",
-      "title": "In 149 landen wordt natuur hersteld: 252 miljoen hectare in beweging",
-      "email_title": "In 149 landen wordt natuur hersteld: 252 miljoen hectare in beweging",
-      "teaser": "Een nieuw VN-rapport brengt de grootste gedocumenteerde herstelinspanning tot nu toe in beeld. Onder herstel is iets anders dan al volledig hersteld.",
-      "category": "Natuur & klimaat",
-      "source": "UNEP, FAO en het Biodiversiteitsverdrag",
-      "url": "https://www.unep.org/en/news-and-stories/press-release/nature-making-comeback-world-must-move-faster-meet-restoration",
-      "primary_url": "https://www.unep.org/en/news-and-stories/press-release/nature-making-comeback-world-must-move-faster-meet-restoration",
-      "published": "2026-10-29",
+      "article_slug": "egypte-hepatitis-c-teruggedrongen",
+      "candidate_id": "ad769a530721",
+      "title": "Egypte dringt hepatitis C terug tot 0,28 procent",
+      "email_title": "Egypte dringt hepatitis C terug tot 0,28 procent",
+      "teaser": "Miljoenen screenings en behandelingen leveren een bijzondere verbetering op, al is het virus nog niet uitgebannen.",
+      "category": "Gezondheid",
       "article_body": [
-        "Nieuwe bossen, herstelde rivieren en terugkerende wetlands: wereldwijd wordt aan het herstel van 252 miljoen hectare natuur gewerkt. Die oppervlakte, verspreid over 149 landen, staat in een nieuw rapport dat de Verenigde Naties op 29 oktober presenteerden.",
-        "De inventarisatie bundelt gegevens die overheden en herstelinitiatieven zelf aanleverden. Daarmee is het een breed overzicht van werk dat daadwerkelijk is begonnen. Het cijfer zegt niet dat al deze gebieden hun oorspronkelijke rijkdom aan planten en dieren hebben teruggekregen. Ecologisch herstel duurt vaak jaren en vraagt blijvend beheer.",
-        "De schaal geeft wel reden voor hoop. Veel lokale projecten blijken samen een beweging van formaat. Herstel kan leefgebieden verbinden en water, bodem en bestaansmiddelen verbeteren. Of dat lukt, moet op de afzonderlijke plekken worden gevolgd.",
-        "De VN waarschuwen tegelijk dat het tempo nog onvoldoende is voor de doelen van 2030. Vooral zoetwatergebieden, zee en kust lopen achter. Ook verschillen landen sterk in wat zij kunnen meten en rapporteren. De kern van dit nieuws is daarom zowel bemoedigend als concreet: natuurherstel gebeurt op grote schaal, en het werk moet lang genoeg doorgaan om die inspanning in blijvend resultaat om te zetten."
+        "Egypte behoorde lange tijd tot de landen met de grootste problemen door hepatitis C. Nieuwe cijfers van de Egyptische overheid laten zien hoe sterk de situatie is veranderd: onder inwoners van 15 tot 59 jaar wordt het voorkomen van de virusinfectie inmiddels op 0,28 procent geschat.",
+        "Achter de daling zit een jarenlange, grootschalige aanpak. Tientallen miljoenen mensen werden gescreend, en miljoenen besmette inwoners kregen behandeling. Volgens de regering ligt de sterfte door hepatitis C 54 procent lager dan in 2018.",
+        "De Wereldgezondheidsorganisatie erkende in oktober opnieuw dat Egypte ver is gekomen richting eliminatie. Die gouden erkenning betekent niet dat hepatitis C al volledig verdwenen is. De meest recente prevalentie- en sterftecijfers zijn bovendien afkomstig uit nationale overheidsrapportage.",
+        "Toch is de richting bijzonder: een land met een zeer grote ziektelast heeft door systematisch testen en behandelen een enorme gezondheidswinst bereikt. Daarmee is Egypte een voorbeeld voor andere landen."
       ],
-      "image_alt": "Jonge bomen groeien tussen oudere stammen in een berglandschap. Illustratief Pixabay-beeld; geen opname van een specifiek project uit het VN-rapport.",
-      "headline_options": [
-        "VN documenteren 252 miljoen hectare natuur onder herstel",
-        "In 149 landen wordt natuur hersteld: 252 miljoen hectare in beweging"
-      ],
+      "url": "https://english.ahram.org.eg/NewsContentP/1/581401/Egypt/Egypt%3Bs-hepatitis-C-prevalence-falls-to-%2C-deaths-d.aspx",
+      "primary_url": "https://english.ahram.org.eg/NewsContentP/1/581401/Egypt/Egypt%3Bs-hepatitis-C-prevalence-falls-to-%2C-deaths-d.aspx",
+      "source": "Ahram Online / WHO",
+      "source_id": "ahram-online",
+      "published": "2026-11-01",
       "region": "int",
       "regional_rank": 1,
-      "editorial_rank": 7,
-      "image_query": "id:2058977",
-      "source_id": "unep"
+      "image_query": "id:3498584",
+      "image_alt": "Illustratieve Pixabay-foto van medisch laboratoriumonderzoek; geen opname uit Egypte.",
+      "editorial_rank": 7
     },
     {
-      "article_slug": "zeevogels",
-      "candidate_id": "b992bcf010b6",
-      "title": "Een vlieger boven het visnet kan zeevogels sparen",
-      "teaser": "Een praktijkproef voor de kust van Cornwall vond minder bijvangst van alken en zeekoeten bij netten met vogelverschrikking. De hulpmiddelen hebben ook beperkingen.",
-      "category": "Wetenschap",
+      "article_slug": "australie-nationaal-koalapark",
+      "candidate_id": "a7c70268b9ad",
+      "title": "Australië zet grote stap richting nationaal koalapark",
+      "email_title": "Australië zet grote stap richting nationaal koalapark",
+      "teaser": "Deelstaat New South Wales geeft goedkeuring aan de bescherming van een groot leefgebied voor koala's.",
+      "category": "Natuur & klimaat",
       "article_body": [
-        "Een roofvogelvormige vlieger boven een visnet kan het verschil maken voor een duikende zeevogel. In een onderzoek voor de kust van Cornwall hadden netten met zulke vliegers een kleinere kans om alken en zeekoeten te vangen. Ook boeien met grote draaiende ogen lieten een gunstig effect zien.",
-        "Tien vissers werkten mee aan de proef, die meer dan duizend netten omvatte. Ze gebruikten telkens een net met een afschrikmiddel en een vergelijkbaar net zonder. Camera’s registreerden het binnenhalen. De studie verscheen in Conservation Letters; Mongabay beschreef de resultaten op 23 oktober.",
-        "De onderzoekers vonden bij de vliegers 71 procent lagere odds op bijvangst van deze vogels en bij de oogboeien 59 procent. Dat zijn statistische verhoudingen, geen telling dat precies zoveel procent van alle zeevogels is gered. De proef liet ook zien dat vooral bepaalde wintermaanden en typen netten risico’s geven.",
-        "Er blijven praktische vragen. Vliegers werken minder goed bij heel weinig of juist veel wind. Boeien trokken mogelijk zeehonden aan en vogels kunnen aan afschrikmiddelen wennen. Bovendien werken enkele auteurs voor de fabrikant. De uitkomst biedt dus geen universele oplossing, maar wel aanknopingspunten om samen met vissers de onbedoelde sterfte te beperken."
+        "In de Australische deelstaat New South Wales is een grote stap gezet voor de bescherming van koala's. De overheid heeft de plannen voor een nationaal park van ongeveer 475.000 hectare goedgekeurd. Het gebied moet leefruimte bieden aan koala's en andere bedreigde diersoorten.",
+        "Bescherming op deze schaal kan waardevol zijn omdat dieren voldoende aaneengesloten bos nodig hebben. Versnippering, ontbossing en veranderende omstandigheden maken het voor soorten moeilijker om een veilige leefomgeving te behouden.",
+        "De beslissing betekent nog niet dat alle plannen al zijn uitgevoerd. Ook bestaat discussie over een deel van de financiering via koolstofkredieten. Voorstanders van natuurbehoud spreken desondanks van een belangrijke overwinning na jaren van inzet.",
+        "De concrete stap is een politiek en juridisch akkoord voor grootschalige bescherming. Wat dit op langere termijn betekent voor de koalapopulatie, zal nog moeten blijken."
       ],
-      "url": "https://news.mongabay.com/2026/10/googly-eyed-buoys-and-kites-help-keep-seabirds-out-of-fishing-nets-study-finds/",
+      "url": "https://news.mongabay.com/2026/10/historic-win-australian-state-approves-national-koala-park-despite-controversial-funding/",
+      "primary_url": "https://news.mongabay.com/2026/10/historic-win-australian-state-approves-national-koala-park-despite-controversial-funding/",
       "source": "Mongabay",
-      "published": "2026-10-23T05:16:23+00:00",
+      "source_id": "mongabay",
+      "published": "2026-10-29",
       "region": "int",
       "regional_rank": 2,
-      "headline_options": [
-        "Vliegers boven visnetten geven zeevogels een betere kans",
-        "Een vlieger boven het visnet kan zeevogels sparen"
-      ],
-      "primary_url": "https://doi.org/10.1111/con4.70082",
-      "image_alt": "Alk aan de kust; illustratief beeld, niet de onderzochte visnetten.",
-      "editorial_rank": 8,
-      "image_query": "razorbill",
-      "email_title": "Een vlieger boven het visnet kan zeevogels sparen",
-      "source_id": "mongabay"
+      "image_query": "koala eucalyptus",
+      "image_alt": "Illustratieve Pixabay-foto bij dit onderwerp; geen beeld van de specifieke gebeurtenis of deelnemers.",
+      "editorial_rank": 8
     },
     {
-      "article_slug": "vietnam",
-      "title": "Vietnamese kwekers oogsten met steeds hetzelfde water",
-      "teaser": "In de Mekongdelta draaien 38 proefsystemen die kweekwater behandelen en hergebruiken. De eerste bedrijfsresultaten zijn veelbelovend, meldt IUCN.",
-      "category": "Natuur & klimaat",
+      "article_slug": "irak-boeren-zonnepompen",
+      "candidate_id": "fe33ff92693a",
+      "title": "Zonnepompen geven boeren in Zuid-Irak nieuwe kansen",
+      "email_title": "Zonnepompen geven boeren in Zuid-Irak nieuwe kansen",
+      "teaser": "Met zonne-energie en gerichtere irrigatie kunnen boeren minder diesel gebruiken en water besparen.",
+      "category": "Energie & innovatie",
       "article_body": [
-        "Garnalen kweken met water dat steeds opnieuw wordt gebruikt: in de Vietnamese Mekongdelta gebeurt dat inmiddels op tientallen proeflocaties. Volgens natuurorganisatie IUCN waren in september 38 van de 45 geplande kringloopsystemen operationeel. Het project combineert technische ondersteuning met aandacht voor mangroven en bestaande bedrijfsinrichting.",
-        "Zo’n systeem behandelt kweekwater en brengt het terug naar de vijvers. Daardoor hoeven boeren minder afhankelijk te zijn van voortdurend nieuw water uit de omgeving. Dat is relevant in een delta waar waterkwaliteit, extreem weer en ziekten het werk kunnen bemoeilijken.",
-        "IUCN meldt ook concrete opbrengsten. Van de eerste zeven gevolgde garnalenkwekers maakten er zes winst, variërend van ongeveer duizend tot 26.000 dollar per oogstcyclus. Het zijn kleine aantallen en zeer uiteenlopende uitkomsten. Ze bewijzen niet dat iedere kweker met deze aanpak winst zal maken.",
-        "De organisatie voert het project zelf uit en is daarmee een betrokken bron. Onafhankelijke langetermijnresultaten ontbreken in dit bericht. Ook verdwijnen ziekterisico’s niet volledig door water te hergebruiken. Toch gaat het hier verder dan een plan: systemen zijn in gebruik en de eerste ondernemers oogsten ermee. De volgende stap is te volgen of die voordelen ook over langere tijd en op meer bedrijven standhouden."
+        "Op landbouwbedrijven in Zuid-Irak wordt zonne-energie ingezet om water voor gewassen op te pompen. Voor boeren die afhankelijk zijn van kostbare diesel en te maken hebben met waterschaarste, kan dat direct verschil maken.",
+        "Het initiatief, ondersteund door het VN-ontwikkelingsprogramma UNDP en Japan, combineert zonnepompen met gerichtere irrigatie. Dat moet zorgen voor minder brandstofverbruik en verstandiger gebruik van schaars water.",
+        "Het verhaal laat vooral zien wat er op projectniveau mogelijk is. Het gaat niet om een landelijke omschakeling, en de resultaten mogen niet worden opgeblazen tot een oplossing voor alle droogteproblemen in Irak.",
+        "Maar voor de deelnemende boeren is het een praktische verandering: zij krijgen een alternatief voor dieselpompen en meer mogelijkheden om met minder middelen te blijven produceren. Dat maakt de innovatie direct relevant voor het dagelijks bestaan."
       ],
-      "url": "https://iucn.org/story/202610/recirculating-aquaculture-system-sustainable-future-aquaculture-mekong-delta",
-      "source": "IUCN",
-      "source_id": "iucn",
-      "published": "2026-10-26T08:29:55+00:00",
-      "image_query": "id:6795464",
-      "headline_options": [
-        "Vietnamese kwekers houden water in de kringloop",
-        "Vietnamese kwekers oogsten met steeds hetzelfde water"
-      ],
+      "url": "https://www.undp.org/arab-states/stories/fuel-costs-greener-fields-solar-energy-brings-new-hope-farmers-southern-iraq",
+      "primary_url": "https://www.undp.org/arab-states/stories/fuel-costs-greener-fields-solar-energy-brings-new-hope-farmers-southern-iraq",
+      "source": "UNDP",
+      "source_id": "undp",
+      "published": "2026-11-01",
       "region": "int",
       "regional_rank": 3,
-      "candidate_id": "df8ac7fb0f21",
-      "image_alt": "Viskweekvijvers; illustratief beeld bij aquacultuur, niet de Vietnamese garnalenbedrijven.",
-      "editorial_rank": 9,
-      "email_title": "Vietnamese kwekers oogsten met steeds hetzelfde water"
+      "image_query": "id:2742302",
+      "image_alt": "Illustratieve Pixabay-foto van zonnepanelen bij waterinfrastructuur; niet gemaakt op dit project in Irak.",
+      "editorial_rank": 9
     },
     {
-      "article_slug": "magneten-spierbeweging-prothese",
-      "candidate_id": "408064675679",
-      "title": "Piepkleine magneten maken spierbewegingen beter meetbaar",
-      "email_title": "Piepkleine magneten maken spierbewegingen beter meetbaar",
-      "teaser": "Drie mensen met een onderbeenamputatie bestuurden een cursor met signalen uit hun spieren. De techniek kan een stap zijn naar beter bestuurbare protheses.",
-      "category": "Wetenschap",
-      "source": "MIT News",
-      "url": "https://news.mit.edu/2026/magnetic-sensors-track-muscle-movement-better-prosthetic-limb-control-1029",
-      "primary_url": "https://news.mit.edu/2026/magnetic-sensors-track-muscle-movement-better-prosthetic-limb-control-1029",
-      "published": "2026-10-29",
-      "article_body": [
-        "Een prothese moet begrijpen wat de drager wil doen. Onderzoekers van MIT hebben daarvoor een nieuwe manier getest om bewegingen in overgebleven spieren te volgen: twee kleine magnetische bolletjes in een spier, met een sensor buiten het lichaam.",
-        "Als de spier rekt of samentrekt, verandert de afstand tussen de magneten. De sensor meet dat door de huid heen. Zo krijgen onderzoekers informatie over de lengte en bewegingssnelheid van de spier. Metingen via elektroden op de huid zijn gevoeliger voor onder meer zweet en signalen van andere spieren.",
-        "Aan de studie deden drie mensen mee met een onderbeenamputatie waarbij spierparen operatief met elkaar waren verbonden. Ze gebruikten tijdens de proef geen prothese, maar stuurden een cursor naar doelen op een scherm. De magnetische metingen maakten volgens de onderzoekers een nauwkeuriger en stabieler besturing mogelijk dan de vergeleken elektrische meetmethoden.",
-        "De bolletjes zijn drie millimeter groot en moeten operatief worden ingebracht. Het onderzoek laat dus nog niet zien dat mensen hiermee in het dagelijks leven beter lopen. Een grotere vervolgstudie onderzoekt de besturing van echte protheses. Het bereikte resultaat is een meetmethode die bij mensen werkt en informatie ontsluit die voor natuurlijke beweging belangrijk kan zijn."
-      ],
-      "image_alt": "Een technicus werkt aan een orthopedisch hulpmiddel. Illustratieve foto; niet het MIT-team of de onderzochte magnetische sensoren.",
-      "headline_options": [
-        "Magnetische spiersensoren getest bij drie mensen met een amputatie",
-        "Piepkleine magneten maken spierbewegingen beter meetbaar"
-      ],
-      "region": "int",
-      "regional_rank": 4,
-      "editorial_rank": 10,
-      "image_query": "id:4672316",
-      "source_id": "mit-news"
-    },
-    {
-      "article_slug": "appels",
-      "candidate_id": "cba5f14cacad",
-      "title": "Vergeten appelrassen krijgen weer een plek in de boomgaard",
-      "teaser": "Een proefboomgaard met ruim tweeduizend bomen levert de eerste appels voor marktproeven. Daarmee wordt onderzocht of oude rassen ook nu een toekomst hebben.",
-      "category": "Economie",
-      "article_body": [
-        "Ilzer Rose en Falchs Gulderling zijn geen nieuwe merknamen, maar oude appelrassen uit het Alpengebied. In een proef van supermarktketen Spar en fruithandelaar Frutura krijgen ze opnieuw ruimte. In een boomgaard in de Oostenrijkse deelstaat Stiermarken staan inmiddels 2.150 bomen; de eerste vruchten zijn deze maand geplukt.",
-        "De appels worden gebruikt voor proefverkopen op Weense markten. De bedrijven willen onderzoeken of de historische rassen onder de huidige omstandigheden geschikt zijn voor commerciële teelt. Niet alleen de smaak telt, maar ook de vraag of telers ze betrouwbaar kunnen produceren en consumenten ze willen kopen.",
-        "In supermarkten is de keuze vaak beperkt tot een klein aantal bekende rassen. Oude variëteiten opnieuw telen kan helpen om meer smaak en landbouwgeschiedenis te behouden. Dat betekent nog niet dat elk oud ras automatisch beter groeit of minder bestrijdingsmiddelen nodig heeft.",
-        "De eerste oogst is een concreet begin, geen landelijke terugkeer in het schap. Voor bredere verkoop moeten de proeven uitwijzen hoe de appels presteren. Juist dat maakt het initiatief interessant: de rassen worden niet alleen in een verzameling bewaard, maar krijgen de kans opnieuw onderdeel te worden van wat mensen dagelijks eten."
-      ],
-      "url": "https://www.goodnewsnetwork.org/major-supermarket-begins-wide-scale-tests-to-bring-heritage-apple-varieties-to-market/",
-      "source": "Good News Network",
-      "published": "2026-10-22T15:30:32+00:00",
-      "region": "int",
-      "regional_rank": 5,
-      "headline_options": [
-        "Oude Oostenrijkse appelrassen krijgen een nieuwe oogst",
-        "Vergeten appelrassen krijgen weer een plek in de boomgaard"
-      ],
-      "image_alt": "Appels aan een boom; illustratief beeld, niet de onderzochte Oostenrijkse rassen.",
-      "editorial_rank": 11,
-      "image_query": "apple orchard",
-      "email_title": "Vergeten appelrassen krijgen weer een plek in de boomgaard",
-      "source_id": "good-news-network"
-    },
-    {
-      "article_slug": "walrus",
-      "candidate_id": "452d06e391a6",
-      "title": "Alleen op een strand gevonden: walrusjong Annautaq krijgt een nieuwe kans",
-      "teaser": "Na zijn redding op een afgelegen strand in Alaska is het jonge dier ondergebracht bij gespecialiseerde verzorgers. Terugkeer naar zee is voor hem geen optie.",
+      "article_slug": "orang-oetans-terug-borneo-bos",
+      "candidate_id": "55cbdddea1eb",
+      "title": "Negen geredde orang-oetans keren terug naar beschermd bos",
+      "email_title": "Negen geredde orang-oetans keren terug naar beschermd bos",
+      "teaser": "Na verzorging en herstel zijn negen dieren uitgezet in het regenwoud op Borneo.",
       "category": "Natuur & klimaat",
       "article_body": [
-        "Een jonge walrus die alleen achterbleef op een afgelegen strand in Alaska heeft de eerste opvang overleefd en een nieuwe verblijfplaats gekregen. Het mannetje Annautaq wordt nu verzorgd in SeaWorld Orlando. Daar krijgt hij flesvoeding, diergeneeskundige zorg en voortdurende begeleiding.",
-        "Een lokale onderzoeksmedewerker en een wetenschapper vonden hem nadat een kudde tijdens zware branding was vertrokken. Het jong had zich tussen resten van volwassen walrussen verscholen en werd belaagd door vogels. Mensen uit de omgeving hielpen hem totdat vervoer naar het Alaska SeaLife Center mogelijk was.",
-        "De Amerikaanse natuurdienst stelde vast dat hij niet terug kon naar het wild. Jonge walrussen zijn lang afhankelijk van hun moeder voor voedsel, bescherming en het leren van gedrag. De verhuizing naar Florida is daarom bedoeld voor permanente opvang en contact met andere walrussen, niet als voorbereiding op vrijlating.",
-        "De berichtgeving is mede gebaseerd op informatie van de betrokken opvanginstellingen. Hun bredere claims over educatie of natuurbescherming zijn daarmee niet onafhankelijk bewezen. De concrete goede afloop is kleiner en persoonlijker: een dier dat op het strand nauwelijks kans maakte, heeft specialistische zorg gekregen. Hoe het contact met zijn nieuwe soortgenoten verloopt, wordt stap voor stap gevolgd."
+        "Voor negen orang-oetans op Borneo begint een nieuw hoofdstuk. De dieren waren eerder gered uit gebieden die door branden waren getroffen. Na opvang en herstel konden ze terugkeren naar beschermd regenwoud.",
+        "Een terugkeer naar het wild is meer dan een symbolisch moment. Orang-oetans zijn afhankelijk van uitgestrekte bossen en hebben de juiste omstandigheden nodig om voedsel te vinden en zich veilig te verplaatsen. Daarom vraagt vrijlating voorbereiding en geschikte leefruimte.",
+        "De uitzetting laat zien wat natuurorganisaties en opvangcentra concreet kunnen bereiken voor individuele dieren. Tegelijk blijven bosbranden en aantasting van leefgebieden grote bedreigingen in Indonesië.",
+        "Het positieve resultaat is duidelijk afgebakend: deze negen dieren hebben opnieuw een plek in een beschermd bos gekregen. Of ze zich daar blijvend goed redden, moet de tijd uitwijzen."
       ],
-      "url": "https://www.goodnewsnetwork.org/rescuers-ensure-orphaned-baby-walrus-gets-a-second-chance-look/",
-      "source": "Good News Network",
-      "published": "2026-10-23T18:30:31+00:00",
+      "url": "https://today.rtl.lu/news/world/new-home-for-orangutans-rescued-from-indonesias-burning-forests-278014660",
+      "primary_url": "https://today.rtl.lu/news/world/new-home-for-orangutans-rescued-from-indonesias-burning-forests-278014660",
+      "source": "AFP / RTL Today",
+      "source_id": "rtl-today",
+      "published": "2026-10-30",
+      "region": "int",
+      "regional_rank": 4,
+      "image_query": "id:9967417",
+      "image_alt": "Illustratieve Pixabay-foto van orang-oetans; niet de negen vrijgelaten dieren.",
+      "editorial_rank": 10
+    },
+    {
+      "article_slug": "botswana-san-landrechten-routekaart",
+      "candidate_id": "2b12e160ad77",
+      "title": "Botswana zet belangrijke stap richting herstel landrechten voor de San",
+      "email_title": "Botswana zet belangrijke stap richting herstel landrechten voor de San",
+      "teaser": "Een goedgekeurde routekaart brengt een langdurig proces voor inheemse gemeenschappen een stap verder.",
+      "category": "Mens",
+      "article_body": [
+        "Voor inheemse San-gemeenschappen in Botswana is een nieuw traject naar herstel van landrechten gestart. De overheid heeft een routekaart goedgekeurd die moet leiden tot een proces van teruggave en erkenning van land.",
+        "Land is voor deze gemeenschappen niet alleen een economische hulpbron. Het hangt samen met leefwijze, identiteit en toegang tot natuurlijke hulpbronnen. Discussies over bezit en zeggenschap spelen er al lange tijd.",
+        "De goedgekeurde routekaart is een officiële stap vooruit, maar nog geen afgeronde teruggave. Wetten, uitvoering en concrete afspraken met de betrokken gemeenschappen moeten nog volgen. Dat onderscheid is belangrijk om het nieuws niet groter te maken dan het is.",
+        "Juist doordat er een formeel proces is gestart, ontstaat er opnieuw perspectief. Het vervolg bepaalt of de aangekondigde erkenning ook werkelijk verandering brengt in het dagelijks leven."
+      ],
+      "url": "https://news.mongabay.com/2026/10/a-historic-land-restitution-process-offers-new-hope-for-botswanas-indigenous-san/",
+      "primary_url": "https://news.mongabay.com/2026/10/a-historic-land-restitution-process-offers-new-hope-for-botswanas-indigenous-san/",
+      "source": "Mongabay",
+      "source_id": "mongabay",
+      "published": "2026-10-30",
+      "region": "int",
+      "regional_rank": 5,
+      "image_query": "botswana kalahari landscape",
+      "image_alt": "Illustratieve Pixabay-foto bij dit onderwerp; geen beeld van de specifieke gebeurtenis of deelnemers.",
+      "editorial_rank": 11
+    },
+    {
+      "article_slug": "britse-moedergroepen-subsidies",
+      "candidate_id": "0486bcfd275e",
+      "title": "Britse moedergroepen kunnen doorgaan dankzij nieuwe steun",
+      "email_title": "Britse moedergroepen kunnen doorgaan dankzij nieuwe steun",
+      "teaser": "Een stichting in Cumbria ontvangt 70.000 pond om fysieke ontmoetingsgroepen voor moeders voort te zetten.",
+      "category": "Mens",
+      "article_body": [
+        "Een aantal fysieke ontmoetingsgroepen voor moeders in het Britse Cumbria dreigde te verdwijnen. Dankzij nieuwe subsidies van in totaal 70.000 pond kan de betrokken stichting de bijeenkomsten voorlopig voortzetten.",
+        "De groepen bieden moeders gelegenheid om ervaringen uit te wisselen, vragen te stellen en andere ouders te ontmoeten. Juist na een geboorte kan die persoonlijke verbinding belangrijk zijn. Online informatie kan veel bieden, maar vervangt niet altijd het contact met mensen in dezelfde levensfase.",
+        "De financiering is geen garantie dat de groepen voor altijd blijven bestaan. Wel is de directe dreiging afgewend, waardoor het bestaande aanbod voorlopig beschikbaar blijft.",
+        "Het is positief nieuws op kleine schaal, maar met duidelijke betekenis. Voor ouders die er gebruik van maken, kan de zekerheid van een vaste ontmoetingsplek veel verschil maken."
+      ],
+      "url": "https://www.bbc.co.uk/news/articles/cvglw35zjwkgo",
+      "primary_url": "https://www.bbc.co.uk/news/articles/cvglw35zjwkgo",
+      "source": "BBC",
+      "source_id": "bbc",
+      "published": "2026-11-01",
       "region": "int",
       "regional_rank": 6,
-      "headline_options": [
-        "Gered walrusjong Annautaq krijgt langdurige verzorging",
-        "Alleen op een strand gevonden: walrusjong Annautaq krijgt een nieuwe kans"
-      ],
-      "image_alt": "Walrussen; illustratief beeld, niet het geredde jong Annautaq.",
-      "editorial_rank": 12,
-      "image_query": "walrus",
-      "email_title": "Alleen op een strand gevonden: walrusjong Annautaq krijgt een nieuwe kans",
-      "source_id": "good-news-network"
+      "image_query": "mother baby support group",
+      "image_alt": "Illustratieve Pixabay-foto bij dit onderwerp; geen beeld van de specifieke gebeurtenis of deelnemers.",
+      "editorial_rank": 12
     }
   ],
   "headlines": [
     {
-      "title": "Mogelijk flinke pensioenverhoging bij ABP en PME door gestegen dekkingsgraad",
-      "url": "https://nos.nl/artikel/2637103-mogelijk-flinke-pensioenverhoging-bij-abp-en-pme-door-gestegen-dekkingsgraad",
+      "title": "Amerikanen stemmen dinsdag over het Congres, zorgen over eerlijk verloop",
+      "url": "https://nos.nl/l/2637659",
       "source": "NOS",
       "source_id": "nos",
-      "published": "2026-10-28"
+      "published": "2026-11-01"
     },
     {
-      "title": "ECB-president Lagarde stopt al in februari in plaats van eind oktober 2027",
-      "url": "https://nos.nl/artikel/2637136-ecb-president-lagarde-stopt-al-in-februari-in-plaats-van-eind-oktober-2027",
+      "title": "Nieuwe Israëlische aanvallen in Gaza ondanks staakt-het-vuren",
+      "url": "https://nos.nl/l/2637590",
       "source": "NOS",
       "source_id": "nos",
-      "published": "2026-10-29"
+      "published": "2026-11-01"
     },
     {
-      "title": "JA21, BBB en SGP stellen samen eisen en zetten kabinet nog meer onder druk",
-      "url": "https://nos.nl/artikel/2637113-ja21-bbb-en-sgp-stellen-samen-eisen-en-zetten-kabinet-nog-meer-onder-druk",
+      "title": "Politieke onrust in Brazilië na de verkiezingen",
+      "url": "https://nos.nl/l/2637669",
       "source": "NOS",
       "source_id": "nos",
-      "published": "2026-10-29"
+      "published": "2026-11-01"
     }
   ]
 }

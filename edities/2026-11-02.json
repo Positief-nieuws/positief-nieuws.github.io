@@ -1,0 +1,389 @@
+{
+  "meta": {
+    "edition_date": "2026-11-02",
+    "status": "preview",
+    "publication_authorized": false,
+    "approved_by": null,
+    "approved_on": null,
+    "preview_revision": "2026-11-02-redactionele-preview-1",
+    "email_preheader": "Darmkankeronderzoek met hoopgevende resultaten, massale steun voor zeehonden en grote gezondheidswinst in Egypte.",
+    "editorial_order": [
+      {
+        "section": "nl",
+        "article_slug": "darmkanker-immuuntherapie-vijf-jaar",
+        "rank": 1
+      },
+      {
+        "section": "nl",
+        "article_slug": "zeehondencentrum-pieterburen-lauwersoog-steun",
+        "rank": 2
+      },
+      {
+        "section": "nl",
+        "article_slug": "winterswijk-contrastvloeistof-water",
+        "rank": 3
+      },
+      {
+        "section": "nl",
+        "article_slug": "twaalf-nieuwe-meedoenbalies-azc",
+        "rank": 4
+      },
+      {
+        "section": "nl",
+        "article_slug": "utrechtse-heuvelrug-35-hectare-natuur",
+        "rank": 5
+      },
+      {
+        "section": "nl",
+        "article_slug": "erfelijk-eierstokkanker-risico-minder-overgangsklachten",
+        "rank": 6
+      },
+      {
+        "section": "int",
+        "article_slug": "egypte-hepatitis-c-teruggedrongen",
+        "rank": 1
+      },
+      {
+        "section": "int",
+        "article_slug": "australie-nationaal-koalapark",
+        "rank": 2
+      },
+      {
+        "section": "int",
+        "article_slug": "irak-boeren-zonnepompen",
+        "rank": 3
+      },
+      {
+        "section": "int",
+        "article_slug": "orang-oetans-terug-borneo-bos",
+        "rank": 4
+      },
+      {
+        "section": "int",
+        "article_slug": "botswana-san-landrechten-routekaart",
+        "rank": 5
+      },
+      {
+        "section": "int",
+        "article_slug": "britse-moedergroepen-subsidies",
+        "rank": 6
+      }
+    ],
+    "approval_scope": "De eigenaar heeft rechtstreeks live publiceren gevraagd, maar de selectie- en dossiertoetsen zijn nog niet geslaagd. Dit is geen redactioneel bewijsakkoord."
+  },
+  "nl": [
+    {
+      "article_slug": "darmkanker-immuuntherapie-vijf-jaar",
+      "candidate_id": "avl-2026-10-22",
+      "title": "Vijf jaar later nog altijd kankervrij: hoopgevende resultaten bij 111 patiënten",
+      "email_title": "Vijf jaar later nog altijd kankervrij: hoopgevende resultaten bij 111 patiënten",
+      "teaser": "Bij alle 111 patiënten in een Nederlands onderzoek bleef terugkeer van hun specifieke type darmkanker na gemiddeld vijf jaar uit.",
+      "category": "Gezondheid",
+      "article_body": [
+        "Vijf jaar na hun behandeling was bij 111 patiënten met een specifieke vorm van darmkanker geen terugkeer van de ziekte vastgesteld. Dat melden onderzoekers van het Antoni van Leeuwenhoek. De patiënten kregen een korte behandeling met immuuntherapie vóór hun geplande operatie. Daarna werden ze gemiddeld vijf jaar gevolgd.",
+        "Het gaat om darmkanker met de kenmerken dMMR of MSI. Deze eigenschappen komen bij een deel van de patiënten met niet-uitgezaaide darmkanker voor en maken de tumor gevoelig voor bepaalde immuuntherapie. Bij 68 procent van de deelnemers waren tijdens de operatie geen levende kankercellen meer te vinden.",
+        "De resultaten zijn veelbelovend, maar niet zomaar te vertalen naar alle vormen van darmkanker. Ook betekent het onderzoek niet dat patiënten de operatie kunnen overslaan: de deelnemers kregen immuuntherapie én werden geopereerd. Verder onderzoek moet uitwijzen voor welke groepen en onder welke omstandigheden de behandeling het beste werkt.",
+        "De winst zit in wat nu daadwerkelijk is gemeten: een opvallend langdurig goed resultaat bij een duidelijk omschreven patiëntengroep. Dat geeft artsen en patiënten nieuwe aanknopingspunten voor gerichtere behandeling."
+      ],
+      "url": "https://www.avl.nl/nieuwsberichten/2026/vijf-jaar-na-immuuntherapie-nog-geen-terugkeer-van-darmkanker/",
+      "primary_url": "https://www.avl.nl/nieuwsberichten/2026/vijf-jaar-na-immuuntherapie-nog-geen-terugkeer-van-darmkanker/",
+      "source": "Antoni van Leeuwenhoek",
+      "source_id": "antoni-van-leeuwenhoek",
+      "published": "2026-10-22",
+      "region": "nl",
+      "regional_rank": 1,
+      "image_query": "id:4099432",
+      "image_alt": "Illustratieve Pixabay-foto van steun aan een patiënt; geen deelnemer aan dit onderzoek.",
+      "editorial_rank": 1
+    },
+    {
+      "article_slug": "zeehondencentrum-pieterburen-lauwersoog-steun",
+      "candidate_id": "3640ee0ecffc",
+      "title": "1,3 miljoen euro aan steun geeft zeehondencentrum nieuwe hoop",
+      "email_title": "1,3 miljoen euro aan steun geeft zeehondencentrum nieuwe hoop",
+      "teaser": "Massale steun van particulieren geeft het voormalige Zeehondencentrum Pieterburen, tegenwoordig in Lauwersoog, ademruimte.",
+      "category": "Natuur & klimaat",
+      "article_body": [
+        "Een dreigend faillissement van het voormalige Zeehondencentrum Pieterburen maakte de afgelopen weken veel los. Inmiddels is er ongeveer 1,3 miljoen euro aan financiële steun binnengekomen. Daardoor kan het centrum voorlopig doorgaan met de opvang en verzorging van zeehonden.",
+        "De organisatie is tegenwoordig gevestigd in Lauwersoog, in het WEC, maar veel mensen kennen haar nog onder de naam Pieterburen. Juist die lange geschiedenis maakt de steun bijzonder: Nederlanders kwamen in korte tijd massaal in actie met donaties en steunbetuigingen.",
+        "De opluchting is reëel, maar de problemen zijn nog niet definitief opgelost. Voor een duurzame toekomst is meer nodig dan één succesvolle inzamelingsactie. Het bedrag geeft vooral tijd om een structurele financiële oplossing te vinden.",
+        "Voor nu betekent de steun dat het werk met dieren kan doorgaan. Het nieuws laat zien hoe een breed gedragen initiatief in korte tijd tastbare hulp kan opleveren, zelfs als de vervolgstappen nog onzeker zijn."
+      ],
+      "url": "https://www.hartvannederland.nl/milieu-gezondheid/dieren/artikelen/zeehondencentrum-lauwersoog-voorlopig-gered-van-faillissement-na-steun",
+      "primary_url": "https://www.hartvannederland.nl/milieu-gezondheid/dieren/artikelen/zeehondencentrum-lauwersoog-voorlopig-gered-van-faillissement-na-steun",
+      "source": "Hart van Nederland",
+      "source_id": "hart-van-nederland",
+      "published": "2026-10-30",
+      "region": "nl",
+      "regional_rank": 2,
+      "image_query": "harbor seal pup beach",
+      "image_alt": "Illustratieve Pixabay-foto bij dit onderwerp; geen beeld van de specifieke gebeurtenis of deelnemers.",
+      "editorial_rank": 2
+    },
+    {
+      "article_slug": "winterswijk-contrastvloeistof-water",
+      "candidate_id": "884da953e19a",
+      "title": "83 procent minder contrastvloeistof in water rond Winterswijk",
+      "email_title": "83 procent minder contrastvloeistof in water rond Winterswijk",
+      "teaser": "Speciale opvangzakken en extra zuivering verminderen samen de vervuiling van lokaal oppervlaktewater.",
+      "category": "Natuur & klimaat",
+      "article_body": [
+        "Rond Winterswijk wordt veel minder contrastvloeistof in het oppervlaktewater gemeten. Een combinatie van maatregelen bij het streekziekenhuis en de waterzuivering heeft volgens de berichtgeving geleid tot een daling van 83 procent.",
+        "Contrastvloeistof helpt artsen om organen en bloedvaten op medische scans zichtbaar te maken. Na een onderzoek verlaat een deel van die stof het lichaam via de urine. Zo kan het in het riool belanden, terwijl gewone zuivering niet altijd alle resten verwijdert.",
+        "Daarom zijn op meerdere plekken maatregelen genomen. Patiënten kunnen speciale opvangzakken gebruiken, en ook de zuivering van het afvalwater is verbeterd. Het gaat dus niet om één wondermiddel, maar om een gezamenlijke aanpak.",
+        "Het resultaat is concreet: minder resten van medische middelen in beken en sloten. Andere ziekenhuizen en waterbeheerders kunnen kijken welke onderdelen van deze werkwijze ook bij hen passen."
+      ],
+      "url": "https://1achterhoek.nl/fors-minder-contrastvloeistof-in-water-bij-ziekenhuis-winterswijk/",
+      "primary_url": "https://1achterhoek.nl/fors-minder-contrastvloeistof-in-water-bij-ziekenhuis-winterswijk/",
+      "source": "1Achterhoek / Omroep Gelderland",
+      "source_id": "omroep-gelderland",
+      "published": "2026-10-27",
+      "region": "nl",
+      "regional_rank": 3,
+      "image_query": "wastewater treatment plant",
+      "image_alt": "Illustratieve Pixabay-foto bij dit onderwerp; geen beeld van de specifieke gebeurtenis of deelnemers.",
+      "editorial_rank": 3
+    },
+    {
+      "article_slug": "twaalf-nieuwe-meedoenbalies-azc",
+      "candidate_id": "bd1fd6edae68",
+      "title": "Twaalf extra Meedoenbalies moeten nieuwkomers op weg helpen",
+      "email_title": "Twaalf extra Meedoenbalies moeten nieuwkomers op weg helpen",
+      "teaser": "Het kabinet breidt het aantal balies in opvanglocaties uit tot vijftig, voor ondersteuning bij werk en activiteiten.",
+      "category": "Economie",
+      "article_body": [
+        "In nog eens twaalf opvanglocaties komt een Meedoenbalie. Daarmee wil het kabinet het aantal balies dit jaar naar vijftig uitbreiden. Ze bieden asielzoekers en andere nieuwkomers een laagdrempelige plek om mogelijkheden voor werk, vrijwilligerswerk en taalactiviteiten te ontdekken.",
+        "De gedachte is praktisch: wie kan meedoen, leert sneller mensen en de omgeving kennen en kan bestaande kennis of vaardigheden benutten. Een balie kan helpen om de eerste stap te zetten of een geschikte activiteit te vinden.",
+        "De uitbreiding is een besluit en nog geen bewijs dat daardoor meer mensen werk hebben gevonden. Daarvoor zijn resultaten van de nieuwe locaties nodig. Wel staat vast dat de ondersteuning voor meer bewoners bereikbaar wordt gemaakt.",
+        "Het nieuws past bij een bredere ontwikkeling in de opvang: niet alleen wachten op procedures, maar waar mogelijk ruimte maken voor zinvolle activiteiten en verbinding met de samenleving."
+      ],
+      "url": "https://www.rijksoverheid.nl/actueel/nieuws/2026/10/28/kabinet-meer-meedoenbalies-in-azcs-om-nieuwkomers-aan-werk-te-helpen",
+      "primary_url": "https://www.rijksoverheid.nl/actueel/nieuws/2026/10/28/kabinet-meer-meedoenbalies-in-azcs-om-nieuwkomers-aan-werk-te-helpen",
+      "source": "Rijksoverheid",
+      "source_id": "rijksoverheid",
+      "published": "2026-10-28",
+      "region": "nl",
+      "regional_rank": 4,
+      "image_query": "id:2247391",
+      "image_alt": "Illustratieve Pixabay-foto van een groep mensen bij een gezamenlijke activiteit; geen foto van een Meedoenbalie.",
+      "editorial_rank": 4
+    },
+    {
+      "article_slug": "utrechtse-heuvelrug-35-hectare-natuur",
+      "candidate_id": "c6e36a69c0b8",
+      "title": "35 hectare nieuwe natuur verbindt de Utrechtse Heuvelrug",
+      "email_title": "35 hectare nieuwe natuur verbindt de Utrechtse Heuvelrug",
+      "teaser": "Nieuwe en verbindende natuur helpt planten en dieren zich tussen bestaande gebieden te verplaatsen.",
+      "category": "Natuur & klimaat",
+      "article_body": [
+        "Bij Maarsbergen is 35 hectare natuur aangelegd of ingericht om natuurgebieden op de Utrechtse Heuvelrug beter met elkaar te verbinden. Het gaat om 25 hectare nieuwe natuur binnen het Natuurnetwerk Nederland en nog eens tien hectare verbindende natuur.",
+        "Zo'n verbinding is belangrijk omdat dieren zich niet aan de grenzen van een natuurgebied houden. Ze hebben ruimte nodig om voedsel te zoeken, soortgenoten te vinden en zich voort te planten. Ook planten profiteren wanneer soorten zich gemakkelijker kunnen verspreiden.",
+        "De nieuwe inrichting sluit aan op bestaande leefgebieden en versterkt de functie van een ecoduct in de buurt. Daarmee ontstaat niet alleen meer natuur op papier, maar ook een logischere route tussen plekken die eerder sterker van elkaar gescheiden waren.",
+        "Of de verbinding op lange termijn door veel soorten wordt benut, moet monitoring laten zien. De concrete vooruitgang is dat de benodigde ruimte en inrichting nu aanwezig zijn."
+      ],
+      "url": "https://www.naturetoday.com/intl/nl/nature-reports/message/?msg=36004",
+      "primary_url": "https://www.naturetoday.com/intl/nl/nature-reports/message/?msg=36004",
+      "source": "Nature Today",
+      "source_id": "nature-today",
+      "published": "2026-11-01",
+      "region": "nl",
+      "regional_rank": 5,
+      "image_query": "netherlands forest heathland",
+      "image_alt": "Illustratieve Pixabay-foto van Nederlands bos en heide, niet van de nieuwe natuurverbinding bij Maarsbergen.",
+      "editorial_rank": 5
+    },
+    {
+      "article_slug": "erfelijk-eierstokkanker-risico-minder-overgangsklachten",
+      "candidate_id": "c3e2f54fce9c",
+      "title": "Nieuwe aanpak vermindert overgangsklachten bij erfelijk kankerrisico",
+      "email_title": "Nieuwe aanpak vermindert overgangsklachten bij erfelijk kankerrisico",
+      "teaser": "Onderzoek bij 570 vrouwen wijst op een betere kwaliteit van leven wanneer een ingreep in twee stappen wordt uitgevoerd.",
+      "category": "Gezondheid",
+      "article_body": [
+        "Vrouwen met een erfelijk verhoogd risico op eierstokkanker staan soms al jong voor een ingrijpende keuze. Een preventieve operatie kan het risico op kanker verkleinen, maar het vroeg verwijderen van de eierstokken veroorzaakt ook een vervroegde overgang.",
+        "Onderzoekers onderzochten daarom een andere aanpak: eerst de eileiders verwijderen en de eierstokken pas enkele jaren later. In een studie onder 570 vrouwen werd na vijf jaar gekeken naar hun ervaringen. De vrouwen met de aanpak in twee stappen rapporteerden minder overgangsklachten.",
+        "Dat is belangrijk voor de kwaliteit van leven. De ingreep biedt mogelijk meer jaren zonder de lichamelijke gevolgen van een vroege overgang. Er is wel een wezenlijke onzekerheid: of deze aanpak net zo goed beschermt tegen eierstokkanker als de huidige behandeling, is nog niet aangetoond.",
+        "Een grotere internationale vervolgstudie onderzoekt de veiligheid. De uitkomst is dus een aantoonbaar voordeel bij klachten, geen bewezen vervanging van de bestaande preventieve standaard."
+      ],
+      "url": "https://www.radboudumc.nl/nieuws/2026/nieuwe-aanpak-bij-erfelijk-risico-op-eierstokkanker-geeft-minder-klachten",
+      "primary_url": "https://www.radboudumc.nl/nieuws/2026/nieuwe-aanpak-bij-erfelijk-risico-op-eierstokkanker-geeft-minder-klachten",
+      "source": "Radboudumc",
+      "source_id": "radboudumc",
+      "published": "2026-10-27",
+      "region": "nl",
+      "regional_rank": 6,
+      "image_query": "woman consultation doctor hospital",
+      "image_alt": "Illustratieve Pixabay-foto bij dit onderwerp; geen beeld van de specifieke gebeurtenis of deelnemers.",
+      "editorial_rank": 6
+    }
+  ],
+  "int": [
+    {
+      "article_slug": "egypte-hepatitis-c-teruggedrongen",
+      "candidate_id": "ad769a530721",
+      "title": "Egypte dringt hepatitis C terug tot 0,28 procent",
+      "email_title": "Egypte dringt hepatitis C terug tot 0,28 procent",
+      "teaser": "Miljoenen screenings en behandelingen leveren een bijzondere verbetering op, al is het virus nog niet uitgebannen.",
+      "category": "Gezondheid",
+      "article_body": [
+        "Egypte behoorde lange tijd tot de landen met de grootste problemen door hepatitis C. Nieuwe cijfers van de Egyptische overheid laten zien hoe sterk de situatie is veranderd: onder inwoners van 15 tot 59 jaar wordt het voorkomen van de virusinfectie inmiddels op 0,28 procent geschat.",
+        "Achter de daling zit een jarenlange, grootschalige aanpak. Tientallen miljoenen mensen werden gescreend, en miljoenen besmette inwoners kregen behandeling. Volgens de regering ligt de sterfte door hepatitis C 54 procent lager dan in 2018.",
+        "De Wereldgezondheidsorganisatie erkende in oktober opnieuw dat Egypte ver is gekomen richting eliminatie. Die gouden erkenning betekent niet dat hepatitis C al volledig verdwenen is. De meest recente prevalentie- en sterftecijfers zijn bovendien afkomstig uit nationale overheidsrapportage.",
+        "Toch is de richting bijzonder: een land met een zeer grote ziektelast heeft door systematisch testen en behandelen een enorme gezondheidswinst bereikt. Daarmee is Egypte een voorbeeld voor andere landen."
+      ],
+      "url": "https://english.ahram.org.eg/NewsContentP/1/581401/Egypt/Egypt%3Bs-hepatitis-C-prevalence-falls-to-%2C-deaths-d.aspx",
+      "primary_url": "https://english.ahram.org.eg/NewsContentP/1/581401/Egypt/Egypt%3Bs-hepatitis-C-prevalence-falls-to-%2C-deaths-d.aspx",
+      "source": "Ahram Online / WHO",
+      "source_id": "ahram-online",
+      "published": "2026-11-01",
+      "region": "int",
+      "regional_rank": 1,
+      "image_query": "id:3498584",
+      "image_alt": "Illustratieve Pixabay-foto van medisch laboratoriumonderzoek; geen opname uit Egypte.",
+      "editorial_rank": 7
+    },
+    {
+      "article_slug": "australie-nationaal-koalapark",
+      "candidate_id": "a7c70268b9ad",
+      "title": "Australië zet grote stap richting nationaal koalapark",
+      "email_title": "Australië zet grote stap richting nationaal koalapark",
+      "teaser": "Deelstaat New South Wales geeft goedkeuring aan de bescherming van een groot leefgebied voor koala's.",
+      "category": "Natuur & klimaat",
+      "article_body": [
+        "In de Australische deelstaat New South Wales is een grote stap gezet voor de bescherming van koala's. De overheid heeft de plannen voor een nationaal park van ongeveer 475.000 hectare goedgekeurd. Het gebied moet leefruimte bieden aan koala's en andere bedreigde diersoorten.",
+        "Bescherming op deze schaal kan waardevol zijn omdat dieren voldoende aaneengesloten bos nodig hebben. Versnippering, ontbossing en veranderende omstandigheden maken het voor soorten moeilijker om een veilige leefomgeving te behouden.",
+        "De beslissing betekent nog niet dat alle plannen al zijn uitgevoerd. Ook bestaat discussie over een deel van de financiering via koolstofkredieten. Voorstanders van natuurbehoud spreken desondanks van een belangrijke overwinning na jaren van inzet.",
+        "De concrete stap is een politiek en juridisch akkoord voor grootschalige bescherming. Wat dit op langere termijn betekent voor de koalapopulatie, zal nog moeten blijken."
+      ],
+      "url": "https://news.mongabay.com/2026/10/historic-win-australian-state-approves-national-koala-park-despite-controversial-funding/",
+      "primary_url": "https://news.mongabay.com/2026/10/historic-win-australian-state-approves-national-koala-park-despite-controversial-funding/",
+      "source": "Mongabay",
+      "source_id": "mongabay",
+      "published": "2026-10-29",
+      "region": "int",
+      "regional_rank": 2,
+      "image_query": "koala eucalyptus",
+      "image_alt": "Illustratieve Pixabay-foto bij dit onderwerp; geen beeld van de specifieke gebeurtenis of deelnemers.",
+      "editorial_rank": 8
+    },
+    {
+      "article_slug": "irak-boeren-zonnepompen",
+      "candidate_id": "fe33ff92693a",
+      "title": "Zonnepompen geven boeren in Zuid-Irak nieuwe kansen",
+      "email_title": "Zonnepompen geven boeren in Zuid-Irak nieuwe kansen",
+      "teaser": "Met zonne-energie en gerichtere irrigatie kunnen boeren minder diesel gebruiken en water besparen.",
+      "category": "Energie & innovatie",
+      "article_body": [
+        "Op landbouwbedrijven in Zuid-Irak wordt zonne-energie ingezet om water voor gewassen op te pompen. Voor boeren die afhankelijk zijn van kostbare diesel en te maken hebben met waterschaarste, kan dat direct verschil maken.",
+        "Het initiatief, ondersteund door het VN-ontwikkelingsprogramma UNDP en Japan, combineert zonnepompen met gerichtere irrigatie. Dat moet zorgen voor minder brandstofverbruik en verstandiger gebruik van schaars water.",
+        "Het verhaal laat vooral zien wat er op projectniveau mogelijk is. Het gaat niet om een landelijke omschakeling, en de resultaten mogen niet worden opgeblazen tot een oplossing voor alle droogteproblemen in Irak.",
+        "Maar voor de deelnemende boeren is het een praktische verandering: zij krijgen een alternatief voor dieselpompen en meer mogelijkheden om met minder middelen te blijven produceren. Dat maakt de innovatie direct relevant voor het dagelijks bestaan."
+      ],
+      "url": "https://www.undp.org/arab-states/stories/fuel-costs-greener-fields-solar-energy-brings-new-hope-farmers-southern-iraq",
+      "primary_url": "https://www.undp.org/arab-states/stories/fuel-costs-greener-fields-solar-energy-brings-new-hope-farmers-southern-iraq",
+      "source": "UNDP",
+      "source_id": "undp",
+      "published": "2026-11-01",
+      "region": "int",
+      "regional_rank": 3,
+      "image_query": "id:2742302",
+      "image_alt": "Illustratieve Pixabay-foto van zonnepanelen bij waterinfrastructuur; niet gemaakt op dit project in Irak.",
+      "editorial_rank": 9
+    },
+    {
+      "article_slug": "orang-oetans-terug-borneo-bos",
+      "candidate_id": "55cbdddea1eb",
+      "title": "Negen geredde orang-oetans keren terug naar beschermd bos",
+      "email_title": "Negen geredde orang-oetans keren terug naar beschermd bos",
+      "teaser": "Na verzorging en herstel zijn negen dieren uitgezet in het regenwoud op Borneo.",
+      "category": "Natuur & klimaat",
+      "article_body": [
+        "Voor negen orang-oetans op Borneo begint een nieuw hoofdstuk. De dieren waren eerder gered uit gebieden die door branden waren getroffen. Na opvang en herstel konden ze terugkeren naar beschermd regenwoud.",
+        "Een terugkeer naar het wild is meer dan een symbolisch moment. Orang-oetans zijn afhankelijk van uitgestrekte bossen en hebben de juiste omstandigheden nodig om voedsel te vinden en zich veilig te verplaatsen. Daarom vraagt vrijlating voorbereiding en geschikte leefruimte.",
+        "De uitzetting laat zien wat natuurorganisaties en opvangcentra concreet kunnen bereiken voor individuele dieren. Tegelijk blijven bosbranden en aantasting van leefgebieden grote bedreigingen in Indonesië.",
+        "Het positieve resultaat is duidelijk afgebakend: deze negen dieren hebben opnieuw een plek in een beschermd bos gekregen. Of ze zich daar blijvend goed redden, moet de tijd uitwijzen."
+      ],
+      "url": "https://today.rtl.lu/news/world/new-home-for-orangutans-rescued-from-indonesias-burning-forests-278014660",
+      "primary_url": "https://today.rtl.lu/news/world/new-home-for-orangutans-rescued-from-indonesias-burning-forests-278014660",
+      "source": "AFP / RTL Today",
+      "source_id": "rtl-today",
+      "published": "2026-10-30",
+      "region": "int",
+      "regional_rank": 4,
+      "image_query": "id:9967417",
+      "image_alt": "Illustratieve Pixabay-foto van orang-oetans; niet de negen vrijgelaten dieren.",
+      "editorial_rank": 10
+    },
+    {
+      "article_slug": "botswana-san-landrechten-routekaart",
+      "candidate_id": "2b12e160ad77",
+      "title": "Botswana zet belangrijke stap richting herstel landrechten voor de San",
+      "email_title": "Botswana zet belangrijke stap richting herstel landrechten voor de San",
+      "teaser": "Een goedgekeurde routekaart brengt een langdurig proces voor inheemse gemeenschappen een stap verder.",
+      "category": "Mens",
+      "article_body": [
+        "Voor inheemse San-gemeenschappen in Botswana is een nieuw traject naar herstel van landrechten gestart. De overheid heeft een routekaart goedgekeurd die moet leiden tot een proces van teruggave en erkenning van land.",
+        "Land is voor deze gemeenschappen niet alleen een economische hulpbron. Het hangt samen met leefwijze, identiteit en toegang tot natuurlijke hulpbronnen. Discussies over bezit en zeggenschap spelen er al lange tijd.",
+        "De goedgekeurde routekaart is een officiële stap vooruit, maar nog geen afgeronde teruggave. Wetten, uitvoering en concrete afspraken met de betrokken gemeenschappen moeten nog volgen. Dat onderscheid is belangrijk om het nieuws niet groter te maken dan het is.",
+        "Juist doordat er een formeel proces is gestart, ontstaat er opnieuw perspectief. Het vervolg bepaalt of de aangekondigde erkenning ook werkelijk verandering brengt in het dagelijks leven."
+      ],
+      "url": "https://news.mongabay.com/2026/10/a-historic-land-restitution-process-offers-new-hope-for-botswanas-indigenous-san/",
+      "primary_url": "https://news.mongabay.com/2026/10/a-historic-land-restitution-process-offers-new-hope-for-botswanas-indigenous-san/",
+      "source": "Mongabay",
+      "source_id": "mongabay",
+      "published": "2026-10-30",
+      "region": "int",
+      "regional_rank": 5,
+      "image_query": "botswana kalahari landscape",
+      "image_alt": "Illustratieve Pixabay-foto bij dit onderwerp; geen beeld van de specifieke gebeurtenis of deelnemers.",
+      "editorial_rank": 11
+    },
+    {
+      "article_slug": "britse-moedergroepen-subsidies",
+      "candidate_id": "0486bcfd275e",
+      "title": "Britse moedergroepen kunnen doorgaan dankzij nieuwe steun",
+      "email_title": "Britse moedergroepen kunnen doorgaan dankzij nieuwe steun",
+      "teaser": "Een stichting in Cumbria ontvangt 70.000 pond om fysieke ontmoetingsgroepen voor moeders voort te zetten.",
+      "category": "Mens",
+      "article_body": [
+        "Een aantal fysieke ontmoetingsgroepen voor moeders in het Britse Cumbria dreigde te verdwijnen. Dankzij nieuwe subsidies van in totaal 70.000 pond kan de betrokken stichting de bijeenkomsten voorlopig voortzetten.",
+        "De groepen bieden moeders gelegenheid om ervaringen uit te wisselen, vragen te stellen en andere ouders te ontmoeten. Juist na een geboorte kan die persoonlijke verbinding belangrijk zijn. Online informatie kan veel bieden, maar vervangt niet altijd het contact met mensen in dezelfde levensfase.",
+        "De financiering is geen garantie dat de groepen voor altijd blijven bestaan. Wel is de directe dreiging afgewend, waardoor het bestaande aanbod voorlopig beschikbaar blijft.",
+        "Het is positief nieuws op kleine schaal, maar met duidelijke betekenis. Voor ouders die er gebruik van maken, kan de zekerheid van een vaste ontmoetingsplek veel verschil maken."
+      ],
+      "url": "https://www.bbc.co.uk/news/articles/cvglw35zjwkgo",
+      "primary_url": "https://www.bbc.co.uk/news/articles/cvglw35zjwkgo",
+      "source": "BBC",
+      "source_id": "bbc",
+      "published": "2026-11-01",
+      "region": "int",
+      "regional_rank": 6,
+      "image_query": "mother baby support group",
+      "image_alt": "Illustratieve Pixabay-foto bij dit onderwerp; geen beeld van de specifieke gebeurtenis of deelnemers.",
+      "editorial_rank": 12
+    }
+  ],
+  "headlines": [
+    {
+      "title": "Amerikanen stemmen dinsdag over het Congres, zorgen over eerlijk verloop",
+      "url": "https://nos.nl/l/2637659",
+      "source": "NOS",
+      "source_id": "nos",
+      "published": "2026-11-01"
+    },
+    {
+      "title": "Nieuwe Israëlische aanvallen in Gaza ondanks staakt-het-vuren",
+      "url": "https://nos.nl/l/2637590",
+      "source": "NOS",
+      "source_id": "nos",
+      "published": "2026-11-01"
+    },
+    {
+      "title": "Politieke onrust in Brazilië na de verkiezingen",
+      "url": "https://nos.nl/l/2637669",
+      "source": "NOS",
+      "source_id": "nos",
+      "published": "2026-11-01"
+    }
+  ]
+}
