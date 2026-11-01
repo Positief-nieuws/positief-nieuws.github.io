@@ -1,0 +1,58 @@
+name: PN logo en Buttondown-concept 2 november
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/logo-buttondown-2026-11-02.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  logo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Maak gekleurd logo overal hetzelfde
+        run: |
+          python scripts/unify_header_logo.py
+          python -m unittest discover -s tests
+      - name: Publiceer aangepaste HTML en blijvende generator
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add build_editions.py
+          git add -u '*.html'
+          if git diff --cached --quiet; then exit 0; fi
+          if git diff --cached --name-only | grep -E '^(nieuws.json|edities/.*\.json)$'; then exit 1; fi
+          git commit -m "Gebruik op elke pagina hetzelfde oranje logo"
+          git pull --rebase origin main
+          git push origin HEAD:main
+  buttondown:
+    needs: logo
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Genereer uitsluitend Buttondown-concept
+        env:
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+        run: |
+          PYTHONPATH=. python scripts/create_buttondown_draft_2026_11_02.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: buttondown-concept-2026-11-02
+          path: buttondown-concept-2026-11-02.html
+          if-no-files-found: warn
