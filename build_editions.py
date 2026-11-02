@@ -333,20 +333,10 @@ BASE_CSS = r"""
 def category_meta_html(item):
     raw_label = category_label(item)
     label = canonical_category(raw_label) or raw_label
-    slug = slugify_category(label)
-    source = str(item.get("source") or item.get("bron") or "").strip()
-    rt = reading_time(item)
-    parts = []
-    if label:
-        parts.append(f'<a href="/{esc(slug)}/">{esc(label)}</a>')
-    if source:
-        parts.append(f"<span>{esc(source)}</span>")
-    if rt:
-        parts.append(f"<span>{esc(rt)}</span>")
-    if not parts:
+    if not label:
         return ""
-    return '<div class="meta">' + '<span class="sep">·</span>'.join(parts) + "</div>"
-
+    slug = slugify_category(label)
+    return f'<div class="meta"><a href="/{esc(slug)}/">{esc(label)}</a></div>'
 
 def article_html(item, date_value=None, show_date=False, section="onbekend"):
     raw_title = item.get("title") or item.get("headline") or ""
@@ -955,10 +945,7 @@ def _headline_html(item, number, date_value=None):
         f'data-article-edition="{edition}"'
     )
 
-    meta_parts = [p for p in (category, source) if p]
-    meta = ""
-    if meta_parts:
-        meta = '<div class="meta">' + '<span class="sep">·</span>'.join(f"<span>{p}</span>" for p in meta_parts) + "</div>"
+    meta = f'<div class="meta"><span>{category}</span></div>' if category else ""
     return f"""<article class="article" style="display:grid;grid-template-columns:34px minmax(0,1fr);gap:10px;padding-right:46px"><div class="num">{number:02d}</div><div><h3><a href="{url}" target="_blank" rel="noopener noreferrer" {tracking_attrs}>{title}</a></h3>{meta}</div><a class="arrow" href="{url}" target="_blank" rel="noopener noreferrer" aria-label="Lees {title}" {tracking_attrs}>↗</a></article>"""
 
 
