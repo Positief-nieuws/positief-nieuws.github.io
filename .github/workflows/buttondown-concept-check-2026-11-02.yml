@@ -1,0 +1,57 @@
+name: Controleer en trigger Buttondown concept 2 november
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/buttondown-concept-check-2026-11-02.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  buttondown:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Verifieer bestaande concept of maak een nieuw concept zonder verzending
+        env:
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+        run: |
+          python - <<'PY'
+          import os, json, urllib.request, urllib.parse
+          import buttondown_draft as bd
+          token=os.environ.get('BUTTONDOWN_API_KEY','')
+          if not token: raise SystemExit('API-key ontbreekt')
+          data,nl,international,headlines=bd.load_news()
+          if bd.raw_edition_date(data)!='2026-11-02': raise SystemExit('Onjuiste editie')
+          subject=bd.build_subject(data)
+          url='https://api.buttondown.com/v1/emails'
+          seen=set()
+          found=[]
+          for n in range(30):
+              if url in seen: raise SystemExit('Paginatielus: geen nieuw concept')
+              seen.add(url)
+              host=urllib.parse.urlsplit(url)
+              if host.scheme!='https' or host.netloc!='api.buttondown.com': raise SystemExit('Onveilige vervolg-URL')
+              req=urllib.request.Request(url,headers={'Authorization':'Token '+token,'Accept':'application/json'})
+              with urllib.request.urlopen(req,timeout=30) as response: payload=json.load(response)
+              found.extend(x for x in payload.get('results',[]) if x.get('subject')==subject)
+              next_url=payload.get('next')
+              if not next_url: break
+              url=urllib.parse.urljoin(url,next_url)
+          else:
+              raise SystemExit('Paginering niet volledig, dus geen concept aangemaakt')
+          if found:
+              for email in found: print('BESTAANDE BUTTONDOWN EDITIE:',email.get('id'),email.get('status'),email.get('subject'))
+              if len(found)>1: print('LET OP: meer dan één editie met deze onderwerpregel; niets aangepast')
+          else:
+              body=bd.build_body(data,nl,international,headlines)
+              if body.count('class="story-card"')!=15: raise SystemExit('Geen 15 kaarten')
+              result=bd.create_draft(token,subject,body,data,bd.build_preheader(data,nl))
+              if result.get('status')!='draft': raise SystemExit('Onverwachte status; controleer in Buttondown')
+              print('NIEUW BUTTONDOWN CONCEPT:',result.get('id'),'status',result.get('status'))
+          if not (data.get('meta',{}).get('personal_note') or {}).get('text'): print('LET OP: persoonlijke noot ontbreekt; niet verzenden')
+          print('KLAAR: geen verzending uitgevoerd')
+          PY
