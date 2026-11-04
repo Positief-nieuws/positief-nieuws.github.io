@@ -4363,6 +4363,24 @@
       "limitations": "Officiële communicatie over eigen activiteiten.",
       "register_ids": [],
       "channels": []
+    },
+    {
+      "source_id": "tu-berlin",
+      "organization_id": "tu-berlin",
+      "name": "Technische Universität Berlin",
+      "website": "https://www.tu.berlin/",
+      "category": "A",
+      "topics": [
+        "Wetenschap"
+      ],
+      "geography": "int",
+      "source_type": "university",
+      "reliability_notes": "Oorspronkelijke institutionele onderzoeksmededeling; methode en belangen apart beoordelen.",
+      "priority": "P2",
+      "check_frequency": "manual",
+      "limitations": "Persbericht is geen onafhankelijke effectevaluatie.",
+      "register_ids": [],
+      "channels": []
     }
   ]
 }

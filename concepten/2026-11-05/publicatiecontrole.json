@@ -1,0 +1,30 @@
+{
+  "ready": false,
+  "edition_date": "2026-11-05",
+  "newsletter_words": 689,
+  "errors": [
+    "Editiedatum ligt in de toekomst; nog niet publicatieklaar.",
+    "Selectiecontrole: Bronrun is niet van de editiedag; haal bronnen opnieuw op.",
+    "Selectiecontrole: Niet iedere kandidaat is eenmalig beoordeeld; lees ook buiten de shortlist.",
+    "Selectiecontrole: Brondekking bevat openstaande controles; HTTP-succes alleen is onvoldoende.",
+    "Selectiecontrole: GLI helpt bij afvallen, deelnemers ervaren betere kwaliteit van leven: vergelijking met reserves ontbreekt.",
+    "Selectiecontrole: Het zou Carisia en Kees nooit gaan lukken, maar dit dove stel runt al tien jaar met succes een winkel - De Ondernemer: vergelijking met reserves ontbreekt.",
+    "Selectiecontrole: Vissers redden duizenden palingen van gevaarlijke hindernis - Omroep Gelderland: vergelijking met reserves ontbreekt.",
+    "Selectiecontrole: Zonvarken: meer aandacht voor dierenwelzijn én fors lagere emissies - Wageningen University & Research | WUR: vergelijking met reserves ontbreekt.",
+    "Selectiecontrole: Export van diensten levert meer op en creëert meer banen: vergelijking met reserves ontbreekt.",
+    "Selectiecontrole: Niet alleen klachten behandelen: levensverhalen helpen bij psychisch herstel - Universiteit Twente: vergelijking met reserves ontbreekt.",
+    "Selectiecontrole: Islands Near Portugal Turn Off Lights to Protect Seabird Fledglings Every October – 30k Already Saved - Good News Network: vergelijking met reserves ontbreekt.",
+    "Selectiecontrole: Saar-Uni bietet bedürftigen Studierenden weiter kostenloses Essen, Durchbruch beim Silikonrecycling, größte Elektrofähre der Welt nimmt Dienst auf: onvoldoende positieve lezerswaarde, resultaat of bewijs.",
+    "Selectiecontrole: Saar-Uni bietet bedürftigen Studierenden weiter kostenloses Essen, Durchbruch beim Silikonrecycling, größte Elektrofähre der Welt nimmt Dienst auf: vergelijking met reserves ontbreekt.",
+    "Selectiecontrole: 'It took years to get pain-relieving surgery - I hope a robot means others won't have to wait': vergelijking met reserves ontbreekt.",
+    "Selectiecontrole: As Mangrove Forests Expand in China, Bird Species Multiply - Yale E360: onvoldoende positieve lezerswaarde, resultaat of bewijs.",
+    "Selectiecontrole: As Mangrove Forests Expand in China, Bird Species Multiply - Yale E360: vergelijking met reserves ontbreekt.",
+    "Selectiecontrole: What if we stop treating social care like a service? This village shows the way: vergelijking met reserves ontbreekt.",
+    "Selectiecontrole: Researchers develop sensors for continuous corn growth monitoring: vergelijking met reserves ontbreekt.",
+    "Selectiecontrole: nl: vergelijk ten minste drie inhoudelijk gelezen reserves.",
+    "Selectiecontrole: int: vergelijk ten minste drie inhoudelijk gelezen reserves.",
+    "Expliciete redactionele goedkeuring ontbreekt.",
+    "int:china-mangroven-vogelsoorten: kernclaim niet geverifieerd."
+  ],
+  "warnings": []
+}
