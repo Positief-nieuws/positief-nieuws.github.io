@@ -1,0 +1,118 @@
+{
+  "edition_date": "2026-11-05",
+  "status": "draft",
+  "article_pages": 12,
+  "images_found": 4,
+  "images": [
+    {
+      "slug": "gli-afvallen-kwaliteit-van-leven",
+      "query": "walking people park",
+      "found": false,
+      "image": null
+    },
+    {
+      "slug": "carisia-kees-streekwinkel",
+      "query": "vegetables market",
+      "found": false,
+      "image": null
+    },
+    {
+      "slug": "palingen-veilig-langs-maurik",
+      "query": "river netherlands",
+      "found": false,
+      "image": null
+    },
+    {
+      "slug": "zonvarken-lagere-emissies",
+      "query": "pig farm",
+      "found": false,
+      "image": null
+    },
+    {
+      "slug": "dienstenexport-banen-nederland",
+      "query": "office people laptop work",
+      "found": false,
+      "image": null
+    },
+    {
+      "slug": "levensverhalen-psychische-behandeling",
+      "query": "notebook pen",
+      "found": false,
+      "image": null
+    },
+    {
+      "slug": "corvo-licht-uit-zeevogels",
+      "query": "azores island",
+      "found": false,
+      "image": null
+    },
+    {
+      "slug": "siliconen-grondstof-terugwinnen",
+      "query": "id:3498584",
+      "found": true,
+      "image": {
+        "query": "id:3498584",
+        "pixabay_id": 3498584,
+        "image_path": "/images/artikelen/2026-09-28/bloedwaarden-opvlamming-kinderspierziekte-eerder-signaleren.jpg",
+        "page_url": "https://pixabay.com/photos/lab-experiment-test-chemistry-3498584/",
+        "photographer": "fernandozhiminaicela",
+        "tags": "lab, experiment, test, chemistry, test tubes, laboratory, hands, gloves, surgical gloves, blood samples, lab, lab, lab, lab, lab, chemistry, laboratory, laboratory, laboratory, laboratory",
+        "width": 3872,
+        "height": 2592
+      }
+    },
+    {
+      "slug": "belfast-robot-complexe-operaties",
+      "query": "id:7839395",
+      "found": true,
+      "image": {
+        "query": "id:7839395",
+        "pixabay_id": 7839395,
+        "image_path": "/images/artikelen/2026-09-28/enschedese-headset-specialisten-op-afstand-operaties.jpg",
+        "page_url": "https://pixabay.com/photos/spine-surgeon-chennai-surgeon-7839395/",
+        "photographer": "u_8px8n3mq17",
+        "tags": "spine surgeon, chennai, surgeon, doctor, operating room, advanced spine surgery, medical professional, surgeon, surgeon, doctor, doctor, doctor, doctor, operating room, operating room, operating room, operating room, operating room, medical professional",
+        "width": 5760,
+        "height": 3840
+      }
+    },
+    {
+      "slug": "china-mangroven-vogelsoorten",
+      "query": "id:249830",
+      "found": true,
+      "image": {
+        "query": "id:249830",
+        "pixabay_id": 249830,
+        "image_path": "/images/artikelen/2026-10-22/mangroven-keren-terug-madagaskar.jpg",
+        "page_url": "https://pixabay.com/photos/mangrove-forest-swamp-aerial-roots-249830/",
+        "photographer": "sarangib",
+        "tags": "Illustratief beeld; Mangrovebomen met blootliggende wortels in kustwater, illustratief beeld; niet Madagaskar.",
+        "width": 1280,
+        "height": 960
+      }
+    },
+    {
+      "slug": "esk-valley-samen-leven",
+      "query": "id:2247391",
+      "found": true,
+      "image": {
+        "query": "id:2247391",
+        "pixabay_id": 2247391,
+        "image_path": "/images/artikelen/2026-09-28/azc-nuenen-open-dag-930-bezoekers-85-vrijwilligers.jpg",
+        "page_url": "https://pixabay.com/photos/training-volunteers-learning-2247391/",
+        "photographer": "MamaShaw",
+        "tags": "training, volunteers, learning, indoors, people, team, meeting, class, sitting, community service, group of people, information, community, together, training, volunteers, volunteers, volunteers, volunteers, volunteers, learning, people, meeting, meeting, meeting, meeting, community service, community service, community service",
+        "width": 5184,
+        "height": 3888
+      }
+    },
+    {
+      "slug": "sensoren-groei-mais",
+      "query": "id:3705687",
+      "found": false,
+      "image": null
+    }
+  ],
+  "published": false,
+  "email_sent": false
+}

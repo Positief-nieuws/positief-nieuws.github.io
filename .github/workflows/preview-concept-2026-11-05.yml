@@ -1,0 +1,42 @@
+name: Bouw ongepubliceerd concept 5 november
+on:
+  push:
+    branches: [preview/2026-11-05]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  preview:
+    if: github.ref == 'refs/heads/preview/2026-11-05'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Bouw alleen een controlepakket met bestaande opmaak en Pixabay-beelden
+        env:
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+        run: python scripts/render_preview_2026_11_05.py
+      - name: Bewaar preview voor beoordeling, zonder deployment of nieuwsbrief-API
+        uses: actions/upload-artifact@v4
+        with:
+          name: pn-concept-2026-11-05
+          path: .preview-site/
+          retention-days: 14
+      - name: Leg resterende publicatiecontroles vast
+        run: |
+          python scripts/document_concept_2026_11_05.py
+          python - <<'PY'
+          import subprocess
+          result = subprocess.run(['python','editorial_check.py','--report','concepten/2026-11-05/publicatiecontrole.json'])
+          print('Publicatiepoort:', 'gereed' if result.returncode == 0 else 'NIET GEREED; dit is uitsluitend een conceptpakket')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pn-redactiecontrole-2026-11-05
+          path: |
+            concepten/2026-11-05/
+            redactie/2026-11-05.json
+            selectie/2026-11-05.json
+          retention-days: 14
