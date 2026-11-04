@@ -16,7 +16,7 @@ Werken aan een gezondere leefstijl met begeleiding levert deelnemers gemiddeld m
 
 De onderzoekers vergeleken deelnemers met niet-deelnemers van wie de huisarts herhaaldelijk het gewicht had vastgelegd. De GLI-groep verloor gemiddeld 2,5 kilo meer. Na twee jaar meldde de groep ook een betere kwaliteit van leven, zowel met als zonder gewichtsverlagende medicijnen.
 
-De uitkomsten verschillen per persoon. Van de deelnemers zonder die medicijnen verloor 37 procent minstens vijf procent van het lichaamsgewicht. Bij de combinatie met medicijnen was dat 62 procent. De vergelijking betekent niet dat iedereen hetzelfde resultaat mag verwachten.
+De uitkomsten verschillen per persoon. Van de GLI-deelnemers verloor 37 procent minstens vijf procent van het lichaamsgewicht. Bij de combinatie met medicijnen was dat 62 procent. De vergelijking betekent niet dat iedereen hetzelfde resultaat mag verwachten.
 
 Het onderzoek geeft zicht op veranderingen tijdens het traject. Of mensen hun aangepaste leefstijl na afronding volhouden, is nog niet bekend. Wel daalde de uitval: van 49 procent bij de starters uit 2019 naar 35 procent bij de starters uit 2023.
 

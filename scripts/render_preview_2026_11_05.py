@@ -5,6 +5,7 @@ import re
 import shutil
 from pathlib import Path
 import sys
+import tempfile
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
@@ -27,7 +28,8 @@ for item in news['nl']+news['int']:
     query=item['image_query']
     if query.startswith('id:'):
         pid=int(query[3:])
-        existing=next((v for v in cache.values() if v.get('pixabay_id')==pid and Path(v.get('image_path','').lstrip('/')).is_file()),None)
+        current=cache.get(f'{DATE}/{item["article_slug"]}')
+        existing=current if current and current.get('pixabay_id')==pid and Path(current.get('image_path','').lstrip('/')).is_file() else next((v for v in cache.values() if v.get('pixabay_id')==pid and Path(v.get('image_path','').lstrip('/')).is_file()),None)
         if existing:
             cache[f'{DATE}/{item["article_slug"]}']={**existing,'query':query}
 site._write_pixabay_cache(cache)
@@ -48,6 +50,23 @@ for path in [Path('index.html'),edition_dir/'index.html',*Path('artikelen',DATE)
     markup=markup.replace('/sun-icon-512.png','/sun-orange.svg')
     markup=protect_markup(order_article_actions(sharing_markup(markup,path)))
     path.write_text(markup)
+# Run the established signup finishing pass in an isolated scope. Its normal
+# all-pages traversal must not rewrite historical pages for this concept.
+from newsletter_conversion import apply as finish_signup
+scoped=[Path('index.html'),edition_dir/'index.html',*Path('artikelen',DATE).glob('*/index.html')]
+with tempfile.TemporaryDirectory(prefix='pn-concept-forms-') as temp:
+    scope=Path(temp)
+    for path in [*scoped,Path('nieuws.json')]:
+        target=scope/path
+        target.parent.mkdir(parents=True,exist_ok=True)
+        shutil.copy2(path,target)
+    os.chdir(scope)
+    try:
+        site.refresh_edition_analytics()
+        finish_signup()
+    finally:
+        os.chdir(ROOT)
+    for path in scoped:shutil.copy2(scope/path,path)
 out=Path('concepten')/DATE
 out.mkdir(parents=True,exist_ok=True)
 (out/'nieuwsbrief.html').write_text(bd.build_body(news,news['nl'],news['int'],news['headlines']))
@@ -62,6 +81,8 @@ for p in ROOT.iterdir():
     if p.is_file() and p.suffix in {'.html','.css','.js','.png','.svg','.ico','.json','.webmanifest'}:shutil.copy2(p,preview/p.name)
 for name in ['artikelen','images','edities','nieuwsbrief','over','contact','zoeken','onderwerpen','specials']:
     if Path(name).exists():shutil.copytree(name,preview/name,dirs_exist_ok=True)
+(preview/'data').mkdir(exist_ok=True)
+shutil.copy2('data/pixabay-images.json',preview/'data/pixabay-images.json')
 shutil.copytree(out,preview/'concepten'/DATE,dirs_exist_ok=True)
 for p in preview.rglob('*.html'):
     markup=p.read_text()

@@ -1036,7 +1036,7 @@
         "reader_value": 3,
         "concrete_result": 2,
         "evidence": 2,
-        "recency": 2,
+        "recency": 1,
         "originality": 2
       },
       "reason": "Eigenaar bevestigde deze selectie op 4 november na tweede review.",
@@ -1127,6 +1127,6 @@
     "Overige kandidaten niet individueel inhoudelijk getriageerd.",
     "Volledige coverage-checklist en drie gelezen reserves per regio ontbreken.",
     "Oorspronkelijke mangrovestudie niet gelezen; secundaire samenvatting wel.",
-    "Pixabay-selecties en visuele eindcontrole nog niet afgerond."
+    "Beeldkeuzes visueel bekeken; paginacontrole in browser nog open."
   ]
 }

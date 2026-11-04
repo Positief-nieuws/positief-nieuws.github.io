@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "edition_date": "2026-11-05",
-  "news_sha256": "74f5f69b0ac0642d6520d9d030d5bf87905a18856d31607bc76c1325b0ff1c68",
+  "news_sha256": "08f9f5206483f98b9852d915c98ddb213b82e761984c88bc5830b1f3c510185b",
   "approved": false,
   "approved_by": "",
   "variation_exception_reason": "",
@@ -30,8 +30,8 @@
       },
       "rights": {
         "text": "original_summary",
-        "image": "",
-        "image_evidence": "Pixabay-ophaalstap en visuele controle nog open."
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/couple-park-people-young-casual-8830068/; bestaande lokale Pixabay-cache; illustratief."
       },
       "duplicate_review": {
         "checked": true,
@@ -72,8 +72,8 @@
       },
       "rights": {
         "text": "original_summary",
-        "image": "",
-        "image_evidence": "Pixabay-ophaalstap en visuele controle nog open."
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/carrots-basket-vegetables-market-673184/; bestaande lokale Pixabay-cache; illustratief."
       },
       "duplicate_review": {
         "checked": true,
@@ -114,8 +114,8 @@
       },
       "rights": {
         "text": "original_summary",
-        "image": "",
-        "image_evidence": "Pixabay-ophaalstap en visuele controle nog open."
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/river-bridge-maastricht-maas-city-8975861/; bestaande lokale Pixabay-cache; illustratief."
       },
       "duplicate_review": {
         "checked": true,
@@ -156,8 +156,8 @@
       },
       "rights": {
         "text": "original_summary",
-        "image": "",
-        "image_evidence": "Pixabay-ophaalstap en visuele controle nog open."
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/piglet-mammal-species-fauna-3386356/; bestaande lokale Pixabay-cache; illustratief."
       },
       "duplicate_review": {
         "checked": true,
@@ -198,8 +198,8 @@
       },
       "rights": {
         "text": "original_summary",
-        "image": "",
-        "image_evidence": "Pixabay-ophaalstap en visuele controle nog open."
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/notebooks-cafe-blog-mobile-569121/; bestaande lokale Pixabay-cache; illustratief."
       },
       "duplicate_review": {
         "checked": true,
@@ -240,8 +240,8 @@
       },
       "rights": {
         "text": "original_summary",
-        "image": "",
-        "image_evidence": "Pixabay-ophaalstap en visuele controle nog open."
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/student-typing-keyboard-text-849825/; bestaande lokale Pixabay-cache; illustratief."
       },
       "duplicate_review": {
         "checked": true,
@@ -282,8 +282,8 @@
       },
       "rights": {
         "text": "original_summary",
-        "image": "",
-        "image_evidence": "Pixabay-ophaalstap en visuele controle nog open."
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/sea-sunset-outdoors-darkness-ocean-6543041/; bestaande lokale Pixabay-cache; illustratief."
       },
       "duplicate_review": {
         "checked": true,
@@ -492,8 +492,8 @@
       },
       "rights": {
         "text": "original_summary",
-        "image": "",
-        "image_evidence": "Pixabay-ophaalstap en visuele controle nog open."
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/corn-harvest-healthy-sweet-corn-3705687/; bestaande lokale Pixabay-cache; illustratief."
       },
       "duplicate_review": {
         "checked": true,
@@ -610,5 +610,5 @@
       }
     }
   },
-  "production_status": "concept; geselecteerde bronnen onderzocht; oorspronkelijke mangrovestudie, complete pooltriage, dekking, reserves, beelden en editiedagcontrole nog open"
+  "production_status": "concept; 12 beeldkeuzes visueel bekeken en vastgezet; oorspronkelijke mangrovestudie, complete pooltriage, dekking, reserves, visuele paginacontrole en editiedagcontrole nog open"
 }

@@ -65,18 +65,18 @@ def main():
                 r.update(positive_result=True,positive_result_explanation='Gecontroleerd resultaat, nieuw inzicht of beschreven bestaande praktijk; stadium begrensd in artikel.',
                     scores=dict(positive_value=2,evidence=2 if verified else 1,recency=1 if item['published']<'2026-10-29' else 2,relevance=2,originality=2))
                 reviews.append(dict(id=item['candidate_id'],region=section,decision='select',rank=i+1,article_url=item['url'],primary_url=item.get('primary_url') or item['url'],
-                    source_read=True,scores=dict(reader_value=3 if i<3 or item['article_slug']=='esk-valley-samen-leven' else 2,concrete_result=2,evidence=2 if verified else 1,recency=3 if item['published']=='2026-11-04' else 2,originality=3 if item['article_slug'] in {'zonvarken-lagere-emissies','levensverhalen-psychische-behandeling','sensoren-groei-mais'} else 2),
+                    source_read=True,scores=dict(reader_value=3 if i<3 or item['article_slug']=='esk-valley-samen-leven' else 2,concrete_result=2,evidence=2 if verified else 1,recency=1 if item['published']<'2026-10-29' else 3 if item['published']=='2026-11-04' else 2,originality=3 if item['article_slug'] in {'zonvarken-lagere-emissies','levensverhalen-psychische-behandeling','sensoren-groei-mais'} else 2),
                     reason='Eigenaar bevestigde deze selectie op 4 november na tweede review.',stronger_than_reserves=''))
                 triage.append(dict(id=item['candidate_id'],decision='contender',reason='Door eigenaar bevestigde selectie; brononderzoek hierboven vastgelegd.'))
     dossier['news_sha256']=news_digest(news)
     dossier['approved']=False;dossier['approved_by']=''
     dossier['variation_exception_reason']=''
-    dossier['production_status']='concept; geselecteerde bronnen onderzocht; oorspronkelijke mangrovestudie, complete pooltriage, dekking, reserves, beelden en editiedagcontrole nog open'
+    dossier['production_status']='concept; 12 beeldkeuzes visueel bekeken en vastgezet; oorspronkelijke mangrovestudie, complete pooltriage, dekking, reserves, visuele paginacontrole en editiedagcontrole nog open'
     save(ROOT/'redactie'/f'{DATE}.json',dossier)
     review=json.loads((ROOT/'selectie'/f'{DATE}.json').read_text())
     review.update(reviewed_by='AI-redacteur; selectie bevestigd door Tom de Haas',triage=triage,article_reviews=reviews,
         owner_confirmed_selection=dict(confirmed_on=CHECKED,confirmed_by='Tom de Haas',full_pool_review_complete=False,coverage_complete=False),
-        review_status='incomplete',open_items=['Bevroren bronrun is van 4 november, niet editiedag 5 november.','Overige kandidaten niet individueel inhoudelijk getriageerd.','Volledige coverage-checklist en drie gelezen reserves per regio ontbreken.','Oorspronkelijke mangrovestudie niet gelezen; secundaire samenvatting wel.','Pixabay-selecties en visuele eindcontrole nog niet afgerond.'])
+        review_status='incomplete',open_items=['Bevroren bronrun is van 4 november, niet editiedag 5 november.','Overige kandidaten niet individueel inhoudelijk getriageerd.','Volledige coverage-checklist en drie gelezen reserves per regio ontbreken.','Oorspronkelijke mangrovestudie niet gelezen; secundaire samenvatting wel.','Beeldkeuzes visueel bekeken; paginacontrole in browser nog open.'])
     save(ROOT/'selectie'/f'{DATE}.json',review)
 
 if __name__=='__main__':main()
