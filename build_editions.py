@@ -269,7 +269,7 @@ def header_html(active=""):
 
     <nav class="app-nav" id="mobile-navigation" aria-label="Hoofdnavigatie">
       <div class="app-nav-inner">
-        <a class="nav-link{active_class('today')}" href="/">Vandaag</a>
+        <a class="nav-link{active_class('today')}" href="/">Home</a>
         <a class="nav-link{active_class('archive')}" href="/edities/">Edities</a>
         <a class="nav-link{active_class('topics')}" href="/onderwerpen/">Onderwerpen</a>
         <a class="nav-link{active_class('about')}" href="/over/">Over</a>
