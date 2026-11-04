@@ -23,6 +23,7 @@ jobs:
         with:
           name: pn-concept-2026-11-05
           path: .preview-site/
+          include-hidden-files: true
           retention-days: 14
       - name: Leg resterende publicatiecontroles vast
         run: |
