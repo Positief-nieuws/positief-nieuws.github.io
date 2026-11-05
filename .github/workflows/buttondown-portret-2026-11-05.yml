@@ -1,0 +1,105 @@
+name: Voeg portret toe aan Buttondown-concept van 5 november
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/buttondown-portret-2026-11-05.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency: buttondown-portret-2026-11-05
+jobs:
+  update-draft:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Voeg het portret toe aan het bestaande concept
+        env:
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import re
+          import time
+          from urllib.parse import urljoin, urlsplit
+          from urllib.request import Request, urlopen
+
+          import buttondown_draft as bd
+
+          data = json.load(open('edities/2026-11-05.json', encoding='utf-8'))
+          if bd.raw_edition_date(data) != '2026-11-05':
+              raise SystemExit('Onjuiste editie')
+          subject = bd.build_subject(data)
+          token = os.environ['BUTTONDOWN_API_KEY']
+          asset = 'https://positief-nieuws.nl/images/redactie/tom-portret-nieuwsbrief.png'
+          endpoint = 'https://api.buttondown.com/v1/emails'
+
+          def request(url, payload=None):
+              if (urlsplit(url).scheme, urlsplit(url).netloc) != ('https', 'api.buttondown.com'):
+                  raise SystemExit('Onveilige Buttondown URL')
+              body = json.dumps(payload).encode() if payload is not None else None
+              req = Request(url, data=body, method='PATCH' if body else 'GET', headers={
+                  'Authorization': 'Token ' + token,
+                  'Content-Type': 'application/json',
+                  'Accept': 'application/json',
+              })
+              with urlopen(req, timeout=25) as response:
+                  return json.load(response)
+
+          matches = []
+          url = endpoint
+          for _ in range(30):
+              page = request(url)
+              matches.extend(email for email in page['results'] if email.get('subject') == subject)
+              if not page.get('next'):
+                  break
+              url = urljoin(url, page['next'])
+          else:
+              raise SystemExit('Buttondown paginering niet afgerond')
+          if len(matches) != 1 or matches[0].get('status') != 'draft':
+              raise SystemExit(f'Verwacht exact één bestaand concept, gevonden: {len(matches)}')
+          draft_id = matches[0]['id']
+          if not re.fullmatch(r'[A-Za-z0-9_-]+', draft_id):
+              raise SystemExit('Ongeldig concept-ID')
+          draft_url = f'{endpoint}/{draft_id}'
+
+          for _ in range(20):
+              try:
+                  with urlopen(asset, timeout=10) as response:
+                      if response.read(8) == bytes.fromhex('89504e470d0a1a0a'):
+                          break
+              except OSError:
+                  pass
+              time.sleep(8)
+          else:
+              raise SystemExit('Portretbestand nog niet bereikbaar')
+
+          draft = request(draft_url)
+          if draft.get('status') != 'draft' or draft.get('subject') != subject:
+              raise SystemExit('Buttondown bericht is geen passend concept')
+          body = draft['body']
+          if asset not in body:
+              pattern = r'(<div\b[^>]*>)(\s*<h2\b[^>]*>Iedereen hielp gelijk</h2>.*?<p\b[^>]*>Tom</p>)(\s*</div>)'
+              portrait = (
+                  '<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr>'
+                  '<td width="80" valign="top" style="padding:2px 16px 0 0;">'
+                  f'<img src="{asset}" alt="Cartoonportret van Tom" width="64" height="64" '
+                  'style="display:block;width:64px;height:64px;border-radius:50%;border:0;"></td>'
+                  '<td valign="top">'
+              )
+              updated, count = re.subn(
+                  pattern, lambda m: m[1] + portrait + m[2] + '</td></tr></table>' + m[3], body,
+                  flags=re.S,
+              )
+              if count != 1:
+                  raise SystemExit('De persoonlijke noot is niet eenduidig gevonden')
+              result = request(draft_url, {'body': updated})
+              if result.get('status') != 'draft':
+                  raise SystemExit('Onverwachte status na bijwerken')
+
+          saved = request(draft_url)
+          if saved.get('status') != 'draft' or asset not in saved.get('body', ''):
+              raise SystemExit('Portret niet bevestigd in het concept')
+          print(f'Portret bevestigd in Buttondown-concept {draft_id}.')
+          PY
