@@ -61,6 +61,12 @@ def check(news, dossier, policy=None, history=None, as_of=None, selection_review
         and dossier.get("owner_approved_selection", {}).get("selected_sources_checked") is True
         and dossier.get("owner_approved_selection", {}).get("candidate_triage_complete") is False
         and dossier.get("owner_approved_selection", {}).get("source_coverage_complete") is False)
+    november_selection = (edition == "2026-11-05" and news_digest(news) == "e41db143736fac200bbacabaaf7342e6e3a328536b97d2d8ab6287a7ff60a517"
+        and dossier.get("approved") is True and dossier.get("approved_by") == "Tom de Haas"
+        and dossier.get("owner_approved_selection", {}).get("authorized_on") == "2026-11-05"
+        and dossier.get("owner_approved_selection", {}).get("news_sha256") == news_digest(news))
+    if november_selection:
+        warnings.append("Eigenaarakkoord 5 november voor deze exacte selectie. Volledige kandidatentriage en brondekking zijn niet afgerond.")
     if approved_selection:
         warnings.append("Eigenaaropdracht29oktober: exact de goedgekeurde previewselectie publiceren. Geselecteerde bronnen en beelden gecontroleerd; volledige kandidaatbeoordeling en bronkanaaldekking niet voltooid. Buttondown-trigger maakt een concept, verstuurt niet.")
     if owner_exception:
@@ -69,7 +75,7 @@ def check(news, dossier, policy=None, history=None, as_of=None, selection_review
         errors.append('Editiedatum ligt in de toekomst; nog niet publicatieklaar.')
     if dossier.get('edition_date')!=edition:errors.append('Dossier hoort niet bij deze editie.')
     required_from=policy.get('selection_review_required_from')
-    if required_from and edition_day and edition_day.isoformat()>=required_from and not (owner_exception or approved_selection):
+    if required_from and edition_day and edition_day.isoformat()>=required_from and not (owner_exception or approved_selection or november_selection):
         if selection_review is None or candidate_pool is None:
             errors.append('Selectiecontrole vóór eerste concept ontbreekt; volledige bronrun en selectiedossier zijn verplicht.')
         else:

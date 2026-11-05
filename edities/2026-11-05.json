@@ -1,0 +1,410 @@
+{
+  "meta": {
+    "edition_date": "2026-11-05",
+    "status": "published",
+    "publication_authorized": true,
+    "selection_confirmed_by": "Tom de Haas",
+    "selection_confirmed_on": "2026-11-04",
+    "preview_revision": "2026-11-05-concept-1",
+    "email_preheader": "Een teruggevonden jongetje, meetbare winst van leefstijlbegeleiding en een eiland dat het licht dooft voor jonge zeevogels.",
+    "personal_note": {
+      "title": "Iedereen hielp gelijk",
+      "text": "Ik liep op een gewone zaterdagmiddag in de buurt toen een vrouw in paniek op me af kwam. Ze was haar zoontje kwijt. En hij kon niet praten. Snel liepen we naar de voetbalclub waar hij mogelijk was. Daar begon iedereen meteen mee te zoeken. Twee minuten later riep zijn moeder: ‘Daar is hij!’ Een vrouw had zich al over hem ontfermd. Wat me bijbleef: hoe vanzelfsprekend iedereen hielp. De vrouw die bij het jongetje bleef. Honderd toeschouwers bij de club die direct gingen zoeken. Dit lees je niet in de krant. Maar het gebeurt wel.",
+      "portrait_url": "/images/redactie/tom-portret-weergave.svg"
+    },
+    "editorial_order": [
+      {
+        "section": "nl",
+        "article_slug": "gli-afvallen-kwaliteit-van-leven",
+        "rank": 1
+      },
+      {
+        "section": "nl",
+        "article_slug": "carisia-kees-streekwinkel",
+        "rank": 2
+      },
+      {
+        "section": "nl",
+        "article_slug": "palingen-veilig-langs-maurik",
+        "rank": 3
+      },
+      {
+        "section": "nl",
+        "article_slug": "zonvarken-lagere-emissies",
+        "rank": 4
+      },
+      {
+        "section": "nl",
+        "article_slug": "dienstenexport-banen-nederland",
+        "rank": 5
+      },
+      {
+        "section": "nl",
+        "article_slug": "levensverhalen-psychische-behandeling",
+        "rank": 6
+      },
+      {
+        "section": "int",
+        "article_slug": "corvo-licht-uit-zeevogels",
+        "rank": 1
+      },
+      {
+        "section": "int",
+        "article_slug": "siliconen-grondstof-terugwinnen",
+        "rank": 2
+      },
+      {
+        "section": "int",
+        "article_slug": "belfast-robot-complexe-operaties",
+        "rank": 3
+      },
+      {
+        "section": "int",
+        "article_slug": "china-mangroven-vogelsoorten",
+        "rank": 4
+      },
+      {
+        "section": "int",
+        "article_slug": "esk-valley-samen-leven",
+        "rank": 5
+      },
+      {
+        "section": "int",
+        "article_slug": "sensoren-groei-mais",
+        "rank": 6
+      }
+    ]
+  },
+  "nl": [
+    {
+      "article_slug": "gli-afvallen-kwaliteit-van-leven",
+      "candidate_id": "fda668c35ffe",
+      "title": "Leefstijlbegeleiding helpt deelnemers afvallen én beter leven",
+      "email_title": "Leefstijlbegeleiding helpt deelnemers afvallen én beter leven",
+      "title_alternative": "RIVM: GLI-deelnemers verliezen meer gewicht dan niet-deelnemers",
+      "teaser": "Een nieuwe vergelijking laat extra gewichtsverlies zien. Ook de ervaren kwaliteit van leven verbetert tijdens het tweejarige programma.",
+      "category": "Gezondheid",
+      "url": "https://www.rivm.nl/nieuws/gli-helpt-bij-afvallen-deelnemers-ervaren-betere-kwaliteit-van-leven",
+      "primary_url": "https://www.rivm.nl/nieuws/gli-helpt-bij-afvallen-deelnemers-ervaren-betere-kwaliteit-van-leven",
+      "source": "RIVM",
+      "source_id": "rivm",
+      "published": "2026-11-03",
+      "article_body": [
+        "Werken aan een gezondere leefstijl met begeleiding levert deelnemers gemiddeld meer gewichtsverlies op dan zonder deelname. Dat concludeert het RIVM in de nieuwe GLI-monitor. GLI staat voor Gecombineerde Leefstijlinterventie, een programma voor mensen met overgewicht of obesitas.",
+        "De onderzoekers vergeleken deelnemers met niet-deelnemers van wie de huisarts herhaaldelijk het gewicht had vastgelegd. De GLI-groep verloor gemiddeld 2,5 kilo meer. Na twee jaar meldde de groep ook een betere kwaliteit van leven, zowel met als zonder gewichtsverlagende medicijnen.",
+        "De uitkomsten verschillen per persoon. Van de GLI-deelnemers verloor 37 procent minstens vijf procent van het lichaamsgewicht. Bij de combinatie met medicijnen was dat 62 procent. De vergelijking betekent niet dat iedereen hetzelfde resultaat mag verwachten.",
+        "Het onderzoek geeft zicht op veranderingen tijdens het traject. Of mensen hun aangepaste leefstijl na afronding volhouden, is nog niet bekend. Wel daalde de uitval: van 49 procent bij de starters uit 2019 naar 35 procent bij de starters uit 2023."
+      ],
+      "image_query": "id:8830068",
+      "image_alt": "Illustratief beeld van bewegen; geen deelnemers aan het RIVM-onderzoek.",
+      "region": "nl",
+      "regional_rank": 1,
+      "editorial_rank": 1,
+      "reading_time_minutes": 2
+    },
+    {
+      "article_slug": "carisia-kees-streekwinkel",
+      "candidate_id": "afe5ff1fda55",
+      "title": "Carisia en Kees bouwen aan een bloeiende streekwinkel",
+      "email_title": "Carisia en Kees bouwen aan een bloeiende streekwinkel",
+      "title_alternative": "Dove ondernemers openen een grotere streekwinkel in Elst",
+      "teaser": "Bijna tien jaar na hun start hebben de dove ondernemers een nieuwe winkel, vaste klanten en ruimte voor hun volgende plannen.",
+      "category": "Mens",
+      "url": "https://www.deondernemer.nl/actueel/retail/dove-ondernemers-kees-carisia-t-jong-runnen-succes-winkel~c2b4c48c",
+      "primary_url": "https://www.deondernemer.nl/actueel/retail/dove-ondernemers-kees-carisia-t-jong-runnen-succes-winkel~c2b4c48c",
+      "source": "De Ondernemer / de Gelderlander",
+      "source_id": "de-ondernemer",
+      "published": "2026-11-04",
+      "article_body": [
+        "Carisia en Kees ’t Jong hebben in Elst een nieuwe plek voor hun streekwinkel De Lingegaerdt. Het pand is ruimer en overzichtelijker. Voor het dove ondernemerspaar is dat laatste belangrijk: vanuit hun kantoortje kunnen ze de winkel goed overzien.",
+        "Bijna tien jaar geleden verruilden ze hun vaste banen voor de winkel. Inmiddels verkopen ze lokale producten aan een trouwe klantenkring en werken er ook dove en slechthorende vrijwilligers. De verhuizing volgde op een lange periode van vergunningen en voorbereiding.",
+        "Communicatie blijft dagelijks aandacht vragen. Bellen kunnen ze niet zelf, en bij gesprekken maakt een gebarentolk veel verschil. Volgens het stel worden te weinig tolkuren vergoed om alle werkdagen te dekken. Daarom plannen ze belangrijke afspraken zoveel mogelijk bij elkaar.",
+        "Hun succes betekent dus niet dat alle belemmeringen verdwenen zijn. Wel hebben ze een bedrijf opgebouwd waarin persoonlijk contact een centrale plaats heeft. Klanten worden aangekeken en krijgen de tijd. De grotere winkel biedt bovendien ruimte om verder te ontwikkelen, al zijn een theehuis en belevenistuin voorlopig nog toekomstplannen."
+      ],
+      "image_query": "id:673184",
+      "image_alt": "Illustratieve foto van streekproducten; niet de winkel van Carisia en Kees.",
+      "region": "nl",
+      "regional_rank": 2,
+      "editorial_rank": 2
+    },
+    {
+      "article_slug": "palingen-veilig-langs-maurik",
+      "candidate_id": "b36647adfa79",
+      "title": "Vissers helpen duizenden palingen veilig langs een waterkrachtcentrale",
+      "email_title": "Vissers helpen duizenden palingen veilig langs een waterkrachtcentrale",
+      "title_alternative": "Ruim 9.000 kilo schieraal overgezet bij Maurik",
+      "teaser": "Bij Maurik is in twee maanden ruim 9.000 kilo volwassen paling vóór de centrale opgevangen en aan de andere kant vrijgelaten.",
+      "category": "Natuur & klimaat",
+      "url": "https://www.gld.nl/nieuws/8542571/vissers-redden-duizenden-palingen-van-gevaarlijke-hindernis",
+      "primary_url": "https://nos.nl/artikel/2637862-vissers-helpen-duizenden-palingen-veilig-oversteken-bij-waterkrachtcentrale-maurik",
+      "source": "Omroep Gelderland",
+      "source_id": "omroep-gelderland",
+      "published": "2026-11-03",
+      "article_body": [
+        "Ruim 9.000 kilo volwassen paling is de afgelopen twee maanden veilig langs de waterkrachtcentrale bij Maurik geholpen. Beroepsvissers vangen de trekkende dieren vóór de centrale op en zetten ze aan de andere kant terug. Volgens hen is de hoeveelheid een lokaal record.",
+        "Deze volwassen paling, schieraal genoemd, trekt vanuit de Nederlandse binnenwateren naar de Sargassozee om zich voort te planten. Onderweg vormen onder meer gemalen, stuwen en turbines hindernissen. De overzetactie voorkomt dat de gevangen dieren door deze centrale hoeven.",
+        "Het werk is onderdeel van Paling Over de Dijk, dat sinds 2011 loopt. Met grote fuiken onderscheppen de vissers de aal. Andere gevangen vissoorten gaan terug het water in.",
+        "Het record is geen aanwijzing dat de palingstand ineens herstelt. Dit jaar bleef de waterstand relatief laag, waardoor de stuw geen vrije doorgang bood. Er moest daardoor meer worden overgezet. De actie helpt individuele dieren voorbij één obstakel; de volledige route naar zee blijft een grotere opgave."
+      ],
+      "image_query": "id:8975861",
+      "image_alt": "Illustratief beeld van een Nederlandse rivier; niet de overzetactie in Maurik.",
+      "region": "nl",
+      "regional_rank": 3,
+      "editorial_rank": 3
+    },
+    {
+      "article_slug": "zonvarken-lagere-emissies",
+      "candidate_id": "ec691c996253",
+      "title": "Meer ruimte voor varkens, met minder uitstoot in onderzochte stallen",
+      "email_title": "Meer ruimte voor varkens, met minder uitstoot in onderzochte stallen",
+      "title_alternative": "WUR meet lagere emissies bij drie Zonvarkenbedrijven",
+      "teaser": "Metingen aan het Zonvarken-concept wijzen op lagere ammoniak- en methaanuitstoot. Het onderzoek omvat drie bedrijven.",
+      "category": "Natuur & klimaat",
+      "url": "https://www.wur.nl/nl/nieuws/zonvarken-meer-aandacht-voor-dierenwelzijn-en-fors-lagere-emissies",
+      "primary_url": "https://www.wur.nl/nl/nieuws/zonvarken-meer-aandacht-voor-dierenwelzijn-en-fors-lagere-emissies",
+      "source": "Wageningen University & Research",
+      "source_id": "wageningen-university-research",
+      "published": "2026-11-03",
+      "article_body": [
+        "Varkens meer leefruimte en een buitenuitloop geven kan samengaan met lagere uitstoot. Onderzoekers van Wageningen University & Research deden metingen op drie bedrijven met het Zonvarken-concept. Dat systeem probeert emissies bij de bron te beperken.",
+        "De aanpak scheidt urine en vaste mest en voert mest regelmatig af. Daardoor kunnen minder ammoniak en methaan ontstaan. Op basis van de metingen berekenden de onderzoekers voor een gesloten bedrijf met vijftig zeugen 61 procent minder ammoniak en 89 procent minder methaan dan bij het conventionele vergelijkingssysteem.",
+        "Die percentages vragen context. Ze zijn berekend uit een beperkte praktijkstudie, geen garantie voor iedere varkensstal. Ook blijft de buitenuitloop een aandachtspunt: waar dieren op een dichte vloer urineren, kan ammoniak vrijkomen.",
+        "WUR wil onder meer mestafvoer, schoonhouden en voeding verder onderzoeken. Ook de meetmethode moet verder worden ontwikkeld en gevalideerd. De huidige uitkomsten bieden daarmee een onderbouwde richting voor verbetering, zonder dat het stalsysteem al als overal bewezen oplossing kan worden beschouwd."
+      ],
+      "image_query": "id:3386356",
+      "image_alt": "Illustratieve foto van varkens; niet een van de drie onderzochte bedrijven.",
+      "region": "nl",
+      "regional_rank": 4,
+      "editorial_rank": 4
+    },
+    {
+      "article_slug": "dienstenexport-banen-nederland",
+      "candidate_id": "e345527dae27",
+      "title": "Dienstenexport draagt een steeds groter deel van de Nederlandse exportbanen",
+      "email_title": "Dienstenexport draagt een steeds groter deel van de Nederlandse exportbanen",
+      "title_alternative": "CBS: diensten leveren ruim drie kwart van groei in exportwerkgelegenheid",
+      "teaser": "Sinds 2010 groeide de werkgelegenheid dankzij export vooral door diensten, zoals ICT en zakelijke ondersteuning.",
+      "category": "Economie",
+      "url": "https://www.cbs.nl/nl-nl/nieuws/2026/45/export-van-diensten-levert-meer-op-en-creeert-meer-banen",
+      "primary_url": "https://www.cbs.nl/nl-nl/nieuws/2026/45/export-van-diensten-levert-meer-op-en-creeert-meer-banen",
+      "source": "CBS",
+      "source_id": "cbs",
+      "published": "2026-11-04",
+      "article_body": [
+        "Nederlandse export draait allang niet alleen om goederen. Nieuwe CBS-cijfers laten zien hoe belangrijk diensten zijn geworden voor de werkgelegenheid. In 2025 hing de uitvoer van goederen en diensten samen met ongeveer 2,6 miljoen voltijdbanen.",
+        "Dat waren 760.000 voltijdbanen meer dan in 2010. Ruim drie kwart van die groei kwam voor rekening van dienstenexport. Denk aan ICT, juridisch advies en andere zakelijke diensten. Inmiddels hangt ongeveer de helft van alle exportgerelateerde werkgelegenheid samen met diensten.",
+        "Ook per euro uitvoerwaarde blijft bij diensten relatief veel waarde in Nederland: 64 cent in 2025. Voor in Nederland gemaakte goederen was dat 53 cent, voor wederuitvoer 13 cent. Wederuitvoer betreft goederen die grotendeels elders zijn gemaakt en via Nederland verder reizen.",
+        "Dit zijn ontwikkelingen over vijftien jaar, geen plotselinge banengroei van deze week. Bovendien bleef het aandeel van de totale exportverdiensten in de economie sinds 2015 redelijk stabiel. De nieuwe cijfers laten vooral zien dat de samenstelling verandert en dat kennis en dienstverlening een grote rol spelen."
+      ],
+      "image_query": "id:569121",
+      "image_alt": "Illustratief beeld van dienstverlening; geen personen uit het CBS-onderzoek.",
+      "region": "nl",
+      "regional_rank": 5,
+      "editorial_rank": 5,
+      "reading_time_minutes": 5
+    },
+    {
+      "article_slug": "levensverhalen-psychische-behandeling",
+      "candidate_id": "f3db2fc710f2",
+      "title": "Het eigen levensverhaal krijgt een plek in psychische behandeling",
+      "email_title": "Het eigen levensverhaal krijgt een plek in psychische behandeling",
+      "title_alternative": "UT-onderzoek verkent levensverhalen bij persoonlijkheidsstoornissen",
+      "teaser": "Een nieuwe aanpak helpt deelnemers hun ervaringen, kwaliteiten en toekomst te onderzoeken. De eerste evaluaties geven aanknopingspunten.",
+      "category": "Gezondheid",
+      "url": "https://www.utwente.nl/nl/bms/nieuws/2026/10/1251275/niet-alleen-klachten-behandelen-levensverhalen-helpen-bij-psychisch-herstel",
+      "primary_url": "https://www.utwente.nl/nl/bms/nieuws/2026/10/1251275/niet-alleen-klachten-behandelen-levensverhalen-helpen-bij-psychisch-herstel",
+      "source": "Universiteit Twente",
+      "source_id": "universiteit-twente",
+      "published": "2026-10-29",
+      "article_body": [
+        "Wie ben je, wat heeft je gevormd en welke kant wil je op? Zulke vragen krijgen een plaats in een aanpak voor mensen met een persoonlijkheidsstoornis. Promotieonderzoek aan de Universiteit Twente laat zien hoe het levensverhaal de behandeling kan ondersteunen.",
+        "Psycholoog en psychotherapeut Silvia Pol ontwikkelde een checklist waarmee behandelaren verhalen systematisch kunnen bekijken. Die geeft aanknopingspunten voor hoe iemand zichzelf, relaties en de toekomst ervaart. Dat kan helpen om behandelkeuzes beter aan te laten sluiten.",
+        "Samen met andere deskundigen ontwikkelde Pol ook de groepsinterventie Een sterk verhaal. Deelnemers onderzoeken hun ervaringen, met aandacht voor moeilijke gebeurtenissen én voor eigen kracht en mogelijkheden. De eerste evaluaties wijzen op bruikbaarheid en mogelijke bijdragen aan zelfinzicht en eigen regie.",
+        "Het gaat om vroege bevindingen, niet om bewijs dat deze aanpak voor iedereen werkt of andere behandelingen kan vervangen. De waarde ligt in het bredere perspectief: naast klachtenvermindering aandacht geven aan de manier waarop iemand betekenis, richting en samenhang in het eigen leven ervaart."
+      ],
+      "image_query": "id:849825",
+      "image_alt": "Illustratief beeld van schrijven; geen deelnemer aan de onderzochte behandeling.",
+      "region": "nl",
+      "regional_rank": 6,
+      "editorial_rank": 6
+    }
+  ],
+  "int": [
+    {
+      "article_slug": "corvo-licht-uit-zeevogels",
+      "candidate_id": "63368e1e7cff",
+      "title": "Op Corvo gaat het licht uit zodat jonge zeevogels de oceaan vinden",
+      "email_title": "Op Corvo gaat het licht uit zodat jonge zeevogels de oceaan vinden",
+      "title_alternative": "Corvo dooft straatverlichting tijdens de najaarstrek van jonge zeevogels",
+      "teaser": "Bewoners op het Azoreneiland doven straatlampen en helpen gestrande jonge vogels verder op hun eerste tocht naar zee.",
+      "category": "Natuur & klimaat",
+      "url": "https://www.goodnewsnetwork.org/islands-near-portugal-turn-off-lights-to-protect-seabird-fledglings-every-oct/",
+      "primary_url": "https://www.goodnewsnetwork.org/islands-near-portugal-turn-off-lights-to-protect-seabird-fledglings-every-oct/",
+      "source": "Good News Network",
+      "source_id": "good-news-network",
+      "published": "2026-11-01",
+      "article_body": [
+        "Op het Portugese eiland Corvo blijven straatlampen in een kwetsbare periode voor jonge zeevogels meerdere nachten uit. De dieren verlaten in het najaar hun nest en zoeken in het donker de oceaan op. Kunstlicht kan hen daarbij desoriënteren.",
+        "De eilandbewoners helpen op twee manieren. Door verlichting te doven beperken ze een bron van verwarring. Daarnaast zoeken vrijwilligers naar jonge vogels die toch op de grond belanden. Die kunnen herstellen voordat ze weer bij zee worden vrijgelaten.",
+        "De aanpak is een samenwerking van bewoners, het gemeentebestuur en vogelbeschermers. Het is geen nieuw experiment van deze week: Corvo doet dit al jaren. De actuele berichtgeving laat zien hoe de gemeenschap de jaarlijkse uittocht ook dit najaar begeleidt.",
+        "Het vaak genoemde totaal van ruim 30.000 geredde vogels betreft reddingsacties op de Azoren over meerdere jaren. Dat aantal mag niet worden toegeschreven aan alleen het uitschakelen van lampen op Corvo. Wel laat de aanpak zien hoe een dorp zijn verlichting kan aanpassen aan de dieren waarmee het de kust deelt."
+      ],
+      "image_query": "id:6543041",
+      "image_alt": "Illustratief beeld van de zee bij schemering; geen foto van Corvo of de reddingsactie.",
+      "region": "int",
+      "regional_rank": 1,
+      "editorial_rank": 1
+    },
+    {
+      "article_slug": "siliconen-grondstof-terugwinnen",
+      "candidate_id": "7100a6abe994",
+      "title": "Van oude siliconen terug naar grondstof voor nieuw materiaal",
+      "email_title": "Van oude siliconen terug naar grondstof voor nieuw materiaal",
+      "title_alternative": "TU Berlin breekt gebruikte siliconen af tot hun industriële bouwsteen",
+      "teaser": "Onderzoekers winnen in het laboratorium een belangrijke grondstof terug uit gebruikte siliconen. Veilig opschalen is de volgende uitdaging.",
+      "category": "Energie & innovatie",
+      "url": "https://idw-online.de/en/news879857",
+      "primary_url": "https://idw-online.de/en/news879857",
+      "source": "TU Berlin via idw",
+      "source_id": "tu-berlin",
+      "published": "2026-10-28",
+      "article_body": [
+        "Een versleten siliconenbakvorm bevat materiaal dat hitte en chemische invloeden goed weerstaat. Precies die stevigheid maakt recycling lastig. Een team van de Technische Universität Berlin heeft nu gebruikte siliconen afgebroken tot een belangrijke grondstof voor de productie van nieuwe siliconen.",
+        "Het team testte de methode aan alledaagse producten. Bij afzonderlijke materialen werd tot 99 procent van de beoogde grondstof teruggewonnen; bij een mengsel van gebruikte producten was dat 86 procent. Daarmee gaat het om meer dan alleen een theoretische reactie.",
+        "De onderzoekers gebruiken een katalysator en een stof die tijdens de reactie fosgeen afgeeft. Dat gas is zeer giftig. Het proces hoort daarom thuis in gecontroleerde chemische installaties, en voor toepassing zijn verdere veiligheids- en zuiveringsstappen nodig.",
+        "De publicatie beschrijft laboratoriumonderzoek. Er staat nog geen grootschalige recyclingketen voor afgedankte siliconen. De bereikte stap is dat het materiaal kan worden teruggebracht tot een bruikbare bouwsteen. Of dat ook veilig, betaalbaar en milieugunstig op grote schaal kan, moet verder worden uitgezocht."
+      ],
+      "image_query": "id:3498584",
+      "image_alt": "Illustratief laboratoriumbeeld; niet de installatie uit het Berlijnse onderzoek.",
+      "region": "int",
+      "regional_rank": 2,
+      "editorial_rank": 2
+    },
+    {
+      "article_slug": "belfast-robot-complexe-operaties",
+      "candidate_id": "cd3887213fef",
+      "title": "Operatierobot in Belfast al ingezet bij 130 complexe operaties",
+      "email_title": "Operatierobot in Belfast al ingezet bij 130 complexe operaties",
+      "title_alternative": "Belfast gebruikt robotondersteuning bij complexe gynaecologische chirurgie",
+      "teaser": "De techniek is sinds mei in gebruik. De 130 behandelde patiënten vormen een concreet resultaat binnen de gynaecologische zorg.",
+      "category": "Gezondheid",
+      "url": "https://www.bbc.co.uk/news/articles/c98rz8v5rem0o",
+      "primary_url": "https://www.health-ni.gov.uk/news/ps195m-investment-endometriosis-services",
+      "source": "BBC",
+      "source_id": "bbc",
+      "published": "2026-11-02",
+      "article_body": [
+        "In Belfast City Hospital is robotondersteunde chirurgie inmiddels gebruikt bij 130 patiënten die een complexe gynaecologische operatie nodig hadden. Het Noord-Ierse ministerie van Volksgezondheid bevestigt dat de techniek sinds mei 2026 in gebruik is.",
+        "De chirurg bestuurt het systeem. De robot opereert dus niet zelfstandig. De toepassing is onder meer relevant voor ingewikkelde ingrepen in het bekkengebied, zoals bij endometriose. Daarbij groeit weefsel dat op baarmoederslijmvlies lijkt buiten de baarmoeder, met mogelijk ernstige pijn en andere klachten.",
+        "Het ministerie kondigde daarnaast 1,95 miljoen pond aan voor endometriosezorg. Dat geld is bestemd voor specialistische centra en lokale ondersteuning. Die investering is een volgende stap; de 130 uitgevoerde operaties zijn het al bereikte resultaat.",
+        "De bredere gynaecologische wachtlijsten zijn volgens het ministerie afgenomen. Uit die cijfers volgt niet dat de robot daarvan alleen de oorzaak is: ook extra spreekuren, diagnostiek en behandelcapaciteit spelen mee. Het hoopgevende nieuws is de beschikbaarheid en het daadwerkelijke gebruik van een aanvullende operatietechniek, zonder te suggereren dat de lange wachttijden al verdwenen zijn."
+      ],
+      "image_query": "id:7839395",
+      "image_alt": "Illustratieve foto van een operatiekamer; niet het robotplatform in Belfast.",
+      "region": "int",
+      "regional_rank": 3,
+      "editorial_rank": 3,
+      "reading_time_minutes": 5
+    },
+    {
+      "article_slug": "china-mangroven-vogelsoorten",
+      "candidate_id": "a38bcf079551",
+      "title": "Meer vogelsoorten geregistreerd in Chinese mangrovebossen",
+      "email_title": "Meer vogelsoorten geregistreerd in Chinese mangrovebossen",
+      "title_alternative": "Onderzoek beschrijft uitbreiding van mangroven en geregistreerde vogeldiversiteit in China",
+      "teaser": "Yale Environment 360 meldt dat tussen 1998 en 2020 zowel het mangrovegebied als het aantal geregistreerde vogelsoorten toenam.",
+      "category": "Natuur & klimaat",
+      "url": "https://e360.yale.edu/digest/china-mangrove-restoration-bird-species",
+      "primary_url": "https://www.cell.com/the-innovation/fulltext/S2666-6758(26)00147-5",
+      "source": "Yale Environment 360",
+      "source_id": "yale-environment-360",
+      "published": "2026-11-03",
+      "article_body": [
+        "Langs de Chinese kust zijn mangrovebossen uitgebreid na grote verliezen in de vorige eeuw. Onderzoek dat Yale Environment 360 beschrijft, laat zien dat tegelijk meer vogelsoorten in deze gebieden werden geregistreerd.",
+        "De vergelijking beslaat 1998 tot 2020. In die periode nam het geregistreerde aantal soorten toe van 148 tot 397. Mangroven groeien op de grens van land en zee. Hun wortels bieden structuur aan het kustgebied, waar allerlei dieren voedsel en beschutting vinden.",
+        "Er is geen eenvoudige oorzaak voor de groei van het bosareaal. China plantte mangroven aan en beschermde ze met regelgeving. Ook opwarming speelde mee, doordat bomen zich verder naar het noorden konden verspreiden. Het onderzoek maakt bovendien geen afzonderlijke vergelijking tussen aangeplante en natuurlijke bossen.",
+        "De uitkomst mag daarom niet worden gelezen als bewijs dat elke aanplant dezelfde natuurwinst geeft, of dat klimaatverandering gunstig is voor de natuur. Het positieve resultaat is specifieker: na eerdere verliezen kwam er mangrovegebied bij en werd er een grotere verscheidenheid aan vogels waargenomen."
+      ],
+      "image_query": "id:249830",
+      "image_alt": "Illustratief beeld van mangrovewortels; niet een van de Chinese meetlocaties.",
+      "region": "int",
+      "regional_rank": 4,
+      "editorial_rank": 4
+    },
+    {
+      "article_slug": "esk-valley-samen-leven",
+      "candidate_id": "40f66591d43d",
+      "title": "In dit Engelse dorp wonen en werken mensen met en zonder beperking samen",
+      "email_title": "In dit Engelse dorp wonen en werken mensen met en zonder beperking samen",
+      "title_alternative": "Reportage belicht het dagelijks leven in Esk Valley Camphill Community",
+      "teaser": "Negentien huishoudens delen maaltijden, werk en verantwoordelijkheid. Een nieuwe reportage laat zien hoe die gemeenschap dagelijks functioneert.",
+      "category": "Mens",
+      "url": "https://www.positive.news/society/what-if-we-stopped-treating-social-care-like-a-service/",
+      "primary_url": "https://www.eskvalleycamphill.org/our-community/",
+      "source": "Positive News",
+      "source_id": "positive-news",
+      "published": "2026-11-03",
+      "article_body": [
+        "Samen eten, werken in de tuin of iets maken in een werkplaats: in Esk Valley Camphill Community horen zulke activiteiten bij het dagelijks leven. Mensen met en zonder verstandelijke beperking delen er huizen en verantwoordelijkheden.",
+        "Een nieuwe reportage van Positive News beschrijft de gemeenschap in Noord-Engeland van binnenuit. De schrijver woonde er drie maanden als vrijwilliger. Hij zag hoe bewoners die ondersteuning krijgen ook zelf anderen helpen, bijvoorbeeld door een nieuwkomer wegwijs te maken.",
+        "De gemeenschap bestaat uit negentien huishoudens. Ook de eigen website beschrijft een combinatie van samen wonen, begeleiding en werk in onder meer een bakkerij, tuin en houtwerkplaats. Het doel is dat mensen op hun eigen manier bijdragen aan het geheel.",
+        "Dit is een inkijk in een bestaande woonvorm, geen bewijs dat deze aanpak voor iedereen beter werkt. De reportage is persoonlijk en de schrijver raakte betrokken bij de gemeenschap. Juist met die beperking erbij is het een interessante leestip: hoe kan ondersteuning ruimte laten voor wederkerigheid, vertrouwde relaties en het gevoel ergens nodig te zijn?"
+      ],
+      "image_query": "id:2247391",
+      "image_alt": "Illustratief beeld van samenkomen; niet de bewoners van Esk Valley.",
+      "region": "int",
+      "regional_rank": 5,
+      "editorial_rank": 5,
+      "reading_time_minutes": 15
+    },
+    {
+      "article_slug": "sensoren-groei-mais",
+      "candidate_id": "90dfd6722a20",
+      "title": "Nieuwe sensoren volgen hoe een maïsplant groeit",
+      "email_title": "Nieuwe sensoren volgen hoe een maïsplant groeit",
+      "title_alternative": "Onderzoekers testen rekbare sensoren voor maïsstengels en kolven",
+      "teaser": "In een kas maten sensoren elke tien minuten de groei van stengels en kolven. Veldproeven moeten nog volgen.",
+      "category": "Wetenschap",
+      "url": "https://phys.org/news/2026-11-sensors-corn-growth.html",
+      "primary_url": "https://phys.org/news/2026-11-sensors-corn-growth.html",
+      "source": "South Dakota State University via Phys.org",
+      "source_id": "phys-org",
+      "published": "2026-11-03",
+      "article_body": [
+        "Wat doet een maïsplant na bemesting of een andere behandeling? Onderzoekers van South Dakota State University hebben sensoren ontwikkeld die veranderingen in de dikte van stengels en kolven kunnen volgen. Tijdens eerste tests leverden ze iedere tien minuten nieuwe gegevens.",
+        "De sensoren gebruiken laserbewerkt grafeen, een elektrisch geleidend materiaal. Dat is bevestigd aan een band van siliconen die met de plant kan meebewegen. Een veermechanisme moet helpen om contact te houden zonder de groei af te knellen.",
+        "Het team testte het systeem in een kas. De metingen kunnen onderzoekers helpen om veranderingen preciezer in de tijd te volgen, in plaats van alleen af en toe handmatig te meten. Zo wordt het mogelijk om gerichter te onderzoeken wanneer een plant op ingrepen reageert.",
+        "Het bereikte resultaat is een getest meetsysteem. Proeven op het veld en verdere financiering moeten nog volgen. Er is dus nog geen aangetoonde besparing op mest of verbetering van oogsten. Wel hebben onderzoekers een praktisch hulpmiddel om zulke vragen nauwkeuriger te bestuderen."
+      ],
+      "image_query": "id:3705687",
+      "image_alt": "Illustratieve foto van maïs; niet de planten of sensoren uit het experiment.",
+      "region": "int",
+      "regional_rank": 6,
+      "editorial_rank": 6,
+      "reading_time_minutes": 3
+    }
+  ],
+  "headlines": [
+    {
+      "title": "Democraten behalen meerderheid in Huis en Senaat bij Amerikaanse verkiezingen",
+      "url": "https://nos.nl/artikel/2637958-amerikaanse-kiezer-rekent-af-met-trump-democratische-meerderheid-in-huis-en-senaat",
+      "source": "NOS",
+      "source_id": "nos",
+      "published": "2026-11-04"
+    },
+    {
+      "title": "Nederland draagt Klaas Knot voor als president van de Europese Centrale Bank",
+      "url": "https://nos.nl/artikel/2637997-nederland-draagt-klaas-knot-voor-als-president-europese-centrale-bank",
+      "source": "NOS",
+      "source_id": "nos",
+      "published": "2026-11-04"
+    },
+    {
+      "title": "Inflatie in oktober volgens snelle raming op 3,7 procent",
+      "url": "https://nos.nl/artikel/2637971-inflatie-stijgt-verder-tot-3-7-procent-in-oktober-boodschappen-iets-goedkoper",
+      "source": "NOS",
+      "source_id": "nos",
+      "published": "2026-11-04"
+    }
+  ]
+}

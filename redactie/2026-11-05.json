@@ -1,0 +1,622 @@
+{
+  "schema_version": 1,
+  "edition_date": "2026-11-05",
+  "news_sha256": "e41db143736fac200bbacabaaf7342e6e3a328536b97d2d8ab6287a7ff60a517",
+  "approved": true,
+  "approved_by": "Tom de Haas",
+  "variation_exception_reason": "",
+  "articles": {
+    "nl:gli-afvallen-kwaliteit-van-leven": {
+      "source_id": "rivm",
+      "organization_id": "rivm",
+      "article_url": "https://www.rivm.nl/nieuws/gli-helpt-bij-afvallen-deelnemers-ervaren-betere-kwaliteit-van-leven",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-03",
+      "event_date": "2025-12-31",
+      "checked_on": "2026-11-04",
+      "dates_checked": true,
+      "new_development": "Nieuw bronbericht over beschreven onderzoeksperiode of toepassing.",
+      "older_exception_reason": "",
+      "topic_id": "gli-afvallen-kwaliteit-van-leven",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.rivm.nl/nieuws/gli-helpt-bij-afvallen-deelnemers-ervaren-betere-kwaliteit-van-leven",
+        "claim": "Leefstijlbegeleiding helpt deelnemers afvallen én beter leven",
+        "support": "2,5 kilo verschil; kwaliteit van leven verbeterd.",
+        "limitations": "Vergelijkingsgroepen; geen garantie per persoon of bewijs van behoud na afloop.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/couple-park-people-young-casual-8830068/; bestaande lokale Pixabay-cache; illustratief."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Bron-URLs vergeleken met 228 archiefverhalen; nieuwsfeiten vorige twee edities gelezen. Geen herhaling.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Gecontroleerd resultaat, nieuw inzicht of beschreven bestaande praktijk; stadium begrensd in artikel.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "nl:carisia-kees-streekwinkel": {
+      "source_id": "de-ondernemer",
+      "organization_id": "de-ondernemer",
+      "article_url": "https://www.deondernemer.nl/actueel/retail/dove-ondernemers-kees-carisia-t-jong-runnen-succes-winkel~c2b4c48c",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-04",
+      "event_date": "2026-11-04",
+      "checked_on": "2026-11-04",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "carisia-kees-streekwinkel",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.deondernemer.nl/actueel/retail/dove-ondernemers-kees-carisia-t-jong-runnen-succes-winkel~c2b4c48c",
+        "claim": "Carisia en Kees bouwen aan een bloeiende streekwinkel",
+        "support": "Nieuwe winkel en bestaand klantenbestand beschreven in reportage.",
+        "limitations": "Persoonlijk ondernemersportret; tolkenproblematiek blijft bestaan.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/carrots-basket-vegetables-market-673184/; bestaande lokale Pixabay-cache; illustratief."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Bron-URLs vergeleken met 228 archiefverhalen; nieuwsfeiten vorige twee edities gelezen. Geen herhaling.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Gecontroleerd resultaat, nieuw inzicht of beschreven bestaande praktijk; stadium begrensd in artikel.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "nl:palingen-veilig-langs-maurik": {
+      "source_id": "omroep-gelderland",
+      "organization_id": "omroep-gelderland",
+      "article_url": "https://www.gld.nl/nieuws/8542571/vissers-redden-duizenden-palingen-van-gevaarlijke-hindernis",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-03",
+      "event_date": "2026-11-03",
+      "checked_on": "2026-11-04",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "palingen-veilig-langs-maurik",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://nos.nl/artikel/2637862-vissers-helpen-duizenden-palingen-veilig-oversteken-bij-waterkrachtcentrale-maurik",
+        "claim": "Vissers helpen duizenden palingen veilig langs een waterkrachtcentrale",
+        "support": "NOS/Omroep Gelderland bevestigen ruim 9.000 kilo overgezet.",
+        "limitations": "Meer overzet door waterstand; geen populatieherstel aangetoond.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/river-bridge-maastricht-maas-city-8975861/; bestaande lokale Pixabay-cache; illustratief."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Bron-URLs vergeleken met 228 archiefverhalen; nieuwsfeiten vorige twee edities gelezen. Geen herhaling.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Gecontroleerd resultaat, nieuw inzicht of beschreven bestaande praktijk; stadium begrensd in artikel.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "nl:zonvarken-lagere-emissies": {
+      "source_id": "wageningen-university-research",
+      "organization_id": "wageningen-university-research",
+      "article_url": "https://www.wur.nl/nl/nieuws/zonvarken-meer-aandacht-voor-dierenwelzijn-en-fors-lagere-emissies",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-03",
+      "event_date": "2026-10-20",
+      "checked_on": "2026-11-04",
+      "dates_checked": true,
+      "new_development": "Nieuw bronbericht over beschreven onderzoeksperiode of toepassing.",
+      "older_exception_reason": "",
+      "topic_id": "zonvarken-lagere-emissies",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.wur.nl/nl/nieuws/zonvarken-meer-aandacht-voor-dierenwelzijn-en-fors-lagere-emissies",
+        "claim": "Meer ruimte voor varkens, met minder uitstoot in onderzochte stallen",
+        "support": "WUR-praktijkmetingen op drie bedrijven; berekende vergelijking.",
+        "limitations": "Beperkte steekproef en methodevalidatie; geen algemene reductiegarantie.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/piglet-mammal-species-fauna-3386356/; bestaande lokale Pixabay-cache; illustratief."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Bron-URLs vergeleken met 228 archiefverhalen; nieuwsfeiten vorige twee edities gelezen. Geen herhaling.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Gecontroleerd resultaat, nieuw inzicht of beschreven bestaande praktijk; stadium begrensd in artikel.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "nl:dienstenexport-banen-nederland": {
+      "source_id": "cbs",
+      "organization_id": "cbs",
+      "article_url": "https://www.cbs.nl/nl-nl/nieuws/2026/45/export-van-diensten-levert-meer-op-en-creeert-meer-banen",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-04",
+      "event_date": "2025-12-31",
+      "checked_on": "2026-11-04",
+      "dates_checked": true,
+      "new_development": "Nieuw bronbericht over beschreven onderzoeksperiode of toepassing.",
+      "older_exception_reason": "",
+      "topic_id": "dienstenexport-banen-nederland",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.cbs.nl/nl-nl/nieuws/2026/45/export-van-diensten-levert-meer-op-en-creeert-meer-banen",
+        "claim": "Dienstenexport draagt een steeds groter deel van de Nederlandse exportbanen",
+        "support": "CBS-tabel vergelijkt arbeidsvolume 2010 en 2025.",
+        "limitations": "Voltijdbanen, geen personen; ontwikkeling over vijftien jaar.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/notebooks-cafe-blog-mobile-569121/; bestaande lokale Pixabay-cache; illustratief."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Bron-URLs vergeleken met 228 archiefverhalen; nieuwsfeiten vorige twee edities gelezen. Geen herhaling.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Gecontroleerd resultaat, nieuw inzicht of beschreven bestaande praktijk; stadium begrensd in artikel.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "nl:levensverhalen-psychische-behandeling": {
+      "source_id": "universiteit-twente",
+      "organization_id": "universiteit-twente",
+      "article_url": "https://www.utwente.nl/nl/bms/nieuws/2026/10/1251275/niet-alleen-klachten-behandelen-levensverhalen-helpen-bij-psychisch-herstel",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-10-29",
+      "event_date": "2026-10-29",
+      "checked_on": "2026-11-04",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "levensverhalen-psychische-behandeling",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.utwente.nl/nl/bms/nieuws/2026/10/1251275/niet-alleen-klachten-behandelen-levensverhalen-helpen-bij-psychisch-herstel",
+        "claim": "Het eigen levensverhaal krijgt een plek in psychische behandeling",
+        "support": "UT beschrijft checklist en eerste evaluaties van Een sterk verhaal.",
+        "limitations": "Vroege evaluaties bij persoonlijkheidsstoornissen; geen brede causaliteitsclaim.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/student-typing-keyboard-text-849825/; bestaande lokale Pixabay-cache; illustratief."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Bron-URLs vergeleken met 228 archiefverhalen; nieuwsfeiten vorige twee edities gelezen. Geen herhaling.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Gecontroleerd resultaat, nieuw inzicht of beschreven bestaande praktijk; stadium begrensd in artikel.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "int:corvo-licht-uit-zeevogels": {
+      "source_id": "good-news-network",
+      "organization_id": "good-news-network",
+      "article_url": "https://www.goodnewsnetwork.org/islands-near-portugal-turn-off-lights-to-protect-seabird-fledglings-every-oct/",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-01",
+      "event_date": "2026-10-30",
+      "checked_on": "2026-11-04",
+      "dates_checked": true,
+      "new_development": "Nieuw bronbericht over beschreven onderzoeksperiode of toepassing.",
+      "older_exception_reason": "",
+      "topic_id": "corvo-licht-uit-zeevogels",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.goodnewsnetwork.org/islands-near-portugal-turn-off-lights-to-protect-seabird-fledglings-every-oct/",
+        "claim": "Op Corvo gaat het licht uit zodat jonge zeevogels de oceaan vinden",
+        "support": "Reportage beschrijft jaarlijkse verduistering en reddingsacties.",
+        "limitations": "30.000 is meerjarig archipeltotaal, geen effectmeting van verduistering.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/sea-sunset-outdoors-darkness-ocean-6543041/; bestaande lokale Pixabay-cache; illustratief."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Bron-URLs vergeleken met 228 archiefverhalen; nieuwsfeiten vorige twee edities gelezen. Geen herhaling.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Gecontroleerd resultaat, nieuw inzicht of beschreven bestaande praktijk; stadium begrensd in artikel.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "int:siliconen-grondstof-terugwinnen": {
+      "source_id": "tu-berlin",
+      "organization_id": "tu-berlin",
+      "article_url": "https://idw-online.de/en/news879857",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-10-28",
+      "event_date": "2026-10-28",
+      "checked_on": "2026-11-04",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "Oorspronkelijk persbericht 28 oktober, acht dagen vóór editie; gekozen concreet resultaat, recent herontdekt via Goodnews.eu.",
+      "topic_id": "siliconen-grondstof-terugwinnen",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://idw-online.de/en/news879857",
+        "claim": "Van oude siliconen terug naar grondstof voor nieuw materiaal",
+        "support": "TU Berlin publicatie beschrijft grondstofterugwinning uit gebruikte producten.",
+        "limitations": "Laboratorium; giftig reagens en opschaling blijven opgaven.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/lab-experiment-test-chemistry-3498584/; bestaande lokale Pixabay-cache; illustratief."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Bron-URLs vergeleken met 228 archiefverhalen; nieuwsfeiten vorige twee edities gelezen. Geen herhaling.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Gecontroleerd resultaat, nieuw inzicht of beschreven bestaande praktijk; stadium begrensd in artikel.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "int:belfast-robot-complexe-operaties": {
+      "source_id": "bbc",
+      "organization_id": "bbc",
+      "article_url": "https://www.bbc.co.uk/news/articles/c98rz8v5rem0o",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-02",
+      "event_date": "2026-11-02",
+      "checked_on": "2026-11-04",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "belfast-robot-complexe-operaties",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.health-ni.gov.uk/news/ps195m-investment-endometriosis-services",
+        "claim": "Operatierobot in Belfast al ingezet bij 130 complexe operaties",
+        "support": "Ministerie bevestigt 130 complexe robotondersteunde operaties sinds mei.",
+        "limitations": "Geen causaal bewijs dat robot alleen wachtlijsten verkort.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/spine-surgeon-chennai-surgeon-7839395/; bestaande lokale Pixabay-cache; illustratief."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Bron-URLs vergeleken met 228 archiefverhalen; nieuwsfeiten vorige twee edities gelezen. Geen herhaling.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Gecontroleerd resultaat, nieuw inzicht of beschreven bestaande praktijk; stadium begrensd in artikel.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "int:china-mangroven-vogelsoorten": {
+      "source_id": "yale-environment-360",
+      "organization_id": "yale-environment-360",
+      "article_url": "https://e360.yale.edu/digest/china-mangrove-restoration-bird-species",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-03",
+      "event_date": "2020-12-31",
+      "checked_on": "2026-11-04",
+      "dates_checked": true,
+      "new_development": "Nieuw bronbericht over beschreven onderzoeksperiode of toepassing.",
+      "older_exception_reason": "",
+      "topic_id": "china-mangroven-vogelsoorten",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.cell.com/the-innovation/fulltext/S2666-6758(26)00147-5",
+        "claim": "Meer vogelsoorten geregistreerd in Chinese mangrovebossen",
+        "support": "Yale Environment 360 reports 148 to 397 recorded species between 1998 and 2020. This attributed result was verified against the Yale report.",
+        "limitations": "The original paper could not be read in full. This is an attributed observation; the article does not claim causality.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/mangrove-forest-swamp-aerial-roots-249830/; bestaande lokale Pixabay-cache; illustratief."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Bron-URLs vergeleken met 228 archiefverhalen; nieuwsfeiten vorige twee edities gelezen. Geen herhaling.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Gecontroleerd resultaat, nieuw inzicht of beschreven bestaande praktijk; stadium begrensd in artikel.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 1,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "int:esk-valley-samen-leven": {
+      "source_id": "positive-news",
+      "organization_id": "positive-news",
+      "article_url": "https://www.positive.news/society/what-if-we-stopped-treating-social-care-like-a-service/",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-03",
+      "event_date": "2026-11-03",
+      "checked_on": "2026-11-04",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "esk-valley-samen-leven",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.eskvalleycamphill.org/our-community/",
+        "claim": "In dit Engelse dorp wonen en werken mensen met en zonder beperking samen",
+        "support": "Reportage en gemeenschapwebsite bevestigen negentien huishoudens.",
+        "limitations": "Ervaringsreportage, geen vergelijkende effectstudie; gemeenschap bestaat al langer.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/training-volunteers-learning-2247391/; bestaande lokale Pixabay-cache; illustratief."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Bron-URLs vergeleken met 228 archiefverhalen; nieuwsfeiten vorige twee edities gelezen. Geen herhaling.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Gecontroleerd resultaat, nieuw inzicht of beschreven bestaande praktijk; stadium begrensd in artikel.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "int:sensoren-groei-mais": {
+      "source_id": "phys-org",
+      "organization_id": "phys-org",
+      "article_url": "https://phys.org/news/2026-11-sensors-corn-growth.html",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-03",
+      "event_date": "2026-11-03",
+      "checked_on": "2026-11-04",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "sensoren-groei-mais",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://phys.org/news/2026-11-sensors-corn-growth.html",
+        "claim": "Nieuwe sensoren volgen hoe een maïsplant groeit",
+        "support": "SDSU-verslag beschrijft kastest met tienminutenmetingen.",
+        "limitations": "Geen veldresultaten, opbrengstwinst of mestbesparing aangetoond.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/corn-harvest-healthy-sweet-corn-3705687/; bestaande lokale Pixabay-cache; illustratief."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Bron-URLs vergeleken met 228 archiefverhalen; nieuwsfeiten vorige twee edities gelezen. Geen herhaling.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Gecontroleerd resultaat, nieuw inzicht of beschreven bestaande praktijk; stadium begrensd in artikel.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "headlines:0": {
+      "source_id": "nos",
+      "organization_id": "nos",
+      "article_url": "https://nos.nl/artikel/2637958-amerikaanse-kiezer-rekent-af-met-trump-democratische-meerderheid-in-huis-en-senaat",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-04",
+      "event_date": "2026-11-04",
+      "checked_on": "2026-11-04",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "actualiteit-0-2026-11-04",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://nos.nl/artikel/2637958-amerikaanse-kiezer-rekent-af-met-trump-democratische-meerderheid-in-huis-en-senaat",
+        "claim": "Democraten behalen meerderheid in Huis en Senaat bij Amerikaanse verkiezingen",
+        "support": "NOS-artikel rechtstreeks gelezen; actuele stand 4 november.",
+        "limitations": "Op editiedag actualiseren.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used",
+        "image_evidence": "Geen beeld bij actualiteit."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Bron-URLs vergeleken met 228 archiefverhalen; nieuwsfeiten vorige twee edities gelezen. Geen herhaling.",
+        "new_fact": ""
+      }
+    },
+    "headlines:1": {
+      "source_id": "nos",
+      "organization_id": "nos",
+      "article_url": "https://nos.nl/artikel/2637997-nederland-draagt-klaas-knot-voor-als-president-europese-centrale-bank",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-04",
+      "event_date": "2026-11-04",
+      "checked_on": "2026-11-04",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "actualiteit-1-2026-11-04",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://nos.nl/artikel/2637997-nederland-draagt-klaas-knot-voor-als-president-europese-centrale-bank",
+        "claim": "Nederland draagt Klaas Knot voor als president van de Europese Centrale Bank",
+        "support": "NOS-artikel rechtstreeks gelezen; actuele stand 4 november.",
+        "limitations": "Op editiedag actualiseren.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used",
+        "image_evidence": "Geen beeld bij actualiteit."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Bron-URLs vergeleken met 228 archiefverhalen; nieuwsfeiten vorige twee edities gelezen. Geen herhaling.",
+        "new_fact": ""
+      }
+    },
+    "headlines:2": {
+      "source_id": "nos",
+      "organization_id": "nos",
+      "article_url": "https://nos.nl/artikel/2637971-inflatie-stijgt-verder-tot-3-7-procent-in-oktober-boodschappen-iets-goedkoper",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-04",
+      "event_date": "2026-11-04",
+      "checked_on": "2026-11-04",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "actualiteit-2-2026-11-04",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://nos.nl/artikel/2637971-inflatie-stijgt-verder-tot-3-7-procent-in-oktober-boodschappen-iets-goedkoper",
+        "claim": "Inflatie in oktober volgens snelle raming op 3,7 procent",
+        "support": "NOS-artikel rechtstreeks gelezen; actuele stand 4 november.",
+        "limitations": "Op editiedag actualiseren.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used",
+        "image_evidence": "Geen beeld bij actualiteit."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Bron-URLs vergeleken met 228 archiefverhalen; nieuwsfeiten vorige twee edities gelezen. Geen herhaling.",
+        "new_fact": ""
+      }
+    }
+  },
+  "production_status": "concept; 12 beeldkeuzes visueel bekeken en vastgezet; oorspronkelijke mangrovestudie, complete pooltriage, dekking, reserves, visuele paginacontrole en editiedagcontrole nog open",
+  "owner_approved_selection": {
+    "authorized_on": "2026-11-05",
+    "authorized_by": "Tom de Haas",
+    "news_sha256": "e41db143736fac200bbacabaaf7342e6e3a328536b97d2d8ab6287a7ff60a517",
+    "selected_sources_checked": true,
+    "candidate_triage_complete": false,
+    "source_coverage_complete": false
+  }
+}

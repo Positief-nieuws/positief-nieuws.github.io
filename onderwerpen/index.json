@@ -11,49 +11,49 @@
     "label": "Economie",
     "slug": "economie",
     "url": "/economie/",
-    "nl_count": 8,
+    "nl_count": 9,
     "int_count": 2,
-    "latest": "2026-11-02"
+    "latest": "2026-11-05"
   },
   {
     "label": "Energie & innovatie",
     "slug": "energie-en-innovatie",
     "url": "/energie-en-innovatie/",
     "nl_count": 14,
-    "int_count": 10,
-    "latest": "2026-11-02"
+    "int_count": 11,
+    "latest": "2026-11-05"
   },
   {
     "label": "Gezondheid",
     "slug": "gezondheid",
     "url": "/gezondheid/",
-    "nl_count": 14,
-    "int_count": 24,
-    "latest": "2026-11-02"
+    "nl_count": 16,
+    "int_count": 25,
+    "latest": "2026-11-05"
   },
   {
     "label": "Mens",
     "slug": "mens",
     "url": "/mens/",
-    "nl_count": 31,
-    "int_count": 14,
-    "latest": "2026-11-02"
+    "nl_count": 32,
+    "int_count": 15,
+    "latest": "2026-11-05"
   },
   {
     "label": "Natuur & klimaat",
     "slug": "natuur-en-klimaat",
     "url": "/natuur-en-klimaat/",
-    "nl_count": 24,
-    "int_count": 36,
-    "latest": "2026-11-02"
+    "nl_count": 26,
+    "int_count": 38,
+    "latest": "2026-11-05"
   },
   {
     "label": "Wetenschap",
     "slug": "wetenschap",
     "url": "/wetenschap/",
     "nl_count": 9,
-    "int_count": 22,
-    "latest": "2026-10-29"
+    "int_count": 23,
+    "latest": "2026-11-05"
   },
   {
     "label": "Sport",
