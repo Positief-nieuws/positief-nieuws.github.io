@@ -96,3 +96,53 @@ body.pn-home .pn-personal-note .pn-signature {
   transform: rotate(-3deg);
   transform-origin: left center;
 }
+
+
+/* PN playful accents v1: restrained hand-drawn details. */
+/* An occasional orange hand-drawn flourish on the homepage note.
+   It stays in the empty bottom-right corner, away from the text. */
+body.pn-home .pn-personal-note {
+  position: relative;
+}
+body.pn-home .pn-personal-note::after {
+  content: "";
+  position: absolute;
+  right: 18px;
+  bottom: 15px;
+  width: 52px;
+  height: 22px;
+  pointer-events: none;
+  opacity: .72;
+  background: center / contain no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 24'%3E%3Cpath d='M3 17 C10 6 16 6 21 13 S34 21 40 10 S48 7 53 11' fill='none' stroke='%23f57900' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+/* The reader section gets a modest, differently colored sketched line. */
+body.pn-home #today-view #reader-voices h2::after {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 11px;
+  margin-top: 7px;
+  pointer-events: none;
+  background: center / contain no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 12'%3E%3Cpath d='M2 8 Q11 2 19 7 T46 5' fill='none' stroke='%23176e5c' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+/* A tiny orange dash marks the end-of-article related stories,
+   and appears once on topic overview sections. */
+body:not(.pn-home) .article-related h2::after,
+body:not(.pn-home) .topic-archive-heading h2::after {
+  content: "";
+  display: block;
+  width: 43px;
+  height: 12px;
+  margin-top: 6px;
+  pointer-events: none;
+  background: center / contain no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 46 13'%3E%3Cpath d='M2 9 C11 5 18 7 25 4 S37 4 44 3' fill='none' stroke='%23f57900' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+@media (max-width: 640px) {
+  body.pn-home .pn-personal-note::after {
+    right: 14px;
+    bottom: 12px;
+    width: 38px;
+    height: 17px;
+    opacity: .6;
+  }
+}
