@@ -80,3 +80,19 @@ body.pn-home #today-view #reader-voices .reader-credit {
   body.pn-home #today-view #reader-voices { padding-top: 24px; }
   body.pn-home #today-view #reader-voices h2 { font-size: 21px; margin-bottom: 16px; }
 }
+
+/* Personal note editorial override (serif title and handwritten signature). */
+body.pn-home .pn-personal-note h2 {
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-weight: 700;
+  letter-spacing: -.025em;
+}
+body.pn-home .pn-personal-note .pn-signature {
+  display: inline-block;
+  font-family: "Caveat", "Segoe Print", cursive !important;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.1;
+  transform: rotate(-3deg);
+  transform-origin: left center;
+}
