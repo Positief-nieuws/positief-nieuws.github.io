@@ -146,3 +146,77 @@ body:not(.pn-home) .topic-archive-heading h2::after {
     opacity: .6;
   }
 }
+
+
+/* PN playful accents v2: a little extra personality without clutter. */
+/* A loose little orange spark beside the Dutch news section title. */
+body.pn-home #nl-grid .blocktitle h2 {
+  display: inline-block;
+  position: relative;
+}
+body.pn-home #nl-grid .blocktitle h2::after {
+  content: "";
+  position: absolute;
+  top: -12px;
+  right: -27px;
+  width: 23px;
+  height: 26px;
+  pointer-events: none;
+  background: center / contain no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 30'%3E%3Cg fill='none' stroke='%23f57900' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='M6 3 9 10M19 6 16 13M22 20 16 19M4 24 8 18'/%3E%3C/g%3E%3C/svg%3E");
+}
+/* A sparse pencil-dot detail in the bottom intro, clear of the text. */
+body.pn-home #today-view .index-box {
+  position: relative;
+}
+body.pn-home #today-view .index-box::after {
+  content: "";
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 46px;
+  height: 36px;
+  pointer-events: none;
+  opacity: .32;
+  background-image: radial-gradient(circle, #176e5c 1.6px, transparent 1.8px);
+  background-size: 12px 12px;
+}
+/* Article category: one small hand-drawn sunburst, not another divider. */
+body:not(.pn-home) .article-page .article-kicker::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 16px;
+  margin-right: 9px;
+  vertical-align: -3px;
+  background: center / contain no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cg stroke='%23f57900' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M9 1v3M9 14v3M1 9h3M14 9h3M3.3 3.3l2.2 2.2M12.5 12.5l2.2 2.2'/%3E%3C/g%3E%3C/svg%3E");
+}
+/* Some, not all, topic tiles get a faint hand-dotted corner. */
+body:not(.pn-home) .topics-grid .topic-card:nth-child(3n + 2) {
+  position: relative;
+  overflow: hidden;
+}
+body:not(.pn-home) .topics-grid .topic-card:nth-child(3n + 2)::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 34px;
+  height: 34px;
+  opacity: .23;
+  pointer-events: none;
+  background-image: radial-gradient(circle, #f57900 1.6px, transparent 1.9px);
+  background-size: 11px 11px;
+}
+@media (max-width:640px) {
+  body.pn-home #nl-grid .blocktitle h2::after {
+    top: -10px;
+    right: -20px;
+    width: 18px;
+    height: 21px;
+  }
+  body.pn-home #today-view .index-box::after {
+    width: 28px;
+    height: 28px;
+    opacity: .22;
+  }
+}
