@@ -1645,13 +1645,14 @@
     "height": 736
   },
   "2026-11-09/pip-glimlach-reist-wereld": {
-    "pixabay_id": 8824016,
-    "page_url": "https://pixabay.com/photos/pigeon-bird-animal-wildlife-nature-8824016/",
-    "photographer": "ZenAga",
-    "query": "id:8824016",
-    "image_path": "/images/artikelen/2026-11-09/pip-glimlach-reist-wereld.jpg",
-    "width": 1100,
-    "height": 733
+    "page_url": "https://in-boxed.com/pip/launch/press/hero-landscape.png",
+    "photographer": "PIP / Jornt Bon",
+    "source": "PIP",
+    "query": "official:pip-2026",
+    "image_path": "/images/artikelen/2026-11-09/pip-officieel.png",
+    "width": 1920,
+    "height": 1080,
+    "caption": "Officieel PIP-persbeeld. Gebruikt met toestemming van Jornt Bon."
   },
   "2026-11-09/honden-sporen-invasieve-planten": {
     "pixabay_id": 5704437,

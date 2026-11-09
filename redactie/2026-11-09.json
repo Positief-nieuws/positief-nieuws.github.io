@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "edition_date": "2026-11-09",
-  "news_sha256": "39c191f9a34c3076a3afdaba7ec096a0365c55bcadf55b59e2e8ff7931cca0f4",
+  "news_sha256": "d92ab621eb23541671af4e78fd27bac9360c571f4e8c9ab6e621d8a7e6a73922",
   "approved": true,
   "approved_by": "Tom de Haas",
   "variation_exception_reason": "Eigenaar koos deze exacte combinatie. Nederlandse initiatieven en verbondenheid krijgen extra ruimte; PIP staat op verzoek bij wereldnieuws met de reis als invalshoek.",
@@ -592,7 +592,7 @@
       "rights": {
         "text": "original_summary",
         "image": "licensed",
-        "image_evidence": "https://pixabay.com/photos/pigeon-bird-animal-wildlife-nature-8824016/; ZenAga; Pixabay Content License; foto illustratief."
+        "image_evidence": "https://in-boxed.com/pip/launch/press/hero-landscape.png; expliciete toestemming Jornt Bon per e-mail 9 november 2026, door eigenaar aangeleverd. Officieel persbeeld."
       },
       "duplicate_review": {
         "checked": true,
@@ -622,10 +622,15 @@
     "authorized_on": "2026-11-09",
     "authorized_by": "Tom de Haas",
     "authorization_text": "mag live",
-    "news_sha256": "39c191f9a34c3076a3afdaba7ec096a0365c55bcadf55b59e2e8ff7931cca0f4",
+    "news_sha256": "d92ab621eb23541671af4e78fd27bac9360c571f4e8c9ab6e621d8a7e6a73922",
     "selected_sources_checked": true,
     "candidate_triage_complete": false,
     "source_coverage_complete": false,
     "scope": "Alleen de exacte door eigenaar bekeken versie. Volledige kandidatentriage en kanaaldekking niet voltooid; niet als voltooid aangemerkt."
+  },
+  "image_update": {
+    "authorized_on": "2026-11-09",
+    "authorization_text": "Doe maar",
+    "scope": "Alleen PIP-beeld vervangen op verzoek van Jornt en met toestemming van Tom."
   }
 }

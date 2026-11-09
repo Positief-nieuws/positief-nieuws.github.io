@@ -643,9 +643,10 @@ def article_image_html(item, image_data):
     photographer = esc(image_data.get("photographer") or "Pixabay-contributor")
     alt = esc(item.get("image_alt") or item.get("title") or "Illustratief beeld")
     image_source = esc(image_data.get("source") or "Pixabay")
+    caption = esc(image_data["caption"]) if image_data.get("caption") else f'Illustratief beeld · Foto: {photographer} via <a href="{page_url}" target="_blank" rel="noopener noreferrer">{image_source}</a>.'
     return f"""<figure class="article-figure">
         <img src="{image_path}" alt="{alt}" loading="eager" fetchpriority="high">
-        <figcaption>Illustratief beeld · Foto: {photographer} via <a href="{page_url}" target="_blank" rel="noopener noreferrer">{image_source}</a>.</figcaption>
+        <figcaption>{caption}</figcaption>
       </figure>"""
 
 

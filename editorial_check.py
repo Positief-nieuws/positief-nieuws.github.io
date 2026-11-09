@@ -65,7 +65,7 @@ def check(news, dossier, policy=None, history=None, as_of=None, selection_review
         and dossier.get("approved") is True and dossier.get("approved_by") == "Tom de Haas"
         and dossier.get("owner_approved_selection", {}).get("authorized_on") == "2026-11-05"
         and dossier.get("owner_approved_selection", {}).get("news_sha256") == news_digest(news))
-    november_ninth_selection = (edition == "2026-11-09" and news_digest(news) == "39c191f9a34c3076a3afdaba7ec096a0365c55bcadf55b59e2e8ff7931cca0f4"
+    november_ninth_selection = (edition == "2026-11-09" and news_digest(news) == "d92ab621eb23541671af4e78fd27bac9360c571f4e8c9ab6e621d8a7e6a73922"
         and dossier.get("news_sha256") == news_digest(news)
         and dossier.get("approved") is True and dossier.get("approved_by") == "Tom de Haas"
         and dossier.get("owner_approved_selection", {}).get("authorized_on") == "2026-11-09"
