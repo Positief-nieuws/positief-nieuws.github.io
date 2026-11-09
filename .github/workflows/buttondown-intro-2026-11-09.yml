@@ -1,0 +1,40 @@
+name: Werk nieuwsbriefintro 9 november bij
+on:
+  push:
+    branches: [main]
+    paths: [".github/workflows/buttondown-intro-2026-11-09.yml"]
+permissions:
+  contents: read
+jobs:
+  update-intro:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Alleen intro bestaand concept aanpassen en teruglezen
+        env:
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+        run: |
+          python3 - <<'PY'
+          import os, json, urllib.request
+          url = "https://api.buttondown.com/v1/emails/em_4s934wk1xc9x39f9bahbq5he3z"
+          old = "Een landgoed wordt tijdelijk thuis, stekjes verbinden buren en Frans haalt op zijn 87ste WK-zilver."
+          new = "Twee jaar geleden begon Frans met krachtsport. Nu is hij 87 en heeft hij WK-zilver. Verder: een landgoed biedt honderd woningzoekenden een thuis en een digitale glimlach begint aan een onvoorspelbare wereldreis."
+          headers = {"Authorization": "Token " + os.environ["BUTTONDOWN_API_KEY"], "Content-Type": "application/json"}
+          def call(method="GET", payload=None):
+              req = urllib.request.Request(url, headers=headers, method=method, data=json.dumps(payload).encode() if payload else None)
+              with urllib.request.urlopen(req, timeout=30) as response:
+                  return json.load(response)
+          draft = call()
+          assert draft["status"] == "draft", "Geen concept, niet aanpassen"
+          assert "maandag 9 november" in draft["subject"], "Onverwacht onderwerp"
+          body = draft["body"]
+          assert old in body or new in body, "Verwachte intro ontbreekt"
+          updated = body.replace(old, new)
+          call("PATCH", {"body": updated, "description": new})
+          verified = call()
+          assert verified["status"] == "draft"
+          assert verified["body"] == updated
+          assert verified["description"] == new
+          assert old not in verified["body"]
+          print("Intro bijgewerkt en teruggelezen. Status: draft. Geen verzending.")
+          print(new)
+          PY
