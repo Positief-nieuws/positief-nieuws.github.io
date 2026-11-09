@@ -711,6 +711,12 @@ def render_article_page(item, date_value, related_records=None, image_data=None)
     source_url = esc(source_url_raw)
     teaser = esc(teaser_raw)
     body_html = "".join(f"<p>{esc(paragraph)}</p>" for paragraph in paragraphs)
+    source_button_label = "Lees het oorspronkelijke artikel"
+    source_description = f"Dit is een redactionele samenvatting van Positief nieuws, gebaseerd op de oorspronkelijke publicatie van {source}."
+    if item.get("source_id") == "gratis-planten" and source_url_raw == "https://gratisplanten.nl/":
+        body_html = body_html.replace("Gratisplanten.nl", f'<a href="{source_url}" target="_blank" rel="noopener noreferrer">gratisplanten.nl</a>', 1)
+        source_button_label = "Naar Gratis planten"
+        source_description = "Dit is een redactionele samenvatting van Positief nieuws, gebaseerd op informatie van Gratis planten."
     chart = item.get("article_chart")
     if isinstance(chart, dict) and str(chart.get("src", "")).startswith("/images/artikelen/"):
         figure = (f'<figure class="article-inline-chart" style="margin:28px 0">'
@@ -831,8 +837,8 @@ def render_article_page(item, date_value, related_records=None, image_data=None)
       <article class="article-copy">{body_html}</article>
       {why_html}
       <div class="source-box">
-        <p>Dit is een redactionele samenvatting van Positief nieuws, gebaseerd op de oorspronkelijke publicatie van {source}.</p>
-        <a class="source-button" href="{source_url}" target="_blank" rel="noopener noreferrer" {source_attrs}>Lees het oorspronkelijke artikel ↗</a>
+        <p>{source_description}</p>
+        <a class="source-button" href="{source_url}" target="_blank" rel="noopener noreferrer" {source_attrs}>{source_button_label} ↗</a>
       </div>
       <p class="article-note">Positief nieuws selecteert en vat ontwikkelingen samen in eigen woorden. De oorspronkelijke bron blijft leidend voor de volledige context en details.</p>
 
