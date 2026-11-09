@@ -1,0 +1,126 @@
+{
+  "edition_date": "2026-11-09",
+  "reviewed_by": "AI-redacteur; exacte keuze en publicatie geaccordeerd door Tom de Haas",
+  "owner_approved_selection": {
+    "authorized_on": "2026-11-09",
+    "authorized_by": "Tom de Haas",
+    "authorization_text": "mag live",
+    "news_sha256": "39c191f9a34c3076a3afdaba7ec096a0365c55bcadf55b59e2e8ff7931cca0f4",
+    "selected_sources_checked": true,
+    "candidate_triage_complete": false,
+    "source_coverage_complete": false,
+    "scope": "Alleen de exacte door eigenaar bekeken versie. Volledige kandidatentriage en kanaaldekking niet voltooid; niet als voltooid aangemerkt."
+  },
+  "article_reviews": [
+    {
+      "id": "952bbbf104f5",
+      "region": "nl",
+      "decision": "select",
+      "rank": 1,
+      "primary_url": "https://nos.nl/artikel/2638104-honderd-woningzoekenden-kunnen-tijdelijk-terecht-op-landgoed-in-zeist",
+      "source_read": true,
+      "reason": "Expliciet gekozen en goedgekeurd door eigenaar in deze chat."
+    },
+    {
+      "id": "manual-gratis-planten-20261109",
+      "region": "nl",
+      "decision": "select",
+      "rank": 2,
+      "primary_url": "https://gratisplanten.nl/",
+      "source_read": true,
+      "reason": "Expliciet gekozen en goedgekeurd door eigenaar in deze chat."
+    },
+    {
+      "id": "72499998906e",
+      "region": "nl",
+      "decision": "select",
+      "rank": 3,
+      "primary_url": "https://www.omroepflevoland.nl/gemist/radio/530136/thuiszitten-of-meedoen:-ready2work-helpt-jongeren-richting-werk?id=530136",
+      "source_read": true,
+      "reason": "Expliciet gekozen en goedgekeurd door eigenaar in deze chat."
+    },
+    {
+      "id": "e78110afd492",
+      "region": "nl",
+      "decision": "select",
+      "rank": 4,
+      "primary_url": "https://www.valkenswaard.nl/laat-geen-geld-liggen-kom-langs-voor-de-gratis-potjes-check",
+      "source_read": true,
+      "reason": "Expliciet gekozen en goedgekeurd door eigenaar in deze chat."
+    },
+    {
+      "id": "3bcc9d53cb47",
+      "region": "nl",
+      "decision": "select",
+      "rank": 5,
+      "primary_url": "https://www.omroepbrabant.nl/nieuws/6033995/87-jarige-frans-pakt-wk-zilver-na-zware-heupblessure-ik-kon-amper-lopen",
+      "source_read": true,
+      "reason": "Expliciet gekozen en goedgekeurd door eigenaar in deze chat."
+    },
+    {
+      "id": "01936f08ce8f",
+      "region": "nl",
+      "decision": "select",
+      "rank": 6,
+      "primary_url": "https://gloweindhoven.nl/en/practical/",
+      "source_read": true,
+      "reason": "Expliciet gekozen en goedgekeurd door eigenaar in deze chat."
+    },
+    {
+      "id": "74b6de3e6b8c",
+      "region": "int",
+      "decision": "select",
+      "rank": 1,
+      "primary_url": "https://karlbushby.world/",
+      "source_read": true,
+      "reason": "Expliciet gekozen en goedgekeurd door eigenaar in deze chat."
+    },
+    {
+      "id": "manual-bng-20261109",
+      "region": "int",
+      "decision": "select",
+      "rank": 2,
+      "primary_url": "https://www.gov.uk/guidance/biodiversity-net-gain-nationally-significant-infrastructure-projects",
+      "source_read": true,
+      "reason": "Expliciet gekozen en goedgekeurd door eigenaar in deze chat."
+    },
+    {
+      "id": "428dc8423124",
+      "region": "int",
+      "decision": "select",
+      "rank": 3,
+      "primary_url": "https://adelaide.edu.au/about/news/2026/dna--switch--uncovers-new-brake-on-breast-cancer-growth/",
+      "source_read": true,
+      "reason": "Expliciet gekozen en goedgekeurd door eigenaar in deze chat."
+    },
+    {
+      "id": "manual-pip-20261109",
+      "region": "int",
+      "decision": "select",
+      "rank": 4,
+      "primary_url": "https://in-boxed.com/pip",
+      "source_read": true,
+      "reason": "Expliciet gekozen en goedgekeurd door eigenaar in deze chat."
+    },
+    {
+      "id": "8ebd31bc9e97",
+      "region": "int",
+      "decision": "select",
+      "rank": 5,
+      "primary_url": "https://www.ufz.de/index.php?de=20939&pub_id=33080",
+      "source_read": true,
+      "reason": "Expliciet gekozen en goedgekeurd door eigenaar in deze chat."
+    },
+    {
+      "id": "4e3ff4f323de",
+      "region": "int",
+      "decision": "select",
+      "rank": 6,
+      "primary_url": "https://www.nejm.org/doi/10.1056/NEJMc2611265",
+      "source_read": true,
+      "reason": "Expliciet gekozen en goedgekeurd door eigenaar in deze chat."
+    }
+  ],
+  "full_triage_completed": false,
+  "coverage_completed": false
+}

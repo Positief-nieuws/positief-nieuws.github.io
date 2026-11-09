@@ -4381,6 +4381,168 @@
       "limitations": "Persbericht is geen onafhankelijke effectevaluatie.",
       "register_ids": [],
       "channels": []
+    },
+    {
+      "source_id": "gratis-planten",
+      "organization_id": "gratis-planten",
+      "name": "Gratis planten",
+      "website": "https://gratisplanten.nl/",
+      "category": "A",
+      "topics": [
+        "Mens"
+      ],
+      "geography": "nl",
+      "source_type": "primary_evidence",
+      "reliability_notes": "Oorspronkelijke bewijsbron voor de door eigenaar gekozen editie van 9 november 2026. Beperkingen staan in redactioneel dossier.",
+      "priority": "P2",
+      "check_frequency": "manual",
+      "limitations": "Geen automatisch nieuwskanaal; controle per publicatie.",
+      "register_ids": [],
+      "channels": []
+    },
+    {
+      "source_id": "gemeente-valkenswaard",
+      "organization_id": "gemeente-valkenswaard",
+      "name": "Gemeente Valkenswaard",
+      "website": "https://www.valkenswaard.nl/laat-geen-geld-liggen-kom-langs-voor-de-gratis-potjes-check",
+      "category": "A",
+      "topics": [
+        "Economie"
+      ],
+      "geography": "nl",
+      "source_type": "primary_evidence",
+      "reliability_notes": "Oorspronkelijke bewijsbron voor de door eigenaar gekozen editie van 9 november 2026. Beperkingen staan in redactioneel dossier.",
+      "priority": "P2",
+      "check_frequency": "manual",
+      "limitations": "Geen automatisch nieuwskanaal; controle per publicatie.",
+      "register_ids": [],
+      "channels": []
+    },
+    {
+      "source_id": "glow-eindhoven",
+      "organization_id": "glow-eindhoven",
+      "name": "GLOW Eindhoven",
+      "website": "https://gloweindhoven.nl/en/practical/",
+      "category": "A",
+      "topics": [
+        "Cultuur"
+      ],
+      "geography": "nl",
+      "source_type": "primary_evidence",
+      "reliability_notes": "Oorspronkelijke bewijsbron voor de door eigenaar gekozen editie van 9 november 2026. Beperkingen staan in redactioneel dossier.",
+      "priority": "P2",
+      "check_frequency": "manual",
+      "limitations": "Geen automatisch nieuwskanaal; controle per publicatie.",
+      "register_ids": [],
+      "channels": []
+    },
+    {
+      "source_id": "abc-australia",
+      "organization_id": "abc-australia",
+      "name": "ABC / Reuters",
+      "website": "https://karlbushby.world/",
+      "category": "B",
+      "topics": [
+        "Mens"
+      ],
+      "geography": "int",
+      "source_type": "journalism",
+      "reliability_notes": "Oorspronkelijke bewijsbron voor de door eigenaar gekozen editie van 9 november 2026. Beperkingen staan in redactioneel dossier.",
+      "priority": "P2",
+      "check_frequency": "manual",
+      "limitations": "Geen automatisch nieuwskanaal; controle per publicatie.",
+      "register_ids": [],
+      "channels": []
+    },
+    {
+      "source_id": "defra",
+      "organization_id": "defra",
+      "name": "Britse overheid / Defra",
+      "website": "https://www.gov.uk/guidance/biodiversity-net-gain-nationally-significant-infrastructure-projects",
+      "category": "A",
+      "topics": [
+        "Natuur & klimaat"
+      ],
+      "geography": "int",
+      "source_type": "primary_evidence",
+      "reliability_notes": "Oorspronkelijke bewijsbron voor de door eigenaar gekozen editie van 9 november 2026. Beperkingen staan in redactioneel dossier.",
+      "priority": "P2",
+      "check_frequency": "manual",
+      "limitations": "Geen automatisch nieuwskanaal; controle per publicatie.",
+      "register_ids": [],
+      "channels": []
+    },
+    {
+      "source_id": "adelaide-university",
+      "organization_id": "adelaide-university",
+      "name": "Adelaide University",
+      "website": "https://adelaide.edu.au/about/news/2026/dna--switch--uncovers-new-brake-on-breast-cancer-growth/",
+      "category": "A",
+      "topics": [
+        "Wetenschap"
+      ],
+      "geography": "int",
+      "source_type": "primary_evidence",
+      "reliability_notes": "Oorspronkelijke bewijsbron voor de door eigenaar gekozen editie van 9 november 2026. Beperkingen staan in redactioneel dossier.",
+      "priority": "P2",
+      "check_frequency": "manual",
+      "limitations": "Geen automatisch nieuwskanaal; controle per publicatie.",
+      "register_ids": [],
+      "channels": []
+    },
+    {
+      "source_id": "in-boxed-pip",
+      "organization_id": "in-boxed-pip",
+      "name": "PIP / in-boxed",
+      "website": "https://in-boxed.com/pip",
+      "category": "A",
+      "topics": [
+        "Mens"
+      ],
+      "geography": "int",
+      "source_type": "primary_evidence",
+      "reliability_notes": "Oorspronkelijke bewijsbron voor de door eigenaar gekozen editie van 9 november 2026. Beperkingen staan in redactioneel dossier.",
+      "priority": "P2",
+      "check_frequency": "manual",
+      "limitations": "Geen automatisch nieuwskanaal; controle per publicatie.",
+      "register_ids": [],
+      "channels": []
+    },
+    {
+      "source_id": "ufz",
+      "organization_id": "ufz",
+      "name": "Helmholtz Centre for Environmental Research / PLOS ONE",
+      "website": "https://www.ufz.de/index.php?de=20939&pub_id=33080",
+      "category": "A",
+      "topics": [
+        "Natuur & klimaat"
+      ],
+      "geography": "int",
+      "source_type": "primary_evidence",
+      "reliability_notes": "Oorspronkelijke bewijsbron voor de door eigenaar gekozen editie van 9 november 2026. Beperkingen staan in redactioneel dossier.",
+      "priority": "P2",
+      "check_frequency": "manual",
+      "limitations": "Geen automatisch nieuwskanaal; controle per publicatie.",
+      "register_ids": [],
+      "channels": []
+    },
+    {
+      "source_id": "queen-mary-university",
+      "organization_id": "queen-mary-university",
+      "name": "Queen Mary University of London",
+      "website": "https://www.nejm.org/doi/10.1056/NEJMc2611265",
+      "category": "A",
+      "topics": [
+        "Gezondheid"
+      ],
+      "geography": "int",
+      "source_type": "primary_evidence",
+      "reliability_notes": "Oorspronkelijke bewijsbron voor de door eigenaar gekozen editie van 9 november 2026. Beperkingen staan in redactioneel dossier.",
+      "priority": "P2",
+      "check_frequency": "manual",
+      "limitations": "Geen automatisch nieuwskanaal; controle per publicatie.",
+      "register_ids": [],
+      "channels": []
     }
   ]
 }

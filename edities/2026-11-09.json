@@ -1,0 +1,422 @@
+{
+  "meta": {
+    "edition_date": "2026-11-09",
+    "status": "published",
+    "publication_authorized": true,
+    "selection_confirmed_by": "Tom de Haas",
+    "selection_confirmed_on": "2026-11-09",
+    "preview_revision": "2026-11-09-concept-2",
+    "email_preheader": "Een landgoed wordt tijdelijk thuis, stekjes verbinden buren en Frans haalt op zijn 87ste WK-zilver.",
+    "personal_note": null,
+    "editorial_order": [
+      {
+        "section": "nl",
+        "article_slug": "landgoed-zeist-tijdelijk-thuis",
+        "rank": 1
+      },
+      {
+        "section": "nl",
+        "article_slug": "gratis-planten-verbindt-buren",
+        "rank": 2
+      },
+      {
+        "section": "nl",
+        "article_slug": "ready2work-jongeren-leerwerkplekken",
+        "rank": 3
+      },
+      {
+        "section": "nl",
+        "article_slug": "roze-camper-potjes-check",
+        "rank": 4
+      },
+      {
+        "section": "nl",
+        "article_slug": "frans-87-wk-zilver",
+        "rank": 5
+      },
+      {
+        "section": "nl",
+        "article_slug": "glow-gratis-lichtkunst",
+        "rank": 6
+      },
+      {
+        "section": "int",
+        "article_slug": "karl-bushby-na-28-jaar-thuis",
+        "rank": 1
+      },
+      {
+        "section": "int",
+        "article_slug": "engeland-infrastructuur-meer-natuur",
+        "rank": 2
+      },
+      {
+        "section": "int",
+        "article_slug": "dna-schakelaar-borstkanker",
+        "rank": 3
+      },
+      {
+        "section": "int",
+        "article_slug": "pip-glimlach-reist-wereld",
+        "rank": 4
+      },
+      {
+        "section": "int",
+        "article_slug": "honden-sporen-invasieve-planten",
+        "rank": 5
+      },
+      {
+        "section": "int",
+        "article_slug": "bloeddruk-lager-na-behandeling",
+        "rank": 6
+      }
+    ],
+    "publication_authorized_by": "Tom de Haas",
+    "publication_authorized_on": "2026-11-09",
+    "publication_authorization_text": "mag live"
+  },
+  "nl": [
+    {
+      "article_slug": "landgoed-zeist-tijdelijk-thuis",
+      "candidate_id": "952bbbf104f5",
+      "title": "Een landgoed wordt tijdelijk thuis voor honderd woningzoekenden",
+      "email_title": "Een landgoed wordt tijdelijk thuis voor honderd woningzoekenden",
+      "title_alternative": "Zeist biedt honderd woningzoekenden tijdelijk onderdak op Buitenplaats Veldheim",
+      "teaser": "Studenten, mensen na een scheiding en vluchtelingen krijgen minstens 2,5 jaar onderdak op Buitenplaats Veldheim.",
+      "category": "Mens",
+      "url": "https://nos.nl/artikel/2638104-honderd-woningzoekenden-kunnen-tijdelijk-terecht-op-landgoed-in-zeist",
+      "primary_url": "https://nos.nl/artikel/2638104-honderd-woningzoekenden-kunnen-tijdelijk-terecht-op-landgoed-in-zeist",
+      "source": "NOS / RTV Utrecht",
+      "source_id": "nos",
+      "published": "2026-11-05",
+      "event_date": "2026-11-05",
+      "article_body": [
+        "Een dak boven je hoofd kan niet altijd wachten op de bouw van nieuwe woningen. Daarom huurt de gemeente Zeist tijdelijk de gebouwen op Buitenplaats Veldheim. Honderd mensen die dringend woonruimte nodig hebben, kunnen daar binnenkort terecht.",
+        "Het gaat om een gemengde groep: studenten, Oekraïense vluchtelingen, statushouders en mensen die bijvoorbeeld na een scheiding snel een andere plek nodig hebben. Het landgoed wordt geen COA-opvanglocatie. De gemeente wil met de tijdelijke verhuur verschillende woningzoekenden helpen die moeilijk iets passends vinden.",
+        "De bewoners kunnen er in ieder geval 2,5 jaar blijven. Daarna is mogelijk nog een jaar verlenging beschikbaar. Op langere termijn wil eigenaar Aalberts Bouw het terrein ontwikkelen tot een permanente woonlocatie met ongeveer vijftig koopwoningen. Die plannen en de benodigde vergunningen zijn nog niet rond.",
+        "De tijdelijke verhuur benut de tijd die de voorbereiding van die nieuwbouw kost. Daarmee is de woningnood in Zeist niet opgelost en ontstaat voor deze bewoners geen blijvende woning. Wel krijgen honderd mensen straks onderdak terwijl de plannen voor het landgoed verder worden uitgewerkt."
+      ],
+      "image_query": "id:789946",
+      "image_alt": "Illustratief beeld van een Nederlands landhuis; dit is niet Buitenplaats Veldheim.",
+      "region": "nl",
+      "regional_rank": 1,
+      "editorial_rank": 1
+    },
+    {
+      "article_slug": "gratis-planten-verbindt-buren",
+      "candidate_id": "manual-gratis-planten-20261109",
+      "title": "Een plant over? Maak er een buur blij mee",
+      "email_title": "Een plant over? Maak er een buur blij mee",
+      "title_alternative": "Nieuw platform brengt gratis planten en vaste deelplekken samen",
+      "teaser": "Op Gratisplanten.nl vind je planten, stekjes en zaden om zelf op te halen. Ook 78 vaste deelplekken staan op de kaart.",
+      "category": "Mens",
+      "url": "https://gratisplanten.nl/",
+      "primary_url": "https://gratisplanten.nl/",
+      "source": "Gratis planten",
+      "source_id": "gratis-planten",
+      "published": "2026-11-09",
+      "event_date": null,
+      "article_body": [
+        "Een plant die bij jou te groot wordt, kan ergens anders precies op zijn plek zijn. Gratisplanten.nl brengt mensen samen die planten, stekjes of zaden willen weggeven of ophalen. Je zoekt op plaats of postcode, maakt contact en spreekt af om het groen zelf op te halen.",
+        "Initiatiefnemer Joris Paardekooper Overman lanceerde de website eind oktober. Naast losse aanbiedingen heeft de site een kaart met 78 bestaande deelplekken in Nederland en België: 61 zadenbibliotheken, elf plantenasiels en zes plantenbiebs. Wie liever bij een vaste plek aanklopt, kan daar dus ook beginnen.",
+        "Er wordt niets verkocht of verstuurd. Het ophalen zorgt voor een gelegenheid om iemand in de buurt te ontmoeten. De website biedt daarnaast uitleg over stekken, scheuren en zaaien, en een agenda met activiteiten. Bij vaste deelplekken is het verstandig vooraf de openingstijden te controleren.",
+        "Het platform is nog jong. Hoeveel planten via de site al een nieuwe eigenaar vonden, is niet bekendgemaakt. De concrete opbrengst tot nu toe is een toegankelijke verzamelplek voor gratis groen en bestaande initiatieven. Wie zelf een plant over heeft, kan gratis een account aanmaken."
+      ],
+      "image_query": "id:6222554",
+      "image_alt": "Illustratieve foto van potplanten; geen aanbod of deelnemers van Gratis planten.",
+      "region": "nl",
+      "regional_rank": 2,
+      "editorial_rank": 2
+    },
+    {
+      "article_slug": "ready2work-jongeren-leerwerkplekken",
+      "candidate_id": "72499998906e",
+      "title": "Van thuiszitten naar een leerwerkplek bij de buurtondernemer",
+      "email_title": "Van thuiszitten naar een leerwerkplek bij de buurtondernemer",
+      "title_alternative": "Ready2Work biedt jongeren in Almere Haven dertig leerwerkplekken",
+      "teaser": "In Almere Haven zijn dertig plekken beschikbaar waar jongeren werkervaring, begeleiding en een nieuwe richting kunnen vinden.",
+      "category": "Mens",
+      "url": "https://www.omroepflevoland.nl/gemist/radio/530136/thuiszitten-of-meedoen:-ready2work-helpt-jongeren-richting-werk?id=530136",
+      "primary_url": "https://www.omroepflevoland.nl/gemist/radio/530136/thuiszitten-of-meedoen:-ready2work-helpt-jongeren-richting-werk?id=530136",
+      "source": "Omroep Flevoland",
+      "source_id": "omroep-flevoland",
+      "published": "2026-11-05",
+      "event_date": "2026-11-05",
+      "article_body": [
+        "Een winkel, een garage of een organisatie in zorg en welzijn: voor jongeren in Almere Haven kan een werkplek dichtbij huis het begin van een volgende stap zijn. Ready2Work helpt jongeren tot 27 jaar die zonder werk thuiszitten aan praktijkervaring en begeleiding.",
+        "Het project van welzijnsorganisatie De Schoor werkt samen met ondernemers uit het Havenverbond. Er zijn inmiddels dertig leerwerkplekken beschikbaar. Zes jongeren doen mee. Het traject richt zich voorlopig op Almere Haven, waar volgens eerder onderzoek ongeveer 270 jongeren geen werk of opleiding hebben.",
+        "Deelnemers oefenen op de werkvloer en krijgen daarnaast sollicitatietraining en ondersteuning bij sociale vaardigheden. Ze brengen ook een dag door op het ROC. Het programma duurt een jaar, gevolgd door een half jaar nazorg. Jongeren die een uitkering hebben, behouden die tijdens het traject.",
+        "Of het programma tot blijvend werk of een opleiding leidt, moet nog blijken. Wel zijn de eerste deelnemers begonnen en hebben lokale ondernemers ruimte gemaakt om te leren. Geïnteresseerden kunnen bij Ready2Work terecht voor een vrijblijvend kennismakingsgesprek, om te bekijken of het traject bij hen past."
+      ],
+      "image_query": "id:2247391",
+      "image_alt": "Illustratief beeld van een groepsbijeenkomst; geen deelnemers aan Ready2Work.",
+      "region": "nl",
+      "regional_rank": 3,
+      "editorial_rank": 3
+    },
+    {
+      "article_slug": "roze-camper-potjes-check",
+      "candidate_id": "e78110afd492",
+      "title": "Een roze camper helpt je ontdekken welk geld je laat liggen",
+      "email_title": "Een roze camper helpt je ontdekken welk geld je laat liggen",
+      "title_alternative": "Valkenswaard start gratis inloopchecks voor toeslagen en regelingen",
+      "teaser": "Vanaf vandaag kunnen inwoners van Valkenswaard zonder afspraak laten uitzoeken welke toeslagen en vergoedingen bij hen passen.",
+      "category": "Economie",
+      "url": "https://www.valkenswaard.nl/laat-geen-geld-liggen-kom-langs-voor-de-gratis-potjes-check",
+      "primary_url": "https://www.valkenswaard.nl/laat-geen-geld-liggen-kom-langs-voor-de-gratis-potjes-check",
+      "source": "Gemeente Valkenswaard",
+      "source_id": "gemeente-valkenswaard",
+      "published": "2026-11-05",
+      "event_date": "2026-11-09",
+      "article_body": [
+        "Je kunt recht hebben op een vergoeding zonder dat je weet dat die bestaat. Om inwoners daarbij te helpen, komt in Valkenswaard een opvallende roze camper langs. Vanaf 9 november kunnen mensen er gratis en zonder afspraak een potjes-check laten doen.",
+        "Een medewerker kijkt samen met de bezoeker welke toeslagen, vergoedingen en andere regelingen mogelijk passen. Je hoeft vooraf niet te weten waar je recht op hebt. De check is vrijblijvend. De gemeente werkt hiervoor samen met maatschappelijke organisaties en andere partners, als onderdeel van de campagne Laat geen geld liggen.",
+        "Wie niet naar de camper kan of liever zelf kijkt, kan de check ook online doen. Daarnaast verwijst de gemeente naar de VoorzieningenWijzer voor inzicht in landelijke en lokale regelingen. Op de campagnewebsite staan de precieze locaties en tijden van de camper.",
+        "De actie verlaagt de drempel om hulp te vragen bij een ingewikkeld stelsel. Een check levert niet automatisch extra geld op: dat hangt af van de persoonlijke situatie en de voorwaarden van een regeling. Het praktische voordeel is dat inwoners dichtbij huis kunnen uitzoeken wat voor hen mogelijk is."
+      ],
+      "image_query": "id:2180330",
+      "image_alt": "Illustratief beeld van euromunten; niet de camper of een resultaat van de potjes-check.",
+      "region": "nl",
+      "regional_rank": 4,
+      "editorial_rank": 4
+    },
+    {
+      "article_slug": "frans-87-wk-zilver",
+      "candidate_id": "3bcc9d53cb47",
+      "title": "Frans is 87, begon twee jaar geleden en pakt nu WK-zilver",
+      "email_title": "Frans is 87, begon twee jaar geleden en pakt nu WK-zilver",
+      "title_alternative": "Frans van Beers wint zilver op WK powerliften na heupblessure",
+      "teaser": "Kort voor het WK kon de Boxtelaar amper lopen. In Houston stond hij toch op het podium, met zijn gevoel voor humor intact.",
+      "category": "Sport",
+      "url": "https://www.omroepbrabant.nl/nieuws/6033995/87-jarige-frans-pakt-wk-zilver-na-zware-heupblessure-ik-kon-amper-lopen",
+      "primary_url": "https://www.omroepbrabant.nl/nieuws/6033995/87-jarige-frans-pakt-wk-zilver-na-zware-heupblessure-ik-kon-amper-lopen",
+      "source": "Omroep Brabant",
+      "source_id": "omroep-brabant",
+      "published": "2026-11-08",
+      "event_date": "2026-11-06",
+      "article_body": [
+        "Drie weken voor het WK powerliften in Houston kon Frans van Beers uit Boxtel door een heupblessure amper lopen. Trainen lukte wekenlang niet. Toch verscheen de 87-jarige aan de start en keerde hij terug met een zilveren medaille.",
+        "Een wereldtitel zat er dit keer niet in. Daar kan Frans om lachen: de winnaar was tachtig, dus in zijn ogen nog een jonkie. Dat hij na de moeizame voorbereiding überhaupt kon meedoen, voelt voor hem al als een overwinning.",
+        "Frans begon pas twee jaar geleden met de sport. Zijn vrouw spoorde hem aan om naar de sportschool te gaan. Een trainer zag mogelijkheden, waarna zijn sportieve loopbaan snel op gang kwam. Vorig jaar behaalde hij tijdens het WK in Zuid-Korea drie wereldtitels en verbeterde hij twee wereldrecords.",
+        "De blessure dwong hem ditmaal zijn verwachtingen bij te stellen. Volgens Frans bleek de pijn samen te hangen met pezen en spieren. Voor volgend jaar heeft hij alweer plannen: opnieuw meedoen en zichzelf verbeteren. Het zilver is voor hem vooral een geslaagde terugkeer na een periode waarin zelfs lopen moeilijk was."
+      ],
+      "image_query": "id:592899",
+      "image_alt": "Illustratief beeld van krachttrainingsmateriaal; Frans van Beers staat niet op deze foto.",
+      "region": "nl",
+      "regional_rank": 5,
+      "editorial_rank": 5
+    },
+    {
+      "article_slug": "glow-gratis-lichtkunst",
+      "candidate_id": "01936f08ce8f",
+      "title": "Even naar buiten: Eindhoven wordt een gratis museum van licht",
+      "email_title": "Even naar buiten: Eindhoven wordt een gratis museum van licht",
+      "title_alternative": "GLOW biedt van 7 tot en met 14 november gratis lichtkunst in de openbare ruimte",
+      "teaser": "Tijdens GLOW wandel je langs lichtkunst van kunstenaars, kinderen en buurtbewoners. Ook omliggende plaatsen doen mee.",
+      "category": "Cultuur",
+      "url": "https://gloweindhoven.nl/en/practical/",
+      "primary_url": "https://gloweindhoven.nl/en/practical/",
+      "source": "GLOW Eindhoven",
+      "source_id": "glow-eindhoven",
+      "published": null,
+      "event_date": "2026-11-07",
+      "article_body": [
+        "De novemberavond hoeft deze week niet bij de voordeur te eindigen. In Eindhoven loopt sinds zaterdag een route langs ongeveer dertig lichtkunstwerken. GLOW maakt van straten, pleinen en gebouwen tijdelijk een openluchtmuseum, waar iedereen gratis kan rondwandelen.",
+        "Het festival duurt tot en met 14 november. De editie heeft als thema CONNECT. Internationale en lokale kunstenaars werken mee, maar ook kinderen, studenten en bewoners hebben een rol in de projecten. Naast Eindhoven zijn er lichtkunstwerken in Helmond, Oirschot, Best, Veldhoven en Lieshout.",
+        "De route door het Eindhovense centrum is ongeveer vijf kilometer lang. De werken zijn daar dagelijks van 18.30 tot 23.00 uur te zien. In de andere deelnemende plaatsen eindigt het programma om 22.00 uur. Een online kaart helpt bezoekers hun route te kiezen.",
+        "De gewone kunstroute is vrij toegankelijk. Voor de aparte droneshow in het Philips Stadion is wel een ticket nodig, van twee euro per persoon. Wie alleen de gratis route wil lopen, kan die dus gewoon volgen. De organisatie adviseert vanwege de drukte met het openbaar vervoer of de fiets te komen."
+      ],
+      "image_query": "id:7750888",
+      "image_alt": "Illustratief beeld van een lichtinstallatie; dit kunstwerk is niet als onderdeel van GLOW geverifieerd.",
+      "region": "nl",
+      "regional_rank": 6,
+      "editorial_rank": 6
+    }
+  ],
+  "int": [
+    {
+      "article_slug": "karl-bushby-na-28-jaar-thuis",
+      "candidate_id": "74b6de3e6b8c",
+      "title": "Na 28 jaar onderweg staat Karl weer bij zijn moeder voor de deur",
+      "email_title": "Na 28 jaar onderweg staat Karl weer bij zijn moeder voor de deur",
+      "title_alternative": "Karl Bushby voltooit zijn reis op eigen kracht van Chili naar Hull",
+      "teaser": "In 1998 vertrok hij vanuit Chili. Vorige week bereikte Karl Bushby zijn ouderlijk huis in Hull, lopend en zwemmend over de wereld.",
+      "category": "Mens",
+      "url": "https://www.abc.net.au/news/2026-11-03/round-the-world-walk-karl-bushby/107338890",
+      "primary_url": "https://karlbushby.world/",
+      "source": "ABC / Reuters",
+      "source_id": "abc-australia",
+      "published": "2026-11-03",
+      "event_date": "2026-11-02",
+      "article_body": [
+        "De laatste kilometers eindigden bij een vertrouwde voordeur. Karl Bushby bereikte op 2 november zijn ouderlijk huis in Hull, 28 jaar nadat hij vanuit het zuiden van Chili aan een reis naar huis was begonnen. Zijn moeder stond hem op te wachten.",
+        "De Brit wilde de route op eigen kracht afleggen. Hij liep door de Amerika’s en stak het ijs tussen Alaska en Rusland over. Waar lopen niet mogelijk was, zwom hij, onder meer door de Kaspische Zee en uiteindelijk over het Kanaal.",
+        "Voor zijn vertrek dacht Bushby ongeveer tien jaar nodig te hebben. Het werden er veel meer door visumproblemen, geldgebrek, de pandemie en andere tegenslagen. Hij was niet al die tijd onafgebroken aan het wandelen: er gingen ook jaren zitten in wachten en het regelen van de volgende etappe.",
+        "Bij aankomst in Hull werd hij door honderden mensen begroet. Daarna liep hij verder naar zijn familie, onder wie zijn zoon en kleindochter. De thuiskomst rondde een uitzonderlijk lang project af, waarvoor hij onderweg steeds opnieuw afhankelijk was van hulp en gastvrijheid van anderen."
+      ],
+      "image_query": "id:1312226",
+      "image_alt": "Illustratief beeld van wandeluitrusting; dit zijn niet de spullen van Karl Bushby.",
+      "region": "int",
+      "regional_rank": 1,
+      "editorial_rank": 1
+    },
+    {
+      "article_slug": "engeland-infrastructuur-meer-natuur",
+      "candidate_id": "manual-bng-20261109",
+      "title": "Grote bouwprojecten in Engeland moeten ook natuurwinst opleveren",
+      "email_title": "Grote bouwprojecten in Engeland moeten ook natuurwinst opleveren",
+      "title_alternative": "Engeland breidt verplichte biodiversiteitswinst uit naar grote infrastructuur",
+      "teaser": "Nieuwe aanvragen voor nationaal belangrijke infrastructuur moeten sinds 2 november minstens tien procent biodiversiteitswinst opleveren.",
+      "category": "Natuur & klimaat",
+      "url": "https://www.gov.uk/guidance/biodiversity-net-gain-nationally-significant-infrastructure-projects",
+      "primary_url": "https://www.gov.uk/guidance/biodiversity-net-gain-nationally-significant-infrastructure-projects",
+      "source": "Britse overheid / Defra",
+      "source_id": "defra",
+      "published": "2026-11-03",
+      "event_date": "2026-11-02",
+      "article_body": [
+        "Een groot bouwproject moet in Engeland voortaan ook iets toevoegen aan de natuur. Sinds 2 november geldt verplichte biodiversiteitswinst voor nieuwe aanvragen van nationaal belangrijke infrastructuurprojecten. Ontwikkelaars moeten aantonen hoe ze minstens tien procent verbetering realiseren.",
+        "Het gaat om Biodiversity Net Gain, een systeem dat de waarde van leefgebieden vóór en na een ontwikkeling vergelijkt. Niet alleen de oppervlakte telt mee, maar ook de kwaliteit, ligging en het soort habitat. De extra natuur kan onder voorwaarden binnen of buiten het projectgebied worden gerealiseerd.",
+        "De uitbreiding raakt grote projecten, bijvoorbeeld voor vervoer, energie en water. Voor andere categorieën bouwprojecten bestonden al vergelijkbare eisen. Ontwikkelaars moeten rekening blijven houden met bestaande natuurbescherming: schade voorkomen komt eerst, gevolgd door beperken en waar nodig compenseren.",
+        "De invoering is een concrete verandering van de regels. De verwachte natuurwinst zelf moet nog worden gerealiseerd en gecontroleerd. Hoe goed de maatregel werkt, hangt dus ook af van uitvoering en beheer. Wel ligt er nu bij nieuwe aanvragen een expliciete verplichting om natuurverbetering mee te nemen."
+      ],
+      "image_query": "id:2058977",
+      "image_alt": "Illustratief beeld van bosherstel; geen locatie van een Engels infrastructuurproject.",
+      "region": "int",
+      "regional_rank": 2,
+      "editorial_rank": 2
+    },
+    {
+      "article_slug": "dna-schakelaar-borstkanker",
+      "candidate_id": "428dc8423124",
+      "title": "Een verborgen DNA-schakelaar helpt borstkankercellen afremmen",
+      "email_title": "Een verborgen DNA-schakelaar helpt borstkankercellen afremmen",
+      "title_alternative": "Onderzoekers ontdekken rol van DNA-regio bij remming van ER-positieve borstkanker",
+      "teaser": "Australische onderzoekers begrijpen beter hoe een hormoonreceptor bepaalde borstkankercellen remt. Het gaat om laboratoriumonderzoek.",
+      "category": "Wetenschap",
+      "url": "https://adelaide.edu.au/about/news/2026/dna--switch--uncovers-new-brake-on-breast-cancer-growth/",
+      "primary_url": "https://adelaide.edu.au/about/news/2026/dna--switch--uncovers-new-brake-on-breast-cancer-growth/",
+      "source": "Adelaide University",
+      "source_id": "adelaide-university",
+      "published": "2026-11-06",
+      "event_date": "2026-11-06",
+      "article_body": [
+        "Een klein stukje DNA blijkt belangrijk voor het afremmen van een veelvoorkomende vorm van borstkanker. Onderzoekers van Adelaide University ontdekten een regelgebied binnen een gen dat een hormoonreceptor helpt om de groei van kankercellen te onderdrukken.",
+        "De studie richt zich op oestrogeenreceptor-positieve borstkanker. Bij deze vorm speelt het hormoon oestrogeen een rol in de groei. Een andere receptor, de androgeenreceptor, kan die groei juist remmen. Het team wilde beter begrijpen welke onderdelen van de cel daarvoor nodig zijn.",
+        "Met CRISPR verwijderden de onderzoekers een klein deel van het gevonden DNA-regelgebied. Daarna kon de androgeenreceptor de celgroei minder goed onderdrukken. Het gen waarin het stukje DNA ligt, bleek zelf niet de verklaring voor dat effect. De schakelaar maakt vermoedelijk deel uit van een breder regelnetwerk.",
+        "Het onderzoek is gepubliceerd in npj Breast Cancer. Het levert kennis op die kan helpen bij de ontwikkeling van behandelingen die de androgeenreceptor activeren. Er is in deze studie geen nieuwe behandeling bij patiënten getest. De vooruitgang zit in het preciezer begrijpen van een remmechanisme in kankercellen."
+      ],
+      "image_query": "id:3498584",
+      "image_alt": "Illustratief laboratoriumbeeld; niet het laboratorium of de cellen uit dit onderzoek.",
+      "region": "int",
+      "regional_rank": 3,
+      "editorial_rank": 3
+    },
+    {
+      "article_slug": "pip-glimlach-reist-wereld",
+      "candidate_id": "manual-pip-20261109",
+      "title": "Een digitale glimlach reist van mens tot mens de wereld over",
+      "email_title": "Een digitale glimlach reist van mens tot mens de wereld over",
+      "title_alternative": "PIP laat ontvangers een digitale glimlach persoonlijk doorgeven",
+      "teaser": "Een digitale postduif gaat steeds naar iemand anders. De ontvanger kiest de volgende bestemming, en de reis is online te volgen.",
+      "category": "Mens",
+      "url": "https://in-boxed.com/pip",
+      "primary_url": "https://in-boxed.com/pip",
+      "source": "PIP / in-boxed",
+      "source_id": "in-boxed-pip",
+      "published": null,
+      "event_date": "2026-11-04",
+      "article_body": [
+        "Wie zou jij vandaag blij maken met een beetje aandacht? Met die vraag begint de reis van PIP, een digitale postduif die een glimlach van persoon tot persoon doorgeeft. Elke ontvanger kiest zelf wie de volgende wordt. Zo ontstaat een route die vooraf niet vastligt.",
+        "Het experiment is opgezet door de Nederlandse initiatiefnemer Jornt Bon. Volgens hem ging PIP op 4 november van start. Op de website kunnen mensen gratis een glimlach versturen, zonder account of app. Wie de boodschap opent, kan de digitale duif vervolgens weer naar iemand anders laten vliegen.",
+        "Een wereldkaart maakt zichtbaar in welke landen een glimlach is geopend. De reis ontstaat door persoonlijke keuzes: iemand denkt aan een vriend, familielid of kennis, die daarna weer iemand anders in gedachten neemt. Op de website kun je volgen hoe zo’n keten verdergaat.",
+        "Hoeveel mensen inmiddels hebben meegedaan en hoeveel landen precies zijn bereikt, hebben we niet onafhankelijk kunnen bevestigen. Ook is niet onderzocht welk effect het experiment op ontvangers heeft. Het is vooral een uitnodiging om iemand even te laten merken dat je aan hem of haar denkt."
+      ],
+      "image_query": "id:8824016",
+      "image_alt": "Illustratieve foto van een duif; dit is niet de digitale PIP-figuur.",
+      "region": "int",
+      "regional_rank": 4,
+      "editorial_rank": 4
+    },
+    {
+      "article_slug": "honden-sporen-invasieve-planten",
+      "candidate_id": "8ebd31bc9e97",
+      "title": "Met hun neus helpen honden de natuur een handje",
+      "email_title": "Met hun neus helpen honden de natuur een handje",
+      "title_alternative": "Vrijwillige hondenteams kunnen invasieve planten in het veld opsporen",
+      "teaser": "Duitse onderzoekers trainden honden en hun baasjes om invasieve planten te vinden. Elf van twaalf geteste teams slaagden voor de veldtest.",
+      "category": "Natuur & klimaat",
+      "url": "https://www.ufz.de/index.php?de=20939&pub_id=33080",
+      "primary_url": "https://www.ufz.de/index.php?de=20939&pub_id=33080",
+      "source": "Helmholtz Centre for Environmental Research / PLOS ONE",
+      "source_id": "ufz",
+      "published": "2026-11-04",
+      "event_date": "2026-11-04",
+      "article_body": [
+        "Een hond die in het gras snuffelt, kan meer doen dan geurtjes verzamelen. Duitse onderzoekers hebben laten zien dat vrijwilligers hun honden kunnen trainen om invasieve planten op te sporen. Dat kan helpen zulke soorten eerder te ontdekken.",
+        "Het team van het Helmholtz Centre for Environmental Research werkte met 31 honden en hun eigenaren. Ze volgden online training en praktische bijeenkomsten. De doelplanten waren soorten uit de duizendknoopgroep, reuzenbalsemien en ambrosia: planten die door hun verspreiding problemen kunnen veroorzaken voor natuur, gezondheid of economie.",
+        "Van de twaalf teams die de afsluitende veldtest deden, slaagden er elf. Dat betekent niet dat elke hond na een paar oefeningen inzetbaar is. Een flink deel van de aanvankelijke deelnemers haalde de laatste test niet. Motivatie, zorgvuldige training en begeleiding blijken belangrijk.",
+        "De studie is gepubliceerd in PLOS ONE. De onderzoekers zien mogelijkheden om vrijwilligers een rol te geven naast professionele speurhondenteams. Ze benadrukken dat ecologen en hondentrainers het werk moeten blijven begeleiden. De bereikte stap is een geteste aanpak om de goede neus van huishonden gericht voor natuurmonitoring te gebruiken."
+      ],
+      "image_query": "id:5704437",
+      "image_alt": "Illustratief beeld van een snuffelende hond; deze hond deed niet aantoonbaar mee aan het onderzoek.",
+      "region": "int",
+      "regional_rank": 5,
+      "editorial_rank": 5
+    },
+    {
+      "article_slug": "bloeddruk-lager-na-behandeling",
+      "candidate_id": "4e3ff4f323de",
+      "title": "Bij deze patiënten bleef de bloeddruk lager, ook na de laatste pil",
+      "email_title": "Bij deze patiënten bleef de bloeddruk lager, ook na de laatste pil",
+      "title_alternative": "Kleine vervolgstudie vindt aanhoudende verbetering bij hormonale hoge bloeddruk",
+      "teaser": "Bij veertien patiënten met een hormonale oorzaak van hoge bloeddruk hield verbetering tot twee jaar na een behandeling aan.",
+      "category": "Gezondheid",
+      "url": "https://www.news-medical.net/news/20261108/New-treatment-may-offer-lasting-cure-for-hormone-related-hypertension.aspx",
+      "primary_url": "https://www.nejm.org/doi/10.1056/NEJMc2611265",
+      "source": "Queen Mary University of London",
+      "source_id": "queen-mary-university",
+      "published": "2026-11-08",
+      "event_date": "2026-11-07",
+      "article_body": [
+        "Een behandeling tegen een hormonale oorzaak van hoge bloeddruk lijkt bij sommige patiënten langer door te werken dan de periode waarin ze medicijnen slikken. In een kleine vervolgstudie bleven bloeddruk en hormoonwaarden verbeterd tot twee jaar nadat de behandeling was gestopt.",
+        "Het onderzoek gaat over primair hyperaldosteronisme. Daarbij maken de bijnieren te veel aldosteron aan, waardoor het lichaam extra zout vasthoudt en de bloeddruk stijgt. De onderzochte medicijnen remmen de aanmaak van dat hormoon. De deelnemers kregen ze gedurende zes tot twaalf maanden.",
+        "Onderzoekers onder leiding van Queen Mary University of London bekeken daarna de beschikbare vervolgmetingen van veertien patiënten uit acht Amerikaanse centra. Bijna een kwart had een normale bloeddruk zonder andere bloeddrukmedicatie. Ook bij anderen waren de waarden verbeterd.",
+        "De bevindingen zijn gepubliceerd in het New England Journal of Medicine. Door de kleine groep en het observationele karakter kunnen de onderzoekers nog geen blijvende genezing vaststellen. Een grotere studie moet duidelijker maken voor wie deze aanpak werkt en hoe lang het effect duurt. Het resultaat geldt voor deze specifieke hormonale aandoening, niet voor hoge bloeddruk in het algemeen."
+      ],
+      "image_query": "id:2361046",
+      "image_alt": "Illustratief beeld van een bloeddrukmeting; geen deelnemer aan de studie.",
+      "region": "int",
+      "regional_rank": 6,
+      "editorial_rank": 6
+    }
+  ],
+  "headlines": [
+    {
+      "title": "Klimaattop in Turkije begint met focus op meer elektriciteit",
+      "teaser": "In Antalya praten landen onder meer over elektrificatie, zuinigere datacentra en hergebruik. Of er gezamenlijke afspraken komen, is onzeker.",
+      "url": "https://nos.nl/artikel/2638672-klimaattop-van-start-in-turkije-landen-willen-groter-aandeel-duurzame-stroom",
+      "source": "NOS",
+      "source_id": "nos",
+      "published": "2026-11-09",
+      "event_date": "2026-11-09"
+    },
+    {
+      "title": "Een op vijf werknemers voelt zich psychisch vermoeid door werk",
+      "teaser": "Nieuwe CBS- en TNO-cijfers laten zien dat 21 procent van de werknemers dit in 2025 geregeld ervoer, tegenover 13 procent tien jaar eerder.",
+      "url": "https://www.cbs.nl/nl-nl/nieuws/2026/46/1-op-5-werknemers-psychisch-vermoeid-door-werk-meer-dan-tien-jaar-geleden",
+      "source": "CBS / TNO",
+      "source_id": "cbs",
+      "published": "2026-11-09",
+      "event_date": "2025-12-31"
+    },
+    {
+      "title": "ANC verliest terrein in Zuid-Afrikaanse steden",
+      "teaser": "Bij de lokale verkiezingen blijft de partij landelijk de grootste, maar in zes belangrijke metropolen werd een andere partij de grootste.",
+      "url": "https://nos.nl/artikel/2638629-verlies-voor-het-anc-in-zuid-afrikaanse-steden",
+      "source": "NOS",
+      "source_id": "nos",
+      "published": "2026-11-08",
+      "event_date": "2026-11-08"
+    }
+  ]
+}

@@ -65,6 +65,15 @@ def check(news, dossier, policy=None, history=None, as_of=None, selection_review
         and dossier.get("approved") is True and dossier.get("approved_by") == "Tom de Haas"
         and dossier.get("owner_approved_selection", {}).get("authorized_on") == "2026-11-05"
         and dossier.get("owner_approved_selection", {}).get("news_sha256") == news_digest(news))
+    november_ninth_selection = (edition == "2026-11-09" and news_digest(news) == "39c191f9a34c3076a3afdaba7ec096a0365c55bcadf55b59e2e8ff7931cca0f4"
+        and dossier.get("news_sha256") == news_digest(news)
+        and dossier.get("approved") is True and dossier.get("approved_by") == "Tom de Haas"
+        and dossier.get("owner_approved_selection", {}).get("authorized_on") == "2026-11-09"
+        and dossier.get("owner_approved_selection", {}).get("authorized_by") == "Tom de Haas"
+        and dossier.get("owner_approved_selection", {}).get("authorization_text") == "mag live"
+        and dossier.get("owner_approved_selection", {}).get("news_sha256") == news_digest(news))
+    if november_ninth_selection:
+        warnings.append("Eigenaarakkoord 9 november voor deze exacte bekeken editie. Volledige kandidatentriage en kanaaldekking niet afgerond. Ongedateerde initiatiefpagina's zijn als ongedateerd vastgelegd; bereik PIP niet onafhankelijk bevestigd en niet geclaimd.")
     if november_selection:
         warnings.append("Eigenaarakkoord 5 november voor deze exacte selectie. Volledige kandidatentriage en brondekking zijn niet afgerond.")
     if approved_selection:
@@ -75,7 +84,7 @@ def check(news, dossier, policy=None, history=None, as_of=None, selection_review
         errors.append('Editiedatum ligt in de toekomst; nog niet publicatieklaar.')
     if dossier.get('edition_date')!=edition:errors.append('Dossier hoort niet bij deze editie.')
     required_from=policy.get('selection_review_required_from')
-    if required_from and edition_day and edition_day.isoformat()>=required_from and not (owner_exception or approved_selection or november_selection):
+    if required_from and edition_day and edition_day.isoformat()>=required_from and not (owner_exception or approved_selection or november_selection or november_ninth_selection):
         if selection_review is None or candidate_pool is None:
             errors.append('Selectiecontrole vóór eerste concept ontbreekt; volledige bronrun en selectiedossier zijn verplicht.')
         else:
@@ -106,6 +115,10 @@ def check(news, dossier, policy=None, history=None, as_of=None, selection_review
             if record.get('dates_checked') is not True:fail('datums niet gecontroleerd.')
             publication=None
             for field in ('publication_date','event_date','checked_on'):
+                if (november_ninth_selection and field in {'publication_date','event_date'}
+                    and not record.get(field) and record.get(field + '_unknown_reason')):
+                    warnings.append(key+': '+field+' niet bekend: '+record[field+'_unknown_reason'])
+                    continue
                 try:
                     d=date.fromisoformat(record.get(field,''))
                     if d>today:fail(f'{field} ligt in de toekomst.')

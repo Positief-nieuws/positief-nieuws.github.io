@@ -1,0 +1,631 @@
+{
+  "schema_version": 1,
+  "edition_date": "2026-11-09",
+  "news_sha256": "39c191f9a34c3076a3afdaba7ec096a0365c55bcadf55b59e2e8ff7931cca0f4",
+  "approved": true,
+  "approved_by": "Tom de Haas",
+  "variation_exception_reason": "Eigenaar koos deze exacte combinatie. Nederlandse initiatieven en verbondenheid krijgen extra ruimte; PIP staat op verzoek bij wereldnieuws met de reis als invalshoek.",
+  "articles": {
+    "nl:landgoed-zeist-tijdelijk-thuis": {
+      "source_id": "nos",
+      "organization_id": "nos",
+      "article_url": "https://nos.nl/artikel/2638104-honderd-woningzoekenden-kunnen-tijdelijk-terecht-op-landgoed-in-zeist",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-05",
+      "event_date": "2026-11-05",
+      "checked_on": "2026-11-09",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "landgoed-zeist-tijdelijk-thuis",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://nos.nl/artikel/2638104-honderd-woningzoekenden-kunnen-tijdelijk-terecht-op-landgoed-in-zeist",
+        "claim": "Een landgoed wordt tijdelijk thuis voor honderd woningzoekenden",
+        "support": "Eigen samenvatting op basis van gelezen bron; beperkingen in het artikel opgenomen.",
+        "limitations": "Zie expliciete beperkingen in artikeltekst.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/house-farm-manor-netherlands-homes-789946/; Pixabay Content License; illustratief bijschrift; bronmetadata en beeld visueel gecontroleerd op 2026-11-09."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Geen eerdere titel-/URL-/onderwerpmatch in het editiearchief bij broncontrole op 9 november.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Studenten, mensen na een scheiding en vluchtelingen krijgen minstens 2,5 jaar onderdak op Buitenplaats Veldheim. Bereikt stadium en beperkingen staan in artikel; geen niet-gemeten maatschappelijk effect geclaimd.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "nl:gratis-planten-verbindt-buren": {
+      "source_id": "gratis-planten",
+      "organization_id": "gratis-planten",
+      "article_url": "https://gratisplanten.nl/",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-09",
+      "event_date": "",
+      "checked_on": "2026-11-09",
+      "dates_checked": true,
+      "new_development": "Nieuw persbericht van initiatiefnemer ontvangen op 9 november; actuele live kaart met 78 vaste deelplekken gecontroleerd. Lancering eind oktober is geen nieuwe gebeurtenis van vandaag en wordt zo beschreven.",
+      "older_exception_reason": "",
+      "topic_id": "gratis-planten-verbindt-buren",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://gratisplanten.nl/",
+        "claim": "Een plant over? Maak er een buur blij mee",
+        "support": "Eigen samenvatting op basis van gelezen bron; beperkingen in het artikel opgenomen.",
+        "limitations": "Lanceringsdag is alleen als eind oktober bekend; geen exact aantal overdrachten bekend.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/table-plants-pots-potted-plants-6222554/; Pixabay Content License; illustratief bijschrift; bronmetadata en beeld visueel gecontroleerd op 2026-11-09."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Geen eerdere titel-/URL-/onderwerpmatch in het editiearchief bij broncontrole op 9 november.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Op Gratisplanten.nl vind je planten, stekjes en zaden om zelf op te halen. Ook 78 vaste deelplekken staan op de kaart. Bereikt stadium en beperkingen staan in artikel; geen niet-gemeten maatschappelijk effect geclaimd.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 1,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      },
+      "event_date_unknown_reason": "Lancering alleen bekend als eind oktober volgens gedateerd persbericht ontvangen 9 november; exacte lanceringsdag niet vastgesteld."
+    },
+    "nl:ready2work-jongeren-leerwerkplekken": {
+      "source_id": "omroep-flevoland",
+      "organization_id": "omroep-flevoland",
+      "article_url": "https://www.omroepflevoland.nl/gemist/radio/530136/thuiszitten-of-meedoen:-ready2work-helpt-jongeren-richting-werk?id=530136",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-05",
+      "event_date": "2026-11-05",
+      "checked_on": "2026-11-09",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "ready2work-jongeren-leerwerkplekken",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.omroepflevoland.nl/gemist/radio/530136/thuiszitten-of-meedoen:-ready2work-helpt-jongeren-richting-werk?id=530136",
+        "claim": "Van thuiszitten naar een leerwerkplek bij de buurtondernemer",
+        "support": "Eigen samenvatting op basis van gelezen bron; beperkingen in het artikel opgenomen.",
+        "limitations": "Zie expliciete beperkingen in artikeltekst.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/training-volunteers-learning-2247391/; Pixabay Content License; illustratief bijschrift; bronmetadata en beeld visueel gecontroleerd op 2026-11-09."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Geen eerdere titel-/URL-/onderwerpmatch in het editiearchief bij broncontrole op 9 november.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "In Almere Haven zijn dertig plekken beschikbaar waar jongeren werkervaring, begeleiding en een nieuwe richting kunnen vinden. Bereikt stadium en beperkingen staan in artikel; geen niet-gemeten maatschappelijk effect geclaimd.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "nl:roze-camper-potjes-check": {
+      "source_id": "gemeente-valkenswaard",
+      "organization_id": "gemeente-valkenswaard",
+      "article_url": "https://www.valkenswaard.nl/laat-geen-geld-liggen-kom-langs-voor-de-gratis-potjes-check",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-05",
+      "event_date": "2026-11-09",
+      "checked_on": "2026-11-09",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "roze-camper-potjes-check",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.valkenswaard.nl/laat-geen-geld-liggen-kom-langs-voor-de-gratis-potjes-check",
+        "claim": "Een roze camper helpt je ontdekken welk geld je laat liggen",
+        "support": "Eigen samenvatting op basis van gelezen bron; beperkingen in het artikel opgenomen.",
+        "limitations": "Zie expliciete beperkingen in artikeltekst.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/money-coins-stack-stacked-coins-2180330/; Pixabay Content License; illustratief bijschrift; bronmetadata en beeld visueel gecontroleerd op 2026-11-09."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Geen eerdere titel-/URL-/onderwerpmatch in het editiearchief bij broncontrole op 9 november.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Vanaf vandaag kunnen inwoners van Valkenswaard zonder afspraak laten uitzoeken welke toeslagen en vergoedingen bij hen passen. Bereikt stadium en beperkingen staan in artikel; geen niet-gemeten maatschappelijk effect geclaimd.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "nl:frans-87-wk-zilver": {
+      "source_id": "omroep-brabant",
+      "organization_id": "omroep-brabant",
+      "article_url": "https://www.omroepbrabant.nl/nieuws/6033995/87-jarige-frans-pakt-wk-zilver-na-zware-heupblessure-ik-kon-amper-lopen",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-08",
+      "event_date": "2026-11-06",
+      "checked_on": "2026-11-09",
+      "dates_checked": true,
+      "new_development": "Nieuwe publicatie of voortgangsbericht beschrijft de gebeurtenis/onderzoeksperiode; in artikel onderscheiden van de publicatiedatum.",
+      "older_exception_reason": "",
+      "topic_id": "frans-87-wk-zilver",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.omroepbrabant.nl/nieuws/6033995/87-jarige-frans-pakt-wk-zilver-na-zware-heupblessure-ik-kon-amper-lopen",
+        "claim": "Frans is 87, begon twee jaar geleden en pakt nu WK-zilver",
+        "support": "Eigen samenvatting op basis van gelezen bron; beperkingen in het artikel opgenomen.",
+        "limitations": "Zie expliciete beperkingen in artikeltekst.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/gym-barbell-training-exercise-592899/; Pixabay Content License; illustratief bijschrift; bronmetadata en beeld visueel gecontroleerd op 2026-11-09."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Geen eerdere titel-/URL-/onderwerpmatch in het editiearchief bij broncontrole op 9 november.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Kort voor het WK kon de Boxtelaar amper lopen. In Houston stond hij toch op het podium, met zijn gevoel voor humor intact. Bereikt stadium en beperkingen staan in artikel; geen niet-gemeten maatschappelijk effect geclaimd.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "nl:glow-gratis-lichtkunst": {
+      "source_id": "glow-eindhoven",
+      "organization_id": "glow-eindhoven",
+      "article_url": "https://gloweindhoven.nl/en/practical/",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "",
+      "event_date": "2026-11-07",
+      "checked_on": "2026-11-09",
+      "dates_checked": true,
+      "new_development": "Nieuwe publicatie of voortgangsbericht beschrijft de gebeurtenis/onderzoeksperiode; in artikel onderscheiden van de publicatiedatum.",
+      "older_exception_reason": "",
+      "topic_id": "glow-gratis-lichtkunst",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://gloweindhoven.nl/en/practical/",
+        "claim": "Even naar buiten: Eindhoven wordt een gratis museum van licht",
+        "support": "Eigen samenvatting op basis van gelezen bron; beperkingen in het artikel opgenomen.",
+        "limitations": "Datum oorspronkelijke webpublicatie niet vermeld.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/neon-light-light-installation-7750888/; Pixabay Content License; illustratief bijschrift; bronmetadata en beeld visueel gecontroleerd op 2026-11-09."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Geen eerdere titel-/URL-/onderwerpmatch in het editiearchief bij broncontrole op 9 november.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Tijdens GLOW wandel je langs lichtkunst van kunstenaars, kinderen en buurtbewoners. Ook omliggende plaatsen doen mee. Bereikt stadium en beperkingen staan in artikel; geen niet-gemeten maatschappelijk effect geclaimd.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      },
+      "publication_date_unknown_reason": "Oorspronkelijke publicatiedag van actuele initiatiefwebsite niet vermeld; mechanisme en pagina op 9 november gecontroleerd. Geen publicatiedatum verzonnen."
+    },
+    "int:karl-bushby-na-28-jaar-thuis": {
+      "source_id": "abc-australia",
+      "organization_id": "abc-australia",
+      "article_url": "https://www.abc.net.au/news/2026-11-03/round-the-world-walk-karl-bushby/107338890",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-03",
+      "event_date": "2026-11-02",
+      "checked_on": "2026-11-09",
+      "dates_checked": true,
+      "new_development": "Nieuwe publicatie of voortgangsbericht beschrijft de gebeurtenis/onderzoeksperiode; in artikel onderscheiden van de publicatiedatum.",
+      "older_exception_reason": "",
+      "topic_id": "karl-bushby-na-28-jaar-thuis",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://karlbushby.world/",
+        "claim": "Na 28 jaar onderweg staat Karl weer bij zijn moeder voor de deur",
+        "support": "Eigen samenvatting op basis van gelezen bron; beperkingen in het artikel opgenomen.",
+        "limitations": "Zie expliciete beperkingen in artikeltekst.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/hike-map-orientation-walking-boots-1312226/; Pixabay Content License; illustratief bijschrift; bronmetadata en beeld visueel gecontroleerd op 2026-11-09."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Geen eerdere titel-/URL-/onderwerpmatch in het editiearchief bij broncontrole op 9 november.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "In 1998 vertrok hij vanuit Chili. Vorige week bereikte Karl Bushby zijn ouderlijk huis in Hull, lopend en zwemmend over de wereld. Bereikt stadium en beperkingen staan in artikel; geen niet-gemeten maatschappelijk effect geclaimd.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "int:engeland-infrastructuur-meer-natuur": {
+      "source_id": "defra",
+      "organization_id": "defra",
+      "article_url": "https://www.gov.uk/guidance/biodiversity-net-gain-nationally-significant-infrastructure-projects",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-03",
+      "event_date": "2026-11-02",
+      "checked_on": "2026-11-09",
+      "dates_checked": true,
+      "new_development": "Nieuwe publicatie of voortgangsbericht beschrijft de gebeurtenis/onderzoeksperiode; in artikel onderscheiden van de publicatiedatum.",
+      "older_exception_reason": "",
+      "topic_id": "engeland-infrastructuur-meer-natuur",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.gov.uk/guidance/biodiversity-net-gain-nationally-significant-infrastructure-projects",
+        "claim": "Grote bouwprojecten in Engeland moeten ook natuurwinst opleveren",
+        "support": "Eigen samenvatting op basis van gelezen bron; beperkingen in het artikel opgenomen.",
+        "limitations": "Zie expliciete beperkingen in artikeltekst.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/regeneration-forest-peak-regrowth-2058977/; Pixabay Content License; illustratief bijschrift; bronmetadata en beeld visueel gecontroleerd op 2026-11-09."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Geen eerdere titel-/URL-/onderwerpmatch in het editiearchief bij broncontrole op 9 november.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Nieuwe aanvragen voor nationaal belangrijke infrastructuur moeten sinds 2 november minstens tien procent biodiversiteitswinst opleveren. Bereikt stadium en beperkingen staan in artikel; geen niet-gemeten maatschappelijk effect geclaimd.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "int:dna-schakelaar-borstkanker": {
+      "source_id": "adelaide-university",
+      "organization_id": "adelaide-university",
+      "article_url": "https://adelaide.edu.au/about/news/2026/dna--switch--uncovers-new-brake-on-breast-cancer-growth/",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-06",
+      "event_date": "2026-11-06",
+      "checked_on": "2026-11-09",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "dna-schakelaar-borstkanker",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://adelaide.edu.au/about/news/2026/dna--switch--uncovers-new-brake-on-breast-cancer-growth/",
+        "claim": "Een verborgen DNA-schakelaar helpt borstkankercellen afremmen",
+        "support": "Eigen samenvatting op basis van gelezen bron; beperkingen in het artikel opgenomen.",
+        "limitations": "Zie expliciete beperkingen in artikeltekst.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/lab-experiment-test-chemistry-3498584/; Pixabay Content License; illustratief bijschrift; bronmetadata en beeld visueel gecontroleerd op 2026-11-09."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Geen eerdere titel-/URL-/onderwerpmatch in het editiearchief bij broncontrole op 9 november.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Australische onderzoekers begrijpen beter hoe een hormoonreceptor bepaalde borstkankercellen remt. Het gaat om laboratoriumonderzoek. Bereikt stadium en beperkingen staan in artikel; geen niet-gemeten maatschappelijk effect geclaimd.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "int:honden-sporen-invasieve-planten": {
+      "source_id": "ufz",
+      "organization_id": "ufz",
+      "article_url": "https://www.ufz.de/index.php?de=20939&pub_id=33080",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-04",
+      "event_date": "2026-11-04",
+      "checked_on": "2026-11-09",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "honden-sporen-invasieve-planten",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.ufz.de/index.php?de=20939&pub_id=33080",
+        "claim": "Met hun neus helpen honden de natuur een handje",
+        "support": "Eigen samenvatting op basis van gelezen bron; beperkingen in het artikel opgenomen.",
+        "limitations": "Zie expliciete beperkingen in artikeltekst.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/dog-sniffing-grass-sniff-hairy-5704437/; Pixabay Content License; illustratief bijschrift; bronmetadata en beeld visueel gecontroleerd op 2026-11-09."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Geen eerdere titel-/URL-/onderwerpmatch in het editiearchief bij broncontrole op 9 november.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Duitse onderzoekers trainden honden en hun baasjes om invasieve planten te vinden. Elf van twaalf geteste teams slaagden voor de veldtest. Bereikt stadium en beperkingen staan in artikel; geen niet-gemeten maatschappelijk effect geclaimd.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "int:bloeddruk-lager-na-behandeling": {
+      "source_id": "queen-mary-university",
+      "organization_id": "queen-mary-university",
+      "article_url": "https://www.news-medical.net/news/20261108/New-treatment-may-offer-lasting-cure-for-hormone-related-hypertension.aspx",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-08",
+      "event_date": "2026-11-07",
+      "checked_on": "2026-11-09",
+      "dates_checked": true,
+      "new_development": "Nieuwe publicatie of voortgangsbericht beschrijft de gebeurtenis/onderzoeksperiode; in artikel onderscheiden van de publicatiedatum.",
+      "older_exception_reason": "",
+      "topic_id": "bloeddruk-lager-na-behandeling",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.nejm.org/doi/10.1056/NEJMc2611265",
+        "claim": "Bij deze patiënten bleef de bloeddruk lager, ook na de laatste pil",
+        "support": "Eigen samenvatting op basis van gelezen bron; beperkingen in het artikel opgenomen.",
+        "limitations": "Zie expliciete beperkingen in artikeltekst.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/medicine-patient-doctor-tension-2361046/; Pixabay Content License; illustratief bijschrift; bronmetadata en beeld visueel gecontroleerd op 2026-11-09."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Geen eerdere titel-/URL-/onderwerpmatch in het editiearchief bij broncontrole op 9 november.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Bij veertien patiënten met een hormonale oorzaak van hoge bloeddruk hield verbetering tot twee jaar na een behandeling aan. Bereikt stadium en beperkingen staan in artikel; geen niet-gemeten maatschappelijk effect geclaimd.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    },
+    "headlines:0": {
+      "source_id": "nos",
+      "organization_id": "nos",
+      "article_url": "https://nos.nl/artikel/2638672-klimaattop-van-start-in-turkije-landen-willen-groter-aandeel-duurzame-stroom",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-09",
+      "event_date": "2026-11-09",
+      "checked_on": "2026-11-09",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "headline-0",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://nos.nl/artikel/2638672-klimaattop-van-start-in-turkije-landen-willen-groter-aandeel-duurzame-stroom",
+        "claim": "Klimaattop in Turkije begint met focus op meer elektriciteit",
+        "support": "In Antalya praten landen onder meer over elektrificatie, zuinigere datacentra en hergebruik. Of er gezamenlijke afspraken komen, is onzeker.",
+        "limitations": "Korte samenvatting; oorspronkelijke publicatie bevat de volledige context.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used",
+        "image_evidence": ""
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Geen historische URL-/titelmatch in repository.",
+        "new_fact": ""
+      }
+    },
+    "headlines:1": {
+      "source_id": "cbs",
+      "organization_id": "cbs",
+      "article_url": "https://www.cbs.nl/nl-nl/nieuws/2026/46/1-op-5-werknemers-psychisch-vermoeid-door-werk-meer-dan-tien-jaar-geleden",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-09",
+      "event_date": "2025-12-31",
+      "checked_on": "2026-11-09",
+      "dates_checked": true,
+      "new_development": "Nieuwe CBS/TNO-publicatie op 9 november over enquêtejaar 2025.",
+      "older_exception_reason": "",
+      "topic_id": "headline-1",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.cbs.nl/nl-nl/nieuws/2026/46/1-op-5-werknemers-psychisch-vermoeid-door-werk-meer-dan-tien-jaar-geleden",
+        "claim": "Een op vijf werknemers voelt zich psychisch vermoeid door werk",
+        "support": "Nieuwe CBS- en TNO-cijfers laten zien dat 21 procent van de werknemers dit in 2025 geregeld ervoer, tegenover 13 procent tien jaar eerder.",
+        "limitations": "Korte samenvatting; oorspronkelijke publicatie bevat de volledige context.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used",
+        "image_evidence": ""
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Geen historische URL-/titelmatch in repository.",
+        "new_fact": ""
+      }
+    },
+    "headlines:2": {
+      "source_id": "nos",
+      "organization_id": "nos",
+      "article_url": "https://nos.nl/artikel/2638629-verlies-voor-het-anc-in-zuid-afrikaanse-steden",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-08",
+      "event_date": "2026-11-08",
+      "checked_on": "2026-11-09",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "headline-2",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://nos.nl/artikel/2638629-verlies-voor-het-anc-in-zuid-afrikaanse-steden",
+        "claim": "ANC verliest terrein in Zuid-Afrikaanse steden",
+        "support": "Bij de lokale verkiezingen blijft de partij landelijk de grootste, maar in zes belangrijke metropolen werd een andere partij de grootste.",
+        "limitations": "Korte samenvatting; oorspronkelijke publicatie bevat de volledige context.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used",
+        "image_evidence": ""
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Geen historische URL-/titelmatch in repository.",
+        "new_fact": ""
+      }
+    },
+    "int:pip-glimlach-reist-wereld": {
+      "article_url": "https://in-boxed.com/pip",
+      "source_id": "in-boxed-pip",
+      "organization_id": "in-boxed-pip",
+      "region": "int",
+      "region_checked": true,
+      "region_exception_reason": "Nederlandse oorsprong; wereldrubriek op expliciet gekozen internationale reis-invalshoek. Geen onafhankelijk bevestigd landenbereik.",
+      "publication_date": "",
+      "event_date": "2026-11-04",
+      "checked_on": "2026-11-09",
+      "dates_checked": true,
+      "new_development": "Nieuwe publicatie of voortgangsbericht beschrijft de gebeurtenis/onderzoeksperiode; in artikel onderscheiden van de publicatiedatum.",
+      "topic_id": "pip-glimlach-reist-wereld",
+      "evidence": {
+        "primary_url": "https://in-boxed.com/pip",
+        "claim": "Een digitale glimlach reist van mens tot mens de wereld over",
+        "support": "Website beschrijft digitale postduif, zelfgekozen ontvanger, gratis deelname zonder account en kaart van geopende glimlachen.",
+        "limitations": "Deelnemers, 21 landen en specifieke routes niet onafhankelijk bevestigd. Startdatum afkomstig van initiatiefnemer. Geen gemeten maatschappelijk effect.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/pigeon-bird-animal-wildlife-nature-8824016/; ZenAga; Pixabay Content License; foto illustratief."
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Geen eerdere titel-/URL-/onderwerpmatch in het editiearchief bij broncontrole op 9 november.",
+        "new_fact": ""
+      },
+      "publication_date_unknown_reason": "Oorspronkelijke publicatiedag van actuele initiatiefwebsite niet vermeld; mechanisme en pagina op 9 november gecontroleerd. Geen publicatiedatum verzonnen.",
+      "positive_result": true,
+      "positive_result_explanation": "Een digitale postduif gaat steeds naar iemand anders. De ontvanger kiest de volgende bestemming, en de reis is online te volgen. Bereikt stadium en beperkingen staan in artikel; geen niet-gemeten maatschappelijk effect geclaimd.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 1,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 2
+      }
+    }
+  },
+  "workflow_status": "concept op expliciet gekozen selectie; geen publicatieakkoord",
+  "selection_scope": {
+    "owner_confirmed_selection": true,
+    "full_candidate_triage_completed": false,
+    "full_source_coverage_completed": false,
+    "note": "De volledige selectiecontrole uit REDACTIE.txt is niet afgerond. Geen akkoordvlaggen ingevuld om een publicatiecontrole te omzeilen."
+  },
+  "owner_approved_selection": {
+    "authorized_on": "2026-11-09",
+    "authorized_by": "Tom de Haas",
+    "authorization_text": "mag live",
+    "news_sha256": "39c191f9a34c3076a3afdaba7ec096a0365c55bcadf55b59e2e8ff7931cca0f4",
+    "selected_sources_checked": true,
+    "candidate_triage_complete": false,
+    "source_coverage_complete": false,
+    "scope": "Alleen de exacte door eigenaar bekeken versie. Volledige kandidatentriage en kanaaldekking niet voltooid; niet als voltooid aangemerkt."
+  }
+}
