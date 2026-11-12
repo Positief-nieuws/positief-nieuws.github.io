@@ -37,7 +37,7 @@ def valid_url(value):
     p=urlsplit(str(value or ''))
     return p.scheme in {'http','https'} and bool(p.hostname)
 
-def check(news, dossier, policy=None, history=None, as_of=None, selection_review=None, candidate_pool=None, *, website=False, require_selection=True):
+def check(news, dossier, policy=None, history=None, as_of=None, selection_review=None, candidate_pool=None, *, website=False, require_selection=True, require_approval=True):
     policy=policy or json.loads((ROOT/'editorial_policy.json').read_text(encoding='utf-8'))
     history=load_history() if history is None else history
     today=as_of or datetime.now(ZoneInfo(policy["timezone"])).date()
@@ -92,7 +92,7 @@ def check(news, dossier, policy=None, history=None, as_of=None, selection_review
             errors.extend('Selectiecontrole: '+message for message in check_selection(candidate_pool,selection_review,news)['errors'])
 
     if dossier.get('news_sha256')!=news_digest(news):errors.append('Dossier hoort niet bij deze exacte versie van nieuws.json.')
-    if dossier.get('approved') is not True or not str(dossier.get('approved_by') or '').strip():
+    if require_approval and (dossier.get('approved') is not True or not str(dossier.get('approved_by') or '').strip()):
         errors.append('Expliciete redactionele goedkeuring ontbreekt.')
     entries=dossier.get('articles',{})
     seen_urls,seen_topics,seen_titles=set(),set(),set()

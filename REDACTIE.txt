@@ -13,9 +13,9 @@ Werk de 12 verhalen uit en voeg drie actualiteiten, de persoonlijke noot en pass
 
   python prepare_dossier.py --news /pad/naar/editie.json --output /pad/naar/redactie/YYYY-MM-DD.json
 
-Werk vanuit een schone, aparte checkout van de actuele publicatiebasis. Draai:
+Lees de bronnen en controleer datums, claims en beeldrechten. Leg de bevindingen vast in het dossier en bekijk de gekozen beelden op relevantie en herkomst. Werk vanuit een schone, aparte checkout van de actuele publicatiebasis. De bouw accepteert alleen een compleet dossier en bewaart de gecontroleerde versie voor publicatie. Draai:
 
-  python publish_edition.py --prepare /pad/naar/editie.json
+  python publish_edition.py --prepare /pad/naar/editie.json --dossier /pad/naar/dossier.json
   python -m http.server 8000 --bind 127.0.0.1
 
 Bekijk de homepage, /edities/YYYY-MM-DD/ en de twaalf artikelpagina’s via localhost. Bewaar de versie in deze checkout. Gebruik bij correcties een schone checkout voor de nieuwe versie en laat Tom die preview beoordelen. Gebruik PIXABAY_API_KEY zo nodig tijdens de bouw. Meld vóór de beoordeling ontbrekende beelden of een ontbrekende noot. Een bewust weggelaten beeld of noot is geen technische blokkade. Een gekozen beeld moet in de preview en het publicatiepakket aanwezig zijn.
@@ -35,11 +35,17 @@ Vul per bericht in:
 Score voor 12 positieve verhalen: vijf gehele scores van 0–2 voor positieve waarde, bewijs, actualiteit, relevantie en originaliteit. Minimum 7/10 én alle vereiste controles. positive_result en verklaring moeten aantoonbare vooruitgang beschrijven. De score is een hulpmiddel; ontbrekend bewijs blijft een stopreden.
 
 4. PUBLICATIE
-‘Zet live’ geldt voor de laatst beoordeelde preview. Zet pas dan approved: true en approved_by in het bewijsdossier. Bind het dossier via news_sha256 aan het goedgekeurde editiebestand. Maak geen wijzigingen aan de editie tijdens de publicatie. Neem alleen de bestanden van de editie mee, inclusief het dossier, de beelden en de gebouwde pagina’s.
+‘Zet live’ geldt voor de laatst beoordeelde preview. Zet pas dan approved: true en approved_by in het bewijsdossier. De controle heeft het dossier vóór de preview al via news_sha256 aan het editiebestand gebonden. Maak geen wijzigingen aan de editie tijdens de publicatie. Neem alleen de bestanden van de editie mee, inclusief het dossier, de beelden en de gebouwde pagina’s.
 
   python publish_edition.py --verify
 
-Deze controle vergelijkt de publicatiebestanden met de preview en draait de bestaande bron-, rechten-, datum- en dubbelcontrole op de gekozen verhalen. Na een geslaagde controle commit je alle gecontroleerde bestanden samen en publiceer je die via de bestaande route naar main. Bouw de pagina’s daarna niet opnieuw. Gebruik bij een gewijzigde main een schone publicatiebasis, behoud de goedgekeurde inhoud en controleer of de te publiceren pagina’s nog overeenkomen. Vraag uitsluitend nieuw redactioneel akkoord als de beoordeelde inhoud of opmaak verandert.
+Deze controle verifieert het akkoord en vergelijkt de bestanden en het bewijsdossier met de gecontroleerde preview. Na een geslaagde controle commit je alle gecontroleerde bestanden samen. GitHub Actions blijft de redactionele en technische controles uitvoeren. Bouw de pagina’s daarna niet opnieuw. Gebruik bij een gewijzigde main een schone publicatiebasis, behoud de goedgekeurde inhoud en controleer of de te publiceren pagina’s nog overeenkomen. Vraag uitsluitend nieuw redactioneel akkoord als de beoordeelde inhoud of opmaak verandert.
+
+GitHub-overdracht:
+- Gebruik een normale Git-push als de sessie al schrijfrechten heeft. Test bij twijfel eerst met een niet-interactieve `git push --dry-run` naar de bedoelde branch. Gebruik de normale branchbeveiliging.
+- Zonder geauthenticeerde push gebruik je de bestaande GitHub-integratie. Lees de actuele doelbranch en de gewijzigde paden uit de gecontroleerde commit (`git diff-tree --no-commit-id --name-status -r HEAD`). Maak één GitHub-tree op basis van de actuele tree. Geef alle gewijzigde UTF-8-bestanden samen inline mee als `content`. Hergebruik bestaande blob-SHA’s voor identieke bestanden. Maak alleen voor nieuwe binaire inhoud een base64-blob per unieke SHA en geef de SHA mee in dezelfde tree. Neem eventuele verwijderingen op met een lege SHA (`null`).
+- Vergelijk de gewijzigde paden en blob-SHA’s in de GitHub-tree met de lokale commit. Maak daarna één commit met de gecontroleerde doelbranch als parent. Werk de branch zonder force bij. Als de doelbranch intussen is gewijzigd, controleer dan eerst de nieuwe publicatiebasis. Gebruik een PR waar branchbeveiliging dat vraagt.
+- Noteer de duur van de overdracht, het bijwerken van de branch en de livecontrole. Het previewcommando meldt de tijd voor het dossier en de bouw. Het verificatiecommando meldt de tijd voor de vergelijking.
 
 Controleer na de GitHub Pages-deployment de homepage, de editiepagina en alle twaalf artikelpagina’s op positief-nieuws.nl. Volg docs/analytics-testing.md. Start de Buttondown-workflow alleen bij een apart nieuwsbriefverzoek. Die workflow controleert het bron- en rechtenbewijs, het akkoord en de maximale lengte van de nieuwsbrief.
 
