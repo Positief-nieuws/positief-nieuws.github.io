@@ -1,0 +1,64 @@
+name: Zet editie 12 november als Buttondown-concept klaar
+on:
+  push:
+    branches: [nieuwsbrief-concept-2026-11-12]
+    paths: ['.github/workflows/buttondown-concept-2026-11-12.yml']
+permissions:
+  contents: read
+concurrency:
+  group: buttondown-concept-2026-11-12
+  cancel-in-progress: false
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Controleer de gepubliceerde editie
+        run: python editorial_check.py --website
+      - name: Bewaar uitsluitend het concept
+        env:
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+        run: |
+          python - <<'PY'
+          import json, os, urllib.request, urllib.parse, re
+          import buttondown_draft as b
+          d, nl, international, headlines = b.load_news()
+          assert b.raw_edition_date(d) == "2026-11-12"
+          subject = b.build_subject(d)
+          preheader = b.build_preheader(d, nl)
+          body = b.build_body(d, nl, international, headlines)
+          portrait = '<img src="https://positief-nieuws.nl/images/redactie/tom-preview.svg" width="68" height="68" alt="Portretillustratie van Tom" style="display:block;width:68px;height:68px;border-radius:50%;margin:0 0 12px;">'
+          tag = '<h2 style="margin:0 0 12px;font:700 22px Arial,Helvetica,sans-serif">Blijkbaar ben ik niet de enige</h2>'
+          assert body.count(tag) == 1
+          body = body.replace(tag, portrait + tag, 1)
+          key = os.environ["BUTTONDOWN_API_KEY"]
+          headers = {"Authorization": "Token " + key, "Accept": "application/json", "Content-Type": "application/json"}
+          def request(url, method="GET", payload=None):
+              p = urllib.parse.urlsplit(url)
+              assert p.scheme == "https" and p.netloc == "api.buttondown.com"
+              data = None if payload is None else json.dumps(payload).encode()
+              with urllib.request.urlopen(urllib.request.Request(url, headers=headers, method=method, data=data), timeout=30) as f:
+                  return json.load(f)
+          url = b.BUTTONDOWN_URL
+          matches = []
+          for _ in range(20):
+              result = request(url)
+              matches += [x for x in result["results"] if x.get("subject") == subject or x.get("canonical_url") == b.edition_url(d)]
+              url = result.get("next")
+              if not url:
+                  break
+          assert not url, "Onvolledige controle op bestaande nieuwsbrief"
+          assert len(matches) <= 1, "Meerdere nieuwsbrieven voor dezelfde editie"
+          if matches:
+              existing = matches[0]
+              assert existing["status"] == "draft", "De nieuwsbrief bestaat en is geen concept"
+              assert re.fullmatch(r"[a-zA-Z0-9_-]+", existing["id"])
+              result = request(b.BUTTONDOWN_URL + "/" + existing["id"], "PATCH", {"body": body, "description": preheader})
+          else:
+              result = b.create_draft(key, subject, body, d, preheader)
+          assert result["status"] == "draft" and portrait in result["body"]
+          print("BUTTONDOWN_DRAFT_ID=" + result["id"])
+          PY
