@@ -8,9 +8,11 @@ from datetime import date
 from pathlib import Path
 import subprocess
 import sys
+from time import perf_counter
 from urllib.parse import urlsplit
 
 import build_editions as site
+import editorial_check
 
 ROOT = Path(__file__).resolve().parent
 
@@ -54,37 +56,61 @@ def files_for_preview(day, stories, urls):
             if cached.get("query") != query or not image or not Path(image.lstrip("/")).is_file():
                 raise ValueError(f"Geen opgeslagen beeld voor {slug}.")
             files.append(Path(image.lstrip("/")))
+    portrait = json.loads(site.NEWS_PATH.read_bytes()).get("meta", {}).get("personal_note", {}).get("portrait_url")
+    if portrait and portrait.startswith("/images/redactie/"):
+        files.append(Path(portrait.lstrip("/")))
     for path in files:
         if not path.is_file():
             raise ValueError(f"Ontbrekend publicatiebestand: {path}")
     return files
 
 
+def dossier_path(day):
+    return Path("redactie", f"{day}.json")
+
+
 def snapshot(day, files):
-    # Approval metadata and evidence can be completed after the visual review.
-    excluded = [
-        f":(exclude)redactie/{day}.json",
-    ]
-    staged = git("diff", "--cached", "--raw", "--no-abbrev", "HEAD", "--", ".", *excluded)
+    path = dossier_path(day)
+    dossier = json.loads(path.read_bytes())
+    # Only the owner's approval fields may change after the preview.
+    dossier.pop("approved", None)
+    dossier.pop("approved_by", None)
+    staged = git("diff", "--cached", "--raw", "--no-abbrev", "HEAD", "--", ".", f":(exclude){path}")
     return {
         "base": git("rev-parse", "HEAD"),
         "diff": hashlib.sha256(staged.encode()).hexdigest(),
+        "dossier": editorial_check.news_digest(dossier),
         "pages": {str(path): hashlib.sha256(path.read_bytes()).hexdigest() for path in files},
     }
 
 
-def prepare(source):
+def prepare(source, evidence):
     if git("status", "--porcelain"):
         raise ValueError("Gebruik een schone, aparte checkout voor de editie.")
+    preview_record().unlink(missing_ok=True)
     raw, day, stories, urls = read_edition(source)
-    archive = Path("edities", f"{day}.json")
+    news = json.loads(raw)
+    dossier = json.loads(evidence.read_bytes())
+    dossier.update(approved=False, approved_by="")
+    started = perf_counter()
+    report = editorial_check.check(news, dossier, website=True, require_approval=False)
+    if not report["ready"]:
+        raise ValueError("Redactiecontrole vóór preview:\n" + "\n".join(report["errors"]))
+    for warning in report["warnings"]:
+        print(f"Waarschuwing: {warning}")
+    print(f"Redactioneel dossier gecontroleerd in {perf_counter() - started:.2f} s.", flush=True)
+
+    started = perf_counter()
     site.NEWS_PATH.write_bytes(raw)
-    archive.write_bytes(raw)
+    Path("edities", f"{day}.json").write_bytes(raw)
+    dossier_path(day).parent.mkdir(exist_ok=True)
+    dossier_path(day).write_text(json.dumps(dossier, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     subprocess.run([sys.executable, "build_editions.py"], check=True)
     files = files_for_preview(day, stories, urls)
     git("add", "-A")
     record = snapshot(day, files)
     preview_record().write_text(json.dumps(record, indent=2), encoding="utf-8")
+    print(f"Bestanden gebouwd en gecontroleerd in {perf_counter() - started:.2f} s.")
     print("Open de preview via python3 -m http.server 8000 --bind 127.0.0.1")
     print(f"Editie {day}: homepage, editiepagina en twaalf artikelpagina’s.")
 
@@ -97,13 +123,16 @@ def check_files():
 
 
 def verify():
+    started = perf_counter()
     day, files = check_files()
     expected = json.loads(preview_record().read_text(encoding="utf-8"))
     git("add", "-A")
     if snapshot(day, files) != expected:
         raise ValueError("De publicatiebestanden wijken af van de preview. Maak een nieuwe preview.")
-    subprocess.run([sys.executable, "editorial_check.py", "--website"], check=True)
-    print("Publicatiebestanden komen overeen met de preview en de redactiecontrole is geslaagd.")
+    dossier = json.loads(dossier_path(day).read_bytes())
+    if dossier.get("approved") is not True or not str(dossier.get("approved_by") or "").strip():
+        raise ValueError("Expliciete goedkeuring voor deze preview ontbreekt.")
+    print(f"Goedgekeurde bestanden komen overeen met de gecontroleerde preview ({perf_counter() - started:.2f} s).")
 
 
 def main():
@@ -112,12 +141,16 @@ def main():
     action.add_argument("--prepare", type=Path, metavar="EDITIE_JSON")
     action.add_argument("--verify", action="store_true")
     action.add_argument("--check-files", action="store_true")
+    parser.add_argument("--dossier", type=Path, metavar="DOSSIER_JSON")
     args = parser.parse_args()
+    if bool(args.prepare) != bool(args.dossier):
+        parser.error("--prepare en --dossier horen bij elkaar.")
     source = args.prepare.resolve() if args.prepare else None
+    evidence = args.dossier.resolve() if args.dossier else None
     os.chdir(ROOT)
     try:
         if source:
-            prepare(source)
+            prepare(source, evidence)
         elif args.check_files:
             check_files()
         else:
