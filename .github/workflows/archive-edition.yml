@@ -1,4 +1,4 @@
-name: Bewaar editie
+name: Editiecontrole en onderhoud
 
 on:
   push:
@@ -6,6 +6,13 @@ on:
       - main
     paths:
       - "nieuws.json"
+  pull_request:
+    branches: [main]
+    paths:
+      - "nieuws.json"
+      - ".github/workflows/archive-edition.yml"
+      - "editorial_check.py"
+      - "publish_edition.py"
   workflow_dispatch:
     inputs:
       branding_only:
@@ -19,14 +26,30 @@ on:
         default: false
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: positief-nieuws-build
   cancel-in-progress: false
 
 jobs:
+  validate:
+    if: github.event_name != 'workflow_dispatch' || (!inputs.branding_only && !inputs.articles_only)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Goedgekeurde editie en bijbehorende publicatiebestanden controleren
+        run: |
+          python editorial_check.py --website
+          python publish_edition.py --check-files
+
   archive:
+    if: github.event_name == 'workflow_dispatch' && (inputs.branding_only || inputs.articles_only)
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
 
     steps:
@@ -39,55 +62,6 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.13"
-
-      - name: Bron- en redactiecontroles testen
-        if: ${{ !inputs.branding_only && !inputs.articles_only }}
-        run: python -m unittest discover -s tests
-
-      - name: Categorieën in nieuws.json valideren
-        if: ${{ !inputs.branding_only && !inputs.articles_only }}
-        run: python build_editions.py --validate-current
-
-      - name: Redactioneel dossier en goedkeuring controleren
-        if: ${{ !inputs.branding_only && !inputs.articles_only }}
-        run: python editorial_check.py
-
-      - name: Editie bewaren
-        if: ${{ !inputs.branding_only && !inputs.articles_only }}
-        shell: bash
-        run: |
-          python - <<'PY'
-          import json
-          import re
-          from pathlib import Path
-
-          data = json.loads(Path("nieuws.json").read_text(encoding="utf-8"))
-          edition_date = (
-              (data.get("meta") or {}).get("edition_date")
-              or (data.get("edition") or {}).get("date")
-          )
-
-          if not edition_date:
-              raise SystemExit("Geen editie-datum gevonden.")
-
-          if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", edition_date):
-              raise SystemExit(f"Ongeldige editie-datum: {edition_date!r}")
-
-          editions_dir = Path("edities")
-          editions_dir.mkdir(exist_ok=True)
-          archive_path = editions_dir / f"{edition_date}.json"
-          archive_path.write_text(
-              json.dumps(data, ensure_ascii=False, indent=2) + "\n",
-              encoding="utf-8",
-          )
-          print(f"Bewaard: {archive_path}")
-          PY
-
-      - name: Site, onderwerpen en sitemap bouwen
-        if: ${{ !inputs.branding_only && !inputs.articles_only }}
-        env:
-          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
-        run: python build_editions.py
 
       - name: Favicon en sitenaam bijwerken
         if: ${{ inputs.branding_only }}

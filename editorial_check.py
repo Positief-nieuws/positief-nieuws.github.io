@@ -37,7 +37,7 @@ def valid_url(value):
     p=urlsplit(str(value or ''))
     return p.scheme in {'http','https'} and bool(p.hostname)
 
-def check(news, dossier, policy=None, history=None, as_of=None, selection_review=None, candidate_pool=None):
+def check(news, dossier, policy=None, history=None, as_of=None, selection_review=None, candidate_pool=None, *, website=False, require_selection=True):
     policy=policy or json.loads((ROOT/'editorial_policy.json').read_text(encoding='utf-8'))
     history=load_history() if history is None else history
     today=as_of or datetime.now(ZoneInfo(policy["timezone"])).date()
@@ -84,7 +84,7 @@ def check(news, dossier, policy=None, history=None, as_of=None, selection_review
         errors.append('Editiedatum ligt in de toekomst; nog niet publicatieklaar.')
     if dossier.get('edition_date')!=edition:errors.append('Dossier hoort niet bij deze editie.')
     required_from=policy.get('selection_review_required_from')
-    if required_from and edition_day and edition_day.isoformat()>=required_from and not (owner_exception or approved_selection or november_selection or november_ninth_selection):
+    if require_selection and not website and required_from and edition_day and edition_day.isoformat()>=required_from and not (owner_exception or approved_selection or november_selection or november_ninth_selection):
         if selection_review is None or candidate_pool is None:
             errors.append('Selectiecontrole vóór eerste concept ontbreekt; volledige bronrun en selectiedossier zijn verplicht.')
         else:
@@ -186,7 +186,7 @@ def check(news, dossier, policy=None, history=None, as_of=None, selection_review
         if not reason:errors.append('Spreiding vraagt redactionele uitzondering: '+', '.join(variation))
         else:warnings.append('Gemotiveerde spreidingsuitzondering: '+reason)
     words=0
-    if all(isinstance(news.get(k),list) and len(news[k])==v for k,v in counts.items()):
+    if not website and all(isinstance(news.get(k),list) and len(news[k])==v for k,v in counts.items()):
         words=newsletter_words(news)
         if words>policy['newsletter_word_budget']:errors.append(f'Nieuwsbrief bevat {words} woorden; budget {policy["newsletter_word_budget"]}.')
     return {'ready':not errors,'edition_date':edition,'newsletter_words':words,'errors':errors,'warnings':warnings}
@@ -196,6 +196,7 @@ def main():
     parser.add_argument('--news',default=str(ROOT/'nieuws.json'))
     parser.add_argument('--dossier')
     parser.add_argument('--report')
+    parser.add_argument('--website', action='store_true', help='Controleer de website-editie zonder nieuwsbrief- en kandidatendossiervereisten.')
     args=parser.parse_args()
     news=json.loads(Path(args.news).read_text(encoding='utf-8'))
     edition=news.get('meta',{}).get('edition_date') or news.get('edition',{}).get('date')
@@ -203,9 +204,9 @@ def main():
     if not path.exists():raise SystemExit(f'Geen redactioneel dossier: {path}. Publicatie tegengehouden.')
     selection_path=ROOT/'selectie'/f'{edition}.json'
     pool_path=ROOT/'selectie'/f'{edition}-kandidaten.json'
-    selection=json.loads(selection_path.read_text()) if selection_path.exists() else None
-    pool=json.loads(pool_path.read_text()) if pool_path.exists() else None
-    result=check(news,json.loads(path.read_text(encoding='utf-8')),selection_review=selection,candidate_pool=pool)
+    selection=json.loads(selection_path.read_text()) if not args.website and selection_path.exists() else None
+    pool=json.loads(pool_path.read_text()) if not args.website and pool_path.exists() else None
+    result=check(news,json.loads(path.read_text(encoding='utf-8')),selection_review=selection,candidate_pool=pool,website=args.website)
     rendered=json.dumps(result,ensure_ascii=False,indent=2)+'\n'
     if args.report:Path(args.report).write_text(rendered,encoding='utf-8')
     print(rendered)

@@ -1,11 +1,6 @@
 name: Maak Buttondown concept
 
 on:
-  workflow_run:
-    workflows:
-      - "Bewaar editie"
-    types:
-      - completed
   workflow_dispatch:
 
 permissions:
@@ -13,11 +8,10 @@ permissions:
 
 jobs:
   create-draft:
-    if: github.event_name == 'workflow_dispatch' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'push')
     runs-on: ubuntu-latest
 
     steps:
-      - name: Repository ophalen na succesvolle site-build
+      - name: Gepubliceerde editie ophalen
         uses: actions/checkout@v4
         with:
           ref: main

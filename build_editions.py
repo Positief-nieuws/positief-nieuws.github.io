@@ -345,7 +345,7 @@ def article_html(item, date_value=None, show_date=False, section="onbekend"):
     raw_source_url = item.get("url") or item.get("link") or "#"
 
     own_url = article_page_url(item, date_value) if has_article_page(item) else ""
-    raw_url = own_url or raw_source_url
+    raw_url = own_url.removeprefix(SITE_URL) if own_url else raw_source_url
     link_attrs = "" if own_url else 'target="_blank" rel="noopener noreferrer"'
 
     title = esc(raw_title)
@@ -1726,7 +1726,7 @@ def write_topic_pages(topics):
 
 def homepage_story_url(item, edition_date):
     if has_article_page(item):
-        return article_page_url(item, edition_date)
+        return article_page_url(item, edition_date).removeprefix(SITE_URL)
     url = str(item.get("url") or item.get("link") or "")
     parsed = urllib.parse.urlsplit(url)
     return url if parsed.scheme in {"https", "http"} and parsed.netloc else ""
@@ -1735,7 +1735,7 @@ def homepage_story_url(item, edition_date):
 def homepage_story_html(item, edition_date, section, index):
     title = item.get("title") or item.get("headline") or ""
     url = homepage_story_url(item, edition_date)
-    attrs = "" if url.startswith(SITE_URL + "/") else 'target="_blank" rel="noopener noreferrer"'
+    attrs = "" if url.startswith(("/", SITE_URL + "/")) else 'target="_blank" rel="noopener noreferrer"'
     link = f'<a href="{esc(url)}" {attrs}>{esc(title)}</a>' if url else esc(title)
     teaser = item.get("teaser") or item.get("summary") or item.get("description") or ""
     meta = category_meta_html(item)
