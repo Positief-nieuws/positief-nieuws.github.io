@@ -59,10 +59,12 @@ Een echte inschrijving/verzending is een aparte handeling.
 ## Publicatie en controles
 
 `.github/workflows/analytics-policy.yml` bouwt en test elke pull request.
-`daily-news.yml` verzamelt uitsluitend kandidaten. Een goedgekeurde wijziging
-van `nieuws.json` activeert `Bewaar editie`, daarna `Maak Buttondown concept`.
-Live publicatie en verzending volgen de afzonderlijke akkoordstappen in
-`REDACTIE.txt`. `newsletter-health.yml` doet iedere zes uur en na wijzigingen/publicatie broncontroles voor alle inschrijfpunten;
+`daily-news.yml` verzamelt uitsluitend kandidaten. `publish_edition.py` bouwt de preview en alle publicatiebestanden lokaal
+uit hetzelfde editiebestand. Na akkoord controleert het script de bestanden
+en het bewijsdossier. Publiceer de complete editie in één commit. GitHub Pages
+publiceert de gecommitte bestanden. De editiecontrole in Actions bouwt geen
+pagina’s en wijzigt de commit niet. Buttondown draait op afzonderlijk verzoek.
+Zie `REDACTIE.txt`. `newsletter-health.yml` doet iedere zes uur en na wijzigingen/publicatie broncontroles voor alle inschrijfpunten;
 `docs/newsletter-tests/` beschrijft de aanvullende maandtest.
 De gerichte workflows voor zoekindex, vormgeving en nieuwsbrief blijven bruikbaar.
 

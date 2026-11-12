@@ -2,42 +2,23 @@ POSITIEF NIEUWS — REDACTIONELE WERKWIJZE
 Vaste editie: maandag en donderdag; 6 NL-verhalen, 6 wereldverhalen, 3 actualiteiten.
 Kern: positief nieuws dat daadwerkelijk klopt. Geen automatische publicatie uit feeds.
 
-1. VOORBEREIDING
-De bestaande GitHub-verzameling maakt kandidaten.json. sources.json is het enige bronregister voor auto_news.py. source_health.json toont bereikbaarheid en volgende controle; source_state.json bewaart uitsluitend ontdekkingsmetadata, geen gekopieerde artikeltekst. De volledige recente lijst staat in all_candidates, met review_index_by_source voor controle per bron. De 40 kandidaten per bronregio zijn uitsluitend een navigatieoverzicht, geen inhoudelijke selectiegrens. De bronregio is een hint: beoordeel zowel NL- als wereldkandidaten en classificeer op het nieuwsfeit. Een buitenlandse publicatie over Nederland kan in de NL-selectie.
+1. NIEUWSSELECTIE
+Tom uploadt kandidaten.json. Gebruik all_candidates als bronlijst en beoordeel kanshebbers op nieuwswaarde, betrouwbaarheid, actualiteit, variatie en relevantie voor Nederlandse lezers. Lees de oorspronkelijke bronnen. Toon zes Nederlandse en zes internationale verhalen met een korte motivatie per keuze. Classificeer op het nieuwsfeit. Een buitenlandse bron kan Nederlands nieuws brengen.
 
-Alle 55 aangeleverde vermeldingen zijn in sources.json terug te vinden via register_ids. C-bronnen en het dubbele Goodnews-archief worden niet als verplichte actualiteitenbron opgehaald. Een fout of leeg zoekresultaat bewijst niet dat er geen nieuws is. Een valide zoekfeed bewijst niet dat alles van die website is gevonden. Feedcontrole moet bij problemen vanuit GitHub herhaald worden.
+2. SELECTIE AANPASSEN
+Verwerk vervangingen, tips en de volgorde. Behoud de eerder goedgekeurde onderdelen. Wacht op selectieakkoord.
 
-2. SELECTIE
-Lees eerst selection_preferences.json: concrete bereikte vooruitgang en lezerswaarde wegen zwaarder dan positieve trefwoorden. Routinecampagnes, reparaties van eerder onrecht, wapens/rampen als dragend onderwerp en prijzen zonder aantoonbaar resultaat vragen extra inhoudelijke rechtvaardiging. Dit is geen algemeen verbod op onderzoek, hulpverlening, sport of jubileums.
+3. HTML-PREVIEW
+Werk de 12 verhalen uit en voeg drie actualiteiten, de persoonlijke noot en passende Pixabay-beelden toe. Maak één editiebestand en leg de bron- en rechtencontrole tijdens het schrijven vast in redactie/YYYY-MM-DD.json. Het bestaande hulpscript kan het dossier voorbereiden:
 
-VERPLICHTE INTERNE SELECTIERONDE VÓÓR HET EERSTE CONCEPT
-1. `pn go` haalt `kandidaten.json` zelf rechtstreeks uit GitHub op; de eigenaar hoeft niets te downloaden of in de chat te uploaden. Controleer op de editiedag of de bestaande run vandaag in Europe/Amsterdam is gegenereerd, `meta.collection_complete` waar is, `all_candidates` niet leeg is en de bronregister-hash overeenkomt met `sources.json` (zoals bij de versheidscontrole in `.github/workflows/daily-news.yml`). Is de run compleet en actueel, hergebruik dan `kandidaten.json`. Anders: voer `python auto_news.py --force` uit en gebruik het vernieuwde bestand; meld het als uitvoeren technisch niet mogelijk is. Google-zoekkanalen combineren een brede zoekopdracht met de bestaande gerichte zoekopdracht. Recente eerder gevonden metadata blijven herkenbaar als `prior_recent_metadata`: dat is geen nieuwe bronverificatie. Ook een verse, complete bronrun is geen garantie voor volledige nieuwsdekking. De verplichte controle van `coverage.tasks`, originele bronnen, handmatige kanalen en redactionele aanvullingen blijft ongewijzigd.
-2. Maak een bevroren bronrun en een lege beoordelingschecklist:
-   python selection_check.py --pool kandidaten.json --prepare YYYY-MM-DD
-   Dit schrijft selectie/YYYY-MM-DD-kandidaten.json en selectie/YYYY-MM-DD.json; niets wordt geaccordeerd of gepubliceerd. Gebruik een nieuwe revisiemap voor heronderzoek, niet een oud akkoord.
-3. Lees ALLE titel-/bronmetadata per bron (all_candidates). Triageer iedere kandidaat met een eigen afweging: reject of contender. Voer niet blind dezelfde afwijzing in op basis van trefwoorden. Duidelijke vacatures mogen op metadata worden afgewezen; medische of maatschappelijke claims vragen brononderzoek.
-4. Rond alle coverage.tasks af: officiële nieuwsoverzichten bij zoekkanalen, directe controles bij lege/mislukte kanalen en handmatige bewijsbronnen. Leg checked_on, url, finding en status:checked vast. Registreer onbereikbaarheid eerlijk en zoek een controleerbare alternatieve bron; een open controle blijft een stopreden. Nieuwe vondsten komen in additional_candidates met unieke id, titel, oorspronkelijke URL en discovery_reason en krijgen dezelfde triage.
-5. Lees de oorspronkelijke publicatie van alle kanshebbers en vergelijk minstens negen NL- en negen wereldverhalen inhoudelijk: zes gekozen verhalen plus drie reserves per regio. Meer kanshebbers mogen. Leg per artikel id, region (op nieuwsfeit), decision (select/reserve/reject), scores, primary_url, source_read, reason vast. Gekozen verhalen hebben rank:1–6 en stronger_than_reserves. Als de zichtbare bron-URL anders is dan de discovery-URL, leg article_url vast.
-6. Gebruik vijf scores van 0–3 uit selection_preferences.json. Minimum 11/15 en minimaal 2 voor lezerswaarde, bereikt resultaat en bewijs. Een hoge totaalscore compenseert geen zwakke kern. Gebruik daarnaast de bestaande dossiercontrole op journalistieke juistheid. Deze twee controles hebben verschillende functies: selectie versus bewijs.
-7. Stel jezelf vóór het eerste concept de vraag: welk gekozen verhaal zou de eigenaar terecht slechts 'mwoah' vinden, en welke gelezen reserve is sterker? Doe die vervanging intern. Spreiding komt pas na kwaliteit; laat een zwak verhaal niet winnen om een themaquota te vullen.
-8. Controleer vóór concept:
-   python selection_check.py --pool selectie/YYYY-MM-DD-kandidaten.json --review selectie/YYYY-MM-DD.json
-   Een gereed rapport bewijst consistentie en ingevulde afwegingen, niet dat de inhoudelijke beoordeling werkelijk juist is. De redacteur blijft verantwoordelijk voor bronlezen, nuance en smaak.
-9. Toon vervolgens één gerangschikt concept met NL eerst. Houd reserves beschikbaar voor echte redactionele keuzes. Blijf eerlijk: de techniek kan nooit bewijzen dat nergens op internet een beter verhaal bestaat.
+  python prepare_dossier.py --news /pad/naar/editie.json --output /pad/naar/redactie/YYYY-MM-DD.json
 
-Begin met concrete resultaten uit A-bronnen; gebruik B om onderwerpen te ontdekken en zoek hun onderliggende bewijs. C is inspiratie. Universiteiten, NGO's, overheid en brancheorganisaties kunnen belanghebbende zijn. Controleer methode, onderliggende data, beperkingen en waar nodig onafhankelijke bevestiging. Nature/Frontiers is A voor onderzoek, B voor nieuws/commentaar. Peer review maakt een claim niet automatisch juist.
+Werk vanuit een schone, aparte checkout van de actuele publicatiebasis. Draai:
 
-Positieve verhalen moeten werkelijk een verbetering, resultaat of ontdekking beschrijven. Een plan, prototype, subsidie of besluit kan nieuws zijn, maar is geen bewezen maatschappelijk effect. Leg het bereikte stadium uit. Behandel medisch onderzoek, correlatie, causaliteit, dierproeven en klinische resultaten zorgvuldig. Gebruik eigen woorden; neem geen beschermde tekst of foto's over zonder rechten.
+  python publish_edition.py --prepare /pad/naar/editie.json
+  python -m http.server 8000 --bind 127.0.0.1
 
-De drie headlines hoeven niet positief te zijn; wel actueel, controleerbaar en nuttig.
-
-3. DOSSIER MAKEN
-Maak in een lokale onderzoekskopie de voorgestelde nieuws.json, niet direct in main.
-Laat de AI-redacteur tijdens hetzelfde brononderzoek nieuws en dossier samen voorbereiden. Zo is het dossier het vastleggen van de al noodzakelijke controle, geen tweede onderzoeksronde. Het hulpcommando hieronder is een veilige checklist als er nog geen dossier is; bekende bron-ID’s en aangeleverde datums worden voorgesteld, maar niet automatisch geaccordeerd.
-
-Start de checklist:
-  python prepare_dossier.py --news /pad/naar/concept.json --output /pad/naar/redactie/YYYY-MM-DD.json
-De checklist begint ongeaccordeerd. Datums, scores en bewijs worden bewust niet automatisch ingevuld.
+Bekijk de homepage, /edities/YYYY-MM-DD/ en de twaalf artikelpagina’s via localhost. Bewaar de versie in deze checkout. Gebruik bij correcties een schone checkout voor de nieuwe versie en laat Tom die preview beoordelen. Gebruik PIXABAY_API_KEY zo nodig tijdens de bouw. Meld vóór de beoordeling ontbrekende beelden of een ontbrekende noot. Een bewust weggelaten beeld of noot is geen technische blokkade. Een gekozen beeld moet in de preview en het publicatiepakket aanwezig zijn.
 
 Vul per bericht in:
 - source_id en organization_id uit sources.json; gebruik de passende geregistreerde bron. Nieuwe oorspronkelijke bron? Voeg één registerrecord toe, eventueel met channels: [] voor een bron die alleen als bewijs wordt gebruikt.
@@ -53,26 +34,14 @@ Vul per bericht in:
 
 Score voor 12 positieve verhalen: vijf gehele scores van 0–2 voor positieve waarde, bewijs, actualiteit, relevantie en originaliteit. Minimum 7/10 én alle vereiste controles. positive_result en verklaring moeten aantoonbare vooruitgang beschrijven. De score is een hulpmiddel; ontbrekend bewijs blijft een stopreden.
 
-4. SPREIDING EN LEESTIJD
-Streef naar minimaal vijf van de bestaande acht hoofdthema's, hoogstens vier verhalen over hetzelfde thema en hoogstens twee van dezelfde organisatie. Een gemotiveerde uitzondering mag, via variation_exception_reason; voeg geen zwak verhaal toe om een quotum te vullen. Controleer daarnaast wereldregio's, onderwijs en verschillen binnen brede thema's handmatig.
+4. PUBLICATIE
+‘Zet live’ geldt voor de laatst beoordeelde preview. Zet pas dan approved: true en approved_by in het bewijsdossier. Bind het dossier via news_sha256 aan het goedgekeurde editiebestand. Maak geen wijzigingen aan de editie tijdens de publicatie. Neem alleen de bestanden van de editie mee, inclusief het dossier, de beelden en de gebouwde pagina’s.
 
-Oudere bronpublicaties: hoogstens twee per editie en elk met older_exception_reason. Een recent gepubliceerd onderzoek over een oudere periode kan actueel nieuws zijn; leg dit uit.
+  python publish_edition.py --verify
 
-De controle telt de echte gegenereerde nieuwsbrieftekst, inclusief koppen en vaste tekst. Budget: 1.200 woorden, ongeveer zes minuten bij 200 woorden/minuut. De bestaande reading_time_minutes is de leestijd van een bronartikel, niet van onze nieuwsbrief.
+Deze controle vergelijkt de publicatiebestanden met de preview en draait de bestaande bron-, rechten-, datum- en dubbelcontrole op de gekozen verhalen. Na een geslaagde controle commit je alle gecontroleerde bestanden samen en publiceer je die via de bestaande route naar main. Bouw de pagina’s daarna niet opnieuw. Gebruik bij een gewijzigde main een schone publicatiebasis, behoud de goedgekeurde inhoud en controleer of de te publiceren pagina’s nog overeenkomen. Vraag uitsluitend nieuw redactioneel akkoord als de beoordeelde inhoud of opmaak verandert.
 
-5. GOEDKEURING EN CONTROLE
-Dossier.bindingsveld news_sha256 verwijst naar de exacte voorgestelde nieuws.json. Het hulpscript genereert die waarde. Wijzigt de nieuwsinhoud? Werk het dossier bewust bij en beoordeel opnieuw; kopieer geen oud akkoord. Zet approved: true en approved_by pas na expliciete redactionele beoordeling van precies die editie. De techniek controleert volledigheid en consistentie; zij kan geen menselijke broncontrole bewijzen.
-
-  python editorial_check.py --news /pad/naar/concept.json --dossier /pad/naar/redactie/YYYY-MM-DD.json --report /pad/naar/controle.json
-Een niet-gereed rapport blokkeert archiefbouw via de gewijzigde workflow en het maken van Buttondown-concepten. Een goedkeuringsvlag voor de redactie is geen toestemming om live te publiceren: vraag afzonderlijk toestemming aan de eigenaar.
-
-BELANGRIJK VOOR DE BESTAANDE GITHUB PAGES-SITE:
-Een directe push van nieuws.json naar main kan al zichtbaar worden voordat Actions zijn controle uitvoert. De controle beschermt de latere archief- en nieuwsbriefstappen, maar maakt main geen veilige conceptomgeving. Werk en controleer eerst lokaal/in een branch. Zet niets op main vóór expliciete toestemming voor live publicatie. Het huidige Pages-ontwerp wordt niet gewijzigd.
-
-6. PUBLICATIE NA AFZONDERLIJK AKKOORD
-Neem na geslaagde lokale controle en live akkoord de gecontroleerde nieuws.json én bijbehorend dossier op dezelfde goedgekeurde versie mee. Vanaf de editie van 19 oktober 2026 controleert editorial_check.py ook het selectiedossier en de bevroren bronrun in selectie/. Neem die twee bestanden mee bij publicatie. Bewaar het bewijsdossier als redactie/YYYY-MM-DD.json zodat de workflow en het Buttondown-script het kunnen vinden. Het repo is openbaar: zet er geen persoonsgegevens, privénotities of beschermde bronpassages in. Gebruik korte eigen bewijsnotities.
-
-Bestaande route blijft: nieuws.json-update → Bewaar editie → website/archiefbouw → Buttondown-concept. Verzenden vanuit Buttondown blijft een aparte beslissing. Handmatige Buttondown-runs doorlopen dezelfde dossiercontrole; dubbele concepten bij herstart zijn nog mogelijk, zoals voorheen.
+Controleer na de GitHub Pages-deployment de homepage, de editiepagina en alle twaalf artikelpagina’s op positief-nieuws.nl. Volg docs/analytics-testing.md. Start de Buttondown-workflow alleen bij een apart nieuwsbriefverzoek. Die workflow controleert het bron- en rechtenbewijs, het akkoord en de maximale lengte van de nieuwsbrief.
 
 7. BRONNENBEHEER
 Nieuwe bron met bestaande mode: voeg een record/kanaal toe in sources.json; geen workflowwijziging. source_id en organization_id zijn stabiel; gedeelde kanalen en nieuwsbrieven van dezelfde aanbieder gebruiken dezelfde organisatie-ID. Prioriteit P1/P2/P3 helpt de rangorde; check_frequency is every_edition (20 uur), twice_weekly (72 uur), weekly (168 uur) of manual. C en manual worden niet structureel opgehaald.
@@ -85,13 +54,7 @@ Bij geldige officiële feed staat de Google-zoekroute uit als reserve. Mislukte 
 Voorbeeldtests: python -m unittest discover -s tests -v
 Een proef gebeurt in een aparte lokale map. Websitebouw schrijft daar wel HTML; het verstuurt niets. Maak nieuwsbrief-HTML met de bestaande renderfuncties zonder main()/create_draft() aan te roepen. Een technische proef met bestaande content is geen nieuwe journalistiek geverifieerde editie.
 
-Rollback via Git-revert van de gerichte code/configuratie-commits. Revert van nieuws.json kan opnieuw een build/concept activeren. Een verzonden e-mail kan niet worden teruggedraaid.
-
-9. KWALITEIT METEN EN BIJSTUREN
-Bewaar per editie: aantal bronkanalen, fetchfouten, open/afgeronde dekkingscontroles, aantal volledig getriageerde kandidaten, gelezen kanshebbers/reserves en redenen voor latere vervangingen. Doel: 100% triage en afgeronde dekkingscontroles vóór eerste concept; nul vermijdbare vervangingen door gemiste beschikbare verhalen of al bekende voorkeuren. Feedback op smaak blijft mogelijk. Evalueer dit na de eerstvolgende drie edities, zonder extra automatische taak of verzending aan te maken.
-
-Technische opslaan-fouten zijn geen geslaagde bronrun. De kandidatenworkflow schrijft geen Python-bytecode: eerder meegecommitteerde caches mogen de Git-rebase niet blokkeren. Concurrerende kandidatenruns worden na elkaar uitgevoerd. Alleen de drie kandidaten-/bronstatusbestanden worden door deze workflow gecommit.
-
+Rollback via Git-revert van de gerichte code/configuratie-commits. Draai bij herstel de volledige editiecommit terug zodat homepage, archief en artikelen bij elkaar blijven. Een verzonden e-mail kan niet worden teruggedraaid.
 
 10. ARTIKELKWALITEIT EN KOPPEN (17 oktober 2026)
 Contentkwaliteit gaat vóór een korte leestijdbelofte. Schrijf zo veel als het verhaal nodig heeft voor context, bewijs, betekenis en leesplezier. Richtlengte voor een eigen artikel is 180-260 woorden. Dit is een richtlijn, geen quotum. Is een artikel korter, controleer dan bewust of er relevante context of nuance ontbreekt.

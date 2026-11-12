@@ -1,15 +1,12 @@
 # Positief nieuws: selectie is het kernproduct
 Lees vóór iedere editie REDACTIE.txt en selection_preferences.json. De huidige voorkeuren van de opdrachtgever in de chat gaan voor.
 
-- Bij het ChatGPT-commando `pn go`: lees `kandidaten.json` rechtstreeks uit deze GitHub-repository; vraag de eigenaar niet om het bestand te downloaden of te uploaden. Controleer eerst of de bestaande bronrun vandaag (Europe/Amsterdam) is gemaakt, `meta.collection_complete` waar is, `all_candidates` niet leeg is en de bronregister-hash nog klopt. Gebruik daarvoor dezelfde versheidsvoorwaarden als `.github/workflows/daily-news.yml`. Als de run vers en compleet is: hergebruik `kandidaten.json` zonder nieuwe verzameling. Als de controle niet slaagt: voer `python auto_news.py --force` uit in een geschikte werkomgeving, gebruik het nieuwe resultaat en meld een uitvoerbeperking eerlijk. Een actueel bestand vervangt de verdere dekkings- en broncontrole niet.
-- Controleer de complete `all_candidates`-lijst per bron. De twee top40-lijsten zijn alleen navigatie, nooit de redactionele grens.
-- Sluit alle dekkingsvragen af: lees bij zoekkanalen ook het oorspronkelijke nieuwsoverzicht, controleer mislukte/lege bronnen direct en bekijk de handmatige bewijsbronnen. Noteer datum, link en bevinding. Voeg nieuw gevonden verhalen met herkomst toe; onderzoek ook buitenlandse berichten over Nederland.
-- Maak vóór het eerste concept een selectiedossier met selection_check.py --prepare YYYY-MM-DD. Beoordeel alle kandidaten; lees de oorspronkelijke bronnen van iedere kanshebber. Vergelijk 6 NL en 6 wereld met ten minste 3 gelezen reserves per regio. Vul de rubriek en de vergelijking eerlijk in. Een vlag bewijst geen broncontrole.
-- Maak zelf de interne verbeterronde vóór je een eerste concept toont. Vraag niet aan de eigenaar om vanzelfsprekende ruis, routinecampagnes, prijzen zonder resultaat en herstel van eerdere fouten uit de eerste selectie te halen.
-- Vanaf 19 oktober 2026 horen selectie/YYYY-MM-DD.json en de bevroren selectie/YYYY-MM-DD-kandidaten.json bij de editie. selection_check.py moet klaar zijn vóór het eerste concept; editorial_check.py controleert de koppeling aan de definitieve inhoud/volgorde.
-- Geen zwak verhaal toevoegen om 6+6 of themaspreiding te vullen. Zoek verder. Kunnen onvoldoende goede verhalen of bronnen worden bevestigd, meld precies wat ontbreekt; nooit volledigheid of kwaliteit veinzen.
-- NL eerst, daarna wereld, per groep van sterk naar minder sterk. Inhoudelijke regio gaat voor taal of bronland.
-- Eerste concept blijft ongepubliceerd; live akkoord en nieuwsbriefverzending zijn afzonderlijke stappen. Geen wijzigingen aan nieuws.json om een procesproef te laten slagen.
+1. Gebruik het geüploade `kandidaten.json`. Kies uit `all_candidates` zes Nederlandse en zes internationale verhalen op nieuwswaarde, betrouwbaarheid, actualiteit, variatie en relevantie. Lees de oorspronkelijke bronnen en geef per keuze een korte motivatie.
+2. Verwerk vervangingen, eigen tips en volgorde. Behoud goedgekeurde onderdelen en wacht op selectieakkoord.
+3. Bouw de homepage, editiepagina en twaalf artikelpagina’s met de bestaande generator vanuit één editiebestand. Neem drie actualiteiten, de persoonlijke noot en de opgeslagen beeldkeuzes op. Lever een lokaal te openen preview. Bouw bij correcties opnieuw en gebruik de nieuwste preview.
+4. Pas na ‘Zet live’ voor die preview: leg het akkoord vast in het dossier, verifieer de lokale publicatiebestanden en publiceer die in één wijziging. Controleer vervolgens de veertien live pagina’s. De nieuwsbrief heeft een eigen proces.
+
+Gebruik voor websitepublicatie `publish_edition.py` volgens REDACTIE.txt. Combineer editie-inhoud nooit met workflow- of scriptwijzigingen. Laat de redactiecontrole meelopen en los normale technische fouten zelfstandig op.
 
 ## Analytics bij websitewerkzaamheden
 Lees vóór iedere browsercontrole `docs/analytics-testing.md`. Gebruik eerst een lokale preview. Open live pagina’s voor onderhoud uitsluitend met `?pn_internal=1` in de gekozen browser; verifieer de uitsluiting voordat je navigeert. Een nieuwe browser of nieuw profiel moet opnieuw worden uitgesloten. Voer geen echte tracking- of Buttondown-test uit zonder het gecontroleerde protocol.
