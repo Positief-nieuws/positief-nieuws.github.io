@@ -4543,6 +4543,60 @@
       "limitations": "Geen automatisch nieuwskanaal; controle per publicatie.",
       "register_ids": [],
       "channels": []
+    },
+    {
+      "source_id": "privy-council",
+      "organization_id": "privy-council",
+      "name": "Judicial Committee of the Privy Council",
+      "website": "https://www.jcpc.uk/cases/judgments/jcpc-2025-0095",
+      "category": "A",
+      "topics": [
+        "Mens"
+      ],
+      "geography": "int",
+      "source_type": "primary_evidence",
+      "reliability_notes": "Oorspronkelijke bron voor de editie van 12 november 2026.",
+      "priority": "P2",
+      "check_frequency": "manual",
+      "limitations": "Geen automatisch nieuwskanaal. Controle per publicatie.",
+      "register_ids": [],
+      "channels": []
+    },
+    {
+      "source_id": "transport-environment",
+      "organization_id": "transport-environment",
+      "name": "Transport & Environment",
+      "website": "https://www.transportenvironment.org/articles/oil-savings-from-evs-quadrupled-in-five-years-since-cop26-in-glasgow",
+      "category": "A",
+      "topics": [
+        "Energie & innovatie"
+      ],
+      "geography": "int",
+      "source_type": "primary_evidence",
+      "reliability_notes": "Oorspronkelijke bron voor de editie van 12 november 2026.",
+      "priority": "P2",
+      "check_frequency": "manual",
+      "limitations": "Geen automatisch nieuwskanaal. Controle per publicatie.",
+      "register_ids": [],
+      "channels": []
+    },
+    {
+      "source_id": "cu-boulder",
+      "organization_id": "cu-boulder",
+      "name": "CU Boulder",
+      "website": "https://www.colorado.edu/today/2026/11/10/glass-does-surprising-things-when-stretched-1-atom-wide-discovery-could-help-shrink",
+      "category": "A",
+      "topics": [
+        "Wetenschap"
+      ],
+      "geography": "int",
+      "source_type": "primary_evidence",
+      "reliability_notes": "Oorspronkelijke bron voor de editie van 12 november 2026.",
+      "priority": "P2",
+      "check_frequency": "manual",
+      "limitations": "Geen automatisch nieuwskanaal. Controle per publicatie.",
+      "register_ids": [],
+      "channels": []
     }
   ]
 }

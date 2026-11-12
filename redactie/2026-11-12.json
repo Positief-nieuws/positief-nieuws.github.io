@@ -1,0 +1,613 @@
+{
+  "schema_version": 1,
+  "edition_date": "2026-11-12",
+  "news_sha256": "5845bc0fdeecb79092da2528fd3be9cb51f57c986ae04345a25328a39400177a",
+  "approved": true,
+  "approved_by": "Tom de Haas",
+  "variation_exception_reason": "",
+  "articles": {
+    "nl:nederlandse-economie-groeit-co-uitstoot-daalt": {
+      "source_id": "scientias",
+      "organization_id": "scientias",
+      "article_url": "https://scientias.nl/nederlandse-economie-groeit-terwijl-co2-uitstoot-fors-daalt-maar-invoer-gooit-roet-in-het-eten/",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-11",
+      "event_date": "2024-12-31",
+      "checked_on": "2026-11-12",
+      "dates_checked": true,
+      "new_development": "Nieuwe analyse van de historische emissiereeksen.",
+      "older_exception_reason": "",
+      "topic_id": "nederlandse-economie-groeit-co-uitstoot-daalt",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://scientias.nl/nederlandse-economie-groeit-terwijl-co2-uitstoot-fors-daalt-maar-invoer-gooit-roet-in-het-eten/",
+        "claim": "Nederlandse economie groeit, CO₂-uitstoot daalt",
+        "support": "Tussen 2019 en 2024 groeide de Nederlandse economie terwijl de CO₂-uitstoot binnen de landsgrenzen daalde. Dat blijkt uit een analyse van Scientias op basis van onder meer het Global Carbon Budget en cijfers van de Wereldbank.",
+        "limitations": "Uitstoot inclusief handelsstromen is een raming.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/factory-building-industry-1140760/"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Titel en bron-URL gecontroleerd tegen het editiearchief.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Tussen 2019 en 2024 groeide de Nederlandse economie terwijl de CO₂-uitstoot binnen de landsgrenzen daalde. Dat blijkt uit een analyse van Scientias op basis van onder meer het Global Carbon Budget en cijfers van de Wereldbank.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "nl:meer-dan-tweeduizend-soorten-gevonden-in-n-leids-stadspark": {
+      "source_id": "nature-today",
+      "organization_id": "nature-today",
+      "article_url": "https://www.naturetoday.com/nl/nl/nature-reports/message/?msg=36025",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-09",
+      "event_date": "2025-12-31",
+      "checked_on": "2026-11-12",
+      "dates_checked": true,
+      "new_development": "De resultaten zijn in november gepresenteerd.",
+      "older_exception_reason": "",
+      "topic_id": "meer-dan-tweeduizend-soorten-gevonden-in-n-leids-stadspark",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.naturetoday.com/nl/nl/nature-reports/message/?msg=36025",
+        "claim": "Ruim tweeduizend soorten in één Leids stadspark, van planten en vogels tot korstmossen",
+        "support": "In het Leidse Singelpark zijn 2.058 soorten geregistreerd: van bloeiende planten, vogels en kevers tot korstmossen en kleine bodemdieren.",
+        "limitations": "Een inventarisatie bewijst geen trend.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/nature-dunes-landscape-netherlands-4961825/"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Titel en bron-URL gecontroleerd tegen het editiearchief.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "In het Leidse Singelpark zijn 2.058 soorten geregistreerd: van bloeiende planten, vogels en kevers tot korstmossen en kleine bodemdieren.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "nl:jouke-wecare": {
+      "source_id": "nh-nieuws",
+      "organization_id": "nh-nieuws",
+      "article_url": "https://www.nhnieuws.nl/nieuws/365304/jouke-24-is-student-en-mantelzorger-nu-helpt-hij-mede-studenten-in-amsterdam",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-11",
+      "event_date": "2025-05-22",
+      "checked_on": "2026-11-12",
+      "dates_checked": true,
+      "new_development": "Actueel interview met de medeoprichter op 11 november 2026 over de werking van een bestaand platform.",
+      "older_exception_reason": "",
+      "topic_id": "jouke-wecare",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.hva.nl/nieuws/2025/5/studenten-met-zorgtaken-krijgen-eigen-hva-platform-wecare",
+        "claim": "Portret: Jouke helpt studenten die ook mantelzorger zijn",
+        "support": "Jouke de Jong weet hoe het is om te studeren en tegelijk voor een ziek familielid te zorgen. In mei 2025 richtte hij met anderen WeCARE op aan de Hogeschool van Amsterdam. In een interview met NH Nieuws vertelt hij hoe het platform studerende mantelzorgers helpt.",
+        "limitations": "Geen effectmeting van het platform.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/braille-hands-keys-read-5498805/"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Titel en bron-URL gecontroleerd tegen het editiearchief.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Jouke de Jong weet uit eigen ervaring hoe het is om een studie te combineren met de zorg voor een ziek familielid. Aan de Hogeschool van Amsterdam richtte hij samen met anderen WeCARE op om studenten in dezelfde situatie te ondersteunen.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "nl:pensioenen-in-zorg-bouw-en-techniek-gaan-iets-omhoog": {
+      "source_id": "nos",
+      "organization_id": "nos",
+      "article_url": "https://nos.nl/artikel/2638801-pensioenen-zorg-bouw-metaal-en-techniek-beetje-omhoog",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-10",
+      "event_date": "2026-11-10",
+      "checked_on": "2026-11-12",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "pensioenen-in-zorg-bouw-en-techniek-gaan-iets-omhoog",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://nos.nl/artikel/2638801-pensioenen-zorg-bouw-metaal-en-techniek-beetje-omhoog",
+        "claim": "Pensioenen in zorg, bouw en techniek gaan iets omhoog",
+        "support": "Drie grote pensioenfondsen hebben bekendgemaakt hoeveel hun uitkeringen in 2027 stijgen. Bij Pensioenfonds Zorg en Welzijn gaat het om 0,75 procent. BpfBouw verhoogt met 0,8 procent en bij Pensioenfonds Metaal en Techniek komt er 0,82 procent bij.",
+        "limitations": "De verhoging geldt voor uitkeringen van deze fondsen.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/old-couple-retirement-walk-senior-5382053/"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Titel en bron-URL gecontroleerd tegen het editiearchief.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Drie grote pensioenfondsen hebben bekendgemaakt hoeveel hun uitkeringen in 2027 stijgen. Bij Pensioenfonds Zorg en Welzijn gaat het om 0,75 procent. BpfBouw verhoogt met 0,8 procent en bij Pensioenfonds Metaal en Techniek komt er 0,82 procent bij.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "nl:nieuwe-databank-helpt-risico-s-van-medicijnresten-inschatten": {
+      "source_id": "radboud-universiteit",
+      "organization_id": "radboud-universiteit",
+      "article_url": "https://www.ru.nl/onderzoek/onderzoeksnieuws/nieuwe-europese-database-voor-milieurisicos-van-medicijnresten-gelanceerd",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-05",
+      "event_date": "2026-11-05",
+      "checked_on": "2026-11-12",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "nieuwe-databank-helpt-risico-s-van-medicijnresten-inschatten",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.ru.nl/onderzoek/onderzoeksnieuws/nieuwe-europese-database-voor-milieurisicos-van-medicijnresten-gelanceerd",
+        "claim": "Nieuwe databank helpt risico’s van medicijnresten inschatten",
+        "support": "Gegevens over medicijnresten in het milieu zijn voortaan op één plek op te zoeken. Een internationaal team, met onderzoekers van de Radboud Universiteit, lanceerde daarvoor de gratis Europese databank PREMIER.",
+        "limitations": "Databank ondersteunt risicobeoordeling.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/lab-experiment-test-chemistry-3498584/"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Titel en bron-URL gecontroleerd tegen het editiearchief.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Gegevens over medicijnresten in het milieu zijn voortaan op één plek op te zoeken. Een internationaal team, met onderzoekers van de Radboud Universiteit, lanceerde daarvoor de gratis Europese databank PREMIER.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "nl:waterroofkever-onnerpolder": {
+      "source_id": "nature-today",
+      "organization_id": "nature-today",
+      "article_url": "https://www.naturetoday.com/intl/nl/nature-reports/message/?msg=36042",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-11",
+      "event_date": "2026-11-11",
+      "checked_on": "2026-11-12",
+      "dates_checked": true,
+      "new_development": "Openbaarmaking van de vondst door de onderzoekers; de exacte vangstdag is niet vermeld.",
+      "older_exception_reason": "",
+      "topic_id": "waterroofkever-onnerpolder",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.naturetoday.com/intl/nl/nature-reports/message/?msg=36042",
+        "claim": "Gestreepte waterroofkever na vijftig jaar teruggevonden in Groningen",
+        "support": "In de Onnerpolder bij het Zuidlaardermeer hebben onderzoekers de gestreepte waterroofkever gevonden. De beschermde soort was sinds 1976 niet meer waargenomen in de provincie Groningen.",
+        "limitations": "De omvang van de populatie is nog onbekend.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/grass-marsh-wetland-environment-5900178/"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Titel en bron-URL gecontroleerd tegen het editiearchief.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "In de Onnerpolder bij het Zuidlaardermeer hebben onderzoekers de gestreepte waterroofkever gevonden. De beschermde soort was sinds 1976 niet meer waargenomen in de provincie Groningen.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "int:trinidad-tobago-uitspraak": {
+      "source_id": "privy-council",
+      "organization_id": "privy-council",
+      "article_url": "https://www.jcpc.uk/cases/judgments/jcpc-2025-0095",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-10",
+      "event_date": "2026-11-10",
+      "checked_on": "2026-11-12",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "trinidad-tobago-uitspraak",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.jcpc.uk/cases/judgments/jcpc-2025-0095",
+        "claim": "Hoogste beroepsrechter schrapt strafbaarstelling van seks tussen mannen in Trinidad en Tobago",
+        "support": "De hoogste beroepsrechter voor Trinidad en Tobago heeft geoordeeld dat de wet die consensuele seks tussen volwassen mannen strafbaar stelde in strijd is met de grondwet. Daarmee kreeg Jason Jones na jaren procederen gelijk.",
+        "limitations": "Uitspraak betreft vrijwillige handelingen tussen volwassenen.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/flag-pride-rainbow-symbol-lesbian-4552833/"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Titel en bron-URL gecontroleerd tegen het editiearchief.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "De hoogste beroepsrechter voor Trinidad en Tobago heeft geoordeeld dat de wet die consensuele seks tussen volwassen mannen strafbaar stelde in strijd is met de grondwet. Daarmee kreeg Jason Jones na jaren procederen gelijk.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "int:elektrische-auto-s-besparen-naar-schatting-1-2-miljoen-vaten-olie-per-dag": {
+      "source_id": "transport-environment",
+      "organization_id": "transport-environment",
+      "article_url": "https://www.transportenvironment.org/articles/oil-savings-from-evs-quadrupled-in-five-years-since-cop26-in-glasgow",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-09",
+      "event_date": "2026-11-09",
+      "checked_on": "2026-11-12",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "elektrische-auto-s-besparen-naar-schatting-1-2-miljoen-vaten-olie-per-dag",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.transportenvironment.org/articles/oil-savings-from-evs-quadrupled-in-five-years-since-cop26-in-glasgow",
+        "claim": "Elektrische auto’s besparen naar schatting 1,2 miljoen vaten olie per dag",
+        "support": "Volledig elektrische auto’s sparen wereldwijd naar schatting 1,2 miljoen vaten olie per dag uit. In 2021 was dat ongeveer 215.000 vaten per dag, berekent Transport & Environment. Het gaat om een schatting van vermeden olieverbruik.",
+        "limitations": "Dit is een raming van vermeden olieverbruik.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/car-tesla-model-3-electric-car-8607713/"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Titel en bron-URL gecontroleerd tegen het editiearchief.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Volledig elektrische auto’s sparen wereldwijd naar schatting 1,2 miljoen vaten olie per dag uit. In 2021 was dat ongeveer 215.000 vaten per dag, berekent Transport & Environment. Het gaat om een schatting van vermeden olieverbruik.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "int:barbados-hiv-moeder-kind": {
+      "source_id": "who",
+      "organization_id": "who",
+      "article_url": "https://www.who.int/singapore/news/detail-global/30-10-2026-barbados-eliminates-mother-to-child-transmission-of-hiv",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-10-30",
+      "event_date": "2026-10-30",
+      "checked_on": "2026-11-12",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "WHO-certificering is het bevestigde resultaat; opgenomen als internationaal gezondheidsnieuws.",
+      "topic_id": "barbados-hiv-moeder-kind",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.who.int/singapore/news/detail-global/30-10-2026-barbados-eliminates-mother-to-child-transmission-of-hiv",
+        "claim": "Barbados haalt WHO-norm voor hiv-overdracht van moeder op kind",
+        "support": "De Wereldgezondheidsorganisatie heeft Barbados gecertificeerd voor het terugdringen van hiv-overdracht van moeder op kind. Volgens de WHO komt die overdracht zo weinig voor dat ze er niet langer als volksgezondheidsprobleem geldt.",
+        "limitations": "Eliminatie volgens de WHO-norm betekent geen garantie van nul gevallen.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/hands-infant-child-family-love-6831944/"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Titel en bron-URL gecontroleerd tegen het editiearchief.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "De Wereldgezondheidsorganisatie heeft Barbados gecertificeerd voor het terugdringen van hiv-overdracht van moeder op kind. Volgens de WHO komt die overdracht zo weinig voor dat ze er niet langer als volksgezondheidsprobleem geldt.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "int:sadurska-90-meter": {
+      "source_id": "srf",
+      "organization_id": "srf",
+      "article_url": "https://www.srf.ch/sport/mehr-sport/erneuter-weltrekord-apnoe-taucherin-sadurska-knackt-magische-90-m-marke",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-12",
+      "event_date": "2026-11-11",
+      "checked_on": "2026-11-12",
+      "dates_checked": true,
+      "new_development": "Wereldrecord op de Blue Element-wedstrijd, gemeld op 12 november.",
+      "older_exception_reason": "",
+      "topic_id": "sadurska-90-meter",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.srf.ch/sport/mehr-sport/erneuter-weltrekord-apnoe-taucherin-sadurska-knackt-magische-90-m-marke",
+        "claim": "Sadurska duikt zonder vinnen naar een wereldrecord van 90 meter",
+        "support": "De Oekraïense freediver Kateryna Sadurska is bij de Blue Element-wedstrijd voor de kust van Dominica naar negentig meter gedoken. Daarmee verbeterde ze haar eigen wereldrecord in de discipline Constant Weight No Fins met twee meter.",
+        "limitations": "Record in Constant Weight No Fins.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/blue-deep-diving-deep-ocean-dive-1840201/"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Titel en bron-URL gecontroleerd tegen het editiearchief.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "De Oekraïense freediver Kateryna Sadurska is bij de Blue Element-wedstrijd voor de kust van Dominica naar negentig meter gedoken. Daarmee verbeterde ze haar eigen wereldrecord in de discipline Constant Weight No Fins met twee meter.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "int:jordani-helpt-leerlingen-op-300-scholen-hun-achterstand-inhalen": {
+      "source_id": "unicef",
+      "organization_id": "unicef",
+      "article_url": "https://www.unicef.org/jordan/press-releases/ministry-education-and-unicef-launch-20-million-learning-recovery-programme-300",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-11",
+      "event_date": "2026-11-11",
+      "checked_on": "2026-11-12",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "jordani-helpt-leerlingen-op-300-scholen-hun-achterstand-inhalen",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.unicef.org/jordan/press-releases/ministry-education-and-unicef-launch-20-million-learning-recovery-programme-300",
+        "claim": "Jordanië start een programma tegen leerachterstand op 300 scholen",
+        "support": "Jordanië is met UNICEF en steun van de EU een onderwijsprogramma gestart voor 300 scholen, met aandacht voor lezen, rekenen en begeleiding.",
+        "limitations": "Bereik is beoogd, leerresultaten zijn nog niet bekend.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/children-win-success-video-game-593313/"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Titel en bron-URL gecontroleerd tegen het editiearchief.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Jordanië is met UNICEF en steun van de EU een onderwijsprogramma gestart voor 300 scholen, met aandacht voor lezen, rekenen en begeleiding.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "int:glas-geleidt-warmte-op-atomaire-schaal": {
+      "source_id": "cu-boulder",
+      "organization_id": "cu-boulder",
+      "article_url": "https://www.colorado.edu/today/2026/11/10/glass-does-surprising-things-when-stretched-1-atom-wide-discovery-could-help-shrink",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-10",
+      "event_date": "2026-11-10",
+      "checked_on": "2026-11-12",
+      "dates_checked": true,
+      "new_development": "Publicatie van de onderzoeksbevindingen.",
+      "older_exception_reason": "",
+      "topic_id": "glas-geleidt-warmte-op-atomaire-schaal",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.colorado.edu/today/2026/11/10/glass-does-surprising-things-when-stretched-1-atom-wide-discovery-could-help-shrink",
+        "claim": "Glasdraad van één atoom breed geleidt verrassend goed warmte",
+        "support": "Glas wordt vaak gebruikt om warmte tegen te houden. Op atomaire schaal gedraagt het zich verrassend anders. Een internationaal onderzoeksteam mat hoe warmte door een glascontact stroomde terwijl dat steeds smaller werd. Zelfs toen het contact nog maar één atoom breed was, ging er efficiënt warmte doorheen.",
+        "limitations": "Laboratoriummeting aan een glascontact van één atoom breed; toepassing in chips is nog niet aangetoond.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "existing_licensed",
+        "image_evidence": "https://pixabay.com/photos/nucleus-blue-abstract-artwork-99945/"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Titel en bron-URL gecontroleerd tegen het editiearchief.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Glas wordt vaak gebruikt om warmte tegen te houden. Op atomaire schaal gedraagt het zich verrassend anders. Een internationaal onderzoeksteam mat hoe warmte door een glascontact stroomde terwijl dat steeds smaller werd. Zelfs toen het contact nog maar één atoom breed was, ging er efficiënt warmte doorheen.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "headlines:0": {
+      "source_id": "nos",
+      "organization_id": "nos",
+      "article_url": "https://nos.nl/artikel/2639001-d66-en-cda-sluiten-deal-met-pro-en-volt-rond-belastingplan-nog-geen-reactie-vvd",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-11",
+      "event_date": "2026-11-11",
+      "checked_on": "2026-11-12",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "2026-11-12-actualiteit-1",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://nos.nl/artikel/2639001-d66-en-cda-sluiten-deal-met-pro-en-volt-rond-belastingplan-nog-geen-reactie-vvd",
+        "claim": "Spanning in coalitie over Belastingplan 2027",
+        "support": "Spanning in coalitie over Belastingplan 2027",
+        "limitations": "De reactie van de VVD was nog onbekend.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used",
+        "image_evidence": ""
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Titel en bron-URL gecontroleerd tegen het editiearchief.",
+        "new_fact": ""
+      }
+    },
+    "headlines:1": {
+      "source_id": "nos",
+      "organization_id": "nos",
+      "article_url": "https://nos.nl/artikel/2638975-rusland-en-oekraine-bestoken-elkaar-terwijl-in-abu-dhabi-wordt-onderhandeld",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-11",
+      "event_date": "2026-11-11",
+      "checked_on": "2026-11-12",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "2026-11-12-actualiteit-2",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://nos.nl/artikel/2638975-rusland-en-oekraine-bestoken-elkaar-terwijl-in-abu-dhabi-wordt-onderhandeld",
+        "claim": "Rusland en Oekraïne voeren aanvallen uit terwijl overleg doorgaat",
+        "support": "Rusland en Oekraïne voeren aanvallen uit terwijl overleg doorgaat",
+        "limitations": "Overleg en aanvallen zijn afzonderlijk gemeld.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used",
+        "image_evidence": ""
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Titel en bron-URL gecontroleerd tegen het editiearchief.",
+        "new_fact": ""
+      }
+    },
+    "headlines:2": {
+      "source_id": "nos",
+      "organization_id": "nos",
+      "article_url": "https://nos.nl/artikel/2638990-staatssecretaris-na-u-bocht-moerdijk-taak-om-het-vertrouwen-terug-te-winnen",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-11",
+      "event_date": "2026-11-10",
+      "checked_on": "2026-11-12",
+      "dates_checked": true,
+      "new_development": "De staatssecretaris lichtte de aangepaste plannen toe.",
+      "older_exception_reason": "",
+      "topic_id": "2026-11-12-actualiteit-3",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://nos.nl/artikel/2638990-staatssecretaris-na-u-bocht-moerdijk-taak-om-het-vertrouwen-terug-te-winnen",
+        "claim": "Moerdijk kan blijven door kleiner uitbreidingsplan voor haven",
+        "support": "Moerdijk kan blijven door kleiner uitbreidingsplan voor haven",
+        "limitations": "Het vervolg hangt af van uitwerking en leefbaarheid.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used",
+        "image_evidence": ""
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Titel en bron-URL gecontroleerd tegen het editiearchief.",
+        "new_fact": ""
+      }
+    }
+  }
+}

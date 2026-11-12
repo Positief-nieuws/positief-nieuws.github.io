@@ -1,422 +1,230 @@
 {
   "meta": {
-    "edition_date": "2026-11-09",
-    "status": "published",
-    "publication_authorized": true,
-    "selection_confirmed_by": "Tom de Haas",
-    "selection_confirmed_on": "2026-11-09",
-    "preview_revision": "2026-11-09-concept-2",
-    "email_preheader": "Een landgoed wordt tijdelijk thuis, stekjes verbinden buren en Frans haalt op zijn 87ste WK-zilver.",
-    "personal_note": null,
-    "editorial_order": [
-      {
-        "section": "nl",
-        "article_slug": "landgoed-zeist-tijdelijk-thuis",
-        "rank": 1
-      },
-      {
-        "section": "nl",
-        "article_slug": "gratis-planten-verbindt-buren",
-        "rank": 2
-      },
-      {
-        "section": "nl",
-        "article_slug": "ready2work-jongeren-leerwerkplekken",
-        "rank": 3
-      },
-      {
-        "section": "nl",
-        "article_slug": "roze-camper-potjes-check",
-        "rank": 4
-      },
-      {
-        "section": "nl",
-        "article_slug": "frans-87-wk-zilver",
-        "rank": 5
-      },
-      {
-        "section": "nl",
-        "article_slug": "glow-gratis-lichtkunst",
-        "rank": 6
-      },
-      {
-        "section": "int",
-        "article_slug": "karl-bushby-na-28-jaar-thuis",
-        "rank": 1
-      },
-      {
-        "section": "int",
-        "article_slug": "engeland-infrastructuur-meer-natuur",
-        "rank": 2
-      },
-      {
-        "section": "int",
-        "article_slug": "dna-schakelaar-borstkanker",
-        "rank": 3
-      },
-      {
-        "section": "int",
-        "article_slug": "pip-glimlach-reist-wereld",
-        "rank": 4
-      },
-      {
-        "section": "int",
-        "article_slug": "honden-sporen-invasieve-planten",
-        "rank": 5
-      },
-      {
-        "section": "int",
-        "article_slug": "bloeddruk-lager-na-behandeling",
-        "rank": 6
-      }
-    ],
-    "publication_authorized_by": "Tom de Haas",
-    "publication_authorized_on": "2026-11-09",
-    "publication_authorization_text": "mag live"
+    "edition_date": "2026-11-12",
+    "personal_note": {
+      "title": "Blijkbaar ben ik niet de enige",
+      "text": "Toen ik met Positief Nieuws begon, vroeg ik me af: zijn er meer mensen die behoefte hebben aan nieuws dat óók laat zien wat er goed gaat?\n\nInmiddels trekt de website zo'n 2.000 bezoekers per maand, worden er maandelijks ruim 4.000 pagina's bekeken en naderen we de 100 nieuwsbriefinschrijvers.\n\nDat doet me oprecht goed. Het bevestigt mijn gevoel dat er behoefte is aan meer balans in het nieuws.\n\nEn we zijn nog maar net begonnen!\n\nHelp je mee Positief Nieuws te verspreiden? Stuur de nieuwsbrief door of deel de website met iemand die ook wat meer goed nieuws kan gebruiken. Samen maken we de beweging groter.\n\nDank je wel dat je erbij bent!",
+      "portrait_url": "/images/redactie/tom-preview.svg"
+    }
   },
   "nl": [
     {
-      "article_slug": "landgoed-zeist-tijdelijk-thuis",
-      "candidate_id": "952bbbf104f5",
-      "title": "Een landgoed wordt tijdelijk thuis voor honderd woningzoekenden",
-      "email_title": "Een landgoed wordt tijdelijk thuis voor honderd woningzoekenden",
-      "title_alternative": "Zeist biedt honderd woningzoekenden tijdelijk onderdak op Buitenplaats Veldheim",
-      "teaser": "Studenten, mensen na een scheiding en vluchtelingen krijgen minstens 2,5 jaar onderdak op Buitenplaats Veldheim.",
-      "category": "Mens",
-      "url": "https://nos.nl/artikel/2638104-honderd-woningzoekenden-kunnen-tijdelijk-terecht-op-landgoed-in-zeist",
-      "primary_url": "https://nos.nl/artikel/2638104-honderd-woningzoekenden-kunnen-tijdelijk-terecht-op-landgoed-in-zeist",
-      "source": "NOS / RTV Utrecht",
-      "source_id": "nos",
-      "published": "2026-11-05",
-      "event_date": "2026-11-05",
+      "title": "Nederlandse economie groeit, CO₂-uitstoot daalt",
+      "source": "Scientias",
+      "url": "https://scientias.nl/nederlandse-economie-groeit-terwijl-co2-uitstoot-fors-daalt-maar-invoer-gooit-roet-in-het-eten/",
+      "category": "Natuur & klimaat",
+      "article_slug": "nederlandse-economie-groeit-co-uitstoot-daalt",
       "article_body": [
-        "Een dak boven je hoofd kan niet altijd wachten op de bouw van nieuwe woningen. Daarom huurt de gemeente Zeist tijdelijk de gebouwen op Buitenplaats Veldheim. Honderd mensen die dringend woonruimte nodig hebben, kunnen daar binnenkort terecht.",
-        "Het gaat om een gemengde groep: studenten, Oekraïense vluchtelingen, statushouders en mensen die bijvoorbeeld na een scheiding snel een andere plek nodig hebben. Het landgoed wordt geen COA-opvanglocatie. De gemeente wil met de tijdelijke verhuur verschillende woningzoekenden helpen die moeilijk iets passends vinden.",
-        "De bewoners kunnen er in ieder geval 2,5 jaar blijven. Daarna is mogelijk nog een jaar verlenging beschikbaar. Op langere termijn wil eigenaar Aalberts Bouw het terrein ontwikkelen tot een permanente woonlocatie met ongeveer vijftig koopwoningen. Die plannen en de benodigde vergunningen zijn nog niet rond.",
-        "De tijdelijke verhuur benut de tijd die de voorbereiding van die nieuwbouw kost. Daarmee is de woningnood in Zeist niet opgelost en ontstaat voor deze bewoners geen blijvende woning. Wel krijgen honderd mensen straks onderdak terwijl de plannen voor het landgoed verder worden uitgewerkt."
+        "Tussen 2019 en 2024 groeide de Nederlandse economie terwijl de CO₂-uitstoot binnen de landsgrenzen daalde. Dat blijkt uit een analyse van Scientias op basis van onder meer het Global Carbon Budget en cijfers van de Wereldbank.",
+        "De uitkomst hangt af van wat je meet. Kijk je naar de uitstoot op Nederlands grondgebied, dan komt de daling uit op ongeveer 25 procent. Reken je ook de uitstoot mee die samenhangt met wat Nederland invoert en uitvoert, dan is de daling volgens de analyse ongeveer 6 procent.",
+        "Een voorbeeld is een apparaat dat hier wordt verkocht, maar elders wordt geproduceerd. In een territoriale telling telt de uitstoot van de fabriek mee in het productieland. In een telling op basis van consumptie schuift die uitstoot mee met het apparaat.",
+        "De cijfers laten zien dat economische groei en een dalende uitstoot in dezelfde periode kunnen samengaan. Tegelijk laat het verschil tussen de meetmethoden zien waarom het ertoe doet waar de producten die we gebruiken worden gemaakt."
       ],
-      "image_query": "id:789946",
-      "image_alt": "Illustratief beeld van een Nederlands landhuis; dit is niet Buitenplaats Veldheim.",
-      "region": "nl",
-      "regional_rank": 1,
-      "editorial_rank": 1
+      "teaser": "Tussen 2019 en 2024 groeide de Nederlandse economie terwijl de CO₂-uitstoot binnen de landsgrenzen daalde. Dat blijkt uit een analyse van Scientias op basis van onder meer het Global Carbon Budget en cijfers van de Wereldbank.",
+      "image_query": "preview:nederlandse-economie-groeit-co-uitstoot-daalt",
+      "image_alt": "Illustratief beeld bij Nederlandse economie groeit, CO₂-uitstoot daalt"
     },
     {
-      "article_slug": "gratis-planten-verbindt-buren",
-      "candidate_id": "manual-gratis-planten-20261109",
-      "title": "Een plant over? Maak er een buur blij mee",
-      "email_title": "Een plant over? Maak er een buur blij mee",
-      "title_alternative": "Nieuw platform brengt gratis planten en vaste deelplekken samen",
-      "teaser": "Op Gratisplanten.nl vind je planten, stekjes en zaden om zelf op te halen. Ook 78 vaste deelplekken staan op de kaart.",
-      "category": "Mens",
-      "url": "https://gratisplanten.nl/",
-      "primary_url": "https://gratisplanten.nl/",
-      "source": "Gratis planten",
-      "source_id": "gratis-planten",
-      "published": "2026-11-09",
-      "event_date": null,
+      "title": "Ruim tweeduizend soorten in één Leids stadspark, van planten en vogels tot korstmossen",
+      "source": "Nature Today",
+      "url": "https://www.naturetoday.com/nl/nl/nature-reports/message/?msg=36025",
+      "category": "Natuur & klimaat",
+      "article_slug": "meer-dan-tweeduizend-soorten-gevonden-in-n-leids-stadspark",
       "article_body": [
-        "Een plant die bij jou te groot wordt, kan ergens anders precies op zijn plek zijn. Gratisplanten.nl brengt mensen samen die planten, stekjes of zaden willen weggeven of ophalen. Je zoekt op plaats of postcode, maakt contact en spreekt af om het groen zelf op te halen.",
-        "Initiatiefnemer Joris Paardekooper Overman lanceerde de website eind oktober. Naast losse aanbiedingen heeft de site een kaart met 78 bestaande deelplekken in Nederland en België: 61 zadenbibliotheken, elf plantenasiels en zes plantenbiebs. Wie liever bij een vaste plek aanklopt, kan daar dus ook beginnen.",
-        "Er wordt niets verkocht of verstuurd. Het ophalen zorgt voor een gelegenheid om iemand in de buurt te ontmoeten. De website biedt daarnaast uitleg over stekken, scheuren en zaaien, en een agenda met activiteiten. Bij vaste deelplekken is het verstandig vooraf de openingstijden te controleren.",
-        "Het platform is nog jong. Hoeveel planten via de site al een nieuwe eigenaar vonden, is niet bekendgemaakt. De concrete opbrengst tot nu toe is een toegankelijke verzamelplek voor gratis groen en bestaande initiatieven. Wie zelf een plant over heeft, kan gratis een account aanmaken."
+        "In het Leidse Singelpark zijn 2.058 soorten geregistreerd: van bloeiende planten, vogels en kevers tot korstmossen en kleine bodemdieren. Daaronder waren 524 soorten bloeiende planten, 81 vogelsoorten en 250 soorten kevers. Vijf soorten waren nog niet eerder in Nederland vastgesteld.",
+        "De uitkomst is te vinden in het waarnemingenproject Expeditie Singelpark. Door op dezelfde plek gericht naar verschillende groepen organismen te zoeken, komt ook leven in beeld dat bij een gewone wandeling makkelijk over het hoofd wordt gezien.",
+        "Ook voor het beheer van het park is zo’n inventarisatie een bruikbaar startpunt. Je weet beter waar je later opnieuw moet kijken om veranderingen te kunnen volgen.",
+        "De inventarisatie liep van 2023 tot en met 2025. Stichting Taxon Foundation bracht buurtbewoners en specialisten samen. Juist die combinatie maakte het mogelijk om ook soorten op naam te brengen die je zonder specialistische kennis gemakkelijk over het hoofd ziet.",
+        "De telling geeft Leiden een overzicht van wat er in dit stadspark is waargenomen. Voor de vraag of soorten er voor- of achteruitgaan, zijn vergelijkbare tellingen op verschillende momenten nodig. De inventarisatie geeft daar een uitgangspunt voor en laat zien hoeveel er in een stadspark te ontdekken valt."
       ],
-      "image_query": "id:6222554",
-      "image_alt": "Illustratieve foto van potplanten; geen aanbod of deelnemers van Gratis planten.",
-      "region": "nl",
-      "regional_rank": 2,
-      "editorial_rank": 2
+      "teaser": "In het Leidse Singelpark zijn 2.058 soorten geregistreerd: van bloeiende planten, vogels en kevers tot korstmossen en kleine bodemdieren.",
+      "image_query": "preview:meer-dan-tweeduizend-soorten-gevonden-in-n-leids-stadspark",
+      "image_alt": "Illustratief beeld van natuur in een stadspark"
     },
     {
-      "article_slug": "ready2work-jongeren-leerwerkplekken",
-      "candidate_id": "72499998906e",
-      "title": "Van thuiszitten naar een leerwerkplek bij de buurtondernemer",
-      "email_title": "Van thuiszitten naar een leerwerkplek bij de buurtondernemer",
-      "title_alternative": "Ready2Work biedt jongeren in Almere Haven dertig leerwerkplekken",
-      "teaser": "In Almere Haven zijn dertig plekken beschikbaar waar jongeren werkervaring, begeleiding en een nieuwe richting kunnen vinden.",
+      "article_slug": "jouke-wecare",
+      "title": "Portret: Jouke helpt studenten die ook mantelzorger zijn",
+      "source": "NH Nieuws",
+      "url": "https://www.nhnieuws.nl/nieuws/365304/jouke-24-is-student-en-mantelzorger-nu-helpt-hij-mede-studenten-in-amsterdam",
       "category": "Mens",
-      "url": "https://www.omroepflevoland.nl/gemist/radio/530136/thuiszitten-of-meedoen:-ready2work-helpt-jongeren-richting-werk?id=530136",
-      "primary_url": "https://www.omroepflevoland.nl/gemist/radio/530136/thuiszitten-of-meedoen:-ready2work-helpt-jongeren-richting-werk?id=530136",
-      "source": "Omroep Flevoland",
-      "source_id": "omroep-flevoland",
-      "published": "2026-11-05",
-      "event_date": "2026-11-05",
       "article_body": [
-        "Een winkel, een garage of een organisatie in zorg en welzijn: voor jongeren in Almere Haven kan een werkplek dichtbij huis het begin van een volgende stap zijn. Ready2Work helpt jongeren tot 27 jaar die zonder werk thuiszitten aan praktijkervaring en begeleiding.",
-        "Het project van welzijnsorganisatie De Schoor werkt samen met ondernemers uit het Havenverbond. Er zijn inmiddels dertig leerwerkplekken beschikbaar. Zes jongeren doen mee. Het traject richt zich voorlopig op Almere Haven, waar volgens eerder onderzoek ongeveer 270 jongeren geen werk of opleiding hebben.",
-        "Deelnemers oefenen op de werkvloer en krijgen daarnaast sollicitatietraining en ondersteuning bij sociale vaardigheden. Ze brengen ook een dag door op het ROC. Het programma duurt een jaar, gevolgd door een half jaar nazorg. Jongeren die een uitkering hebben, behouden die tijdens het traject.",
-        "Of het programma tot blijvend werk of een opleiding leidt, moet nog blijken. Wel zijn de eerste deelnemers begonnen en hebben lokale ondernemers ruimte gemaakt om te leren. Geïnteresseerden kunnen bij Ready2Work terecht voor een vrijblijvend kennismakingsgesprek, om te bekijken of het traject bij hen past."
+        "Jouke de Jong weet hoe het is om te studeren en tegelijk voor een ziek familielid te zorgen. In mei 2025 richtte hij met anderen WeCARE op aan de Hogeschool van Amsterdam. In een interview met NH Nieuws vertelt hij hoe het platform studerende mantelzorgers helpt.",
+        "Studenten kunnen bij het platform in gesprek over hun situatie. WeCARE organiseert ook bijeenkomsten waar ze ervaringen kunnen delen met mensen die weten hoe het voelt om college, opdrachten en zorg thuis te combineren.",
+        "Een student kan bijvoorbeeld naar een bijeenkomst komen om te horen hoe anderen afspraken over zorgtaken combineren met een collegerooster. Bij WeCARE is er ook ruimte voor een individueel gesprek over de eigen situatie.",
+        "Het platform verzamelt daarnaast kennis over de ondersteuning van studerende mantelzorgers, binnen en buiten de hogeschool. Daarmee krijgt een groep die op school vaak weinig zichtbaar is een eigen aanspreekpunt."
       ],
-      "image_query": "id:2247391",
-      "image_alt": "Illustratief beeld van een groepsbijeenkomst; geen deelnemers aan Ready2Work.",
-      "region": "nl",
-      "regional_rank": 3,
-      "editorial_rank": 3
+      "teaser": "Jouke de Jong weet hoe het is om te studeren en tegelijk voor een ziek familielid te zorgen. In mei 2025 richtte hij met anderen WeCARE op aan de Hogeschool van Amsterdam. In een interview met NH Nieuws vertelt hij hoe het platform studerende mantelzorgers helpt.",
+      "image_query": "id:5498805",
+      "image_alt": "Illustratief beeld bij studeren"
     },
     {
-      "article_slug": "roze-camper-potjes-check",
-      "candidate_id": "e78110afd492",
-      "title": "Een roze camper helpt je ontdekken welk geld je laat liggen",
-      "email_title": "Een roze camper helpt je ontdekken welk geld je laat liggen",
-      "title_alternative": "Valkenswaard start gratis inloopchecks voor toeslagen en regelingen",
-      "teaser": "Vanaf vandaag kunnen inwoners van Valkenswaard zonder afspraak laten uitzoeken welke toeslagen en vergoedingen bij hen passen.",
+      "title": "Pensioenen in zorg, bouw en techniek gaan iets omhoog",
+      "source": "NOS",
+      "url": "https://nos.nl/artikel/2638801-pensioenen-zorg-bouw-metaal-en-techniek-beetje-omhoog",
       "category": "Economie",
-      "url": "https://www.valkenswaard.nl/laat-geen-geld-liggen-kom-langs-voor-de-gratis-potjes-check",
-      "primary_url": "https://www.valkenswaard.nl/laat-geen-geld-liggen-kom-langs-voor-de-gratis-potjes-check",
-      "source": "Gemeente Valkenswaard",
-      "source_id": "gemeente-valkenswaard",
-      "published": "2026-11-05",
-      "event_date": "2026-11-09",
+      "article_slug": "pensioenen-in-zorg-bouw-en-techniek-gaan-iets-omhoog",
       "article_body": [
-        "Je kunt recht hebben op een vergoeding zonder dat je weet dat die bestaat. Om inwoners daarbij te helpen, komt in Valkenswaard een opvallende roze camper langs. Vanaf 9 november kunnen mensen er gratis en zonder afspraak een potjes-check laten doen.",
-        "Een medewerker kijkt samen met de bezoeker welke toeslagen, vergoedingen en andere regelingen mogelijk passen. Je hoeft vooraf niet te weten waar je recht op hebt. De check is vrijblijvend. De gemeente werkt hiervoor samen met maatschappelijke organisaties en andere partners, als onderdeel van de campagne Laat geen geld liggen.",
-        "Wie niet naar de camper kan of liever zelf kijkt, kan de check ook online doen. Daarnaast verwijst de gemeente naar de VoorzieningenWijzer voor inzicht in landelijke en lokale regelingen. Op de campagnewebsite staan de precieze locaties en tijden van de camper.",
-        "De actie verlaagt de drempel om hulp te vragen bij een ingewikkeld stelsel. Een check levert niet automatisch extra geld op: dat hangt af van de persoonlijke situatie en de voorwaarden van een regeling. Het praktische voordeel is dat inwoners dichtbij huis kunnen uitzoeken wat voor hen mogelijk is."
+        "Drie grote pensioenfondsen hebben bekendgemaakt hoeveel hun uitkeringen in 2027 stijgen. Bij Pensioenfonds Zorg en Welzijn gaat het om 0,75 procent. BpfBouw verhoogt met 0,8 procent en bij Pensioenfonds Metaal en Techniek komt er 0,82 procent bij.",
+        "De bedragen worden overzichtelijker met een rekenvoorbeeld. Op een bruto pensioenuitkering van 1.000 euro per maand zou een verhoging van 0,8 procent neerkomen op 8 euro bruto per maand extra. Wie meerdere pensioenuitkeringen ontvangt, moet per uitkering kijken welk fonds die betaalt en welke verhoging daarbij hoort.",
+        "Wie wil uitrekenen wat er voor hem of haar verandert, kan het percentage toepassen op de bruto uitkering van het betreffende fonds. Het netto bedrag volgt uit de persoonlijke situatie.",
+        "De drie fondsen stapten begin 2026 over op het nieuwe pensioenstelsel. Hun bekendmaking gaat over de uitkeringen vanaf 2027. Daardoor is voor gepensioneerden nu duidelijk welk percentage zij bij de berekening voor het komende jaar kunnen gebruiken.",
+        "De bekendmaking gaat over gepensioneerden bij deze drie fondsen. De stijging zegt op zichzelf weinig over hoeveel mensen er straks van kunnen kopen. Dat hangt ook af van prijsstijgingen en van wat er netto van de verhoging overblijft."
       ],
-      "image_query": "id:2180330",
-      "image_alt": "Illustratief beeld van euromunten; niet de camper of een resultaat van de potjes-check.",
-      "region": "nl",
-      "regional_rank": 4,
-      "editorial_rank": 4
+      "teaser": "Drie grote pensioenfondsen hebben bekendgemaakt hoeveel hun uitkeringen in 2027 stijgen. Bij Pensioenfonds Zorg en Welzijn gaat het om 0,75 procent. BpfBouw verhoogt met 0,8 procent en bij Pensioenfonds Metaal en Techniek komt er 0,82 procent bij.",
+      "image_query": "id:5382053",
+      "image_alt": "Illustratieve foto van een ouder stel dat samen wandelt"
     },
     {
-      "article_slug": "frans-87-wk-zilver",
-      "candidate_id": "3bcc9d53cb47",
-      "title": "Frans is 87, begon twee jaar geleden en pakt nu WK-zilver",
-      "email_title": "Frans is 87, begon twee jaar geleden en pakt nu WK-zilver",
-      "title_alternative": "Frans van Beers wint zilver op WK powerliften na heupblessure",
-      "teaser": "Kort voor het WK kon de Boxtelaar amper lopen. In Houston stond hij toch op het podium, met zijn gevoel voor humor intact.",
-      "category": "Sport",
-      "url": "https://www.omroepbrabant.nl/nieuws/6033995/87-jarige-frans-pakt-wk-zilver-na-zware-heupblessure-ik-kon-amper-lopen",
-      "primary_url": "https://www.omroepbrabant.nl/nieuws/6033995/87-jarige-frans-pakt-wk-zilver-na-zware-heupblessure-ik-kon-amper-lopen",
-      "source": "Omroep Brabant",
-      "source_id": "omroep-brabant",
-      "published": "2026-11-08",
-      "event_date": "2026-11-06",
-      "article_body": [
-        "Drie weken voor het WK powerliften in Houston kon Frans van Beers uit Boxtel door een heupblessure amper lopen. Trainen lukte wekenlang niet. Toch verscheen de 87-jarige aan de start en keerde hij terug met een zilveren medaille.",
-        "Een wereldtitel zat er dit keer niet in. Daar kan Frans om lachen: de winnaar was tachtig, dus in zijn ogen nog een jonkie. Dat hij na de moeizame voorbereiding überhaupt kon meedoen, voelt voor hem al als een overwinning.",
-        "Frans begon pas twee jaar geleden met de sport. Zijn vrouw spoorde hem aan om naar de sportschool te gaan. Een trainer zag mogelijkheden, waarna zijn sportieve loopbaan snel op gang kwam. Vorig jaar behaalde hij tijdens het WK in Zuid-Korea drie wereldtitels en verbeterde hij twee wereldrecords.",
-        "De blessure dwong hem ditmaal zijn verwachtingen bij te stellen. Volgens Frans bleek de pijn samen te hangen met pezen en spieren. Voor volgend jaar heeft hij alweer plannen: opnieuw meedoen en zichzelf verbeteren. Het zilver is voor hem vooral een geslaagde terugkeer na een periode waarin zelfs lopen moeilijk was."
-      ],
-      "image_query": "id:592899",
-      "image_alt": "Illustratief beeld van krachttrainingsmateriaal; Frans van Beers staat niet op deze foto.",
-      "region": "nl",
-      "regional_rank": 5,
-      "editorial_rank": 5
-    },
-    {
-      "article_slug": "glow-gratis-lichtkunst",
-      "candidate_id": "01936f08ce8f",
-      "title": "Even naar buiten: Eindhoven wordt een gratis museum van licht",
-      "email_title": "Even naar buiten: Eindhoven wordt een gratis museum van licht",
-      "title_alternative": "GLOW biedt van 7 tot en met 14 november gratis lichtkunst in de openbare ruimte",
-      "teaser": "Tijdens GLOW wandel je langs lichtkunst van kunstenaars, kinderen en buurtbewoners. Ook omliggende plaatsen doen mee.",
-      "category": "Cultuur",
-      "url": "https://gloweindhoven.nl/en/practical/",
-      "primary_url": "https://gloweindhoven.nl/en/practical/",
-      "source": "GLOW Eindhoven",
-      "source_id": "glow-eindhoven",
-      "published": null,
-      "event_date": "2026-11-07",
-      "article_body": [
-        "De novemberavond hoeft deze week niet bij de voordeur te eindigen. In Eindhoven loopt sinds zaterdag een route langs ongeveer dertig lichtkunstwerken. GLOW maakt van straten, pleinen en gebouwen tijdelijk een openluchtmuseum, waar iedereen gratis kan rondwandelen.",
-        "Het festival duurt tot en met 14 november. De editie heeft als thema CONNECT. Internationale en lokale kunstenaars werken mee, maar ook kinderen, studenten en bewoners hebben een rol in de projecten. Naast Eindhoven zijn er lichtkunstwerken in Helmond, Oirschot, Best, Veldhoven en Lieshout.",
-        "De route door het Eindhovense centrum is ongeveer vijf kilometer lang. De werken zijn daar dagelijks van 18.30 tot 23.00 uur te zien. In de andere deelnemende plaatsen eindigt het programma om 22.00 uur. Een online kaart helpt bezoekers hun route te kiezen.",
-        "De gewone kunstroute is vrij toegankelijk. Voor de aparte droneshow in het Philips Stadion is wel een ticket nodig, van twee euro per persoon. Wie alleen de gratis route wil lopen, kan die dus gewoon volgen. De organisatie adviseert vanwege de drukte met het openbaar vervoer of de fiets te komen."
-      ],
-      "image_query": "id:7750888",
-      "image_alt": "Illustratief beeld van een lichtinstallatie; dit kunstwerk is niet als onderdeel van GLOW geverifieerd.",
-      "region": "nl",
-      "regional_rank": 6,
-      "editorial_rank": 6
-    }
-  ],
-  "int": [
-    {
-      "article_slug": "karl-bushby-na-28-jaar-thuis",
-      "candidate_id": "74b6de3e6b8c",
-      "title": "Na 28 jaar onderweg staat Karl weer bij zijn moeder voor de deur",
-      "email_title": "Na 28 jaar onderweg staat Karl weer bij zijn moeder voor de deur",
-      "title_alternative": "Karl Bushby voltooit zijn reis op eigen kracht van Chili naar Hull",
-      "teaser": "In 1998 vertrok hij vanuit Chili. Vorige week bereikte Karl Bushby zijn ouderlijk huis in Hull, lopend en zwemmend over de wereld.",
-      "category": "Mens",
-      "url": "https://www.abc.net.au/news/2026-11-03/round-the-world-walk-karl-bushby/107338890",
-      "primary_url": "https://karlbushby.world/",
-      "source": "ABC / Reuters",
-      "source_id": "abc-australia",
-      "published": "2026-11-03",
-      "event_date": "2026-11-02",
-      "article_body": [
-        "De laatste kilometers eindigden bij een vertrouwde voordeur. Karl Bushby bereikte op 2 november zijn ouderlijk huis in Hull, 28 jaar nadat hij vanuit het zuiden van Chili aan een reis naar huis was begonnen. Zijn moeder stond hem op te wachten.",
-        "De Brit wilde de route op eigen kracht afleggen. Hij liep door de Amerika’s en stak het ijs tussen Alaska en Rusland over. Waar lopen niet mogelijk was, zwom hij, onder meer door de Kaspische Zee en uiteindelijk over het Kanaal.",
-        "Voor zijn vertrek dacht Bushby ongeveer tien jaar nodig te hebben. Het werden er veel meer door visumproblemen, geldgebrek, de pandemie en andere tegenslagen. Hij was niet al die tijd onafgebroken aan het wandelen: er gingen ook jaren zitten in wachten en het regelen van de volgende etappe.",
-        "Bij aankomst in Hull werd hij door honderden mensen begroet. Daarna liep hij verder naar zijn familie, onder wie zijn zoon en kleindochter. De thuiskomst rondde een uitzonderlijk lang project af, waarvoor hij onderweg steeds opnieuw afhankelijk was van hulp en gastvrijheid van anderen."
-      ],
-      "image_query": "id:1312226",
-      "image_alt": "Illustratief beeld van wandeluitrusting; dit zijn niet de spullen van Karl Bushby.",
-      "region": "int",
-      "regional_rank": 1,
-      "editorial_rank": 1
-    },
-    {
-      "article_slug": "engeland-infrastructuur-meer-natuur",
-      "candidate_id": "manual-bng-20261109",
-      "title": "Grote bouwprojecten in Engeland moeten ook natuurwinst opleveren",
-      "email_title": "Grote bouwprojecten in Engeland moeten ook natuurwinst opleveren",
-      "title_alternative": "Engeland breidt verplichte biodiversiteitswinst uit naar grote infrastructuur",
-      "teaser": "Nieuwe aanvragen voor nationaal belangrijke infrastructuur moeten sinds 2 november minstens tien procent biodiversiteitswinst opleveren.",
-      "category": "Natuur & klimaat",
-      "url": "https://www.gov.uk/guidance/biodiversity-net-gain-nationally-significant-infrastructure-projects",
-      "primary_url": "https://www.gov.uk/guidance/biodiversity-net-gain-nationally-significant-infrastructure-projects",
-      "source": "Britse overheid / Defra",
-      "source_id": "defra",
-      "published": "2026-11-03",
-      "event_date": "2026-11-02",
-      "article_body": [
-        "Een groot bouwproject moet in Engeland voortaan ook iets toevoegen aan de natuur. Sinds 2 november geldt verplichte biodiversiteitswinst voor nieuwe aanvragen van nationaal belangrijke infrastructuurprojecten. Ontwikkelaars moeten aantonen hoe ze minstens tien procent verbetering realiseren.",
-        "Het gaat om Biodiversity Net Gain, een systeem dat de waarde van leefgebieden vóór en na een ontwikkeling vergelijkt. Niet alleen de oppervlakte telt mee, maar ook de kwaliteit, ligging en het soort habitat. De extra natuur kan onder voorwaarden binnen of buiten het projectgebied worden gerealiseerd.",
-        "De uitbreiding raakt grote projecten, bijvoorbeeld voor vervoer, energie en water. Voor andere categorieën bouwprojecten bestonden al vergelijkbare eisen. Ontwikkelaars moeten rekening blijven houden met bestaande natuurbescherming: schade voorkomen komt eerst, gevolgd door beperken en waar nodig compenseren.",
-        "De invoering is een concrete verandering van de regels. De verwachte natuurwinst zelf moet nog worden gerealiseerd en gecontroleerd. Hoe goed de maatregel werkt, hangt dus ook af van uitvoering en beheer. Wel ligt er nu bij nieuwe aanvragen een expliciete verplichting om natuurverbetering mee te nemen."
-      ],
-      "image_query": "id:2058977",
-      "image_alt": "Illustratief beeld van bosherstel; geen locatie van een Engels infrastructuurproject.",
-      "region": "int",
-      "regional_rank": 2,
-      "editorial_rank": 2
-    },
-    {
-      "article_slug": "dna-schakelaar-borstkanker",
-      "candidate_id": "428dc8423124",
-      "title": "Een verborgen DNA-schakelaar helpt borstkankercellen afremmen",
-      "email_title": "Een verborgen DNA-schakelaar helpt borstkankercellen afremmen",
-      "title_alternative": "Onderzoekers ontdekken rol van DNA-regio bij remming van ER-positieve borstkanker",
-      "teaser": "Australische onderzoekers begrijpen beter hoe een hormoonreceptor bepaalde borstkankercellen remt. Het gaat om laboratoriumonderzoek.",
+      "title": "Nieuwe databank helpt risico’s van medicijnresten inschatten",
+      "source": "Radboud Universiteit",
+      "url": "https://www.ru.nl/onderzoek/onderzoeksnieuws/nieuwe-europese-database-voor-milieurisicos-van-medicijnresten-gelanceerd",
       "category": "Wetenschap",
-      "url": "https://adelaide.edu.au/about/news/2026/dna--switch--uncovers-new-brake-on-breast-cancer-growth/",
-      "primary_url": "https://adelaide.edu.au/about/news/2026/dna--switch--uncovers-new-brake-on-breast-cancer-growth/",
-      "source": "Adelaide University",
-      "source_id": "adelaide-university",
-      "published": "2026-11-06",
-      "event_date": "2026-11-06",
+      "article_slug": "nieuwe-databank-helpt-risico-s-van-medicijnresten-inschatten",
       "article_body": [
-        "Een klein stukje DNA blijkt belangrijk voor het afremmen van een veelvoorkomende vorm van borstkanker. Onderzoekers van Adelaide University ontdekten een regelgebied binnen een gen dat een hormoonreceptor helpt om de groei van kankercellen te onderdrukken.",
-        "De studie richt zich op oestrogeenreceptor-positieve borstkanker. Bij deze vorm speelt het hormoon oestrogeen een rol in de groei. Een andere receptor, de androgeenreceptor, kan die groei juist remmen. Het team wilde beter begrijpen welke onderdelen van de cel daarvoor nodig zijn.",
-        "Met CRISPR verwijderden de onderzoekers een klein deel van het gevonden DNA-regelgebied. Daarna kon de androgeenreceptor de celgroei minder goed onderdrukken. Het gen waarin het stukje DNA ligt, bleek zelf niet de verklaring voor dat effect. De schakelaar maakt vermoedelijk deel uit van een breder regelnetwerk.",
-        "Het onderzoek is gepubliceerd in npj Breast Cancer. Het levert kennis op die kan helpen bij de ontwikkeling van behandelingen die de androgeenreceptor activeren. Er is in deze studie geen nieuwe behandeling bij patiënten getest. De vooruitgang zit in het preciezer begrijpen van een remmechanisme in kankercellen."
+        "Gegevens over medicijnresten in het milieu zijn voortaan op één plek op te zoeken. Een internationaal team, met onderzoekers van de Radboud Universiteit, lanceerde daarvoor de gratis Europese databank PREMIER.",
+        "Een waterschap kan de databank bijvoorbeeld raadplegen als het wil weten welke informatie beschikbaar is over een stof die in het water is aangetroffen. Ook overheden, wetenschappers en farmaceutische bedrijven kunnen de gegevens gebruiken bij het inschatten van risico’s. Daarmee hebben verschillende organisaties toegang tot hetzelfde vertrekpunt.",
+        "De databank maakt een praktisch verschil als informatie over een stof verspreid is over meerdere publicaties. Onderzoekers kunnen sneller zien welke gegevens er al zijn en waar nog kennis ontbreekt.",
+        "De databank bevat ook details over de proeven achter de cijfers. Wie een grenswaarde raadpleegt, kan daardoor beter nagaan waarop die rust. Dat helpt bij het vergelijken van studies en bij het bepalen waar aanvullend onderzoek nodig is.",
+        "De winst zit voorlopig in het beter toegankelijk maken van kennis. Of een specifieke stof in een bepaalde situatie een risico vormt, moet per geval worden beoordeeld. De databank helpt bij die afweging. Het terugdringen van medicijnresten vraagt vervolgens maatregelen die passen bij de aangetroffen stoffen en de plek waar ze terechtkomen."
       ],
-      "image_query": "id:3498584",
-      "image_alt": "Illustratief laboratoriumbeeld; niet het laboratorium of de cellen uit dit onderzoek.",
-      "region": "int",
-      "regional_rank": 3,
-      "editorial_rank": 3
+      "teaser": "Gegevens over medicijnresten in het milieu zijn voortaan op één plek op te zoeken. Een internationaal team, met onderzoekers van de Radboud Universiteit, lanceerde daarvoor de gratis Europese databank PREMIER.",
+      "image_query": "preview:nieuwe-databank-helpt-risico-s-van-medicijnresten-inschatten",
+      "image_alt": "Illustratief beeld bij Nieuwe databank helpt risico’s van medicijnresten inschatten"
     },
     {
-      "article_slug": "pip-glimlach-reist-wereld",
-      "candidate_id": "manual-pip-20261109",
-      "title": "Een digitale glimlach reist van mens tot mens de wereld over",
-      "email_title": "Een digitale glimlach reist van mens tot mens de wereld over",
-      "title_alternative": "PIP laat ontvangers een digitale glimlach persoonlijk doorgeven",
-      "teaser": "Een digitale postduif gaat steeds naar iemand anders. De ontvanger kiest de volgende bestemming, en de reis is online te volgen.",
-      "category": "Mens",
-      "url": "https://in-boxed.com/pip",
-      "primary_url": "https://in-boxed.com/pip",
-      "source": "PIP / in-boxed",
-      "source_id": "in-boxed-pip",
-      "published": null,
-      "event_date": "2026-11-04",
-      "article_body": [
-        "Wie zou jij vandaag blij maken met een beetje aandacht? Met die vraag begint de reis van PIP, een digitale postduif die een glimlach van persoon tot persoon doorgeeft. Elke ontvanger kiest zelf wie de volgende wordt. Zo ontstaat een route die vooraf niet vastligt.",
-        "Het experiment is opgezet door de Nederlandse initiatiefnemer Jornt Bon. Volgens hem ging PIP op 4 november van start. Op de website kunnen mensen gratis een glimlach versturen, zonder account of app. Wie de boodschap opent, kan de digitale duif vervolgens weer naar iemand anders laten vliegen.",
-        "Een wereldkaart maakt zichtbaar in welke landen een glimlach is geopend. De reis ontstaat door persoonlijke keuzes: iemand denkt aan een vriend, familielid of kennis, die daarna weer iemand anders in gedachten neemt. Op de website kun je volgen hoe zo’n keten verdergaat.",
-        "Hoeveel mensen inmiddels hebben meegedaan en hoeveel landen precies zijn bereikt, hebben we niet onafhankelijk kunnen bevestigen. Ook is niet onderzocht welk effect het experiment op ontvangers heeft. Het is vooral een uitnodiging om iemand even te laten merken dat je aan hem of haar denkt."
-      ],
-      "image_query": "official:pip-2026",
-      "image_alt": "Officieel PIP-persbeeld met de getekende postduif en een wereldkaart.",
-      "region": "int",
-      "regional_rank": 4,
-      "editorial_rank": 4
-    },
-    {
-      "article_slug": "honden-sporen-invasieve-planten",
-      "candidate_id": "8ebd31bc9e97",
-      "title": "Met hun neus helpen honden de natuur een handje",
-      "email_title": "Met hun neus helpen honden de natuur een handje",
-      "title_alternative": "Vrijwillige hondenteams kunnen invasieve planten in het veld opsporen",
-      "teaser": "Duitse onderzoekers trainden honden en hun baasjes om invasieve planten te vinden. Elf van twaalf geteste teams slaagden voor de veldtest.",
+      "article_slug": "waterroofkever-onnerpolder",
+      "title": "Gestreepte waterroofkever na vijftig jaar teruggevonden in Groningen",
+      "source": "Nature Today",
+      "url": "https://www.naturetoday.com/intl/nl/nature-reports/message/?msg=36042",
       "category": "Natuur & klimaat",
-      "url": "https://www.ufz.de/index.php?de=20939&pub_id=33080",
-      "primary_url": "https://www.ufz.de/index.php?de=20939&pub_id=33080",
-      "source": "Helmholtz Centre for Environmental Research / PLOS ONE",
-      "source_id": "ufz",
-      "published": "2026-11-04",
-      "event_date": "2026-11-04",
       "article_body": [
-        "Een hond die in het gras snuffelt, kan meer doen dan geurtjes verzamelen. Duitse onderzoekers hebben laten zien dat vrijwilligers hun honden kunnen trainen om invasieve planten op te sporen. Dat kan helpen zulke soorten eerder te ontdekken.",
-        "Het team van het Helmholtz Centre for Environmental Research werkte met 31 honden en hun eigenaren. Ze volgden online training en praktische bijeenkomsten. De doelplanten waren soorten uit de duizendknoopgroep, reuzenbalsemien en ambrosia: planten die door hun verspreiding problemen kunnen veroorzaken voor natuur, gezondheid of economie.",
-        "Van de twaalf teams die de afsluitende veldtest deden, slaagden er elf. Dat betekent niet dat elke hond na een paar oefeningen inzetbaar is. Een flink deel van de aanvankelijke deelnemers haalde de laatste test niet. Motivatie, zorgvuldige training en begeleiding blijken belangrijk.",
-        "De studie is gepubliceerd in PLOS ONE. De onderzoekers zien mogelijkheden om vrijwilligers een rol te geven naast professionele speurhondenteams. Ze benadrukken dat ecologen en hondentrainers het werk moeten blijven begeleiden. De bereikte stap is een geteste aanpak om de goede neus van huishonden gericht voor natuurmonitoring te gebruiken."
+        "In de Onnerpolder bij het Zuidlaardermeer hebben onderzoekers de gestreepte waterroofkever gevonden. De beschermde soort was sinds 1976 niet meer waargenomen in de provincie Groningen.",
+        "De vondst kwam aan het begin van een breder verspreidingsonderzoek. Bij een eerdere gerichte zoektocht op tachtig locaties in Groningen was de kever nog onvindbaar. De soort is gebonden aan specifieke omstandigheden in stilstaand of langzaam stromend water.",
+        "De soort is ongeveer anderhalve centimeter lang. Aan de brede gele band vlak achter de kop herken je waar zijn naam vandaan komt. De laatste Groningse waarneming was ook in het Zuidlaardermeergebied.",
+        "Onderzoekers noemen betere waterkwaliteit en natuurlijke oevers als mogelijke verklaringen voor de hervestiging. Het lopende onderzoek moet duidelijk maken hoe groot de populatie rond het Zuidlaardermeer is."
       ],
-      "image_query": "id:5704437",
-      "image_alt": "Illustratief beeld van een snuffelende hond; deze hond deed niet aantoonbaar mee aan het onderzoek.",
-      "region": "int",
-      "regional_rank": 5,
-      "editorial_rank": 5
-    },
-    {
-      "article_slug": "bloeddruk-lager-na-behandeling",
-      "candidate_id": "4e3ff4f323de",
-      "title": "Bij deze patiënten bleef de bloeddruk lager, ook na de laatste pil",
-      "email_title": "Bij deze patiënten bleef de bloeddruk lager, ook na de laatste pil",
-      "title_alternative": "Kleine vervolgstudie vindt aanhoudende verbetering bij hormonale hoge bloeddruk",
-      "teaser": "Bij veertien patiënten met een hormonale oorzaak van hoge bloeddruk hield verbetering tot twee jaar na een behandeling aan.",
-      "category": "Gezondheid",
-      "url": "https://www.news-medical.net/news/20261108/New-treatment-may-offer-lasting-cure-for-hormone-related-hypertension.aspx",
-      "primary_url": "https://www.nejm.org/doi/10.1056/NEJMc2611265",
-      "source": "Queen Mary University of London",
-      "source_id": "queen-mary-university",
-      "published": "2026-11-08",
-      "event_date": "2026-11-07",
-      "article_body": [
-        "Een behandeling tegen een hormonale oorzaak van hoge bloeddruk lijkt bij sommige patiënten langer door te werken dan de periode waarin ze medicijnen slikken. In een kleine vervolgstudie bleven bloeddruk en hormoonwaarden verbeterd tot twee jaar nadat de behandeling was gestopt.",
-        "Het onderzoek gaat over primair hyperaldosteronisme. Daarbij maken de bijnieren te veel aldosteron aan, waardoor het lichaam extra zout vasthoudt en de bloeddruk stijgt. De onderzochte medicijnen remmen de aanmaak van dat hormoon. De deelnemers kregen ze gedurende zes tot twaalf maanden.",
-        "Onderzoekers onder leiding van Queen Mary University of London bekeken daarna de beschikbare vervolgmetingen van veertien patiënten uit acht Amerikaanse centra. Bijna een kwart had een normale bloeddruk zonder andere bloeddrukmedicatie. Ook bij anderen waren de waarden verbeterd.",
-        "De bevindingen zijn gepubliceerd in het New England Journal of Medicine. Door de kleine groep en het observationele karakter kunnen de onderzoekers nog geen blijvende genezing vaststellen. Een grotere studie moet duidelijker maken voor wie deze aanpak werkt en hoe lang het effect duurt. Het resultaat geldt voor deze specifieke hormonale aandoening, niet voor hoge bloeddruk in het algemeen."
-      ],
-      "image_query": "id:2361046",
-      "image_alt": "Illustratief beeld van een bloeddrukmeting; geen deelnemer aan de studie.",
-      "region": "int",
-      "regional_rank": 6,
-      "editorial_rank": 6
+      "teaser": "In de Onnerpolder bij het Zuidlaardermeer hebben onderzoekers de gestreepte waterroofkever gevonden. De beschermde soort was sinds 1976 niet meer waargenomen in de provincie Groningen.",
+      "image_query": "id:5900178",
+      "image_alt": "Illustratief beeld van waterrijke natuur"
     }
   ],
   "headlines": [
     {
-      "title": "Klimaattop in Turkije begint met focus op meer elektriciteit",
-      "teaser": "In Antalya praten landen onder meer over elektrificatie, zuinigere datacentra en hergebruik. Of er gezamenlijke afspraken komen, is onzeker.",
-      "url": "https://nos.nl/artikel/2638672-klimaattop-van-start-in-turkije-landen-willen-groter-aandeel-duurzame-stroom",
-      "source": "NOS",
-      "source_id": "nos",
-      "published": "2026-11-09",
-      "event_date": "2026-11-09"
+      "title": "Spanning in coalitie over Belastingplan 2027",
+      "url": "https://nos.nl/artikel/2639001-d66-en-cda-sluiten-deal-met-pro-en-volt-rond-belastingplan-nog-geen-reactie-vvd",
+      "source": "nos.nl"
     },
     {
-      "title": "Een op vijf werknemers voelt zich psychisch vermoeid door werk",
-      "teaser": "Nieuwe CBS- en TNO-cijfers laten zien dat 21 procent van de werknemers dit in 2025 geregeld ervoer, tegenover 13 procent tien jaar eerder.",
-      "url": "https://www.cbs.nl/nl-nl/nieuws/2026/46/1-op-5-werknemers-psychisch-vermoeid-door-werk-meer-dan-tien-jaar-geleden",
-      "source": "CBS / TNO",
-      "source_id": "cbs",
-      "published": "2026-11-09",
-      "event_date": "2025-12-31"
+      "title": "Rusland en Oekraïne voeren aanvallen uit terwijl overleg doorgaat",
+      "url": "https://nos.nl/artikel/2638975-rusland-en-oekraine-bestoken-elkaar-terwijl-in-abu-dhabi-wordt-onderhandeld",
+      "source": "nos.nl"
     },
     {
-      "title": "ANC verliest terrein in Zuid-Afrikaanse steden",
-      "teaser": "Bij de lokale verkiezingen blijft de partij landelijk de grootste, maar in zes belangrijke metropolen werd een andere partij de grootste.",
-      "url": "https://nos.nl/artikel/2638629-verlies-voor-het-anc-in-zuid-afrikaanse-steden",
-      "source": "NOS",
-      "source_id": "nos",
-      "published": "2026-11-08",
-      "event_date": "2026-11-08"
+      "title": "Moerdijk kan blijven door kleiner uitbreidingsplan voor haven",
+      "url": "https://nos.nl/artikel/2638990-staatssecretaris-na-u-bocht-moerdijk-taak-om-het-vertrouwen-terug-te-winnen",
+      "source": "nos.nl"
+    }
+  ],
+  "int": [
+    {
+      "article_slug": "trinidad-tobago-uitspraak",
+      "title": "Hoogste beroepsrechter schrapt strafbaarstelling van seks tussen mannen in Trinidad en Tobago",
+      "source": "Judicial Committee of the Privy Council",
+      "url": "https://www.jcpc.uk/cases/judgments/jcpc-2025-0095",
+      "category": "Mens",
+      "article_body": [
+        "De hoogste beroepsrechter voor Trinidad en Tobago heeft geoordeeld dat de wet die consensuele seks tussen volwassen mannen strafbaar stelde in strijd is met de grondwet. Daarmee kreeg Jason Jones na jaren procederen gelijk.",
+        "Jones had eerder in eigen land een zaak tegen de wet gewonnen. Een hogere rechter draaide die uitspraak terug, waarna hij naar het Judicial Committee of the Privy Council stapte. Dat hof in Londen is voor Trinidad en Tobago de laatste beroepsinstantie.",
+        "De zaak ging over de vraag of een oude strafbepaling mocht blijven gelden onder de grondwet. Het eindvonnis volgde op tegenstrijdige uitspraken van twee rechters in Trinidad en Tobago.",
+        "De uitspraak verandert wat de staat strafbaar mag stellen. Voor mannen in Trinidad en Tobago betekent dit dat de bepalingen niet langer kunnen worden gebruikt om vrijwillige seksuele relaties tussen volwassenen te vervolgen."
+      ],
+      "teaser": "De hoogste beroepsrechter voor Trinidad en Tobago heeft geoordeeld dat de wet die consensuele seks tussen volwassen mannen strafbaar stelde in strijd is met de grondwet. Daarmee kreeg Jason Jones na jaren procederen gelijk.",
+      "image_query": "id:4552833",
+      "image_alt": "Illustratief beeld bij lhbti-rechten"
+    },
+    {
+      "title": "Elektrische auto’s besparen naar schatting 1,2 miljoen vaten olie per dag",
+      "source": "Transport & Environment",
+      "url": "https://www.transportenvironment.org/articles/oil-savings-from-evs-quadrupled-in-five-years-since-cop26-in-glasgow",
+      "category": "Energie & innovatie",
+      "article_slug": "elektrische-auto-s-besparen-naar-schatting-1-2-miljoen-vaten-olie-per-dag",
+      "article_body": [
+        "Volledig elektrische auto’s sparen wereldwijd naar schatting 1,2 miljoen vaten olie per dag uit. In 2021 was dat ongeveer 215.000 vaten per dag, berekent Transport & Environment. Het gaat om een schatting van vermeden olieverbruik.",
+        "Van alle auto’s die wereldwijd rondrijden is circa 4,2 procent volledig elektrisch. Bij nieuwe auto’s ligt het aandeel veel hoger, op ongeveer een kwart. Het verschil tussen die cijfers ontstaat doordat bestaande auto’s vaak nog jaren blijven rijden terwijl er elk jaar nieuwe bijkomen.",
+        "Het verschil tussen nieuwverkopen en het totale wagenpark is belangrijk. Het eerste cijfer laat zien hoe snel de markt verandert. Het tweede bepaalt hoeveel elektrische auto’s er vandaag daadwerkelijk kilometers maken.",
+        "De vergelijking maakt ook duidelijk waarom nieuwverkopen vooruitlopen op de besparing. Pas wanneer meer benzine- en dieselauto’s in het bestaande wagenpark plaatsmaken voor elektrische auto’s, kan een groter deel van alle ritten zonder brandstof aan de pomp worden afgelegd.",
+        "De raming gaat over het olieverbruik dat door elektrisch rijden wordt vermeden. Wereldwijde olievraag hangt ook af van ontwikkelingen in andere sectoren en van het totale aantal gereden kilometers. De studie maakt zichtbaar hoe groot de bijdrage van elektrische personenauto’s inmiddels is."
+      ],
+      "teaser": "Volledig elektrische auto’s sparen wereldwijd naar schatting 1,2 miljoen vaten olie per dag uit. In 2021 was dat ongeveer 215.000 vaten per dag, berekent Transport & Environment. Het gaat om een schatting van vermeden olieverbruik.",
+      "image_query": "preview:elektrische-auto-s-besparen-naar-schatting-1-2-miljoen-vaten-olie-per-dag",
+      "image_alt": "Illustratief beeld bij Elektrische auto’s besparen naar schatting 1,2 miljoen vaten olie per dag"
+    },
+    {
+      "title": "Barbados haalt WHO-norm voor hiv-overdracht van moeder op kind",
+      "source": "WHO",
+      "url": "https://www.who.int/singapore/news/detail-global/30-10-2026-barbados-eliminates-mother-to-child-transmission-of-hiv",
+      "category": "Gezondheid",
+      "article_slug": "barbados-hiv-moeder-kind",
+      "article_body": [
+        "De Wereldgezondheidsorganisatie heeft Barbados gecertificeerd voor het terugdringen van hiv-overdracht van moeder op kind. Volgens de WHO komt die overdracht zo weinig voor dat ze er niet langer als volksgezondheidsprobleem geldt.",
+        "Barbados werkte daar jarenlang aan met zorg rond zwangerschap en geboorte. Zwangeren hebben toegang tot gratis zorg, ongeacht hun nationaliteit. Vroege toegang tot zorg geeft zorgverleners gelegenheid om hiv vast te stellen en, waar nodig, behandeling te starten. Dat helpt de kans op overdracht aan het kind te verkleinen.",
+        "De erkenning beloont een resultaat op bevolkingsniveau. Toegang tot testen, behandeling en zorg tijdens de zwangerschap blijft nodig om dat resultaat vast te houden.",
+        "De WHO maakte de certificering op 30 oktober bekend, na een onafhankelijke beoordeling. Daarmee is het resultaat getoetst aan internationale criteria. Voor Barbados is die beoordeling het sluitstuk van jaren waarin zorg rond zwangerschap en geboorte toegankelijker werd gemaakt.",
+        "De WHO spreekt van eliminatie als volksgezondheidsprobleem. Dat betekent dat Barbados aan de vastgestelde criteria voldoet. De mogelijkheid van individuele gevallen blijft bestaan. De mijlpaal laat zien wat langdurig toegankelijke zorg voor zwangeren kan opleveren."
+      ],
+      "teaser": "De Wereldgezondheidsorganisatie heeft Barbados gecertificeerd voor het terugdringen van hiv-overdracht van moeder op kind. Volgens de WHO komt die overdracht zo weinig voor dat ze er niet langer als volksgezondheidsprobleem geldt.",
+      "image_query": "preview:barbados-hiv-moeder-kind",
+      "image_alt": "Illustratief beeld bij Barbados haalt WHO-norm voor hiv-overdracht van moeder op kind"
+    },
+    {
+      "article_slug": "sadurska-90-meter",
+      "title": "Sadurska duikt zonder vinnen naar een wereldrecord van 90 meter",
+      "source": "SRF",
+      "url": "https://www.srf.ch/sport/mehr-sport/erneuter-weltrekord-apnoe-taucherin-sadurska-knackt-magische-90-m-marke",
+      "category": "Sport",
+      "article_body": [
+        "De Oekraïense freediver Kateryna Sadurska is bij de Blue Element-wedstrijd voor de kust van Dominica naar negentig meter gedoken. Daarmee verbeterde ze haar eigen wereldrecord in de discipline Constant Weight No Fins met twee meter.",
+        "In deze discipline daalt de duiker op één ademteug af en komt die op eigen kracht weer boven, zonder vinnen of duikslee. De duik van Sadurska duurde drie minuten en 33 seconden.",
+        "Het vorige record stond op 88 meter. Die twee meter extra tellen bij een recordduik dubbel: na het keerpunt moet Sadurska dezelfde extra afstand weer omhoog afleggen, nog altijd op dezelfde ademteug.",
+        "Sadurska droeg het record op aan het Oekraïense volk, zoals ze ook bij eerdere records deed. Ze is de eerste vrouw die in deze discipline de grens van negentig meter bereikt."
+      ],
+      "teaser": "De Oekraïense freediver Kateryna Sadurska is bij de Blue Element-wedstrijd voor de kust van Dominica naar negentig meter gedoken. Daarmee verbeterde ze haar eigen wereldrecord in de discipline Constant Weight No Fins met twee meter.",
+      "image_query": "id:1840201",
+      "image_alt": "Illustratieve foto van een freediver, niet Kateryna Sadurska"
+    },
+    {
+      "title": "Jordanië start een programma tegen leerachterstand op 300 scholen",
+      "source": "UNICEF",
+      "url": "https://www.unicef.org/jordan/press-releases/ministry-education-and-unicef-launch-20-million-learning-recovery-programme-300",
+      "category": "Mens",
+      "article_slug": "jordani-helpt-leerlingen-op-300-scholen-hun-achterstand-inhalen",
+      "article_body": [
+        "Jordanië is met UNICEF en steun van de EU een onderwijsprogramma gestart voor 300 scholen, met aandacht voor lezen, rekenen en begeleiding.",
+        "De inzet is dat scholen leerlingen helpen verder te leren vanaf het punt waarop zij zijn vastgelopen. Dat is relevant omdat een achterstand in eerdere lesstof kan doorwerken wanneer de klas doorgaat naar een volgend onderwerp. Met het programma krijgen scholen ondersteuning om daar gericht aan te werken.",
+        "De cijfers over budget en scholen vertellen hoeveel ruimte er is voor het programma. Voor ouders en leerlingen telt uiteindelijk of de extra ondersteuning helpt om weer mee te komen in de les.",
+        "De Europese Unie financiert het programma met 20 miljoen euro. Een deel van de aanpak is gericht op leraren en op de betrokkenheid van gezinnen, zodat de steun aan leerlingen ook buiten de extra lees- en rekenlessen kan doorwerken.",
+        "De lancering en financiering zijn bevestigd. Driehonderd scholen is het beoogde bereik van het programma. Hoeveel leerlingen daadwerkelijk meedoen en hoeveel lesstof zij inhalen, zijn vragen voor de uitvoering en evaluatie."
+      ],
+      "teaser": "Jordanië is met UNICEF en steun van de EU een onderwijsprogramma gestart voor 300 scholen, met aandacht voor lezen, rekenen en begeleiding.",
+      "image_query": "preview:jordani-helpt-leerlingen-op-300-scholen-hun-achterstand-inhalen",
+      "image_alt": "Illustratief beeld bij Jordanië start een programma tegen leerachterstand op 300 scholen"
+    },
+    {
+      "title": "Glasdraad van één atoom breed geleidt verrassend goed warmte",
+      "source": "CU Boulder",
+      "url": "https://www.colorado.edu/today/2026/11/10/glass-does-surprising-things-when-stretched-1-atom-wide-discovery-could-help-shrink",
+      "category": "Wetenschap",
+      "article_slug": "glas-geleidt-warmte-op-atomaire-schaal",
+      "article_body": [
+        "Glas wordt vaak gebruikt om warmte tegen te houden. Op atomaire schaal gedraagt het zich verrassend anders. Een internationaal onderzoeksteam mat hoe warmte door een glascontact stroomde terwijl dat steeds smaller werd. Zelfs toen het contact nog maar één atoom breed was, ging er efficiënt warmte doorheen.",
+        "De onderzoekers drukten twee stukjes glas tegen elkaar en trokken ze langzaam uit elkaar tot het contact bijna brak. Met een microscoop die ook temperatuurverschillen kan meten, volgden ze wat er onderweg gebeurde. Op die schaal ging de warmtegeleiding in afzonderlijke stappen.",
+        "Bij gewoon glas verstoren de onregelmatig gerangschikte atomen de trillingen die warmte doorgeven. In het experiment was het contact zo smal dat die verstoring veel minder ruimte kreeg.",
+        "De schaal maakt het verschil: een raam bestaat uit een doorlopende laag glas, terwijl het team warmte door één uiterst klein contact mat. Die vergelijking helpt verklaren waarom de uitkomst vooral interessant is voor elektronica met steeds kleinere onderdelen.",
+        "De meting is interessant voor chipontwerpers omdat siliciumdioxide, een vorm van glas, al in chips wordt gebruikt. Nu onderdelen kleiner worden, telt mee hoe materialen zich op die schaal gedragen. Het experiment geeft ontwerpers daar meer inzicht in. Een praktische toepassing moet nog worden ontwikkeld."
+      ],
+      "teaser": "Glas wordt vaak gebruikt om warmte tegen te houden. Op atomaire schaal gedraagt het zich verrassend anders. Een internationaal onderzoeksteam mat hoe warmte door een glascontact stroomde terwijl dat steeds smaller werd. Zelfs toen het contact nog maar één atoom breed was, ging er efficiënt warmte doorheen.",
+      "image_query": "preview:glas-geleidt-warmte-op-atomaire-schaal",
+      "image_alt": "Illustratief beeld bij warmtegeleiding door glas op atomaire schaal"
     }
   ]
 }
