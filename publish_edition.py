@@ -11,7 +11,6 @@ import sys
 from urllib.parse import urlsplit
 
 import build_editions as site
-import build_search
 
 ROOT = Path(__file__).resolve().parent
 
@@ -81,8 +80,7 @@ def prepare(source):
     archive = Path("edities", f"{day}.json")
     site.NEWS_PATH.write_bytes(raw)
     archive.write_bytes(raw)
-    site.build_site()
-    build_search.build_index()
+    subprocess.run([sys.executable, "build_editions.py"], check=True)
     files = files_for_preview(day, stories, urls)
     git("add", "-A")
     record = snapshot(day, files)
