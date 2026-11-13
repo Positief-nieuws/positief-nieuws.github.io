@@ -7,13 +7,13 @@ END = '<!-- simple-analytics-badge:end -->'
 
 def badge_html():
     # Official Simple Analytics badge builder embed; both modes retain the requested brand colors.
-    query = 'counter=false&amp;radius=4&amp;background=%23F0F5EE&amp;text=%23182E35&amp;logo=%23176E5C'
+    query = 'counter=false&amp;radius=10&amp;background=transparent&amp;text=182e35&amp;logo=176e5c'
     return f'''{START}
 <div class="simple-analytics-badge" style="display:block;text-align:center;margin-top:16px">
-  <a href="https://www.simpleanalytics.com?utm_source=positief-nieuws.nl&amp;utm_content=badge" referrerpolicy="origin" target="_blank" rel="noopener noreferrer" style="display:inline-block;line-height:0">
+  <a href="https://www.simpleanalytics.com?referral=vetow&amp;utm_source=positief-nieuws.nl&amp;utm_content=badge" referrerpolicy="origin" target="_blank" rel="noopener noreferrer" style="display:inline-block;line-height:0">
     <picture>
       <source srcset="https://simpleanalyticsbadges.com/positief-nieuws.nl?mode=dark&amp;{query}" media="(prefers-color-scheme: dark)" />
-      <img src="https://simpleanalyticsbadges.com/positief-nieuws.nl?mode=light&amp;{query}" alt="Privacyvriendelijke webstatistieken door Simple Analytics" loading="lazy" referrerpolicy="no-referrer" crossorigin="anonymous" style="display:block;max-width:100%;height:auto" />
+      <img src="https://simpleanalyticsbadges.com/positief-nieuws.nl?mode=light&amp;{query}" width="168" height="40" alt="Privacyvriendelijke webstatistieken door Simple Analytics" loading="lazy" referrerpolicy="no-referrer" crossorigin="anonymous" style="display:block;max-width:100%;height:auto" />
     </picture>
   </a>
 </div>
