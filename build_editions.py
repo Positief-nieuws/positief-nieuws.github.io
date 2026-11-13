@@ -1141,191 +1141,138 @@ TOPIC_DOSSIERS = {'Gezondheid': {
             },
         ],
     },
- 'Cultuur': {'signals_title': 'Dit zien we de afgelopen weken gebeuren',
-             'signals_intro': 'Vier lijnen die terugkomen in recente verhalen over cultuur, erfgoed en media.',
-             'why_title': 'Zo zie je cultuur als beweging, niet als losse agenda',
-             'why_text': 'Door cultuurverhalen naast elkaar te zetten, zie je meer dan prijzen en vondsten alleen: hoe erfgoed opnieuw '
-                         'wordt ontdekt, vrijwilligers culturele plekken dragen en Nederlandse makers en formats ook buiten de '
-                         'landsgrenzen opvallen.',
-             'signals': [{'title': 'Erfgoed blijft nieuwe verhalen prijsgeven',
-                          'text': 'Een zeldzaam fragment van Homerus’ Odyssee dook op in Utrecht, terwijl een vondst van Vikingsilver in '
-                                  'Finland nieuwe historische informatie opleverde. Oude bronnen blijken nog steeds letterlijk nieuwe '
-                                  'kennis te bevatten.',
-                          'icon': '<svg viewBox="0 0 32 32" fill="none"><path d="M6 7h8c3 0 5 2 5 5v14c0-3-2-5-5-5H6V7Zm20 0h-8c-3 0-5 2-5 '
-                                  '5" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"/></svg>',
-                          'links': [('Odyssee-fragment',
-                                     'https://www.uu.nl/nieuws/vierde-eeuws-fragment-van-de-odyssee-ontdekt-in-universiteitsbibliotheek-utrecht',
-                                     True),
-                                    ('Vikingsilver in Finland',
-                                     'https://www.smithsonianmag.com/smart-news/a-finnish-metal-detectorist-was-shocked-to-unearth-a-trove-of-viking-age-silver-in-his-hometown-then-his-detector-went-off-again-180989487/',
-                                     True)]},
-                         {'title': 'Culturele inzet krijgt zichtbare waardering',
-                          'text': 'De Brabant Bokaal voor Willy Koppens onderstreept hoeveel cultureel aanbod leunt op jarenlange '
-                                  'vrijwillige inzet. Zulke erkenning maakt zichtbaar dat cultuur niet alleen door instellingen, maar ook '
-                                  'door betrokken inwoners wordt gedragen.',
-                          'icon': '<svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="12" r="7" stroke="currentColor" '
-                                  'stroke-width="2.1"/><path d="m12 18-2 9 6-4 6 4-2-9" stroke="currentColor" stroke-width="2.1" '
-                                  'stroke-linejoin="round"/></svg>',
-                          'links': [('Brabant Bokaal',
-                                     'https://www.omroepbrabant.nl/nieuws/6024314/willy-koppens-wint-brabant-bokaal',
-                                     True)]},
-                         {'title': 'Nederlandse formats vinden publiek over de grens',
-                          'text': 'De Grannies van Amsterdam werd bij het EBU Formats Forum uitgeroepen tot Format of the Year. Dat laat '
-                                  'zien dat een uitgesproken lokaal programma ook internationaal als vernieuwend en aansprekend kan worden '
-                                  'gezien.',
-                          'icon': '<svg viewBox="0 0 32 32" fill="none"><rect x="5" y="7" width="22" height="15" rx="2" '
-                                  'stroke="currentColor" stroke-width="2.1"/><path d="M11 27h10M16 22v5" stroke="currentColor" '
-                                  'stroke-width="2.1" stroke-linecap="round"/></svg>',
-                          'links': [('De Grannies van Amsterdam',
-                                     'https://www.rtl.nl/boulevard/artikel/5649889/internationale-prijs-voor-de-grannies-van-amsterdam',
-                                     True)]},
-                         {'title': 'Cultuur wordt sterker als mensen zelf blijven meedoen',
-                          'text': 'Van filmfestival tot museum en van lokale geschiedenis tot televisie: meerdere verhalen laten zien dat '
-                                  'cultuur groeit wanneer makers, vrijwilligers en publiek niet alleen consumeren, maar ook actief '
-                                  'bijdragen.',
-                          'icon': '<svg viewBox="0 0 32 32" fill="none"><circle cx="11" cy="11" r="4" stroke="currentColor" '
-                                  'stroke-width="2"/><circle cx="22" cy="12" r="3.5" stroke="currentColor" stroke-width="2"/><path d="M4 '
-                                  '27c1-7 4-11 8-11s7 4 8 11M18 27c1-5 3-8 6-8s5 3 6 8" stroke="currentColor" stroke-width="2" '
-                                  'stroke-linecap="round"/></svg>',
-                          'links': [('Willy Koppens',
-                                     'https://www.omroepbrabant.nl/nieuws/6024314/willy-koppens-wint-brabant-bokaal',
-                                     True),
-                                    ('De Grannies',
-                                     'https://www.rtl.nl/boulevard/artikel/5649889/internationale-prijs-voor-de-grannies-van-amsterdam',
-                                     True)]}]},
- 'Economie': {'signals_title': 'Dit zien we de afgelopen weken gebeuren',
-              'signals_intro': 'Vier economische signalen uit recente edities, van koopkracht tot handel en bredere groei.',
-              'why_title': 'Zo krijg je meer gevoel voor richting dan met één groeicijfer',
-              'why_text': 'Economie wordt snel gereduceerd tot één percentage. Door meerdere indicatoren naast elkaar te zetten, zie je '
-                          'beter of groei ook terugkomt bij huishoudens, handel en andere economieën — en waar de nuance blijft zitten.',
-              'signals': [{'title': 'De Nederlandse economie groeide sterker dan eerder gedacht',
-                           'text': 'De economie groeide in het tweede kwartaal met 0,6 procent. Tegelijk namen volgens de geselecteerde '
-                                   'cijfers zowel het besteedbaar inkomen van huishoudens als de bedrijfswinsten toe.',
-                           'icon': '<svg viewBox="0 0 32 32" fill="none"><path d="M5 26V7M5 26h22M9 22l5-6 4 3 8-10" stroke="currentColor" '
-                                   'stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></svg>',
-                           'links': [('Nederlandse economie',
-                                      'https://nos.nl/artikel/2632133-economie-draait-verrassend-goed-huishoudens-meer-te-besteden-bedrijven-betere-winst',
-                                      True)]},
-                          {'title': 'Koopkracht ging voor het derde jaar op rij omhoog',
-                           'text': 'De koopkracht van Nederlanders steeg in 2025 in doorsnee met 1,2 procent. Werknemers gingen gemiddeld '
-                                   'sterker vooruit dan zelfstandigen en gepensioneerden, dus het herstel was niet voor iedereen even '
-                                   'groot.',
-                           'icon': '<svg viewBox="0 0 32 32" fill="none"><path d="M5 9h19a3 3 0 0 1 3 3v13H5V9Z" stroke="currentColor" '
-                                   'stroke-width="2.1"/><path d="M5 9 21 5v4M20 15h7v6h-7a3 3 0 0 1 0-6Z" stroke="currentColor" '
-                                   'stroke-width="2.1" stroke-linejoin="round"/></svg>',
-                           'links': [('Koopkracht 2025',
-                                      'https://www.cbs.nl/nl-nl/nieuws/2026/38/koopkracht-stijgt-met-1-2-procent-in-2025-werknemers-zien-sterkste-toename',
-                                      True)]},
-                          {'title': 'Ook de Nederlandse export bleef groeien',
-                           'text': 'De goederenexport lag in juli ruim 2 procent hoger dan een jaar eerder. Daarmee kwam naast '
-                                   'binnenlandse groei ook vanuit de handel een positief signaal.',
-                           'icon': '<svg viewBox="0 0 32 32" fill="none"><path d="m6 11 10-5 10 5-10 5-10-5Z" stroke="currentColor" '
-                                   'stroke-width="2.1" stroke-linejoin="round"/><path d="M6 11v11l10 5 10-5V11M16 16v11" '
-                                   'stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"/></svg>',
-                           'links': [('Export in juli',
-                                      'https://www.cbs.nl/nl-nl/nieuws/2026/37/export-groeit-met-ruim-2-procent-in-juli',
-                                      True)]},
-                          {'title': 'Internationaal is het beeld gemengd, maar niet stilstaand',
-                           'text': 'In de OECD als geheel trok de kwartaalgroei in het tweede kwartaal licht aan van 0,4 naar 0,5 procent. '
-                                   'Achter dat gemiddelde zitten grote verschillen tussen landen, maar het onderstreept dat groei breder '
-                                   'zichtbaar was dan alleen in Nederland.',
-                           'icon': '<svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="11" stroke="currentColor" '
-                                   'stroke-width="2.1"/><path d="M5 16h22M16 5c4 4 5 8 5 11s-1 7-5 11M16 5c-4 4-5 8-5 11s1 7 5 11" '
-                                   'stroke="currentColor" stroke-width="1.8"/></svg>',
-                           'links': [('OECD-groei Q2',
-                                      'https://www.oecd.org/en/data/insights/statistical-releases/2026/08/gdp-growth-second-quarter-2026-oecd.html',
-                                      True)]}]},
- 'Energie & innovatie': {'signals_title': 'Dit zien we de afgelopen weken gebeuren',
-                         'signals_intro': 'Vier lijnen waarin innovatie zichtbaar opschuift van idee naar toepassing.',
-                         'why_title': 'Zo zie je welke innovatie echt dichter bij gebruik komt',
-                         'why_text': 'Niet ieder technisch experiment verandert meteen de wereld. Door vooral te kijken naar pilots, '
-                                     'infrastructuur en opschaling zie je welke ideeën een stap verder komen richting dagelijks gebruik.',
-                         'signals': [{'title': 'Testen en opschalen komen dichter bij elkaar',
-                                      'text': 'Wageningen University & Research opende CIBIA en TNO een proeffabriek voor biobased '
-                                              'bouwmaterialen. Beide faciliteiten zijn juist bedoeld om de kloof tussen onderzoek, testen '
-                                              'en toepassing kleiner te maken.',
-                                      'icon': '<svg viewBox="0 0 32 32" fill="none"><path d="M12 5h8M14 5v8L7 25h18l-7-12V5" '
-                                              'stroke="currentColor" stroke-width="2.1" stroke-linecap="round" '
-                                              'stroke-linejoin="round"/><path d="M11 21h10" stroke="currentColor" '
-                                              'stroke-width="2.1"/></svg>',
-                                      'links': [('CIBIA Wageningen',
-                                                 '/artikelen/2026-10-01/cibia-wageningen-voedselinnovaties-praktijk/',
-                                                 False),
-                                                ('BioBuilt TNO',
-                                                 'https://www.tno.nl/nl/newsroom/2026/09/minister-opent-tno-biobuilt-proeffabriek/',
-                                                 True)]},
-                                     {'title': 'Duurzamere mobiliteit wordt ook infrastructuurbeleid',
-                                      'text': 'Een akkoord over de snelfietsroute tussen Utrecht en Amsterdam laat zien dat duurzame '
-                                              'mobiliteit niet alleen om voertuigen draait, maar ook om comfortabele verbindingen die '
-                                              'daadwerkelijk gebruikt kunnen worden.',
-                                      'icon': '<svg viewBox="0 0 32 32" fill="none"><circle cx="8" cy="22" r="5" stroke="currentColor" '
-                                              'stroke-width="2"/><circle cx="24" cy="22" r="5" stroke="currentColor" '
-                                              'stroke-width="2"/><path d="m8 22 6-10 5 10H8Zm6-10h6l4 10M12 8h5" stroke="currentColor" '
-                                              'stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
-                                      'links': [('Snelfietsroute Utrecht–Amsterdam',
-                                                 'https://nos.nl/artikel/2631884-snelfietsroute-van-dom-tot-dam-tussen-utrecht-en-amsterdam-stap-dichterbij',
-                                                 True)]},
-                                     {'title': 'Rekenkracht wordt toegankelijker voor kleinere bedrijven',
-                                      'text': 'Met Supercomputing Brabant krijgen startups en mkb-bedrijven toegang tot krachtige '
-                                              'AI-rekencapaciteit en expertise. Daarmee komt infrastructuur die normaal vooral voor grote '
-                                              'partijen bereikbaar is dichter bij regionale bedrijven.',
-                                      'icon': '<svg viewBox="0 0 32 32" fill="none"><rect x="8" y="8" width="16" height="16" rx="2" '
-                                              'stroke="currentColor" stroke-width="2"/><path d="M12 12h8v8h-8zM3 11h5M3 16h5M3 21h5M24 '
-                                              '11h5M24 16h5M24 21h5M11 3v5M16 3v5M21 3v5M11 24v5M16 24v5M21 24v5" stroke="currentColor" '
-                                              'stroke-width="1.8" stroke-linecap="round"/></svg>',
-                                      'links': [('Supercomputing Brabant',
-                                                 'https://www.omroepbrabant.nl/nieuws/6028408/supercomputing-brabant-gelanceerd-voor-ai-innovatie',
-                                                 True)]},
-                                     {'title': 'Energieverbetering zit vaak in het systeem rond de techniek',
-                                      'text': 'MIT rapporteerde minder energiegebruik per vierkante meter en meer zonne-energie op daken. '
-                                              'In Oekraïne richt een nieuwe faciliteit zich juist op het laatste stuk: zorgen dat '
-                                              'beschikbare energieapparatuur ook echt wordt ontworpen, aangesloten en in gebruik genomen.',
-                                      'icon': '<svg viewBox="0 0 32 32" fill="none"><path d="M5 26V7M5 26h22M9 22l5-6 4 3 8-10" '
-                                              'stroke="currentColor" stroke-width="2.3" stroke-linecap="round" '
-                                              'stroke-linejoin="round"/></svg>',
-                                      'links': [('MIT campus',
-                                                 'https://news.mit.edu/2026/mit-makes-progress-campus-climate-goals-0915',
-                                                 True),
-                                                ('Energie-installatie Oekraïne',
-                                                 '/artikelen/2026-10-01/oekraine-energieapparatuur-sneller-installeren-undp/',
-                                                 False)]}]},
- 'Mens': {'signals_title': 'Dit zien we de afgelopen weken gebeuren',
-          'signals_intro': 'Vier lijnen waarin meedoen, praktische hulp en lokale gemeenschap centraal staan.',
-          'why_title': 'Zo zie je welke maatschappelijke oplossingen mensen echt bereiken',
-          'why_text': 'Maatschappelijke vooruitgang zit vaak niet in één grote maatregel, maar in concrete drempels die verdwijnen: tijd, '
-                      'geld, toegang of een plek om mee te doen. Door die verhalen samen te bekijken wordt dat patroon zichtbaar.',
-          'signals': [{'title': 'Meedoen blijft mogelijk als we kijken naar wat iemand wél kan',
-                       'text': 'DemenTalent koppelt mensen met dementie aan passend vrijwilligerswerk. Het uitgangspunt verschuift daarmee '
-                               'van alleen zorg ontvangen naar een rol houden, mensen ontmoeten en zelf iets bijdragen.',
-                       'icon': '<svg viewBox="0 0 32 32" fill="none"><path d="M5 17c4 0 5 3 8 3h6c2 0 3 1 3 3s-2 3-4 3h-7c-3 0-5-2-7-4M27 '
-                               '15c-4 0-5 3-8 3h-4" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"/><path d="M12 10c0-3 '
-                               '2-5 4-5s4 2 4 5c0 4-4 6-4 6s-4-2-4-6Z" stroke="currentColor" stroke-width="2.1"/></svg>',
-                       'links': [('DemenTalent', '/artikelen/2026-10-01/dementalent-vrijwilligerswerk-mensen-met-dementie/', False)]},
-                      {'title': 'Kleine financiële drempels kunnen grote gevolgen hebben',
-                       'text': 'Praktijkscholen krijgen meer ruimte om leerlingen te helpen met zaken als werkschoenen, vervoer of een '
-                               'VOG. Juist zulke relatief kleine kosten kunnen anders een stage of opleiding blokkeren.',
-                       'icon': '<svg viewBox="0 0 32 32" fill="none"><path d="m4 12 12-6 12 6-12 6-12-6Z" stroke="currentColor" '
-                               'stroke-width="2.1" stroke-linejoin="round"/><path d="M9 15v8c4 3 10 3 14 0v-8M28 12v9" '
-                               'stroke="currentColor" stroke-width="2.1" stroke-linecap="round"/></svg>',
-                       'links': [('Praktijkscholen',
-                                  'https://www.jeugdeducatiefonds.nl/actueel/honderd-praktijkscholen-krijgen-extra-budget-om-geldzorgen-van-leerlingen-weg-te-nemen',
-                                  True)]},
-                      {'title': 'Buurtoplossingen kunnen tegelijk sociaal én praktisch werken',
-                       'text': 'De Rotterdamse buurtkoelkast helpt mensen met een kleine beurs en voorkomt voedselverspilling. Na jaren '
-                               'gebruik komen er extra locaties bij — een teken dat een klein lokaal initiatief kan doorgroeien.',
-                       'icon': '<svg viewBox="0 0 32 32" fill="none"><rect x="9" y="4" width="14" height="24" rx="2" stroke="currentColor" '
-                               'stroke-width="2.1"/><path d="M9 13h14M13 8v2M13 17v3" stroke="currentColor" stroke-width="2.1" '
-                               'stroke-linecap="round"/></svg>',
-                       'links': [('Buurtkoelkast Rotterdam',
-                                  'https://eenvandaag.avrotros.nl/artikelen/eten-delen-en-verspilling-tegengaan-rotterdamse-buurtkoelkast-groot-succes-164827',
-                                  True)]},
-                      {'title': 'Laagdrempelige hulp schuift dichter naar de leefwereld van mensen',
-                       'text': 'Bladel maakt geld vrij voor een herstelcentrum waar mensen zonder zware toegangsdrempels aan herstel '
-                               'kunnen werken. Dat past bij een bredere lijn waarin ondersteuning eerder en dichterbij wordt '
-                               'georganiseerd.',
-                       'icon': '<svg viewBox="0 0 32 32" fill="none"><path d="M16 27C7 21 5 16 5 11c0-4 3-7 7-7 2 0 4 1 5 3 1-2 3-3 5-3 4 '
-                               '0 7 3 7 7 0 5-4 10-13 16Z" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"/></svg>',
-                       'links': [('Herstelzorg Bladel', '/artikelen/2026-10-01/bladel-subsidie-laagdrempelige-herstelzorg/', False)]}]},
+ 'Cultuur': {
+        "lead": 'Van lichtkunst op straat tot brieven in het archief: dit dossier volgt hoe kunst publiek bereikt en hoe erfgoed wordt teruggevonden, bewaard en toegankelijk gemaakt.',
+        "signals_title": 'Kunst, archieven en erfgoed',
+        "signals": [
+            {
+                "title": 'Kunst voor publiek',
+                "text": 'Tijdens GLOW verandert Eindhoven in een gratis route langs lichtkunst. Op het Nederlands Film Festival worden publieksprijzen toegekend aan de best bezochte Nederlandse speelfilm en documentaire.',
+                "icon": '<svg viewBox="0 0 32 32" fill="none"><path d="M6 7h8c3 0 5 2 5 5v14c0-3-2-5-5-5H6V7Zm20 0h-8c-3 0-5 2-5 5" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"/></svg>',
+                "links": [
+                    ('Even naar buiten: Eindhoven wordt een gratis museum van licht', '/artikelen/2026-11-09/glow-gratis-lichtkunst/', False),
+                    ('Voor de Meisjes en Mama’ku winnen Gouden Kalf van het Publiek', 'https://www.filmfestival.nl/nieuws/voor-de-meisjes-en-mamaku-van-jakarta-tot-de-molukken-ontvangen-gouden-kalf-van-het-publiek-2026-voor-best-bezochte-nederlandse-speelfilm-en-documentaire', True),
+                ],
+            },
+            {
+                "title": 'Boeken en brieven',
+                "text": 'Een verloren gewaand Erasmusboek is terug in Rotterdam. De brieven van de familie Van Ewsum worden beter leesbaar en toegankelijk gemaakt.',
+                "icon": '<svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="12" r="7" stroke="currentColor" stroke-width="2.1"/><path d="m12 18-2 9 6-4 6 4-2-9" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"/></svg>',
+                "links": [
+                    ('Vier eeuwen zoek: verloren gewaand Erasmusboek duikt weer op', '/artikelen/2026-10-22/erasmusboek-terug-in-rotterdam/', False),
+                    ('Eeuwenoude brieven krijgen weer een leesbare stem', '/artikelen/2026-10-19/van-ewsum-brieven-toegankelijk/', False),
+                ],
+            },
+            {
+                "title": 'Erfgoed beschermen en teruggeven',
+                "text": 'In Moldavië is een historische klokkentoren na restauratie heropend. Het Allard Pierson gaf een geroofde vaas terug aan Sicilië.',
+                "icon": '<svg viewBox="0 0 32 32" fill="none"><rect x="5" y="7" width="22" height="15" rx="2" stroke="currentColor" stroke-width="2.1"/><path d="M11 27h10M16 22v5" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"/></svg>',
+                "links": [
+                    ('Vier eeuwen oude klokkentoren in Moldavië gerestaureerd en heropend', '/artikelen/2026-10-12/moldavie-klokkentoren-gerestaureerd/', False),
+                    ('Allard Pierson geeft geroofde vaas vrijwillig terug aan Sicilië', '/artikelen/2026-10-08/allard-pierson-vaas-terug-sicilie/', False),
+                ],
+            },
+        ],
+    },
+ 'Economie': {
+        "lead": 'Dit dossier volgt wat veranderingen in inkomen, handel en productie betekenen voor huishoudens en bedrijven. De verhalen lopen van pensioenbesluiten tot de banen achter de Nederlandse export.',
+        "signals_title": 'Inkomen, werk en productie',
+        "signals": [
+            {
+                "title": 'Inkomen en regelingen',
+                "text": 'Pensioenfondsen in zorg, bouw en techniek verhogen pensioenen. Een rondreizende camper helpt mensen na te gaan op welke regelingen zij mogelijk recht hebben.',
+                "icon": '<svg viewBox="0 0 32 32" fill="none"><path d="M5 26V7M5 26h22M9 22l5-6 4 3 8-10" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+                "links": [
+                    ('Pensioenen in zorg, bouw en techniek gaan iets omhoog', '/artikelen/2026-11-12/pensioenen-in-zorg-bouw-en-techniek-gaan-iets-omhoog/', False),
+                    ('Een roze camper helpt je ontdekken welk geld je laat liggen', '/artikelen/2026-11-09/roze-camper-potjes-check/', False),
+                ],
+            },
+            {
+                "title": 'Handel en werk',
+                "text": 'De uitvoer van diensten draagt bij aan Nederlandse exportbanen. De cijfers over de uitvoer van goederen geven een afzonderlijk beeld van de handel.',
+                "icon": '<svg viewBox="0 0 32 32" fill="none"><path d="M5 9h19a3 3 0 0 1 3 3v13H5V9Z" stroke="currentColor" stroke-width="2.1"/><path d="M5 9 21 5v4M20 15h7v6h-7a3 3 0 0 1 0-6Z" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"/></svg>',
+                "links": [
+                    ('Dienstenexport draagt een steeds groter deel van de Nederlandse exportbanen', '/artikelen/2026-11-05/dienstenexport-banen-nederland/', False),
+                    ('Nederlandse goederenexport groeit in augustus met bijna vijf procent', '/artikelen/2026-10-12/goederenexport-augustus-groeit/', False),
+                ],
+            },
+            {
+                "title": 'Productie en grondstoffen',
+                "text": 'De industrie produceerde in augustus meer dan een jaar eerder. Een inzamelprogramma voor matrassen laat zien hoe gebruikte materialen opnieuw beschikbaar komen.',
+                "icon": '<svg viewBox="0 0 32 32" fill="none"><path d="m6 11 10-5 10 5-10 5-10-5Z" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"/><path d="M6 11v11l10 5 10-5V11M16 16v11" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"/></svg>',
+                "links": [
+                    ('Nederlandse industrie groeit het sterkst in ruim vier jaar', '/artikelen/2026-10-15/industrieproductie-augustus-2026/', False),
+                    ('63% van oude matrassen ingezameld voor een nieuw leven', '/artikelen/2026-10-29/matrassen/', False),
+                ],
+            },
+        ],
+    },
+ 'Energie & innovatie': {
+        "lead": 'Dit dossier volgt toepassingen voor stroom, warmte en hergebruik van materialen. De verhalen laten zien welke technieken al worden gebruikt en welke nog in ontwikkeling zijn.',
+        "signals_title": 'Stroom, warmte en hergebruik',
+        "signals": [
+            {
+                "title": 'Stroom waar die nodig is',
+                "text": 'Bedrijven stemmen hun stroomgebruik af op de ruimte op het net. Op een afgelegen eiland levert zonnestroom energie aan een school en een zorgpost.',
+                "icon": '<svg viewBox="0 0 32 32" fill="none"><path d="M12 5h8M14 5v8L7 25h18l-7-12V5" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 21h10" stroke="currentColor" stroke-width="2.1"/></svg>',
+                "links": [
+                    ('Bedrijven gebruiken het stroomnet steeds flexibeler', '/artikelen/2026-10-05/bedrijven-gebruiken-stroomnet-steeds-flexibeler/', False),
+                    ('Zonnestroom houdt de zorgpost en school op een afgelegen eiland draaiende', '/artikelen/2026-10-22/zonnestroom-houdt-zorgpost-open/', False),
+                ],
+            },
+            {
+                "title": 'Warmte en energie uit lokale bronnen',
+                "text": 'In Amsterdam is er een plan om een pand te verwarmen met warmte uit een gracht. In Harlingen gebruikt een fabriek afvallucht om biogas te maken.',
+                "icon": '<svg viewBox="0 0 32 32" fill="none"><circle cx="8" cy="22" r="5" stroke="currentColor" stroke-width="2"/><circle cx="24" cy="22" r="5" stroke="currentColor" stroke-width="2"/><path d="m8 22 6-10 5 10H8Zm6-10h6l4 10M12 8h5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+                "links": [
+                    ('Een eeuwenoud Amsterdams pand krijgt straks warmte uit de gracht', '/artikelen/2026-10-22/warmte-uit-amsterdamse-gracht/', False),
+                    ('Een fabriek in Harlingen maakt energie van zijn eigen afvallucht', '/artikelen/2026-10-26/harlingen-biogas-uit-fabriekslucht/', False),
+                ],
+            },
+            {
+                "title": 'Materialen opnieuw gebruiken',
+                "text": 'Een methode wint grondstoffen terug uit oude siliconen. Een ander project gebruikt afgedankt plastic als materiaal voor bouwstenen.',
+                "icon": '<svg viewBox="0 0 32 32" fill="none"><rect x="8" y="8" width="16" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="M12 12h8v8h-8zM3 11h5M3 16h5M3 21h5M24 11h5M24 16h5M24 21h5M11 3v5M16 3v5M21 3v5M11 24v5M16 24v5M21 24v5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>',
+                "links": [
+                    ('Van oude siliconen terug naar grondstof voor nieuw materiaal', '/artikelen/2026-11-05/siliconen-grondstof-terugwinnen/', False),
+                    ('Van afgedankt plastic naar nieuwe bouwstenen', '/artikelen/2026-10-29/plastic/', False),
+                ],
+            },
+        ],
+    },
+ 'Mens': {
+        "lead": 'Hoe vinden mensen steun bij wonen, leren en zorgen voor een ander? Dit dossier volgt initiatieven van buurtgenoten, scholen en organisaties in Nederland en daarbuiten.',
+        "signals_title": 'Samenleven, leren en zorgen',
+        "signals": [
+            {
+                "title": 'Wonen en buurtcontact',
+                "text": 'Een landgoed in Zeist biedt tijdelijk onderdak aan woningzoekenden. In Schiebroek brengt een buurtmoestuin bewoners samen rond het verbouwen en delen van eten.',
+                "icon": '<svg viewBox="0 0 32 32" fill="none"><path d="M5 17c4 0 5 3 8 3h6c2 0 3 1 3 3s-2 3-4 3h-7c-3 0-5-2-7-4M27 15c-4 0-5 3-8 3h-4" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"/><path d="M12 10c0-3 2-5 4-5s4 2 4 5c0 4-4 6-4 6s-4-2-4-6Z" stroke="currentColor" stroke-width="2.1"/></svg>',
+                "links": [
+                    ('Een landgoed wordt tijdelijk thuis voor honderd woningzoekenden', '/artikelen/2026-11-09/landgoed-zeist-tijdelijk-thuis/', False),
+                    ('Van eigen moestuin naar samen aan tafel in Schiebroek', '/artikelen/2026-10-29/buurtmoestuin-schiebroek/', False),
+                ],
+            },
+            {
+                "title": 'Leren en werken',
+                "text": 'In Jordanië helpt een programma leerlingen met leerachterstand. Nederlandse jongeren krijgen via Ready2Work een leerwerkplek bij lokale ondernemers.',
+                "icon": '<svg viewBox="0 0 32 32" fill="none"><path d="m4 12 12-6 12 6-12 6-12-6Z" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"/><path d="M9 15v8c4 3 10 3 14 0v-8M28 12v9" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"/></svg>',
+                "links": [
+                    ('Jordanië start een programma tegen leerachterstand op 300 scholen', '/artikelen/2026-11-12/jordani-helpt-leerlingen-op-300-scholen-hun-achterstand-inhalen/', False),
+                    ('Van thuiszitten naar een leerwerkplek bij de buurtondernemer', '/artikelen/2026-11-09/ready2work-jongeren-leerwerkplekken/', False),
+                ],
+            },
+            {
+                "title": 'Zorg en steun dichtbij',
+                "text": 'Jouke helpt studenten die naast hun opleiding mantelzorg geven. Een ander initiatief helpt postbezorgers om signalen uit de buurt door te geven.',
+                "icon": '<svg viewBox="0 0 32 32" fill="none"><rect x="9" y="4" width="14" height="24" rx="2" stroke="currentColor" stroke-width="2.1"/><path d="M9 13h14M13 8v2M13 17v3" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"/></svg>',
+                "links": [
+                    ('Portret: Jouke helpt studenten die ook mantelzorger zijn', '/artikelen/2026-11-12/jouke-wecare/', False),
+                    ('De postbezorger ziet soms wat anderen niet zien, en kan hulp inschakelen', '/artikelen/2026-10-22/bezorgers-kijken-om-naar-buurt/', False),
+                ],
+            },
+        ],
+    },
  'Natuur & klimaat': {
         "lead": 'Dit dossier volgt hoe leefgebieden worden hersteld, hoe soorten worden beschermd en wat metingen laten zien over uitstoot en waterkwaliteit. De verhalen komen uit Nederland en de rest van de wereld.',
         "signals_title": 'Natuurherstel, soortenbescherming en uitstoot',
@@ -1368,98 +1315,72 @@ TOPIC_DOSSIERS = {'Gezondheid': {
             },
         ],
     },
- 'Wetenschap': {'signals_title': 'Dit zien we de afgelopen weken gebeuren',
-                'signals_intro': 'Vier lijnen waarin nieuwe meetmethoden, AI en ruimteonderzoek het zicht op complexe systemen vergroten.',
-                'why_title': 'Zo zie je hoe wetenschap stap voor stap meer zichtbaar en meetbaar maakt',
-                'why_text': 'Wetenschappelijke vooruitgang is vaak geen eureka-moment maar een betere meting, slimmer model of '
-                            'nauwkeuriger instrument. Door die verhalen naast elkaar te zetten zie je hoe kennis zich praktisch opbouwt.',
-                'signals': [{'title': 'AI wordt steeds vaker een onderzoeksinstrument',
-                             'text': 'Virtuele cellen met 4D-AI kunnen reacties op medicijnen voorspellen en AI helpt microscopen sneller '
-                                     'relevante nanoschaaldetails te vinden. De gemene deler: minder zoeken op goed geluk, meer gericht '
-                                     'meten.',
-                             'icon': '<svg viewBox="0 0 32 32" fill="none"><circle cx="11" cy="12" r="6" stroke="currentColor" '
-                                     'stroke-width="2"/><circle cx="21" cy="20" r="7" stroke="currentColor" stroke-width="2"/><circle '
-                                     'cx="10" cy="11" r="1.5" fill="currentColor"/><circle cx="22" cy="19" r="2" '
-                                     'fill="currentColor"/></svg>',
-                             'links': [('Virtuele cellen', 'https://phys.org/news/2026-09-virtual-cells-built-4d-ai.html', True),
-                                       ('AI-microscopie',
-                                        'https://phys.org/news/2026-09-ai-microscopes-nanoscale-features-sample.html',
-                                        True)]},
-                            {'title': 'Ruimtemissies halen meer informatie uit slimme navigatie',
-                             'text': 'Juice gebruikte een aardpassage om met weinig brandstof beter op koers te komen naar Jupiter. '
-                                     'Perseverance vond op Mars tegelijk aanwijzingen voor een complexer oud watersysteem dan eerder '
-                                     'gedacht.',
-                             'icon': '<svg viewBox="0 0 32 32" fill="none"><path d="M18 5c5 1 8 4 9 9l-8 8-9-9 8-8Z" stroke="currentColor" '
-                                     'stroke-width="2.1" stroke-linejoin="round"/><circle cx="20" cy="12" r="2" stroke="currentColor" '
-                                     'stroke-width="1.8"/><path d="m11 19-5 2 5-8M18 22l-2 5 8-5M8 24l-2 2" stroke="currentColor" '
-                                     'stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg>',
-                             'links': [('Juice', '/artikelen/2026-10-01/juice-aardpassage-koers-jupiter/', False),
-                                       ('Water op Mars',
-                                        'https://www.nasa.gov/solar-system/planets/mars/nasa-discovery-reveals-complex-water-systems-on-early-mars/',
-                                        True)]},
-                            {'title': 'Techniek helpt expertise toegankelijker te maken',
-                             'text': "Slimme beeldbegeleiding hielp onervaren gebruikers betere trauma-echo's te maken. Bij paarden wordt "
-                                     'AI onderzocht om subtiele bewegingsafwijkingen en mogelijke kreupelheid eerder te herkennen.',
-                             'icon': '<svg viewBox="0 0 32 32" fill="none"><path d="M5 11V6h5M22 6h5v5M27 21v5h-5M10 26H5v-5" '
-                                     'stroke="currentColor" stroke-width="2.1" stroke-linecap="round"/><path d="M9 17h4l2-5 4 10 2-5h3" '
-                                     'stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg>',
-                             'links': [('Trauma-echo',
-                                        'https://medicalxpress.com/news/2026-09-anatomical-guidance-novice-users-trauma.html',
-                                        True),
-                                       ('AI en kreupelheid',
-                                        'https://www.uu.nl/nieuws/is-mijn-paard-kreupel-ai-kan-helpen-bij-het-vinden-van-het-antwoord',
-                                        True)]},
-                            {'title': 'Laboratoriummodellen worden realistischer, maar nuance blijft nodig',
-                             'text': 'Onderzoek met een kunstmatige darm liet zien hoe stoffen uit blauwe bessen en bramen een '
-                                     'ontstekingsreactie kunnen beïnvloeden. Zulke modellen geven nieuwe aanwijzingen, zonder dat daarmee '
-                                     'meteen een effect bij mensen is bewezen.',
-                             'icon': '<svg viewBox="0 0 32 32" fill="none"><path d="m13 5 5 5-4 4-5-5 4-4ZM15 13c4 2 6 5 6 8M8 27h18M11 '
-                                     '22h13M9 9l-3 5 5 5" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" '
-                                     'stroke-linejoin="round"/></svg>',
-                             'links': [('Kunstmatige darm',
-                                        'https://www.wur.nl/nl/nieuws/blauwe-bessen-en-bramen-remmen-ontstekingsreactie-kunstmatige-darm',
-                                        True)]}]},
- 'Sport': {'signals_title': 'Dit zien we de afgelopen weken gebeuren',
-           'signals_intro': 'Vier lijnen waarin prestaties, professionalisering en sportinfrastructuur elkaar versterken.',
-           'why_title': 'Zo zie je sport als meer dan alleen de uitslag van vandaag',
-           'why_text': 'Records en titels zijn momentopnames. Door ook investeringen, evenementen en professionalisering mee te nemen zie '
-                       'je wat er achter prestaties verandert — en waarom sommige ontwikkelingen langer meegaan dan één wedstrijd.',
-           'signals': [{'title': 'Vrouwenvoetbal groeit door structurele investering',
-                        'text': 'Clubs in Engeland en de Verenigde Staten investeren in eigen stadions, trainingscomplexen en '
-                                'vrouwengezondheid. Dat maakt de groei van vrouwenvoetbal minder afhankelijk van incidenteel succes.',
-                        'icon': '<svg viewBox="0 0 32 32" fill="none"><ellipse cx="16" cy="17" rx="11" ry="7" stroke="currentColor" '
-                                'stroke-width="2"/><ellipse cx="16" cy="17" rx="6" ry="3" stroke="currentColor" stroke-width="2"/><path '
-                                'd="M5 17v6c0 4 22 4 22 0v-6" stroke="currentColor" stroke-width="2"/></svg>',
-                        'links': [('Investeringen vrouwenvoetbal',
-                                   'https://nos.nl/artikel/2631231-zo-maken-engeland-en-de-vs-vrouwenvoetbal-groot-van-eigen-stadion-tot-beautyruimtes',
-                                   True)]},
-                       {'title': 'Vrouwen blijven oude records aanscherpen',
-                        'text': 'Bij de Dam tot Damloop sneuvelde een vrouwenrecord dat 39 jaar had standgehouden. Eerder verbeterde Femke '
-                                'Broeders-Bol haar eigen Nederlandse record op de 800 meter fors.',
-                        'icon': '<svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="18" r="10" stroke="currentColor" '
-                                'stroke-width="2.1"/><path d="M13 4h6M16 8V4M24 10l3-3M16 18l5-4" stroke="currentColor" stroke-width="2.1" '
-                                'stroke-linecap="round"/></svg>',
-                        'links': [('Dam tot Damloop',
-                                   'https://nos.nl/artikel/2631728-ethiopische-ayichew-verbreekt-39-jaar-oud-parcoursrecord-dam-tot-damloop',
-                                   True),
-                                  ('800 meter', 'https://nos.nl/l/2628564', True)]},
-                       {'title': 'Nederlandse teams blijven internationaal meedoen om prijzen',
-                        'text': 'De Nederlandse 3x3-basketbalsters werden opnieuw Europees kampioen. Zulke prestaties laten zien dat '
-                                "succes niet alleen op individueel niveau, maar ook in teamprogramma's terugkomt.",
-                        'icon': '<svg viewBox="0 0 32 32" fill="none"><path d="m10 4 6 9 6-9M22 4l-6 9-6-9" stroke="currentColor" '
-                                'stroke-width="2.1" stroke-linejoin="round"/><circle cx="16" cy="21" r="7" stroke="currentColor" '
-                                'stroke-width="2.1"/></svg>',
-                        'links': [('3x3-basketbal', 'https://nos.nl/l/2630825', True)]},
-                       {'title': 'Grote sportevenementen worden breder en inclusiever georganiseerd',
-                        'text': 'Groningen en Drenthe kregen het WK wielrennen én para-cycling van 2034 toegewezen. Dat koppelt een groot '
-                                'internationaal evenement expliciet aan zowel reguliere als aangepaste sport.',
-                        'icon': '<svg viewBox="0 0 32 32" fill="none"><circle cx="8" cy="22" r="5" stroke="currentColor" '
-                                'stroke-width="2"/><circle cx="24" cy="22" r="5" stroke="currentColor" stroke-width="2"/><path d="m8 22 '
-                                '6-10 5 10H8Zm6-10h6l4 10M12 8h5" stroke="currentColor" stroke-width="2" stroke-linecap="round" '
-                                'stroke-linejoin="round"/></svg>',
-                        'links': [('WK wielrennen en para-cycling',
-                                   'https://gemeente.groningen.nl/wk-wielrennen-en-para-cycling-naar-groningen-en-drenthe-2034',
-                                   True)]}]}}
+ 'Wetenschap': {
+        "lead": 'Dit dossier volgt hoe onderzoekers meten, voorspellen en waarnemen. De voorbeelden lopen van sensoren op een maïsplant tot metingen en manoeuvres in de ruimte.',
+        "signals_title": 'Meten, voorspellen en ruimteonderzoek',
+        "signals": [
+            {
+                "title": 'Nieuwe manieren om te meten',
+                "text": 'Sensoren volgen hoe een maïsplant groeit. Bij onderzoek naar protheses maken kleine magneten bewegingen van spieren meetbaar.',
+                "icon": '<svg viewBox="0 0 32 32" fill="none"><circle cx="11" cy="12" r="6" stroke="currentColor" stroke-width="2"/><circle cx="21" cy="20" r="7" stroke="currentColor" stroke-width="2"/><circle cx="10" cy="11" r="1.5" fill="currentColor"/><circle cx="22" cy="19" r="2" fill="currentColor"/></svg>',
+                "links": [
+                    ('Nieuwe sensoren volgen hoe een maïsplant groeit', '/artikelen/2026-11-05/sensoren-groei-mais/', False),
+                    ('Piepkleine magneten maken spierbewegingen beter meetbaar', '/artikelen/2026-10-29/magneten-spierbeweging-prothese/', False),
+                ],
+            },
+            {
+                "title": 'Data en voorspellingen',
+                "text": 'Een databank helpt onderzoekers de risico’s van medicijnresten in te schatten. Een weermodel gebruikt AI voor verwachtingen op een termijn van meerdere weken.',
+                "icon": '<svg viewBox="0 0 32 32" fill="none"><path d="M18 5c5 1 8 4 9 9l-8 8-9-9 8-8Z" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"/><circle cx="20" cy="12" r="2" stroke="currentColor" stroke-width="1.8"/><path d="m11 19-5 2 5-8M18 22l-2 5 8-5M8 24l-2 2" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+                "links": [
+                    ('Nieuwe databank helpt risico’s van medicijnresten inschatten', '/artikelen/2026-11-12/nieuwe-databank-helpt-risico-s-van-medicijnresten-inschatten/', False),
+                    ('AI-model verdubbelt nauwkeurigheid van weersverwachtingen tot zes weken vooruit', '/artikelen/2026-10-15/weer-twee-zes-weken-beter-voorspeld/', False),
+                ],
+            },
+            {
+                "title": 'Navigeren in de ruimte',
+                "text": 'Juice gebruikte een passage langs de aarde om koers te zetten naar Jupiter. Een ESA-satelliet test hoe sneller kan worden gereageerd op mogelijke botsingen in de ruimte.',
+                "icon": '<svg viewBox="0 0 32 32" fill="none"><path d="M5 11V6h5M22 6h5v5M27 21v5h-5M10 26H5v-5" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"/><path d="M9 17h4l2-5 4 10 2-5h3" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+                "links": [
+                    ('Aardpassage zet ruimtesonde Juice met weinig brandstof beter op koers naar Jupiter', '/artikelen/2026-10-01/juice-aardpassage-koers-jupiter/', False),
+                    ('Nieuwe ESA-satelliet test snellere botsingsvermijding in steeds drukkere ruimte', '/artikelen/2026-10-05/esa-gomx5-snellere-botsingsvermijding-ruimte/', False),
+                ],
+            },
+        ],
+    },
+ 'Sport': {
+        "lead": 'Van een wereldrecord onder water tot een late start in de wedstrijdsport: dit dossier volgt prestaties, persoonlijke sportverhalen en de organisatie van wedstrijden.',
+        "signals_title": 'Prestaties, sportloopbanen en wedstrijden',
+        "signals": [
+            {
+                "title": 'Records in het water en op de weg',
+                "text": 'Sadurska dook zonder vinnen naar een wereldrecord. Bij de Dam tot Damloop werd het parcoursrecord bij de vrouwen na 39 jaar verbeterd.',
+                "icon": '<svg viewBox="0 0 32 32" fill="none"><ellipse cx="16" cy="17" rx="11" ry="7" stroke="currentColor" stroke-width="2"/><ellipse cx="16" cy="17" rx="6" ry="3" stroke="currentColor" stroke-width="2"/><path d="M5 17v6c0 4 22 4 22 0v-6" stroke="currentColor" stroke-width="2"/></svg>',
+                "links": [
+                    ('Sadurska duikt zonder vinnen naar een wereldrecord van 90 meter', '/artikelen/2026-11-12/sadurska-90-meter/', False),
+                    ('Dam tot Damloop krijgt na 39 jaar een nieuw parcoursrecord bij de vrouwen', 'https://nos.nl/artikel/2631728-ethiopische-ayichew-verbreekt-39-jaar-oud-parcoursrecord-dam-tot-damloop', True),
+                ],
+            },
+            {
+                "title": 'Beginnen en terugkeren',
+                "text": 'Frans haalde op zijn 87e WK-zilver, twee jaar nadat hij met zijn sport begon. Luca keerde na een kankertraject terug in de autocross.',
+                "icon": '<svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="18" r="10" stroke="currentColor" stroke-width="2.1"/><path d="M13 4h6M16 8V4M24 10l3-3M16 18l5-4" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"/></svg>',
+                "links": [
+                    ('Frans is 87, begon twee jaar geleden en pakt nu WK-zilver', '/artikelen/2026-11-09/frans-87-wk-zilver/', False),
+                    ('Na een zwaar kankertraject rijdt Luca weer races — en wordt kampioen', '/artikelen/2026-10-05/luca-terugkeer-autocross-na-kanker/', False),
+                ],
+            },
+            {
+                "title": 'Teams en toernooien',
+                "text": 'De Nederlandse 3x3-basketbalsters werden Europees kampioen. Groningen en Drenthe kregen het WK wielrennen en para-cycling van 2034 toegewezen.',
+                "icon": '<svg viewBox="0 0 32 32" fill="none"><path d="m10 4 6 9 6-9M22 4l-6 9-6-9" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"/><circle cx="16" cy="21" r="7" stroke="currentColor" stroke-width="2.1"/></svg>',
+                "links": [
+                    ('3x3-basketbalsters opnieuw Europees kampioen', 'https://nos.nl/l/2630825', True),
+                    ('WK wielrennen én para-cycling komen in 2034 naar Groningen en Drenthe', 'https://gemeente.groningen.nl/wk-wielrennen-en-para-cycling-naar-groningen-en-drenthe-2034', True),
+                ],
+            },
+        ],
+    }}
 
 def render_topic_signals(label):
     dossier = TOPIC_DOSSIERS.get(label) or {}
