@@ -1099,65 +1099,48 @@ TOPIC_DOSSIER_CSS = r"""
 }
 """
 
-TOPIC_DOSSIERS = {'Gezondheid': {'signals_title': 'Dit zien we de afgelopen weken gebeuren',
-                'signals_intro': 'Geen algemene conclusie over de gezondheidszorg, wel vier lijnen die terugkomen in de verhalen die '
-                                 'Positief nieuws recent selecteerde.',
-                'note': 'dit is redactionele duiding op basis van verhalen die eerder op Positief nieuws zijn geselecteerd. Het is geen '
-                        'medische trendanalyse en geen gezondheidsadvies. We formuleren alleen wat in meerdere recente verhalen terugkomt.',
-                'why_title': 'Zo zie je sneller wat er echt verandert',
-                'why_text': 'Losse nieuwsberichten vertellen wat er vandaag gebeurt. Door verhalen over langere tijd naast elkaar te '
-                            'zetten, zie je ook de grotere beweging: wat werkt, waar zorg eerder kan ingrijpen en welke verbeteringen '
-                            'langzaam breder beschikbaar worden. Zo hoef je niet zelf door weken aan losse artikelen heen om het grotere '
-                            'plaatje te zien.',
-                'signals': [{'title': 'Preventie laat soms heel meetbaar effect zien',
-                             'text': "Na de nieuwe RSV-immunisatie belandden in Nederlandse ziekenhuizen veel minder baby's met het virus "
-                                     'op de intensive care. Op Mauritius laten langlopende bevolkingsmetingen zien dat diabetes type 2 na '
-                                     'jaren van stijging is gedaald.',
-                             'icon': '<svg viewBox="0 0 32 32" fill="none"><path d="M16 4 25 8v7c0 6-3.8 10.2-9 '
-                                     '13-5.2-2.8-9-7-9-13V8l9-4Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path '
-                                     'd="m11.5 15 3 3 6-7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" '
-                                     'stroke-linejoin="round"/></svg>',
-                             'links': [('RSV-immunisatie',
-                                        'https://www.hartvannederland.nl/milieu-gezondheid/zorg/artikelen/babys-rs-virus-daalt-na-invoering-nieuwe-prik',
-                                        True),
-                                       ('Diabetes op Mauritius', '/artikelen/2026-10-01/mauritius-daling-diabetes-type-2/', False)]},
-                            {'title': 'Signaleren schuift steeds verder naar voren',
-                             'text': 'Bij een zeldzame kinderspierziekte bleken twee ontstekingseiwitten al ongeveer een jaar vóór een '
-                                     'zichtbare opvlamming te kunnen stijgen. Dat is nog geen brede klinische test, maar wel een voorbeeld '
-                                     "van zorg die risico's eerder probeert te herkennen.",
-                             'icon': '<svg viewBox="0 0 32 32" fill="none"><circle cx="14" cy="14" r="8" stroke="currentColor" '
-                                     'stroke-width="2.2"/><path d="m20 20 7 7M8 14h3l2-4 3 8 2-4h3" stroke="currentColor" '
-                                     'stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
-                             'links': [('Bloedwaarden bij kinderspierziekte',
-                                        '/artikelen/2026-09-28/bloedwaarden-opvlamming-kinderspierziekte-eerder-signaleren/',
-                                        False)]},
-                            {'title': 'Behandeling wordt gerichter — en herstel stopt niet altijd vroeg',
-                             'text': 'Een fase 3-studie liet een positief effect zien van een nieuw middel bij de zeldzame erfelijke vorm '
-                                     'FUS-ALS. En bij jonge volwassenen met aanhoudende knieklachten bleek intensieve revalidatie zelfs '
-                                     'één tot drie jaar na een kruisbandoperatie nog verbetering te kunnen geven.',
-                             'icon': '<svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="11" stroke="currentColor" '
-                                     'stroke-width="2"/><circle cx="16" cy="16" r="5.5" stroke="currentColor" stroke-width="2"/><path '
-                                     'd="M16 5v5M16 22v5M5 16h5M22 16h5" stroke="currentColor" stroke-width="2.2" '
-                                     'stroke-linecap="round"/><circle cx="16" cy="16" r="1.8" fill="currentColor" stroke="none"/></svg>',
-                             'links': [('FUS-ALS', 'https://www.als.nl/nieuws/goed-nieuws-als-onderzoek/', True),
-                                       ('Kruisbandrevalidatie',
-                                        '/artikelen/2026-10-01/gerichte-revalidatie-jaren-na-kruisbandoperatie/',
-                                        False)]},
-                            {'title': 'Vooruitgang gaat niet alleen over nieuwe medicijnen',
-                             'text': 'WHO breidde bewezen anticonceptie-opties uit en publiceerde een strategie om kinderkankermedicijnen '
-                                     'betrouwbaarder beschikbaar te maken. Zambia digitaliseert ondertussen vaccinvoorraden, zodat '
-                                     'tekorten sneller zichtbaar worden.',
-                             'icon': '<svg viewBox="0 0 32 32" fill="none"><rect x="5" y="8" width="10" height="16" rx="2" '
-                                     'stroke="currentColor" stroke-width="2"/><rect x="17" y="8" width="10" height="16" rx="2" '
-                                     'stroke="currentColor" stroke-width="2"/><path d="M10 13v6M7 16h6M22 12v8M19 16h6M15 16h2" '
-                                     'stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
-                             'links': [('Anticonceptie',
-                                        'https://www.who.int/news/item/23-09-2026-who-expands-safe-options-for-contraception',
-                                        True),
-                                       ('Kinderkankermedicijnen', 'https://www.who.int/publications/i/item/9789240125087', True),
-                                       ('Vaccinvoorraad Zambia',
-                                        'https://www.unicef.org/zambia/stories/paper-records-real-time-decision',
-                                        True)]}]},
+TOPIC_DOSSIERS = {'Gezondheid': {
+        "lead": 'Dit dossier volgt preventie, vroege opsporing, behandeling en toegang tot zorg in Nederland en daarbuiten. Bij onderzoek maken we onderscheid tussen een eerste aanwijzing en resultaten uit de zorgpraktijk.',
+        "signals_title": 'Preventie, onderzoek en toegang tot zorg',
+        "signals": [
+            {
+                "title": 'Preventie',
+                "text": 'In Barbados is de overdracht van hiv van moeder op kind teruggedrongen tot onder de WHO-drempel. In Nederland is seniorengym beoordeeld als aanpak voor valpreventie.',
+                "icon": '<svg viewBox="0 0 32 32" fill="none"><path d="M16 4 25 8v7c0 6-3.8 10.2-9 13-5.2-2.8-9-7-9-13V8l9-4Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="m11.5 15 3 3 6-7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+                "links": [
+                    ('Hiv-overdracht van moeder op kind in Barbados', "/artikelen/2026-11-12/barbados-hiv-moeder-kind/", False),
+                    ('Seniorengym voor valpreventie', "/artikelen/2026-10-05/seniorengym-klaar-landelijke-inzet-valpreventie/", False),
+                ],
+            },
+            {
+                "title": 'Vroege opsporing',
+                "text": 'De hielprik screent gericht op OCTN2-deficiëntie. Bij een zeldzame kinderspierziekte onderzoeken artsen of bloedwaarden een opvlamming eerder kunnen signaleren.',
+                "icon": '<svg viewBox="0 0 32 32" fill="none"><circle cx="14" cy="14" r="8" stroke="currentColor" stroke-width="2.2"/><path d="m20 20 7 7M8 14h3l2-4 3 8 2-4h3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+                "links": [
+                    ('Hielprik en OCTN2-deficiëntie', "/artikelen/2026-10-05/hielprik-octn2-deficientie-doelziekte/", False),
+                    ('Bloedwaarden bij een kinderspierziekte', "/artikelen/2026-09-28/bloedwaarden-opvlamming-kinderspierziekte-eerder-signaleren/", False),
+                ],
+            },
+            {
+                "title": 'Behandeling en revalidatie',
+                "text": 'Een vervolgonderzoek beschrijft hoe het vijf jaar na immuuntherapie ging met een specifieke groep patiënten met darmkanker. Ander onderzoek kijkt naar revalidatie bij aanhoudende klachten na een kruisbandoperatie.',
+                "icon": '<svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="11" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="16" r="5.5" stroke="currentColor" stroke-width="2"/><path d="M16 5v5M16 22v5M5 16h5M22 16h5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><circle cx="16" cy="16" r="1.8" fill="currentColor" stroke="none"/></svg>',
+                "links": [
+                    ('Vijf jaar follow-up na immuuntherapie bij darmkanker', "/artikelen/2026-11-02/darmkanker-immuuntherapie-vijf-jaar/", False),
+                    ('Revalidatie jaren na een kruisbandoperatie', "/artikelen/2026-10-01/gerichte-revalidatie-jaren-na-kruisbandoperatie/", False),
+                ],
+            },
+            {
+                "title": 'Toegang tot zorg',
+                "text": 'Egypte combineerde grootschalige opsporing van hepatitis C met behandeling. Onderzoek naar het bewaren van donorharten verkent hoe meer harten beschikbaar kunnen komen voor kinderen.',
+                "icon": '<svg viewBox="0 0 32 32" fill="none"><rect x="5" y="8" width="10" height="16" rx="2" stroke="currentColor" stroke-width="2"/><rect x="17" y="8" width="10" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="M10 13v6M7 16h6M22 12v8M19 16h6M15 16h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
+                "links": [
+                    ('Opsporing en behandeling van hepatitis C in Egypte', "/artikelen/2026-11-02/egypte-hepatitis-c-teruggedrongen/", False),
+                    ('Een bewaarmethode voor donorharten', "/artikelen/2026-10-08/donorhart-kinderen-bewaarmethode/", False),
+                ],
+            },
+        ],
+    },
  'Cultuur': {'signals_title': 'Dit zien we de afgelopen weken gebeuren',
              'signals_intro': 'Vier lijnen die terugkomen in recente verhalen over cultuur, erfgoed en media.',
              'why_title': 'Zo zie je cultuur als beweging, niet als losse agenda',
@@ -1344,28 +1327,47 @@ TOPIC_DOSSIERS = {'Gezondheid': {'signals_title': 'Dit zien we de afgelopen weke
                                '0 7 3 7 7 0 5-4 10-13 16Z" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"/></svg>',
                        'links': [('Herstelzorg Bladel', '/artikelen/2026-10-01/bladel-subsidie-laagdrempelige-herstelzorg/', False)]}]},
  'Natuur & klimaat': {
-                'signals_title': "Dit zien we de afgelopen weken gebeuren",
-                'signals_intro': "Vier grotere lijnen uit onze recente verhalen: herstel van leefgebieden, bescherming van soorten, slimmer samenleven met dieren en verbeteringen voor klimaat en milieu.",
-                'why_title': "Zo zie je dat natuurherstel meestal tijd, bescherming én slimme keuzes vraagt",
-                'why_text': "Een losse natuurfoto zegt weinig over structurele vooruitgang. Door herstelprojecten, soortenbescherming en nieuwe meetmethoden samen te volgen, wordt duidelijker welke aanpakken echt resultaat beginnen te geven.",
-                'signals': [
-                    {'title': "Gericht natuurherstel laat op uiteenlopende plekken resultaat zien",
-                     'text': "Na tien jaar bescherming vertoont de Schotse zeebodem tekenen van herstel. In de Korendijkse Slikken worden na aangepast waterbeheer meer weidevogelterritoria geteld. En op Madagaskar komen weer jonge mangroven op. Het zijn lokale successen; blijvend herstel vraagt tijd en vervolgmetingen.",
-                     'icon': "<svg viewBox=\"0 0 32 32\" fill=\"none\"><path d=\"M5 25C8 10 17 5 27 5c0 11-6 20-19 22\" stroke=\"currentColor\" stroke-width=\"2.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M8 25c6-7 11-11 18-17\" stroke=\"currentColor\" stroke-width=\"2.1\" stroke-linecap=\"round\"/></svg>",
-                     'links': [("Schotse zeebodem", "/artikelen/2026-10-01/summer-isles-zeeherstel-na-baggerverbod/", False), ("Weidevogels op de Slikken", "/artikelen/2026-10-15/korendijkse-slikken-meer-weidevogels/", False), ("Mangroven Madagaskar", "/artikelen/2026-10-22/mangroven-keren-terug-madagaskar/", False)]},
-                    {'title': "Bescherming biedt bedreigde diersoorten nieuwe kansen",
-                     'text': "Na vijftien jaar fok- en herstelwerk leven er weer zelfstandige wilde populaties van de Nieuw-Zeelandse wētāpunga. Een recordaantal kākāpō-kuikens en zes jonge rivierdolfijnen in de Mekong zijn eveneens hoopvol, al blijven deze soorten kwetsbaar.",
-                     'icon': "<svg viewBox=\"0 0 32 32\" fill=\"none\"><circle cx=\"10\" cy=\"10\" r=\"2\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"17\" cy=\"7\" r=\"2\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"24\" cy=\"11\" r=\"2\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"27\" cy=\"18\" r=\"2\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M9 24c0-4 3-7 7-8 4 1 8 4 8 8 0 3-3 4-6 3l-2-1-2 1c-3 1-5-1-5-3Z\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linejoin=\"round\"/></svg>",
-                     'links': [("Herstel van de wētāpunga", "/artikelen/2026-10-05/reuzenkrekel-wetapunga-herstel-fokprogramma/", False), ("Recordaantal kākāpō-kuikens", "https://www.smithsonianmag.com/smart-news/new-zealand-welcomes-a-record-90-kakapo-chicks-helping-the-worlds-chunkiest-parrot-species-rebound-from-the-brink-of-extinction-180989511/", True), ("Jonge rivierdolfijnen", "/artikelen/2026-10-22/zes-dolfijnenkalfjes-mekong/", False)]},
-                    {'title': "Gerichte maatregelen helpen mensen en dieren ruimte delen",
-                     'text': "Windparken op de Noordzee remmen hun wieken af tijdens voorspelde pieken in de vogeltrek. In Nepal helpen beschermde veekralen conflicten met sneeuwluipaarden voorkomen. En een ecotunnel op Schouwen wordt door allerlei dieren gebruikt. Hoe groot het effect van elke maatregel precies is, verschilt en vraagt soms verdere meting.",
-                     'icon': "<svg viewBox=\"0 0 32 32\" fill=\"none\"><path d=\"M5 20c6 1 9-2 11-6 3 4 7 5 11 4-3 7-9 9-15 7-3-1-5-3-7-5Z\" stroke=\"currentColor\" stroke-width=\"2.1\" stroke-linejoin=\"round\"/><path d=\"m20 12 3-4 1 5\" stroke=\"currentColor\" stroke-width=\"2.1\" stroke-linecap=\"round\"/></svg>",
-                     'links': [("Windparken en vogeltrek", "/artikelen/2026-10-26/windparken-ruimte-voor-vogeltrek/", False), ("Veekralen in Nepal", "/artikelen/2026-10-26/nepal-sneeuwluipaarden-vee/", False), ("Ecotunnel op Schouwen", "https://www.staatsbosbeheer.nl/wat-we-doen/nieuws/2026/09/ecotunnel-kop-van-schouwen", True)]},
-                    {'title': "Ook in klimaat en milieu zijn meetbare verbeteringen zichtbaar",
-                     'text': "In het Braziliaanse Amazonegebied daalde de ontbossing volgens voorlopige satellietcijfers met bijna 42 procent. Onderzoekers koppelen de verkeersheffing in Manhattan aan minder fijnstof, terwijl het geschatte vleesverbruik in Nederland in 2025 opnieuw daalde. Verschillende ontwikkelingen, met concrete resultaten én resterende uitdagingen.",
-                     'icon': "<svg viewBox=\"0 0 32 32\" fill=\"none\"><circle cx=\"16\" cy=\"16\" r=\"11\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M5 16h22M16 5c-4 3-6 7-6 11s2 8 6 11c4-3 6-7 6-11s-2-8-6-11Z\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linejoin=\"round\"/></svg>",
-                     'links': [("Minder ontbossing Amazone", "/artikelen/2026-10-19/amazonie-minder-ontbossing/", False), ("Schonere lucht Manhattan", "/artikelen/2026-10-12/manhattan-verkeersheffing-minder-fijnstof/", False), ("Minder vleesverbruik Nederland", "/artikelen/2026-10-15/vleesverbruik-nederland-daalt-2025/", False)]}
-                ]},
+        "lead": 'Dit dossier volgt hoe leefgebieden worden hersteld, hoe soorten worden beschermd en wat metingen laten zien over uitstoot en waterkwaliteit. De verhalen komen uit Nederland en de rest van de wereld.',
+        "signals_title": 'Natuurherstel, soortenbescherming en uitstoot',
+        "signals": [
+            {
+                "title": 'Herstel van leefgebieden',
+                "text": 'Op de Utrechtse Heuvelrug moet nieuwe natuur leefgebieden verbinden. Op Madagaskar komen jonge mangroven op nadat een geul is gedicht.',
+                "icon": '<svg viewBox="0 0 32 32" fill="none"><path d="M5 25C8 10 17 5 27 5c0 11-6 20-19 22" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 25c6-7 11-11 18-17" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"/></svg>',
+                "links": [
+                    ('Nieuwe natuur op de Utrechtse Heuvelrug', "/artikelen/2026-11-02/utrechtse-heuvelrug-35-hectare-natuur/", False),
+                    ('Mangroveherstel op Madagaskar', "/artikelen/2026-10-22/mangroven-keren-terug-madagaskar/", False),
+                ],
+            },
+            {
+                "title": 'Soorten in beeld',
+                "text": 'In Groningen is de gestreepte waterroofkever teruggevonden. Een inventarisatie in een Leids stadspark bracht ruim tweeduizend soorten in kaart.',
+                "icon": '<svg viewBox="0 0 32 32" fill="none"><circle cx="10" cy="10" r="2" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="7" r="2" stroke="currentColor" stroke-width="2"/><circle cx="24" cy="11" r="2" stroke="currentColor" stroke-width="2"/><circle cx="27" cy="18" r="2" stroke="currentColor" stroke-width="2"/><path d="M9 24c0-4 3-7 7-8 4 1 8 4 8 8 0 3-3 4-6 3l-2-1-2 1c-3 1-5-1-5-3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>',
+                "links": [
+                    ('Gestreepte waterroofkever in Groningen', "/artikelen/2026-11-12/waterroofkever-onnerpolder/", False),
+                    ('Soorten tellen in een Leids stadspark', "/artikelen/2026-11-12/meer-dan-tweeduizend-soorten-gevonden-in-n-leids-stadspark/", False),
+                ],
+            },
+            {
+                "title": 'Ruimte voor trekkende dieren',
+                "text": 'Bij Maurik helpen vissers palingen langs een waterkrachtcentrale. Op Corvo gaat verlichting uit om jonge zeevogels op weg naar zee te helpen.',
+                "icon": '<svg viewBox="0 0 32 32" fill="none"><path d="M5 20c6 1 9-2 11-6 3 4 7 5 11 4-3 7-9 9-15 7-3-1-5-3-7-5Z" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"/><path d="m20 12 3-4 1 5" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"/></svg>',
+                "links": [
+                    ('Palingen helpen bij de centrale van Maurik', "/artikelen/2026-11-05/palingen-veilig-langs-maurik/", False),
+                    ('Minder kunstlicht voor jonge zeevogels op Corvo', "/artikelen/2026-11-05/corvo-licht-uit-zeevogels/", False),
+                ],
+            },
+            {
+                "title": 'Uitstoot en waterkwaliteit',
+                "text": 'De cijfers over Nederlandse CO₂-uitstoot geven een momentopname naast de economische cijfers. Rond Winterswijk is gemeten hoeveel contrastvloeistof na een ziekenhuisproject nog in het water terechtkomt.',
+                "icon": '<svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="11" stroke="currentColor" stroke-width="2"/><path d="M5 16h22M16 5c-4 3-6 7-6 11s2 8 6 11c4-3 6-7 6-11s-2-8-6-11Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>',
+                "links": [
+                    ('Nederlandse CO₂-uitstoot en economische groei', "/artikelen/2026-11-12/nederlandse-economie-groeit-co-uitstoot-daalt/", False),
+                    ('Contrastvloeistof in het water rond Winterswijk', "/artikelen/2026-11-02/winterswijk-contrastvloeistof-water/", False),
+                ],
+            },
+        ],
+    },
  'Wetenschap': {'signals_title': 'Dit zien we de afgelopen weken gebeuren',
                 'signals_intro': 'Vier lijnen waarin nieuwe meetmethoden, AI en ruimteonderzoek het zicht op complexe systemen vergroten.',
                 'why_title': 'Zo zie je hoe wetenschap stap voor stap meer zichtbaar en meetbaar maakt',
@@ -1465,6 +1467,7 @@ def render_topic_signals(label):
     if not signals:
         return ""
 
+    featured = bool(dossier.get("lead"))
     cards = []
     for signal in signals:
         links = []
@@ -1488,15 +1491,15 @@ def render_topic_signals(label):
     return f"""
     <section class="topic-signals">
       <div class="shell">
-        <div class="topic-signals-head">
-          <span class="topic-signals-no">01</span>
+        <div class="topic-signals-head"{' style="display:block"' if featured else ''}>
+          {'<span class="topic-signals-no">01</span>' if not featured else ''}
           <div>
             <h2>{esc(dossier.get("signals_title") or "Dit zien we de afgelopen weken gebeuren")}</h2>
-            <p class="topic-signals-intro">{esc(dossier.get("signals_intro") or "Lijnen die terugkomen in de verhalen die Positief nieuws recent selecteerde.")}</p>
+            {f'<p class="topic-signals-intro">{esc(dossier.get("signals_intro") or "Lijnen die terugkomen in de verhalen die Positief nieuws recent selecteerde.")}</p>' if not featured else ''}
           </div>
         </div>
         <div class="topic-signal-grid">{''.join(cards)}</div>
-        <p class="topic-signal-note"><strong>Hoe dit blok werkt:</strong> {esc(note)}</p>
+        {f'<p class="topic-signal-note"><strong>Hoe dit blok werkt:</strong> {esc(note)}</p>' if not featured else ''}
       </div>
     </section>
     """
@@ -1540,7 +1543,8 @@ def render_topic_page(topic):
         f"Lees positief nieuws over {label.lower()}. "
         "Nederlandse en internationale verhalen, met de nieuwste ontwikkelingen bovenaan."
     )
-    lead = seo.get("lead") or desc
+    dossier_lead = TOPIC_DOSSIERS.get(label, {}).get("lead")
+    lead = dossier_lead or seo.get("lead") or desc
     intro = seo.get("intro") or [desc]
     total = len(topic["nl"]) + len(topic["int"])
     updated = fmt_date_short(topic["latest"]) if topic.get("latest") else ""
@@ -1581,6 +1585,8 @@ def render_topic_page(topic):
         """
 
     archive_title = f"Het laatste positieve nieuws over {label.lower()}"
+    archive_link = '<p class="small"><a href="#nieuwsarchief">Direct naar het nieuwsarchief</a></p>' if dossier_lead else ""
+    archive_id = ' id="nieuwsarchief"' if dossier_lead else ""
 
     return f"""<!DOCTYPE html>
 <html lang="nl">
@@ -1614,10 +1620,12 @@ def render_topic_page(topic):
           <span>Nederland + wereld</span>
           {f'<span class="sep">·</span><span>Bijgewerkt {esc(updated)}</span>' if updated else ''}
         </div>
+        {archive_link}
       </div>
     </section>
 
-    <section class="section topic-archive">
+    {signals_html if dossier_lead else ""}
+    <section class="section topic-archive"{archive_id}>
       <div class="shell">
         <div class="topic-archive-heading">
           <h2>{esc(archive_title)}</h2>
@@ -1628,9 +1636,9 @@ def render_topic_page(topic):
       </div>
     </section>
 
-    {signals_html}
+    {signals_html if not dossier_lead else ""}
     {context_html}
-    {render_topic_why(label)}
+    {render_topic_why(label) if not dossier_lead else ""}
   </main>
   <footer>Positief nieuws · Dit gebeurt ook. · <a href="/contact/" onclick="if(window.sa_event)window.sa_event('contact_click')">Contact</a> · <a href="/tip/" onclick="if(window.sa_event)window.sa_event('tip_redactie_click')">Tip de redactie</a>{badge_html()}</footer>
   {analytics_html({'page_type':'topic','topic':slug,'category':label})}
