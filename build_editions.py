@@ -1969,7 +1969,11 @@ def refresh_branding():
             continue
         markup = re.sub(r'<link\b(?=[^>]*\brel\s*=\s*[\'"](?:icon|shortcut icon|apple-touch-icon|manifest)[\'"])[^>]*>\s*', '', markup, flags=re.I)
         markup = re.sub(r'<meta\b(?=[^>]*\b(?:property|name)\s*=\s*[\'"](?:og:site_name|application-name)[\'"])[^>]*>\s*', '', markup, flags=re.I)
-        markup = re.sub(r'</head\s*>', tags + '</head>', markup, count=1, flags=re.I)
+        page_tags = tags
+        if page == Path('index.html'):
+            page_tags = tags.replace('<link rel="apple-touch-icon"',
+                                     '<link rel="icon" type="image/svg+xml" href="/sun-orange.svg" sizes="any"><link rel="apple-touch-icon"', 1)
+        markup = re.sub(r'</head\s*>', page_tags + '</head>', markup, count=1, flags=re.I)
         if page == Path('index.html'):
             schema_pattern = r'(<script id="homepage-schema" type="application/ld\+json">)(.*?)(</script>)'
             def enrich_schema(match):
