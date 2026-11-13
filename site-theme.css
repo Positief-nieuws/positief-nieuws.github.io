@@ -40,7 +40,7 @@ body:not(.pn-home) .hero + .section{padding-top:16px}
 #today-view .list-item{min-height:0}
 #today-view .short .meta{margin-top:0}
 
-/* Reader testimonial: align heading, quote and attribution on every screen. */
+/* Reader testimonials. Desktop cards; mobile horizontal swipe with a peek at the next card. */
 body.pn-home #today-view #reader-voices {
   margin: 0 0 28px;
   padding: 28px 0 0;
@@ -60,21 +60,25 @@ body.pn-home #today-view #reader-voices h2 {
 body.pn-home #today-view #reader-voices .reader-voices-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 30px;
-  align-items: start;
+  gap: 18px;
+  align-items: stretch;
 }
-body.pn-home #today-view #reader-voices .reader-voice { min-width: 0; }
-@media (max-width: 760px) {
-  body.pn-home #today-view #reader-voices .reader-voices-grid {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 26px;
-  }
+body.pn-home #today-view #reader-voices .reader-voice {
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 22px 24px;
+  border: 1px solid var(--line, #e0e7e1);
+  border-radius: 18px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
 }
 body.pn-home #today-view #reader-voices blockquote {
   max-width: none;
   margin: 0;
   padding: 0;
   border: 0;
+  flex: 1;
 }
 body.pn-home #today-view #reader-voices .reader-quote {
   max-width: none;
@@ -93,6 +97,28 @@ body.pn-home #today-view #reader-voices .reader-credit {
   font-size: 14px;
   font-weight: 700;
   line-height: 1.5;
+}
+@media (max-width: 760px) {
+  body.pn-home #today-view #reader-voices .reader-voices-grid {
+    display: flex;
+    align-items: stretch;
+    gap: 12px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+    padding: 0 12px 8px 0;
+  }
+  body.pn-home #today-view #reader-voices .reader-voices-grid::-webkit-scrollbar {
+    display: none;
+  }
+  body.pn-home #today-view #reader-voices .reader-voice {
+    flex: 0 0 calc(100% - 52px);
+    scroll-snap-align: start;
+    padding: 19px 20px;
+  }
 }
 @media (max-width: 640px) {
   body.pn-home #today-view #reader-voices { padding-top: 24px; }
