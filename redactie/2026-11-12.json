@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "edition_date": "2026-11-12",
-  "news_sha256": "ac4dbfc2c59eb3dad4bd5303372dcaf437c7c052bbd87fe4e832a70575fa9914",
+  "news_sha256": "06d95380554a883d0e8aa84bd33ef8204777d8cfb7490ea0e8a9f9618e987fa6",
   "approved": true,
   "approved_by": "Tom de Haas",
   "variation_exception_reason": "",
@@ -324,8 +324,8 @@
       },
       "rights": {
         "text": "original_summary",
-        "image": "existing_licensed",
-        "image_evidence": "https://pixabay.com/photos/car-tesla-model-3-electric-car-8607713/"
+        "image": "licensed",
+        "image_evidence": "Eigen SVG-illustratie voor Positief Nieuws, 14 november 2026. Origineel, lokaal opgeslagen beeld van elektrische auto bij laadpaal. Bestand: /images/artikelen/2026-11-12/elektrische-auto-s-besparen-naar-schatting-1-2-miljoen-vaten-olie-per-dag-illustratie.svg. Geen hergebruik van Pixabay of Pexels."
       },
       "duplicate_review": {
         "checked": true,
