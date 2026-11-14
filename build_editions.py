@@ -17,7 +17,7 @@ from categories import (CATEGORY_ORDER, CATEGORY_ALIASES, canonical_category,
                         category_label, slugify_category)
 
 SITE_URL = "https://positief-nieuws.nl"
-SITE_THEME_HREF = "/site-theme.css?v=20261016a"
+SITE_THEME_HREF = "/site-theme.css?v=20261114-footer-compact"
 EDITIONS_DIR = Path("edities")
 TOPICS_DIR = Path("onderwerpen")
 TOPIC_MANIFEST = TOPICS_DIR / "index.json"
