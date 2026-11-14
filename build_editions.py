@@ -398,13 +398,35 @@ def article_page_url(item, date_value):
     return f"{SITE_URL}/artikelen/{date_value}/{slug}/"
 
 
-def article_body_paragraphs(item):
+def article_body_blocks(item):
+    """Plain paragraphs with optional editorial H2 headings, in reading order.
+
+    A heading is an explicit {"h2": "..."}, never inferred or required.
+    This keeps existing string-only editions backwards compatible.
+    """
     body = item.get("article_body")
-    if isinstance(body, list):
-        return [str(x).strip() for x in body if str(x).strip()]
     if isinstance(body, str):
-        return [x.strip() for x in re.split(r"\n\s*\n", body) if x.strip()]
-    return []
+        return [("p", x.strip()) for x in re.split(r"\n\s*\n", body) if x.strip()]
+    if not isinstance(body, list):
+        return []
+    blocks = []
+    for entry in body:
+        if isinstance(entry, str):
+            if entry.strip():
+                blocks.append(("p", entry.strip()))
+        elif isinstance(entry, dict) and set(entry) == {"h2"} and isinstance(entry["h2"], str) and entry["h2"].strip():
+            blocks.append(("h2", entry["h2"].strip()))
+        else:
+            raise ValueError("article_body verwacht alinea's of losse {'h2': '...'}-blokken.")
+    if blocks and blocks[0][0] != "p":
+        raise ValueError("article_body moet beginnen met een alinea, niet met een tussenkop.")
+    if any(a[0] == b[0] == "h2" for a, b in zip(blocks, blocks[1:])):
+        raise ValueError("Twee opeenvolgende H2-tussenkoppen zonder tekst.")
+    return blocks
+
+
+def article_body_paragraphs(item):
+    return [text for kind, text in article_body_blocks(item) if kind == "p"]
 
 
 def has_article_page(item):
@@ -695,7 +717,8 @@ def render_article_page(item, date_value, related_records=None, image_data=None)
     source_url_raw = str(item.get("url") or item.get("link") or "#").strip()
     teaser_raw = str(item.get("teaser") or item.get("summary") or "").strip()
     why_raw = str(item.get("why_it_matters") or "").strip()
-    paragraphs = article_body_paragraphs(item)
+    body_blocks = article_body_blocks(item)
+    paragraphs = [text for kind, text in body_blocks if kind == "p"]
     canonical = article_page_url(item, date_value)
     if not canonical or not title_raw or not paragraphs:
         raise ValueError("Artikelpagina mist article_slug, titel of article_body.")
@@ -710,7 +733,11 @@ def render_article_page(item, date_value, related_records=None, image_data=None)
     category = esc(category_raw)
     source_url = esc(source_url_raw)
     teaser = esc(teaser_raw)
-    body_html = "".join(f"<p>{esc(paragraph)}</p>" for paragraph in paragraphs)
+    # The deck is displayed directly above the story. Do not print its
+    # exact duplicate again as the first paragraph.
+    if teaser_raw and len(paragraphs) > 1 and body_blocks[0] == ("p", teaser_raw):
+        body_blocks = body_blocks[1:]
+    body_html = "".join(f"<{kind}>{esc(text)}</{kind}>" for kind, text in body_blocks)
     source_button_label = "Lees het oorspronkelijke artikel"
     source_description = f"Dit is een redactionele samenvatting van Positief nieuws, gebaseerd op de oorspronkelijke publicatie van {source}."
     if item.get("source_id") == "gratis-planten" and source_url_raw == "https://gratisplanten.nl/":
@@ -768,6 +795,7 @@ def render_article_page(item, date_value, related_records=None, image_data=None)
 .article-rule{height:1px;background:var(--line);margin:30px 0}
 .article-copy{max-width:700px;font-size:1.06rem;line-height:1.78;color:#242a26}
 .article-copy p{margin:0 0 1.25em}
+.article-copy h2{margin:1.5em 0 .48em;color:var(--green-dark);font-size:clamp(1.16rem,2.8vw,1.38rem);font-weight:800;line-height:1.3;letter-spacing:-.018em}
 .why{max-width:700px;margin:34px 0;padding:22px 24px;background:#f8f3e8;border-left:4px solid #d6a13a}
 .why-label{margin:0 0 7px!important;color:var(--green-dark);font-size:.72rem!important;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
 .why p{margin:0;font-size:1rem;line-height:1.65}
