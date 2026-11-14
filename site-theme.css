@@ -287,3 +287,6 @@ body.pn-home .pn-personal-note::before {
     opacity: .8;
   }
 }
+/* Keep the article return link close to the footer, without changing the footer itself. */
+body:not(.pn-home) main.article-page { padding-bottom: 20px; }
+body:not(.pn-home) main.article-page + footer { margin-top: 0; }
