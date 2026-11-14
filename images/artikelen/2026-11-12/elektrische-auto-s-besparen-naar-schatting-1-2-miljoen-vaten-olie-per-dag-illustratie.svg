@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+<title id="title">Elektrische auto aan een laadpaal</title><desc id="desc">Redactionele illustratie van een elektrische auto met laadpaal, bomen en een zonnige lucht.</desc>
+<defs>
+ <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f9f6ed"/><stop offset="1" stop-color="#d7ebe3"/></linearGradient>
+ <linearGradient id="road" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#527b71"/><stop offset="1" stop-color="#244a42"/></linearGradient>
+ <linearGradient id="car" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#237e64"/><stop offset=".58" stop-color="#1c604f"/><stop offset="1" stop-color="#123f36"/></linearGradient>
+ <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ddf5f1"/><stop offset="1" stop-color="#8ec7c1"/></linearGradient>
+ <filter id="shadow" x="-30%" y="-60%" width="170%" height="240%"><feGaussianBlur stdDeviation="13"/></filter>
+</defs>
+<rect width="1200" height="675" fill="url(#sky)"/>
+<circle cx="1006" cy="144" r="77" fill="#e6aa45" opacity=".96"/><circle cx="1006" cy="144" r="112" fill="#e6aa45" opacity=".10"/>
+<path d="M0 336 C120 320 209 335 315 311 C450 281 570 315 695 294 C877 268 994 309 1200 260 L1200 520 L0 520Z" fill="#b6d0ba"/>
+<path d="M0 386 C137 350 299 408 449 377 C599 346 733 391 859 365 C1006 335 1074 363 1200 331 L1200 545 L0 545Z" fill="#91b5a1"/>
+<g fill="#538970" opacity=".63"><path d="M98 345l23-67 24 67h-13v24h-22v-24z"/><path d="M162 371l28-91 31 91h-18v26h-23v-26z"/><path d="M1002 347l29-99 29 99h-17v33h-24v-33z"/><path d="M1080 349l26-82 26 82h-15v25h-23v-25z"/></g>
+<path d="M0 476 C310 447 736 456 1200 439 L1200 675 L0 675Z" fill="url(#road)"/>
+<path d="M0 487 C360 470 806 473 1200 451" fill="none" stroke="#a6c3b4" stroke-width="5" opacity=".7"/>
+<path d="M45 594h180m390 0h178m283 0h124" stroke="#d6e8d8" stroke-width="10" stroke-linecap="round" opacity=".72"/>
+<ellipse cx="575" cy="548" rx="395" ry="44" fill="#0d332d" opacity=".26" filter="url(#shadow)"/>
+<g transform="translate(940 268)">
+ <rect x="-24" y="11" width="85" height="241" rx="17" fill="#123c33"/>
+ <rect x="-13" y="18" width="65" height="209" rx="11" fill="#f3f6ec" stroke="#426d5c" stroke-width="5"/>
+ <rect x="2" y="43" width="36" height="48" rx="8" fill="#b0d8cf"/>
+ <path d="M25 50l-12 20h11l-7 16 17-23H23z" fill="#22785e"/>
+ <rect x="4" y="107" width="30" height="7" rx="3.5" fill="#79a997"/>
+ <rect x="4" y="122" width="30" height="7" rx="3.5" fill="#b2cfc1"/>
+ <path d="M60 82c58 1 67 79 27 104-30 18-59 1-76-9" fill="none" stroke="#163e36" stroke-width="11" stroke-linecap="round"/>
+ <path d="M10 172l-6 13" stroke="#dbaa46" stroke-width="10" stroke-linecap="round"/>
+ <path d="M-13 254h75" stroke="#143e34" stroke-width="13" stroke-linecap="round"/>
+</g>
+<g transform="translate(165 245)">
+ <path d="M64 214c17-8 38-20 57-38l100-92c17-15 42-24 71-24h182c44 0 78 13 107 47l83 101 70 24c25 8 43 27 44 54v43H33v-57c0-20 12-36 31-48z" fill="url(#car)" stroke="#164b3e" stroke-width="7" stroke-linejoin="round"/>
+ <path d="M224 102c16-16 38-24 64-24h177c38 0 65 9 89 39l58 70H143z" fill="url(#glass)" stroke="#a1ddd5" stroke-width="4"/>
+ <path d="M357 78v109" stroke="#166050" stroke-width="12"/>
+ <path d="M156 188h469" stroke="#164d3f" stroke-width="5" opacity=".63"/>
+ <path d="M53 277h720" stroke="#4a9f80" stroke-width="7" opacity=".4"/>
+ <rect x="692" y="233" width="62" height="17" rx="8" fill="#f1d69a"/>
+ <rect x="34" y="230" width="25" height="42" rx="9" fill="#f6a85c"/>
+ <path d="M648 208h38" stroke="#f4eac8" stroke-width="9" stroke-linecap="round"/>
+ <g><circle cx="185" cy="328" r="74" fill="#173c36"/><circle cx="185" cy="328" r="45" fill="#b9d0c7"/><circle cx="185" cy="328" r="24" fill="#506e67"/><circle cx="627" cy="328" r="74" fill="#173c36"/><circle cx="627" cy="328" r="45" fill="#b9d0c7"/><circle cx="627" cy="328" r="24" fill="#506e67"/></g>
+ <path d="M91 268h28m579 0h28" stroke="#fbf0ce" stroke-width="8" stroke-linecap="round"/>
+</g>
+<g fill="#75a28c" opacity=".55"><ellipse cx="74" cy="462" rx="83" ry="23"/><ellipse cx="1130" cy="435" rx="100" ry="30"/></g>
+<path d="M0 674h1200" stroke="#173e35" stroke-width="3"/>
+</svg>
