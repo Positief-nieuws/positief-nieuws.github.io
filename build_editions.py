@@ -418,8 +418,10 @@ def article_body_blocks(item):
             blocks.append(("h2", entry["h2"].strip()))
         else:
             raise ValueError("article_body verwacht alinea's of losse {'h2': '...'}-blokken.")
-    if blocks and blocks[0][0] != "p":
-        raise ValueError("article_body moet beginnen met een alinea, niet met een tussenkop.")
+    # The teaser is the opening paragraph on article pages. A first H2 is
+    # therefore valid when there is a non-empty teaser directly above it.
+    if blocks and blocks[0][0] != "p" and not str(item.get("teaser") or item.get("summary") or "").strip():
+        raise ValueError("article_body met een eerste tussenkop vereist een intro (teaser).")
     if any(a[0] == b[0] == "h2" for a, b in zip(blocks, blocks[1:])):
         raise ValueError("Twee opeenvolgende H2-tussenkoppen zonder tekst.")
     return blocks
