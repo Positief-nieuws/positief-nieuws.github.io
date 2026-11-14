@@ -1,4 +1,14 @@
 # Positief nieuws: selectie is het kernproduct
+## FAST CONCEPT is de standaard voor een nieuw concept
+Bij een opdracht voor een nieuw concept: voer `./pn go` uit; zie
+`docs/fast-concept.md`. Gebruik de bestaande actuele kandidaten.json, geen
+`auto_news.py --force`, volledige kandidaatbeoordeling, agentdiscussies of
+bewijsdossiers vóór de HTML-preview. Lees REDACTIE.txt en voorkeuren; bronfeiten,
+regio, eigen tekst en noodzakelijke brongegevens blijven nodig. Toon een
+onvolledige run nooit als complete editie. Niets publiceren of verzenden.
+De onderstaande uitgebreide selectie- en dossierprocedure hoort voortaan bij
+expliciete definitieve redactie/publicatie, niet bij het eerste FAST CONCEPT.
+
 Lees vóór iedere editie REDACTIE.txt en selection_preferences.json. De huidige voorkeuren van de opdrachtgever in de chat gaan voor.
 
 1. Gebruik het geüploade `kandidaten.json`. Kies uit `all_candidates` zes Nederlandse en zes internationale verhalen op nieuwswaarde, betrouwbaarheid, actualiteit, variatie en relevantie. Lees de oorspronkelijke bronnen en geef per keuze een korte motivatie.
