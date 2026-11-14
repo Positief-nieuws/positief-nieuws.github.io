@@ -499,6 +499,64 @@ def render_related_articles(records):
     return '<section class="article-related" aria-labelledby="related-title"><h2 id="related-title">Lees ook</h2><ul>' + ''.join(links) + '</ul></section>'
 
 
+
+def inline_related_position(blocks):
+    """Insert only in a substantial article, after a meaningful passage."""
+    paragraphs = [text for kind, text in blocks if kind == "p"]
+    if len(paragraphs) < 3 or len(" ".join(paragraphs).split()) < 115:
+        return None
+    seen = 0
+    for index, (kind, _) in enumerate(blocks[:-1]):
+        if kind == "p":
+            seen += 1
+        if seen >= 2 and blocks[index + 1][0] == "h2":
+            return index + 1
+    target = max(2, (len(paragraphs) + 1) // 2)
+    seen = 0
+    for index, (kind, _) in enumerate(blocks[:-1]):
+        if kind == "p":
+            seen += 1
+        if seen == target:
+            return index + 1
+    return None
+
+
+def select_inline_related(item, date_value, candidates):
+    """Only a substantive title/subject match qualifies for the in-text card."""
+    from related_content import select
+    if inline_related_position(article_body_blocks(item)) is None:
+        return None
+    origin = f"/artikelen/{date_value}/{str(item.get('article_slug') or '').strip('/')}/"
+    return next((record for record in select(item, origin, candidates, limit=3)
+                 if record.get("type") in {"article", "special"}), None)
+
+
+def render_inline_related(record):
+    """Crawlable editorial card; a saved, licensed image is optional."""
+    if not record:
+        return ""
+    path = str(record.get("path") or "")
+    item = record.get("item") or {}
+    title = esc(item.get("title") or item.get("headline") or "")
+    kind = record.get("type", "article")
+    if not path.startswith("/") or path.startswith("//") or not title or kind not in {"article", "special"}:
+        return ""
+    image = ""
+    if kind == "article" and record.get("date") and record.get("slug"):
+        cache = _load_pixabay_cache().get(f"{record['date']}/{record['slug']}", {})
+        if isinstance(cache, dict) and cache.get("query") == item.get("image_query"):
+            source = str(cache.get("image_path") or "")
+            if source.startswith("/images/artikelen/") and Path(source.lstrip("/")).is_file():
+                image = f'<img class="inline-related-image" src="{esc(source)}" alt="" loading="lazy" decoding="async">'
+    label = "Special" if kind == "special" else "Ook interessant"
+    return (f'<aside class="article-inline-related" aria-label="Gerelateerd verhaal">'
+            f'<a href="{esc(path)}" data-related-content="{kind}" data-related-position="1" data-related-placement="article_inline">'
+            + image + '<span class="inline-related-text">'
+            f'<span class="inline-related-label">{label}</span>'
+            f'<strong>{title}</strong></span>'
+            '<span class="inline-related-arrow" aria-hidden="true">→</span></a></aside>')
+
+
 def _load_pixabay_cache():
     if not PIXABAY_CACHE_PATH.exists():
         return {}
@@ -712,7 +770,7 @@ def render_growth_block(canonical, title_raw, page_type="article"):
       </section>"""
 
 
-def render_article_page(item, date_value, related_records=None, image_data=None):
+def render_article_page(item, date_value, related_records=None, image_data=None, inline_record=None):
     title_raw = str(item.get("title") or item.get("headline") or "").strip()
     source_raw = str(item.get("source") or "Oorspronkelijke bron").strip()
     category_raw = canonical_category(category_label(item)) or category_label(item) or ""
@@ -733,13 +791,21 @@ def render_article_page(item, date_value, related_records=None, image_data=None)
     title = esc(title_raw)
     source = esc(source_raw)
     category = esc(category_raw)
+    topic_slug = slugify_category(category_raw) if category_raw else ""
+    topic_link = f'<a href="/{esc(topic_slug)}/">{category}</a>' if topic_slug else "Positief nieuws"
     source_url = esc(source_url_raw)
     teaser = esc(teaser_raw)
     # The deck is displayed directly above the story. Do not print its
     # exact duplicate again as the first paragraph.
     if teaser_raw and len(paragraphs) > 1 and body_blocks[0] == ("p", teaser_raw):
         body_blocks = body_blocks[1:]
-    body_html = "".join(f"<{kind}>{esc(text)}</{kind}>" for kind, text in body_blocks)
+    body_parts = [f"<{kind}>{esc(text)}</{kind}>" for kind, text in body_blocks]
+    position = inline_related_position(body_blocks) if inline_record else None
+    if position is not None:
+        card = render_inline_related(inline_record)
+        if card:
+            body_parts.insert(position, card)
+    body_html = "".join(body_parts)
     source_button_label = "Lees het oorspronkelijke artikel"
     source_description = f"Dit is een redactionele samenvatting van Positief nieuws, gebaseerd op de oorspronkelijke publicatie van {source}."
     if item.get("source_id") == "gratis-planten" and source_url_raw == "https://gratisplanten.nl/":
@@ -787,6 +853,7 @@ def render_article_page(item, date_value, related_records=None, image_data=None)
 .article-page{padding:46px 0 74px}
 .article-wrap{max-width:760px}
 .article-kicker{margin:0 0 12px;color:var(--green-dark);font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.article-kicker a{color:inherit;text-decoration:none}.article-kicker a:hover,.article-kicker a:focus-visible{text-decoration:underline;text-underline-offset:3px}
 .article-page h1{max-width:760px;margin:0;font-size:clamp(1.95rem,5vw,3.8rem);line-height:1.02;letter-spacing:-.045em}
 .article-deck{max-width:700px;margin:22px 0 0;font-size:1.12rem;line-height:1.62;color:#3f4842}
 .article-meta{display:flex;flex-wrap:wrap;gap:8px 14px;margin:22px 0 0;color:var(--muted);font-size:.78rem}
@@ -798,6 +865,15 @@ def render_article_page(item, date_value, related_records=None, image_data=None)
 .article-copy{max-width:700px;font-size:1.06rem;line-height:1.78;color:#242a26}
 .article-copy p{margin:0 0 1.25em}
 .article-copy h2{margin:1.5em 0 .48em;color:var(--green-dark);font-size:clamp(1.16rem,2.8vw,1.38rem);font-weight:800;line-height:1.3;letter-spacing:-.018em}
+.article-inline-related{margin:1.65em 0 1.8em;border:1px solid rgba(23,63,49,.19);border-radius:12px;background:rgba(255,255,255,.64);overflow:hidden}
+.article-inline-related a{display:flex;align-items:center;gap:17px;padding:14px;text-decoration:none;color:var(--ink);transition:background .15s ease}
+.article-inline-related a:hover,.article-inline-related a:focus-visible{background:#edf3e9}
+.inline-related-image{display:block;width:112px;height:83px;flex:0 0 112px;border-radius:7px;object-fit:cover;background:#edece6}
+.inline-related-text{display:flex;flex:1;flex-direction:column;gap:5px;min-width:0}
+.inline-related-label{font-size:.64rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--green)}
+.inline-related-text strong{font-size:.93rem;line-height:1.3;letter-spacing:-.015em}
+.inline-related-arrow{color:var(--green-dark);font-size:1.45rem;font-weight:800;flex:none}
+@media(max-width:480px){.article-inline-related a{gap:11px;padding:10px}.inline-related-image{width:77px;height:70px;flex-basis:77px}.inline-related-text strong{font-size:.86rem}}
 .why{max-width:700px;margin:34px 0;padding:22px 24px;background:#f8f3e8;border-left:4px solid #d6a13a}
 .why-label{margin:0 0 7px!important;color:var(--green-dark);font-size:.72rem!important;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
 .why p{margin:0;font-size:1rem;line-height:1.65}
@@ -858,7 +934,7 @@ def render_article_page(item, date_value, related_records=None, image_data=None)
   {header_html()}
   <main class="article-page">
     <div class="shell article-wrap">
-      <p class="article-kicker">{category or 'Positief nieuws'}</p>
+      <p class="article-kicker">{topic_link}</p>
       <h1>{title}<b>.</b></h1>
       {f'<p class="article-deck">{teaser}</p>' if teaser else ''}
       <div class="article-meta"><span>{esc(date_text)}</span><span>Bron: {source}</span></div>
@@ -895,12 +971,15 @@ def write_article_pages(edition_records):
         date_value = record["date"]
         item = record["item"]
         slug = record["slug"]
-        related = select_related_articles(item, date_value, related_candidates, limit=3)
+        inline = select_inline_related(item, date_value, related_candidates)
+        related = select_related_articles(item, date_value, related_candidates, limit=4 if inline else 3)
+        if inline:
+            related = [other for other in related if other["path"] != inline["path"]][:3]
         image_data = resolve_pixabay_image(item, date_value)
 
         page_dir = ARTICLES_DIR / date_value / slug
         page_dir.mkdir(parents=True, exist_ok=True)
-        (page_dir / "index.html").write_text("\n".join(line.rstrip() for line in render_article_page(item, date_value, related, image_data).split("\n")), encoding="utf-8")
+        (page_dir / "index.html").write_text("\n".join(line.rstrip() for line in render_article_page(item, date_value, related, image_data, inline).split("\n")), encoding="utf-8")
         built.append({
             "date": date_value,
             "slug": slug,

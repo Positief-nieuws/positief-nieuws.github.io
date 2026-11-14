@@ -202,7 +202,7 @@
     const target = new URL(link.href, location.origin);
     if (target.origin === location.origin) {
     track('related_content_click', {
-      placement: 'article_related', origin_path: location.pathname,
+      placement: link.dataset.relatedPlacement === 'article_inline' ? 'article_inline' : 'article_related', origin_path: location.pathname,
       target_path: target.pathname, target_type: link.dataset.relatedContent,
       position: Number(link.dataset.relatedPosition)
     });
