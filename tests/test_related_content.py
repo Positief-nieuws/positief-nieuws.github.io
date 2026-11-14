@@ -47,6 +47,37 @@ class RelatedTests(unittest.TestCase):
         self.assertLess(page.index('class="article-newsletter"'),
                         page.index('class="article-related"'))
 
+
+    def test_inline_card_is_conditional_and_crawlable(self):
+        from build_editions import select_inline_related, render_article_page
+        text = "Drinkwater voor gezinnen maakt het watersysteem toegankelijker. " * 14
+        item = {'title': 'Drinkwater kraan voor gezinnen', 'teaser': 'Drinkwater kraan watersysteem gezinnen',
+                'category': 'Mens', 'article_slug': 'water', 'url': 'https://example.com/source',
+                'article_body': [text, text, text]}
+        candidates = [{'path':'/artikelen/2026-10-12/kraan/','type':'article',
+                       'date':'2026-10-12','slug':'kraan','category':'Mens',
+                       'item':{'title':'Drinkwater kraan voor gezinnen', 'summary':'Drinkwater watersysteem gezinnen'}}]
+        candidates += [{'path':f'/other-{i}/','type':'article',
+                        'item':{'title':f'Ruimtesonde Jupiter {i}'}} for i in range(30)]
+        chosen = select_inline_related(item, '2026-11-12', candidates)
+        self.assertIsNotNone(chosen)
+        page = render_article_page(item, '2026-11-12', related_records=[], inline_record=chosen)
+        self.assertIn('class="article-inline-related"', page)
+        self.assertIn('href="/artikelen/2026-10-12/kraan/"', page)
+        self.assertIn('data-related-placement="article_inline"', page)
+        self.assertIn('href="/mens/"', page)
+        self.assertLess(page.index('class="article-copy"'), page.index('class="article-inline-related"'))
+
+    def test_no_inline_card_for_short_or_unrelated_story(self):
+        from build_editions import select_inline_related
+        item = {'title':'Jupiter in beeld','article_slug':'jupiter','category':'Wetenschap',
+                'article_body':['Kort.','Tweede alinea.']}
+        candidates = [{'path':'/unrelated/','type':'article','category':'Wetenschap',
+                       'item':{'title':'Nieuwe methode voor bosbeheer'}}]
+        self.assertIsNone(select_inline_related(item,'2026-11-12',candidates))
+        item['article_body'] = ['De ruimtesonde onderzoekt Jupiter. ' * 25] * 3
+        self.assertIsNone(select_inline_related(item,'2026-11-12',candidates))
+
     def test_existing_article_body_is_not_regenerated(self):
         from scripts.refresh_related_articles import update_article_markup
         page = ('<article>Originele artikeltekst</article>'
