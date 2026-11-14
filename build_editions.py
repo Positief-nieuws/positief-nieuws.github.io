@@ -1865,7 +1865,8 @@ def update_homepage(data):
     if note.get('text'):
         portrait = note.get('portrait_url', '')
         portrait_html = f'<img src="{esc(portrait)}" alt="Portretillustratie van Tom">' if portrait.startswith('/images/redactie/') else ''
-        note_html = f'<section class="pn-personal-note" aria-labelledby="personal-note-title">{portrait_html}<div><h2 id="personal-note-title">{esc(note.get("title", ""))}</h2><p>{esc(note["text"])}</p><p><strong>Tom</strong></p></div></section>'
+        title_html = esc(str(note.get("title", "")).strip().rstrip(".")) + '<span class="pn-note-title-dot" style="color:#f57900" aria-hidden="true">.</span>'
+        note_html = f'<section class="pn-personal-note" aria-labelledby="personal-note-title">{portrait_html}<div><h2 id="personal-note-title">{title_html}</h2><p>{esc(note["text"])}</p><p><strong>Tom</strong></p></div></section>'
     note_html = '<!-- personal-note:start -->'+note_html+'<!-- personal-note:end -->'
     if '<!-- personal-note:start -->' in markup:
         markup = re.sub(r'<!-- personal-note:start -->.*?<!-- personal-note:end -->', lambda _:note_html, markup, flags=re.S)
