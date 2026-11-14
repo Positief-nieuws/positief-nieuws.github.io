@@ -62,12 +62,6 @@
     const floating = button('Feedback of tip?', 'floating');
     floating.classList.add('pn-feedback-floating'); document.body.append(floating);
     const main = document.querySelector('main');
-    if (main && /^\/(artikelen|specials)\/.+/.test(location.pathname)) {
-      const invite = document.createElement('aside'); invite.className = 'pn-feedback-invite';
-      const p = document.createElement('p');
-      p.textContent = 'Een idee, nieuwstip of suggestie? Laat het ons weten. Samen maken we Positief Nieuws beter.';
-      invite.append(p, button('Deel je reactie', 'story')); main.append(invite);
-    }
     if (main && /^\/(contact|tip)\//.test(location.pathname)) {
       const box = document.createElement('section'); box.className = 'pn-feedback-invite';
       const p = document.createElement('p'); p.textContent = 'Stuur eenvoudig je feedback, nieuwstip, idee of foutmelding. Je e-mailadres is niet verplicht.';
