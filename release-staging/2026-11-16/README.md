@@ -18,3 +18,6 @@ Voer in Work de publicatie uit vanaf deze branch, op de actuele main. Controleer
 - Eerste bestaande publicatiecontrole hoeft niet te worden aangepast.
 - Drie mainstream actualiteiten, geen persoonlijke noot, geen '01/03'-nummering.
 - De inhoud is vastgezet; bij een inhoudelijke wijziging eerst opnieuw akkoord vragen.
+
+## Fotopreview (15 november)
+De gebruiker heeft een bijgewerkt HTML-concept met de 12 Pixabay-foto's ontvangen (externe CDN-links, geen lokale binaries). De staging-beeldselectie is afgestemd op die fotopreview. Dit is geen definitief offline beeldpakket: vóór livegang moet de bestaande Pixabay-infrastructuur de gekozen ID's downloaden, visueel controleren en in de cache opslaan. De site en nieuwsbrief blijven ongewijzigd tot `pn go`.
