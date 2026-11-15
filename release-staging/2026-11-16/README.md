@@ -21,3 +21,11 @@ Voer in Work de publicatie uit vanaf deze branch, op de actuele main. Controleer
 
 ## Fotopreview (15 november)
 De gebruiker heeft een bijgewerkt HTML-concept met de 12 Pixabay-foto's ontvangen (externe CDN-links, geen lokale binaries). De staging-beeldselectie is afgestemd op die fotopreview. Dit is geen definitief offline beeldpakket: vóór livegang moet de bestaande Pixabay-infrastructuur de gekozen ID's downloaden, visueel controleren en in de cache opslaan. De site en nieuwsbrief blijven ongewijzigd tot `pn go`.
+
+## Harde bescherming huidige homepage-design bij pn go
+
+De losstaande "goedgekeurde-preview.html" / "met-fotos.html" is een inhoudelijke redactiepreview met ANDERE vormgeving. **Kopieer deze HTML NOOIT naar de productie-index.html**. Bouw uitsluitend met de bestaande actuele main-versie van index.html en de huidige site-theme.css, edition-layout.css, JS, mobiele layout, reviews, header, footer, kleurgebruik en branding. Geen wijzigingen aan ontwerp-/CSS-/JS-bestanden in deze editie-release.
+
+Na `publish_edition.py --prepare` moet de diff van index.html gecontroleerd worden. Alleen de generator-gerelateerde inhoudsblokken, publicatiedatum, nieuwsitems, schema/SEO en de bewust verwijderde persoonlijke noot mogen verschillen. Besteed aandacht aan behoud van header, navigatie, hero, eigen homepage-layout, review-swiper, footer en responsive instellingen. CSS, JS en design-elementen buiten de nieuwsblokken mogen NIET veranderen.
+
+Als de generator onverwachte ontwerp-/structuurwijzigingen veroorzaakt: STOP, niet committen, niet live zetten, geen nieuwsbrief versturen. Herstel op een schone actuele main en draai de preview- en diffcontrole opnieuw. Laat gewijzigde vormgeving vooraf opnieuw beoordelen.
