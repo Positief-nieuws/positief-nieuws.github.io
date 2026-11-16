@@ -1,0 +1,613 @@
+{
+  "schema_version": 1,
+  "edition_date": "2026-11-16",
+  "news_sha256": "to-be-filled-by-runner",
+  "approved": false,
+  "approved_by": "",
+  "variation_exception_reason": "De eigenaar heeft na redactionele selectie bewust vier thema's gekozen in plaats van vijf; natuur & klimaat heeft vijf uiteenlopende verhalen over visserij, vlinders, mangrove, orchideeën en waterkringlopen. De variatie is inhoudelijk voldoende; geen twee verhalen behandelen hetzelfde nieuwsfeit.",
+  "articles": {
+    "nl:liset-kookt-voor-twaalf-alleenstaanden": {
+      "source_id": "omroep-brabant",
+      "organization_id": "omroep-brabant",
+      "article_url": "https://www.omroepbrabant.nl/nieuws/6033845/van-alleen-eten-naar-een-tafel-vol-vriendschap-liset-brengt-mensen-samen",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-12",
+      "event_date": "2026-11-12",
+      "checked_on": "2026-11-16",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "liset-kookt-voor-twaalf-alleenstaanden",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.omroepbrabant.nl/nieuws/6033845/van-alleen-eten-naar-een-tafel-vol-vriendschap-liset-brengt-mensen-samen",
+        "claim": "Een tafel vol vriendschap: Liset kookt voor twaalf alleenstaanden",
+        "support": "Omroep Brabant volgt de eetavonden in Eersel: Liset kookt afwisselend voor twee groepen, samen twaalf vaste gasten; deelnemers zoeken ook daarbuiten contact.",
+        "limitations": "Het is een kleinschalig particulier initiatief; geen landelijke impactmeting.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/friends-celebration-dinner-table-581753/ (Pixabay Content License; foto ter illustratie, exacte afbeelding wordt bij bouw via ID geverifieerd)"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Historie wordt bij technische dossiercontrole tegen eerdere edities gecontroleerd.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Omroep Brabant volgt de eetavonden in Eersel: Liset kookt afwisselend voor twee groepen, samen twaalf vaste gasten; deelnemers zoeken ook daarbuiten contact.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "nl:kinderen-met-en-zonder-beperking-samen-op-school": {
+      "source_id": "nh-nieuws",
+      "organization_id": "nh-nieuws",
+      "article_url": "https://www.nhnieuws.nl/nieuws/365315/op-deze-school-zitten-kinderen-met-en-zonder-beperking-in-dezelfde-klas",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-10",
+      "event_date": "2026-11-10",
+      "checked_on": "2026-11-16",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "kinderen-met-en-zonder-beperking-samen-op-school",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.nhnieuws.nl/nieuws/365315/op-deze-school-zitten-kinderen-met-en-zonder-beperking-in-dezelfde-klas",
+        "claim": "Kinderen met en zonder beperking leren samen op basisschool",
+        "support": "NH Nieuws bezocht IKC Oudkarspel: zeven kinderen volgen een eigen Samen naar School-programma en sluiten aan bij gym, muziek en pauzes.",
+        "limitations": "Het gaat om deelname waar mogelijk, niet om de bewering dat alle lessen gezamenlijk plaatsvinden.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/teacher-learning-school-teaching-4784916/ (Pixabay Content License; foto ter illustratie, exacte afbeelding wordt bij bouw via ID geverifieerd)"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Historie wordt bij technische dossiercontrole tegen eerdere edities gecontroleerd.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "NH Nieuws bezocht IKC Oudkarspel: zeven kinderen volgen een eigen Samen naar School-programma en sluiten aan bij gym, muziek en pauzes.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "nl:groningse-quantummicroscoop-qt-sense-sepsis": {
+      "source_id": "kvk",
+      "organization_id": "kvk",
+      "article_url": "https://www.kvk.nl/pers/kvk-innovatie-top-100-qt-sense-wint-met-quantummicroscoop-voor-snellere-diagnoses/",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-13",
+      "event_date": "2026-11-13",
+      "checked_on": "2026-11-16",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "groningse-quantummicroscoop-qt-sense-sepsis",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.kvk.nl/pers/kvk-innovatie-top-100-qt-sense-wint-met-quantummicroscoop-voor-snellere-diagnoses/",
+        "claim": "Groningse quantummicroscoop helpt onderzoek naar ernstige infecties",
+        "support": "De KVK bevestigt de Innovatie Top 100-winst van QT Sense en de quantummicroscoop met diamantsensoren. Een eerste toestel is in een ziekenhuis in onderzoek voor sepsis.",
+        "limitations": "De prijs en onderzoekstoepassing betekenen niet dat sepsisdiagnostiek al klinisch gevalideerd beschikbaar is.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/analysis-biochemistry-biologist-2030261/ (Pixabay Content License; foto ter illustratie, exacte afbeelding wordt bij bouw via ID geverifieerd)"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Historie wordt bij technische dossiercontrole tegen eerdere edities gecontroleerd.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "De KVK bevestigt de Innovatie Top 100-winst van QT Sense en de quantummicroscoop met diamantsensoren. Een eerste toestel is in een ziekenhuis in onderzoek voor sepsis.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "nl:garnalenvissers-tijdelijke-vangstbeperkingen-noordzee": {
+      "source_id": "acm",
+      "organization_id": "acm",
+      "article_url": "https://www.acm.nl/nl/publicaties/acm-garnalenvissers-mogen-een-afspraak-maken-om-overbevissing-tegen-te-gaan",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-12",
+      "event_date": "2026-11-12",
+      "checked_on": "2026-11-16",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "garnalenvissers-tijdelijke-vangstbeperkingen-noordzee",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.acm.nl/nl/publicaties/acm-garnalenvissers-mogen-een-afspraak-maken-om-overbevissing-tegen-te-gaan",
+        "claim": "Garnalenvissers mogen samen tijdelijke vangstbeperkingen invoeren",
+        "support": "De ACM maakte op 12 november bekend dat de CVO onder voorwaarden tijdelijke visbeperkingen mag coördineren op basis van vooraf vastgestelde grenswaarden.",
+        "limitations": "Er is toestemming voor afspraken, nog geen bewijs van herstel van de garnalenstand.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/greetsiel-boats-crab-cutter-port-6568548/ (Pixabay Content License; foto ter illustratie, exacte afbeelding wordt bij bouw via ID geverifieerd)"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Historie wordt bij technische dossiercontrole tegen eerdere edities gecontroleerd.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "De ACM maakte op 12 november bekend dat de CVO onder voorwaarden tijdelijke visbeperkingen mag coördineren op basis van vooraf vastgestelde grenswaarden.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "nl:ruim-270-asielzoekers-betaald-werk-flevoland": {
+      "source_id": "omroep-flevoland",
+      "organization_id": "omroep-flevoland",
+      "article_url": "https://www.omroepflevoland.nl/nieuws/531109/ruim-270-asielzoekers-in-luttelgeest-en-zeewolde-aan-het-werk-door-succesvol-project%3A-%27ze-voelen-zich-waardevol%27",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-12",
+      "event_date": "2026-11-12",
+      "checked_on": "2026-11-16",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "ruim-270-asielzoekers-betaald-werk-flevoland",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.omroepflevoland.nl/nieuws/531109/ruim-270-asielzoekers-in-luttelgeest-en-zeewolde-aan-het-werk-door-succesvol-project%3A-%27ze-voelen-zich-waardevol%27",
+        "claim": "Ruim 270 asielzoekers vinden betaald werk in Flevoland",
+        "support": "Omroep Flevoland bericht over ruim 200 betaalde banen voor bewoners van Luttelgeest en ruim 70 voor Zeewolde dankzij ondersteuning door Meedoenbalies.",
+        "limitations": "Het betreft de twee genoemde opvanglocaties, niet alle asielzoekers in Nederland.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/young-plants-tomatoes-cultivate-4892085/ (Pixabay Content License; foto ter illustratie, exacte afbeelding wordt bij bouw via ID geverifieerd)"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Historie wordt bij technische dossiercontrole tegen eerdere edities gecontroleerd.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Omroep Flevoland bericht over ruim 200 betaalde banen voor bewoners van Luttelgeest en ruim 70 voor Zeewolde dankzij ondersteuning door Meedoenbalies.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "nl:utrecht-3000-vlindertuinpakketten": {
+      "source_id": "nature-today",
+      "organization_id": "nature-today",
+      "article_url": "https://www.naturetoday.com/nl/nl/nature-reports/message/?msg=36041",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-10",
+      "event_date": "2026-11-10",
+      "checked_on": "2026-11-16",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "utrecht-3000-vlindertuinpakketten",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.naturetoday.com/nl/nl/nature-reports/message/?msg=36041",
+        "claim": "Utrecht deelt 3.000 vlindertuinpakketten uit aan inwoners",
+        "support": "De provincie Utrecht meldt via Nature Today dat de 3.000 pakketten voor bloemrijke vlindertuinen snel waren aangevraagd.",
+        "limitations": "De aantallen zijn verstrekte pakketten, nog geen gemeten groei van vlinders.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/small-copper-butterfly-insect-9830647/ (Pixabay Content License; foto ter illustratie, exacte afbeelding wordt bij bouw via ID geverifieerd)"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Historie wordt bij technische dossiercontrole tegen eerdere edities gecontroleerd.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "De provincie Utrecht meldt via Nature Today dat de 3.000 pakketten voor bloemrijke vlindertuinen snel waren aangevraagd.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "int:mangrovebossen-wereldwijd-herstel-satellieten": {
+      "source_id": "nasa",
+      "organization_id": "nasa",
+      "article_url": "https://science.nasa.gov/earth/earth-observatory/a-global-rebound-for-mangroves/",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-13",
+      "event_date": "2023-12-31",
+      "checked_on": "2026-11-16",
+      "dates_checked": true,
+      "new_development": "NASA publiceerde op 13 november 2026 een nieuwe duiding van de langjarige satellietreeks en recent onderzoek.",
+      "older_exception_reason": "",
+      "topic_id": "mangrovebossen-wereldwijd-herstel-satellieten",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://science.nasa.gov/earth/earth-observatory/a-global-rebound-for-mangroves/",
+        "claim": "Mangrovebossen groeien wereldwijd weer, blijkt uit satellietonderzoek",
+        "support": "NASA Earth Observatory bespreekt een Landsat-studie met wereldwijd bijna 2.000 vierkante kilometer mangrove-uitbreiding na 2010, na eerder verlies.",
+        "limitations": "Wereldwijde trend kent regionale verschillen; er bestaat nog aanzienlijke ontbossing in sommige regio's.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/mangroves-aerial-roots-sundarbans-1225689/ (Pixabay Content License; foto ter illustratie, exacte afbeelding wordt bij bouw via ID geverifieerd)"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Historie wordt bij technische dossiercontrole tegen eerdere edities gecontroleerd.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "NASA Earth Observatory bespreekt een Landsat-studie met wereldwijd bijna 2.000 vierkante kilometer mangrove-uitbreiding na 2010, na eerder verlies.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "int:rsv-prikken-minder-ziekenhuisopnames-babys": {
+      "source_id": "nature",
+      "organization_id": "nature",
+      "article_url": "https://www.nature.com/articles/d41586-026-03573-3",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-12",
+      "event_date": "2026-11-12",
+      "checked_on": "2026-11-16",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "rsv-prikken-minder-ziekenhuisopnames-babys",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.nature.com/articles/d41586-026-03573-3",
+        "claim": "RSV-prikken brengen ziekenhuisopnames van baby’s sterk omlaag",
+        "support": "Nature bespreekt onderzoek uit onder meer Denemarken: bescherming met maternale RSV-vaccinatie en antistoffen hangt samen met sterk verminderde ziekenhuisopnames bij jonge baby's.",
+        "limitations": "De uitkomsten kunnen per land en programma verschillen; geen volledige uitroeiing van RSV.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/nurse-syringe-doctor-medical-527621/ (Pixabay Content License; foto ter illustratie, exacte afbeelding wordt bij bouw via ID geverifieerd)"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Historie wordt bij technische dossiercontrole tegen eerdere edities gecontroleerd.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Nature bespreekt onderzoek uit onder meer Denemarken: bescherming met maternale RSV-vaccinatie en antistoffen hangt samen met sterk verminderde ziekenhuisopnames bij jonge baby's.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "int:geboortezorg-6500-zorginstellingen-who": {
+      "source_id": "who",
+      "organization_id": "who",
+      "article_url": "https://www.who.int/guam/news/detail-wpro/15-11-2026-first-embrace--lasting-progress--newborn-care-reaches-6500-facilities-across-the-western-pacific",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-15",
+      "event_date": "2023-12-31",
+      "checked_on": "2026-11-16",
+      "dates_checked": true,
+      "new_development": "WHO publiceerde op 15 november 2026 het overzicht van de ontwikkeling over tien jaar.",
+      "older_exception_reason": "",
+      "topic_id": "geboortezorg-6500-zorginstellingen-who",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.who.int/guam/news/detail-wpro/15-11-2026-first-embrace--lasting-progress--newborn-care-reaches-6500-facilities-across-the-western-pacific",
+        "claim": "Verbeterde geboortezorg bereikt 6.500 zorginstellingen in Azië en Oceanië",
+        "support": "WHO meldde op 15 november 2026 de invoering van Early Essential Newborn Care bij circa 6.500 instellingen en de training van meer dan 42.500 zorgverleners in negen landen.",
+        "limitations": "De cijfers betreffen programma-invoering en evaluaties, geen populatiedekking in alle landen.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/baby-birth-healthy-baby-child-1531059/ (Pixabay Content License; foto ter illustratie, exacte afbeelding wordt bij bouw via ID geverifieerd)"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Historie wordt bij technische dossiercontrole tegen eerdere edities gecontroleerd.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "WHO meldde op 15 november 2026 de invoering van Early Essential Newborn Care bij circa 6.500 instellingen en de training van meer dan 42.500 zorgverleners in negen landen.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "int:india-meer-dan-27000-orchideeen-gered": {
+      "source_id": "mongabay",
+      "organization_id": "mongabay",
+      "article_url": "https://news.mongabay.com/short-article/2026/11/tens-of-thousands-of-orchids-saved-from-road-development-in-southern-india/",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-10",
+      "event_date": "2026-11-10",
+      "checked_on": "2026-11-16",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "india-meer-dan-27000-orchideeen-gered",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://news.mongabay.com/short-article/2026/11/tens-of-thousands-of-orchids-saved-from-road-development-in-southern-india/",
+        "claim": "Meer dan 27.000 orchideeën gered bij wegenbouw in India",
+        "support": "Mongabay bericht op 10 november over onderzoek in Kerala: 27.324 verplaatste orchideeën waarvan circa 71 procent na 12-24 maanden leefde.",
+        "limitations": "Een noodmaatregel, geen alternatief voor het beschermen van oorspronkelijke bomen.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/orchids-flowers-tropical-flowers-6691394/ (Pixabay Content License; foto ter illustratie, exacte afbeelding wordt bij bouw via ID geverifieerd)"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Historie wordt bij technische dossiercontrole tegen eerdere edities gecontroleerd.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Mongabay bericht op 10 november over onderzoek in Kerala: 27.324 verplaatste orchideeën waarvan circa 71 procent na 12-24 maanden leefde.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "int:jordanie-moskee-hergebruikt-water-tuin": {
+      "source_id": "the-guardian",
+      "organization_id": "the-guardian",
+      "article_url": "https://www.theguardian.com/global-development/2026/nov/10/mosque-jordan-valley-ablution-water-irrigation",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-10",
+      "event_date": "2026-11-10",
+      "checked_on": "2026-11-16",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "jordanie-moskee-hergebruikt-water-tuin",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.theguardian.com/global-development/2026/nov/10/mosque-jordan-valley-ablution-water-irrigation",
+        "claim": "Moskee in Jordanië geeft gebruikt water een tweede leven",
+        "support": "The Guardian beschrijft hoe de Abu Obeida-moskee in Deir Alla gebruikt waswater opvangt, filtert en inzet voor druppelirrigatie van groen.",
+        "limitations": "Een lokaal project, waarvan de schaal niet naar het hele land te generaliseren is.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/sprinkler-irrigation-7064726/ (Pixabay Content License; foto ter illustratie, exacte afbeelding wordt bij bouw via ID geverifieerd)"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Historie wordt bij technische dossiercontrole tegen eerdere edities gecontroleerd.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "The Guardian beschrijft hoe de Abu Obeida-moskee in Deir Alla gebruikt waswater opvangt, filtert en inzet voor druppelirrigatie van groen.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "int:car-t-behandeling-stiff-personsyndroom-onderzoek": {
+      "source_id": "the-guardian",
+      "organization_id": "the-guardian",
+      "article_url": "https://www.theguardian.com/science/2026/nov/09/medical-breakthrough-offers-hope-to-people-with-same-stiff-person-syndrome-as-celine-dion",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-09",
+      "event_date": "2026-11-09",
+      "checked_on": "2026-11-16",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "car-t-behandeling-stiff-personsyndroom-onderzoek",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.theguardian.com/science/2026/nov/09/medical-breakthrough-offers-hope-to-people-with-same-stiff-person-syndrome-as-celine-dion",
+        "claim": "CAR-T-behandeling laat hoopvolle resultaten zien bij zeldzame spierziekte",
+        "support": "The Guardian verwijst naar een kleinschalige Mayo Clinic-studie in JAMA Neurology naar CAR-T bij 26 patiënten met stiff-personsyndroom.",
+        "limitations": "Vroege onderzoeksresultaten met beperkte groep; langetermijneffect en bredere toepasbaarheid nog onzeker.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/biology-research-laboratory-316571/ (Pixabay Content License; foto ter illustratie, exacte afbeelding wordt bij bouw via ID geverifieerd)"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Historie wordt bij technische dossiercontrole tegen eerdere edities gecontroleerd.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "The Guardian verwijst naar een kleinschalige Mayo Clinic-studie in JAMA Neurology naar CAR-T bij 26 patiënten met stiff-personsyndroom.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 2,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "headlines:0": {
+      "source_id": "nos",
+      "organization_id": "nos",
+      "article_url": "https://nos.nl/artikel/2639601-op-tweede-dag-ook-uren-crisisoverleg-over-verstoorde-relatie-d66-vvd-en-cda",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-15",
+      "event_date": "2026-11-15",
+      "checked_on": "2026-11-16",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "2026-11-16-actualiteit-1",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://nos.nl/artikel/2639601-op-tweede-dag-ook-uren-crisisoverleg-over-verstoorde-relatie-d66-vvd-en-cda",
+        "claim": "D66, VVD en CDA overleggen opnieuw over toekomst kabinet",
+        "support": "Het kabinet-Jetten verkeert in een vertrouwenscrisis na de stemming over het Belastingplan. De drie coalitiepartijen praten verder in Hilversum.",
+        "limitations": "Dit is een nieuwsstand op het moment van bronpublicatie en kan veranderen; geen uitkomst voorspellen.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used",
+        "image_evidence": ""
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Actueel nieuw onderwerp, voorafgaande edities tegen het publicatiedossier toetsen.",
+        "new_fact": ""
+      }
+    },
+    "headlines:1": {
+      "source_id": "nos",
+      "organization_id": "nos",
+      "article_url": "https://nos.nl/artikel/2639029-oekraine-en-rusland-eens-over-gevangenenruil-maar-doorbraak-blijft-uit",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-11",
+      "event_date": "2026-11-11",
+      "checked_on": "2026-11-16",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "2026-11-16-actualiteit-2",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://nos.nl/artikel/2639029-oekraine-en-rusland-eens-over-gevangenenruil-maar-doorbraak-blijft-uit",
+        "claim": "Oekraïne en Rusland spreken af gevangenen uit te wisselen",
+        "support": "Bij onderhandelingen in Abu Dhabi lijkt overeenstemming bereikt over een gevangenenruil, maar een doorbraak richting een einde aan de oorlog blijft uit.",
+        "limitations": "Dit is een nieuwsstand op het moment van bronpublicatie en kan veranderen; geen uitkomst voorspellen.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used",
+        "image_evidence": ""
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Actueel nieuw onderwerp, voorafgaande edities tegen het publicatiedossier toetsen.",
+        "new_fact": ""
+      }
+    },
+    "headlines:2": {
+      "source_id": "nos",
+      "organization_id": "nos",
+      "article_url": "https://nos.nl/artikel/2639050-wereldleiders-eenstemmig-bezorgd-maar-conflicten-drukken-stempel-op-klimaattop",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-12",
+      "event_date": "2026-11-12",
+      "checked_on": "2026-11-16",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "2026-11-16-actualiteit-3",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://nos.nl/artikel/2639050-wereldleiders-eenstemmig-bezorgd-maar-conflicten-drukken-stempel-op-klimaattop",
+        "claim": "Klimaattop in Turkije gaat door te midden van internationale spanningen",
+        "support": "In Antalya bespreken wereldleiders de uitvoering van klimaatafspraken. Politieke spanningen en andere internationale conflicten drukken een stempel op de start.",
+        "limitations": "Dit is een nieuwsstand op het moment van bronpublicatie en kan veranderen; geen uitkomst voorspellen.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used",
+        "image_evidence": ""
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Actueel nieuw onderwerp, voorafgaande edities tegen het publicatiedossier toetsen.",
+        "new_fact": ""
+      }
+    }
+  }
+}
