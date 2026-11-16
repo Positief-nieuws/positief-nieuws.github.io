@@ -80,7 +80,7 @@ jobs:
               assert Path(src).is_file(),src
           for item in news['nl']+news['int']:
               assert Path('artikelen/2026-11-16',item['article_slug'],'index.html').is_file(),item['article_slug']
-          print('12 unieke echte foto's, bestaande styles en 14 gegenereerde pagina\\u2019s aanwezig')
+          print("12 unieke echte foto's, bestaande styles en 14 gegenereerde paginas aanwezig")
           PY
       - name: Leg goedkeuring alleen in gecontroleerd dossier vast
         run: |
