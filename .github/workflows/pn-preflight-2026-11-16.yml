@@ -1,0 +1,130 @@
+name: Editie 16 november veilige preflight
+on:
+  push:
+    branches: [release/2026-11-16-staging]
+    paths: ['.github/workflows/pn-preflight-2026-11-16.yml']
+permissions:
+  contents: write
+concurrency:
+  group: pn-preflight-2026-11-16
+  cancel-in-progress: false
+jobs:
+  build-staging:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Haal alleen staging branch op
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Redactiedossier exact koppelen en structuur controleren
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from editorial_check import news_digest
+          root=Path('release-staging/2026-11-16')
+          news=json.loads((root/'nieuws.json').read_text())
+          evidence=json.loads((root/'dossier-invoer.json').read_text())
+          assert news['meta']['edition_date']=='2026-11-16'
+          assert [len(news[k]) for k in ('nl','int','headlines')]==[6,6,3]
+          assert not news['meta'].get('personal_note')
+          assert len(evidence['articles'])==15
+          image_ids=[x['image_query'] for x in news['nl']+news['int']]
+          assert len(image_ids)==len(set(image_ids))==12
+          evidence['news_sha256']=news_digest(news)
+          evidence['approved']=False
+          evidence['approved_by']=''
+          Path('/tmp/pn-2026-11-16-evidence.json').write_text(json.dumps(evidence,ensure_ascii=False,indent=2)+'\n')
+          PY
+      - name: Controleer bestaande Python-tests
+        run: python -m unittest discover -s tests
+      - name: Bouw officiële sitepreview in staging met Pixabay API
+        env:
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+        run: |
+          test -n "$PIXABAY_API_KEY" || { echo "Pixabay-sleutel ontbreekt"; exit 1; }
+          python publish_edition.py --prepare release-staging/2026-11-16/nieuws.json --dossier /tmp/pn-2026-11-16-evidence.json
+      - name: Verifieer echte twaalf afbeeldingen en basis van homepage
+        run: |
+          python - <<'PY'
+          import json,hashlib,re
+          from pathlib import Path
+          from html.parser import HTMLParser
+          news=json.loads(Path('nieuws.json').read_text())
+          cache=json.loads(Path('data/pixabay-images.json').read_text())
+          ids=[]
+          for item in news['nl']+news['int']:
+              key='2026-11-16/'+item['article_slug']
+              record=cache.get(key,{})
+              assert record.get('query')==item['image_query'], key+' ontbreekt in beeldcache'
+              assert str(record.get('pixabay_id'))==item['image_query'].removeprefix('id:'),key+' verkeerd afbeeldings-ID'
+              filepath=Path(record['image_path'].lstrip('/'))
+              raw=filepath.read_bytes()
+              assert len(raw)>10000,key+' beeld te klein of corrupt'
+              assert raw[:3]==bytes.fromhex('ffd8ff') or raw[:8]==bytes.fromhex('89504e470d0a1a0a') or raw[:4]==b'RIFF',key+' geen herkenbaar fotoformaat'
+              ids.append(hashlib.sha256(raw).hexdigest())
+          assert len(set(ids))==12,'Afbeeldingen zijn niet uniek'
+          home=Path('index.html').read_text()
+          oldhome=__import__('subprocess').check_output(['git','show','HEAD:index.html'],text=True)
+          assert len(home)>20000 and '2026-11-16' in home
+          assert '<!-- homepage-nl:start -->' in home and '<!-- homepage-int:start -->' in home
+          for marker in ['<header','<nav','<footer']:
+              assert marker in home and marker in oldhome, marker
+          for template in ['site-theme.css','edition-layout.css','edition-analytics.js']:
+              assert Path(template).read_bytes()==__import__('subprocess').check_output(['git','show','HEAD:'+template]),'Stijlen of scripts gewijzigd: '+template
+          for src in ['nieuws.json','edities/2026-11-16.json','edities/2026-11-16/index.html']:
+              assert Path(src).is_file(),src
+          for item in news['nl']+news['int']:
+              assert Path('artikelen/2026-11-16',item['article_slug'],'index.html').is_file(),item['article_slug']
+          print('12 unieke echte foto's, bestaande styles en 14 gegenereerde pagina\\u2019s aanwezig')
+          PY
+      - name: Leg goedkeuring alleen in gecontroleerd dossier vast
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          path=Path('redactie/2026-11-16.json')
+          d=json.loads(path.read_text())
+          d['approved']=True
+          d['approved_by']='Tom de Haas'
+          path.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n')
+          PY
+          python publish_edition.py --verify
+          python -m unittest discover -s tests
+      - name: Controleer diff op ongewenste ontwerpbestanden
+        run: |
+          python - <<'PY'
+          import subprocess
+          paths=set(subprocess.check_output(['git','diff','--cached','--name-only'],text=True).splitlines())
+          forbidden=[p for p in paths if p.endswith(('.css','.js')) or p.startswith('.github/workflows/')]
+          assert not forbidden,'Onverwachte ontwerp- of workflowwijzigingen: '+str(forbidden)
+          assert 'index.html' in paths and 'nieuws.json' in paths and 'redactie/2026-11-16.json' in paths
+          print('Stagingbestanden:',len(paths))
+          Path('/tmp/pn-preview-2026-11-16-paths.txt').write_text('\n'.join(sorted(paths))+'\n')
+          PY
+      - name: Upload staging-preview en gecontroleerde diff
+        uses: actions/upload-artifact@v4
+        with:
+          name: pn-2026-11-16-preflight
+          path: |
+            index.html
+            nieuws.json
+            edities/2026-11-16/
+            artikelen/2026-11-16/
+            redactie/2026-11-16.json
+            data/pixabay-images.json
+            images/artikelen/2026-11-16/
+          retention-days: 7
+          if-no-files-found: error
+      - name: Commit ALLEEN naar staging, nooit naar main
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git diff --cached --quiet && exit 1
+          git commit -m 'Gecontroleerde sitebuild en foto's voor editie 16 november (staging)'
+          git push origin HEAD:release/2026-11-16-staging
