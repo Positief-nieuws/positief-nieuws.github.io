@@ -28,32 +28,32 @@
     "slug": "gezondheid",
     "url": "/gezondheid/",
     "nl_count": 16,
-    "int_count": 27,
-    "latest": "2026-11-12"
+    "int_count": 30,
+    "latest": "2026-11-16"
   },
   {
     "label": "Mens",
     "slug": "mens",
     "url": "/mens/",
-    "nl_count": 36,
+    "nl_count": 39,
     "int_count": 19,
-    "latest": "2026-11-12"
+    "latest": "2026-11-16"
   },
   {
     "label": "Natuur & klimaat",
     "slug": "natuur-en-klimaat",
     "url": "/natuur-en-klimaat/",
-    "nl_count": 29,
-    "int_count": 40,
-    "latest": "2026-11-12"
+    "nl_count": 31,
+    "int_count": 43,
+    "latest": "2026-11-16"
   },
   {
     "label": "Wetenschap",
     "slug": "wetenschap",
     "url": "/wetenschap/",
-    "nl_count": 10,
+    "nl_count": 11,
     "int_count": 25,
-    "latest": "2026-11-12"
+    "latest": "2026-11-16"
   },
   {
     "label": "Sport",
