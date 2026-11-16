@@ -1027,7 +1027,7 @@ def render_edition(data, date_value):
     return f"""<!DOCTYPE html><html lang="nl"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{canonical}">
-<meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:type" content="article"><meta property="og:url" content="{canonical}"><meta name="twitter:card" content="summary"><meta name="theme-color" content="#17382b"><link rel="manifest" href="/manifest.json?v=5"><link rel="apple-touch-icon" href="/sun-apple-touch-icon.png"><script type="application/ld+json">{schema}</script><style>{BASE_CSS}.banner{{margin-top:18px;padding:10px 13px;border:1px solid var(--line);color:var(--green-dark);font-size:.75rem}}.briefing-row{{display:grid;grid-template-columns:34px minmax(0,1fr);gap:10px;padding-right:46px}}.num{{padding-top:2px;color:#7f8982;font-size:.66rem;font-weight:700}}.end{{padding:72px 0 64px;text-align:center}}.end h2{{max-width:620px;margin:auto;font-size:clamp(2.2rem,5vw,3.3rem);line-height:1;letter-spacing:-.045em}}.back{{display:inline-flex;margin-top:18px;padding:9px 15px;border:1px solid var(--line);border-radius:999px;text-decoration:none;font-size:.72rem;font-weight:700}}</style></head><body>
+<meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:type" content="article"><meta property="og:url" content="{canonical}"><meta name="twitter:card" content="summary"><meta name="theme-color" content="#17382b"><link rel="manifest" href="/manifest.json?v=5"><link rel="apple-touch-icon" href="/sun-apple-touch-icon.png"><script type="application/ld+json">{schema}</script><style>{BASE_CSS}.banner{{margin-top:18px;padding:10px 13px;border:1px solid var(--line);color:var(--green-dark);font-size:.75rem}}.end{{padding:72px 0 64px;text-align:center}}.end h2{{max-width:620px;margin:auto;font-size:clamp(2.2rem,5vw,3.3rem);line-height:1;letter-spacing:-.045em}}.back{{display:inline-flex;margin-top:18px;padding:9px 15px;border:1px solid var(--line);border-radius:999px;text-decoration:none;font-size:.72rem;font-weight:700}}</style></head><body>
 {header_html()}
 <div class="shell banner">Je leest de editie van {esc(date_text)}. <a href="/">Ga naar de nieuwste editie →</a></div>
 <section class="hero"><div class="shell"><p class="date">{esc(date_text)}</p><h1>Dit gebeurt ook<b>.</b></h1><p class="lead">In een paar minuten weet je wat er goed gaat én wat je verder moet weten in deze editie. Zonder eindeloos scrollen.</p><div class="rule"></div></div></section>
@@ -1062,7 +1062,8 @@ def _headline_html(item, number, date_value=None):
     )
 
     meta = f'<div class="meta"><span>{category}</span></div>' if category else ""
-    return f"""<article class="article" style="display:grid;grid-template-columns:34px minmax(0,1fr);gap:10px;padding-right:46px"><div class="num">{number:02d}</div><div><h3><a href="{url}" target="_blank" rel="noopener noreferrer" {tracking_attrs}>{title}</a></h3>{meta}</div><a class="arrow" href="{url}" target="_blank" rel="noopener noreferrer" aria-label="Lees {title}" {tracking_attrs}>↗</a></article>"""
+    summary = f'<p class="teaser">{teaser}</p>' if teaser else ""
+    return f"""<article class="article" style="padding-right:46px"><h3><a href="{url}" target="_blank" rel="noopener noreferrer" {tracking_attrs}>{title}</a></h3>{summary}<a class="arrow" href="{url}" target="_blank" rel="noopener noreferrer" aria-label="Lees {title}" {tracking_attrs}>↗</a></article>"""
 
 
 def render_archive(entries):
@@ -1785,7 +1786,8 @@ def homepage_story_html(item, edition_date, section, index):
         eager = section == "nl" and index == 0
         image = f'<a class="article-thumb" href="{esc(url)}" {attrs} aria-label="Lees {esc(title)}"><img class="story-photo" src="{esc(path)}" alt="{esc(item.get("image_alt") or title)}" loading="{"eager" if eager else "lazy"}" decoding="async"></a>'
     if section == "headlines":
-        return f'<article class="short"><span class="count">{index+1:02d} / 03</span><h3 class="article-title">{link}</h3>{meta}</article>'
+        summary = f'<p class="teaser">{esc(teaser)}</p>' if teaser else ""
+        return f'<article class="short"><h3 class="article-title">{link}</h3>{summary}</article>'
     if section == "nl" and index < 3:
         hero = index == 0
         cls, body, heading = ("hero-card", "hero-body", "h2") if hero else ("side-card", "side-body", "h3")
