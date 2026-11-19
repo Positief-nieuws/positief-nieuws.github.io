@@ -384,8 +384,10 @@ def build_body(data, nl, international, headlines):
   {nl_html}
   <div style="margin-top:36px;">{section_header("Goed nieuws uit de wereld", "6 verhalen")}<div style="height:16px"></div>{world}</div>
   <div style="margin-top:30px;">{section_header("Wat je verder moet weten", "3 korte actualiteiten")}<div style="height:16px"></div>{briefing}</div>
-  <div style="padding:32px 15px;margin-top:30px;border-top:1px solid #e1e9e5;text-align:center;">
-    <h2 style="margin:0 0 9px;font:800 27px Arial,Helvetica,sans-serif;letter-spacing:-.04em;color:{INK};">Dit was het voor vandaag.<br>Je bent weer bij.</h2><p style="margin:0;font:14px Arial,Helvetica,sans-serif;color:{MUTED};">Geniet van je dag.</p>
+  <div style="padding:36px 12px 42px;margin-top:30px;text-align:center;background-color:#ffffff;background-image:radial-gradient(circle at center,#ffffff 0 95px,#f7eddb 96px,#faf7f1 97px 136px,#fcfbf8 137px 170px,#ffffff 171px);">
+    <img src="{SITE_URL}sun-orange.png" width="48" height="48" alt="" style="display:block;width:48px;height:48px;margin:0 auto 24px;">
+    <h2 style="margin:0 0 22px;font:800 30px/1.08 Arial,Helvetica,sans-serif;letter-spacing:-.04em;color:#111713;">Dit was het voor vandaag.<br>Je bent weer bij.</h2>
+    <p style="margin:0;font:16px/1.4 Arial,Helvetica,sans-serif;color:#65756f;">Geniet van je dag.</p>
   </div>
   {build_share_block(data)}
   <p style="margin:28px 0 0;text-align:center;font:11px Arial,Helvetica,sans-serif;color:{MUTED};">Positief nieuws · Dit gebeurt ook.</p>
