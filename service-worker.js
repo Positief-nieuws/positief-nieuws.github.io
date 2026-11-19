@@ -1,13 +1,18 @@
-const CACHE_NAME = "positief-nieuws-v15";
+const CACHE_NAME = "positief-nieuws-v16";
 
 const CORE_ASSETS = [
   "/",
   "/index.html",
-  "/manifest.json?v=5",
+  "/manifest.json?v=6",
   "/edition-analytics.js?v=1",
-  "/sun-icon-192.png",
-  "/sun-icon-512.png",
-  "/sun-apple-touch-icon.png",
+  "/sun-icon-192.png?v=6",
+  "/sun-icon-512.png?v=6",
+  "/sun-apple-touch-icon.png?v=6",
+  "/favicon.ico?v=6",
+  "/favicon.png?v=6",
+  "/sun-orange.svg?v=6",
+  "/sun-maskable-192.png",
+  "/sun-maskable-512.png",
   "/edities/index.json"
 ];
 

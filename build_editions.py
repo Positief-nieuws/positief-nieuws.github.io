@@ -1027,7 +1027,7 @@ def render_edition(data, date_value):
     return f"""<!DOCTYPE html><html lang="nl"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{canonical}">
-<meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:type" content="article"><meta property="og:url" content="{canonical}"><meta name="twitter:card" content="summary"><meta name="theme-color" content="#17382b"><link rel="manifest" href="/manifest.json?v=5"><link rel="apple-touch-icon" href="/sun-apple-touch-icon.png"><script type="application/ld+json">{schema}</script><style>{BASE_CSS}.banner{{margin-top:18px;padding:10px 13px;border:1px solid var(--line);color:var(--green-dark);font-size:.75rem}}.end{{padding:72px 0 64px;text-align:center}}.end h2{{max-width:620px;margin:auto;font-size:clamp(2.2rem,5vw,3.3rem);line-height:1;letter-spacing:-.045em}}.back{{display:inline-flex;margin-top:18px;padding:9px 15px;border:1px solid var(--line);border-radius:999px;text-decoration:none;font-size:.72rem;font-weight:700}}</style></head><body>
+<meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:type" content="article"><meta property="og:url" content="{canonical}"><meta name="twitter:card" content="summary"><meta name="theme-color" content="#17382b"><link rel="manifest" href="/manifest.json?v=6"><link rel="apple-touch-icon" href="/sun-apple-touch-icon.png?v=6"><script type="application/ld+json">{schema}</script><style>{BASE_CSS}.banner{{margin-top:18px;padding:10px 13px;border:1px solid var(--line);color:var(--green-dark);font-size:.75rem}}.end{{padding:72px 0 64px;text-align:center}}.end h2{{max-width:620px;margin:auto;font-size:clamp(2.2rem,5vw,3.3rem);line-height:1;letter-spacing:-.045em}}.back{{display:inline-flex;margin-top:18px;padding:9px 15px;border:1px solid var(--line);border-radius:999px;text-decoration:none;font-size:.72rem;font-weight:700}}</style></head><body>
 {header_html()}
 <div class="shell banner">Je leest de editie van {esc(date_text)}. <a href="/">Ga naar de nieuwste editie →</a></div>
 <section class="hero"><div class="shell"><p class="date">{esc(date_text)}</p><h1>Dit gebeurt ook<b>.</b></h1><p class="lead">In een paar minuten weet je wat er goed gaat én wat je verder moet weten in deze editie. Zonder eindeloos scrollen.</p><div class="rule"></div></div></section>
@@ -1993,10 +1993,10 @@ def refresh_edition_analytics():
 
 def refresh_branding():
     """Apply the same crawlable sun favicon and brand name to every public HTML page."""
-    tags = ('<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64">'
-            '<link rel="icon" type="image/png" href="/favicon.png" sizes="96x96">'
-            '<link rel="apple-touch-icon" href="/sun-apple-touch-icon.png" sizes="180x180">'
-            '<link rel="manifest" href="/manifest.json?v=5">'
+    tags = ('<link rel="icon" href="/favicon.ico?v=6" sizes="16x16 32x32 48x48 64x64">'
+            '<link rel="icon" type="image/png" href="/favicon.png?v=6" sizes="96x96">'
+            '<link rel="apple-touch-icon" href="/sun-apple-touch-icon.png?v=6" sizes="180x180">'
+            '<link rel="manifest" href="/manifest.json?v=6">'
             '<meta property="og:site_name" content="Positief nieuws">'
             '<meta name="application-name" content="Positief nieuws">')
     count = 0
@@ -2013,7 +2013,7 @@ def refresh_branding():
         page_tags = tags
         if page == Path('index.html'):
             page_tags = tags.replace('<link rel="apple-touch-icon"',
-                                     '<link rel="icon" type="image/svg+xml" href="/sun-orange.svg" sizes="any"><link rel="apple-touch-icon"', 1)
+                                     '<link rel="icon" type="image/svg+xml" href="/sun-orange.svg?v=6" sizes="any"><link rel="apple-touch-icon"', 1)
         markup = re.sub(r'</head\s*>', page_tags + '</head>', markup, count=1, flags=re.I)
         if page == Path('index.html'):
             schema_pattern = r'(<script id="homepage-schema" type="application/ld\+json">)(.*?)(</script>)'
