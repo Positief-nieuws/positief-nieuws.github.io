@@ -367,18 +367,38 @@ def build_body(data, nl, international, headlines):
     if note.get('text'):
         personal_note = f'<div style="margin:0 0 28px;padding:20px;background:#f0f5ee;border:1px solid #e1e9e5;border-radius:14px"><h2 style="margin:0 0 12px;font:700 22px Arial,Helvetica,sans-serif">{esc(note.get("title", ""))}</h2><p style="margin:0;font:15px/1.65 Arial,Helvetica,sans-serif">{esc(note["text"])}</p><p style="margin:12px 0 0;font:700 14px Arial,Helvetica,sans-serif">Tom</p></div>'
     preheader = esc(build_preheader(data, nl))
+    weekday, _, edition_date = edition_date_text(data).partition(" ")
+    edition_label = f"{weekday.capitalize()}editie" if edition_date else "Editie"
+    intro = (data.get("meta") or {}).get("email_intro")
+    if intro:
+        intro_paragraphs = [p.strip() for p in intro.split("\n\n") if p.strip()]
+    else:
+        intro_paragraphs = [
+            "Uit Nederland: " + " · ".join(article["title"] for article in nl[1:3]),
+            "Uit de wereld: " + " · ".join(article["title"] for article in international[:2]),
+        ]
+    intro_html = "".join(
+        f'<p style="margin:0 0 12px;font:16px/1.6 Arial,Helvetica,sans-serif;color:{INK};">{esc(paragraph)}</p>'
+        for paragraph in intro_paragraphs
+    )
     return f"""<!-- buttondown-editor-mode: fancy -->
 <style>@media(max-width:760px){{.story-intro{{display:none!important}}.email-column{{display:block!important;width:100%!important;padding:0!important}}.email-shell{{padding:20px 16px!important}}}}</style>
 <div style="display:none;max-height:0;overflow:hidden;opacity:0;color:transparent;font-size:1px;line-height:1px;mso-hide:all;">{preheader}{"&#8204;&nbsp;" * 100}</div>
 <div class="email-shell" style="width:100%;max-width:740px;margin:0 auto;box-sizing:border-box;background:{PAPER};padding:28px 28px;color:{INK};font-family:Arial,Helvetica,sans-serif;">
-  <div style="padding:0 0 22px;border-bottom:1px solid #e1e9e5;">
-    <a href="{esc(buttondown_edition_url(data))}" style="font:800 25px Arial,Helvetica,sans-serif;letter-spacing:-1px;color:{INK} !important;text-decoration:none;"><img src="{SITE_URL}sun-orange.png" width="32" height="32" alt="" style="display:inline-block;width:32px;height:32px;vertical-align:middle;margin-right:8px;">Positief nieuws</a>
-    <p style="margin:8px 0 0;font:14px Arial,Helvetica,sans-serif;color:{MUTED};">Dit gebeurt ook</p>
+  <div style="background:#ffffff;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-bottom:1px solid #e1e5e3;font:13px/1.5 Arial,Helvetica,sans-serif;color:#111713;">
+      <tr>
+        <td style="padding:12px 10px 12px 16px;"><strong style="font-size:14px;">{esc(edition_label)}</strong>&nbsp; {esc(edition_date)}</td>
+        <td align="right" style="padding:12px 16px 12px 0;">{len(nl) + len(international)} verhalen · {len(headlines)} leestips</td>
+      </tr>
+    </table>
+    <div style="padding:21px 16px 19px;">
+      <a href="{esc(buttondown_edition_url(data))}" style="font:800 25px Arial,Helvetica,sans-serif;letter-spacing:-1px;color:{INK} !important;text-decoration:none;"><img src="{SITE_URL}sun-orange.png" width="32" height="32" alt="" style="display:inline-block;width:32px;height:32px;vertical-align:middle;margin-right:8px;">Positief nieuws</a>
+      <p style="margin:7px 0 0 40px;font:14px Arial,Helvetica,sans-serif;color:{MUTED};">Dit gebeurt ook</p>
+    </div>
   </div>
-  <div style="padding:30px 0 26px;">
-    <p style="margin:0 0 14px;font:700 12px Arial,Helvetica,sans-serif;color:{GREEN};">Editie van {esc(edition_date_text(data))}</p>
-    <p style="margin:0;font:15px Arial,Helvetica,sans-serif;line-height:1.65;color:{MUTED};">{preheader}</p>
-    <p style="margin:15px 0 0;font:12px Arial,Helvetica,sans-serif;color:{MUTED};">Elke maandag en donderdag · 6 uit Nederland · 6 uit de wereld · 3 korte actualiteiten</p>
+  <div style="padding:24px 0 17px;">
+    {intro_html}
   </div>
   {personal_note}
   {nl_html}
