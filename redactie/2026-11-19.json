@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "edition_date": "2026-11-19",
-  "news_sha256": "22e96fd215e0671191feb7caa9eb4d66f36f3442eaa0b0706d60c40ae62dcd6a",
+  "news_sha256": "8206701344125febfc394d198d7f566e4a3975396df81ec8030f781378b00026",
   "approved": true,
   "approved_by": "Tom de Haas",
   "variation_exception_reason": "De goedgekeurde selectie bevat vijf verhalen onder Mens. Ze behandelen afzonderlijke onderwerpen, waaronder een redding, schermgebruik, een lokale inzameling, tijdelijke huisvesting en een gespecialiseerd onderzoeksteam.",
@@ -29,7 +29,7 @@
       "rights": {
         "text": "original_summary",
         "image": "licensed",
-        "image_evidence": "https://pixabay.com/photos/netherlands-harlingen-sunset-1345851/ · Pixabay Content License · illustratieve foto, lokaal opgeslagen."
+        "image_evidence": "https://commons.wikimedia.org/wiki/File:Harlingen_Zuidoostersingel_2011.jpg · txllxt · CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/), verkleind; illustratieve gracht in Harlingen."
       },
       "duplicate_review": {
         "checked": true,

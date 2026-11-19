@@ -1871,13 +1871,14 @@
     "height": 1920
   },
   "2026-11-19/harlingen": {
-    "query": "id:1345851",
-    "pixabay_id": 1345851,
-    "image_path": "/images/artikelen/2026-11-19/harlingen.jpg",
-    "page_url": "https://pixabay.com/photos/netherlands-harlingen-sunset-1345851/",
-    "width": 640,
-    "height": 427,
-    "caption": "Illustratief beeld via <a href=\"https://pixabay.com/photos/netherlands-harlingen-sunset-1345851/\" target=\"_blank\" rel=\"noopener noreferrer\">Pixabay</a>."
+    "query": "commons:harlingen-zuidoostersingel-2011",
+    "image_path": "/images/artikelen/2026-11-19/harlingen-gracht.jpg",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Harlingen_Zuidoostersingel_2011.jpg",
+    "photographer": "txllxt",
+    "source": "Wikimedia Commons",
+    "caption": "Archiefbeeld van een gracht in Harlingen. Foto: txllxt via Wikimedia Commons, CC BY-SA 4.0, verkleind.",
+    "width": 1200,
+    "height": 675
   },
   "2026-11-19/holendrecht": {
     "query": "id:3471402",
