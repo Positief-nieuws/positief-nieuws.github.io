@@ -1,0 +1,553 @@
+{
+  "schema_version": 1,
+  "edition_date": "2026-11-19",
+  "news_sha256": "2f3e89b84668e78b1aace894779d905abdf1c39110e801a1b243c6edfd117fcc",
+  "approved": true,
+  "approved_by": "Tom de Haas",
+  "variation_exception_reason": "De goedgekeurde selectie bevat vijf verhalen onder Mens. Ze behandelen afzonderlijke onderwerpen, waaronder een redding, schermgebruik, een lokale inzameling, tijdelijke huisvesting en een gespecialiseerd onderzoeksteam.",
+  "articles": {
+    "nl:harlingen": {
+      "source_id": "nos",
+      "organization_id": "nos",
+      "article_url": "https://nos.nl/artikel/2639922-jorn-18-redde-paar-uit-zinkende-auto-in-harlingen-even-koud-maar-anders-overleven-ze-het-niet",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-17",
+      "event_date": "2026-11-17",
+      "checked_on": "2026-11-19",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "harlingen",
+      "evidence": {
+        "primary_url": "https://nos.nl/artikel/2639922-jorn-18-redde-paar-uit-zinkende-auto-in-harlingen-even-koud-maar-anders-overleven-ze-het-niet",
+        "claim": "Jorn (18) en een omstander redden stel uit zinkende auto",
+        "support": "NOS beschrijft hoe de twee omstanders elk één inzittende uit de auto haalden.",
+        "limitations": "Toestand aangehaald zoals Jorn die beschreef.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Getoetst aan de editiehistorie op URL, titel en onderwerp."
+      },
+      "positive_result": true,
+      "positive_result_explanation": "NOS beschrijft hoe de twee omstanders elk één inzittende uit de auto haalden.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "nl:holendrecht": {
+      "source_id": "at5",
+      "organization_id": "at5",
+      "article_url": "https://www.at5.nl/app/artikelen/241051/lily-yohannes-opent-cruyff-court-in-holendrecht-op-dit-soort-veldjes-heb-ik-nederlands-geleerd",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-15",
+      "event_date": "2026-11-15",
+      "checked_on": "2026-11-19",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "holendrecht",
+      "evidence": {
+        "primary_url": "https://www.at5.nl/app/artikelen/241051/lily-yohannes-opent-cruyff-court-in-holendrecht-op-dit-soort-veldjes-heb-ik-nederlands-geleerd",
+        "claim": "Lily Yohannes leerde Nederlands op het voetbalplein. Nu opent ze er zelf een",
+        "support": "AT5 was bij de opening in Holendrecht en sprak Yohannes en buurtkinderen.",
+        "limitations": "Lokaal speelveld.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Getoetst aan de editiehistorie op URL, titel en onderwerp."
+      },
+      "positive_result": true,
+      "positive_result_explanation": "AT5 was bij de opening in Holendrecht en sprak Yohannes en buurtkinderen.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "nl:verbinding": {
+      "source_id": "sportnieuws",
+      "organization_id": "sportnieuws",
+      "article_url": "https://sportnieuws.nl/boulevard/nieuws/vrouw-van-schaatsicoon-erben-wennemars-hoopvol-door-nieuwe-ontdekking-we-gaan-de-andere-kant-op-2026111815560524042/",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-18",
+      "event_date": "2026-11-18",
+      "checked_on": "2026-11-19",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "verbinding",
+      "evidence": {
+        "primary_url": "https://sportnieuws.nl/boulevard/nieuws/vrouw-van-schaatsicoon-erben-wennemars-hoopvol-door-nieuwe-ontdekking-we-gaan-de-andere-kant-op-2026111815560524042/",
+        "claim": "De telefoon gaat opzij, de echte ontmoeting komt terug",
+        "support": "Sportnieuws citeert de Stentor-column over Tap Out, telefoonvrije cafés en evenementen. The Offline Club beschrijft zijn schermvrije bijeenkomsten op zijn eigen website.",
+        "limitations": "Een column en concrete voorbeelden, geen landelijke trendmeting.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Getoetst aan de editiehistorie op URL, titel en onderwerp."
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Sportnieuws citeert de Stentor-column over Tap Out, telefoonvrije cafés en evenementen. The Offline Club beschrijft zijn schermvrije bijeenkomsten op zijn eigen website.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "nl:schagen": {
+      "source_id": "maison-viridi",
+      "organization_id": "maison-viridi",
+      "article_url": "https://preview.mailerlite.io/emails/webview/1363895/204222887037503393?signature=85163ab478977f4990e14f517acd05472610b35f554e0e43c2af8ca5c54f9d84",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-17",
+      "event_date": "2026-11-17",
+      "checked_on": "2026-11-19",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "schagen",
+      "evidence": {
+        "primary_url": "https://preview.mailerlite.io/emails/webview/1363895/204222887037503393?signature=85163ab478977f4990e14f517acd05472610b35f554e0e43c2af8ca5c54f9d84",
+        "claim": "Bakkerij in Schagen zamelt sintcadeaus in voor kinderen in de noodopvang",
+        "support": "Maison Viridi meldt in de eigen nieuwsbrief dat in week één al cadeaus binnenkwamen en noemt drie verzamelzakken, de leeftijden en de inleverdatum.",
+        "limitations": "Tussenstand volgens de organisator, zonder exact aantal.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Getoetst aan de editiehistorie op URL, titel en onderwerp."
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Maison Viridi meldt in de eigen nieuwsbrief dat in week één al cadeaus binnenkwamen en noemt drie verzamelzakken, de leeftijden en de inleverdatum.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "nl:slaapplekken": {
+      "source_id": "at5",
+      "organization_id": "at5",
+      "article_url": "https://www.at5.nl/artikelen/241071/regenboog-groep-laat-economisch-daklozen-in-kantoren-slapen-dit-heeft-mij-gered",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-18",
+      "event_date": "2026-11-17",
+      "checked_on": "2026-11-19",
+      "dates_checked": true,
+      "new_development": "AT5 bezocht de Regenboog Groep, die een zevende kantoorruimte als tijdelijke slaapplek heeft ingericht.",
+      "older_exception_reason": "",
+      "topic_id": "slaapplekken",
+      "evidence": {
+        "primary_url": "https://www.at5.nl/artikelen/241071/regenboog-groep-laat-economisch-daklozen-in-kantoren-slapen-dit-heeft-mij-gered",
+        "claim": "Lege kantoren bieden slaapplek aan mensen zonder woning",
+        "support": "AT5 bezocht de Regenboog Groep, die een zevende kantoorruimte als tijdelijke slaapplek heeft ingericht.",
+        "limitations": "Tijdelijke opvang, geen permanente huisvesting.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Getoetst aan de editiehistorie op URL, titel en onderwerp."
+      },
+      "positive_result": true,
+      "positive_result_explanation": "AT5 bezocht de Regenboog Groep, die een zevende kantoorruimte als tijdelijke slaapplek heeft ingericht.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "nl:sinaasappels": {
+      "source_id": "rijnmond",
+      "organization_id": "rijnmond",
+      "article_url": "https://rotterdam.headliner.nl/item/een-biertje-van-sinaasappels-deze-start-up-ziet-brood-in-afgedankt-fruit-rijnmond-120417",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-16",
+      "event_date": "2026-11-16",
+      "checked_on": "2026-11-19",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "sinaasappels",
+      "evidence": {
+        "primary_url": "https://rotterdam.headliner.nl/item/een-biertje-van-sinaasappels-deze-start-up-ziet-brood-in-afgedankt-fruit-rijnmond-120417",
+        "claim": "Afgedankte sinaasappels krijgen een tweede leven als bier",
+        "support": "De Rijnmond-reportage beschrijft hoe Half Baked afgedankte sinaasappels verwerkt tot onder meer bier.",
+        "limitations": "Geen totale besparing berekend.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Getoetst aan de editiehistorie op URL, titel en onderwerp."
+      },
+      "positive_result": true,
+      "positive_result_explanation": "De Rijnmond-reportage beschrijft hoe Half Baked afgedankte sinaasappels verwerkt tot onder meer bier.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "int:mahjong": {
+      "source_id": "nos",
+      "organization_id": "nos",
+      "article_url": "https://nos.nl/artikel/2639596-decennia-oude-mahjongstad-krijgt-tweede-leven-door-internationale-mahjonghype",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-15",
+      "event_date": "2026-11-15",
+      "checked_on": "2026-11-19",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "mahjong",
+      "evidence": {
+        "primary_url": "https://nos.nl/artikel/2639596-decennia-oude-mahjongstad-krijgt-tweede-leven-door-internationale-mahjonghype",
+        "claim": "Chinese mahjongstad leeft op door wereldwijde belangstelling",
+        "support": "NOS sprak een ondernemer uit Taixing die speciaal voor buitenlandse klanten mahjongstenen produceert.",
+        "limitations": "Reportage uit Taixing, geen wereldwijde effectmeting.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Getoetst aan de editiehistorie op URL, titel en onderwerp."
+      },
+      "positive_result": true,
+      "positive_result_explanation": "NOS sprak een ondernemer uit Taixing die speciaal voor buitenlandse klanten mahjongstenen produceert.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "int:mexico": {
+      "source_id": "the-guardian",
+      "organization_id": "the-guardian",
+      "article_url": "https://www.theguardian.com/global-development/2026/nov/16/femicide-crisis-mexico-judge-killed-my-mother-one-more-time",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-16",
+      "event_date": "2026-11-16",
+      "checked_on": "2026-11-19",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "mexico",
+      "evidence": {
+        "primary_url": "https://www.theguardian.com/global-development/2026/nov/16/femicide-crisis-mexico-judge-killed-my-mother-one-more-time",
+        "claim": "Gespecialiseerd team in Mexico-Stad boekt vooruitgang in aanpak femicide",
+        "support": "The Guardian beschrijft het gespecialiseerde team in Mexico-Stad en de dalende geregistreerde aantallen sinds de piek.",
+        "limitations": "Registratie kan onderschatten. Een verband is geen bewijs van exclusieve causaliteit.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Getoetst aan de editiehistorie op URL, titel en onderwerp."
+      },
+      "positive_result": true,
+      "positive_result_explanation": "The Guardian beschrijft het gespecialiseerde team in Mexico-Stad en de dalende geregistreerde aantallen sinds de piek.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "int:cooperaties": {
+      "source_id": "euronews",
+      "organization_id": "euronews",
+      "article_url": "https://www.euronews.com/2026/11/13/the-right-to-a-home-spains-cooperative-answer-to-the-housing-crisis",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-13",
+      "event_date": "2026-11-13",
+      "checked_on": "2026-11-19",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "cooperaties",
+      "evidence": {
+        "primary_url": "https://www.euronews.com/2026/11/13/the-right-to-a-home-spains-cooperative-answer-to-the-housing-crisis",
+        "claim": "Spaanse wooncoöperaties geven bewoners meer zeggenschap",
+        "support": "Euronews beschrijft bestaande Spaanse wooncoöperaties waarin bewoners hun huisvesting gezamenlijk organiseren.",
+        "limitations": "Voorbeelden uit één land, geen oplossing voor elke woningzoekende.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Getoetst aan de editiehistorie op URL, titel en onderwerp."
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Euronews beschrijft bestaande Spaanse wooncoöperaties waarin bewoners hun huisvesting gezamenlijk organiseren.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "int:co2": {
+      "source_id": "global-carbon-project",
+      "organization_id": "global-carbon-project",
+      "article_url": "https://globalcarbonbudget.org/fossil-co2-emissions-decrease-in-2026/?trk=article-ssr-frontend-pulse_little-text-block",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-10",
+      "event_date": "2026-11-10",
+      "checked_on": "2026-11-19",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "Het actuele jaarlijkse mondiale emissiebudget geeft een voor deze editie relevante, nieuwe raming voor 2026.",
+      "topic_id": "co2",
+      "evidence": {
+        "primary_url": "https://globalcarbonbudget.org/fossil-co2-emissions-decrease-in-2026/?trk=article-ssr-frontend-pulse_little-text-block",
+        "claim": "Wereldwijde fossiele CO₂-uitstoot daalt naar verwachting licht",
+        "support": "Het Global Carbon Project raamt 0,4 procent minder fossiele CO₂-uitstoot in 2026.",
+        "limitations": "Raming, geen structurele daling. Totale uitstoot inclusief landgebruik kan stijgen.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Getoetst aan de editiehistorie op URL, titel en onderwerp."
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Het Global Carbon Project raamt 0,4 procent minder fossiele CO₂-uitstoot in 2026.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "int:godel": {
+      "source_id": "the-guardian",
+      "organization_id": "the-guardian",
+      "article_url": "https://www.theguardian.com/science/2026/nov/13/kurt-godel-notebooks-ai-helps-unlock-hidden-discoveries-man-who-transformed-maths",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-13",
+      "event_date": "2026-11-13",
+      "checked_on": "2026-11-19",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "godel",
+      "evidence": {
+        "primary_url": "https://www.theguardian.com/science/2026/nov/13/kurt-godel-notebooks-ai-helps-unlock-hidden-discoveries-man-who-transformed-maths",
+        "claim": "AI helpt het snelschrift van wiskundige Kurt Gödel te ontcijferen",
+        "support": "The Guardian meldt dat het project van Jan von Plato AI gebruikte voor een overzicht van 1.009 pagina’s en honderden uitgewerkte stellingen.",
+        "limitations": "AI-samenvatting vraagt beoordeling door onderzoekers.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Getoetst aan de editiehistorie op URL, titel en onderwerp."
+      },
+      "positive_result": true,
+      "positive_result_explanation": "The Guardian meldt dat het project van Jan von Plato AI gebruikte voor een overzicht van 1.009 pagina’s en honderden uitgewerkte stellingen.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "int:weerfotos": {
+      "source_id": "royal-meteorological-society",
+      "organization_id": "royal-meteorological-society",
+      "article_url": "https://www.rmets.org/weather-photographer-of-the-year/gallery/weather-photographer-year-2026-winners",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-17",
+      "event_date": "2026-11-17",
+      "checked_on": "2026-11-19",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "weerfotos",
+      "evidence": {
+        "primary_url": "https://www.rmets.org/weather-photographer-of-the-year/gallery/weather-photographer-year-2026-winners",
+        "claim": "Dit zijn de winnende weerfoto’s van 2026",
+        "support": "De Royal Meteorological Society publiceerde de winnende weerfoto’s per categorie.",
+        "limitations": "Wedstrijdselectie, geen vrij beeldgebruik.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Getoetst aan de editiehistorie op URL, titel en onderwerp."
+      },
+      "positive_result": true,
+      "positive_result_explanation": "De Royal Meteorological Society publiceerde de winnende weerfoto’s per categorie.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "headlines:0": {
+      "source_id": "nos",
+      "organization_id": "nos",
+      "article_url": "https://nos.nl/artikel/2639957-wekdienst-18-11-hilversum-en-wijdemeren-naar-stembus-opiniepeiler-maurice-de-hond-staat-terecht",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-18",
+      "event_date": "2026-11-18",
+      "checked_on": "2026-11-19",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "actualiteit-2026-11-19-0",
+      "evidence": {
+        "primary_url": "https://nos.nl/artikel/2639957-wekdienst-18-11-hilversum-en-wijdemeren-naar-stembus-opiniepeiler-maurice-de-hond-staat-terecht",
+        "claim": "Oppositie kritisch over inzet Buma.",
+        "support": "De NOS-nieuwsupdate beschrijft de kritiek op de opdracht waarmee Buma samenwerking moet verkennen.",
+        "limitations": "Het gaat om een verkenningsopdracht.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Getoetst aan de editiehistorie op URL, titel en onderwerp."
+      }
+    },
+    "headlines:1": {
+      "source_id": "gemeente-hilversum",
+      "organization_id": "gemeente-hilversum",
+      "article_url": "https://hilversum.nl/verkiezingen/gemeenteraadsverkiezing-2026/verkiezingsagenda-belangrijke-data",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-18",
+      "event_date": "2026-11-18",
+      "checked_on": "2026-11-19",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "actualiteit-2026-11-19-1",
+      "evidence": {
+        "primary_url": "https://hilversum.nl/verkiezingen/gemeenteraadsverkiezing-2026/verkiezingsagenda-belangrijke-data",
+        "claim": "Hilversum en Wijdemeren kiezen een gezamenlijke gemeenteraad.",
+        "support": "De gemeentelijke verkiezingsagenda bevestigt de stemdatum. NOS bevestigt de samenvoeging op 1 januari.",
+        "limitations": "De kop gaat over het stemmen en bevat geen uitslag.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Getoetst aan de editiehistorie op URL, titel en onderwerp."
+      }
+    },
+    "headlines:2": {
+      "source_id": "cbs",
+      "organization_id": "cbs",
+      "article_url": "https://www.cbs.nl/nl-nl/nieuws/2026/47/datacenters-verbruiken-5-0-procent-van-de-elektriciteit",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-18",
+      "event_date": "2025-12-31",
+      "checked_on": "2026-11-19",
+      "dates_checked": true,
+      "new_development": "Het CBS rapporteert voorlopige cijfers van 5,0 procent voor 2025 en 4,6 procent voor 2024.",
+      "older_exception_reason": "",
+      "topic_id": "actualiteit-2026-11-19-2",
+      "evidence": {
+        "primary_url": "https://www.cbs.nl/nl-nl/nieuws/2026/47/datacenters-verbruiken-5-0-procent-van-de-elektriciteit",
+        "claim": "Datacenters gebruikten in 2025 vijf procent van de Nederlandse elektriciteit.",
+        "support": "Het CBS rapporteert voorlopige cijfers van 5,0 procent voor 2025 en 4,6 procent voor 2024.",
+        "limitations": "Het cijfer voor 2025 is voorlopig.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Getoetst aan de editiehistorie op URL, titel en onderwerp."
+      }
+    }
+  }
+}

@@ -4637,6 +4637,66 @@
       "register_ids": [],
       "channels": [],
       "enabled": false
+    },
+    {
+      "source_id": "sportnieuws",
+      "organization_id": "sportnieuws",
+      "name": "Sportnieuws.nl",
+      "website": "https://sportnieuws.nl/",
+      "category": "B",
+      "geography": "nl",
+      "source_type": "journalism",
+      "channels": [],
+      "check_frequency": "manual",
+      "enabled": false
+    },
+    {
+      "source_id": "maison-viridi",
+      "organization_id": "maison-viridi",
+      "name": "Maison Viridi",
+      "website": "https://preview.mailerlite.io/",
+      "category": "A",
+      "geography": "nl",
+      "source_type": "primary",
+      "channels": [],
+      "check_frequency": "manual",
+      "enabled": false
+    },
+    {
+      "source_id": "global-carbon-project",
+      "organization_id": "global-carbon-project",
+      "name": "Global Carbon Project",
+      "website": "https://globalcarbonbudget.org/",
+      "category": "A",
+      "geography": "int",
+      "source_type": "primary",
+      "channels": [],
+      "check_frequency": "manual",
+      "enabled": false
+    },
+    {
+      "source_id": "royal-meteorological-society",
+      "organization_id": "royal-meteorological-society",
+      "name": "Royal Meteorological Society",
+      "website": "https://www.rmets.org/",
+      "category": "A",
+      "geography": "int",
+      "source_type": "primary",
+      "channels": [],
+      "check_frequency": "manual",
+      "enabled": false
+    },
+    {
+      "source_id": "gemeente-hilversum",
+      "organization_id": "gemeente-hilversum",
+      "name": "Gemeente Hilversum",
+      "website": "https://hilversum.nl/",
+      "category": "A",
+      "geography": "nl",
+      "source_type": "primary",
+      "channels": [],
+      "check_frequency": "manual",
+      "enabled": false
     }
   ]
 }
