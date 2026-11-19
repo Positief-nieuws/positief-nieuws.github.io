@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "edition_date": "2026-11-19",
-  "news_sha256": "8206701344125febfc394d198d7f566e4a3975396df81ec8030f781378b00026",
+  "news_sha256": "7d8295ce553cf08cdaebfdb5dcd9f6bdf4211d3c439d30d22edf619d383f88a6",
   "approved": true,
   "approved_by": "Tom de Haas",
   "variation_exception_reason": "De goedgekeurde selectie bevat vijf verhalen onder Mens. Ze behandelen afzonderlijke onderwerpen, waaronder een redding, schermgebruik, een lokale inzameling, tijdelijke huisvesting en een gespecialiseerd onderzoeksteam.",
@@ -22,9 +22,10 @@
       "evidence": {
         "primary_url": "https://nos.nl/artikel/2639922-jorn-18-redde-paar-uit-zinkende-auto-in-harlingen-even-koud-maar-anders-overleven-ze-het-niet",
         "claim": "Jorn (18) en een omstander redden stel uit zinkende auto",
-        "support": "NOS beschrijft hoe de twee omstanders elk één inzittende uit de auto haalden.",
+        "support": "NOS beschrijft hoe de twee omstanders elk één inzittende uit de auto haalden. Het interview van Omroep Zilt ter plaatse bevestigt de Rozengracht en de volgorde van de redding.",
         "limitations": "Toestand aangehaald zoals Jorn die beschreef.",
-        "verified": true
+        "verified": true,
+        "additional_url": "https://omroepzilt.nl/nieuws/algemeen/112/redder-jorn-18-springt-zonder-twijfel-gracht-in-ik-dacht-dit-gaat-heel-kut-worden/"
       },
       "rights": {
         "text": "original_summary",
