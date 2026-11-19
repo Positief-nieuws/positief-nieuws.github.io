@@ -1,4 +1,16 @@
 POSITIEF NIEUWS — REDACTIONELE WERKWIJZE
+
+FAST CONCEPT (24 oktober 2026)
+Voor het eerste concept geldt docs/fast-concept.md: één opdracht ./pn go,
+bestaande actuele kandidaten, beperkte shortlist, oorspronkelijke bronnen lezen,
+eigen artikelen en HTML-preview. Geen volledige bronrescan of compleet
+selectie-/bewijsdossier op het kritieke pad. De uitgebreide verplichtingen
+hieronder, ook waar nog "vóór het eerste concept" staat, gelden voor de
+expliciet gekozen definitieve redactie/publicatie. Zij blokkeren het FAST
+CONCEPT niet. Journalistieke juistheid, eigen tekst en eerlijk vermelden van
+onzekerheid blijven ook voor een concept gelden. Live akkoord en verzenden
+blijven afzonderlijke menselijke beslissingen.
+
 Vaste editie: maandag en donderdag; 6 NL-verhalen, 6 wereldverhalen, 3 actualiteiten.
 Kern: positief nieuws dat daadwerkelijk klopt. Geen automatische publicatie uit feeds.
 

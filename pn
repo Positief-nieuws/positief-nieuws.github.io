@@ -1,0 +1,4 @@
+#!/usr/bin/env python3
+"""One command, local concept only. No publishing or newsletter capability."""
+from fast_concept import main
+main()
