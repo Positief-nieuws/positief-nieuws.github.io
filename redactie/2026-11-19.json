@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "edition_date": "2026-11-19",
-  "news_sha256": "2f3e89b84668e78b1aace894779d905abdf1c39110e801a1b243c6edfd117fcc",
+  "news_sha256": "22e96fd215e0671191feb7caa9eb4d66f36f3442eaa0b0706d60c40ae62dcd6a",
   "approved": true,
   "approved_by": "Tom de Haas",
   "variation_exception_reason": "De goedgekeurde selectie bevat vijf verhalen onder Mens. Ze behandelen afzonderlijke onderwerpen, waaronder een redding, schermgebruik, een lokale inzameling, tijdelijke huisvesting en een gespecialiseerd onderzoeksteam.",
@@ -28,7 +28,8 @@
       },
       "rights": {
         "text": "original_summary",
-        "image": "not_used"
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/netherlands-harlingen-sunset-1345851/ · Pixabay Content License · illustratieve foto, lokaal opgeslagen."
       },
       "duplicate_review": {
         "checked": true,
@@ -66,7 +67,8 @@
       },
       "rights": {
         "text": "original_summary",
-        "image": "not_used"
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/soccer-sport-ball-football-field-3471402/ · Pixabay Content License · illustratieve foto, lokaal opgeslagen."
       },
       "duplicate_review": {
         "checked": true,
@@ -104,7 +106,8 @@
       },
       "rights": {
         "text": "original_summary",
-        "image": "not_used"
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/cafe-people-talking-friends-meeting-10319314/ · Pixabay Content License · illustratieve foto, lokaal opgeslagen."
       },
       "duplicate_review": {
         "checked": true,
@@ -142,7 +145,8 @@
       },
       "rights": {
         "text": "original_summary",
-        "image": "not_used"
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/christmas-gifts-presents-5815034/ · Pixabay Content License · illustratieve foto, lokaal opgeslagen."
       },
       "duplicate_review": {
         "checked": true,
@@ -180,7 +184,8 @@
       },
       "rights": {
         "text": "original_summary",
-        "image": "not_used"
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/office-lounge-interior-design-couch-6577688/ · Pixabay Content License · illustratieve foto, lokaal opgeslagen."
       },
       "duplicate_review": {
         "checked": true,
@@ -218,7 +223,8 @@
       },
       "rights": {
         "text": "original_summary",
-        "image": "not_used"
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/oranges-citrus-fruits-vitamin-c-2100108/ · Pixabay Content License · illustratieve foto, lokaal opgeslagen."
       },
       "duplicate_review": {
         "checked": true,
@@ -256,7 +262,8 @@
       },
       "rights": {
         "text": "original_summary",
-        "image": "not_used"
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/mahjong-tiles-chinese-game-1404029/ · Pixabay Content License · illustratieve foto, lokaal opgeslagen."
       },
       "duplicate_review": {
         "checked": true,
@@ -294,7 +301,8 @@
       },
       "rights": {
         "text": "original_summary",
-        "image": "not_used"
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/mexico-mexico-city-skyline-6529584/ · Pixabay Content License · illustratieve foto, lokaal opgeslagen."
       },
       "duplicate_review": {
         "checked": true,
@@ -332,7 +340,8 @@
       },
       "rights": {
         "text": "original_summary",
-        "image": "not_used"
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/es/photos/barcelona-pared-de-casas-391993/ · Pixabay Content License · illustratieve foto, lokaal opgeslagen."
       },
       "duplicate_review": {
         "checked": true,
@@ -370,7 +379,8 @@
       },
       "rights": {
         "text": "original_summary",
-        "image": "not_used"
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/wind-power-generation-windmills-7298301/ · Pixabay Content License · illustratieve foto, lokaal opgeslagen."
       },
       "duplicate_review": {
         "checked": true,
@@ -408,7 +418,8 @@
       },
       "rights": {
         "text": "original_summary",
-        "image": "not_used"
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/mathematics-writing-hand-notebook-6961680/ · Pixabay Content License · illustratieve foto, lokaal opgeslagen."
       },
       "duplicate_review": {
         "checked": true,
@@ -446,7 +457,8 @@
       },
       "rights": {
         "text": "original_summary",
-        "image": "not_used"
+        "image": "licensed",
+        "image_evidence": "https://pixabay.com/photos/lightning-storm-weather-sky-399853/ · Pixabay Content License · illustratieve foto, lokaal opgeslagen."
       },
       "duplicate_review": {
         "checked": true,
