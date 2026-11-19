@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: e48d72fc23f6a088775d617967ec819c8af44759
       - uses: actions/setup-python@v5
         with:
           python-version: "3.13"
