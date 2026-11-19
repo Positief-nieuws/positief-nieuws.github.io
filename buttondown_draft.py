@@ -112,7 +112,7 @@ def edition_date_short_text(data):
 
 
 def build_preheader(data, nl):
-    """Inbox-preview: liefst redactioneel uit nieuws.json, anders de eerste twee NL-koppen."""
+    """Inbox-preview: liefst redactioneel uit nieuws.json, anders twee verhalen naast het hoofdverhaal."""
     custom = (
         data.get("meta", {}).get("email_preheader")
         or data.get("edition", {}).get("email_preheader")
@@ -123,7 +123,7 @@ def build_preheader(data, nl):
         return custom[:180]
 
     titles = []
-    for article in nl[:2]:
+    for article in homepage_email_order(data, nl)[1:3]:
         title = " ".join(str(article.get("title") or "").split()).strip()
         if title:
             titles.append(title)
@@ -131,7 +131,7 @@ def build_preheader(data, nl):
     if not titles:
         return "12 positieve verhalen + 3 belangrijke nieuwsitems om bij te blijven."
 
-    preview = " · ".join(titles)
+    preview = "Ook deze editie: " + " · ".join(titles)
     if len(preview) > 180:
         preview = preview[:177].rstrip(" ,.;:–—-") + "…"
     return preview
@@ -373,6 +373,7 @@ def build_body(data, nl, international, headlines):
 <div class="email-shell" style="width:100%;max-width:740px;margin:0 auto;box-sizing:border-box;background:{PAPER};padding:28px 28px;color:{INK};font-family:Arial,Helvetica,sans-serif;">
   <div style="padding:0 0 22px;border-bottom:1px solid #e1e9e5;">
     <a href="{esc(buttondown_edition_url(data))}" style="font:800 25px Arial,Helvetica,sans-serif;letter-spacing:-1px;color:{INK} !important;text-decoration:none;"><img src="{SITE_URL}sun-orange.png" width="32" height="32" alt="" style="display:inline-block;width:32px;height:32px;vertical-align:middle;margin-right:8px;">Positief nieuws</a>
+    <p style="margin:8px 0 0;font:14px Arial,Helvetica,sans-serif;color:{MUTED};">Dit gebeurt ook</p>
   </div>
   <div style="padding:30px 0 26px;">
     <p style="margin:0 0 14px;font:700 12px Arial,Helvetica,sans-serif;color:{GREEN};">Editie van {esc(edition_date_text(data))}</p>
@@ -393,7 +394,12 @@ def build_body(data, nl, international, headlines):
 
 
 def build_subject(data):
-    return f"Dit gebeurt ook · {edition_date_short_text(data)}"
+    stories = homepage_email_order(data, data.get("nl", []))
+    if stories:
+        title = " ".join(str(stories[0].get("title") or "").split())
+        if title:
+            return title
+    return f"Positief nieuws · {edition_date_short_text(data)}"
 
 
 def create_draft(api_key, subject, body, data, preheader):
