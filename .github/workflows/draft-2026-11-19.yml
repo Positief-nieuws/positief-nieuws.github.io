@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: e48d72fc23f6a088775d617967ec819c8af44759
+          ref: ef0c1dc426410c4c54ca7d341387f552a653b4d0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.13"
@@ -34,6 +34,7 @@ jobs:
           assert key
           subject = bd.build_subject(data)
           data['meta']['email_preheader'] = 'Ook deze editie: Lily Yohannes opent een voetbalpleintje en een bakkerij in Schagen zamelt sintcadeaus in voor kinderen in de noodopvang.'
+          data['meta']['email_intro'] = "Jorn (18) kwam net terug van het sporten toen hij in Harlingen een auto in de gracht zag drijven. Hij sprong het water in. Samen met een tweede omstander kreeg hij beide inzittenden op de kant. Verder zie je hoe Lily Yohannes een voetbalplein opent in Amsterdam, waarom in een bakkerij in Schagen drie jutezakken klaarstaan en wat een fabriek in Barendrecht doet met sinaasappels die de supermarkt niet meer kan verkopen.\n\nBuiten Nederland volgen we de mahjongstenen die vanuit een Chinese stad hun weg naar nieuwe spelers vinden. Ook lees je wat AI helpt blootleggen in de moeilijk leesbare notitieboeken van wiskundige Kurt Gödel. En hoe kan de fossiele CO₂-uitstoot naar verwachting dalen terwijl de totale uitstoot stijgt? Die twee cijfers leggen we naast elkaar."
           preheader = bd.build_preheader(data,nl)
           body = bd.build_body(data,nl,international,headlines)
           canonical = bd.edition_url(data)
