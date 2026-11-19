@@ -1,0 +1,69 @@
+name: Buttondown-concept 19 november 2026
+on:
+  push:
+    branches: ["newsletter-draft/2026-11-19"]
+    paths: [".github/workflows/draft-2026-11-19.yml"]
+permissions:
+  contents: read
+concurrency: buttondown-draft-2026-11-19
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Controleer editie en bewaar uitsluitend een concept
+        env:
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+        run: |
+          python - <<'PY'
+          import json, os, urllib.parse, urllib.request
+          import buttondown_draft as bd
+          import editorial_check as e
+          data, nl, international, headlines = bd.load_news()
+          edition = '2026-11-19'
+          assert bd.raw_edition_date(data) == edition
+          report = e.check(data,json.load(open(f'redactie/{edition}.json')),require_selection=False)
+          if not report['ready']:
+              raise SystemExit(report['errors'])
+          key = os.environ['BUTTONDOWN_API_KEY']
+          assert key
+          subject = bd.build_subject(data)
+          data['meta']['email_preheader'] = 'Ook deze editie: Lily Yohannes opent een voetbalpleintje en een bakkerij in Schagen zamelt sintcadeaus in voor kinderen in de noodopvang.'
+          preheader = bd.build_preheader(data,nl)
+          body = bd.build_body(data,nl,international,headlines)
+          canonical = bd.edition_url(data)
+          assert subject.startswith('Jorn (18)')
+          endpoint = bd.BUTTONDOWN_URL.rstrip('/')
+          def request(method, url, payload=None):
+              assert urllib.parse.urlparse(url).hostname == 'api.buttondown.com'
+              raw = json.dumps(payload).encode() if payload is not None else None
+              req = urllib.request.Request(url, data=raw, method=method, headers={'Authorization':'Token '+key,'Accept':'application/json','Content-Type':'application/json'})
+              with urllib.request.urlopen(req,timeout=30) as response:
+                  return json.load(response)
+          matches = []
+          page = endpoint
+          for _ in range(50):
+              listing = request('GET',page)
+              matches.extend(x for x in listing['results'] if (x.get('canonical_url') or '').rstrip('/') == canonical.rstrip('/'))
+              if not listing.get('next'):
+                  break
+              page = urllib.parse.urljoin(endpoint,listing['next'])
+          else:
+              raise SystemExit('Dubbelcontrole onvolledig.')
+          if len(matches)>1:
+              raise SystemExit('Meerdere Buttondown-mails voor deze editie.')
+          if matches:
+              existing = matches[0]
+              if existing.get('status') != 'draft':
+                  raise SystemExit('Deze editie bestaat al buiten de conceptstatus.')
+              draft = request('PATCH',endpoint+'/'+existing['id'],{'subject':subject,'description':preheader,'body':body})
+          else:
+              draft = bd.create_draft(key,subject,body,data,preheader)
+          assert draft['status']=='draft' and draft['subject']==subject
+          print('Buttondown-concept opgeslagen. ID:',draft['id'])
+          print('Onderwerp:',subject)
+          print('Preview:',preheader)
+          PY
