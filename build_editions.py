@@ -857,6 +857,8 @@ def render_article_page(item, date_value, related_records=None, image_data=None,
 .article-page h1{max-width:760px;margin:0;font-size:clamp(1.95rem,5vw,3.8rem);line-height:1.02;letter-spacing:-.045em}
 .article-deck{max-width:700px;margin:22px 0 0;font-size:1.12rem;line-height:1.62;color:#3f4842}
 .article-meta{display:flex;flex-wrap:wrap;gap:8px 14px;margin:22px 0 0;color:var(--muted);font-size:.78rem}
+.pn-newsletter-link{margin:16px 0 24px;max-width:700px;font-size:14px;line-height:1.6;color:#536c64}
+.pn-newsletter-link a{color:#176e5c;text-decoration:underline;text-underline-offset:3px}
 .article-figure{max-width:700px;margin:28px 0 26px}
 .article-figure img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px;background:#ece8dc}
 .article-figure figcaption{margin-top:8px;color:var(--muted);font-size:.68rem;line-height:1.45}
@@ -938,6 +940,7 @@ def render_article_page(item, date_value, related_records=None, image_data=None,
       <h1>{title}<b>.</b></h1>
       {f'<p class="article-deck">{teaser}</p>' if teaser else ''}
       <div class="article-meta"><span>{esc(date_text)}</span><span>Bron: {source}</span></div>
+      <!-- newsletter:article_intro:start --><p class="pn-newsletter-link">Meer van dit soort nieuws? <a href="#nieuwsbrief" data-newsletter-cta="article_intro">Ontvang onze gratis algemene nieuwsbrief.</a></p><!-- newsletter:article_intro:end -->
       {image_html}
       <div class="article-rule"></div>
       <article class="article-copy">{body_html}</article>

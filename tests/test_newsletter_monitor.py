@@ -83,6 +83,34 @@ class LatestEditionSignupTests(unittest.TestCase):
         self.assertEqual(len(articles), 12, "De nieuwste editie moet 12 artikelen bevatten")
         check_newsletter_forms([Path("index.html"), *articles])
 
+
+    def test_prepublication_guard_catches_missing_intro_link(self):
+        from publish_edition import check_newsletter_forms
+        import tempfile
+        import os
+        import re
+        source = Path("artikelen/2026-11-19/harlingen/index.html").read_text(encoding="utf-8")
+        with tempfile.TemporaryDirectory() as directory:
+            previous = Path.cwd()
+            try:
+                os.chdir(directory)
+                article = Path("artikelen/2026-11-19/harlingen/index.html")
+                article.parent.mkdir(parents=True)
+                without_intro = re.sub(
+                    r'<!-- newsletter:article_intro:start -->.*?<!-- newsletter:article_intro:end -->',
+                    '', source, flags=re.S
+                )
+                article.write_text(without_intro, encoding="utf-8")
+                with self.assertRaisesRegex(ValueError, "Nieuwsbriefintro ontbreekt"):
+                    check_newsletter_forms([article])
+                article.write_text(source.replace('href="#nieuwsbrief" data-newsletter-cta="article_intro"',
+                                                  'href="/nieuwsbrief/" data-newsletter-cta="article_intro"'),
+                                   encoding="utf-8")
+                with self.assertRaisesRegex(ValueError, "Nieuwsbriefintro ontbreekt"):
+                    check_newsletter_forms([article])
+            finally:
+                os.chdir(previous)
+
     def test_prepublication_guard_catches_missing_forms(self):
         from publish_edition import check_newsletter_forms
         import tempfile
