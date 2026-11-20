@@ -72,4 +72,29 @@ class MonitorTests(unittest.TestCase):
         self.assertTrue(any(r['status'] == 'FAIL' and r['location'] == '/' for r in rows))
         self.assertTrue(any(r['status'] == 'MANUAL' for r in rows))
 
+
+class LatestEditionSignupTests(unittest.TestCase):
+    def test_published_edition_signup_forms_and_analytics(self):
+        import json
+        from publish_edition import check_newsletter_forms
+
+        date = json.loads(Path("nieuws.json").read_text(encoding="utf-8"))["meta"]["edition_date"]
+        articles = sorted((Path("artikelen") / date).rglob("index.html"))
+        self.assertEqual(len(articles), 12, "De nieuwste editie moet 12 artikelen bevatten")
+        check_newsletter_forms([Path("index.html"), *articles])
+
+    def test_prepublication_guard_catches_missing_forms(self):
+        from publish_edition import check_newsletter_forms
+        import tempfile
+        import os
+        with tempfile.TemporaryDirectory() as directory:
+            previous = Path.cwd()
+            try:
+                os.chdir(directory)
+                Path("index.html").write_text("<html><head></head><body></body></html>")
+                with self.assertRaisesRegex(ValueError, "Nieuwsbriefcontrole mislukt"):
+                    check_newsletter_forms([Path("index.html")])
+            finally:
+                os.chdir(previous)
+
 if __name__ == '__main__': unittest.main()
