@@ -48,6 +48,40 @@ class RelatedTests(unittest.TestCase):
                         page.index('class="article-related"'))
 
 
+    def test_generator_outputs_canonical_article_action_order(self):
+        from build_editions import render_article_page
+        item = {
+            'title': 'De buurt helpt elkaar', 'category': 'Mens',
+            'article_slug': 'buurt-hulp', 'article_body': ['Een voorbeeldartikel.'],
+            'url': 'https://example.org/bron'
+        }
+        related = [{'path': '/artikelen/2026-11-12/jouke-wecare/', 'type': 'article',
+                    'item': {'title': 'Een ander verhaal'}}]
+        page = render_article_page(item, '2026-11-19', related)
+        self.assertLess(page.index('class="article-share"'), page.index('class="article-newsletter"'))
+        self.assertLess(page.index('class="article-newsletter"'), page.index('class="article-related"'))
+
+    def test_refresh_repairs_old_growth_order_and_is_idempotent(self):
+        from build_editions import render_article_page
+        from scripts.refresh_related_articles import update_article_markup
+        item = {
+            'title': 'Nieuwe kansen', 'category': 'Mens', 'article_slug': 'kansen',
+            'article_body': ['Het verhaal blijft ongewijzigd.'],
+            'url': 'https://example.org/bron'
+        }
+        correct = render_article_page(item, '2026-11-19')
+        # Transformeer het testdocument terug naar de foutieve oorspronkelijke volgorde.
+        from article_layout import Blocks
+        blocks = Blocks(correct).blocks
+        share = blocks['article-share']
+        newsletter = blocks['article-newsletter']
+        old = (correct[:share[0]] + correct[newsletter[0]:newsletter[1]] +
+               '\n        ' + correct[share[0]:share[1]] + correct[newsletter[1]:])
+        fixed = update_article_markup(old, '')
+        self.assertLess(fixed.index('class="article-share"'), fixed.index('class="article-newsletter"'))
+        self.assertIn('Het verhaal blijft ongewijzigd.', fixed)
+        self.assertEqual(fixed, update_article_markup(fixed, ''))
+
     def test_inline_card_is_conditional_and_crawlable(self):
         from build_editions import select_inline_related, render_article_page
         text = "Drinkwater voor gezinnen maakt het watersysteem toegankelijker. " * 14

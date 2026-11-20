@@ -738,10 +738,11 @@ ARTICLE_GROWTH_JS = '<script>\n(function () {\n  const block = document.querySel
 
 
 def render_growth_block(canonical, title_raw, page_type="article"):
+    from article_layout import order_article_actions
     placement = "special_end" if page_type == "special" else "article_end"
     whatsapp_url = esc("https://wa.me/?text=" + urllib.parse.quote(title_raw + "\n\n" + canonical, safe=""))
     email_url = esc("mailto:?subject=" + urllib.parse.quote(title_raw, safe="") + "&body=" + urllib.parse.quote(title_raw + "\n\n" + canonical + "\n\nPositief nieuws · Dit gebeurt ook.", safe=""))
-    return f"""      <section class="article-growth" aria-label="Ontvang en deel Positief nieuws">
+    return order_article_actions(f"""      <section class="article-growth" aria-label="Ontvang en deel Positief nieuws">
         <div class="article-newsletter" id="nieuwsbrief">
           <p class="growth-kicker">Dit gebeurt ook. In je inbox.</p>
           <h2>Meer van dit soort nieuws?</h2>
@@ -767,7 +768,7 @@ def render_growth_block(canonical, title_raw, page_type="article"):
           <p id="article-share-status" class="article-share-status" role="status" aria-live="polite"></p>
           <div id="article-copy-fallback" class="article-copy-fallback" hidden><label for="article-url">Link naar dit artikel</label><input id="article-url" value="{esc(canonical)}" readonly></div>
         </div>
-      </section>"""
+      </section>""")
 
 
 def render_article_page(item, date_value, related_records=None, image_data=None, inline_record=None):
