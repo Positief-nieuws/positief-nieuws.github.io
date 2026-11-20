@@ -7,9 +7,12 @@ from build_editions import (
     select_related_articles, render_related_articles,
 )
 from related_content import special_records
+from article_layout import order_article_actions
 
 
 def update_article_markup(markup, related_markup):
+    # Normaliseer oude edities naar delen, nieuwsbrief, gerelateerd lezen.
+    markup = order_article_actions(markup)
     # Old recommendations might have appeared above the newsletter.
     cleaned = re.sub(
         r'\s*<section\b[^>]*class="article-related"[^>]*>.*?</section>\s*',
