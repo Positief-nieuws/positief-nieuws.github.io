@@ -4,6 +4,7 @@ import argparse
 import hashlib
 import json
 import os
+import re
 from datetime import date
 from pathlib import Path
 import subprocess
@@ -77,6 +78,18 @@ def check_newsletter_forms(files):
             expected = {"article_end"}
         else:
             continue
+        if path.parts[0] == "artikelen":
+            markup = path.read_text(encoding="utf-8")
+            links = list(re.finditer(
+                r'<a\b[^>]*\bdata-newsletter-cta="article_intro"[^>]*>', markup, re.I
+            ))
+            if len(links) != 1 or not re.search(r'\bhref="#nieuwsbrief"', links[0].group(0)):
+                raise ValueError(f"Nieuwsbriefintro ontbreekt of linkt verkeerd op {path}")
+            meta = markup.find('<div class="article-meta">')
+            meta_end = markup.find('</div>', meta) if meta >= 0 else -1
+            image = markup.find('<figure class="article-figure">', meta_end)
+            if meta_end < 0 or links[0].start() <= meta_end or (image >= 0 and links[0].start() >= image):
+                raise ValueError(f"Nieuwsbriefintro staat niet tussen artikelgegevens en foto op {path}")
         failures = [
             f"{placement}: {description}"
             for placement, description, ok in form_checks(
