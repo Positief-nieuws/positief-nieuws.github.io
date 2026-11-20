@@ -65,6 +65,29 @@ def files_for_preview(day, stories, urls):
     return files
 
 
+
+def check_newsletter_forms(files):
+    """Require working, measurable signup placements in each approved edition."""
+    from scripts.check_newsletter import form_checks
+
+    for path in files:
+        if path == Path("index.html"):
+            expected = {"home_hero", "home_end"}
+        elif path.parts[0] == "artikelen" and path.name == "index.html":
+            expected = {"article_end"}
+        else:
+            continue
+        failures = [
+            f"{placement}: {description}"
+            for placement, description, ok in form_checks(
+                path.read_text(encoding="utf-8"), "/" + str(path.parent) + "/", expected
+            )
+            if not ok
+        ]
+        if failures:
+            raise ValueError(f"Nieuwsbriefcontrole mislukt voor {path}: " + "; ".join(failures))
+
+
 def dossier_path(day):
     return Path("redactie", f"{day}.json")
 
@@ -107,6 +130,7 @@ def prepare(source, evidence):
     dossier_path(day).write_text(json.dumps(dossier, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     subprocess.run([sys.executable, "build_editions.py"], check=True)
     files = files_for_preview(day, stories, urls)
+    check_newsletter_forms(files)
     git("add", "-A")
     record = snapshot(day, files)
     preview_record().write_text(json.dumps(record, indent=2), encoding="utf-8")
@@ -119,7 +143,9 @@ def check_files():
     raw, day, stories, urls = read_edition(site.NEWS_PATH)
     if Path("edities", f"{day}.json").read_bytes() != raw:
         raise ValueError("Homepage en archief gebruiken verschillende editiebestanden.")
-    return day, files_for_preview(day, stories, urls)
+    files = files_for_preview(day, stories, urls)
+    check_newsletter_forms(files)
+    return day, files
 
 
 def verify():
