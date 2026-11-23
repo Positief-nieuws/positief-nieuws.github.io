@@ -4697,6 +4697,125 @@
       "channels": [],
       "check_frequency": "manual",
       "enabled": false
+    },
+    {
+      "source_id": "provincie-noord-holland",
+      "organization_id": "provincie-noord-holland",
+      "name": "Provincie Noord-Holland",
+      "website": "https://www.noord-holland.nl/",
+      "category": "B",
+      "topics": [
+        "Natuur & klimaat"
+      ],
+      "geography": "nl",
+      "source_type": "original_publication",
+      "reliability_notes": "Oorspronkelijke publicatie voor dit verhaal; feitelijke beperkingen in het editiedossier.",
+      "priority": "P2",
+      "check_frequency": "manual",
+      "limitations": "Een aanvraag wordt per geval beoordeeld.",
+      "channels": []
+    },
+    {
+      "source_id": "bewust-papa",
+      "organization_id": "bewust-papa",
+      "name": "Sander Nieland · Bewust P.A.P.A.",
+      "website": "https://nl.linkedin.com/",
+      "category": "B",
+      "topics": [
+        "Mens"
+      ],
+      "geography": "nl",
+      "source_type": "original_publication",
+      "reliability_notes": "Oorspronkelijke publicatie voor dit verhaal; feitelijke beperkingen in het editiedossier.",
+      "priority": "P2",
+      "check_frequency": "manual",
+      "limitations": "Het gaat om een aangekondigde bijeenkomst. Het initiatief claimt geen gemeten effect.",
+      "channels": []
+    },
+    {
+      "source_id": "energiehulp-dordrecht",
+      "organization_id": "energiehulp-dordrecht",
+      "name": "Rijnmond via Headliner",
+      "website": "https://energiehulp.nl/",
+      "category": "B",
+      "topics": [
+        "Energie & innovatie"
+      ],
+      "geography": "nl",
+      "source_type": "original_publication",
+      "reliability_notes": "Oorspronkelijke publicatie voor dit verhaal; feitelijke beperkingen in het editiedossier.",
+      "priority": "P2",
+      "check_frequency": "manual",
+      "limitations": "Het effect verschilt per woning. Details van het bezoek komen uit de via Headliner toegankelijke samenvatting.",
+      "channels": []
+    },
+    {
+      "source_id": "essex-wildlife-trust",
+      "organization_id": "essex-wildlife-trust",
+      "name": "Essex Wildlife Trust",
+      "website": "https://www.essexwt.org.uk/",
+      "category": "B",
+      "topics": [
+        "Natuur & klimaat"
+      ],
+      "geography": "int",
+      "source_type": "original_publication",
+      "reliability_notes": "Oorspronkelijke publicatie voor dit verhaal; feitelijke beperkingen in het editiedossier.",
+      "priority": "P2",
+      "check_frequency": "manual",
+      "limitations": "De telling gaat over één locatie.",
+      "channels": []
+    },
+    {
+      "source_id": "frontiers-marine-science",
+      "organization_id": "frontiers-marine-science",
+      "name": "Frontiers in Marine Science",
+      "website": "https://www.frontiersin.org/",
+      "category": "B",
+      "topics": [
+        "Natuur & klimaat"
+      ],
+      "geography": "int",
+      "source_type": "original_publication",
+      "reliability_notes": "Oorspronkelijke publicatie voor dit verhaal; feitelijke beperkingen in het editiedossier.",
+      "priority": "P2",
+      "check_frequency": "manual",
+      "limitations": "Voortplanting en zelfstandig herstel zijn niet aangetoond.",
+      "channels": []
+    },
+    {
+      "source_id": "universiteit-jyvaskyla",
+      "organization_id": "universiteit-jyvaskyla",
+      "name": "Universiteit van Jyväskylä",
+      "website": "https://api.sttinfo.fi/",
+      "category": "B",
+      "topics": [
+        "Gezondheid"
+      ],
+      "geography": "int",
+      "source_type": "original_publication",
+      "reliability_notes": "Oorspronkelijke publicatie voor dit verhaal; feitelijke beperkingen in het editiedossier.",
+      "priority": "P2",
+      "check_frequency": "manual",
+      "limitations": "Bijna de helft ging op meerdere onderdelen vooruit. Individuele uitkomsten verschillen.",
+      "channels": []
+    },
+    {
+      "source_id": "dbs",
+      "organization_id": "dbs",
+      "name": "Tischtennis Baden-Württemberg / DBS",
+      "website": "https://www.ttbw.de/",
+      "category": "B",
+      "topics": [
+        "Sport"
+      ],
+      "geography": "int",
+      "source_type": "original_publication",
+      "reliability_notes": "Oorspronkelijke publicatie voor dit verhaal; feitelijke beperkingen in het editiedossier.",
+      "priority": "P2",
+      "check_frequency": "manual",
+      "limitations": "De medailles zijn behaald in verschillende wedstrijdklassen.",
+      "channels": []
     }
   ]
 }

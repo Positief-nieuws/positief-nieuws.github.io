@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://positief-nieuws.nl/</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-23</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/over/</loc>
@@ -15,11 +15,15 @@
   </url>
   <url>
     <loc>https://positief-nieuws.nl/edities/</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-23</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/onderwerpen/</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/edities/2026-11-23/</loc>
+    <lastmod>2026-11-23</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/edities/2026-11-19/</loc>
@@ -127,38 +131,90 @@
   </url>
   <url>
     <loc>https://positief-nieuws.nl/energie-en-innovatie/</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-23</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/gezondheid/</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-23</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/mens/</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-23</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/natuur-en-klimaat/</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-23</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/wetenschap/</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-23</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/sport/</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-11-23/texel-natuur-vergunning/</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-11-23/bewust-vaderschap/</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-11-23/igor-energiehulp-dordrecht/</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-11-23/lelystad-sinterklaas-studenten/</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-11-23/veenmosbundelzwam-naardermeer/</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-11-23/angel-daleman-zes-zeges/</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-11-23/voyager-een-lichtdag/</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-11-23/essex-nachtvlinder/</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-11-23/vn-chemicalien-afspraken/</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-11-23/gyaros-zeewierproef/</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-11-23/finland-bewegen-70-plussers/</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-11-23/duitsland-para-tafeltennis/</loc>
+    <lastmod>2026-11-23</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/artikelen/2026-11-19/harlingen/</loc>
     <lastmod>2026-11-19</lastmod>
   </url>
   <url>
-    <loc>https://positief-nieuws.nl/artikelen/2026-11-19/schagen/</loc>
+    <loc>https://positief-nieuws.nl/artikelen/2026-11-19/holendrecht/</loc>
     <lastmod>2026-11-19</lastmod>
   </url>
   <url>
-    <loc>https://positief-nieuws.nl/artikelen/2026-11-19/holendrecht/</loc>
+    <loc>https://positief-nieuws.nl/artikelen/2026-11-19/verbinding/</loc>
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-11-19/schagen/</loc>
     <lastmod>2026-11-19</lastmod>
   </url>
   <url>
@@ -167,10 +223,6 @@
   </url>
   <url>
     <loc>https://positief-nieuws.nl/artikelen/2026-11-19/sinaasappels/</loc>
-    <lastmod>2026-11-19</lastmod>
-  </url>
-  <url>
-    <loc>https://positief-nieuws.nl/artikelen/2026-11-19/verbinding/</loc>
     <lastmod>2026-11-19</lastmod>
   </url>
   <url>

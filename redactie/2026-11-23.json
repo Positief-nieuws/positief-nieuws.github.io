@@ -1,0 +1,614 @@
+{
+  "schema_version": 1,
+  "edition_date": "2026-11-23",
+  "news_sha256": "eb12440bf84b5845dec9e8ae7f22fd0ecfc8c2a4ef497cd481144129288e907d",
+  "approved": true,
+  "approved_by": "Tom de Haas",
+  "variation_exception_reason": "De natuurverhalen belichten verschillende onderwerpen: vergunningverlening, een paddenstoelenvondst, soortenbeheer, chemicaliënbeleid en experimenteel herstel op een Grieks rif.",
+  "articles": {
+    "nl:texel-natuur-vergunning": {
+      "source_id": "provincie-noord-holland",
+      "organization_id": "provincie-noord-holland",
+      "article_url": "https://www.noord-holland.nl/Actueel/Archief/2026/November_2026/PAS_melders_op_Texel_kunnen_natuurvergunning_aanvragen",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-18",
+      "event_date": "2026-11-18",
+      "checked_on": "2026-11-23",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "texel-natuur-vergunning",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.noord-holland.nl/Actueel/Archief/2026/November_2026/PAS_melders_op_Texel_kunnen_natuurvergunning_aanvragen",
+        "claim": "Op Texel herstelt kwetsbare natuur en ontstaat weer ruimte voor ondernemers",
+        "support": "De provinciale analyse bevestigt dat PAS-melders een aanvraag kunnen doen als de stikstofneerslag niet stijgt en herstel doorgaat.",
+        "limitations": "Een aanvraag wordt per geval beoordeeld.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Uitzicht over natuurgebied De Slufter op Texel, archiefbeeld · MartinD via Wikimedia Commons (CC BY-SA 3.0). https://commons.wikimedia.org/wiki/File:Texel_De_Slufter.jpg https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Gecontroleerd op URL en nieuwsfeit tegenover het editiearchief.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "De provinciale analyse bevestigt dat PAS-melders een aanvraag kunnen doen als de stikstofneerslag niet stijgt en herstel doorgaat.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "nl:bewust-vaderschap": {
+      "source_id": "bewust-papa",
+      "organization_id": "bewust-papa",
+      "article_url": "https://nl.linkedin.com/posts/sandernieland_bewust-papa-scan-hoe-rond-loopt-jouw-activity-7514606772121288704-gzRj",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-12",
+      "event_date": "2026-11-12",
+      "checked_on": "2026-11-23",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "De aankondiging betreft een nog komende bijeenkomst op 28 november.",
+      "topic_id": "bewust-vaderschap",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://nl.linkedin.com/posts/sandernieland_bewustpapa-vaderschap-werkengezin-activity-7526535573482770432-4zSb",
+        "claim": "Deze vaders willen het ouderschap niet langer alleen uitzoeken",
+        "support": "Mede-initiatiefnemer kondigt op 12 november de bijeenkomst aan. Zijn eerdere bericht beschrijft het vaderwiel en de tien domeinen.",
+        "limitations": "Het gaat om een aangekondigde bijeenkomst. Het initiatief claimt geen gemeten effect.",
+        "verified": true,
+        "additional_url": "https://nl.linkedin.com/posts/sandernieland_bewust-papa-scan-hoe-rond-loopt-jouw-activity-7514606772121288704-gzRj"
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Illustratief beeld van een vader die buiten de hand van zijn kind vasthoudt. Beeld: Ravi Kant via Pexels (Pexels License). https://www.pexels.com/photo/parent-holding-a-childs-hands-and-walking-on-grass-14848350/ https://www.pexels.com/license/"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Gecontroleerd op URL en nieuwsfeit tegenover het editiearchief.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Mede-initiatiefnemer kondigt op 12 november de bijeenkomst aan. Zijn eerdere bericht beschrijft het vaderwiel en de tien domeinen.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "nl:igor-energiehulp-dordrecht": {
+      "source_id": "energiehulp-dordrecht",
+      "organization_id": "energiehulp-dordrecht",
+      "article_url": "https://rotterdam.headliner.nl/item/igor-helpt-bewoners-gratis-aan-warmer-huis-en-lagere-rekening-rijnmond-120550",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-22",
+      "event_date": "2026-11-22",
+      "checked_on": "2026-11-23",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "igor-energiehulp-dordrecht",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://energiehulp.nl/dordrecht/",
+        "claim": "Igor helpt Dordtenaren gratis aan een warmer huis",
+        "support": "De op 22 november verschenen Rijnmond-samenvatting beschrijft Igors bezoek. Energiehulp Dordrecht bevestigt de gratis materialen en installatie.",
+        "limitations": "Het effect verschilt per woning. Details van het bezoek komen uit de via Headliner toegankelijke samenvatting.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Thermostaatknop op een radiator, illustratief beeld. Beeld: Coyau via Wikimedia Commons (CC BY-SA 3.0). https://commons.wikimedia.org/wiki/File:Vanne_thermostatique_thermador_08.jpg https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Gecontroleerd op URL en nieuwsfeit tegenover het editiearchief.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "De op 22 november verschenen Rijnmond-samenvatting beschrijft Igors bezoek. Energiehulp Dordrecht bevestigt de gratis materialen en installatie.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "nl:lelystad-sinterklaas-studenten": {
+      "source_id": "omroep-flevoland",
+      "organization_id": "omroep-flevoland",
+      "article_url": "https://preview.omroepflevoland.nl/nieuws/532023/%27geen-enkel-kind-mag-buiten-spel-staan%27-studenten-helpen-sinterklaasfeest-mogelijk-maken",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-21",
+      "event_date": "2026-11-21",
+      "checked_on": "2026-11-23",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "lelystad-sinterklaas-studenten",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://preview.omroepflevoland.nl/nieuws/532023/%27geen-enkel-kind-mag-buiten-spel-staan%27-studenten-helpen-sinterklaasfeest-mogelijk-maken",
+        "claim": "Studenten helpen Sinterklaasfeest mogelijk maken voor kinderen uit gezinnen met een kleine beurs",
+        "support": "Omroep Flevoland sprak de betrokkenen tijdens de voorbereidingen en bevestigt de locatie en datum van het feest.",
+        "limitations": "Het feest stond op de publicatiedatum gepland.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Sinterklaasintocht uit 2019, archiefbeeld. Beeld: Gijs Franken via Wikimedia Commons (CC BY-SA 4.0). https://commons.wikimedia.org/wiki/File:Intocht_Sinterklaas_in_2019.jpg https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Gecontroleerd op URL en nieuwsfeit tegenover het editiearchief.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Omroep Flevoland sprak de betrokkenen tijdens de voorbereidingen en bevestigt de locatie en datum van het feest.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "nl:veenmosbundelzwam-naardermeer": {
+      "source_id": "natuurmonumenten",
+      "organization_id": "natuurmonumenten",
+      "article_url": "https://www.natuurmonumenten.nl/natuurgebieden/naardermeer/nieuws/zeer-zeldzame-paddenstoel-na-ruim-70-jaar-teruggevonden-in-het",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-19",
+      "event_date": "2026-11-19",
+      "checked_on": "2026-11-23",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "veenmosbundelzwam-naardermeer",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.natuurmonumenten.nl/natuurgebieden/naardermeer/nieuws/zeer-zeldzame-paddenstoel-na-ruim-70-jaar-teruggevonden-in-het",
+        "claim": "Zeldzame paddenstoel na ruim 70 jaar teruggevonden in het Naardermeer",
+        "support": "De beheerder meldt dat de soort na ruim zeventig jaar opnieuw in het Naardermeer is aangetroffen.",
+        "limitations": "Een nieuwe waarneming zegt niets over populatieomvang.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Uitzicht over het Naardermeer vanaf Wijde Blik, archiefbeeld. Beeld: HenkvD via Wikimedia Commons (CC BY-SA 4.0). https://commons.wikimedia.org/wiki/File:Naardermeer_Wijde_Blik.jpg https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Gecontroleerd op URL en nieuwsfeit tegenover het editiearchief.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "De beheerder meldt dat de soort na ruim zeventig jaar opnieuw in het Naardermeer is aangetroffen.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "nl:angel-daleman-zes-zeges": {
+      "source_id": "nos",
+      "organization_id": "nos",
+      "article_url": "https://nos.nl/artikel/2640572-goud-goud-en-nog-eens-goud-voor-daleman-schaatstalent-is-volwassener-geworden",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-22",
+      "event_date": "2026-11-22",
+      "checked_on": "2026-11-23",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "angel-daleman-zes-zeges",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://nos.nl/artikel/2640572-goud-goud-en-nog-eens-goud-voor-daleman-schaatstalent-is-volwassener-geworden",
+        "claim": "Angel Daleman wint zes van de zes wereldbekerraces in twee weekenden",
+        "support": "NOS meldt zes starts en zes overwinningen over twee wereldbekerweekenden.",
+        "limitations": "Het resultaat betreft deze twee weekenden.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Angel Daleman in 2022, archiefbeeld. Beeld: Hanneke Mennens - Focus by Hanneke via Wikimedia Commons (CC BY-SA 4.0). https://commons.wikimedia.org/wiki/File:Angel_Daleman_%28NED%29_2022.jpeg https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Gecontroleerd op URL en nieuwsfeit tegenover het editiearchief.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "NOS meldt zes starts en zes overwinningen over twee wereldbekerweekenden.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "int:voyager-een-lichtdag": {
+      "source_id": "nasa",
+      "organization_id": "nasa",
+      "article_url": "https://www.nasa.gov/news-release/nasas-voyager-1-makes-history-reaching-one-light-day-from-earth/",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-19",
+      "event_date": "2026-11-18",
+      "checked_on": "2026-11-23",
+      "dates_checked": true,
+      "new_development": "NASA bevestigt dat Voyager 1 op 18 november 25,9 miljard kilometer van de aarde bereikte.",
+      "older_exception_reason": "",
+      "topic_id": "voyager-een-lichtdag",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.nasa.gov/news-release/nasas-voyager-1-makes-history-reaching-one-light-day-from-earth/",
+        "claim": "Voyager 1 is één lichtdag van de aarde",
+        "support": "NASA bevestigt dat Voyager 1 op 18 november 25,9 miljard kilometer van de aarde bereikte.",
+        "limitations": "Het gaat om de afstand tot de aarde en benaderde reistijden.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Illustratie van de ruimtesonde Voyager 1 · NASA/JPL-Caltech. https://www.nasa.gov/news-release/nasas-voyager-1-makes-history-reaching-one-light-day-from-earth/ https://www.nasa.gov/nasa-brand-center/images-and-media/"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Gecontroleerd op URL en nieuwsfeit tegenover het editiearchief.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "NASA bevestigt dat Voyager 1 op 18 november 25,9 miljard kilometer van de aarde bereikte.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "int:essex-nachtvlinder": {
+      "source_id": "essex-wildlife-trust",
+      "organization_id": "essex-wildlife-trust",
+      "article_url": "https://www.essexwt.org.uk/news/record-survey-season-rare-moth",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-19",
+      "event_date": "2026-11-19",
+      "checked_on": "2026-11-23",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "essex-nachtvlinder",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.essexwt.org.uk/news/record-survey-season-rare-moth",
+        "claim": "Zeldzame nachtvlinder houdt op eigen kracht stand in Engels natuurgebied",
+        "support": "De natuurbeheerder meldt 111 waarnemingen in Abbotts Hall en beschrijft de populatie als zelfstandig.",
+        "limitations": "De telling gaat over één locatie.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Peucedanum officinale, de waardplant van de zeldzame nachtvlinder. Beeld: Radio Tonreg via Wikimedia Commons (CC BY 2.0). https://commons.wikimedia.org/wiki/File:Peucedanum_officinale_%287977286392%29.jpg https://creativecommons.org/licenses/by/2.0/"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Gecontroleerd op URL en nieuwsfeit tegenover het editiearchief.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "De natuurbeheerder meldt 111 waarnemingen in Abbotts Hall en beschrijft de populatie als zelfstandig.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "int:vn-chemicalien-afspraken": {
+      "source_id": "unep",
+      "organization_id": "unep",
+      "article_url": "https://www.unep.org/en/news-and-stories/press-release/global-chemicals-conference-adopts-measures-track-progress",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-21",
+      "event_date": "2026-11-20",
+      "checked_on": "2026-11-23",
+      "dates_checked": true,
+      "new_development": "UNEP beschrijft de indicatoren, twee uitvoeringsprogramma’s en verlenging van het fonds.",
+      "older_exception_reason": "",
+      "topic_id": "vn-chemicalien-afspraken",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.unep.org/en/news-and-stories/press-release/global-chemicals-conference-adopts-measures-track-progress",
+        "claim": "Landen spreken af beter te volgen wat er gebeurt met chemicaliën en afval",
+        "support": "UNEP beschrijft de indicatoren, twee uitvoeringsprogramma’s en verlenging van het fonds.",
+        "limitations": "Uitkeren is toegestaan tot eind 2035. De afspraken tonen nog geen gemeten effect.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Chemicaliëncontainer, archiefbeeld ter illustratie. Beeld: NASA / National Archives and Records Administration via Wikimedia Commons (Publiek domein). https://commons.wikimedia.org/wiki/File:CHEMICAL_CONTAINER_-_NARA_-_17425368.jpg https://creativecommons.org/publicdomain/mark/1.0/"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Gecontroleerd op URL en nieuwsfeit tegenover het editiearchief.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "UNEP beschrijft de indicatoren, twee uitvoeringsprogramma’s en verlenging van het fonds.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "int:gyaros-zeewierproef": {
+      "source_id": "frontiers-marine-science",
+      "organization_id": "frontiers-marine-science",
+      "article_url": "https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2026.1953179/full",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-18",
+      "event_date": "2026-11-18",
+      "checked_on": "2026-11-23",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "gyaros-zeewierproef",
+      "doi": "10.3389/fmars.2026.1953179",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2026.1953179/full",
+        "claim": "Jong zeewier groeit op proeftegels bij Grieks eiland",
+        "support": "De in november verschenen veldstudie rapporteert 518 geplaatste tegels, waarvan er na 22 maanden 131 nog wier droegen.",
+        "limitations": "Voortplanting en zelfstandig herstel zijn niet aangetoond.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Tegels met opgekweekt zeewier bij Gyaros, gefotografeerd tijdens de onderzoeksperiode. Beeld: G. Oikonomidis en P. Lardi, figuur 3 uit Lardi e.a. (2026) via Frontiers in Marine Science (CC BY 4.0). https://doi.org/10.3389/fmars.2026.1953179 https://creativecommons.org/licenses/by/4.0/"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Gecontroleerd op URL en nieuwsfeit tegenover het editiearchief.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "De in november verschenen veldstudie rapporteert 518 geplaatste tegels, waarvan er na 22 maanden 131 nog wier droegen.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "int:finland-bewegen-70-plussers": {
+      "source_id": "universiteit-jyvaskyla",
+      "organization_id": "universiteit-jyvaskyla",
+      "article_url": "https://api.sttinfo.fi/tiedote/72503935/lahes-puolet-yli-70-vuotiaista-hyotyi-liikuntaharjoittelusta-usealla-toimintakyvyn-osa-alueella?lang=fi&publisherId=69817172",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-17",
+      "event_date": "2026-11-17",
+      "checked_on": "2026-11-23",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "finland-bewegen-70-plussers",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://api.sttinfo.fi/tiedote/72503935/lahes-puolet-yli-70-vuotiaista-hyotyi-liikuntaharjoittelusta-usealla-toimintakyvyn-osa-alueella?lang=fi&publisherId=69817172",
+        "claim": "Een jaar trainen helpt veel 70-plussers fysiek vooruit",
+        "support": "De universiteit rapporteert uitkomsten van 314 deelnemers na twaalf maanden bewegen.",
+        "limitations": "Bijna de helft ging op meerdere onderdelen vooruit. Individuele uitkomsten verschillen.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Ouderen doen krachttraining in Noorwegen, illustratief beeld. Beeld: Bamble Kommune via Wikimedia Commons (CC BY-SA 2.0). https://commons.wikimedia.org/wiki/File:Vekttrening_for_eldre.jpg https://creativecommons.org/licenses/by-sa/2.0/"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Gecontroleerd op URL en nieuwsfeit tegenover het editiearchief.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "De universiteit rapporteert uitkomsten van 314 deelnemers na twaalf maanden bewegen.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "int:duitsland-para-tafeltennis": {
+      "source_id": "dbs",
+      "organization_id": "dbs",
+      "article_url": "https://www.ttbw.de/news/artikel/para-tischtennis-wm-dreifache-gold-sensation-zum-abschluss/",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-20",
+      "event_date": "2026-11-19",
+      "checked_on": "2026-11-23",
+      "dates_checked": true,
+      "new_development": "Het Duitse sportverslag bevestigt drie individuele wereldtitels en de beschreven finale-uitslagen.",
+      "older_exception_reason": "",
+      "topic_id": "duitsland-para-tafeltennis",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.ttbw.de/news/artikel/para-tischtennis-wm-dreifache-gold-sensation-zum-abschluss/",
+        "claim": "Drie Duitse paratafeltennissers pakken individueel WK-goud",
+        "support": "Het Duitse sportverslag bevestigt drie individuele wereldtitels en de beschreven finale-uitslagen.",
+        "limitations": "De medailles zijn behaald in verschillende wedstrijdklassen.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Thomas Schmidberger tijdens het WK paratafeltennis van 2010, archiefbeeld. Beeld: Gaël Marziou via Wikimedia Commons (CC BY 2.0). https://commons.wikimedia.org/wiki/File:Thomas_Schmidberger_WPTTC2010_2.jpeg https://creativecommons.org/licenses/by/2.0/"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Gecontroleerd op URL en nieuwsfeit tegenover het editiearchief.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Het Duitse sportverslag bevestigt drie individuele wereldtitels en de beschreven finale-uitslagen.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "headlines:0": {
+      "source_id": "nos",
+      "organization_id": "nos",
+      "article_url": "https://nos.nl/artikel/2640580-klimaattop-in-turkije-loopt-uit-op-mislukking-voor-het-eerst-in-jaren-geen-slotakkoord",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-22",
+      "event_date": "2026-11-22",
+      "checked_on": "2026-11-23",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "2640580",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://nos.nl/artikel/2640580-klimaattop-in-turkije-loopt-uit-op-mislukking-voor-het-eerst-in-jaren-geen-slotakkoord",
+        "claim": "Klimaattop in Turkije eindigt zonder slotakkoord",
+        "support": "Bij de VN-klimaattop in Antalya kwamen de deelnemers niet tot overeenstemming over een gezamenlijke slotverklaring.",
+        "limitations": "Momentopname uit de NOS-berichtgeving.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used",
+        "image_evidence": ""
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Gecontroleerd op URL en nieuwsfeit tegenover het editiearchief.",
+        "new_fact": ""
+      }
+    },
+    "headlines:1": {
+      "source_id": "nos",
+      "organization_id": "nos",
+      "article_url": "https://nos.nl/artikel/2640537-droneaanval-op-woongebouw-kyiv-twee-gewonden-mogelijk-mensen-onder-puin",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-22",
+      "event_date": "2026-11-22",
+      "checked_on": "2026-11-23",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "2640537",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://nos.nl/artikel/2640537-droneaanval-op-woongebouw-kyiv-twee-gewonden-mogelijk-mensen-onder-puin",
+        "claim": "Droneaanval treft woongebouw ten noorden van Kyiv",
+        "support": "Volgens de eerste berichtgeving raakten twee mensen gewond en werd gezocht naar mogelijke slachtoffers onder het puin.",
+        "limitations": "Momentopname uit de NOS-berichtgeving.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used",
+        "image_evidence": ""
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Gecontroleerd op URL en nieuwsfeit tegenover het editiearchief.",
+        "new_fact": ""
+      }
+    },
+    "headlines:2": {
+      "source_id": "nos",
+      "organization_id": "nos",
+      "article_url": "https://nos.nl/artikel/2640576-burgemeester-halsema-trotseert-internetblokkade-india-met-boodschap-voor-insiya",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-22",
+      "event_date": "2026-11-22",
+      "checked_on": "2026-11-23",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "2640576",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://nos.nl/artikel/2640576-burgemeester-halsema-trotseert-internetblokkade-india-met-boodschap-voor-insiya",
+        "claim": "Halsema stuurt Insiya een boodschap",
+        "support": "De Amsterdamse burgemeester zocht een route om haar boodschap ondanks een internetblokkade in India te verspreiden.",
+        "limitations": "Momentopname uit de NOS-berichtgeving.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used",
+        "image_evidence": ""
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Gecontroleerd op URL en nieuwsfeit tegenover het editiearchief.",
+        "new_fact": ""
+      }
+    }
+  }
+}
