@@ -15,7 +15,7 @@
   // No cookies, visitor identifiers, email addresses, or raw referring URLs.
   function acquisition() {
     const sources = ['google','bing','duckduckgo','ecosia','facebook','instagram','threads',
-      // Keep historical newsletter links attributed to email.\n      'linkedin','reddit','whatsapp','pinterest','youtube','buttondown','kit','newsletter'];
+      'linkedin','reddit','whatsapp','pinterest','youtube','buttondown','kit','newsletter'];
     const channels = ['search','social','email','referral','direct','paid'];
     function recognized(value) {
       const text = String(value || '').toLowerCase().trim().replace(/^www\./, '');
