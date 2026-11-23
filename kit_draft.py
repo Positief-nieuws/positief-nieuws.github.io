@@ -4,6 +4,8 @@ import html
 import json
 import os
 import sys
+import subprocess
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -11,7 +13,9 @@ from datetime import datetime
 from pathlib import Path
 
 NEWS_FILE = Path("nieuws.json")
-BUTTONDOWN_URL = "https://api.buttondown.com/v1/emails"
+KIT_URL = "https://api.kit.com/v4/broadcasts"
+GITHUB_API = "https://api.github.com"
+LAST_BUTTONDOWN_EDITION = "2026-11-23"
 SITE_URL = "https://positief-nieuws.nl/"
 
 PAPER = "#fffcf7"
@@ -149,7 +153,7 @@ def edition_url(data):
     return SITE_URL
 
 
-def buttondown_edition_url(data):
+def newsletter_edition_url(data):
     """Editie-URL met UTM-tracking voor verkeer vanuit de nieuwsbrief."""
     raw_date = raw_edition_date(data)
     clean_url = edition_url(data)
@@ -163,7 +167,7 @@ def buttondown_edition_url(data):
         return clean_url
 
     params = {
-        "utm_source": "buttondown",
+        "utm_source": "kit",
         "utm_medium": "email",
         "utm_campaign": f"editie_{raw_date.replace('-', '_')}",
     }
@@ -172,8 +176,8 @@ def buttondown_edition_url(data):
     return f"{clean_url}{separator}{urllib.parse.urlencode(params)}"
 
 
-def buttondown_article_url(data, article):
-    """Eigen artikelpagina met UTM-tracking voor de directe klik vanuit Buttondown."""
+def newsletter_article_url(data, article):
+    """Eigen artikelpagina met UTM-tracking voor de directe klik vanuit Kit."""
     slug = str(article.get("article_slug") or "").strip().strip("/")
     raw_date = raw_edition_date(data)
     if not slug or not isinstance(raw_date, str):
@@ -186,7 +190,7 @@ def buttondown_article_url(data, article):
 
     base = f"{SITE_URL}artikelen/{urllib.parse.quote(raw_date)}/{urllib.parse.quote(slug)}/"
     params = {
-        "utm_source": "buttondown",
+        "utm_source": "kit",
         "utm_medium": "email",
         "utm_campaign": f"editie_{raw_date.replace('-', '_')}",
         "utm_content": slug,
@@ -240,7 +244,7 @@ def article_thumbnail_url(article, data):
 def article_html(article, data=None, prefer_own_page=False, featured=False):
     title = esc(article.get("email_title") or article.get("title"))
     teaser = esc(article.get("teaser") or article.get("summary"))
-    raw_url = buttondown_article_url(data, article) if prefer_own_page and data and article.get("article_slug") else str(article.get("url") or "")
+    raw_url = newsletter_article_url(data, article) if prefer_own_page and data and article.get("article_slug") else str(article.get("url") or "")
     url = esc(raw_url)
     image_url = article_thumbnail_url(article, data) if prefer_own_page else ""
     meta = " &nbsp;·&nbsp; ".join(esc(part) for part in (article.get("category"), article.get("source"), reading_time_label(article)) if part)
@@ -282,11 +286,11 @@ def section_header(label, count, note=""):
 
 def build_share_block(data):
     # Gedeelde links blijven bewust schoon. Zo wordt verkeer dat later via
-    # WhatsApp/e-mail binnenkomt niet ten onrechte als Buttondown toegeschreven.
+    # WhatsApp/e-mail binnenkomt niet ten onrechte als Kit toegeschreven.
     share_url = edition_url(data)
 
-    # Alleen de directe klik vanuit deze nieuwsbrief krijgt Buttondown-UTM's.
-    newsletter_online_url = buttondown_edition_url(data)
+    # Alleen de directe klik vanuit deze nieuwsbrief krijgt Kit-UTM's.
+    newsletter_online_url = newsletter_edition_url(data)
 
     share_text = (
         "Positief nieuws. In een paar minuten weet je wat er goed gaat "
@@ -381,7 +385,7 @@ def build_body(data, nl, international, headlines):
         f'<p style="margin:0 0 12px;font:16px/1.6 Arial,Helvetica,sans-serif;color:{INK};">{esc(paragraph)}</p>'
         for paragraph in intro_paragraphs
     )
-    return f"""<!-- buttondown-editor-mode: fancy -->
+    return f"""
 <style>@media(max-width:760px){{.story-intro{{display:none!important}}.email-column{{display:block!important;width:100%!important;padding:0!important}}.email-shell{{padding:20px 16px!important}}}}</style>
 <div style="display:none;max-height:0;overflow:hidden;opacity:0;color:transparent;font-size:1px;line-height:1px;mso-hide:all;">{preheader}{"&#8204;&nbsp;" * 100}</div>
 <div class="email-shell" style="width:100%;max-width:740px;margin:0 auto;box-sizing:border-box;background:{PAPER};padding:28px 28px;color:{INK};font-family:Arial,Helvetica,sans-serif;">
@@ -393,7 +397,7 @@ def build_body(data, nl, international, headlines):
       </tr>
     </table>
     <div style="padding:21px 16px 19px;">
-      <a href="{esc(buttondown_edition_url(data))}" style="font:800 25px Arial,Helvetica,sans-serif;letter-spacing:-1px;color:{INK} !important;text-decoration:none;"><img src="{SITE_URL}sun-orange.png" width="32" height="32" alt="" style="display:inline-block;width:32px;height:32px;vertical-align:middle;margin-right:8px;">Positief nieuws</a>
+      <a href="{esc(newsletter_edition_url(data))}" style="font:800 25px Arial,Helvetica,sans-serif;letter-spacing:-1px;color:{INK} !important;text-decoration:none;"><img src="{SITE_URL}sun-orange.png" width="32" height="32" alt="" style="display:inline-block;width:32px;height:32px;vertical-align:middle;margin-right:8px;">Positief nieuws</a>
       <p style="margin:7px 0 0 40px;font:14px Arial,Helvetica,sans-serif;color:{MUTED};">Dit gebeurt ook</p>
     </div>
   </div>
@@ -410,7 +414,7 @@ def build_body(data, nl, international, headlines):
     <p style="margin:0;font:16px/1.4 Arial,Helvetica,sans-serif;color:#65756f;">Geniet van je dag.</p>
   </div>
   {build_share_block(data)}
-  <p style="margin:28px 0 0;text-align:center;font:11px Arial,Helvetica,sans-serif;color:{MUTED};">Positief nieuws · Dit gebeurt ook.</p>
+  <p style="margin:28px 0 0;text-align:center;font:11px Arial,Helvetica,sans-serif;color:{MUTED};">Positief nieuws · Dit gebeurt ook.<br>{{{{ address }}}}</p>
   <p style="text-align:center;font:11px Arial,Helvetica,sans-serif;"><a href="{{{{ unsubscribe_url }}}}" style="color:{MUTED};text-decoration:underline;">Afmelden</a></p>
 </div>"""
 
@@ -424,72 +428,197 @@ def build_subject(data):
     return f"Positief nieuws · {edition_date_short_text(data)}"
 
 
-def create_draft(api_key, subject, body, data, preheader):
-    payload = {
-        "subject": subject,
-        "body": body,
-        "status": "draft",
-        "template": "naked",
-        # Canonical blijft bewust zonder UTM-parameters.
-        "canonical_url": edition_url(data),
-        "description": preheader,
-    }
-
+def request_json(url, method, headers, payload=None):
     request = urllib.request.Request(
-        BUTTONDOWN_URL,
-        data=json.dumps(payload).encode("utf-8"),
-        headers={
-            "Authorization": f"Token {api_key}",
-            "Content-Type": "application/json",
-            "Accept": "application/json",
-        },
-        method="POST",
+        url, method=method, headers={**headers, "Accept": "application/json",
+                                     "Content-Type": "application/json"},
+        data=None if payload is None else json.dumps(payload).encode("utf-8"),
     )
-
     try:
         with urllib.request.urlopen(request, timeout=30) as response:
-            return json.loads(response.read().decode("utf-8"))
-    except urllib.error.HTTPError as exc:
-        error_body = exc.read().decode("utf-8", errors="replace")
-        raise RuntimeError(
-            f"Buttondown API gaf HTTP {exc.code}: {error_body}"
-        ) from exc
+            return json.load(response)
+    except urllib.error.HTTPError as error:
+        # Response bodies can contain sensitive input. Expose just the status.
+        raise RuntimeError(f"{method} {urllib.parse.urlsplit(url).hostname}: HTTP {error.code}") from None
+
+
+def find_broadcast(api_key, marker):
+    headers = {"X-Kit-Api-Key": api_key}
+    params = {"slim": "true"}
+    seen_cursors = set()
+    matches = []
+    while True:
+        result = request_json(f"{KIT_URL}?{urllib.parse.urlencode(params)}", "GET", headers)
+        matches.extend(item for item in result["broadcasts"] if item.get("description") == marker)
+        pagination = result["pagination"]
+        if not pagination["has_next_page"]:
+            break
+        cursor = pagination["end_cursor"]
+        if not cursor or cursor in seen_cursors:
+            raise ValueError("Kit-paginering onvolledig")
+        seen_cursors.add(cursor)
+        params["after"] = cursor
+    if len(matches) > 1:
+        raise ValueError(f"Meerdere Kit-broadcasts hebben editie-ID {marker}")
+    return matches[0] if matches else None
+
+
+def claim_edition(marker):
+    """Keep a durable claim across reruns, including a crash after the POST."""
+    repo = os.environ["GITHUB_REPOSITORY"]
+    headers = {"Authorization": f"Bearer {os.environ['GITHUB_TOKEN']}"}
+    request_json(f"{GITHUB_API}/repos/{repo}/git/refs", "POST", headers, {
+        "ref": f"refs/tags/{marker}",
+        "sha": os.environ["PN_DEPLOYED_SHA"],
+    })
+
+
+def draft_payload(subject, body, edition, preheader, marker):
+    sender = os.environ["KIT_SENDER_EMAIL"]
+    if not sender.lower().endswith("@positief-nieuws.nl"):
+        raise ValueError("KIT_SENDER_EMAIL moet een afzender op positief-nieuws.nl zijn")
+    if "{{ unsubscribe_url }}" not in body:
+        raise ValueError("Kit-afmeldlink ontbreekt")
+    payload = {
+        "email_address": sender,
+        "subject": subject,
+        "preview_text": preheader,
+        "content": body,
+        "description": marker,
+        "published_at": f"{edition}T00:00:00+01:00",
+        "send_at": None,
+        "public": False,
+    }
+    if os.environ.get("KIT_EMAIL_TEMPLATE_ID"):
+        payload["email_template_id"] = int(os.environ["KIT_EMAIL_TEMPLATE_ID"])
+        payload["allow_starting_point"] = True
+    return payload
+
+
+def create_draft(api_key, subject, body, data, preheader, *, trial=False):
+    edition = raw_edition_date(data)
+    marker = f"pn-{edition}" + ("-proef" if trial else "")
+    existing = find_broadcast(api_key, marker)
+    if existing:
+        return existing
+
+    payload = draft_payload(subject, body, edition, preheader, marker)
+    if not trial:
+        # Only the run that claims this edition may POST. If a claim already
+        # exists and Kit has no match, stop for reconciliation rather than retry.
+        try:
+            claim_edition(marker)
+        except RuntimeError:
+            existing = find_broadcast(api_key, marker)
+            if existing:
+                return existing
+            raise
+
+    try:
+        result = request_json(KIT_URL, "POST", {"X-Kit-Api-Key": api_key}, payload)["broadcast"]
+        if not result.get("id") or result.get("status") != "draft" or result.get("public") is not False or result.get("send_at") is not None:
+            raise ValueError("Kit bevestigde de conceptstatus niet")
+        return result
+    except (OSError, RuntimeError, KeyError, ValueError):
+        existing = find_broadcast(api_key, marker)
+        if existing:
+            return existing
+        raise RuntimeError(f"Kit-concept voor {marker} niet bevestigd. Controleer Kit en de claim vóór een nieuwe poging.") from None
+
+
+def is_regular_release(event, current, previous, repository):
+    run = event.get("workflow_run", {})
+    return (
+        event.get("action") == "completed"
+        and run.get("conclusion") == "success"
+        and run.get("event") in {"dynamic", "push"}
+        and run.get("head_branch") == "main"
+        and (run.get("head_repository") or {}).get("full_name") == repository
+        and current > LAST_BUTTONDOWN_EDITION
+        and current != previous
+    )
+
+
+def check_live(data, stories):
+    edition = raw_edition_date(data)
+    paths = ["", f"edities/{edition}/"] + [
+        f"artikelen/{edition}/{item['article_slug']}/" for item in stories
+    ]
+    if len(set(paths)) != 14:
+        raise ValueError("Verwacht 14 verschillende publicatiepagina’s")
+    from concurrent.futures import ThreadPoolExecutor
+
+    def verify(path):
+        url = SITE_URL + path
+        request = urllib.request.Request(
+            f"{url}?pn_internal=1&pn_verify={os.environ['PN_DEPLOYED_SHA']}",
+            headers={"Cache-Control": "no-cache", "User-Agent": "PositiefNieuws-ReleaseControle/1.0"},
+        )
+        with urllib.request.urlopen(request, timeout=15) as response:
+            page = response.read().decode("utf-8")
+            if response.status != 200 or response.url.split("?")[0] != url or edition not in page:
+                raise ValueError(f"Juiste editie ontbreekt op /{path}")
+            if path == "" and f"/edities/{edition}/" not in page:
+                raise ValueError("Editielink ontbreekt op de homepage")
+
+    def verify_current_data():
+        request = urllib.request.Request(
+            f"{SITE_URL}nieuws.json?pn_verify={os.environ['PN_DEPLOYED_SHA']}",
+            headers={"Cache-Control": "no-cache"},
+        )
+        with urllib.request.urlopen(request, timeout=15) as response:
+            if json.load(response) != data:
+                raise ValueError("De live homepage gebruikt andere editiegegevens")
+
+    with ThreadPoolExecutor(max_workers=7) as pool:
+        for attempt in range(8):
+            try:
+                verify_current_data()
+                list(pool.map(verify, paths))
+                return
+            except (OSError, ValueError) as error:
+                if attempt == 7:
+                    raise RuntimeError(f"Livecontrole mislukt voor editie {edition}: {type(error).__name__}") from None
+                time.sleep(10)
+
+
+def run_release(event, current, previous, repository):
+    data, nl, international, headlines = current
+    edition = raw_edition_date(data)
+    if not is_regular_release(event, edition, previous, repository):
+        print("Geen nieuwe reguliere productie-editie. Kit is niet aangeroepen.")
+        return None
+
+    from editorial_check import check
+    dossier = json.loads((Path("redactie") / f"{edition}.json").read_text(encoding="utf-8"))
+    report = check(data, dossier, require_selection=False)
+    if not report["ready"]:
+        raise ValueError("Redactionele controle: " + "; ".join(report["errors"]))
+    if Path("edities", f"{edition}.json").read_bytes() != NEWS_FILE.read_bytes():
+        raise ValueError("Archief en homepage gebruiken verschillende editiebestanden")
+    check_live(data, nl + international)
+    api_key = os.environ.get("KIT_API_KEY")
+    if not api_key:
+        raise ValueError("GitHub-secret KIT_API_KEY ontbreekt")
+    return create_draft(
+        api_key, build_subject(data), build_body(data, nl, international, headlines),
+        data, build_preheader(data, nl),
+    )
 
 
 def main():
-    api_key = os.environ.get("BUTTONDOWN_API_KEY")
-
-    if not api_key:
-        print("FOUT: BUTTONDOWN_API_KEY ontbreekt.", file=sys.stderr)
-        sys.exit(1)
-
     try:
-        data, nl, international, headlines = load_news()
-        # Gate before any external API mutation, including manual workflow runs.
-        from editorial_check import check
-        edition = raw_edition_date(data)
-        dossier_path = Path("redactie") / f"{edition}.json"
-        if not dossier_path.exists():
-            raise ValueError("Redactioneel dossier ontbreekt; geen Buttondown-concept gemaakt.")
-        report = check(
-            data, json.loads(dossier_path.read_text(encoding="utf-8")),
-            require_selection=False,
-        )
-        if not report["ready"]:
-            raise ValueError("Redactionele controle: " + "; ".join(report["errors"]))
-        subject = build_subject(data)
-        preheader = build_preheader(data, nl)
-        body = build_body(data, nl, international, headlines)
-        draft = create_draft(api_key, subject, body, data, preheader)
-    except Exception as exc:
-        print(f"FOUT: {exc}", file=sys.stderr)
+        event = json.loads(Path(os.environ["GITHUB_EVENT_PATH"]).read_text())
+        deployed = os.environ["PN_DEPLOYED_SHA"]
+        previous = json.loads(subprocess.check_output(
+            ["git", "show", f"{deployed}^:nieuws.json"], text=True,
+        ))
+        draft = run_release(event, load_news(), raw_edition_date(previous), os.environ["GITHUB_REPOSITORY"])
+        if draft:
+            print(f"Kit-broadcast {int(draft['id'])} aanwezig voor deze editie.")
+    except Exception as error:
+        print(f"::error::Kit-conceptcontrole mislukt. {error}", file=sys.stderr)
         sys.exit(1)
-
-    print("Buttondown-concept aangemaakt.")
-    print(f"Onderwerp: {draft.get('subject', subject)}")
-    print(f"Preview: {preheader}")
-    print(f"ID: {draft.get('id', 'onbekend')}")
-    print(f"Status: {draft.get('status', 'onbekend')}")
 
 
 if __name__ == "__main__":

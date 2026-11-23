@@ -19,7 +19,7 @@ def block(placement, title='Het goede nieuws, gewoon in je inbox.', topic=False)
         intro = 'Ontvang elke maandag en donderdag ook oplossingen en vooruitgang, met bronnen en nuance.' if topic else 'Elke maandag en donderdag ook oplossingen en vooruitgang in je inbox. Met bronnen en nuance. Gratis en in een paar minuten gelezen.'
         button = 'Gratis aanmelden'
         note = 'Afmelden kan altijd. Je bevestigt je inschrijving per e-mail.'
-    return f'''<!-- newsletter:{placement}:start --><section class="pn-newsletter" aria-labelledby="{placement}-title"><div><h2 id="{placement}-title">{escape(title)}</h2><p>{intro}</p></div><form action="https://buttondown.com/api/emails/embed-subscribe/positiefnieuws" method="post" data-newsletter-placement="{placement}"><label for="{placement}-email">E-mailadres</label><div class="pn-newsletter-row"><input id="{placement}-email" type="email" name="email" autocomplete="email" placeholder="jij@voorbeeld.nl" required><button type="submit">{escape(button)}</button></div><input type="hidden" name="embed" value="1"><input type="hidden" name="metadata__signup_source" value="{placement}"><p class="pn-newsletter-note">{escape(note)}</p></form></section><!-- newsletter:{placement}:end -->'''
+    return f'''<!-- newsletter:{placement}:start --><section class="pn-newsletter" aria-labelledby="{placement}-title"><div><h2 id="{placement}-title">{escape(title)}</h2><p>{intro}</p></div><form action="https://app.kit.com/forms/10226383/subscriptions" method="post" data-newsletter-placement="{placement}"><label for="{placement}-email">E-mailadres</label><div class="pn-newsletter-row"><input id="{placement}-email" type="email" name="email_address" autocomplete="email" placeholder="jij@voorbeeld.nl" required><button type="submit">{escape(button)}</button></div><p class="pn-newsletter-note">{escape(note)}</p></form></section><!-- newsletter:{placement}:end -->'''
 
 def apply(phase=3):
     for path in Path('.').rglob('index.html'):
@@ -27,11 +27,6 @@ def apply(phase=3):
         if path == Path('nieuwsbrief/index.html'): continue
         s=path.read_text()
         if 'class="site-header"' not in s: continue
-        # Buttondown may append a second '?' to a redirect containing a query.
-        # Remove the email before any analytics script or page router runs.
-        s=re.sub(r'<script id="newsletter-redirect-cleanup">.*?</script>', '', s, flags=re.S)
-        cleanup = """<script id="newsletter-redirect-cleanup">(function(){var q=location.search.replace('?email_address=','&email_address=');var p=new URLSearchParams(q);if(p.has('email_address')){p.delete('email_address');history.replaceState(null,'',location.pathname+(p.toString()?'?'+p.toString():'')+location.hash);}})();</script>"""
-        s=s.replace('<head>', '<head>'+cleanup, 1)
         home=path==Path('index.html')
         page='homepage' if home else 'article' if path.parts[0]=='artikelen' else 'special' if path.parts[0]=='specials' else 'topic' if 'topic-archive' in s else 'other'
         s=re.sub(r'<!-- newsletter:.*?:start -->.*?<!-- newsletter:.*?:end -->','',s,flags=re.S)
@@ -77,10 +72,6 @@ def apply(phase=3):
             end=re.sub(r'<!--.*?-->', '', block(placement,'Meer van dit soort nieuws?'))
             end=end.replace('<section class="pn-newsletter"','<section id="nieuwsbrief" class="pn-newsletter article-newsletter"',1)
             end=end.replace('<form action=', '<form id="article-newsletter-form" action=',1)
-            canonical=re.search(r'<link rel="canonical" href="([^"]+)"',s)
-            if canonical:
-                field='<input type="hidden" name="metadata__signup_'+page+'" value="'+escape(canonical.group(1),quote=True)+'">'
-                end=end.replace('</form>',field+'</form>',1)
             s=re.sub(r'<(?:div|section)\b[^>]*class="[^"]*article-newsletter[^" ]*(?: [^"]*)?"[^>]*>.*?</form>\s*</(?:div|section)>',lambda _:end,s,count=1,flags=re.S)
         # Existing native POST remains intact, with one shared measurement listener.
         s=s.replace('onsubmit="if (window.sa_event) { sa_event(\'nieuwsbrief_inschrijving\'); }"','')

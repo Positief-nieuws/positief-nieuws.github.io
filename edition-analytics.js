@@ -15,7 +15,7 @@
   // No cookies, visitor identifiers, email addresses, or raw referring URLs.
   function acquisition() {
     const sources = ['google','bing','duckduckgo','ecosia','facebook','instagram','threads',
-      'linkedin','reddit','whatsapp','pinterest','youtube','buttondown','newsletter'];
+      'linkedin','reddit','whatsapp','pinterest','youtube','buttondown','kit','newsletter'];
     const channels = ['search','social','email','referral','direct','paid'];
     function recognized(value) {
       const text = String(value || '').toLowerCase().trim().replace(/^www\./, '');
@@ -27,7 +27,7 @@
     let channel = '';
     if (source) {
       if (['google','bing','duckduckgo','ecosia'].includes(source)) channel = 'search';
-      else if (source === 'buttondown' || source === 'newsletter') channel = 'email';
+      else if (['buttondown','kit','newsletter'].includes(source)) channel = 'email';
       else channel = 'social';
     }
     if (['email','newsletter'].includes(medium)) channel = 'email';
@@ -42,7 +42,7 @@
           source = recognized(hostname);
           channel = source
             ? (['google','bing','duckduckgo','ecosia'].includes(source) ? 'search' :
-              ['buttondown','newsletter'].includes(source) ? 'email' : 'social')
+              ['buttondown','kit','newsletter'].includes(source) ? 'email' : 'social')
             : 'referral';
         } else channel = 'direct';
       } catch (_) { channel = 'direct'; }
@@ -93,7 +93,6 @@
     edition = validDate(value) ? value : (!requested && pageType === 'homepage' ? config.edition || '' : '');
     homepageReady = true;
     window.sa_metadata = Object.assign({}, window.sa_metadata, {edition: edition || 'none', page_type: requested ? 'edition' : pageType});
-    refreshForms();
     resetReading();
     announceView();
     observeForms();
@@ -111,29 +110,7 @@
     return form.closest('.article-growth') ? (pageType === 'special' ? 'special_end' : 'article_end') : (pageType === 'homepage' ? 'homepage' : pageType);
   }
   function newsletterForms() {
-    return Array.from(document.querySelectorAll('form[action*="buttondown.com"][action*="embed-subscribe"]'));
-  }
-  function refreshForms() {
-    newsletterForms().forEach(function (form) {
-      const fields = {
-        signup_edition: context().edition,
-        signup_page_type: context().page_type,
-        signup_source: placement(form),
-        signup_traffic_channel: entry.traffic_channel,
-        signup_traffic_source: entry.traffic_source,
-        signup_entry_page: entry.entry_page,
-        signup_page_path: location.pathname,
-        signup_category: safeCategory()
-      };
-      Object.keys(fields).forEach(function (key) {
-        const name = 'metadata__' + key;
-        let field = form.querySelector('input[name="' + name + '"]');
-        if (!field) {
-          field = document.createElement('input'); field.type = 'hidden'; field.name = name; form.appendChild(field);
-        }
-        field.value = fields[key];
-      });
-    });
+    return Array.from(document.querySelectorAll('form[data-newsletter-placement]'));
   }
   // Guard a native POST while navigation is in progress. Never manufacture success.
   let submitting = new WeakSet();
@@ -165,7 +142,7 @@
   }
   document.addEventListener('visibilitychange', function () { previousTime = performance.now(); });
   function start() {
-    refreshForms(); announceView();
+    announceView();
     if (location.pathname.replace(/\/+$/, '') === '/nieuwsbrief') {
       track('newsletter_landing_view', {landing_type: 'dedicated'});
     }
@@ -190,7 +167,6 @@
       if (!newsletterForms().includes(form) || event.defaultPrevented || !form.checkValidity()) return;
       if (submitting.has(form)) { event.preventDefault(); return; }
       submitting.add(form);
-      refreshForms();
       track('newsletter_form_submit', {
         placement: placement(form), signup_status: 'submitted_unconfirmed',
         content_category: safeCategory()
@@ -209,7 +185,7 @@
     }
     }
 
-      const cta = event.target.closest('[data-newsletter-cta], form[action*="buttondown.com"] button[type="submit"], form[action*="buttondown.com"] input[type="submit"]');
+      const cta = event.target.closest('[data-newsletter-cta], form[data-newsletter-placement] button[type="submit"], form[data-newsletter-placement] input[type="submit"]');
       if (!cta) return;
       const form = cta.closest('form');
       track('newsletter_cta_click', {
@@ -217,7 +193,7 @@
         content_category: safeCategory()
       });
     });
-    // No confirmed event: a public thank-you URL cannot prove Buttondown activation.
+    // No confirmed event: a public thank-you URL cannot prove Kit confirmation.
     setInterval(readingTick, 1000);
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start, {once:true}); else start();

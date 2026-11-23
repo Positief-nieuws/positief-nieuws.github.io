@@ -32,7 +32,7 @@ for (const [slug,label] of Object.entries(topics)) {
   assert.equal(t.events.filter(e=>e.name==='newsletter_view').length,1);
   assert.equal(t.events[0].metadata.content_category,label);
   assert.equal(t.events[0].metadata.placement,'topic_inline');
-  assert.equal(t.fields.get('metadata__signup_category').value,label);
+  assert.equal(t.fields.size,0);
   t.form.valid=false;t.listeners.submit({target:t.form});
   assert.equal(t.events.filter(e=>e.name==='newsletter_form_submit').length,0);
   t.form.valid=true;t.listeners.submit({target:t.form});

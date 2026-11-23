@@ -47,13 +47,11 @@ python3 scripts/check_newsletter.py --local --output /tmp/pn-newsletter-check
 
 Controleer tests ook **na** de build. De volledige build behoudt de opgeslagen
 beeldkeuzes; nieuwe beelden hebben internet en eventueel `PIXABAY_API_KEY` nodig.
-`buttondown_draft.py` maakt via `BUTTONDOWN_API_KEY` een echt extern concept;
-voer dat niet uit als lokale rooktest. Het script controleert eerst het dossier.
+Draai de gesimuleerde Kit-tests met `python3 -m unittest discover -s tests -p test_kit_release.py`. Die gebruiken geen account of API-sleutel.
 
 Lees vóór browsergebruik [het analyticsprotocol](docs/analytics-testing.md).
 Een lokale preview kan met `python3 -m http.server 8000 --bind 127.0.0.1`.
-Test homepage → artikel, onderwerp/archief, zoeken en nieuwsbrief; de terugkeer
-van Buttondown gebruikt `?inschrijving=bevestigen` en `?inschrijving=bevestigd`.
+Test homepage → artikel, onderwerp/archief, zoeken en nieuwsbrief. De formulieren gebruiken het Kit-formulier Mills.
 Een echte inschrijving/verzending is een aparte handeling.
 
 ## Publicatie en controles
@@ -63,9 +61,28 @@ Een echte inschrijving/verzending is een aparte handeling.
 uit hetzelfde editiebestand. Vóór de preview controleert het script het
 bewijsdossier. Na akkoord verifieert het de exacte preview en het akkoord. Publiceer de complete editie in één commit. GitHub Pages
 publiceert de gecommitte bestanden. De editiecontrole in Actions bouwt geen
-pagina’s en wijzigt de commit niet. Buttondown draait op afzonderlijk verzoek.
+pagina’s en wijzigt de commit niet. Na een geslaagde reguliere Pages-deployment van
+een nieuwe editie maakt `kit-draft.yml` één privéconcept in Kit.
 Zie `REDACTIE.txt`. `newsletter-health.yml` doet iedere zes uur en na wijzigingen/publicatie broncontroles voor alle inschrijfpunten;
 `docs/newsletter-tests/` beschrijft de aanvullende maandtest.
 De gerichte workflows voor zoekindex, vormgeving en nieuwsbrief blijven bruikbaar.
 
 Zie [de opruimverantwoording](docs/cleanup-2026-10-18.md) voor afwegingen en grenzen.
+
+
+## Kit-omschakeling
+
+Stel vóór de merge GitHub Actions-secret `KIT_API_KEY` in en stel de geverifieerde
+verzendidentiteit in als Actions-variable `KIT_SENDER_EMAIL`. Gebruik indien nodig
+`KIT_EMAIL_TEMPLATE_ID` voor het opgemaakte Kit-template. De workflow gebruikt het
+Kit-descriptionveld en een Git-tag `pn-JJJJ-MM-DD` als duurzame claim. Staat er
+na een fout geen concept in Kit en is er wel een claim, controleer dan eerst in
+Kit of het concept elders zichtbaar is of werd verwijderd. Verwijder de claim pas
+nadat je hebt vastgesteld dat de eerdere POST geen concept heeft aangemaakt.
+
+Maak vlak vóór de merge opnieuw een Buttondown-export inclusief statussen. Zet
+alleen nieuwe actieve inschrijvingen over die in geen enkele status in Kit staan.
+Verwerk ook nieuwe Buttondown-afmeldingen voor eerder gemigreerde adressen in Kit,
+met behoud van eventuele latere expliciete herinschrijving. Controleer na de
+site-omschakeling de overdrachtsperiode nog één keer. Voeg bij de import geen
+formulier, tag of mailreeks toe. Bewaar Buttondown en het historische archief.

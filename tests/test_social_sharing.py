@@ -6,7 +6,7 @@ import unittest
 from unittest.mock import patch
 
 import build_editions as build
-import buttondown_draft as email
+import kit_draft as email
 import social_sharing as sharing
 
 
@@ -16,7 +16,7 @@ class SharingTests(unittest.TestCase):
                 '<link rel="canonical" href="https://positief-nieuws.nl/artikelen/voorbeeld/">'
                 '<script type="application/ld+json">{"@type":"NewsArticle"}</script></head>'
                 '<body><header class="site-header"></header><main><h1>'+title+'</h1>'
-                '<form method="post" action="https://buttondown.com/api/emails/embed-subscribe/positiefnieuws">'
+                '<form method="post" action="https://app.kit.com/forms/10226383/subscriptions">'
                 '<input name="metadata__signup_source" value="article_end"></form></main></body></html>')
 
     def test_metadata_fallback_and_idempotence(self):

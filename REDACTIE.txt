@@ -47,7 +47,7 @@ GitHub-overdracht:
 - Vergelijk de gewijzigde paden en blob-SHA’s in de GitHub-tree met de lokale commit. Maak daarna één commit met de gecontroleerde doelbranch als parent. Werk de branch zonder force bij. Als de doelbranch intussen is gewijzigd, controleer dan eerst de nieuwe publicatiebasis. Gebruik een PR waar branchbeveiliging dat vraagt.
 - Noteer de duur van de overdracht, het bijwerken van de branch en de livecontrole. Het previewcommando meldt de tijd voor het dossier en de bouw. Het verificatiecommando meldt de tijd voor de vergelijking.
 
-Controleer na de GitHub Pages-deployment de homepage, de editiepagina en alle twaalf artikelpagina’s op positief-nieuws.nl. Volg docs/analytics-testing.md. Start de Buttondown-workflow alleen bij een apart nieuwsbriefverzoek. Die workflow controleert het bron- en rechtenbewijs, het akkoord en de maximale lengte van de nieuwsbrief.
+Controleer na de GitHub Pages-deployment de homepage, de editiepagina en alle twaalf artikelpagina’s op positief-nieuws.nl. Volg docs/analytics-testing.md. Na een geslaagde reguliere productie-deployment controleert de Kit-workflow de live pagina’s en het dossier en zet één privéconcept klaar.
 
 7. BRONNENBEHEER
 Nieuwe bron met bestaande mode: voeg een record/kanaal toe in sources.json; geen workflowwijziging. source_id en organization_id zijn stabiel; gedeelde kanalen en nieuwsbrieven van dezelfde aanbieder gebruiken dezelfde organisatie-ID. Prioriteit P1/P2/P3 helpt de rangorde; check_frequency is every_edition (20 uur), twice_weekly (72 uur), weekly (168 uur) of manual. C en manual worden niet structureel opgehaald.

@@ -111,19 +111,19 @@ class SelectionTests(unittest.TestCase):
             self.assertEqual(prior['discovery_origin'],'prior_recent_metadata')
             self.assertIn('prior_discovery_requires_original_check',prior['date_warnings'])
 
-    def test_buttondown_keeps_the_editorial_gate_without_a_candidate_dossier(self):
-        import os, io
-        from contextlib import redirect_stderr
-        import buttondown_draft as buttondown
-        data={'meta':{'edition_date':'2026-10-19'}}
+    def test_kit_keeps_the_editorial_gate_without_a_candidate_dossier(self):
+        import os
+        import kit_draft as kit
+        data={'meta':{'edition_date':'2026-11-26'}}
         before=Path.cwd()
         with tempfile.TemporaryDirectory() as td:
             root=Path(td);(root/'redactie').mkdir()
-            (root/'redactie/2026-10-19.json').write_text('{}')
+            (root/'redactie/2026-11-26.json').write_text('{}')
             try:
                 os.chdir(root)
-                with patch.dict(os.environ,{'BUTTONDOWN_API_KEY':'UNIT TEST ONLY'}),patch.object(buttondown,'load_news',return_value=(data,[],[],[])),patch('editorial_check.check',return_value={'ready':False,'errors':['Test stop: nooit echte e-mail aanmaken']}) as gate,patch.object(buttondown,'create_draft') as create:
-                    with redirect_stderr(io.StringIO()),self.assertRaises(SystemExit):buttondown.main()
+                with patch.object(kit,'is_regular_release',return_value=True),patch('editorial_check.check',return_value={'ready':False,'errors':['Test stop: nooit echte e-mail aanmaken']}) as gate,patch.object(kit,'create_draft') as create:
+                    with self.assertRaisesRegex(ValueError,'Redactionele controle'):
+                        kit.run_release({}, (data, [], [], []), '2026-11-23', 'test/repo')
                     self.assertEqual(gate.call_args.kwargs, {'require_selection': False})
                     create.assert_not_called()
             finally:os.chdir(before)

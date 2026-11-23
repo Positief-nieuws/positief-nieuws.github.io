@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fail-closed editorial gate. Creates no publication or Buttondown draft."""
+"""Fail-closed editorial gate. Creates no publication or Kit draft."""
 import argparse
 import hashlib
 import json
@@ -28,7 +28,7 @@ class VisibleText(HTMLParser):
         if not self.hidden:self.parts.append(text)
 
 def newsletter_words(news):
-    import buttondown_draft as bd
+    import kit_draft as bd
     parser=VisibleText()
     parser.feed(bd.build_body(news,news.get('nl',[]),news.get('int',[]),news.get('headlines',[])))
     return len(re.findall(r"\b[\wÀ-ÿ'-]+\b",' '.join(parser.parts)))
@@ -77,7 +77,7 @@ def check(news, dossier, policy=None, history=None, as_of=None, selection_review
     if november_selection:
         warnings.append("Eigenaarakkoord 5 november voor deze exacte selectie. Volledige kandidatentriage en brondekking zijn niet afgerond.")
     if approved_selection:
-        warnings.append("Eigenaaropdracht29oktober: exact de goedgekeurde previewselectie publiceren. Geselecteerde bronnen en beelden gecontroleerd; volledige kandidaatbeoordeling en bronkanaaldekking niet voltooid. Buttondown-trigger maakt een concept, verstuurt niet.")
+        warnings.append("Eigenaaropdracht29oktober: exact de goedgekeurde previewselectie publiceren. Geselecteerde bronnen en beelden gecontroleerd; volledige kandidaatbeoordeling en bronkanaaldekking niet voltooid. Kit-trigger maakt een concept, verstuurt niet.")
     if owner_exception:
         warnings.append("Eenmalig eigenaarakkoord 25 oktober 2026: volledige kandidatentriage en brondekking zijn NIET afgerond; exacte goedgekeurde selectie wordt vervroegd uitgegeven. Drie gemotiveerde oudere bronnen zijn toegestaan. Nieuwsbrief uitsluitend als concept.")
     if edition_day and edition_day>today and not (owner_exception and today.isoformat()=="2026-10-25"):
