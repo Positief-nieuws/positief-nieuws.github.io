@@ -1,27 +1,49 @@
-name: Maak Buttondown concept
-
+name: Kit API-proefconcept uitsluitend op proefbranch
 on:
   workflow_dispatch:
-
 permissions:
   contents: read
-
+concurrency:
+  group: pn-kit-proef-2026-11-23
+  cancel-in-progress: false
 jobs:
-  create-draft:
+  test-draft:
+    if: github.ref == 'refs/heads/kit-api-proef'
     runs-on: ubuntu-latest
-
+    timeout-minutes: 5
     steps:
-      - name: Gepubliceerde editie ophalen
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
-          ref: main
-
-      - name: Python instellen
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-
-      - name: Maak conceptnieuwsbrief
+          persist-credentials: false
+      - name: Maak of vind één privéproefconcept
         env:
-          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
-        run: python buttondown_draft.py
+          KIT_API_KEY: ${{ secrets.KIT_API_KEY }}
+          KIT_SENDER_EMAIL: ${{ vars.KIT_SENDER_EMAIL }}
+          KIT_EMAIL_TEMPLATE_ID: ${{ vars.KIT_EMAIL_TEMPLATE_ID }}
+        run: |
+          python3 - <<'PY'
+          import os
+          from pathlib import Path
+          import kit_draft as kit
+
+          kit.NEWS_FILE = Path("edities/2026-11-23.json")
+          data, nl, world, headlines = kit.load_news()
+          assert kit.raw_edition_date(data) == "2026-11-23"
+          data["meta"]["email_intro"] = (
+              "Igor fietst met een bakfiets vol tochtstrips en radiatorfolie door Dordrecht. "
+              "Met een paar kleine ingrepen helpt hij bewoners gratis aan een warmer huis. "
+              "In het Engelse Essex hadden natuurbeschermers wat meer geduld nodig. "
+              "Twintig jaar nadat ze begonnen met het herstellen van het leefgebied van een zeldzame nachtvlinder, "
+              "houdt die populatie zichzelf in stand. En Voyager 1 is inmiddels zo ver van huis dat je na een bericht "
+              "aan de sonde bijna twee dagen op antwoord moet wachten. Veel leesplezier!."
+          )
+          preheader = "Ook deze editie: Deze vaders willen het ouderschap niet langer alleen uitzoeken · Igor helpt Dordtenaren gratis aan een warmer huis"
+          draft = kit.create_draft(
+              os.environ["KIT_API_KEY"], "[PROEF] Op Texel herstelt kwetsbare natuur en ontstaat weer ruimte voor ondernemers",
+              kit.build_body(data, nl, world, headlines), data, preheader, trial=True,
+          )
+          assert draft["status"] == "draft"
+          assert draft["public"] is False
+          assert draft["send_at"] is None
+          print("Kit-proefconcept ID:", int(draft["id"]))
+          PY
