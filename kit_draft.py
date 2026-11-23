@@ -15,7 +15,7 @@ from pathlib import Path
 NEWS_FILE = Path("nieuws.json")
 KIT_URL = "https://api.kit.com/v4/broadcasts"
 GITHUB_API = "https://api.github.com"
-LAST_BUTTONDOWN_EDITION = "2026-11-23"
+LAST_EDITION_BEFORE_KIT = "2026-11-23"
 SITE_URL = "https://positief-nieuws.nl/"
 
 PAPER = "#fffcf7"
@@ -534,7 +534,7 @@ def is_regular_release(event, current, previous, repository):
         and run.get("event") in {"dynamic", "push"}
         and run.get("head_branch") == "main"
         and (run.get("head_repository") or {}).get("full_name") == repository
-        and current > LAST_BUTTONDOWN_EDITION
+        and current > LAST_EDITION_BEFORE_KIT
         and current != previous
     )
 

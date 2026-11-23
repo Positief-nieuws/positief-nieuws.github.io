@@ -70,7 +70,7 @@ De gerichte workflows voor zoekindex, vormgeving en nieuwsbrief blijven bruikbaa
 Zie [de opruimverantwoording](docs/cleanup-2026-10-18.md) voor afwegingen en grenzen.
 
 
-## Kit-omschakeling
+## Kit-configuratie
 
 Stel vóór de merge GitHub Actions-secret `KIT_API_KEY` in en stel de geverifieerde
 verzendidentiteit in als Actions-variable `KIT_SENDER_EMAIL`. Gebruik indien nodig
@@ -80,9 +80,3 @@ na een fout geen concept in Kit en is er wel een claim, controleer dan eerst in
 Kit of het concept elders zichtbaar is of werd verwijderd. Verwijder de claim pas
 nadat je hebt vastgesteld dat de eerdere POST geen concept heeft aangemaakt.
 
-Maak vlak vóór de merge opnieuw een Buttondown-export inclusief statussen. Zet
-alleen nieuwe actieve inschrijvingen over die in geen enkele status in Kit staan.
-Verwerk ook nieuwe Buttondown-afmeldingen voor eerder gemigreerde adressen in Kit,
-met behoud van eventuele latere expliciete herinschrijving. Controleer na de
-site-omschakeling de overdrachtsperiode nog één keer. Voeg bij de import geen
-formulier, tag of mailreeks toe. Bewaar Buttondown en het historische archief.
