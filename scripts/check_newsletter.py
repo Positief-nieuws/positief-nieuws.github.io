@@ -10,7 +10,8 @@ import urllib.parse
 import urllib.request
 
 BASE = 'https://positief-nieuws.nl'
-ACTION = 'https://buttondown.com/api/emails/embed-subscribe/positiefnieuws'
+HOSTED_FORM = 'https://positief-nieuws.kit.com/905971a843'
+ACTION = 'https://app.kit.com/forms/10226383/subscriptions'
 EVENTS = ('newsletter_view', 'newsletter_cta_click', 'newsletter_form_submit', 'newsletter_landing_view')
 EXPECTED = {'/': {'home_hero', 'home_end'}, '/nieuwsbrief/': {'landing_main'}}
 
@@ -45,12 +46,10 @@ def form_checks(text, path, expected=None):
         for f in forms:
             a, fields = f['attrs'], f['inputs']
             rows.extend([
-                (placement, 'Buttondown action en POST', a.get('action') == ACTION and a.get('method', '').lower() == 'post'),
-                (placement, 'emailveld', len([i for i in fields if i.get('name') == 'email']) == 1 and any(i.get('name') == 'email' and i.get('type') == 'email' and 'required' in i and 'disabled' not in i for i in fields)),
+                (placement, 'Kit action en POST', a.get('action') == ACTION and a.get('method', '').lower() == 'post'),
+                (placement, 'emailveld', len([i for i in fields if i.get('name') == 'email_address']) == 1 and any(i.get('name') == 'email_address' and i.get('type') == 'email' and 'required' in i and 'disabled' not in i for i in fields)),
                 (placement, 'verzendknop', any(i.get('type') == 'submit' and 'disabled' not in i for i in fields)),
                 (placement, 'geen client-side succes of afwijkende redirect', not any(k in a for k in ('onsubmit', 'target')) and not any(i.get('name') in ('redirect', 'redirect_url', 'next', 'type') for i in fields)),
-                (placement, 'bronmetadata', any(i.get('name') == 'metadata__signup_source' and i.get('value') == placement for i in fields)),
-                (placement, 'embed=1', any(i.get('name') == 'embed' and i.get('value') == '1' and i.get('type') == 'hidden' and 'disabled' not in i for i in fields)),
             ])
     for link in page.links:
         if link.get('data-newsletter-cta') and link.get('href', '').startswith('#'):
@@ -77,13 +76,13 @@ def inventory(root=Path('.')):
         if required and relative.name == 'index.html': expected.setdefault(path, set()).add(required)
         for f in page.forms:
             a = f['attrs']
-            if 'buttondown' not in a.get('action', '') and not a.get('data-newsletter-placement'): continue
+            if a.get('action') != ACTION and not a.get('data-newsletter-placement'): continue
             placement = a.get('data-newsletter-placement', 'MISSING')
             expected.setdefault(path, set()).add(placement)
             rows.append(dict(page=path, kind='form', placement=placement, code=str(relative),
                              action=a.get('action'), method=a.get('method'), fields=f['inputs']))
         for a in page.links:
-            if a.get('data-newsletter-cta') or 'nieuwsbrief' in a.get('href', '') or 'buttondown' in a.get('href', '') and 'legal/' not in a.get('href', ''):
+            if a.get('data-newsletter-cta') or 'nieuwsbrief' in a.get('href', ''):
                 rows.append(dict(page=path, kind='link', placement=a.get('data-newsletter-cta', ''),
                                  code=str(relative), target=a.get('href')))
     return expected, rows
@@ -131,21 +130,11 @@ def run(local=False):
         add('alle formulieren', 'meetcode ophalen', 'FAIL', type(e).__name__)
     if not local:
         try:
-            hosted = Page(get(ACTION))
-            ok = any(any(i.get('name') in ('email', 'email_address') for i in f['inputs']) for f in hosted.forms)
-            add('Buttondown endpoint', 'GET bereikt een inschrijfformulier', 'PASS' if ok else 'FAIL', 'Geen POST; geen bewijs van registratie of CAPTCHA')
+            hosted = Page(get(HOSTED_FORM))
+            ok = any(any(i.get('name') in ('email_address',) for i in f['inputs']) for f in hosted.forms)
+            add('Kit-formulier', 'GET bereikt een inschrijfformulier', 'PASS' if ok else 'FAIL', 'Geen POST; geen bewijs van registratie of CAPTCHA')
         except Exception as error:
-            add('Buttondown endpoint', 'GET bereikbaarheid', 'FAIL', type(error).__name__)
-    home = texts.get('/', '')
-    for value, view in [('bevestigen', 'signup-pending'), ('bevestigd', 'signup-confirmed')]:
-        ok = view + '-view' in Page(home).ids and re.search(r'params.get\("inschrijving"\)\s*===\s*"' + value + r'"\s*\)\s*\{\s*showAppView\(\s*"' + view + '"', home)
-        add('/?inschrijving=' + value, 'redirectdoel en routerbron', 'PASS' if ok else 'FAIL', 'Accountinstelling en echte redirect vereisen maandtest')
-        if not local:
-            try:
-                get(BASE + '/?inschrijving=' + value)
-                add('/?inschrijving=' + value, 'doel bereikbaar', 'PASS')
-            except Exception as e:
-                add('/?inschrijving=' + value, 'doel bereikbaar', 'FAIL', type(e).__name__)
+            add('Kit-formulier', 'GET bereikbaarheid', 'FAIL', type(error).__name__)
     # No credentials are created or copied from browser sessions.
     key = os.environ.get('SIMPLE_ANALYTICS_API_KEY')
     if local or not key:
@@ -165,8 +154,8 @@ def run(local=False):
                     add(path, 'ontvangen ' + event, 'PASS' if count > 0 else 'WARN', f'{start} t/m {end}: {count}; nul kan ook weinig verkeer betekenen')
             except Exception as e:
                 add(path, 'eventontvangst', 'FAIL', type(e).__name__)
-    add('Buttondown', 'redirectinstellingen en double opt-in', 'MANUAL', 'Geen account-API aangesloten; controleer maandelijks in dashboard')
-    add('Buttondown + mailbox', 'inschrijven, mail, bevestigen en opruimen', 'MANUAL', 'Alleen met gecontroleerd testadres; nooit automatisch')
+    add('Kit', 'Nederlandse bevestigingsmail en double opt-in', 'MANUAL', 'Geen account-API aangesloten; controleer maandelijks in dashboard')
+    add('Kit + mailbox', 'inschrijven, mail, bevestigen en opruimen', 'MANUAL', 'Alleen met gecontroleerd testadres; nooit automatisch')
     return rows
 
 

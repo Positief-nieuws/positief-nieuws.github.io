@@ -1,0 +1,42 @@
+name: Kit-concept na publicatie
+
+on:
+  workflow_run:
+    workflows: ['pages-build-deployment', 'pages build and deployment']
+    types: [completed]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pn-kit-production
+  cancel-in-progress: false
+
+jobs:
+  create-draft:
+    if: >-
+      github.event.workflow_run.conclusion == 'success' &&
+      (github.event.workflow_run.event == 'dynamic' || github.event.workflow_run.event == 'push') &&
+      github.event.workflow_run.head_branch == 'main' &&
+      github.event.workflow_run.head_repository.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
+          fetch-depth: 2
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Controleer publicatie en maak het Kit-concept
+        env:
+          KIT_API_KEY: ${{ secrets.KIT_API_KEY }}
+          KIT_SENDER_EMAIL: ${{ vars.KIT_SENDER_EMAIL }}
+          KIT_EMAIL_TEMPLATE_ID: ${{ vars.KIT_EMAIL_TEMPLATE_ID }}
+          GITHUB_TOKEN: ${{ github.token }}
+          PN_DEPLOYED_SHA: ${{ github.event.workflow_run.head_sha }}
+        run: python kit_draft.py

@@ -8,7 +8,7 @@ from unittest.mock import patch
 import auto_news as news
 import editorial_check as gate
 import source_registry as registry
-import buttondown_draft as buttondown
+import kit_draft as kit
 
 class WorkflowTests(unittest.TestCase):
     def setUp(self):
@@ -71,7 +71,7 @@ class WorkflowTests(unittest.TestCase):
         e,d=self.fixture();e['nl'].append(copy.deepcopy(e['nl'][0]));d['news_sha256']=gate.news_digest(e)
         self.assertTrue(any('exact 6' in x for x in self.check(e,d)['errors']))
         path=self.root/'nieuws.json';path.write_text(json.dumps(e))
-        with patch.object(buttondown,'NEWS_FILE',path),self.assertRaises(ValueError):buttondown.load_news()
+        with patch.object(kit,'NEWS_FILE',path),self.assertRaises(ValueError):kit.load_news()
 
     def test_unknown_date_unverified_claim_rights_and_region_are_held(self):
         for field,value in [('publication_date',''),('region','int'),('positive_result',False)]:
@@ -132,18 +132,17 @@ class WorkflowTests(unittest.TestCase):
         e,d=self.fixture();e['nl'][0]['image_query']='forest';d['news_sha256']=gate.news_digest(e)
         self.assertTrue(any('beeld ingesteld' in x for x in self.check(e,d)['errors']))
 
-    def test_unapproved_dossier_never_calls_buttondown_api(self):
+    def test_unapproved_dossier_never_calls_kit_api(self):
         import os
-        from contextlib import redirect_stderr
-        import io
         e,d=self.fixture();d['approved']=False
         path=self.root/'nieuws.json';path.write_text(json.dumps(e))
         red=self.root/'redactie';red.mkdir();(red/'2026-10-12.json').write_text(json.dumps(d))
         before=Path.cwd()
         try:
             os.chdir(self.root)
-            with patch.object(buttondown,'NEWS_FILE',path),patch.dict(os.environ,{'BUTTONDOWN_API_KEY':'unit-test-placeholder'}),patch.object(buttondown,'create_draft') as create,redirect_stderr(io.StringIO()):
-                with self.assertRaises(SystemExit):buttondown.main()
+            with patch.object(kit,'is_regular_release',return_value=True),patch.object(kit,'create_draft') as create:
+                with self.assertRaisesRegex(ValueError,'Redactionele controle'):
+                    kit.run_release({}, (e, [], [], []), '2026-10-08', 'test/repo')
                 create.assert_not_called()
         finally:os.chdir(before)
 

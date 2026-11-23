@@ -65,11 +65,11 @@ class ContextualNewsletterTests(unittest.TestCase):
                             self.assertIn(newsletter.escape(newsletter.CONTEXT_COPY[category][index]), text)
                             self.assertIn(newsletter.CONTEXT_INTRO, text)
                             self.assertIn('/edition-analytics.js?v=3', text)
-                            self.assertEqual(text.count('action="https://buttondown.com/api/emails/embed-subscribe/positiefnieuws"'), 1)
+                            self.assertEqual(text.count('action="https://app.kit.com/forms/10226383/subscriptions"'), 1)
                             self.assertIn('method="post"', text)
-                            self.assertIn('name="embed" value="1"', text)
+                            self.assertIn('name="email_address"', text)
                             if index:
-                                self.assertIn('name="metadata__signup_article"', text)
+                                self.assertNotIn('name="metadata__signup_article"', text)
                                 self.assertIn('data-newsletter-cta="article_intro"', text)
                                 self.assertIn('id="nieuwsbrief"', text)
                     before = {p: p.read_bytes() for p in Path('.').rglob('index.html')}

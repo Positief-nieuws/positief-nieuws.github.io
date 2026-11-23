@@ -747,12 +747,9 @@ def render_growth_block(canonical, title_raw, page_type="article"):
           <p class="growth-kicker">Dit gebeurt ook. In je inbox.</p>
           <h2>Meer van dit soort nieuws?</h2>
           <p class="growth-intro">Ontvang elke maandag en donderdag een selectie positief nieuws uit Nederland en de wereld. Gratis, rustig en in een paar minuten gelezen.</p>
-          <form id="article-newsletter-form" action="https://buttondown.com/api/emails/embed-subscribe/positiefnieuws" method="post">
+          <form id="article-newsletter-form" action="https://app.kit.com/forms/10226383/subscriptions" method="post">
             <label for="article-email">Je e-mailadres</label>
-            <div class="growth-form-row"><input id="article-email" type="email" name="email" autocomplete="email" placeholder="jij@voorbeeld.nl" required><button type="submit">Ja, stuur mij Positief nieuws</button></div>
-            <input type="hidden" name="embed" value="1">
-            <input type="hidden" name="metadata__signup_source" value="{placement}">
-            <input type="hidden" name="metadata__signup_{page_type}" value="{esc(canonical)}">
+            <div class="growth-form-row"><input id="article-email" type="email" name="email_address" autocomplete="email" placeholder="jij@voorbeeld.nl" required><button type="submit">Ja, stuur mij Positief nieuws</button></div>
             <p class="growth-note">Je ontvangt een bevestigingsmail. Afmelden kan altijd. <a href="/#privacy">Privacy</a></p>
           </form>
         </div>

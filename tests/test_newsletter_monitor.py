@@ -17,14 +17,13 @@ class MonitorTests(unittest.TestCase):
     def test_current_form(self):
         self.assertEqual(self.failures(self.html), [])
 
-    def test_wrong_action_and_missing_embed(self):
-        broken = self.html.replace(m.ACTION, 'https://example.com').replace('name="embed"', 'name="other"')
-        self.assertIn('Buttondown action en POST', self.failures(broken))
-        self.assertIn('embed=1', self.failures(broken))
+    def test_wrong_action(self):
+        broken = self.html.replace(m.ACTION, 'https://example.com')
+        self.assertIn('Kit action en POST', self.failures(broken))
 
     def test_missing_form_and_email(self):
         self.assertIn('formulier aanwezig (exact één)', self.failures(''))
-        self.assertIn('emailveld', self.failures(self.html.replace('name="email"', 'name="other"')))
+        self.assertIn('emailveld', self.failures(self.html.replace('name="email_address"', 'name="other"')))
 
     def test_duplicate_form(self):
         self.assertIn('formulier aanwezig (exact één)', self.failures(self.html + self.html))
@@ -63,7 +62,7 @@ class MonitorTests(unittest.TestCase):
     def test_unexpected_redirect_or_inline_success_fails(self):
         broken = self.html.replace('method="post"', 'method="post" onsubmit="return false"')
         self.assertIn('geen client-side succes of afwijkende redirect', self.failures(broken))
-        broken = self.html.replace('name="embed"', 'name="redirect_url"')
+        broken = self.html.replace('</form>', '<input name="redirect_url"></form>', 1)
         self.assertIn('geen client-side succes of afwijkende redirect', self.failures(broken))
 
     def test_network_failure_is_recorded(self):
