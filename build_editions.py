@@ -338,6 +338,14 @@ def category_meta_html(item):
     slug = slugify_category(label)
     return f'<div class="meta"><a href="/{esc(slug)}/">{esc(label)}</a></div>'
 
+
+def reader_tip_html(item, date_value=None, detail=False):
+    historical = ["bewust-vaderschap","schagen","pip-glimlach-reist-wereld"]
+    if item.get("reader_tip") is not True and item.get("article_slug") not in historical:
+        return ""
+    badge = "<span class=\"reader-tip\" style=\"display:table;width:fit-content;margin:8px 0 0;padding:3px 8px;border-radius:5px;background:#fff1e2;color:#914900;font:600 12px/1.5 Arial,sans-serif\">Getipt door een lezer</span>"
+    return badge + "<p style=\"margin:5px 0 0;font:14px/1.5 Arial,sans-serif;color:#536c64\">Ook een nieuwstip? <a href=\"/tip/\" style=\"color:#176e5c;text-decoration:underline;text-underline-offset:3px\">Laat het ons weten.</a></p>" if detail else badge
+
 def article_html(item, date_value=None, show_date=False, section="onbekend"):
     raw_title = item.get("title") or item.get("headline") or ""
     raw_source = item.get("source") or ""
@@ -383,6 +391,7 @@ def article_html(item, date_value=None, show_date=False, section="onbekend"):
         <div class="article-copy">
           {date_html}
           <h3><a href="{url}" {link_attrs} {tracking_attrs}>{title}</a></h3>
+          {reader_tip_html(item, date_value)}
           {category_meta_html(item)}
         </div>
         {thumb_html}
@@ -936,6 +945,7 @@ def render_article_page(item, date_value, related_records=None, image_data=None,
     <div class="shell article-wrap">
       <p class="article-kicker">{topic_link}</p>
       <h1>{title}<b>.</b></h1>
+      {reader_tip_html(item, date_value, detail=True)}
       {f'<p class="article-deck">{teaser}</p>' if teaser else ''}
       <div class="article-meta"><span>{esc(date_text)}</span><span>Bron: {source}</span></div>
       <!-- newsletter:article_intro:start --><p class="pn-newsletter-link">Meer van dit soort nieuws? <a href="#nieuwsbrief" data-newsletter-cta="article_intro">Ontvang onze gratis algemene nieuwsbrief.</a></p><!-- newsletter:article_intro:end -->
@@ -1778,7 +1788,7 @@ def homepage_story_html(item, edition_date, section, index):
     attrs = "" if url.startswith(("/", SITE_URL + "/")) else 'target="_blank" rel="noopener noreferrer"'
     link = f'<a href="{esc(url)}" {attrs}>{esc(title)}</a>' if url else esc(title)
     teaser = item.get("teaser") or item.get("summary") or item.get("description") or ""
-    meta = category_meta_html(item)
+    meta = reader_tip_html(item, edition_date) + category_meta_html(item)
     image = ""
     slug = str(item.get("article_slug") or "").strip().strip("/")
     cached = _load_pixabay_cache().get(f"{edition_date}/{slug}") or {}
