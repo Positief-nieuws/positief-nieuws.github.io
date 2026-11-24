@@ -10,3 +10,6 @@ Gebruik voor websitepublicatie `publish_edition.py` volgens REDACTIE.txt. Combin
 
 ## Analytics bij websitewerkzaamheden
 Lees vóór iedere browsercontrole `docs/analytics-testing.md`. Gebruik eerst een lokale preview. Open live pagina’s voor onderhoud uitsluitend met `?pn_internal=1` in de gekozen browser; verifieer de uitsluiting voordat je navigeert. Een nieuwe browser of nieuw profiel moet opnieuw worden uitgesloten. Voer geen echte tracking- of Kit-test uit zonder het gecontroleerde protocol.
+
+## Lezerstips
+Zet `reader_tip: true` in het editiebestand voor een verhaal dat daadwerkelijk door een lezer is getipt. De generator toont het label op overzichts- en detailpagina’s; behoud dit veld bij verdere bewerkingen.
