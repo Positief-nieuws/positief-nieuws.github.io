@@ -66,10 +66,59 @@ class MonitorTests(unittest.TestCase):
         self.assertIn('geen client-side succes of afwijkende redirect', self.failures(broken))
 
     def test_network_failure_is_recorded(self):
-        with patch.object(m, 'get', side_effect=TimeoutError), patch.dict(m.os.environ, {}, clear=True):
+        with patch.object(m, 'get', side_effect=TimeoutError), patch.object(m.time, 'sleep'), patch.dict(m.os.environ, {}, clear=True):
             rows = m.run()
         self.assertTrue(any(r['status'] == 'FAIL' and r['location'] == '/' for r in rows))
         self.assertTrue(any(r['status'] == 'MANUAL' for r in rows))
+
+ 
+class HostedFormTests(unittest.TestCase):
+    def error(self, code):
+        return m.urllib.error.HTTPError(m.HOSTED_FORM, code, 'test', {}, None)
+
+    def test_success_requires_email_form(self):
+        with patch.object(m, 'get', return_value='<form><input name="email_address"></form>'):
+            self.assertEqual(m.check_hosted_form()[0], 'PASS')
+        with patch.object(m, 'get', return_value='<html>not a form</html>'):
+            self.assertEqual(m.check_hosted_form()[0], 'FAIL')
+
+    def test_access_denied_is_manual_not_pass(self):
+        for code in (401, 403):
+            with self.subTest(code=code), patch.object(m, 'get', side_effect=self.error(code)) as get:
+                status, detail = m.check_hosted_form()
+                self.assertEqual(status, 'MANUAL')
+                self.assertIn(f'HTTP {code}', detail)
+                self.assertEqual(get.call_count, 1)
+
+    def test_missing_page_is_failure(self):
+        for code in (404, 410):
+            with self.subTest(code=code), patch.object(m, 'get', side_effect=self.error(code)) as get:
+                status, detail = m.check_hosted_form()
+                self.assertEqual(status, 'FAIL')
+                self.assertIn(f'HTTP {code}', detail)
+                self.assertEqual(get.call_count, 1)
+
+    def test_temporary_error_recovers(self):
+        with patch.object(m, 'get', side_effect=[self.error(503), '<form><input name="email_address"></form>']) as get, patch.object(m.time, 'sleep') as sleep:
+            self.assertEqual(m.check_hosted_form()[0], 'PASS')
+            self.assertEqual(get.call_count, 2)
+            sleep.assert_called_once_with(1)
+
+    def test_exhausted_retry_distinguishes_rate_limit_and_outage(self):
+        for code, expected in ((429, 'MANUAL'), (503, 'FAIL')):
+            with self.subTest(code=code), patch.object(m, 'get', side_effect=self.error(code)) as get, patch.object(m.time, 'sleep'):
+                status, detail = m.check_hosted_form()
+                self.assertEqual(status, expected)
+                self.assertIn(f'HTTP {code}', detail)
+                self.assertIn('3/3', detail)
+                self.assertEqual(get.call_count, 3)
+
+    def test_network_timeout_retries_then_fails(self):
+        with patch.object(m, 'get', side_effect=TimeoutError) as get, patch.object(m.time, 'sleep'):
+            status, detail = m.check_hosted_form()
+            self.assertEqual(status, 'FAIL')
+            self.assertIn('TimeoutError', detail)
+            self.assertEqual(get.call_count, 3)
 
 
 class LatestEditionSignupTests(unittest.TestCase):
