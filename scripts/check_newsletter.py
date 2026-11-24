@@ -6,6 +6,8 @@ import json
 import os
 from pathlib import Path
 import re
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
 
@@ -96,6 +98,34 @@ def get(url, headers=None):
         return response.read().decode('utf-8')
 
 
+def check_hosted_form():
+    """Read-only external check; access restrictions do not prove a broken form."""
+    retryable = {408, 429, 500, 502, 503, 504}
+    for attempt in range(1, 4):
+        try:
+            hosted = Page(get(HOSTED_FORM))
+            ok = any(any(i.get('name') == 'email_address' for i in f['inputs']) for f in hosted.forms)
+            return ('PASS' if ok else 'FAIL',
+                    'HTTP 200; poging ' + str(attempt) +
+                    ('; formulier gevonden; geen POST of bewijs van registratie' if ok else '; geen email_address-formulier gevonden'))
+        except urllib.error.HTTPError as error:
+            code = error.code
+            detail = f'HTTP {code}; poging {attempt}/3'
+            if code in retryable and attempt < 3:
+                time.sleep(2 ** (attempt - 1))
+                continue
+            if code in (401, 403, 429):
+                return 'MANUAL', detail + '; geautomatiseerde toegang geweigerd of begrensd; controleer handmatig'
+            return 'FAIL', detail + '; externe pagina niet verifieerbaar'
+        except (urllib.error.URLError, TimeoutError, ConnectionError) as error:
+            if attempt < 3:
+                time.sleep(2 ** (attempt - 1))
+                continue
+            return 'FAIL', f'{type(error).__name__}; poging {attempt}/3; externe pagina niet bereikbaar'
+        except Exception as error:
+            return 'FAIL', f'{type(error).__name__}; poging {attempt}/3; externe pagina niet verifieerbaar'
+
+
 def run(local=False):
     rows = []
     now = dt.datetime.now(dt.timezone.utc).isoformat()
@@ -129,12 +159,8 @@ def run(local=False):
     except Exception as e:
         add('alle formulieren', 'meetcode ophalen', 'FAIL', type(e).__name__)
     if not local:
-        try:
-            hosted = Page(get(HOSTED_FORM))
-            ok = any(any(i.get('name') in ('email_address',) for i in f['inputs']) for f in hosted.forms)
-            add('Kit-formulier', 'GET bereikt een inschrijfformulier', 'PASS' if ok else 'FAIL', 'Geen POST; geen bewijs van registratie of CAPTCHA')
-        except Exception as error:
-            add('Kit-formulier', 'GET bereikbaarheid', 'FAIL', type(error).__name__)
+        status, detail = check_hosted_form()
+        add('Kit-formulier', 'GET bereikbaarheid en formulier', status, detail)
     # No credentials are created or copied from browser sessions.
     key = os.environ.get('SIMPLE_ANALYTICS_API_KEY')
     if local or not key:
@@ -179,6 +205,13 @@ def main():
     summary = os.environ.get('GITHUB_STEP_SUMMARY')
     if summary:
         with open(summary, 'a') as f: f.write(report)
+    hosted = next((r for r in rows if r['location'] == 'Kit-formulier'), None)
+    if hosted and hosted['status'] == 'MANUAL':
+        print('::warning::Kit-formulier niet automatisch verifieerbaar: ' + hosted['detail'])
+    output = os.environ.get('GITHUB_OUTPUT')
+    if output and hosted:
+        with open(output, 'a') as f:
+            f.write('hosted_verified=' + ('true' if hosted['status'] == 'PASS' else 'false') + '\n')
     # Warnings require review; MANUAL is explicitly partial, never a technical PASS.
     return 1 if any(r['status'] in ('FAIL', 'WARN') for r in rows) else 0
 
