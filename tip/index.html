@@ -165,6 +165,12 @@ main { padding-top: 30px; } h1 { max-width: 680px; } .intro { max-width: 660px; 
 .checklist { padding-left:22px; } .checklist li { margin:10px 0; }
 a:focus-visible { outline:3px solid var(--accent); outline-offset:5px; } .email-fallback { overflow-wrap:anywhere; }
 @media(max-width:640px) { .contact-grid { grid-template-columns:1fr; } .support-card { padding:24px; } }
+
+#pn-tip-form{display:grid;gap:9px;margin-top:22px}#pn-tip-form[hidden],#tip-confirmation[hidden]{display:none!important}
+#pn-tip-form label{font-size:.9rem;font-weight:700;color:#182e35;margin-top:8px}#pn-tip-form label span{font-weight:400;color:#536c64;font-size:.8rem}
+#pn-tip-form input:not([type="checkbox"]),#pn-tip-form textarea{font:inherit;width:100%;min-width:0;padding:12px;border:1px solid #a7b9b0;border-radius:8px;background:#fff;color:#182e35;min-height:44px;box-sizing:border-box}#pn-tip-form textarea{resize:vertical;min-height:120px}
+#pn-tip-form :focus-visible{outline:3px solid #f57900;outline-offset:2px}#pn-tip-form .tip-consent{display:flex;gap:10px;align-items:flex-start;font-weight:400;line-height:1.5}#pn-tip-form input[type="checkbox"]{width:19px;height:19px;flex:none;accent-color:#176e5c}
+#pn-tip-form .tip-help{margin:0;font-size:.78rem;line-height:1.5}#pn-tip-form .support-button{justify-self:start;margin-top:12px;cursor:pointer}#tip-confirmation{padding:16px;border:1px solid #9bbca8;border-radius:10px;background:#f0f5ee;color:#173f31}
 </style>
 <script>window.sa_event=window.sa_event||function(){var a=[].slice.call(arguments);window.sa_event.q?window.sa_event.q.push(a):window.sa_event.q=[a]};</script><link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64"><link rel="icon" type="image/png" href="/favicon.png" sizes="96x96"><link rel="apple-touch-icon" href="/sun-apple-touch-icon.png" sizes="180x180"><link rel="manifest" href="/manifest.json?v=5"><meta name="application-name" content="Positief nieuws"><!-- edition-analytics:start --><script src="/edition-analytics.js?v=2" data-page-type="other" data-edition=""></script><!-- edition-analytics:end --><link rel="stylesheet" href="/site-theme.css?v=20261125-winter-1"><link rel="stylesheet" href="/newsletter-conversion.css?v=2"><!-- social-meta:start --><meta property="og:title" content="Tip de redactie | Positief nieuws"><meta property="og:description" content="Goed nieuws gezien? Tip de redactie van Positief nieuws met een bronlink en een korte toelichting."><meta property="og:url" content="https://positief-nieuws.nl/tip/"><meta property="og:type" content="website"><meta property="og:site_name" content="Positief nieuws"><meta property="og:locale" content="nl_NL"><meta property="og:image" content="https://positief-nieuws.nl/images/social/positief-nieuws-v1.png"><meta property="og:image:secure_url" content="https://positief-nieuws.nl/images/social/positief-nieuws-v1.png"><meta property="og:image:alt" content="Positief nieuws. Dit gebeurt ook. Nieuws uit Nederland en de wereld."><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Tip de redactie | Positief nieuws"><meta name="twitter:description" content="Goed nieuws gezien? Tip de redactie van Positief nieuws met een bronlink en een korte toelichting."><meta name="twitter:image" content="https://positief-nieuws.nl/images/social/positief-nieuws-v1.png"><meta name="twitter:image:alt" content="Positief nieuws. Dit gebeurt ook. Nieuws uit Nederland en de wereld."><!-- social-meta:end --></head><body>  <header class="site-header">
   <div class="header-shell header-row">
@@ -231,15 +237,35 @@ a:focus-visible { outline:3px solid var(--accent); outline-offset:5px; } .email-
     });
   })();
 </script><!-- site-design:end --><main><div class="content-shell">
-<p class="section-kicker">Tip de redactie</p><h1>Goed nieuws gezien?<br>Vertel het me<span style="color:#f57900">.</span></h1>
-<p class="intro">Een hoopvolle ontwikkeling, een slimme oplossing of een initiatief dat echt iets verandert. Misschien zag je iets dat in het gewone nieuws nauwelijks aandacht krijgt. Ik ben benieuwd naar jouw ontdekking.</p>
-<section class="support-card" style="margin-top:26px;background:#fff;border-color:#efd3ad"><h2>Stuur je tip in</h2><p>Een paar zinnen zijn genoeg. Je hoeft geen journalist te zijn en je hoeft ook niet eerst een artikel te zoeken.</p>
-<ul class="checklist"><li><strong>Wat heb je gezien of gehoord?</strong> Vertel kort wat er goed gaat en voor wie.</li><li><strong>Waar en wanneer?</strong> Zo kan ik de ontwikkeling beter plaatsen.</li><li><strong>Heb je een bron?</strong> Stuur die gerust mee. Een link is welkom, maar niet verplicht.</li></ul>
-<a class="support-button" href="mailto:redactie@positief-nieuws.nl?subject=Nieuwstip%20voor%20Positief%20nieuws&amp;body=Wat%20heb%20je%20gezien%20of%20gehoord%3F%0A%0AWaar%20en%20wanneer%20speelde%20het%3F%0A%0ABronlink%20(als%20je%20die%20hebt)%3A%0A%0AMag%20ik%20je%20voornaam%20bij%20een%20eventueel%20artikel%20vermelden%3F%20Alleen%20als%20je%20dat%20zelf%20wilt.%0A" data-pn-event="tip_mail_click">Mail je nieuwstip →</a>
-<p class="payment-note">Je eigen mailprogramma opent met een paar vragen. Er wordt niets automatisch verstuurd.</p></section>
-<p class="email-fallback">Liever zelf mailen? Stuur je verhaal naar <a href="mailto:redactie@positief-nieuws.nl?subject=Nieuwstip%20voor%20Positief%20nieuws" data-pn-event="tip_mail_click">redactie@positief-nieuws.nl</a>.</p>
-<section class="brand-note"><h2>Wat gebeurt er met jouw tip?</h2><p>Ik bekijk wat je instuurt, controleer waar mogelijk de oorspronkelijke bronnen en bepaal of het past bij een volgende editie. Niet iedere tip wordt gepubliceerd.</p><p>Als jouw tip leidt tot een artikel, kan dat het label ‘Getipt door een lezer’ krijgen. Ik vermeld je naam alleen met jouw toestemming. Deel liever geen persoonlijke gegevens van anderen.</p><p>Bedankt dat je helpt om ook de mooie ontwikkelingen zichtbaar te maken.</p><p><strong>Tom, initiatiefnemer van Positief nieuws</strong></p><p>Een vraag, opmerking of correctie? <a href="/contact/" data-pn-event="contact_click">Neem contact op</a>.</p></section>
-</div></main><footer class="site-footer"><div class="content-shell">Positief nieuws · Dit gebeurt ook. · <a href="/contact/" data-pn-event="contact_click">Contact</a> · <a href="/tip/" data-pn-event="tip_redactie_click">Tip de redactie</a><!-- support-offline:11e48ef620f2d06c749b447bc51fade9c45d2dcfbe46dd004e27cedd9387f405 --> · <a href="/#privacy">Privacy</a></div><!-- simple-analytics-badge:start -->
+<p class="section-kicker">Tip de redactie</p><h1>Goed nieuws gezien?<br>Vertel het ons<span style="color:#f57900">.</span></h1>
+<p class="intro">Een hoopvolle ontwikkeling, een slimme oplossing of een initiatief dat echt iets verandert. Misschien zag je iets dat in het gewone nieuws nauwelijks aandacht krijgt. We zijn benieuwd naar jouw ontdekking.</p>
+<section class="support-card" style="margin-top:26px;background:#fff;border-color:#efd3ad"><h2>Stuur je tip in</h2><p>Een paar zinnen zijn genoeg. Je hoeft geen journalist te zijn.</p>
+<p id="tip-confirmation" role="status" hidden>Bedankt voor je tip! De redactie bekijkt je inzending.</p>
+<form id="pn-tip-form" method="POST" action="https://formsubmit.co/redactie@positief-nieuws.nl">
+<input type="hidden" name="_subject" value="Nieuwstip voor Positief nieuws">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_next" value="https://positief-nieuws.nl/tip/?verzonden=1">
+<div hidden><label for="tip-honey">Laat dit veld leeg</label><input id="tip-honey" name="_honey" type="text" tabindex="-1" autocomplete="off"></div>
+<label for="tip-story">Wat heb je gezien of gehoord? <span>(verplicht)</span></label>
+<textarea id="tip-story" name="message" rows="5" maxlength="3000" required placeholder="Vertel kort wat er goed gaat en voor wie."></textarea>
+<label for="tip-place">Waar en wanneer? <span>(optioneel)</span></label>
+<input id="tip-place" name="plaats_en_datum" type="text" maxlength="200" placeholder="Plaats, regio of datum">
+<label for="tip-source">Link naar een bron <span>(optioneel)</span></label>
+<input id="tip-source" name="bron" type="url" maxlength="2000" placeholder="https://...">
+<label for="tip-name">Voornaam <span>(optioneel)</span></label>
+<input id="tip-name" name="voornaam" type="text" maxlength="80" autocomplete="given-name">
+<label for="tip-email">E-mailadres <span>(optioneel)</span></label>
+<input id="tip-email" name="email" type="email" maxlength="254" autocomplete="email" aria-describedby="tip-email-help">
+<p id="tip-email-help" class="tip-help">Alleen nodig als je wilt dat we contact met je kunnen opnemen. Je schrijft je hiermee niet in voor de nieuwsbrief.</p>
+<label class="tip-consent"><input type="checkbox" name="toestemming_naamsvermelding" value="ja"> Mijn voornaam mag bij een eventueel artikel worden vermeld.</label>
+<p class="tip-help">Deel geen gevoelige informatie of persoonsgegevens van anderen. Het formulier wordt verwerkt via FormSubmit en doorgestuurd naar onze redactie. Lees de <a href="https://formsubmit.co/privacy.pdf" target="_blank" rel="noopener noreferrer">privacyinformatie van FormSubmit</a>.</p>
+<button class="support-button" type="submit">Verstuur je tip</button>
+</form></section>
+<p class="email-fallback">Liever zelf mailen? Ons adres is <strong>redactie@positief-nieuws.nl</strong>.</p>
+<section class="brand-note"><h2>Wat gebeurt er met jouw tip?</h2><p>We bekijken wat je instuurt, controleren waar mogelijk de oorspronkelijke bronnen en bepalen of het past bij een volgende editie. Niet iedere tip wordt gepubliceerd.</p><p>Als jouw tip leidt tot een artikel, kan dat het label ‘Getipt door een lezer’ krijgen. We vermelden je voornaam alleen met jouw toestemming.</p><p>Bedankt dat je helpt om ook de mooie ontwikkelingen zichtbaar te maken.</p><p><strong>De redactie van Positief nieuws</strong></p><p>Een vraag, opmerking of correctie? <a href="/contact/" data-pn-event="contact_click">Neem contact op</a>.</p></section>
+</div></main><script>
+(function(){const form=document.getElementById('pn-tip-form'), status=document.getElementById('tip-confirmation');if(new URLSearchParams(location.search).get('verzonden')==='1'){status.hidden=false;form.hidden=true;history.replaceState(null,'',location.pathname);}form.addEventListener('submit',function(){if(window.sa_event)window.sa_event('tip_form_submit');});})();
+</script><footer class="site-footer"><div class="content-shell">Positief nieuws · Dit gebeurt ook. · <a href="/contact/" data-pn-event="contact_click">Contact</a> · <a href="/tip/" data-pn-event="tip_redactie_click">Tip de redactie</a><!-- support-offline:11e48ef620f2d06c749b447bc51fade9c45d2dcfbe46dd004e27cedd9387f405 --> · <a href="/#privacy">Privacy</a></div><!-- simple-analytics-badge:start -->
 <div class="simple-analytics-badge" style="display:block;text-align:center;margin-top:16px">
   <a href="https://www.simpleanalytics.com?utm_source=positief-nieuws.nl&amp;utm_content=badge" referrerpolicy="origin" target="_blank" rel="noopener noreferrer" style="display:inline-block;line-height:0">
     <picture>

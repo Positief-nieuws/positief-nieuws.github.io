@@ -16,3 +16,6 @@ Zet `reader_tip: true` in het editiebestand voor een verhaal dat daadwerkelijk d
 
 ## December- en winterversiering
 Behoud `winter-season.css` en de import bovenaan `site-theme.css` bij alle builds, stijlaanpassingen en deployments. Laat de winterversiering actief totdat de opdrachtgever expliciet opdracht geeft om deze te verwijderen. Verwijder of vervang de regressietest niet zonder diezelfde opdracht. De gedeelde winterstijl geldt voor alle inhoudspagina's; animaties respecteren `prefers-reduced-motion`.
+
+## Redactionele aanspreekvorm
+Gebruik voor algemene website- en nieuwsbriefteksten altijd de wij-vorm (we, ons, onze redactie), niet ik, mij of me. Persoonlijke columns en expliciet ondertekende persoonlijke noten behouden hun eigen stem.
