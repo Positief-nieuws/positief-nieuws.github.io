@@ -5,3 +5,10 @@
 .pn-home .edition-end .pn-share-home h2{margin:0 0 14px;font-size:21px;line-height:1.25;letter-spacing:-.035em}
 .pn-home .edition-end .pn-share-buttons{justify-content:center}
 .pn-home .edition-end #install-strip{max-width:100%;align-self:center}
+
+/* Deel een beetje hoop: a warm accent, shared by current and future pages. */
+.article-share,.pn-share{background:#fff7eb;border-color:#efd3ad}
+.article-share h2,.pn-share h2{color:#182e35}
+.article-share h2::before,.pn-share h2::before{content:"";display:inline-block;width:23px;height:23px;margin-right:9px;vertical-align:-4px;background:url('/sun-orange.svg') center/contain no-repeat}
+.article-share-buttons a,.article-share-buttons button,.pn-share-buttons a,.pn-share-buttons button{background:#fff;border-color:#d7b68c;color:#79430b}
+.article-share-buttons a:hover,.article-share-buttons button:hover,.pn-share-buttons a:hover,.pn-share-buttons button:hover{background:#ffecd4}

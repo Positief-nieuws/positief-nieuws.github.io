@@ -53,6 +53,9 @@ class SharingTests(unittest.TestCase):
         block=sharing.share_block('newsletter','https://positief-nieuws.nl/nieuwsbrief/','Nieuws & nuance')
         self.assertIn('Nieuws%20%26%20nuance',block)
         self.assertIn('role="status"',block)
+        self.assertIn('Deel een beetje hoop.', block)
+        self.assertIn('data-share-channel="email"', block)
+        self.assertIn('mailto:?subject=', block)
         self.assertIn('data-share-action="copy"',block)
         self.assertIn('data-share-action="native" hidden',block)
 

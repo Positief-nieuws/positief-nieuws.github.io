@@ -9,13 +9,16 @@ function fixture(kind='article',clipboardFails=false,nativeResult='ok') {
  const native={hidden:true,addEventListener:(e,f)=>{handlers.native=f;}};
  const copy={addEventListener:(e,f)=>{handlers.copy=f;}};
  const whatsapp={dataset:{shareChannel:'whatsapp'},href:'',addEventListener:(e,f)=>{handlers.whatsapp=f;}};
- const block={dataset:{shareType:kind},querySelector:(s)=>s==='[role="status"]'?status:s.includes('fallback')?fallback:s.includes('native')?native:copy,querySelectorAll:()=>[whatsapp]};
+ const heading={textContent:''}, invitation={textContent:''};
+ const email={dataset:{shareChannel:'email'},href:'',addEventListener:(e,f)=>{handlers.email=f;}};
+ const buttons={querySelector:s=>s.includes('email')?email:whatsapp};
+ const block={dataset:{shareType:kind},querySelector:(s)=>s==='h2'?heading:s==='h2 + p'?invitation:s.includes('share-buttons')?buttons:s==='[role="status"]'?status:s.includes('fallback')?fallback:s.includes('native')?native:copy,querySelectorAll:s=>s.includes('="email"')?[email]:s.includes('="whatsapp"')?[whatsapp]:[whatsapp,email]};
  const document={readyState:'complete',querySelectorAll:()=>[block],querySelector:(s)=>s.includes('canonical')?{href:'https://positief-nieuws.nl/voorbeeld/'}:{content:'Titel & nuance'}};
  const window={sa_metadata:{page_type:kind,category:'Mens'},sa_event:(name,meta)=>events.push({name,meta})};
  const navigator={clipboard:{writeText:async url=>{calls.push(url);if(clipboardFails)throw Error('denied');}},share:async d=>{calls.push(d);if(nativeResult!=='ok')throw {name:nativeResult};}};
  const context={window,document,navigator,location:{pathname:'/voorbeeld/'},URL,encodeURIComponent};
  vm.runInNewContext(source,context);
- return {events,handlers,calls,status,fallback,input,context,whatsapp};
+ return {events,handlers,calls,status,fallback,input,context,whatsapp,email,heading,invitation};
 }
 (async()=>{
  for (const kind of ['article','special','newsletter','edition']) {
@@ -29,7 +32,10 @@ function fixture(kind='article',clipboardFails=false,nativeResult='ok') {
   assert.equal(f.calls[0],'https://positief-nieuws.nl/voorbeeld/');
   f.handlers.whatsapp();assert.match(f.whatsapp.href,/Titel%20%26%20nuance/);
   assert.equal(f.events.at(-1).meta.share_method,'whatsapp');
-  vm.runInNewContext(source,f.context);assert.equal(f.events.length,3);
+  assert.equal(f.heading.textContent,'Deel een beetje hoop.');
+  assert.match(f.email.href,/^mailto:\?subject=Titel%20%26%20nuance/);
+  f.handlers.email(); assert.equal(f.events.at(-1).meta.share_method,'email');
+  vm.runInNewContext(source,f.context);assert.equal(f.events.length,4);
  }
  const failure=fixture('article',true);await failure.handlers.copy();
  assert.equal(failure.events.length,1);assert.equal(failure.fallback.hidden,false);

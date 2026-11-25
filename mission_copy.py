@@ -7,7 +7,7 @@ import re
 
 MISSION = 'Positief nieuws wil het nieuwslandschap meer in balans brengen door ook oplossingen, vooruitgang en hoopvolle ontwikkelingen zichtbaar te maken.'
 PERSONAL = 'Ik ben Tom, de initiatiefnemer van Positief nieuws. Met deze site wil ik meer ruimte geven aan wat er óók goed gaat, naast het nieuws over problemen en crises.'
-INVITE = 'We willen het nieuwslandschap meer in balans brengen door ook oplossingen, vooruitgang en hoopvolle ontwikkelingen zichtbaar te maken. Deel dit verhaal via WhatsApp, e-mail of de link hieronder.'
+INVITE = 'Ken je iemand die blij zou worden van dit verhaal? Geef het door.'
 SHARE = 'Deel Positief nieuws met iemand die een breder nieuwsbeeld waardeert. Zo help je oplossingen, vooruitgang en hoopvolle ontwikkelingen meer mensen in Nederland te bereiken.'
 
 
