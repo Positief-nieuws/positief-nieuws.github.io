@@ -13,3 +13,6 @@ Lees vóór iedere browsercontrole `docs/analytics-testing.md`. Gebruik eerst ee
 
 ## Lezerstips
 Zet `reader_tip: true` in het editiebestand voor een verhaal dat daadwerkelijk door een lezer is getipt. De generator toont het label op overzichts- en detailpagina’s; behoud dit veld bij verdere bewerkingen.
+
+## December- en winterversiering
+Behoud `winter-season.css` en de import bovenaan `site-theme.css` bij alle builds, stijlaanpassingen en deployments. Laat de winterversiering actief totdat de opdrachtgever expliciet opdracht geeft om deze te verwijderen. Verwijder of vervang de regressietest niet zonder diezelfde opdracht. De gedeelde winterstijl geldt voor alle inhoudspagina's; animaties respecteren `prefers-reduced-motion`.

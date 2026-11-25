@@ -17,7 +17,7 @@ from categories import (CATEGORY_ORDER, CATEGORY_ALIASES, canonical_category,
                         category_label, slugify_category)
 
 SITE_URL = "https://positief-nieuws.nl"
-SITE_THEME_HREF = "/site-theme.css?v=20261114-footer-compact"
+SITE_THEME_HREF = "/site-theme.css?v=20261125-winter-1"
 EDITIONS_DIR = Path("edities")
 TOPICS_DIR = Path("onderwerpen")
 TOPIC_MANIFEST = TOPICS_DIR / "index.json"
@@ -2104,7 +2104,7 @@ def refresh_site_design():
             text = text.replace('</header>', '</header><!-- site-design:start -->' + ('' if has_menu else '<script>' + menu_script) + '<!-- site-design:end -->', 1)
         elif 'pn-home' not in re.search(r'<body\b[^>]*>', text).group():
             text = re.sub(r'<body\b([^>]*)>', lambda m: '<body' + m.group(1) + ' class="pn-home">', text, count=1)
-        text = re.sub(r'<link rel="stylesheet" href="/site-theme.css[^"]*">', '', text)
+        text = re.sub(r'<link\b(?=[^>]*\bhref=["\']/site-theme\.css(?:\?[^"\']*)?["\'])[^>]*>', '', text, flags=re.I)
         text = text.replace('</head>', f'<link rel="stylesheet" href="{SITE_THEME_HREF}"></head>', 1)
         path.write_text(text, encoding="utf-8")
     from newsletter_conversion import apply
