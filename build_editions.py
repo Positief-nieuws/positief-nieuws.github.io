@@ -13,6 +13,7 @@ from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
 from simple_analytics_badge import badge_html
+from tip_invitation import block as tip_invitation, apply_home as apply_home_tip
 from categories import (CATEGORY_ORDER, CATEGORY_ALIASES, canonical_category,
                         category_label, slugify_category)
 
@@ -962,7 +963,7 @@ def render_article_page(item, date_value, related_records=None, image_data=None,
       {growth_html}
       {related_html}
 
-      <p class="article-back"><a href="/edities/{esc(date_value)}/">← Terug naar de editie van {esc(date_text)}</a></p>
+      {tip_invitation("article")}<p class="article-back"><a href="/edities/{esc(date_value)}/">← Terug naar de editie van {esc(date_text)}</a></p>
     </div>
   </main>
   <footer>Positief nieuws · Dit gebeurt ook. · <a href="/contact/" onclick="if(window.sa_event)window.sa_event('contact_click')">Contact</a> · <a href="/tip/" onclick="if(window.sa_event)window.sa_event('tip_redactie_click')">Tip de redactie</a>{badge_html()}</footer>
@@ -1889,7 +1890,7 @@ def update_homepage(data):
         markup = markup.replace('</head>', '<link rel="stylesheet" href="/edition-layout.css?v=20261026-singleline"></head>', 1)
     markup = apply_homepage_brand_heading(markup)
     markup = markup.replace('/sun-icon-512.png', '/sun-orange.svg')
-    homepage.write_text(markup, encoding="utf-8")
+    homepage.write_text(apply_home_tip(markup), encoding="utf-8")
     print(f"Homepage bijgewerkt: editie {edition_date}, {len(story_list)} direct leesbare verhalen.")
 
 
