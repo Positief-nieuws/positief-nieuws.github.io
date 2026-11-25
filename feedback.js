@@ -9,9 +9,13 @@
     if (!document.querySelector('.site-header')) return;
     const css = document.createElement('link');
     css.rel = 'stylesheet'; css.href = '/feedback.css?v=1'; document.head.append(css);
+    const tipOpener = document.querySelector('#pn-tip-open');
     const dialog = document.createElement('dialog');
     dialog.className = 'pn-feedback-dialog'; dialog.setAttribute('aria-labelledby', 'pn-feedback-title');
     dialog.innerHTML = '<div class="pn-feedback-heading"><h2 id="pn-feedback-title">Laat van je horen</h2><button type="button" class="pn-feedback-close" aria-label="Formulier sluiten">Sluiten ×</button></div><div class="pn-feedback-frame"></div><p class="pn-feedback-fallback">Lukt het formulier niet? <a href="mailto:redactie@positief-nieuws.nl">Mail de redactie</a>.</p>';
+    if (tipOpener) {
+      dialog.querySelector('.pn-feedback-fallback').innerHTML = 'Lukt het formulier niet? <a href="https://tally.so/r/' + formId + '?originPage=%2Ftip%2F">Open het formulier rechtstreeks</a>.';
+    }
     document.body.append(dialog);
     const holder = dialog.querySelector('.pn-feedback-frame');
     let frame, opener, context, submitted = false;
@@ -23,6 +27,8 @@
     function open(button) {
       if (dialog.open) return;
       opener = button;
+      const isTip = button === tipOpener;
+      dialog.querySelector('#pn-feedback-title').textContent = isTip ? 'Tip de redactie' : 'Laat van je horen';
       context = {page: location.pathname, placement: button.dataset.feedbackPlacement || 'floating'};
       submitted = false;
       frame = document.createElement('iframe');
@@ -59,10 +65,18 @@
       el.querySelector('span').textContent = label;
       el.addEventListener('click', () => open(el)); return el;
     }
+    if (tipOpener) {
+      tipOpener.setAttribute('aria-haspopup', 'dialog');
+      tipOpener.addEventListener('click', event => {
+        if (typeof dialog.showModal !== 'function') return;
+        if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+        event.preventDefault(); open(tipOpener);
+      });
+    }
     const floating = button('Feedback of tip?', 'floating');
     floating.classList.add('pn-feedback-floating'); document.body.append(floating);
     const main = document.querySelector('main');
-    if (main && /^\/(contact|tip)\//.test(location.pathname)) {
+    if (main && !tipOpener && /^\/(contact|tip)\//.test(location.pathname)) {
       const box = document.createElement('section'); box.className = 'pn-feedback-invite';
       const p = document.createElement('p'); p.textContent = 'Stuur eenvoudig je feedback, nieuwstip, idee of foutmelding. Je e-mailadres is niet verplicht.';
       box.append(p, button('Feedback of tip insturen', 'contact'));

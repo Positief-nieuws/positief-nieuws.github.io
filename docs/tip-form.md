@@ -1,9 +1,7 @@
 # Nieuwstipformulier
 
-Het formulier gebruikt een native POST naar FormSubmit.co, met standaard reCAPTCHA en honeypot. Geen mailto, geen nieuwe Kit-inschrijving. Analytics registreert uitsluitend de verzendpoging, geen veldwaarden.
+Hergebruik het bestaande Tally-formulier rDj4EL (zie docs/feedback.md). Geen nieuwe leverancier of activatie. De tippagina opent het formulier via de gedeelde feedbackdialoog; zonder JavaScript is de directe Tally-link beschikbaar. De categorie Nieuwstip wordt door de bezoeker gekozen. Het bestaande formulier bevat categorie, bericht en optionele e-mail; locatie, datum en bronlink kunnen in het bericht. Er worden geen extra velden of toestemmingscheckboxes in Tally verondersteld. Vraag expliciete toestemming voordat een bijdrage of naam wordt gepubliceerd.
 
-## Voor livegang
-- Controleer de voorwaarden, verwerkersafspraken en privacyinformatie van de externe formulierdienst (https://formsubmit.co/privacy.pdf); FormSubmit bewaart inzendingen volgens de documentatie 30 dagen. Gebruik geen echte persoonsgegevens voor tests.
-- Activeer het ontvangstadres redactie@positief-nieuws.nl eenmalig via de activatiemail die FormSubmit bij de eerste testinzending verstuurt. Test op een goedgekeurde preview via HTTPS; geen echte bezoeker als eerste test gebruiken. Gebruik de bevestigde formulier-ID als die beschikbaar is.
-- Verifieer met een tweede synthetische tip de bezorging, de eigen bedankmelding, captcha en foutafhandeling. Controleer desktop en mobiel. Pas zo nodig het privacybeleid aan voordat het formulier publiek wordt aangeboden.
-- Zet pas live na geslaagde end-to-endtest en akkoord. Geen nieuwsbrief versturen.
+Privacy: geen externe aanvraag voordat de bezoeker het formulier opent. Alleen pad en plaatsing in analytics, geen antwoorden of e-mail. De bestaande Tally-privacyverklaring en bewaartermijnen blijven gelden.
+
+Controleer na technische tests in de browser met analyticsuitsluiting de dialoog, mobiele weergave en rechtstreekse fallback. Bevestig ontvangst in Tally en mailbox alleen met een afgesproken synthetische test; geen nieuwsbrief versturen.

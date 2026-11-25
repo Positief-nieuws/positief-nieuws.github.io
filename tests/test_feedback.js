@@ -3,7 +3,7 @@ const assert = require('node:assert/strict');
 const vm = require('node:vm');
 const fs = require('node:fs');
 const source = fs.readFileSync('feedback.js','utf8');
-function run(allowed = true, enabled = true) {
+function run(allowed = true, enabled = true, tip = false) {
   const nodes=[], events=[], listeners={};
   class Element {
     constructor(tag) {this.tag=tag;this.dataset={};this.handlers={};this.children=[];this.isConnected=true;this.classList={add(){},remove(){}};if(tag==='iframe')this.contentWindow={};nodes.push(this);}
@@ -15,10 +15,12 @@ function run(allowed = true, enabled = true) {
     showModal(){this.open=true;} close(){this.open=false;this.handlers.close();}
   }
   const main=new Element('main'); main.querySelector=()=>null;
-  const document={readyState:'complete',createElement:t=>new Element(t),head:new Element('head'),body:new Element('body'),documentElement:new Element('html'),querySelector:s=>s==='main'?main:{}};
+  const tipOpener=tip?new Element('a'):null;
+  if(tipOpener)tipOpener.dataset.feedbackPlacement='tip_page';
+  const document={readyState:'complete',createElement:t=>new Element(t),head:new Element('head'),body:new Element('body'),documentElement:new Element('html'),querySelector:s=>s==='main'?main:s==='#pn-tip-open'?tipOpener:{}};
   const window={pnAnalyticsPolicy:{allowed},sa_event:(name,meta)=>events.push({name,meta}),addEventListener:(k,f)=>listeners[k]=f};
-  vm.runInNewContext(source.replace(/const formId = '[^']*';/, enabled ? "const formId = 'TESTFORM';" : "const formId = '';"),{window,document,location:{pathname:'/artikelen/test/',search:'?email=private@example.com',hash:'#private'},URL,URLSearchParams});
-  return {nodes,events,listeners,window};
+  vm.runInNewContext(source.replace(/const formId = '[^']*';/, enabled ? "const formId = 'TESTFORM';" : "const formId = '';"),{window,document,location:{pathname:tip?'/tip/':'/artikelen/test/',search:'?email=private@example.com',hash:'#private'},URL,URLSearchParams});
+  return {nodes,events,listeners,window,tipOpener};
 }
 assert.equal(run(true,false).window.pnFeedback,undefined,'disabled until configured');
 for(const allowed of [true,false]) {
@@ -43,4 +45,11 @@ for(const allowed of [true,false]) {
   message('https://tally.so',frame.contentWindow,JSON.stringify(payload));
   assert.equal(t.events.length,allowed?2:0);
 }
+const tip=run(true,true,true);
+let prevented=false;
+tip.tipOpener.handlers.click({preventDefault(){prevented=true;}});
+assert.equal(prevented,true);
+assert.equal(new URL(tip.nodes.find(n=>n.tag==='iframe').src).searchParams.get('originPage'),'/tip/');
+assert.equal(tip.events[0].meta.feedback_placement,'tip_page');
+assert.equal(tip.nodes.filter(n=>n.dataset.feedbackPlacement==='contact').length,0);
 console.log('PASS: disabled configuration, deduplicated opens/submits, origin/source/form checks, no PII, exclusions, focus restoration.');

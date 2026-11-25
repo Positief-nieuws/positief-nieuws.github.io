@@ -17,14 +17,12 @@ class TipInvitationTests(unittest.TestCase):
             self.assertEqual(func(result), result)
     def test_public_tip_page_needs_no_backend(self):
         markup = Path('tip/index.html').read_text(encoding='utf-8')
-        self.assertIn('action="https://formsubmit.co/redactie@positief-nieuws.nl"', markup)
-        self.assertNotIn('mailto:', markup)
-        self.assertIn('method="POST"', markup)
-        self.assertIn('name="message" rows="5" maxlength="3000" required', markup)
-        self.assertIn('name="toestemming_naamsvermelding"', markup)
+        self.assertIn('https://tally.so/r/rDj4EL?originPage=%2Ftip%2F', markup)
+        self.assertIn('id="pn-tip-open"', markup)
+        self.assertIn('/feedback.js?v=2', markup)
         self.assertIn('Vertel het ons', markup)
-        self.assertIn('name="_honey"', markup)
-        self.assertNotIn('name="_captcha" value="false"', markup)
+        self.assertNotIn('mailto:', markup)
+        self.assertNotIn('formsubmit', markup.lower())
     def test_future_article(self):
         from build_editions import render_article_page
         item = {'title':'Goed nieuws', 'article_slug':'voorbeeld', 'article_body':['Een verhaal.'], 'category':'Mens', 'url':'https://example.org/'}
