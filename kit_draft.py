@@ -414,6 +414,7 @@ def build_body(data, nl, international, headlines):
     <p style="margin:0;font:16px/1.4 Arial,Helvetica,sans-serif;color:#65756f;">Geniet van je dag.</p>
   </div>
   {build_share_block(data)}
+  <p style="margin:24px 0 0;font:15px/1.6 Arial,Helvetica,sans-serif;color:{INK};">Goed nieuws gezien dat een plek in een volgende editie verdient? <a href="https://positief-nieuws.nl/tip/" style="color:{GREEN_DARK};text-decoration:underline;">Tip de redactie.</a></p>
   <p style="margin:28px 0 0;text-align:center;font:11px Arial,Helvetica,sans-serif;color:{MUTED};">Positief nieuws · Dit gebeurt ook.<br>{{{{ address }}}}</p>
   <p style="text-align:center;font:11px Arial,Helvetica,sans-serif;"><a href="{{{{ unsubscribe_url }}}}" style="color:{MUTED};text-decoration:underline;">Afmelden</a></p>
 </div>"""

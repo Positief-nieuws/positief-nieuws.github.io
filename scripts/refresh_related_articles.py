@@ -8,25 +8,26 @@ from build_editions import (
 )
 from related_content import special_records
 from article_layout import order_article_actions
+from tip_invitation import apply_article as apply_article_tip, remove as remove_tip
 
 
 def update_article_markup(markup, related_markup):
     # Normaliseer oude edities naar delen, nieuwsbrief, gerelateerd lezen.
-    markup = order_article_actions(markup)
+    markup = order_article_actions(remove_tip(markup))
     # Old recommendations might have appeared above the newsletter.
     cleaned = re.sub(
         r'\s*<section\b[^>]*class="article-related"[^>]*>.*?</section>\s*',
         '\n', markup, flags=re.S,
     )
     if not related_markup:
-        return cleaned
+        return apply_article_tip(cleaned)
     anchor = re.search(r'<p class="article-back">', cleaned)
     if not anchor or 'class="article-growth"' not in cleaned:
         raise ValueError("Article page lacks share/newsletter component or back link")
     before = cleaned[:anchor.start()].rstrip()
     if before.rfind('class="article-growth"') > before.rfind('</section>'):
         raise ValueError("Article growth component is not closed")
-    return before + '\n\n      ' + related_markup + '\n\n      ' + cleaned[anchor.start():]
+    return apply_article_tip(before + '\n\n      ' + related_markup + '\n\n      ' + cleaned[anchor.start():])
 
 
 def main():
