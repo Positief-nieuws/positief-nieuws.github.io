@@ -104,9 +104,10 @@ def share_block(kind, url, title, home=False):
     group = 'home' if home else kind
     whatsapp = 'https://wa.me/?text=' + quote(title + '\n\n' + url, safe='')
     from mission_copy import SHARE
-    invitation = '<p>' + SHARE + '</p>'
+    invitation = '<p>' + ('Ken je iemand die wel wat positief nieuws kan gebruiken? Deel de inschrijfpagina.' if kind == 'newsletter' else 'Ken je iemand die wel wat positief nieuws kan gebruiken? Geef deze editie door.') + '</p>'
+    email = 'mailto:?subject=' + quote(title, safe='') + '&body=' + quote(title + '\n\n' + url, safe='')
     button_id = ' id="share-edition"' if home else ''
-    return f'''<!-- social-share:{group}:start --><section class="pn-share{' pn-share-home' if home else ''}" data-share-type="{kind}"{' data-share-home="true"' if home else ''} aria-label="Deel {name}"><h2>Deel {name}.</h2>{invitation}<div class="pn-share-buttons"><a href="{escape(whatsapp, quote=True)}" target="_blank" rel="noopener noreferrer" data-share-channel="whatsapp">WhatsApp</a><button type="button" data-share-action="copy">Kopieer link</button><button{button_id} type="button" data-share-action="native" hidden>Meer deelopties</button></div><p class="pn-share-status" role="status" aria-live="polite"></p><div class="pn-share-fallback" hidden><label for="{group}-share-url">Link om te delen</label><input id="{group}-share-url" value="{escape(url, quote=True)}" readonly></div></section><!-- social-share:{group}:end -->'''
+    return f'''<!-- social-share:{group}:start --><section class="pn-share{' pn-share-home' if home else ''}" data-share-type="{kind}"{' data-share-home="true"' if home else ''} aria-label="Deel {name}"><h2>Deel een beetje hoop.</h2>{invitation}<div class="pn-share-buttons"><a href="{escape(whatsapp, quote=True)}" target="_blank" rel="noopener noreferrer" data-share-channel="whatsapp">WhatsApp</a><a href="{escape(email, quote=True)}" data-share-channel="email">E-mail</a><button type="button" data-share-action="copy">Kopieer link</button><button{button_id} type="button" data-share-action="native" hidden>Meer deelopties</button></div><p class="pn-share-status" role="status" aria-live="polite"></p><div class="pn-share-fallback" hidden><label for="{group}-share-url">Link om te delen</label><input id="{group}-share-url" value="{escape(url, quote=True)}" readonly></div></section><!-- social-share:{group}:end -->'''
 
 
 def migrate_article_script(markup):

@@ -8,6 +8,22 @@
       if (block.dataset.shareBound) return;
       block.dataset.shareBound = 'true';
       const kind = block.dataset.shareType || ((window.sa_metadata || {}).page_type === 'special' ? 'special' : 'article');
+      // Upgrade existing static pages without changing the editorial content.
+      const heading = block.querySelector('h2');
+      if (heading) heading.textContent = 'Deel een beetje hoop.';
+      const invitation = block.querySelector('h2 + p');
+      if (invitation) invitation.textContent = kind === 'article' || kind === 'special'
+        ? 'Ken je iemand die blij zou worden van dit verhaal? Geef het door.'
+        : kind === 'newsletter' ? 'Ken je iemand die wel wat positief nieuws kan gebruiken? Deel de inschrijfpagina.' : 'Ken je iemand die wel wat positief nieuws kan gebruiken? Geef deze editie door.';
+      const buttons = block.querySelector('.pn-share-buttons, .article-share-buttons');
+      if (buttons && !buttons.querySelector('[data-share-channel="email"]')) {
+        const email = document.createElement('a');
+        email.dataset.shareChannel = 'email';
+        email.textContent = 'E-mail';
+        const whatsapp = buttons.querySelector('[data-share-channel="whatsapp"]');
+        if (whatsapp) whatsapp.after(email);
+        else buttons.prepend(email);
+      }
       const status = block.querySelector('[role="status"]');
       const fallback = block.querySelector('.article-copy-fallback, .pn-share-fallback');
       const native = block.querySelector('#article-native-share, [data-share-action="native"]');
@@ -44,6 +60,9 @@
         const d = data();
         block.querySelectorAll('[data-share-channel="whatsapp"]').forEach(function (link) {
           link.href = 'https://wa.me/?text=' + encodeURIComponent(d.title + '\n\n' + d.url);
+        });
+        block.querySelectorAll('[data-share-channel="email"]').forEach(function (link) {
+          link.href = 'mailto:?subject=' + encodeURIComponent(d.title) + '&body=' + encodeURIComponent(d.title + '\n\n' + d.url);
         });
       }
       links();
