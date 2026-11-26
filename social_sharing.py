@@ -159,7 +159,7 @@ def enhance(markup, path):
             markup = re.sub(r'(<section class="end">.*?)(</div></section>)', lambda m: m[1] + group + m[2], markup, count=1, flags=re.S)
     markup = re.sub(r'<!-- social-assets:start -->.*?<!-- social-assets:end -->', '', markup, flags=re.S)
     if kind in ('homepage', 'article', 'special', 'newsletter', 'edition'):
-        markup = markup.replace('</head>', '<!-- social-assets:start --><link rel="stylesheet" href="/social-sharing.css?v=1"><script src="/social-sharing.js?v=1" defer></script><!-- social-assets:end --></head>', 1)
+        markup = markup.replace('</head>', '<!-- social-assets:start --><link rel="stylesheet" href="/social-sharing.css?v=2"><script src="/social-sharing.js?v=1" defer></script><!-- social-assets:end --></head>', 1)
     return markup
 
 
