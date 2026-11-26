@@ -939,6 +939,7 @@ def render_article_page(item, date_value, related_records=None, image_data=None,
   <meta name="theme-color" content="#17382b">
   <script type="application/ld+json">{schema}</script>
   <style>{BASE_CSS}{article_css}{ARTICLE_GROWTH_CSS}</style>
+  <link rel="stylesheet" href="{SITE_THEME_HREF}">
 </head>
 <body>
   {header_html()}
@@ -1039,7 +1040,7 @@ def render_edition(data, date_value):
     return f"""<!DOCTYPE html><html lang="nl"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{canonical}">
-<meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:type" content="article"><meta property="og:url" content="{canonical}"><meta name="twitter:card" content="summary"><meta name="theme-color" content="#17382b"><link rel="manifest" href="/manifest.json?v=6"><link rel="apple-touch-icon" href="/sun-apple-touch-icon.png?v=6"><script type="application/ld+json">{schema}</script><style>{BASE_CSS}.banner{{margin-top:18px;padding:10px 13px;border:1px solid var(--line);color:var(--green-dark);font-size:.75rem}}.end{{padding:72px 0 64px;text-align:center}}.end h2{{max-width:620px;margin:auto;font-size:clamp(2.2rem,5vw,3.3rem);line-height:1;letter-spacing:-.045em}}.back{{display:inline-flex;margin-top:18px;padding:9px 15px;border:1px solid var(--line);border-radius:999px;text-decoration:none;font-size:.72rem;font-weight:700}}</style></head><body>
+<meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:type" content="article"><meta property="og:url" content="{canonical}"><meta name="twitter:card" content="summary"><meta name="theme-color" content="#17382b"><link rel="manifest" href="/manifest.json?v=6"><link rel="apple-touch-icon" href="/sun-apple-touch-icon.png?v=6"><script type="application/ld+json">{schema}</script><style>{BASE_CSS}.banner{{margin-top:18px;padding:10px 13px;border:1px solid var(--line);color:var(--green-dark);font-size:.75rem}}.end{{padding:72px 0 64px;text-align:center}}.end h2{{max-width:620px;margin:auto;font-size:clamp(2.2rem,5vw,3.3rem);line-height:1;letter-spacing:-.045em}}.back{{display:inline-flex;margin-top:18px;padding:9px 15px;border:1px solid var(--line);border-radius:999px;text-decoration:none;font-size:.72rem;font-weight:700}}</style><link rel="stylesheet" href="{SITE_THEME_HREF}"></head><body>
 {header_html()}
 <div class="shell banner">Je leest de editie van {esc(date_text)}. <a href="/">Ga naar de nieuwste editie →</a></div>
 <section class="hero"><div class="shell"><p class="date">{esc(date_text)}</p><h1>Dit gebeurt ook<b>.</b></h1><p class="lead">In een paar minuten weet je wat er goed gaat én wat je verder moet weten in deze editie. Zonder eindeloos scrollen.</p><div class="rule"></div></div></section>
@@ -2085,6 +2086,34 @@ def refresh_articles():
 
 
 
+def ensure_site_theme(markup):
+    """Keep one shared stylesheet on content pages, including legacy pages."""
+    if not re.search(r'<header\b[^>]*class="site-header"', markup):
+        return markup
+    pattern = r'<link\b(?=[^>]*\bhref=["\']/site-theme\.css(?:\?[^"\']*)?["\'])[^>]*>'
+    tag = f'<link rel="stylesheet" href="{SITE_THEME_HREF}">'
+    # Place the common theme after inline page styles, without duplicating it.
+    markup = re.sub(pattern, '', markup, flags=re.I)
+    markup, count = re.subn(r'</head\s*>', lambda m: tag + m.group(0), markup, count=1, flags=re.I)
+    if count != 1:
+        raise ValueError("Inhoudspagina mist afsluitende head-tag")
+    return markup
+
+
+def refresh_site_theme_links(root=Path(".")):
+    """Update or repair theme links without touching page contents or components."""
+    count = 0
+    for path in sorted(root.rglob("*.html")):
+        if ".git" in path.parts:
+            continue
+        original = path.read_text(encoding="utf-8")
+        updated = ensure_site_theme(original)
+        if updated != original:
+            path.write_text(updated, encoding="utf-8")
+            count += 1
+    return count
+
+
 def refresh_site_design():
     """Apply the shared design to both generated and existing pages without changing content."""
     topics = [("Mens", "mens"), ("Natuur & klimaat", "natuur-en-klimaat"), ("Gezondheid", "gezondheid"), ("Energie & innovatie", "energie-en-innovatie"), ("Wetenschap", "wetenschap"), ("Cultuur", "cultuur"), ("Economie", "economie"), ("Sport", "sport")]
@@ -2105,8 +2134,7 @@ def refresh_site_design():
             text = text.replace('</header>', '</header><!-- site-design:start -->' + ('' if has_menu else '<script>' + menu_script) + '<!-- site-design:end -->', 1)
         elif 'pn-home' not in re.search(r'<body\b[^>]*>', text).group():
             text = re.sub(r'<body\b([^>]*)>', lambda m: '<body' + m.group(1) + ' class="pn-home">', text, count=1)
-        text = re.sub(r'<link\b(?=[^>]*\bhref=["\']/site-theme\.css(?:\?[^"\']*)?["\'])[^>]*>', '', text, flags=re.I)
-        text = text.replace('</head>', f'<link rel="stylesheet" href="{SITE_THEME_HREF}"></head>', 1)
+        text = ensure_site_theme(text)
         path.write_text(text, encoding="utf-8")
     from newsletter_conversion import apply
     apply()
