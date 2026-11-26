@@ -4816,6 +4816,108 @@
       "check_frequency": "manual",
       "limitations": "De medailles zijn behaald in verschillende wedstrijdklassen.",
       "channels": []
+    },
+    {
+      "source_id": "munnikenhoeve-org",
+      "organization_id": "munnikenhoeve-org",
+      "name": "Munnikenhoeve",
+      "website": "https://www.munnikenhoeve.org/",
+      "category": "B",
+      "topics": [
+        "Mens"
+      ],
+      "geography": "nl",
+      "source_type": "original_publication",
+      "reliability_notes": "Bron voor dit verhaal; beperkingen staan in het editiedossier.",
+      "priority": "P2",
+      "check_frequency": "manual",
+      "limitations": "Zie het redactioneel dossier.",
+      "channels": []
+    },
+    {
+      "source_id": "wwf-nl",
+      "organization_id": "wwf-nl",
+      "name": "WWF",
+      "website": "https://www.wwf.nl/",
+      "category": "B",
+      "topics": [
+        "Natuur & klimaat"
+      ],
+      "geography": "nl",
+      "source_type": "original_publication",
+      "reliability_notes": "Bron voor dit verhaal; beperkingen staan in het editiedossier.",
+      "priority": "P2",
+      "check_frequency": "manual",
+      "limitations": "Zie het redactioneel dossier.",
+      "channels": []
+    },
+    {
+      "source_id": "worldbank-org",
+      "organization_id": "worldbank-org",
+      "name": "Wereldbankgroep",
+      "website": "https://www.worldbank.org/",
+      "category": "B",
+      "topics": [
+        "Gezondheid"
+      ],
+      "geography": "int",
+      "source_type": "original_publication",
+      "reliability_notes": "Bron voor dit verhaal; beperkingen staan in het editiedossier.",
+      "priority": "P2",
+      "check_frequency": "manual",
+      "limitations": "Zie het redactioneel dossier.",
+      "channels": []
+    },
+    {
+      "source_id": "apnews-com",
+      "organization_id": "apnews-com",
+      "name": "Associated Press",
+      "website": "https://apnews.com/",
+      "category": "B",
+      "topics": [
+        "Gezondheid"
+      ],
+      "geography": "int",
+      "source_type": "original_publication",
+      "reliability_notes": "Bron voor dit verhaal; beperkingen staan in het editiedossier.",
+      "priority": "P2",
+      "check_frequency": "manual",
+      "limitations": "Zie het redactioneel dossier.",
+      "channels": []
+    },
+    {
+      "source_id": "doc-govt-nz",
+      "organization_id": "doc-govt-nz",
+      "name": "Department of Conservation",
+      "website": "https://www.doc.govt.nz/",
+      "category": "B",
+      "topics": [
+        "Natuur & klimaat"
+      ],
+      "geography": "int",
+      "source_type": "original_publication",
+      "reliability_notes": "Bron voor dit verhaal; beperkingen staan in het editiedossier.",
+      "priority": "P2",
+      "check_frequency": "manual",
+      "limitations": "Zie het redactioneel dossier.",
+      "channels": []
+    },
+    {
+      "source_id": "pubmed-ncbi-nlm-nih-gov",
+      "organization_id": "pubmed-ncbi-nlm-nih-gov",
+      "name": "Journal of Clinical Oncology",
+      "website": "https://pubmed.ncbi.nlm.nih.gov/",
+      "category": "B",
+      "topics": [
+        "Gezondheid"
+      ],
+      "geography": "int",
+      "source_type": "original_publication",
+      "reliability_notes": "Bron voor dit verhaal; beperkingen staan in het editiedossier.",
+      "priority": "P2",
+      "check_frequency": "manual",
+      "limitations": "Zie het redactioneel dossier.",
+      "channels": []
     }
   ]
 }

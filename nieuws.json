@@ -1,307 +1,198 @@
 {
   "meta": {
-    "edition_date": "2026-11-23"
+    "edition_date": "2026-11-26"
   },
   "nl": [
     {
-      "article_slug": "texel-natuur-vergunning",
-      "title": "Op Texel herstelt kwetsbare natuur en ontstaat weer ruimte voor ondernemers",
-      "teaser": "Texelse ondernemers die al jaren wachten op duidelijkheid kunnen weer een natuurvergunning aanvragen. Volgens de provincie werken maatregelen in de duinen en is de stikstofuitstoot afgenomen.",
+      "article_slug": "nieuwbouwwoningen",
+      "title": "Nederland levert ruim 21 procent meer nieuwbouwwoningen op",
+      "teaser": "In het derde kwartaal van 2026 werden 18.100 nieuwbouwwoningen opgeleverd. Dat zijn er volgens het CBS 3.200 meer dan in hetzelfde kwartaal vorig jaar, een stijging van ruim 21 procent. Het gaat om woningen die daadwerkelijk zijn gebouwd. Voor 16.600 andere nieuwbouwwoningen werd in datzelfde kwartaal een vergunning afgegeven. Die cijfers vertellen elk iets anders: wat er al staat en wat er mogelijk nog bij komt.",
       "article_body": [
-        "Jarenlang konden sommige bedrijven volstaan met een melding onder het Programma Aanpak Stikstof. Nadat de Raad van State in 2019 een streep zette door die aanpak, raakten deze zogenoemde PAS-melders hun geldige toestemming kwijt. Voor Texelse bedrijven in die situatie komt er nu een route naar een vergunning.",
-        {
-          "h2": "Wat er in de duinen veranderde"
-        },
-        "De provincie liet onderzoeken hoe de natuur in Duinen en Lage Land Texel ervoor staat. De analyse is extern getoetst. Bestaande beheermaatregelen hebben volgens de onderzoekers een positief effect op de kwetsbare gebieden. De provincie noemt onder meer begrazing, maaien en het herstellen van open zand. Ook blijft er werk aan de winkel tegen verdroging.",
-        "De uitkomst maakt het onder voorwaarden mogelijk om stikstofruimte te gebruiken voor een vergunning. Een activiteit kan bijvoorbeeld extra uitstoot veroorzaken, terwijl een ander bedrijf uitstoot terugbrengt. Die ruimte mag alleen worden benut als ze niet nodig is om de natuur te beschermen. De stikstofneerslag mag niet oplopen en het natuurherstel moet worden voortgezet.",
-        {
-          "h2": "Een aanvraag per bedrijf"
-        },
-        "De provincie gaat de komende weken met de ondernemers aan de slag. Per aanvraag wordt bekeken hoeveel ruimte beschikbaar is en of ook omliggende gebieden geraakt worden. Voor bedrijven die lang in onzekerheid zaten, is het vooruitzicht dat hun aanvraag weer inhoudelijk beoordeeld kan worden de stap vooruit."
+        "In het derde kwartaal van 2026 werden 18.100 nieuwbouwwoningen opgeleverd. Dat zijn er volgens het CBS 3.200 meer dan in hetzelfde kwartaal vorig jaar, een stijging van ruim 21 procent. Het gaat om woningen die daadwerkelijk zijn gebouwd. Voor 16.600 andere nieuwbouwwoningen werd in datzelfde kwartaal een vergunning afgegeven. Die cijfers vertellen elk iets anders: wat er al staat en wat er mogelijk nog bij komt.",
+        "In hetzelfde kwartaal van 2025 ging het om ongeveer 14.900 nieuwbouwwoningen. De opleveringen lagen ook boven die van het tweede kwartaal van 2026, toen er ongeveer 16.500 nieuwbouwwoningen bijkwamen. De stijging van ruim 21 procent is berekend met de afgeronde aantallen van het CBS. De cijfers betreffen nieuwbouw en geven op zichzelf geen uitsluitsel over de betaalbaarheid van de woningen."
       ],
-      "url": "https://www.noord-holland.nl/Actueel/Archief/2026/November_2026/PAS_melders_op_Texel_kunnen_natuurvergunning_aanvragen",
-      "primary_url": "https://www.noord-holland.nl/Actueel/Archief/2026/November_2026/PAS_melders_op_Texel_kunnen_natuurvergunning_aanvragen",
-      "source": "Provincie Noord-Holland",
+      "url": "https://www.cbs.nl/nl-nl/nieuws/2026/47/meer-nieuwbouwwoningen-opgeleverd-in-derde-kwartaal",
+      "source": "CBS",
+      "category": "Economie",
+      "image_query": "preview:nieuwbouwwoningen",
+      "image_alt": "Illustratief archiefbeeld bij nederland levert ruim 21 procent meer nieuwbouwwoningen op"
+    },
+    {
+      "article_slug": "munnikenhoeve",
+      "title": "De Munnikenhoeve maakt plek voor zwaluwen, vleermuizen en egels",
+      "teaser": "Op een boerenerf in Zwijndrecht kunnen buurtgenoten zelf een dierenverblijf uitkiezen om te schenken. Volgens initiatiefnemer Len van der Hof waren op 25 november 10 van de 26 verblijven geschonken. Daar zitten twee nestplekken voor boerenzwaluwen, een vleermuiskast en een egelhuis bij. Achter de boerderij is ook een tuin gepland waar mensen kunnen wandelen en bewegen.",
+      "article_body": [
+        "Op een boerenerf in Zwijndrecht kunnen buurtgenoten zelf een dierenverblijf uitkiezen om te schenken. Volgens initiatiefnemer Len van der Hof waren op 25 november 10 van de 26 verblijven geschonken. Daar zitten twee nestplekken voor boerenzwaluwen, een vleermuiskast en een egelhuis bij. Achter de boerderij is ook een tuin gepland waar mensen kunnen wandelen en bewegen.",
+        "Bij de actie Een plek voor dieren kiezen deelnemers zelf welk verblijf ze willen schenken. Ze mogen ook een naam voor het bordje bedenken. De verbouwing van de boerderij en de aanleg van de tuin verlopen in fasen. De tien geschonken verblijven zijn de tussenstand die Van der Hof op 25 november doorgaf."
+      ],
+      "url": "https://www.munnikenhoeve.org/het-plan",
+      "source": "Munnikenhoeve",
+      "category": "Mens",
+      "reader_tip": true,
+      "image_query": "preview:munnikenhoeve",
+      "image_alt": "Pimpelmees bij een houten nestkast, illustratief beeld"
+    },
+    {
+      "article_slug": "mbo-zorg-welzijn",
+      "title": "Meer mbo’ers vinden direct werk na een diploma in zorg en welzijn",
+      "teaser": "Ruim de helft van de mbo-bol-gediplomeerden in zorg en welzijn ging na het diploma in 2024/’25 direct aan het werk als werknemer. In 2010/’11 was dat 43 procent. De grootste groei zat bij banen buiten de sector zorg en welzijn. Het aandeel dat direct binnen de sector werkte steeg van 29 naar 31 procent.",
+      "article_body": [
+        "Ruim de helft van de mbo-bol-gediplomeerden in zorg en welzijn ging na het diploma in 2024/’25 direct aan het werk als werknemer. In 2010/’11 was dat 43 procent. De grootste groei zat bij banen buiten de sector zorg en welzijn. Het aandeel dat direct binnen de sector werkte steeg van 29 naar 31 procent.",
+        "Direct na het diploma studeerde 41 procent door, tegen 50 procent in 2010/’11. De groepen in het CBS-onderzoek zeggen iets over de eerste stap na het behalen van het diploma. Wie doorstudeert, kan later alsnog in de sector terechtkomen."
+      ],
+      "url": "https://www.cbs.nl/nl-nl/nieuws/2026/48/meer-mbo-bol-gediplomeerden-zorg-en-welzijn-direct-een-baan-na-diploma",
+      "source": "CBS",
+      "category": "Gezondheid",
+      "image_query": "preview:mbo-zorg-welzijn",
+      "image_alt": "Illustratief archiefbeeld bij meer mbo’ers vinden direct werk na een diploma in zorg en welzijn"
+    },
+    {
+      "article_slug": "limburg-aanplant",
+      "title": "Vrijwilligers planten 8.500 bomen en struiken in Zuid-Limburg",
+      "teaser": "Met schoppen trokken vrijwilligers op 21 november het landschap rond Epen en Mechelen in. Samen plantten ze volgens WWF 8.500 bomen en struiken. De aanplant moet helpen regenwater langer vast te houden. Hoe groot dat effect lokaal wordt, zal in de praktijk moeten blijken.",
+      "article_body": [
+        "Met schoppen trokken vrijwilligers op 21 november het landschap rond Epen en Mechelen in. Samen plantten ze volgens WWF 8.500 bomen en struiken. De aanplant moet helpen regenwater langer vast te houden. Hoe groot dat effect lokaal wordt, zal in de praktijk moeten blijken.",
+        "Naast het planten werden tweehonderd pakketten met inheemse planten uitgedeeld, zodat bewoners ook hun eigen tuin of straat kunnen vergroenen. Het Rode Kruis sprak tijdens de dag met bewoners over voorbereiding op droogte en overstromingen."
+      ],
+      "url": "https://www.wwf.nl/wat-we-doen/actueel/nieuws/natuurkracht-tegen-droogte-en-wateroverlast",
+      "source": "WWF",
       "category": "Natuur & klimaat",
-      "published": "2026-11-18",
-      "event_date": "2026-11-18",
-      "source_id": "provincie-noord-holland",
-      "image_query": "edition-image:texel-natuur-vergunning",
-      "image_alt": "Uitzicht over natuurgebied De Slufter op Texel, archiefbeeld",
-      "image_page_url": "https://commons.wikimedia.org/wiki/File:Texel_De_Slufter.jpg"
+      "image_query": "preview:limburg-aanplant",
+      "image_alt": "Illustratief archiefbeeld bij vrijwilligers planten 8.500 bomen en struiken in zuid-limburg"
     },
     {
-      "article_slug": "bewust-vaderschap",
-      "title": "Deze vaders willen het ouderschap niet langer alleen uitzoeken",
-      "teaser": "Bij Bewust P.A.P.A. maken vaders tijd om ervaringen uit te wisselen. Op 28 november is er volgens mede-initiatiefnemer Sander Nieland weer een bijeenkomst.",
+      "article_slug": "adrie-ligplaats",
+      "title": "Adrie krijgt na zijn oproep hulp bij het vinden van een ligplaats",
+      "teaser": "De Alkmaarse glazenwasser Adrie Boon dreigde zijn woonplek kwijt te raken doordat hij geen ligplaats voor zijn boot kon vinden. Na zijn oproep meldde zich al binnen enkele uren iemand die hem een plek voor de winter aanbood. Ook anderen boden hulp aan. Een vaste ligplaats was bij verschijnen van het bericht nog onzeker.",
       "article_body": [
-        "Sander Nieland, Donny Titawano en Matthijn Aerts begonnen Bewust P.A.P.A. om vaders ruimte te geven stil te staan bij hoe het met ze gaat.",
-        "Hun vertrekpunt heet het vaderwiel. Het is een korte vragenlijst over tien gebieden, waaronder ouderschap, maar ook vriendschap, gezondheid, werk en plezier. De uitkomst is een overzicht waarmee je kunt zien welke gebieden aandacht krijgen en welke al een tijd weinig ruimte hebben. Nieland schrijft dat zijn eigen antwoorden hem op een paar punten verrasten.",
-        "De initiatiefnemers gebruiken het wiel ook als aanleiding om met andere vaders te praten. Op 28 november komen ze opnieuw bij elkaar. Het onderwerp hoeft dan niet beperkt te blijven tot de vraag hoe je iets met je kinderen aanpakt. Ook hoe je zelf je tijd verdeelt en waar je energie vandaan haalt, kan op tafel komen. Een geplande ontmoeting is daarmee een concreet vervolg op de vragenlijst."
+        "De Alkmaarse glazenwasser Adrie Boon dreigde zijn woonplek kwijt te raken doordat hij geen ligplaats voor zijn boot kon vinden. Na zijn oproep meldde zich al binnen enkele uren iemand die hem een plek voor de winter aanbood. Ook anderen boden hulp aan. Een vaste ligplaats was bij verschijnen van het bericht nog onzeker.",
+        "De oproep leverde verschillende reacties op. Het eerste aanbod betrof een winterplek bij de Kippenbrug. Daarmee kreeg Adrie een concreet alternatief om te onderzoeken terwijl hij verder zocht naar een vaste plek voor zijn boot."
       ],
-      "url": "https://nl.linkedin.com/posts/sandernieland_bewust-papa-scan-hoe-rond-loopt-jouw-activity-7514606772121288704-gzRj",
-      "primary_url": "https://nl.linkedin.com/posts/sandernieland_bewustpapa-vaderschap-werkengezin-activity-7526535573482770432-4zSb",
-      "source": "Sander Nieland · Bewust P.A.P.A.",
+      "url": "https://www.nhnieuws.nl/nieuws/365777/bijna-dakloze-adrie-krijgt-plek-aangeboden-goede-hoop-dat-ze-mij-kunnen-helpen",
+      "source": "NH Nieuws",
       "category": "Mens",
-      "published": "2026-11-12",
-      "event_date": "2026-11-12",
-      "source_id": "bewust-papa",
-      "image_query": "edition-image:bewust-vaderschap",
-      "image_alt": "Illustratief beeld van een vader die buiten de hand van zijn kind vasthoudt. Beeld: Ravi Kant via Pexels (Pexels License).",
-      "image_page_url": "https://www.pexels.com/photo/parent-holding-a-childs-hands-and-walking-on-grass-14848350/"
+      "image_query": "preview:adrie-ligplaats",
+      "image_alt": "Woonboot op de Prinsengracht, illustratief beeld"
     },
     {
-      "article_slug": "igor-energiehulp-dordrecht",
-      "title": "Igor helpt Dordtenaren gratis aan een warmer huis",
-      "teaser": "Met een bakfiets vol materiaal trekt Igor door Dordrecht. Bij bewoners thuis pakt hij tocht en onnodig energieverbruik aan met kleine ingrepen die meteen uitvoerbaar zijn.",
+      "article_slug": "kampina-insecten",
+      "title": "Drie zeldzame insectensoorten ontdekt op de Kampina",
+      "teaser": "Een boswespbij, een harsgalmuurwesp en een zadelgroefbij. Onderzoekers vonden ze alle drie in het Brabantse natuurgebied Kampina. De vondsten laten zien dat deze Rode Lijst-soorten er voorkomen en geven beheerders nieuwe informatie over welke insecten het gebied weten te vinden.",
       "article_body": [
-        "Bij een bezoek heeft Igor ongeveer twee uur om te bekijken wat er in een woning beter kan. Volgens de Rijnmond-reportage, samengevat door Headliner, vervangt hij bijvoorbeeld oude lampen door leds. Hij kan ook kieren dichten, folie achter radiatoren aanbrengen of een waterbesparende douchekop plaatsen. De hulp kost de bewoners niets.",
-        {
-          "h2": "Wat twee uur kan opleveren"
-        },
-        "Een kier aan de rand van een raam of deur valt vooral op zodra het buiten koud wordt. Een tochtstrip kan dan direct merkbaar zijn. Ook het gesprek over hoe een huis wordt verwarmd hoort bij zijn werk. In sommige huizen staan radiatoren aan in kamers waar op dat moment niemand zit. Juist dat soort dingen kan voor bewoners lastig zijn om zelf op te merken.",
-        "Tijdens een bezoek aan een oudere tussenwoning kon Igor de tocht in een kinderkamer verminderen. De woning had nog enkel glas en de kozijnen waren aan vervanging toe. Voor zulke grotere klussen verwijst de samenvatting naar de Dordtse isolatieaanpak. Igors werk is concreet te zien in wat hij tijdens een bezoek kan verbeteren. De uiteindelijke besparing verschilt per woning en per huishouden."
+        "Een boswespbij, een harsgalmuurwesp en een zadelgroefbij. Onderzoekers vonden ze alle drie in het Brabantse natuurgebied Kampina. De vondsten laten zien dat deze Rode Lijst-soorten er voorkomen en geven beheerders nieuwe informatie over welke insecten het gebied weten te vinden.",
+        "Natuurmonumenten meldde de waarnemingen op 25 november. De drie vondsten zijn een momentopname. Voor een uitspraak over aantallen of de ontwikkeling van de populaties zijn meer waarnemingen over langere tijd nodig."
       ],
-      "url": "https://rotterdam.headliner.nl/item/igor-helpt-bewoners-gratis-aan-warmer-huis-en-lagere-rekening-rijnmond-120550",
-      "primary_url": "https://energiehulp.nl/dordrecht/",
-      "source": "Rijnmond via Headliner",
-      "category": "Energie & innovatie",
-      "published": "2026-11-22",
-      "event_date": "2026-11-22",
-      "source_id": "energiehulp-dordrecht",
-      "image_query": "edition-image:igor-energiehulp-dordrecht",
-      "image_alt": "Thermostaatknop op een radiator, illustratief beeld. Beeld: Coyau via Wikimedia Commons (CC BY-SA 3.0).",
-      "image_page_url": "https://commons.wikimedia.org/wiki/File:Vanne_thermostatique_thermador_08.jpg"
-    },
-    {
-      "article_slug": "lelystad-sinterklaas-studenten",
-      "title": "Studenten helpen Sinterklaasfeest mogelijk maken voor kinderen uit gezinnen met een kleine beurs",
-      "teaser": "In Lelystad verandert een leslokaal in een werkplaats voor het Sinterklaasfeest. Studenten van Landstede knutselen de versieringen voor een viering in het Agoratheater.",
-      "article_body": [
-        "Papier, scharen en lege wc-rolletjes liggen op tafel. Studenten maken er vlaggetjes, slingers en pietenhoeden mee. Die gaan op 28 november mee naar het Agoratheater, waar de Stichting Sint voor elk kind Lelystad een feest organiseert voor kinderen uit gezinnen met weinig te besteden.",
-        "De kinderen krijgen een cadeau en kunnen samen een Sinterklaasvoorstelling bekijken. Voor de studenten sluit het project aan bij hun opleiding. Ze gaan later in de pedagogische sector werken, waar ze kinderen tegenkomen die thuis verschillende mogelijkheden hebben. Het maken van de versieringen is een manier om daar nu al iets mee te doen.",
-        {
-          "h2": "Het feest gaat door"
-        },
-        "De stichting moest dit jaar verder zonder haar voorzitter Janneke Sparreboom, die in februari overleed. Zij bracht veel mensen en organisaties bij elkaar. De vrijwilligers vertellen aan Omroep Flevoland dat het tijd kostte om het werk zonder haar weer op te pakken. Inmiddels zijn de voorbereidingen bijna rond, met hulp van de studenten. Een middag in het theater is voor de stichting even belangrijk als het cadeau dat de kinderen mee naar huis krijgen."
-      ],
-      "url": "https://preview.omroepflevoland.nl/nieuws/532023/%27geen-enkel-kind-mag-buiten-spel-staan%27-studenten-helpen-sinterklaasfeest-mogelijk-maken",
-      "primary_url": "https://preview.omroepflevoland.nl/nieuws/532023/%27geen-enkel-kind-mag-buiten-spel-staan%27-studenten-helpen-sinterklaasfeest-mogelijk-maken",
-      "source": "Omroep Flevoland",
-      "category": "Mens",
-      "published": "2026-11-21",
-      "event_date": "2026-11-21",
-      "source_id": "omroep-flevoland",
-      "image_query": "edition-image:lelystad-sinterklaas-studenten",
-      "image_alt": "Sinterklaasintocht uit 2019, archiefbeeld. Beeld: Gijs Franken via Wikimedia Commons (CC BY-SA 4.0).",
-      "image_page_url": "https://commons.wikimedia.org/wiki/File:Intocht_Sinterklaas_in_2019.jpg"
-    },
-    {
-      "article_slug": "veenmosbundelzwam-naardermeer",
-      "title": "Zeldzame paddenstoel na ruim 70 jaar teruggevonden in het Naardermeer",
-      "teaser": "Vrijwilligers en experts vonden in het Naardermeer de veenmosbundelzwam terug. De laatste bekende waarneming op die plek dateerde uit 1953.",
-      "article_body": [
-        "De vondst kwam van de paddenstoelenwerkgroep ’t Gooi, die samen met experts naar paddenstoelen keek in het Naardermeer. De veenmosbundelzwam hoort volgens Natuurmonumenten bij de meest bedreigde paddenstoelen van Nederland. De ontdekking voegt daarmee een nieuwe waarneming toe aan de geschiedenis van een plek waar hij al meer dan zeventig jaar niet meer was gezien.",
-        "Wie een natuurgebied inventariseert, kijkt ook naar soorten die bij een gewoon bezoek gemakkelijk over het hoofd worden gezien. Voor een zeldzame paddenstoel maakt die aandacht verschil: één goed herkende vondst kan het actuele beeld van de verspreiding veranderen. Hier is nu weer een plek bekend waar de soort is aangetroffen.",
-        "Uit de waarneming valt niet af te leiden hoeveel exemplaren er in het Naardermeer voorkomen of wat er in de tussenliggende jaren met de soort is gebeurd. Het concrete nieuws is dat de paddenstoel er nu opnieuw is vastgesteld. Daarmee hebben beheerders en vrijwilligers een nieuwe waarneming om in de toekomst op voort te bouwen."
-      ],
-      "url": "https://www.natuurmonumenten.nl/natuurgebieden/naardermeer/nieuws/zeer-zeldzame-paddenstoel-na-ruim-70-jaar-teruggevonden-in-het",
-      "primary_url": "https://www.natuurmonumenten.nl/natuurgebieden/naardermeer/nieuws/zeer-zeldzame-paddenstoel-na-ruim-70-jaar-teruggevonden-in-het",
+      "url": "https://www.natuurmonumenten.nl/natuurgebieden/kampina/nieuws/zeldzame-insectensoorten-ontdekt-in-natuurgebied-kampina",
       "source": "Natuurmonumenten",
       "category": "Natuur & klimaat",
-      "published": "2026-11-19",
-      "event_date": "2026-11-19",
-      "source_id": "natuurmonumenten",
-      "image_query": "edition-image:veenmosbundelzwam-naardermeer",
-      "image_alt": "Uitzicht over het Naardermeer vanaf Wijde Blik, archiefbeeld. Beeld: HenkvD via Wikimedia Commons (CC BY-SA 4.0).",
-      "image_page_url": "https://commons.wikimedia.org/wiki/File:Naardermeer_Wijde_Blik.jpg"
-    },
-    {
-      "article_slug": "angel-daleman-zes-zeges",
-      "title": "Angel Daleman wint zes van de zes wereldbekerraces in twee weekenden",
-      "teaser": "Zes starts, zes overwinningen. De negentienjarige Angel Daleman beleeft een uitzonderlijke opening van het wereldbekerseizoen.",
-      "article_body": [
-        "Wie Daleman zag starten in de afgelopen twee wereldbekerweekenden, zag haar telkens als eerste eindigen. De Nederlandse schaatsster kwam zes keer in actie en won zes keer. Die reeks krijgt extra betekenis als je kijkt waar ze een jaar geleden stond: toen was haar vijfde plaats op de 500 meter in Calgary volgens de NOS haar beste internationale prestatie van het seizoen.",
-        "In februari miste Daleman de Olympische Spelen. Nu rijdt ze een serie waarin haar resultaat over twee weekenden hetzelfde bleef: telkens goud. Haar trainer benadrukte bij de NOS vooral hoe bijzonder de combinatie van zes starts en zes zeges is. Een sterk optreden op één dag kan in een sportweekend snel worden ingehaald door de volgende uitslag. In deze reeks hoefde Daleman nergens genoegen te nemen met een lagere plek.",
-        "De wereldbekers gaan verder. Voor deze twee weekenden staat het resultaat vast. De schaatsster die vorig seizoen in Calgary vijfde werd, won nu iedere race waarvoor ze aan de start kwam."
-      ],
-      "url": "https://nos.nl/artikel/2640572-goud-goud-en-nog-eens-goud-voor-daleman-schaatstalent-is-volwassener-geworden",
-      "primary_url": "https://nos.nl/artikel/2640572-goud-goud-en-nog-eens-goud-voor-daleman-schaatstalent-is-volwassener-geworden",
-      "source": "NOS",
-      "category": "Sport",
-      "published": "2026-11-22",
-      "event_date": "2026-11-22",
-      "source_id": "nos",
-      "image_query": "edition-image:angel-daleman-zes-zeges",
-      "image_alt": "Angel Daleman in 2022, archiefbeeld. Beeld: Hanneke Mennens - Focus by Hanneke via Wikimedia Commons (CC BY-SA 4.0).",
-      "image_page_url": "https://commons.wikimedia.org/wiki/File:Angel_Daleman_%28NED%29_2022.jpeg"
+      "image_query": "preview:kampina-insecten",
+      "image_alt": "Ven op de Kampina"
     }
   ],
   "int": [
     {
-      "article_slug": "voyager-een-lichtdag",
-      "title": "Voyager 1 is één lichtdag van de aarde",
-      "teaser": "Een radiosignaal van Voyager 1 heeft ongeveer 24 uur nodig om de aarde te bereiken. De sonde is het eerste door mensen gemaakte object dat zo ver van huis is.",
+      "article_slug": "betere-waterbron",
+      "title": "Bijna 18 miljoen mensen krijgen toegang tot een betere waterbron",
+      "teaser": "Waterprojecten met financiering van de Wereldbankgroep gaven in boekjaar 2026 bijna 18 miljoen mensen toegang tot een verbeterde waterbron. Voor 6,3 miljoen van hen voldeden de voorzieningen ook aan de strengere criteria voor veilig beheerd water. Projecten op het platteland in de Indiase deelstaat Karnataka en in Tanzania droegen samen bijna acht miljoen mensen bij aan het resultaat.",
       "article_body": [
-        "NASA berekende dat Voyager 1 op 18 november een afstand van ongeveer 25,9 miljard kilometer tot de aarde bereikte. Licht doet 24 uur over die afstand. En doordat een radiosignaal met dezelfde snelheid reist, merkt ook het team op aarde wat die afstand betekent: een signaal is een dag onderweg voor het binnenkomt.",
-        {
-          "h2": "Een vraag en een antwoord kosten twee dagen"
-        },
-        "Stuurt een technicus op aarde een opdracht, dan duurt het ongeveer een dag voordat die bij de sonde aankomt. Een antwoord doet er nog eens ongeveer een dag over. Alleen de reistijd van de twee signalen is dus al bijna 48 uur.",
-        "Voyager 1 vertrok in 1977. Inmiddels opereert de sonde buiten de heliosfeer, de omgeving rond de zon die door de zonnewind wordt gevormd. Zijn tweeling Voyager 2 bevindt zich daar eveneens buiten. Daarmee zijn de twee sondes volgens NASA de enige ruimtevaartuigen die in dat gebied metingen hebben gedaan.",
-        "De lichtdag is een afstandsgrens, met de aarde als meetpunt. Een verre afstand wordt zo concreet: tussen het sturen van een bericht en het horen van een reactie passen ongeveer twee volledige dagen."
+        "Waterprojecten met financiering van de Wereldbankgroep gaven in boekjaar 2026 bijna 18 miljoen mensen toegang tot een verbeterde waterbron. Voor 6,3 miljoen van hen voldeden de voorzieningen ook aan de strengere criteria voor veilig beheerd water. Projecten op het platteland in de Indiase deelstaat Karnataka en in Tanzania droegen samen bijna acht miljoen mensen bij aan het resultaat.",
+        "De Wereldbankgroep telt de resultaten van waterprojecten in haar boekjaar 2026 op. Het bredere cijfer van bijna 18 miljoen beslaat verbeterde waterbronnen. De 6,3 miljoen mensen met veilig beheerde voorzieningen vormen daar een deel van. In hetzelfde rapport meldt de organisatie ook verbeterde water- en sanitaire voorzieningen bij ruim 1.800 scholen en zorginstellingen."
       ],
-      "url": "https://www.nasa.gov/news-release/nasas-voyager-1-makes-history-reaching-one-light-day-from-earth/",
-      "primary_url": "https://www.nasa.gov/news-release/nasas-voyager-1-makes-history-reaching-one-light-day-from-earth/",
-      "source": "NASA",
-      "category": "Wetenschap",
-      "published": "2026-11-19",
-      "event_date": "2026-11-18",
-      "source_id": "nasa",
-      "image_query": "edition-image:voyager-een-lichtdag",
-      "image_alt": "Illustratie van de ruimtesonde Voyager 1",
-      "image_page_url": "https://www.nasa.gov/news-release/nasas-voyager-1-makes-history-reaching-one-light-day-from-earth/"
-    },
-    {
-      "article_slug": "essex-nachtvlinder",
-      "title": "Zeldzame nachtvlinder houdt op eigen kracht stand in Engels natuurgebied",
-      "teaser": "In het Engelse Abbotts Hall werd een bedreigde nachtvlinder dit jaar 111 keer waargenomen. Lokale natuurbeschermers werken er al twee decennia aan de terugkeer van de soort.",
-      "article_body": [
-        "De Fisher’s estuarine moth leeft in laaggelegen kustgrasland. Hij is afhankelijk van een waardplant die in het Engels hog’s fennel heet. Kusterosie en stijgend zeewater maken juist die combinatie van plant en leefgebied kwetsbaar.",
-        "Essex Wildlife Trust begon in 2005 in Abbotts Hall met het aanplanten van de waardplant. Vijf jaar later introduceerde de organisatie er eitjes van de nachtvlinder. De telling kwam in 2025 voor het eerst boven de honderd uit. Dit jaar volgde opnieuw een record, met 111 waarnemingen bij het reservaat in Great Wigborough.",
-        "Volgens de natuurorganisatie houdt de populatie inmiddels zichzelf in stand. Het aantal verwijst naar waarnemingen op deze locatie. Het zegt niet hoeveel nachtvlinders er in heel Essex voorkomen. De natuurorganisatie houdt ook andere plekken langs de kust in de gaten en heeft de waardplant bij verschillende reservaten aangeplant. Het lokale resultaat laat zien wat het kan opleveren als natuurbeheer eerst de omstandigheden op orde brengt en de soort daarna jarenlang volgt."
-      ],
-      "url": "https://www.essexwt.org.uk/news/record-survey-season-rare-moth",
-      "primary_url": "https://www.essexwt.org.uk/news/record-survey-season-rare-moth",
-      "source": "Essex Wildlife Trust",
-      "category": "Natuur & klimaat",
-      "published": "2026-11-19",
-      "event_date": "2026-11-19",
-      "source_id": "essex-wildlife-trust",
-      "image_query": "edition-image:essex-nachtvlinder",
-      "image_alt": "Peucedanum officinale, de waardplant van de zeldzame nachtvlinder. Beeld: Radio Tonreg via Wikimedia Commons (CC BY 2.0).",
-      "image_page_url": "https://commons.wikimedia.org/wiki/File:Peucedanum_officinale_%287977286392%29.jpg"
-    },
-    {
-      "article_slug": "vn-chemicalien-afspraken",
-      "title": "Landen spreken af beter te volgen wat er gebeurt met chemicaliën en afval",
-      "teaser": "Landen en organisaties spraken in Genève af hoe ze voortgang rond chemicaliën en afval beter kunnen meten. Ook blijft een internationaal fonds langer beschikbaar.",
-      "article_body": [
-        "Ruim drie jaar na het vaststellen van het internationale raamwerk stond in Genève de uitvoering centraal. De deelnemers namen voorlopig een eerste reeks indicatoren aan. Daarmee kunnen landen gaan volgen hoe ze vorderen met een deel van hun afspraken. Voor de gevolgen van chemicaliën en afval voor gezondheid en milieu moet het meetwerk nog verder worden ontwikkeld.",
-        {
-          "h2": "Van afspraken naar uitvoering"
-        },
-        "De conferentie nam ook twee uitvoeringsprogramma’s aan. Eén ondersteunt het opzetten van wetgeving en instanties die toezicht houden. Het andere richt zich op samenwerking tussen bedrijven en andere partijen in productieketens. Onder meer bouw, elektronica, zorg en textiel komen als eerste aan bod.",
-        "Een fonds dat landen met beperkte middelen kan ondersteunen, mag tot eind 2035 geld uitkeren. De meeste doelen van het raamwerk hebben 2030 als richtjaar. De besluiten laten zien welke instrumenten er nu voor de uitvoering liggen. Of die leiden tot minder schade, moet blijken uit metingen en uit wat landen en bedrijven vervolgens doen."
-      ],
-      "url": "https://www.unep.org/en/news-and-stories/press-release/global-chemicals-conference-adopts-measures-track-progress",
-      "primary_url": "https://www.unep.org/en/news-and-stories/press-release/global-chemicals-conference-adopts-measures-track-progress",
-      "source": "UNEP",
-      "category": "Natuur & klimaat",
-      "published": "2026-11-21",
-      "event_date": "2026-11-20",
-      "source_id": "unep",
-      "image_query": "edition-image:vn-chemicalien-afspraken",
-      "image_alt": "Chemicaliëncontainer, archiefbeeld ter illustratie. Beeld: NASA / National Archives and Records Administration via Wikimedia Commons (Publiek domein).",
-      "image_page_url": "https://commons.wikimedia.org/wiki/File:CHEMICAL_CONTAINER_-_NARA_-_17425368.jpg"
-    },
-    {
-      "article_slug": "gyaros-zeewierproef",
-      "title": "Jong zeewier groeit op proeftegels bij Grieks eiland",
-      "teaser": "Onderzoekers brachten in het lab opgekweekt zeewier naar een rif bij Gyaros. Een proef van 22 maanden laat zien waar herstel van deze onderwaterbossen kansrijk is en waar het nog stokt.",
-      "article_body": [
-        "In juni 2024 maakten onderzoekers kleine tegels vast op een ondiep rotsrif bij Gyaros. Op de tegels groeide jong bruinwier van de soort Ericaria amentacea. Ze hadden het wier eerst in het laboratorium opgekweekt. Van de 521 tegels konden er 518 worden geplaatst. Bij vervolgbezoeken maten de onderzoekers hoeveel tegels bleven liggen, hoeveel van hun oppervlak met wier bedekt was en hoe lang de planten werden.",
-        {
-          "h2": "Groei is één onderdeel van herstel"
-        },
-        "Op de locatie troffen de onderzoekers na 22 maanden nog wier aan en op verschillende meetmomenten zagen ze groei. Tegelijkertijd gingen tegels verloren en vonden de onderzoekers geen met het blote oog zichtbare voortplantingsstructuren. De proef laat dus zien dat opgekweekt wier onder deze omstandigheden op een rif kan blijven groeien. Om vast te stellen of daar een bos ontstaat dat zichzelf in stand houdt, is vervolgonderzoek nodig.",
-        "Het onderzoek maakt ook duidelijk waar een volgend project preciezer kan meten. Zo werden de tegels niet afzonderlijk gemerkt. Daardoor was niet te volgen hoe de begroeiing van elke tegel door de tijd veranderde. Een vervolg kan die groei per tegel in kaart brengen."
-      ],
-      "url": "https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2026.1953179/full",
-      "primary_url": "https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2026.1953179/full",
-      "source": "Frontiers in Marine Science",
-      "category": "Natuur & klimaat",
-      "published": "2026-11-18",
-      "event_date": "2026-11-18",
-      "source_id": "frontiers-marine-science",
-      "image_query": "edition-image:gyaros-zeewierproef",
-      "image_alt": "Tegels met opgekweekt zeewier bij Gyaros, gefotografeerd tijdens de onderzoeksperiode. Beeld: G. Oikonomidis en P. Lardi, figuur 3 uit Lardi e.a. (2026) via Frontiers in Marine Science (CC BY 4.0).",
-      "image_page_url": "https://doi.org/10.3389/fmars.2026.1953179"
-    },
-    {
-      "article_slug": "finland-bewegen-70-plussers",
-      "title": "Een jaar trainen helpt veel 70-plussers fysiek vooruit",
-      "teaser": "In een Finse studie gingen veel 70-plussers op meerdere fysieke onderdelen vooruit na een jaar trainen. De onderzoekers zagen duidelijke verschillen tussen deelnemers.",
-      "article_body": [
-        "Onderzoekers van de Universiteit van Jyväskylä volgden 314 mensen boven de zeventig die deelnamen aan een trainingsprogramma van twaalf maanden. Ze keken naar verschillende uitkomsten, waaronder spierkracht, loopsnelheid en het vermogen om langere tijd te lopen. Zo konden ze zien op welke gebieden iemand vooruitging.",
-        "Over de hele groep namen kracht, loopsnelheid en loopuithoudingsvermogen toe. De spiermassa veranderde gemiddeld weinig. Bijna de helft boekte volgens de onderzoekers betekenisvolle vooruitgang op meerdere fysieke onderdelen. Andere deelnemers gingen op een enkel onderdeel vooruit, veranderden weinig of gingen op sommige onderdelen achteruit.",
-        {
-          "h2": "Meten wat iemand in het dagelijks leven kan"
-        },
-        "De verschillen maken duidelijk waarom het onderzoek op meerdere manieren naar fysieke vooruitgang keek. Iemand kan bijvoorbeeld vlotter lopen zonder dat de gemeten spiermassa toeneemt. Meer trouw aan de krachttraining ging in deze studie samen met een grotere kans op vooruitgang op verschillende onderdelen. Dat is een verband binnen de onderzochte groep. De studie beschrijft een groepsresultaat en laat zien hoe uiteenlopend de individuele uitkomsten kunnen zijn."
-      ],
-      "url": "https://api.sttinfo.fi/tiedote/72503935/lahes-puolet-yli-70-vuotiaista-hyotyi-liikuntaharjoittelusta-usealla-toimintakyvyn-osa-alueella?lang=fi&publisherId=69817172",
-      "primary_url": "https://api.sttinfo.fi/tiedote/72503935/lahes-puolet-yli-70-vuotiaista-hyotyi-liikuntaharjoittelusta-usealla-toimintakyvyn-osa-alueella?lang=fi&publisherId=69817172",
-      "source": "Universiteit van Jyväskylä",
+      "url": "https://www.worldbank.org/en/topic/water/publication/the-global-water-security-and-sanitation-partnership-gwsp-2026-annual-report",
+      "source": "Wereldbankgroep",
       "category": "Gezondheid",
-      "published": "2026-11-17",
-      "event_date": "2026-11-17",
-      "source_id": "universiteit-jyvaskyla",
-      "image_query": "edition-image:finland-bewegen-70-plussers",
-      "image_alt": "Ouderen doen krachttraining in Noorwegen, illustratief beeld. Beeld: Bamble Kommune via Wikimedia Commons (CC BY-SA 2.0).",
-      "image_page_url": "https://commons.wikimedia.org/wiki/File:Vekttrening_for_eldre.jpg"
+      "image_query": "preview:betere-waterbron",
+      "image_alt": "Illustratief archiefbeeld bij bijna 18 miljoen mensen krijgen toegang tot een betere waterbron"
     },
     {
-      "article_slug": "duitsland-para-tafeltennis",
-      "title": "Drie Duitse paratafeltennissers pakken individueel WK-goud",
-      "teaser": "Thomas Schmidberger, Jana Spegel en Sandra Mikolaschek winnen ieder goud in het enkelspel op het WK paratafeltennis in Thailand.",
+      "article_slug": "brazilie-dengue",
+      "title": "Braziliaanse proef vindt minder dengue- en chikungunyabesmettingen",
+      "teaser": "Een studie onder schoolkinderen in Belo Horizonte vond in de proefgebieden ongeveer 69 procent minder infecties met de onderzochte door muggen overgedragen virussen. Het gaat om een lokaal resultaat dat onderzoekers op een wetenschappelijk congres presenteerden. De resultaten waren bij die presentatie nog niet door vakgenoten beoordeeld.",
       "article_body": [
-        "Voor Sandra Mikolaschek completeert deze titel een reeks op hetzelfde toernooi. Eerder haalde ze al brons in het gemengd dubbel en zilver in het dubbelspel. In haar enkelfinale tegen Zhang Bian uit China won ze de eerste twee games, maar kwam haar tegenstander terug tot 2-2. In de beslissende game trok Mikolaschek de partij alsnog naar zich toe.",
-        "Ook Thomas Schmidberger versloeg een Chinese tegenstander in de finale. Tegen meervoudig paralympisch kampioen Feng Panfeng gaf hij geen game weg. Met 11-9, 11-8 en 11-8 pakte hij de wereldtitel, na eerder op het toernooi ook goud in het dubbelspel te hebben gewonnen.",
-        "Jana Spegel zorgde voor het derde Duitse goud in het enkelspel. De drie finales leverden Duitsland daarmee titels in verschillende klassen op. Voor Mikolaschek was het de wereldtitel die ze in deze categorie nog miste. Ze was er al regerend Europees en paralympisch kampioen. In Thailand kwam daar het individuele WK-goud bij."
+        "Een studie onder schoolkinderen in Belo Horizonte vond in de proefgebieden ongeveer 69 procent minder infecties met de onderzochte door muggen overgedragen virussen. Het gaat om een lokaal resultaat dat onderzoekers op een wetenschappelijk congres presenteerden. De resultaten waren bij die presentatie nog niet door vakgenoten beoordeeld.",
+        "Het percentage gaat over het verschil tussen de onderzochte gebieden binnen de proef. Het is geen landelijke daling. De uitkomst is een aanwijzing voor wat de aanpak lokaal kan opleveren en vraagt om verdere beoordeling van de onderzoeksresultaten."
       ],
-      "url": "https://www.ttbw.de/news/artikel/para-tischtennis-wm-dreifache-gold-sensation-zum-abschluss/",
-      "primary_url": "https://www.ttbw.de/news/artikel/para-tischtennis-wm-dreifache-gold-sensation-zum-abschluss/",
-      "source": "Tischtennis Baden-Württemberg / DBS",
-      "category": "Sport",
-      "published": "2026-11-20",
-      "event_date": "2026-11-19",
-      "source_id": "dbs",
-      "image_query": "edition-image:duitsland-para-tafeltennis",
-      "image_alt": "Thomas Schmidberger tijdens het WK paratafeltennis van 2010, archiefbeeld. Beeld: Gaël Marziou via Wikimedia Commons (CC BY 2.0).",
-      "image_page_url": "https://commons.wikimedia.org/wiki/File:Thomas_Schmidberger_WPTTC2010_2.jpeg"
+      "url": "https://apnews.com/article/f76cedcdcdf10c8834ab828d3e12ab13",
+      "source": "Associated Press",
+      "category": "Gezondheid",
+      "image_query": "preview:brazilie-dengue",
+      "image_alt": "Gelekoortsmug (Aedes aegypti), illustratief beeld"
+    },
+    {
+      "article_slug": "bolivia-kerk",
+      "title": "Eeuwenoude muurschilderingen in de Boliviaanse Andes gerestaureerd",
+      "teaser": "In de kerk van Curahuara de Carangas verschijnen lama’s en cavia’s in Bijbelse taferelen. De schilderingen vertellen hoe lokale makers christelijke verhalen een plek gaven in hun eigen leefwereld. Na maanden restaureren staat de feestelijke heropening gepland voor 15 december.",
+      "article_body": [
+        "In de kerk van Curahuara de Carangas verschijnen lama’s en cavia’s in Bijbelse taferelen. De schilderingen vertellen hoe lokale makers christelijke verhalen een plek gaven in hun eigen leefwereld. Na maanden restaureren staat de feestelijke heropening gepland voor 15 december.",
+        "In de schilderingen zijn Bijbelse scènes opgebouwd uit herkenbare elementen uit de Andes. Zo geven de voorstellingen een inkijk in de manier waarop inheemse makers hun eigen omgeving verwerkten in de kerk die zij bouwden en beschilderden."
+      ],
+      "url": "https://www.smithsonianmag.com/smart-news/inside-bolivia-newly-restored-sistine-chapel-of-the-andes-centuries-old-murals-tell-biblical-stories-with-andean-imagery-180989925/",
+      "source": "Smithsonian Magazine",
+      "category": "Cultuur",
+      "image_query": "preview:bolivia-kerk",
+      "image_alt": "Interieur van de kerk in Curahuara de Carangas vóór de recente restauratie"
+    },
+    {
+      "article_slug": "euclid-quasar",
+      "title": "Ruimtetelescoop Euclid kijkt 40 miljoen jaar verder terug",
+      "teaser": "Euclid zag de actieve kern van een sterrenstelsel zoals die er 630 miljoen jaar na de oerknal uitzag. Het licht was zo lang onderweg dat de telescoop daarmee 40 miljoen jaar verder terugkijkt dan bij zijn vorige quasarrecord. De waarneming geeft onderzoekers een blik op de ontwikkeling van sterrenstelsels in het jonge heelal.",
+      "article_body": [
+        "Euclid zag de actieve kern van een sterrenstelsel zoals die er 630 miljoen jaar na de oerknal uitzag. Het licht was zo lang onderweg dat de telescoop daarmee 40 miljoen jaar verder terugkijkt dan bij zijn vorige quasarrecord. De waarneming geeft onderzoekers een blik op de ontwikkeling van sterrenstelsels in het jonge heelal.",
+        "Een quasar is het heldere centrum van een sterrenstelsel. ESA schat de massa van het zwarte gat in deze quasar op ongeveer 360 miljoen zonsmassa’s. Dat zo’n zwaar object al zo vroeg in het heelal te zien is, maakt de waarneming interessant voor onderzoek naar de groei van zwarte gaten."
+      ],
+      "url": "https://www.esa.int/articles/about-us/directorates/science/euclid/euclid-breaks-own-quasar-record-by-40-million-years",
+      "source": "ESA",
+      "category": "Wetenschap",
+      "image_query": "preview:euclid-quasar",
+      "image_alt": "Artistieke impressie van Euclid"
+    },
+    {
+      "article_slug": "aotea-hagedissen",
+      "title": "Elf zeldzame hagedissen keren terug naar Aotea",
+      "teaser": "Het begon met drie gewonde hagedissen die eind jaren negentig naar Auckland Zoo gingen. Daar plantten de dieren zich voort. Nu zijn elf niho taniwha uitgezet op hun eiland van herkomst. Ze voegen zich bij tien soortgenoten die er in juli werden uitgezet, in een project waaraan ook de lokale Māori-gemeenschap meewerkt.",
+      "article_body": [
+        "Het begon met drie gewonde hagedissen die eind jaren negentig naar Auckland Zoo gingen. Daar plantten de dieren zich voort. Nu zijn elf niho taniwha uitgezet op hun eiland van herkomst. Ze voegen zich bij tien soortgenoten die er in juli werden uitgezet, in een project waaraan ook de lokale Māori-gemeenschap meewerkt.",
+        "De niho taniwha is de langste hagedis van Nieuw-Zeeland en komt van nature nog maar op twee eilanden voor. Het gezamenlijke project brengt de dieren terug in een reservaat waar roofdieren worden bestreden. De uitzetting is een stap in het herstel van de populatie."
+      ],
+      "url": "https://www.doc.govt.nz/news/media-releases/2026-media-releases/new-zealands-longest-lizard-returned-to-wild/",
+      "source": "Department of Conservation",
+      "category": "Natuur & klimaat",
+      "image_query": "preview:aotea-hagedissen",
+      "image_alt": "Niho taniwha, archiefbeeld"
+    },
+    {
+      "article_slug": "lymfoom-vermoeidheid",
+      "title": "Programma verlicht aanhoudende vermoeidheid na lymfoom",
+      "teaser": "In een studie met 150 deelnemers rapporteerden mensen die twaalf weken begeleiding kregen minder vermoeidheid dan de groep met gebruikelijke zorg. Het programma combineerde onder meer beweging, voorlichting en voedingsadvies. Bij de laatste meting was het verschil tussen de groepen onzeker. Daarmee laat het onderzoek vooral een verbetering op kortere termijn zien.",
+      "article_body": [
+        "In een studie met 150 deelnemers rapporteerden mensen die twaalf weken begeleiding kregen minder vermoeidheid dan de groep met gebruikelijke zorg. Het programma combineerde onder meer beweging, voorlichting en voedingsadvies. Bij de laatste meting was het verschil tussen de groepen onzeker. Daarmee laat het onderzoek vooral een verbetering op kortere termijn zien.",
+        "De deelnemers werden door loting verdeeld over het begeleidingsprogramma en gebruikelijke zorg. Ook bij een volgende meting was de vermoeidheid nog lager in de programmagroep. Bij de laatste meting viel het verschil binnen de onzekerheidsmarge."
+      ],
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43063370/",
+      "source": "Journal of Clinical Oncology",
+      "category": "Gezondheid",
+      "image_query": "preview:lymfoom-vermoeidheid",
+      "image_alt": "Fysiotherapie, illustratief beeld"
     }
   ],
   "headlines": [
     {
-      "title": "Klimaattop in Turkije eindigt zonder slotakkoord",
-      "summary": "Bij de VN-klimaattop in Antalya kwamen de deelnemers niet tot overeenstemming over een gezamenlijke slotverklaring.",
-      "url": "https://nos.nl/artikel/2640580-klimaattop-in-turkije-loopt-uit-op-mislukking-voor-het-eerst-in-jaren-geen-slotakkoord",
-      "primary_url": "https://nos.nl/artikel/2640580-klimaattop-in-turkije-loopt-uit-op-mislukking-voor-het-eerst-in-jaren-geen-slotakkoord",
+      "title": "EU-leiders komen in Brussel bijeen over de meerjarenbegroting",
+      "url": "https://nos.nl/artikel/2641042-jetten-zet-zich-schrap-voor-bloedig-gevecht-over-eu-begroting",
       "source": "NOS",
-      "source_id": "nos",
-      "published": "2026-11-22",
-      "event_date": "2026-11-22"
+      "summary": "In Brussel bespreken regeringsleiders de nieuwe Europese begroting."
     },
     {
-      "title": "Droneaanval treft woongebouw ten noorden van Kyiv",
-      "summary": "Volgens de eerste berichtgeving raakten twee mensen gewond en werd gezocht naar mogelijke slachtoffers onder het puin.",
-      "url": "https://nos.nl/artikel/2640537-droneaanval-op-woongebouw-kyiv-twee-gewonden-mogelijk-mensen-onder-puin",
-      "primary_url": "https://nos.nl/artikel/2640537-droneaanval-op-woongebouw-kyiv-twee-gewonden-mogelijk-mensen-onder-puin",
+      "title": "Aanvallen rond de oorlog in Oekraïne eisen levens in Libië en Kyiv",
+      "url": "https://nos.nl/artikel/2641025-twee-libische-officieren-overleden-na-aanval-oekraine-in-kyiv-dode-na-russische-aanval",
       "source": "NOS",
-      "source_id": "nos",
-      "published": "2026-11-22",
-      "event_date": "2026-11-22"
+      "summary": "Bij aanvallen vielen doden in Libië en Kyiv."
     },
     {
-      "title": "Halsema stuurt Insiya een boodschap",
-      "summary": "De Amsterdamse burgemeester zocht een route om haar boodschap ondanks een internetblokkade in India te verspreiden.",
-      "url": "https://nos.nl/artikel/2640576-burgemeester-halsema-trotseert-internetblokkade-india-met-boodschap-voor-insiya",
-      "primary_url": "https://nos.nl/artikel/2640576-burgemeester-halsema-trotseert-internetblokkade-india-met-boodschap-voor-insiya",
+      "title": "Een malariamug die goed gedijt in steden rukt op in Afrika",
+      "url": "https://nos.nl/artikel/2641026-nu-in-afrika-straks-in-europa-nieuwe-malariamug-rukt-op-naar-de-stad",
       "source": "NOS",
-      "source_id": "nos",
-      "published": "2026-11-22",
-      "event_date": "2026-11-22"
+      "summary": "De muggensoort kan zich ook in stedelijk gebied voortplanten."
     }
   ]
 }

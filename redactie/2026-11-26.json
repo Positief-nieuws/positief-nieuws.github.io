@@ -1,0 +1,613 @@
+{
+  "schema_version": 1,
+  "edition_date": "2026-11-26",
+  "news_sha256": "0be1a14286caf3e63251a5f45fba4f7989baff5d95d53157da34401af7b792e0",
+  "approved": true,
+  "approved_by": "Tom de Haas",
+  "variation_exception_reason": "Vier gezondheidsverhalen met verschillende invalshoeken: onderwijs en arbeidsmarkt, water, infectiepreventie en nazorg.",
+  "articles": {
+    "nl:nieuwbouwwoningen": {
+      "source_id": "cbs",
+      "organization_id": "cbs",
+      "article_url": "https://www.cbs.nl/nl-nl/nieuws/2026/47/meer-nieuwbouwwoningen-opgeleverd-in-derde-kwartaal",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-20",
+      "event_date": "2026-11-20",
+      "checked_on": "2026-11-26",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "nieuwbouwwoningen",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.cbs.nl/nl-nl/nieuws/2026/47/meer-nieuwbouwwoningen-opgeleverd-in-derde-kwartaal",
+        "claim": "Nederland levert ruim 21 procent meer nieuwbouwwoningen op",
+        "support": "CBS rapporteert 18.100 opgeleverde nieuwbouwwoningen, circa 3.200 meer dan in hetzelfde kwartaal van 2025.",
+        "limitations": "Aantallen afgerond; oplevering meet geen betaalbaarheid.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Woningen in Amsterdam; illustratief kleurenbeeld, niet een van de vier woningbouwgebieden. https://pixabay.com/photos/amsterdam-houses-city-architecture-7053639/"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Vergeleken met eerdere edities op artikel- en bewijs-URL en onderwerp.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "CBS rapporteert 18.100 opgeleverde nieuwbouwwoningen, circa 3.200 meer dan in hetzelfde kwartaal van 2025.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "nl:munnikenhoeve": {
+      "source_id": "munnikenhoeve-org",
+      "organization_id": "munnikenhoeve-org",
+      "article_url": "https://www.munnikenhoeve.org/het-plan",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-25",
+      "event_date": "2026-11-25",
+      "checked_on": "2026-11-26",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "munnikenhoeve",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.munnikenhoeve.org/het-plan",
+        "claim": "De Munnikenhoeve maakt plek voor zwaluwen, vleermuizen en egels",
+        "support": "Len van der Hof meldt per e-mail op 25 november tien geschonken verblijven. Het officiële projectplan bevestigt de ontwikkeling van het erf en de tuin.",
+        "limitations": "Datering en aantal zijn een door de initiatiefnemer gemelde tussenstand.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Pimpelmees bij een houten nestkast, illustratief beeld · Pexels License https://www.pexels.com/photo/vibrant-blue-tit-at-rustic-wooden-birdhouse-30934305/"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Vergeleken met eerdere edities op artikel- en bewijs-URL en onderwerp.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Len van der Hof meldt per e-mail op 25 november tien geschonken verblijven. Het officiële projectplan bevestigt de ontwikkeling van het erf en de tuin.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "nl:mbo-zorg-welzijn": {
+      "source_id": "cbs",
+      "organization_id": "cbs",
+      "article_url": "https://www.cbs.nl/nl-nl/nieuws/2026/48/meer-mbo-bol-gediplomeerden-zorg-en-welzijn-direct-een-baan-na-diploma",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-25",
+      "event_date": "2026-11-25",
+      "checked_on": "2026-11-26",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "mbo-zorg-welzijn",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.cbs.nl/nl-nl/nieuws/2026/48/meer-mbo-bol-gediplomeerden-zorg-en-welzijn-direct-een-baan-na-diploma",
+        "claim": "Meer mbo’ers vinden direct werk na een diploma in zorg en welzijn",
+        "support": "CBS rapporteert 51 tegenover 43 procent direct als werknemer aan de slag; binnen de sector 31 tegenover 29 procent.",
+        "limitations": "Het betreft de eerste stap na mbo-bol en werk binnen én buiten de sector.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Archiefbeeld met eerder vastgelegde bron en credit: Sanjasy https://pixabay.com/photos/baby-birth-healthy-baby-child-1531059/"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Vergeleken met eerdere edities op artikel- en bewijs-URL en onderwerp.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "CBS rapporteert 51 tegenover 43 procent direct als werknemer aan de slag; binnen de sector 31 tegenover 29 procent.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "nl:limburg-aanplant": {
+      "source_id": "wwf-nl",
+      "organization_id": "wwf-nl",
+      "article_url": "https://www.wwf.nl/wat-we-doen/actueel/nieuws/natuurkracht-tegen-droogte-en-wateroverlast",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-25",
+      "event_date": "2026-11-21",
+      "checked_on": "2026-11-26",
+      "dates_checked": true,
+      "new_development": "WWF rapporteert 8.500 geplante bomen en struiken tijdens de actiedag.",
+      "older_exception_reason": "",
+      "topic_id": "limburg-aanplant",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.wwf.nl/wat-we-doen/actueel/nieuws/natuurkracht-tegen-droogte-en-wateroverlast",
+        "claim": "Vrijwilligers planten 8.500 bomen en struiken in Zuid-Limburg",
+        "support": "WWF rapporteert 8.500 geplante bomen en struiken tijdens de actiedag.",
+        "limitations": "De aanplant is geteld; waterwinst is nog niet gemeten.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Archiefbeeld met eerder vastgelegde bron en credit: kareni https://pixabay.com/photos/sunset-dawn-nature-mountains-3325080/"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Vergeleken met eerdere edities op artikel- en bewijs-URL en onderwerp.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "WWF rapporteert 8.500 geplante bomen en struiken tijdens de actiedag.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "nl:adrie-ligplaats": {
+      "source_id": "nh-nieuws",
+      "organization_id": "nh-nieuws",
+      "article_url": "https://www.nhnieuws.nl/nieuws/365777/bijna-dakloze-adrie-krijgt-plek-aangeboden-goede-hoop-dat-ze-mij-kunnen-helpen",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-25",
+      "event_date": "2026-11-22",
+      "checked_on": "2026-11-26",
+      "dates_checked": true,
+      "new_development": "NH Nieuws sprak Adrie en beschrijft het aangeboden tijdelijke winterverblijf bij de Kippenbrug.",
+      "older_exception_reason": "",
+      "topic_id": "adrie-ligplaats",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.nhnieuws.nl/nieuws/365777/bijna-dakloze-adrie-krijgt-plek-aangeboden-goede-hoop-dat-ze-mij-kunnen-helpen",
+        "claim": "Adrie krijgt na zijn oproep hulp bij het vinden van een ligplaats",
+        "support": "NH Nieuws sprak Adrie en beschrijft het aangeboden tijdelijke winterverblijf bij de Kippenbrug.",
+        "limitations": "Een vaste ligplaats was nog onzeker.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Woonboot op de Prinsengracht, illustratief beeld · Wikimedia Commons · CC0 1.0 https://commons.wikimedia.org/wiki/File:Barge_als_woonboot_op_de_Prinsengracht.jpg"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Vergeleken met eerdere edities op artikel- en bewijs-URL en onderwerp.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "NH Nieuws sprak Adrie en beschrijft het aangeboden tijdelijke winterverblijf bij de Kippenbrug.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "nl:kampina-insecten": {
+      "source_id": "natuurmonumenten",
+      "organization_id": "natuurmonumenten",
+      "article_url": "https://www.natuurmonumenten.nl/natuurgebieden/kampina/nieuws/zeldzame-insectensoorten-ontdekt-in-natuurgebied-kampina",
+      "region": "nl",
+      "region_checked": true,
+      "publication_date": "2026-11-25",
+      "event_date": "2026-11-25",
+      "checked_on": "2026-11-26",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "kampina-insecten",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.natuurmonumenten.nl/natuurgebieden/kampina/nieuws/zeldzame-insectensoorten-ontdekt-in-natuurgebied-kampina",
+        "claim": "Drie zeldzame insectensoorten ontdekt op de Kampina",
+        "support": "Natuurmonumenten meldt de boswespbij, harsgalmuurwesp en zadelgroefbij bij de Kampina.",
+        "limitations": "Vondsten bewijzen geen populatiegroei.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Ven op de Kampina · G.Lanting · CC BY-SA 4.0 https://commons.wikimedia.org/wiki/File:Kampina_DSCF5789.jpg"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Vergeleken met eerdere edities op artikel- en bewijs-URL en onderwerp.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Natuurmonumenten meldt de boswespbij, harsgalmuurwesp en zadelgroefbij bij de Kampina.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "int:betere-waterbron": {
+      "source_id": "worldbank-org",
+      "organization_id": "worldbank-org",
+      "article_url": "https://www.worldbank.org/en/topic/water/publication/the-global-water-security-and-sanitation-partnership-gwsp-2026-annual-report",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-16",
+      "event_date": "2026-11-16",
+      "checked_on": "2026-11-26",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "Recent jaarverslag. Nieuwe jaartotalen met groot maatschappelijk bereik.",
+      "topic_id": "betere-waterbron",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://documents1.worldbank.org/curated/en/099030011162630478/pdf/IDU-dc92839c-660e-4a32-9930-b08cf5e4d466.pdf",
+        "claim": "Bijna 18 miljoen mensen krijgen toegang tot een betere waterbron",
+        "support": "Hoofdstuk 4 rapporteert 17,97 miljoen mensen met verbeterde watervoorziening, waaronder 6,3 miljoen met veilig beheerde voorzieningen.",
+        "limitations": "Zelfgerapporteerde projectresultaten van de Wereldbankgroep over boekjaar 2026.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Archiefbeeld met eerder vastgelegde bron en credit: Ralf1403 https://pixabay.com/photos/water-faucet-tap-water-gush-8493302/"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Vergeleken met eerdere edities op artikel- en bewijs-URL en onderwerp.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Hoofdstuk 4 rapporteert 17,97 miljoen mensen met verbeterde watervoorziening, waaronder 6,3 miljoen met veilig beheerde voorzieningen.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "int:brazilie-dengue": {
+      "source_id": "apnews-com",
+      "organization_id": "apnews-com",
+      "article_url": "https://apnews.com/article/f76cedcdcdf10c8834ab828d3e12ab13",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-21",
+      "event_date": "2026-11-21",
+      "checked_on": "2026-11-26",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "brazilie-dengue",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://apnews.com/article/f76cedcdcdf10c8834ab828d3e12ab13",
+        "claim": "Braziliaanse proef vindt minder dengue- en chikungunyabesmettingen",
+        "support": "AP beschrijft de in Belo Horizonte op een congres gepresenteerde resultaten: ongeveer 69 procent minder infecties in de proefgebieden.",
+        "limitations": "Lokale proef en congresresultaat.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Gelekoortsmug (Aedes aegypti), illustratief beeld · CDC · publiek domein https://commons.wikimedia.org/wiki/File:Aedes_aegypti_mosquito2.jpg"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Vergeleken met eerdere edities op artikel- en bewijs-URL en onderwerp.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "AP beschrijft de in Belo Horizonte op een congres gepresenteerde resultaten: ongeveer 69 procent minder infecties in de proefgebieden.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "int:bolivia-kerk": {
+      "source_id": "smithsonian-magazine",
+      "organization_id": "smithsonian-magazine",
+      "article_url": "https://www.smithsonianmag.com/smart-news/inside-bolivia-newly-restored-sistine-chapel-of-the-andes-centuries-old-murals-tell-biblical-stories-with-andean-imagery-180989925/",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-23",
+      "event_date": "2026-11-23",
+      "checked_on": "2026-11-26",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "bolivia-kerk",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.smithsonianmag.com/smart-news/inside-bolivia-newly-restored-sistine-chapel-of-the-andes-centuries-old-murals-tell-biblical-stories-with-andean-imagery-180989925/",
+        "claim": "Eeuwenoude muurschilderingen in de Boliviaanse Andes gerestaureerd",
+        "support": "Smithsonian beschrijft de renovatie en geplande heropening op 15 december.",
+        "limitations": "De heropening staat gepland.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Interieur van de kerk in Curahuara de Carangas vóór de recente restauratie · José Ignacio Camacho · CC BY-SA 3.0 https://commons.wikimedia.org/wiki/File:Cristo_en_el_altar.JPG"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Vergeleken met eerdere edities op artikel- en bewijs-URL en onderwerp.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "Smithsonian beschrijft de renovatie en geplande heropening op 15 december.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "int:euclid-quasar": {
+      "source_id": "esa",
+      "organization_id": "esa",
+      "article_url": "https://www.esa.int/articles/about-us/directorates/science/euclid/euclid-breaks-own-quasar-record-by-40-million-years",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-24",
+      "event_date": "2026-11-24",
+      "checked_on": "2026-11-26",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "euclid-quasar",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.esa.int/articles/about-us/directorates/science/euclid/euclid-breaks-own-quasar-record-by-40-million-years",
+        "claim": "Ruimtetelescoop Euclid kijkt 40 miljoen jaar verder terug",
+        "support": "ESA meldt een quasar gezien 630 miljoen jaar na de oerknal, 40 miljoen jaar eerder dan het vorige record.",
+        "limitations": "Afstand en leeftijd zijn astronomische schattingen.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Artistieke impressie van Euclid · ESA, uitgevoerd door ATG · CC BY-SA 3.0 IGO https://commons.wikimedia.org/wiki/File:Euclid_on_its_way_to_L2_ESA24898498.jpg"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Vergeleken met eerdere edities op artikel- en bewijs-URL en onderwerp.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "ESA meldt een quasar gezien 630 miljoen jaar na de oerknal, 40 miljoen jaar eerder dan het vorige record.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "int:aotea-hagedissen": {
+      "source_id": "doc-govt-nz",
+      "organization_id": "doc-govt-nz",
+      "article_url": "https://www.doc.govt.nz/news/media-releases/2026-media-releases/new-zealands-longest-lizard-returned-to-wild/",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-23",
+      "event_date": "2026-11-23",
+      "checked_on": "2026-11-26",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "aotea-hagedissen",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://www.doc.govt.nz/news/media-releases/2026-media-releases/new-zealands-longest-lizard-returned-to-wild/",
+        "claim": "Elf zeldzame hagedissen keren terug naar Aotea",
+        "support": "De Nieuw-Zeelandse natuurbeheerder meldt de terugplaatsing van elf dieren op Aotea.",
+        "limitations": "De vrijlating is een stap in herstel; het uiteindelijke effect is nog onbekend.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Niho taniwha, archiefbeeld · New Zealand Department of Conservation · CC BY 2.0 https://commons.wikimedia.org/wiki/File:Chevron_skink_by_Department_of_Conservation1.jpg"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Vergeleken met eerdere edities op artikel- en bewijs-URL en onderwerp.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "De Nieuw-Zeelandse natuurbeheerder meldt de terugplaatsing van elf dieren op Aotea.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "int:lymfoom-vermoeidheid": {
+      "source_id": "pubmed-ncbi-nlm-nih-gov",
+      "organization_id": "pubmed-ncbi-nlm-nih-gov",
+      "article_url": "https://pubmed.ncbi.nlm.nih.gov/43063370/",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-20",
+      "event_date": "2026-11-20",
+      "checked_on": "2026-11-26",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "lymfoom-vermoeidheid",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://pubmed.ncbi.nlm.nih.gov/43063370/",
+        "claim": "Programma verlicht aanhoudende vermoeidheid na lymfoom",
+        "support": "De REFUEL-studie meldt minder vermoeidheid na de interventie onder 150 gerandomiseerde deelnemers.",
+        "limitations": "Bij de laatste meting was het verschil onzeker.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "licensed",
+        "image_evidence": "Fysiotherapie, illustratief beeld · SEppl · publiek domein https://commons.wikimedia.org/wiki/File:Physiotherapie.jpg"
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Vergeleken met eerdere edities op artikel- en bewijs-URL en onderwerp.",
+        "new_fact": ""
+      },
+      "positive_result": true,
+      "positive_result_explanation": "De REFUEL-studie meldt minder vermoeidheid na de interventie onder 150 gerandomiseerde deelnemers.",
+      "scores": {
+        "positive_value": 2,
+        "evidence": 2,
+        "recency": 1,
+        "relevance": 2,
+        "originality": 1
+      }
+    },
+    "headlines:0": {
+      "source_id": "nos",
+      "organization_id": "nos",
+      "article_url": "https://nos.nl/artikel/2641042-jetten-zet-zich-schrap-voor-bloedig-gevecht-over-eu-begroting",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-26",
+      "event_date": "2026-11-26",
+      "checked_on": "2026-11-26",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "actualiteit-0",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://nos.nl/artikel/2641042-jetten-zet-zich-schrap-voor-bloedig-gevecht-over-eu-begroting",
+        "claim": "EU-leiders komen in Brussel bijeen over de meerjarenbegroting",
+        "support": "NOS beschrijft de EU-top over de meerjarenbegroting.",
+        "limitations": "Onderhandelingen liepen nog.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used",
+        "image_evidence": ""
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Vergeleken met eerdere edities op artikel- en bewijs-URL en onderwerp.",
+        "new_fact": ""
+      }
+    },
+    "headlines:1": {
+      "source_id": "nos",
+      "organization_id": "nos",
+      "article_url": "https://nos.nl/artikel/2641025-twee-libische-officieren-overleden-na-aanval-oekraine-in-kyiv-dode-na-russische-aanval",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-25",
+      "event_date": "2026-11-25",
+      "checked_on": "2026-11-26",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "actualiteit-1",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://nos.nl/artikel/2641025-twee-libische-officieren-overleden-na-aanval-oekraine-in-kyiv-dode-na-russische-aanval",
+        "claim": "Aanvallen rond de oorlog in Oekraïne eisen levens in Libië en Kyiv",
+        "support": "NOS meldt dodelijke slachtoffers na aanvallen in Libië en Kyiv.",
+        "limitations": "Stand van de berichtgeving op 25 november.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used",
+        "image_evidence": ""
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Vergeleken met eerdere edities op artikel- en bewijs-URL en onderwerp.",
+        "new_fact": ""
+      }
+    },
+    "headlines:2": {
+      "source_id": "nos",
+      "organization_id": "nos",
+      "article_url": "https://nos.nl/artikel/2641026-nu-in-afrika-straks-in-europa-nieuwe-malariamug-rukt-op-naar-de-stad",
+      "region": "int",
+      "region_checked": true,
+      "publication_date": "2026-11-25",
+      "event_date": "2026-11-25",
+      "checked_on": "2026-11-26",
+      "dates_checked": true,
+      "new_development": "",
+      "older_exception_reason": "",
+      "topic_id": "actualiteit-2",
+      "doi": "",
+      "report_id": "",
+      "evidence": {
+        "primary_url": "https://nos.nl/artikel/2641026-nu-in-afrika-straks-in-europa-nieuwe-malariamug-rukt-op-naar-de-stad",
+        "claim": "Een malariamug die goed gedijt in steden rukt op in Afrika",
+        "support": "NOS beschrijft de uitbreiding van een muggensoort die zich in stedelijk gebied kan voortplanten.",
+        "limitations": "De verdere verspreiding is onzeker.",
+        "verified": true
+      },
+      "rights": {
+        "text": "original_summary",
+        "image": "not_used",
+        "image_evidence": ""
+      },
+      "duplicate_review": {
+        "checked": true,
+        "reason": "Vergeleken met eerdere edities op artikel- en bewijs-URL en onderwerp.",
+        "new_fact": ""
+      }
+    }
+  }
+}

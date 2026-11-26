@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://positief-nieuws.nl/</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-26</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/over/</loc>
@@ -15,11 +15,15 @@
   </url>
   <url>
     <loc>https://positief-nieuws.nl/edities/</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-26</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/onderwerpen/</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/edities/2026-11-26/</loc>
+    <lastmod>2026-11-26</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/edities/2026-11-23/</loc>
@@ -123,11 +127,11 @@
   </url>
   <url>
     <loc>https://positief-nieuws.nl/cultuur/</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-26</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/economie/</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-26</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/energie-en-innovatie/</loc>
@@ -135,23 +139,71 @@
   </url>
   <url>
     <loc>https://positief-nieuws.nl/gezondheid/</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-26</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/mens/</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-26</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/natuur-en-klimaat/</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-26</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/wetenschap/</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-26</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/sport/</loc>
     <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-11-26/nieuwbouwwoningen/</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-11-26/munnikenhoeve/</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-11-26/mbo-zorg-welzijn/</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-11-26/limburg-aanplant/</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-11-26/adrie-ligplaats/</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-11-26/kampina-insecten/</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-11-26/betere-waterbron/</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-11-26/brazilie-dengue/</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-11-26/bolivia-kerk/</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-11-26/euclid-quasar/</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-11-26/aotea-hagedissen/</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://positief-nieuws.nl/artikelen/2026-11-26/lymfoom-vermoeidheid/</loc>
+    <lastmod>2026-11-26</lastmod>
   </url>
   <url>
     <loc>https://positief-nieuws.nl/artikelen/2026-11-23/texel-natuur-vergunning/</loc>
