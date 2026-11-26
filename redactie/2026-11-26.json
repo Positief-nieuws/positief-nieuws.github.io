@@ -2,8 +2,8 @@
   "schema_version": 1,
   "edition_date": "2026-11-26",
   "news_sha256": "0b0a18a44018aa6cc61d6755a40dce894d9855c3b322bd52c70be41025cb8b7d",
-  "approved": false,
-  "approved_by": "",
+  "approved": true,
+  "approved_by": "Tom de Haas",
   "variation_exception_reason": "Vier gezondheidsverhalen met verschillende invalshoeken: onderwijs en arbeidsmarkt, water, infectiepreventie en nazorg.",
   "articles": {
     "nl:nieuwbouwwoningen": {
