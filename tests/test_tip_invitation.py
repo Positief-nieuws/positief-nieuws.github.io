@@ -29,3 +29,14 @@ class TipInvitationTests(unittest.TestCase):
         page = render_article_page(item, '2026-11-23')
         self.assertIn(block('article'), page)
         self.assertLess(page.index('class="article-newsletter"'), page.index('class="pn-tip-invitation"'))
+
+    def test_home_cards_use_shared_responsive_design(self):
+        home = block('home')
+        self.assertNotIn('style=', home)
+        self.assertNotIn('<img', home)
+        self.assertIn('href="/tip/"', home)
+        self.assertIn("placement:'home'", home)
+        css = Path('social-sharing.css').read_text(encoding='utf-8')
+        self.assertIn('grid-template-columns:repeat(2,minmax(0,1fr))', css)
+        self.assertIn('grid-template-columns:minmax(0,1fr)', css)
+        self.assertIn('#install-strip', css)
