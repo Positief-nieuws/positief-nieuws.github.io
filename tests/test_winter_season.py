@@ -24,6 +24,18 @@ class WinterSeasonTests(unittest.TestCase):
         self.assertIn("prefers-reduced-motion: reduce", season)
         self.assertIn("animation: none", season)
 
+    def test_refresh_repairs_missing_and_duplicate_links(self):
+        from build_editions import ensure_site_theme, SITE_THEME_HREF
+        tag = f'<link rel="stylesheet" href="{SITE_THEME_HREF}">'
+        source = '<html><head><style>body{color:black}</style></head><body><header class="site-header"></header></body></html>'
+        result = ensure_site_theme(source)
+        self.assertEqual(result, source.replace('</head>', tag + '</head>'))
+        self.assertEqual(ensure_site_theme(result), result)
+        outdated = source.replace('</head>', '<link rel="stylesheet" href="/site-theme.css?v=old"><link rel="stylesheet" href="/site-theme.css"></head>')
+        self.assertEqual(ensure_site_theme(outdated), result)
+        redirect = '<html><head><meta http-equiv="refresh" content="0;url=/"></head></html>'
+        self.assertEqual(ensure_site_theme(redirect), redirect)
+
     def test_shared_theme_on_content_pages(self):
         for page in ROOT.rglob("*.html"):
             html = page.read_text(encoding="utf-8")

@@ -41,7 +41,11 @@ jobs:
           python-version: '3.13'
 
       - name: Bron- en redactiecontroles testen
-        run: python -m unittest discover -s tests
+        # Sitebouw en grafische regressies blijven in Site build and regression checks.
+        # Deze workflow verzamelt alleen kandidaten en publiceert geen editie.
+        run: |
+          python -m unittest discover -s tests -p 'test_editorial_workflow.py'
+          python -m unittest discover -s tests -p 'test_selection_quality.py'
 
       - name: Controleren of kandidaten vandaag al zijn gemaakt
         id: freshness
