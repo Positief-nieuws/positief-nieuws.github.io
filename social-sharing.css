@@ -1,14 +1,54 @@
 .pn-share{margin:28px 0;padding:24px;border:1px solid #dfe8e2;border-radius:17px;background:#fff;color:#182e35;max-width:700px;box-sizing:border-box}.pn-share h2{margin:0 0 8px;font-family:inherit;font-weight:800;font-size:23px;line-height:1.2;letter-spacing:-.035em}.pn-share>p{margin:0 0 14px;color:#536c64;font-size:14px;line-height:1.6}.pn-share-buttons{display:flex;flex-wrap:wrap;gap:9px}.pn-share-buttons a,.pn-share-buttons button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;border:1px solid #91aaa0;border-radius:999px;padding:9px 15px;background:transparent;color:#176e5c;font:inherit;font-size:14px;font-weight:700;text-decoration:none;cursor:pointer;box-sizing:border-box}.pn-share-buttons a:hover,.pn-share-buttons button:hover{background:#edf5ee}.pn-share :focus-visible{outline:3px solid #b27a0b;outline-offset:3px}.pn-share [hidden]{display:none!important}.pn-share-status:empty{display:none}.pn-share .pn-share-status{font-size:13px;margin:12px 0 0;line-height:1.5}.pn-share-fallback{margin-top:12px}.pn-share-fallback label{display:block;font-size:13px;margin-bottom:7px}.pn-share-fallback input{width:100%;min-height:44px;box-sizing:border-box;border:1px solid #91aaa0;border-radius:8px;padding:10px;font:inherit;font-size:14px}.pn-share-home{margin:20px auto 0;text-align:left}.nl-shell>.pn-share{margin:0 0 40px}.end .pn-share{margin:24px auto 0;text-align:left}@media(max-width:760px){.pn-share{padding:20px}.pn-share-buttons{gap:8px}}
-/* Keep the homepage closing actions together, including optional installation. */
-.pn-home .edition-end .end-actions{flex-direction:column;align-items:center;gap:18px;width:100%}
-.pn-home .edition-end .pn-share-home{margin:0;width:min(100%,520px);text-align:center}
-.pn-home .edition-end .pn-share-home h2{margin:0 0 14px;font-size:21px;line-height:1.25;letter-spacing:-.035em}
-.pn-home .edition-end .pn-share-buttons{justify-content:center}
-.pn-home .edition-end #install-strip{max-width:100%;align-self:center}
-
 /* Deel een beetje hoop: a warm accent, shared by current and future pages. */
 .article-share,.pn-share{background:#fff7eb;border-color:#efd3ad}
 .article-share h2,.pn-share h2{color:#182e35}
 .article-share h2::before,.pn-share h2::before{content:"";display:inline-block;width:23px;height:23px;margin-right:9px;vertical-align:-4px;background:url('/sun-orange.svg') center/contain no-repeat}
 .article-share-buttons a,.article-share-buttons button,.pn-share-buttons a,.pn-share-buttons button{background:#fff;border-color:#d7b68c;color:#79430b}
 .article-share-buttons a:hover,.article-share-buttons button:hover,.pn-share-buttons a:hover,.pn-share-buttons button:hover{background:#ffecd4}
+
+/* Homepage closing actions: two equal cards, with installation below. */
+.pn-home .edition-end .end-actions {
+  display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); align-items:stretch;
+  gap:18px; width:100%; max-width:960px; margin:26px auto 0;
+}
+.pn-home .edition-end .end-actions > :is(.pn-share-home,.pn-tip-invitation) {
+  display:flex; flex-direction:column; align-items:flex-start; gap:0;
+  box-sizing:border-box; min-width:0; width:100%; max-width:none; margin:0;
+  padding:24px; border:1px solid #dfe8e2; border-radius:16px;
+  background:#fff; color:#182e35; text-align:left;
+}
+.pn-home .edition-end .end-actions > :is(.pn-share-home,.pn-tip-invitation) h2 {
+  display:flex; align-items:center; gap:9px; margin:0 0 12px;
+  font-size:22px!important; line-height:1.25; letter-spacing:-.035em; color:#182e35;
+}
+.pn-home .edition-end .end-actions > :is(.pn-share-home,.pn-tip-invitation) h2::before {
+  content:""; display:block; flex:0 0 24px; width:24px; height:24px; margin:0;
+  background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23f57900%22%20stroke-width%3D%221.7%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%226%22%20cy%3D%2212%22%20r%3D%222.5%22%2F%3E%3Ccircle%20cx%3D%2218%22%20cy%3D%225%22%20r%3D%222.5%22%2F%3E%3Ccircle%20cx%3D%2218%22%20cy%3D%2219%22%20r%3D%222.5%22%2F%3E%3Cpath%20d%3D%22m8.2%2010.7%207.6-4.4M8.2%2013.3l7.6%204.4%22%2F%3E%3C%2Fsvg%3E") center/contain no-repeat;
+}
+.pn-home .edition-end .end-actions > .pn-tip-invitation h2::before {
+  background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23f57900%22%20stroke-width%3D%221.7%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M9%2018h6m-5%203h4M8.5%2015.5a6%206%200%201%201%207%200L15%2017H9zM12%201v1M3%205l1%201m17-1-1%201%22%2F%3E%3C%2Fsvg%3E");
+}
+.pn-home .edition-end .end-actions > :is(.pn-share-home,.pn-tip-invitation) > p:not(.pn-share-status) {
+  margin:0 0 18px; font-size:14px; line-height:1.6; color:#536c64; text-align:left;
+}
+.pn-home .edition-end .end-actions .pn-share-buttons {
+  justify-content:flex-start; margin-top:auto; gap:7px; width:100%;
+}
+.pn-home .edition-end .end-actions .pn-share-buttons :is(a,button) {
+  padding:9px 12px; border-color:#91aaa0; color:#176e5c; background:#fff;
+}
+.pn-home .edition-end .end-actions .pn-share-buttons :is(a,button):hover {background:#edf5ee}
+.pn-home .edition-end .end-actions .pn-tip-invitation > a {
+  display:inline-flex; align-items:center; justify-content:center; align-self:flex-start;
+  box-sizing:border-box; min-height:44px; margin-top:auto; padding:9px 17px;
+  background:#176e5c; color:#fff; border-radius:999px; text-decoration:none;
+  font-size:14px; font-weight:700;
+}
+.pn-home .edition-end .end-actions .pn-tip-invitation > a:hover {background:#0e5947}
+.pn-home .edition-end .end-actions #install-strip {
+  grid-column:1/-1; justify-self:center; align-self:center; max-width:100%;
+}
+@media(max-width:760px) {
+  .pn-home .edition-end .end-actions {grid-template-columns:minmax(0,1fr);gap:12px}
+  .pn-home .edition-end .end-actions > :is(.pn-share-home,.pn-tip-invitation) {padding:20px}
+}
