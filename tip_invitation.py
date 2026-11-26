@@ -7,7 +7,12 @@ END = '<!-- tip-invitation:end -->'
 def block(placement):
     if placement not in ('home', 'article'):
         raise ValueError('Unknown tip placement')
-    width = 'width:100%;max-width:520px;margin:0 auto' if placement == 'home' else 'max-width:700px;margin:26px 0'
+    if placement == 'home':
+        return (START + '<aside class="pn-tip-invitation" aria-label="Tip de redactie">'
+                '<h2>Goed nieuws gezien?</h2>'
+                '<p>Misschien verdient jouw ontdekking een plek in een volgende editie. Ook kleine verhalen zijn welkom.</p>'
+                '<a href="/tip/" onclick="if(window.sa_event)window.sa_event(\'tip_redactie_click\',{placement:\'home\'})">Tip de redactie →</a></aside>' + END)
+    width = 'max-width:700px;margin:26px 0'
     return (START + '<aside class="pn-tip-invitation" aria-label="Tip de redactie" '
             f'style="{width};box-sizing:border-box;padding:20px 22px;border:1px solid #dfe8e2;border-radius:16px;background:#fff;color:#182e35;text-align:left">'
             '<h2 style="font-size:1.2rem;line-height:1.25;margin:0 0 8px;color:#182e35">'
