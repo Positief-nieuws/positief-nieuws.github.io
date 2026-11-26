@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "edition_date": "2026-11-26",
-  "news_sha256": "0be1a14286caf3e63251a5f45fba4f7989baff5d95d53157da34401af7b792e0",
+  "news_sha256": "0b0a18a44018aa6cc61d6755a40dce894d9855c3b322bd52c70be41025cb8b7d",
   "approved": true,
   "approved_by": "Tom de Haas",
   "variation_exception_reason": "Vier gezondheidsverhalen met verschillende invalshoeken: onderwijs en arbeidsmarkt, water, infectiepreventie en nazorg.",
@@ -192,8 +192,8 @@
       "evidence": {
         "primary_url": "https://www.nhnieuws.nl/nieuws/365777/bijna-dakloze-adrie-krijgt-plek-aangeboden-goede-hoop-dat-ze-mij-kunnen-helpen",
         "claim": "Adrie krijgt na zijn oproep hulp bij het vinden van een ligplaats",
-        "support": "NH Nieuws sprak Adrie en beschrijft het aangeboden tijdelijke winterverblijf bij de Kippenbrug.",
-        "limitations": "Een vaste ligplaats was nog onzeker.",
+        "support": "NH Nieuws meldt dat de eerste aangeboden winterligplaats afviel omdat wonen daar niet was toegestaan. Daarna kwam een tweede tijdelijk aanbod in Nieuwe-Niedorp.",
+        "limitations": "Het tweede aanbod was nog in onderzoek. Een vaste ligplaats was bij publicatie niet geregeld.",
         "verified": true
       },
       "rights": {
