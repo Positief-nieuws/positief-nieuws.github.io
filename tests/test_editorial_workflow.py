@@ -101,7 +101,7 @@ class WorkflowTests(unittest.TestCase):
         self.assertTrue(self.check(e,d)['ready'])
 
     def test_newsletter_word_budget_is_enforced(self):
-        e,d=self.fixture();e['nl'][0]['teaser']='woord '*1300;d['news_sha256']=gate.news_digest(e)
+        e,d=self.fixture();e['meta']['email_intro']='woord '*1300;d['news_sha256']=gate.news_digest(e)
         self.assertTrue(any('budget' in x for x in self.check(e,d)['errors']))
 
     def test_inspiration_is_not_monitored_and_german_query_has_locale(self):
