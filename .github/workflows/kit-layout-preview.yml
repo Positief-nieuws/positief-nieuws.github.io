@@ -1,0 +1,48 @@
+name: Kit Outlook-opmaakproef
+
+# One private preview on installation; later previews can be requested manually.
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/kit-layout-preview.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pn-kit-layout-preview
+  cancel-in-progress: false
+
+jobs:
+  preview:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m unittest discover -s tests -p test_newsletter_layout.py
+      - name: Maak uitsluitend een privéconcept
+        env:
+          KIT_API_KEY: ${{ secrets.KIT_API_KEY }}
+          KIT_SENDER_EMAIL: ${{ vars.KIT_SENDER_EMAIL }}
+          KIT_EMAIL_TEMPLATE_ID: ${{ vars.KIT_EMAIL_TEMPLATE_ID }}
+        run: |
+          python - <<'PY'
+          import os
+          import kit_draft as kit
+          data, nl, world, headlines = kit.load_news()
+          result = kit.create_draft(
+              os.environ["KIT_API_KEY"],
+              "TEST Outlook | " + kit.build_subject(data),
+              kit.build_body(data, nl, world, headlines),
+              data, kit.build_preheader(data, nl),
+              trial=True, trial_label="outlook-v1",
+          )
+          if result.get("status") != "draft" or result.get("public") is not False or result.get("send_at") is not None:
+              raise RuntimeError("Kit bevestigt geen privéconcept zonder verzendplanning")
+          print(f"Privéproefconcept {int(result['id'])} aanwezig. Niets verstuurd.")
+          PY
