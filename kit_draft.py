@@ -241,22 +241,65 @@ def article_thumbnail_url(article, data):
     return url
 
 
-def article_html(article, data=None, prefer_own_page=False, featured=False):
+
+EMAIL_WIDTH = 640
+CONTENT_WIDTH = 600
+COLUMN_WIDTH = 300
+IMAGE_GAP = 6
+
+
+def email_table(content, width="100%", *, bg=None, attrs="", style=""):
+    background = f' bgcolor="{bg}"' if bg else ""
+    return (f'<table role="presentation" width="{width}" cellpadding="0" cellspacing="0" border="0"'
+            f'{background} {attrs} style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;{style}">'
+            f'{content}</table>')
+
+
+def email_spacer(height):
+    return email_table(f'<tr><td height="{height}" style="height:{height}px;font-size:1px;line-height:{height}px;">&nbsp;</td></tr>')
+
+
+def fitted_image_size(image_url, box_width, box_height):
+    """Fit locally hosted editorial photos without distortion or CSS cropping."""
+    from social_sharing import dimensions
+    path = urllib.parse.unquote(urllib.parse.urlparse(image_url).path).lstrip("/")
+    size = dimensions(Path(path))
+    if not size or not all(size):
+        return box_width, None
+    ratio = min(box_width / size[0], box_height / size[1], 1)
+    return max(1, round(size[0] * ratio)), max(1, round(size[1] * ratio))
+
+
+def article_html(article, data=None, prefer_own_page=False, featured=False, column=False):
     title = esc(article.get("email_title") or article.get("title"))
-    teaser = esc(article.get("teaser") or article.get("summary"))
     raw_url = newsletter_article_url(data, article) if prefer_own_page and data and article.get("article_slug") else str(article.get("url") or "")
     url = esc(raw_url)
     image_url = article_thumbnail_url(article, data) if prefer_own_page else ""
-    meta = " &nbsp;·&nbsp; ".join(esc(part) for part in (article.get("category"), article.get("source"), reading_time_label(article)) if part)
-    image_html = ""
+    image_row = ""
     if image_url:
-        image_html = f'<a href="{url}" style="text-decoration:none"><img src="{esc(image_url)}" width="660" alt="{esc(article.get("image_alt") or article.get("title"))}" style="display:block;width:100%;height:auto;max-height:{340 if featured else 190}px;object-fit:cover;border:0;border-radius:16px 16px 0 0;"></a>'
-    return f"""<div class="story-card" style="margin:0 0 16px;border:1px solid #e1e9e5;border-radius:17px;overflow:hidden;background:#fff;">
-      {image_html}<div style="padding:{'24px 26px 28px' if featured else '18px 20px'};">
-      <p style="margin:0 0 10px;font:800 10px Arial,Helvetica,sans-serif;text-transform:uppercase;letter-spacing:.08em;color:{GREEN};">{esc(article.get('category') or ('Uitgelicht' if featured else 'Actualiteit'))}</p>
-      <h2 style="margin:0 0 12px;font:800 {'34' if featured else '20'}px Arial,Helvetica,sans-serif;line-height:1.18;letter-spacing:-.035em;color:{INK};"><a href="{url}" style="color:{INK} !important;text-decoration:none;">{title}</a></h2>
-      {f'<p class="story-intro" style="margin:0 0 12px;font:14px Arial,Helvetica,sans-serif;line-height:1.6;color:{MUTED};">{teaser}</p>' if teaser else ''}
-      <p style="margin:0;font:700 11px Arial,Helvetica,sans-serif;line-height:1.5;color:{GREEN};">{meta}</p></div></div>"""
+        box_width = COLUMN_WIDTH - IMAGE_GAP * 2 - 2 if column else CONTENT_WIDTH - 2
+        box_height = round(box_width * 9 / 16) if column or featured else 210
+        image_width, image_height = fitted_image_size(image_url, box_width, box_height)
+        height_attr = f' height="{image_height}"' if image_height else ""
+        image_row = (
+            f'<tr><td class="pn-photo" align="center" valign="middle" bgcolor="#edf3ef" height="{box_height}" '
+            f'style="height:{box_height}px;background-color:#edf3ef;font-size:0;line-height:0;">'
+            f'<a href="{url}" style="text-decoration:none;">'
+            f'<img src="{esc(image_url)}" width="{image_width}"{height_attr} '
+            f'alt="{esc(article.get("image_alt") or article.get("title"))}" '
+            f'style="display:block;width:{image_width}px;max-width:100%;height:auto;border:0;outline:none;text-decoration:none;"></a></td></tr>'
+        )
+    title_size = 26 if featured else (18 if prefer_own_page else 16)
+    padding = "18px 20px" if featured else "14px 15px"
+    title_row = (
+        f'<tr><td bgcolor="#ffffff" style="padding:{padding};background-color:#ffffff;">'
+        f'<h2 style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:{title_size}px;'
+        f'font-weight:700;line-height:1.3;color:{INK};">'
+        f'<a href="{url}" style="color:{INK};text-decoration:none;">{title}</a></h2></td></tr>'
+    )
+    card = email_table(image_row + title_row, bg="#ffffff", attrs='class="story-card"',
+                       style="width:100%;border:1px solid #dfe8e2;")
+    return card + email_spacer(14)
 
 
 def section_header(label, count, note=""):
@@ -284,65 +327,32 @@ def section_header(label, count, note=""):
     """
 
 
+
 def build_share_block(data):
-    # Gedeelde links blijven bewust schoon. Zo wordt verkeer dat later via
-    # WhatsApp/e-mail binnenkomt niet ten onrechte als Kit toegeschreven.
     share_url = edition_url(data)
-
-    # Alleen de directe klik vanuit deze nieuwsbrief krijgt Kit-UTM's.
-    newsletter_online_url = newsletter_edition_url(data)
-
     share_text = (
         "Positief nieuws. In een paar minuten weet je wat er goed gaat "
         "én wat je verder moet weten. Zonder eindeloos scrollen."
     )
-    whatsapp_share_url = (
-        "https://wa.me/?text="
-        + urllib.parse.quote(f"{share_text}\n\n{share_url}")
-    )
-    email_share_url = (
-        "mailto:?subject="
-        + urllib.parse.quote("Positief nieuws. Dit gebeurt ook.")
-        + "&body="
-        + urllib.parse.quote(f"{share_text}\n\n{share_url}")
-    )
-
-    return f"""
-    <div style="margin:46px 0 0 0;padding:28px 22px;border:1px solid rgba(23,63,49,.18);text-align:center;background:#f0f5ee;border-radius:17px;">
-      <p style="margin:0 0 7px 0;font:700 22px Arial,Helvetica,sans-serif;line-height:1.15;color:{INK};">
-        Ken je iemand die ook wel wat positief nieuws kan gebruiken?
-      </p>
-
-      <p style="margin:0 0 20px 0;font:14px Arial,Helvetica,sans-serif;line-height:1.5;color:{MUTED};">
-        Stuur deze nieuwsbrief gerust door.
-      </p>
-
-      <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center">
-        <tr>
-          <td style="padding:0 5px 10px 5px;">
-            <a href="{whatsapp_share_url}"
-               style="display:inline-block;padding:10px 16px;border:1px solid rgba(214,161,58,.65);border-radius:999px;font:800 12px Arial,Helvetica,sans-serif;color:{GREEN_DARK} !important;text-decoration:none;">
-              Deel via WhatsApp
-            </a>
-          </td>
-          <td style="padding:0 5px 10px 5px;">
-            <a href="{email_share_url}"
-               style="display:inline-block;padding:10px 16px;border:1px solid rgba(214,161,58,.65);border-radius:999px;font:800 12px Arial,Helvetica,sans-serif;color:{GREEN_DARK} !important;text-decoration:none;">
-              Deel via e-mail
-            </a>
-          </td>
-        </tr>
-      </table>
-
-      <p style="margin:6px 0 14px;font:14px Arial,Helvetica,sans-serif;line-height:1.5;color:{MUTED};">Zelf ook twee keer per week positief nieuws ontvangen? <a href="https://positief-nieuws.nl/nieuwsbrief/" style="color:{GREEN_DARK} !important;text-decoration:underline;">Meld je gratis aan.</a></p>
-
-      <p style="margin:8px 0 0 0;font:12px Arial,Helvetica,sans-serif;color:{MUTED};">
-        <a href="{newsletter_online_url}" style="color:{GREEN_DARK} !important;text-decoration:underline;text-underline-offset:2px;">
-          Lees deze editie online
-        </a>
-      </p>
-    </div>
-    """
+    whatsapp = "https://wa.me/?text=" + urllib.parse.quote(f"{share_text}\n\n{share_url}")
+    email = ("mailto:?subject=" + urllib.parse.quote("Positief nieuws. Dit gebeurt ook.")
+             + "&body=" + urllib.parse.quote(f"{share_text}\n\n{share_url}"))
+    buttons = email_table(
+        f'<tr><td align="center" bgcolor="{GREEN}" style="padding:12px 15px;border:1px solid {GREEN};">'
+        f'<a href="{esc(whatsapp)}" style="font:700 13px Arial,Helvetica,sans-serif;color:#ffffff;text-decoration:none;">Deel via WhatsApp</a></td>'
+        f'<td width="8" style="width:8px;">&nbsp;</td>'
+        f'<td align="center" bgcolor="#ffffff" style="padding:12px 15px;border:1px solid #91aaa0;">'
+        f'<a href="{esc(email)}" style="font:700 13px Arial,Helvetica,sans-serif;color:{GREEN_DARK};text-decoration:none;">Deel via e-mail</a></td></tr>',
+        width="auto", attrs='align="center"')
+    return email_table(
+        f'<tr><td align="center" bgcolor="#f0f5ee" style="padding:24px 18px;background-color:#f0f5ee;border:1px solid #dfe8e2;">'
+        f'<h2 style="margin:0 0 10px;font:700 22px/1.3 Arial,Helvetica,sans-serif;color:{INK};">Deel een beetje hoop.</h2>'
+        f'<p style="margin:0 0 16px;font:15px/1.6 Arial,Helvetica,sans-serif;color:{MUTED};">Ken je iemand die wel wat positief nieuws kan gebruiken? Stuur deze nieuwsbrief gerust door.</p>'
+        f'{buttons}'
+        f'<p style="margin:16px 0 0;font:13px/1.5 Arial,Helvetica,sans-serif;color:{INK};">Zelf ook twee keer per week positief nieuws ontvangen? '
+        f'<a href="{SITE_URL}nieuwsbrief/" style="color:{GREEN_DARK};text-decoration:underline;">Meld je gratis aan.</a></p>'
+        f'<p style="margin:10px 0 0;font:13px/1.5 Arial,Helvetica,sans-serif;"><a href="{esc(newsletter_edition_url(data))}" style="color:{GREEN_DARK};text-decoration:underline;">Lees deze editie online</a></p></td></tr>',
+        bg="#f0f5ee")
 
 
 def homepage_email_order(data, stories):
@@ -354,70 +364,103 @@ def homepage_email_order(data, stories):
     return stories
 
 
+
 def email_pair(stories, data, own_pages=True):
-    cells = ''.join(f'<td class="email-column" width="50%" valign="top" style="width:50%;padding:0 7px;vertical-align:top;">{article_html(item, data, own_pages)}</td>' for item in stories)
-    return f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;table-layout:fixed;border-collapse:collapse;"><tr>{cells}</tr></table>'
+    if len(stories) == 1:
+        return article_html(stories[0], data, own_pages)
+    cells = ''.join(
+        f'<td class="email-column" width="{COLUMN_WIDTH}" valign="top" '
+        f'style="width:50%;padding:0 {IMAGE_GAP}px;vertical-align:top;">'
+        f'{article_html(item, data, own_pages, column=True)}</td>' for item in stories
+    )
+    return email_table(f'<tr>{cells}</tr>', attrs='class="pn-email-pair"',
+                       style="width:100%;table-layout:fixed;")
 
 
 def build_body(data, nl, international, headlines):
     nl = homepage_email_order(data, nl)
-    nl_html = article_html(nl[0], data, True, featured=True) + email_pair(nl[1:3], data)
-    nl_html += section_header("Meer goed nieuws uit Nederland", "3 verhalen")
-    nl_html += '<div style="height:16px"></div>' + ''.join(article_html(item, data, True) for item in nl[3:])
+    nl_html = article_html(nl[0], data, True, featured=True)
+    nl_html += email_pair(nl[1:3], data)
+    nl_html += email_spacer(14) + section_header("Meer goed nieuws uit Nederland", "3 verhalen") + email_spacer(14)
+    nl_html += email_pair(nl[3:5], data) + email_pair(nl[5:], data)
     world = ''.join(email_pair(international[i:i+2], data) for i in range(0, len(international), 2))
     briefing = ''.join(article_html(item, data) for item in headlines)
-    note = (data.get('meta') or {}).get('personal_note') or {}
-    personal_note = ''
-    if note.get('text'):
-        personal_note = f'<div style="margin:0 0 28px;padding:20px;background:#f0f5ee;border:1px solid #e1e9e5;border-radius:14px"><h2 style="margin:0 0 12px;font:700 22px Arial,Helvetica,sans-serif">{esc(note.get("title", ""))}</h2><p style="margin:0;font:15px/1.65 Arial,Helvetica,sans-serif">{esc(note["text"])}</p><p style="margin:12px 0 0;font:700 14px Arial,Helvetica,sans-serif">Tom</p></div>'
+    note = (data.get("meta") or {}).get("personal_note") or {}
+    personal_note = ""
+    if note.get("text"):
+        personal_note = email_table(
+            f'<tr><td bgcolor="#f0f5ee" style="padding:20px;background-color:#f0f5ee;">'
+            f'<h2 style="margin:0 0 12px;font:700 22px/1.3 Arial,Helvetica,sans-serif;color:{INK};">{esc(note.get("title", ""))}</h2>'
+            f'<p style="margin:0;font:15px/1.65 Arial,Helvetica,sans-serif;color:{INK};">{esc(note["text"])}</p>'
+            f'<p style="margin:12px 0 0;font:700 14px Arial,Helvetica,sans-serif;color:{INK};">Tom</p></td></tr>',
+            bg="#f0f5ee") + email_spacer(22)
     preheader = esc(build_preheader(data, nl))
     weekday, _, edition_date = edition_date_text(data).partition(" ")
     edition_label = f"{weekday.capitalize()}editie" if edition_date else "Editie"
     intro = (data.get("meta") or {}).get("email_intro")
     if intro:
-        intro_paragraphs = [p.strip() for p in intro.split("\n\n") if p.strip()]
+        paragraphs = [p.strip() for p in intro.split("\n\n") if p.strip()]
     else:
-        intro_paragraphs = [
+        paragraphs = [
             "Uit Nederland: " + " · ".join(article["title"] for article in nl[1:3]),
             "Uit de wereld: " + " · ".join(article["title"] for article in international[:2]),
         ]
     intro_html = "".join(
-        f'<p style="margin:0 0 12px;font:16px/1.6 Arial,Helvetica,sans-serif;color:{INK};">{esc(paragraph)}</p>'
-        for paragraph in intro_paragraphs
+        f'<p style="margin:0 0 12px;font:15px/1.6 Arial,Helvetica,sans-serif;color:{INK};">{esc(paragraph)}</p>'
+        for paragraph in paragraphs
     )
+    online = esc(newsletter_edition_url(data))
+    header = email_table(
+        f'<tr><td style="padding:12px 0;border-bottom:1px solid #dfe8e2;font:13px/1.5 Arial,Helvetica,sans-serif;color:{INK};"><strong>{esc(edition_label)}</strong>&nbsp; {esc(edition_date)}</td>'
+        f'<td align="right" style="padding:12px 0 12px 8px;border-bottom:1px solid #dfe8e2;font:12px/1.5 Arial,Helvetica,sans-serif;"><a href="{online}" style="color:{GREEN_DARK};text-decoration:underline;">Online lezen</a></td></tr>')
+    brand = email_table(
+        f'<tr><td width="40" valign="middle" style="padding:0 8px 0 0;width:40px;">'
+        f'<a href="{online}"><img src="{SITE_URL}sun-orange.png" width="32" height="32" alt="" style="display:block;width:32px;height:32px;border:0;"></a></td>'
+        f'<td valign="middle" style="font:700 25px/1.15 Arial,Helvetica,sans-serif;color:{INK};">'
+        f'<a href="{online}" style="color:{INK};text-decoration:none;">Positief nieuws</a>'
+        f'<p style="margin:4px 0 0;font:13px/1.4 Arial,Helvetica,sans-serif;color:{MUTED};">Dit gebeurt ook · {len(nl)+len(international)} verhalen · {len(headlines)} leestips</p></td></tr>')
+    introduction = email_table(
+        f'<tr><td bgcolor="#f3f7f4" style="padding:18px 18px 6px;border-left:3px solid #f57900;background-color:#f3f7f4;">{intro_html}</td></tr>', bg="#f3f7f4")
+    closing = email_table(
+        f'<tr><td align="center" style="padding:26px 12px 30px;">'
+        f'<img src="{SITE_URL}sun-orange.png" width="40" height="40" alt="" style="display:block;width:40px;height:40px;margin:0 auto;border:0;">'
+        f'<h2 style="margin:14px 0 12px;font:700 25px/1.25 Arial,Helvetica,sans-serif;color:{INK};">Dit was het voor vandaag.<br>Je bent weer bij.</h2>'
+        f'<p style="margin:0;font:15px/1.5 Arial,Helvetica,sans-serif;color:{MUTED};">Geniet van je dag.</p></td></tr>')
+    tip = email_table(
+        f'<tr><td align="center" style="padding:18px 14px;border:1px solid #dfe8e2;background-color:#ffffff;">'
+        f'<h2 style="margin:0 0 8px;font:700 18px/1.3 Arial,Helvetica,sans-serif;color:{INK};">Goed nieuws gezien?</h2>'
+        f'<p style="margin:0;font:14px/1.5 Arial,Helvetica,sans-serif;color:{MUTED};">Draag een verhaal aan voor een volgende editie. <a href="{SITE_URL}tip/" style="color:{GREEN_DARK};text-decoration:underline;">Tip de redactie.</a></p></td></tr>', bg="#ffffff")
+    footer = email_table(
+        f'<tr><td align="center" bgcolor="#f5f7f5" style="padding:20px 12px;font:12px/1.6 Arial,Helvetica,sans-serif;color:{MUTED};">'
+        f'Positief nieuws · Dit gebeurt ook.<br>{{{{ address }}}}<br>'
+        f'<a href="{{{{ unsubscribe_url }}}}" style="color:{GREEN_DARK};text-decoration:underline;">Afmelden</a></td></tr>', bg="#f5f7f5")
+    inner = (
+        header + email_spacer(18) + brand + email_spacer(20) + introduction + email_spacer(22)
+        + personal_note + nl_html + email_spacer(18)
+        + section_header("Goed nieuws uit de wereld", "6 verhalen") + email_spacer(14) + world
+        + email_spacer(18) + section_header("Wat je verder moet weten", "3 korte actualiteiten") + email_spacer(14)
+        + briefing + closing + build_share_block(data) + email_spacer(14) + tip + email_spacer(20) + footer
+    )
+    # The explicit width/center attributes and conditional table constrain
+    # classic Outlook even when it ignores max-width and modern CSS.
     return f"""
-<style>@media(max-width:760px){{.story-intro{{display:none!important}}.email-column{{display:block!important;width:100%!important;padding:0!important}}.email-shell{{padding:20px 16px!important}}}}</style>
+<style>
+@media screen and (max-width:640px) {{
+  .pn-email-shell {{width:100%!important;max-width:100%!important}}
+  .pn-email-padding {{padding:12px!important}}
+  .email-column {{display:block!important;width:100%!important;padding:0!important}}
+  .pn-photo {{height:auto!important}}
+}}
+</style>
 <div style="display:none;max-height:0;overflow:hidden;opacity:0;color:transparent;font-size:1px;line-height:1px;mso-hide:all;">{preheader}{"&#8204;&nbsp;" * 100}</div>
-<div class="email-shell" style="width:100%;max-width:740px;margin:0 auto;box-sizing:border-box;background:{PAPER};padding:28px 28px;color:{INK};font-family:Arial,Helvetica,sans-serif;">
-  <div style="background:#ffffff;">
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-bottom:1px solid #e1e5e3;font:13px/1.5 Arial,Helvetica,sans-serif;color:#111713;">
-      <tr>
-        <td style="padding:12px 10px 12px 16px;"><strong style="font-size:14px;">{esc(edition_label)}</strong>&nbsp; {esc(edition_date)}</td>
-        <td align="right" style="padding:12px 16px 12px 0;">{len(nl) + len(international)} verhalen · {len(headlines)} leestips</td>
-      </tr>
-    </table>
-    <div style="padding:21px 16px 19px;">
-      <a href="{esc(newsletter_edition_url(data))}" style="font:800 25px Arial,Helvetica,sans-serif;letter-spacing:-1px;color:{INK} !important;text-decoration:none;"><img src="{SITE_URL}sun-orange.png" width="32" height="32" alt="" style="display:inline-block;width:32px;height:32px;vertical-align:middle;margin-right:8px;">Positief nieuws</a>
-      <p style="margin:7px 0 0 40px;font:14px Arial,Helvetica,sans-serif;color:{MUTED};">Dit gebeurt ook</p>
-    </div>
-  </div>
-  <div style="padding:24px 0 17px;">
-    {intro_html}
-  </div>
-  {personal_note}
-  {nl_html}
-  <div style="margin-top:36px;">{section_header("Goed nieuws uit de wereld", "6 verhalen")}<div style="height:16px"></div>{world}</div>
-  <div style="margin-top:30px;">{section_header("Wat je verder moet weten", "3 korte actualiteiten")}<div style="height:16px"></div>{briefing}</div>
-  <div style="padding:36px 12px 42px;margin-top:30px;text-align:center;background-color:#ffffff;background-image:radial-gradient(circle at center,#ffffff 0 95px,#f7eddb 96px,#faf7f1 97px 136px,#fcfbf8 137px 170px,#ffffff 171px);">
-    <img src="{SITE_URL}sun-orange.png" width="48" height="48" alt="" style="display:block;width:48px;height:48px;margin:0 auto 24px;">
-    <h2 style="margin:0 0 22px;font:800 30px/1.08 Arial,Helvetica,sans-serif;letter-spacing:-.04em;color:#111713;">Dit was het voor vandaag.<br>Je bent weer bij.</h2>
-    <p style="margin:0;font:16px/1.4 Arial,Helvetica,sans-serif;color:#65756f;">Geniet van je dag.</p>
-  </div>
-  {build_share_block(data)}
-  <p style="margin:24px 0 0;font:15px/1.6 Arial,Helvetica,sans-serif;color:{INK};">Goed nieuws gezien dat een plek in een volgende editie verdient? <a href="https://positief-nieuws.nl/tip/" style="color:{GREEN_DARK};text-decoration:underline;">Tip de redactie.</a></p>
-  <p style="margin:28px 0 0;text-align:center;font:11px Arial,Helvetica,sans-serif;color:{MUTED};">Positief nieuws · Dit gebeurt ook.<br>{{{{ address }}}}</p>
-  <p style="text-align:center;font:11px Arial,Helvetica,sans-serif;"><a href="{{{{ unsubscribe_url }}}}" style="color:{MUTED};text-decoration:underline;">Afmelden</a></p>
-</div>"""
+<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#f5f7f5" style="width:100%;border-collapse:collapse;">
+<tr><td align="center" style="padding:16px 0;">
+<!--[if mso]><table role="presentation" width="{EMAIL_WIDTH}" align="center" cellpadding="0" cellspacing="0" border="0"><tr><td><![endif]-->
+<table role="presentation" class="pn-email-shell" width="{EMAIL_WIDTH}" align="center" bgcolor="#ffffff" cellspacing="0" cellpadding="0" border="0" style="width:100%;max-width:{EMAIL_WIDTH}px;border-collapse:collapse;background-color:#ffffff;mso-table-lspace:0pt;mso-table-rspace:0pt;">
+<tr><td class="pn-email-padding" style="padding:20px;font-family:Arial,Helvetica,sans-serif;color:{INK};">{inner}</td></tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td></tr></table>"""
 
 
 def build_subject(data):
@@ -496,9 +539,9 @@ def draft_payload(subject, body, edition, preheader, marker):
     return payload
 
 
-def create_draft(api_key, subject, body, data, preheader, *, trial=False):
+def create_draft(api_key, subject, body, data, preheader, *, trial=False, trial_label=None):
     edition = raw_edition_date(data)
-    marker = f"pn-{edition}" + ("-proef" if trial else "")
+    marker = f"pn-{edition}" + (f"-proef-{trial_label}" if trial and trial_label else "-proef" if trial else "")
     existing = find_broadcast(api_key, marker)
     if existing:
         return existing
