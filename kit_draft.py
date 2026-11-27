@@ -343,7 +343,7 @@ def build_share_block(data):
         f'<td width="8" style="width:8px;">&nbsp;</td>'
         f'<td align="center" bgcolor="#ffffff" style="padding:12px 15px;border:1px solid #91aaa0;">'
         f'<a href="{esc(email)}" style="font:700 13px Arial,Helvetica,sans-serif;color:{GREEN_DARK};text-decoration:none;">Deel via e-mail</a></td></tr>',
-        width="auto", attrs='align="center"')
+        width="100%", attrs='align="center"')
     return email_table(
         f'<tr><td align="center" bgcolor="#f0f5ee" style="padding:24px 18px;background-color:#f0f5ee;border:1px solid #dfe8e2;">'
         f'<h2 style="margin:0 0 10px;font:700 22px/1.3 Arial,Helvetica,sans-serif;color:{INK};">Deel een beetje hoop.</h2>'
