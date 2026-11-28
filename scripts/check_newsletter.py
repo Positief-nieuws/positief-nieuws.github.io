@@ -105,9 +105,14 @@ def check_hosted_form():
         try:
             hosted = Page(get(HOSTED_FORM))
             ok = any(any(i.get('name') == 'email_address' for i in f['inputs']) for f in hosted.forms)
-            return ('PASS' if ok else 'FAIL',
-                    'HTTP 200; poging ' + str(attempt) +
-                    ('; formulier gevonden; geen POST of bewijs van registratie' if ok else '; geen email_address-formulier gevonden'))
+            if ok:
+                return 'PASS', f'HTTP 200; poging {attempt}; formulier gevonden; geen POST of bewijs van registratie'
+            # A hosted page may render its form with JavaScript or return a
+            # bot challenge. HTTP 200 alone proves neither success nor failure.
+            # Keep this explicitly unverified; never close an existing incident
+            # on the basis of this response.
+            return 'MANUAL', (f'HTTP 200; poging {attempt}; geen email_address-formulier in bron-HTML; '
+                              'controleer gehost formulier in browser; geen bewijs van inschrijving')
         except urllib.error.HTTPError as error:
             code = error.code
             detail = f'HTTP {code}; poging {attempt}/3'
