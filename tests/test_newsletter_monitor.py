@@ -79,8 +79,13 @@ class HostedFormTests(unittest.TestCase):
     def test_success_requires_email_form(self):
         with patch.object(m, 'get', return_value='<form><input name="email_address"></form>'):
             self.assertEqual(m.check_hosted_form()[0], 'PASS')
+
+    def test_successful_http_without_form_is_unverified(self):
         with patch.object(m, 'get', return_value='<html>not a form</html>'):
-            self.assertEqual(m.check_hosted_form()[0], 'FAIL')
+            status, detail = m.check_hosted_form()
+            self.assertEqual(status, 'MANUAL')
+            self.assertIn('geen email_address-formulier', detail)
+            self.assertIn('geen bewijs van inschrijving', detail)
 
     def test_access_denied_is_manual_not_pass(self):
         for code in (401, 403):
